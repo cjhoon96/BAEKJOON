@@ -60,7 +60,6 @@ while n < len(lst):
         rank_dic[rank].append(lst[n])
     else:
         rank_dic[rank] = [lst[n]]
-    print(rank_dic)
     n += 1
 
 ranks = list(rank_dic.keys())
