@@ -63,6 +63,7 @@ check = True
 now = input()
 now = (ord(now[0])-64, int(now[1]))
 visited = set(now)
+last = now
 
 def f(next):
     global now, check, visited
@@ -80,14 +81,12 @@ def f(next):
 
 for _ in range(35):
     next = input()
-    print(next)
-    print(visited, next)
     next = (ord(next[0])-64, int(next[1]))
     if check:
-        print(next,'!!!')
         f(next)
 
 else:
+    f(last)
     if check:
         print('Valid')
     else:
