@@ -30,31 +30,40 @@ X가 주어졌을 때, X를 곱했을 때, 결과가 원래 숫자의 첫 자리
 '''
 
 
-import sys
-input = sys.stdin.readline
+from math import gcd
+
 X = float(input())
 
-i = 1
-answer = []
-while i < 10000:
-
-    re_i = str(i)[1:] + str(i)[0]
-    if str(int(i*X)) == re_i:
-        answer.append(i)
-    i += 1
-
-ans = answer
-
-for i in answer:
-    a = int(str(i)*2)
-    if a < 1e8:
-        ans.append(a)
-
-ans.sort()
-
-if ans:
-    for i in ans:
-        print(i)
-
-else:
+if X >= 10:
     print('No solution')
+    
+else:
+    x = str(X)
+    if x.find('.') != -1:
+        f = len(x) - x.find('.') -1
+        nume = int(X*(10**f))
+        deno = 10**f
+        d = gcd(nume, deno)
+        nume //= d
+        deno //= d
+    else:
+        nume = int(X)
+        deno = 1
+    
+    
+    i = deno
+    cnt = 0
+    while i < 1e8:
+        re_i = int(str(i)[1:] + str(i)[0])
+
+        if int(i*X) == re_i:
+            print(i)
+            cnt += 1
+            
+        i += deno
+        if int(i*X) >= 1e8:
+            break
+
+    if cnt == 0:
+        print('No solution')
+
