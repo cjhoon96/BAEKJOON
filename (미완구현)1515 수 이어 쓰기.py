@@ -48,22 +48,73 @@ https://www.acmicpc.net/problem/1515
 예제 출력 6 
 14
 '''
-num_lst = list(input())
-n = 1
-N = 11
 
+from collections import deque
 
-last = num_lst[-1]
-num_lst = num_lst[:len(num_lst)-1]
-a = num_lst.pop()
-while num_lst:
+num_lst = deque(list(input()))
+
+length = len(num_lst)
+
+if length == 1 and '1' in num_lst:
+    print(1)
+
+else:
+    n = 1
+    N = 11
+    found = False
+
+    cnt = 0
 
     check = ''
 
-    for i in range(n,N):
-        check += str(i) + ','
+    while True:
 
-    while num_lst:
-        idx = check.find(a)
+        for i in range(n,N):
+            check += str(i) + ','
+
+        while True:
+            a = num_lst.popleft()
+            idx = check.find(a)
+        
+            if idx == -1:
+                num_lst.appendleft(a)
+                n += 10
+                N += 10
+                break
+            
+            cnt += 1
+
+            
+            print('check = ',check)
+            print('a = ',a)
+            print(idx)
+            print(cnt, length)
+            if cnt == length and ',' not in check[:idx]:
+                found = True
+                break
+
+            frst_idx = idx
+            last_idx = idx
+            while True:
+                frst_idx -= 1
+                if check[frst_idx] == ',':
+                    frst_idx += 1
+                    break
+            while True:
+                last_idx += 1
+                if check[last_idx] == ',':
+                    break
+            last = int(check[frst_idx:last_idx])
+            
+            
+            if cnt == length:
+                found = True
+                break
+            
+            check =  check[idx+1:]
+        if found:
+            break
+
+    print(last,'!!!')
         
 

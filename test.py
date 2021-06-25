@@ -1,4 +1,8 @@
-a = input()
+from collections import deque
 
-b = a.pop()
-print(a,b1)
+a = deque(list(input()))
+
+b = a.popleft()
+a.append(1)
+
+print(a,b)
