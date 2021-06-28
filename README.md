@@ -7,10 +7,10 @@
     * ## 어느정도 출력하다가 최대 재귀 깊이 초과 메시지가 출력됩니다.
 
 '''
-def recursive_function():
-    print('재귀함수를 호출합니다.')
+    def recursive_function():
+        print('재귀함수를 호출합니다.')
+        recursive_function()
     recursive_function()
-recursive_function()
 '''
 
 * ## 재귀함수를 문제 풀이에서 사용할때 종료조건을 반드시 명시!! (무한 호출 방지)
@@ -18,15 +18,15 @@ recursive_function()
 
 * ### 예시) 팩토리얼
 
-def fac(n):
-    if n==1:
-        return 1
-    else:
-        return n*fac(n-1)
-print(fac(int(input())))
-
-100
-93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+    def fac(n):
+        if n==1:
+            return 1
+        else:
+            return n*fac(n-1)
+    print(fac(int(input())))
+'''
+    100
+    93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
 
 
 * ### 예시) 최대공약수 계산 (유클리드 호제법) 예제
@@ -38,19 +38,19 @@ print(fac(int(input())))
 
 ### 재귀 함수로 구현
 
-def gcd(a,b):
-    r = a%b
-    if r == 0:
-        return b
-    else:
-        return gcd(b,r)
-    
-a,b=map(int,input().split())
+    def gcd(a,b):
+        r = a%b
+        if r == 0:
+            return b
+        else:
+            return gcd(b,r)
+        
+    a,b=map(int,input().split())
 
-print(gcd(a,b))
-
- 192 162
-6
+    print(gcd(a,b))
+'''
+    192 162
+    6
 
 * ## 모든 재귀함수는 반복문으로 구현 가능
 * ## 유리한 경우도 있고 그렇지 않은 경우도 있음
