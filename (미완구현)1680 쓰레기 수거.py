@@ -42,6 +42,9 @@ https://www.acmicpc.net/problem/1680
 10
 '''
 
+import sys
+input = sys.stdin.readline
+
 test_case = int(input())
 
 for _ in range(test_case):
@@ -79,4 +82,3 @@ for _ in range(test_case):
                 now_w = 0
         
     print(dist)
-            
