@@ -400,4 +400,5 @@ def KMP(target_text, text):
 
 ___
 
-## P.S. 마지막 기존 코드를 약간 변형 한 것을 제외한 나머지 코드는 [일시불 님의 [Python] KMP 알고리즘으로 문자열 찾기] (https://devbull.xyz/python-kmp-algorijeumeuro-munjayeol-cajgi/) 일시불 님의 코드를 분석하고 공부 하였음을 밝힙니다.
+## P.S. 마지막 기존 코드를 약간 변형 한 것을 제외한 나머지 코드는 
+## [일시불 님의 [Python] KMP 알고리즘으로 문자열 찾기] (https://devbull.xyz/python-kmp-algorijeumeuro-munjayeol-cajgi/) 일시불 님의 코드를 분석하고 공부 하였음을 밝힙니다.
