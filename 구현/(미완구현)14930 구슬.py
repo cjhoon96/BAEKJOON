@@ -32,28 +32,4 @@ t 초 후 빨간 구슬의 위치를 출력한다. 이 값이 정수임은 보�
 완전탄성충돌이란 운동량과 운동에너지 모두 보존되는 충돌을 의미한다.
 '''
 
-from collections import deque
-import sys
 
-input = sys.stdin.readline
-n = int(input().rstrip())
-
-parrots = []
-
-for _ in range(n):
-    s = input().split()
-    parrots.append(deque(s))
-
-L = deque(input().split())
-
-while L:
-    now = L.popleft()
-    for i in range(n):
-        if len(parrots[i])!=0 and parrots[i][0] == now:
-            parrots[i].popleft()
-            break
-    else:
-        print('Impossible')
-        sys.exit()
-
-print('Possible')
