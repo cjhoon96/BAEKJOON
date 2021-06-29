@@ -217,18 +217,18 @@ while 문
     | i | 0 | 1 | 2 | 3 | 4 | **5** | 6 | 7 | 8 | 9 |
     |---|---|---|---|---|---|---|---|---|---|---|
     |text| A | B | C | X | A | **B** | X | C | A | B |
-    |target_text| A | B | C | X | A | **B** |  |  |  |  |  |
+    |target_text| A | B | C | X | A | **B** |  |  |  |  |
 7. **i = 6 j = 6** j 가 target_text 길이를 벗어났으므로 if 문과 elif문을 건너 뛰고 j = K 이므로   **found pattern at index 0** 즉 인덱스 text 0~5까지가 target_text와 같음을 출력한다. 이후 j = lps[j-1] 즉 lps[5] 즉 2가 된다.
     | i | 0 | 1 | 2 | 3 | 4 | 5 | **6** | 7 | 8 | 9 |
     |---|---|---|---|---|---|---|---|---|---|---|
     |text| A | B | C | X | A | B | **X** | C | A | B |
-    |target_text| A | B | C | X | A | B | **=>** |  |  |  |  |
+    |target_text| A | B | C | X | A | B | **=>** |  |  |  |
 이 예제에서 target_text 의 4,5인덱스가 text의 4,5 인덱스와 같았다는 점은 위 과정을 통해 확인 되었고 lps 리스트를 통해 길이가 2인  Prefix와 Suffix가 같음을 알 수 있다. 
 이는 즉 (text의 4,5 인덱스) = (target_text의 4,5 인덱스) = (target_text의 0,1 인덱스) 는 자명하게 되므로 text의 인덱스 6, target_text의 인덱스 2 부터 다시 비교를 시작하였음을 알 수 있다.
     | i | 0 | 1 | 2 | 3 | 4 | 5 | **6** | 7 | 8 | 9 |
     |---|---|---|---|---|---|---|---|---|---|---|
     |text| A | B | C | X | A | B | **X** | C | A | B |
-    |target_text|  |  |  |  | A | B | **C** | X | A | B |  |
+    |target_text|  |  |  |  | A | B | **C** | X | A | B |
 
 8. **i = 7 j = 2** target_text[j]와  text[i]가 다르기 때문에 elif문이 실행, j가 0이 아니므로 j = lps[j - 1] 즉 lps[1] = 0 으로 바꾼다.(**좀더 특수한 예제는 다음 예제를 통해 살펴보자**)
 9. **i = 8 j = 0** target_text[j]와  text[i]가 다르고 j가 0이므로 i 의 인덱스만 1 증가 시킨다.
