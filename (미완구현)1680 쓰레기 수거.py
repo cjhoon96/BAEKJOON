@@ -40,6 +40,16 @@ https://www.acmicpc.net/problem/1680
 8
 6
 10
+
+2021. 6.29. 기준 파이썬 1위
+등수	제출 번호	시도	아이디	메모리	시간	언어	코드 길이	제출한 시간
+1	30448574	3	cjhoon96	29200	68	Python 3 / 수정	821	1분 전
+2	30419147	1	ansxjrdptj94	33900	160	Python 3	1631	15시간 전
+3	17312841	3	rltjr1092	29284	208	Python 3	396	1년 전
+4	20214233	1	nova6296	29380	212	Python 3	784	1년 전
+5	22817358	1	scvhero	29380	228	Python 3	216	9달 전
+6	29383791	4	kangsm423	28776	252	Python 3	681	1달 전
+7	29378097	3	yoon6763	28776	264	Python 3	1363	1달전
 '''
 
 import sys
@@ -60,7 +70,7 @@ for _ in range(test_case):
         x, w = map(int,input().split())
 
         plus_dist = x
-        now_w += x
+        now_w += w
         if i == N:
             if now_w > weight:
                 dist += plus_dist * 4
