@@ -22,15 +22,13 @@ for i in range(len(text) - len(target_text)):
 ### 를 사용할 때 len(target_text) = K, len(text) = N 이라 할 경우 시간 복잡도는 O(NK) 가 된다.
 ### 즉 두 문자열이 길어질 수록 연산량은 기하급수적으로 늘어나게 된다.
 
-___
-
-## * **KMP 알고리즘**
 
 ### **위 과정을 즉 문자열 탐색을 더 효율적으로 하기 위한 알고리즘이 KMP알고리즘이다.**
 ### KMP 알고리즘을 사용하기 위해서는 찾고자 하는 target_text를 전처리 하는 과정이 필요하다.
 
 ### 이 전처리 과정에서는 target_text 속의 작은 패턴을 분석한다.
 
+___
 
 ## * Prefix/Suffix and LPS(Longest proper prefix which is suffix)
 ```python
