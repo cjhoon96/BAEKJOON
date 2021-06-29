@@ -12,7 +12,7 @@
 * ## 입구와 출고가 동일한 형태로 스택을 시각화 할 수 있음
 
 ### 파이썬에서는 리스트의 .append()와 .pop() 을 통해 스택을 구현할 수 있음
-```{.python}
+```python
 stack = []
 
 stack.append(5)
@@ -38,7 +38,7 @@ print(stack)
 
 ### 파이썬에서는 from collections import deque를 통해 구현 가능
 ### 리스트로 가능하지만 시간 복잡도가 더 커짐
-```{.python}
+```python
 from collections import deque
 
 queue = deque()
@@ -106,7 +106,7 @@ dfs(graph, 1, visited)
     * ## 더이상 2번의 과정을 수행할 수 없을 때까지 반복한다.  
 
 ## BFS 소스코드 구현
-```{.python}
+```python
 from collections import deque
 
 def bfs(graph, start, visited):
@@ -154,7 +154,7 @@ bfs(graph, 1, visited)
     ## 00011
     ## 11111
     ## 00000
-```{.python}
+```python
 n, m = map(int,input().split())
 
 graph=[]
@@ -205,7 +205,7 @@ print(ans)
 * ## 이때 동빈이가 탈출하기 위해 움직여야 하는 최소 칸의 개수를 구하세요
     * ## 칸을 셀때는 시작칸과 마지막 칸을 모두 포함해서 계산합니다.
 
-```{.python}
+```python
 from collections import deque
 import numpy as np
 n, m = map(int,input().split())
