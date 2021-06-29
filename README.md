@@ -38,7 +38,7 @@ print(stack)
 
 ### 파이썬에서는 from collections import deque를 통해 구현 가능
 ### 리스트로 가능하지만 시간 복잡도가 더 커짐
-~~~
+```{.python}
 from collections import deque
 
 queue = deque()
@@ -58,7 +58,7 @@ print(queue)
 ~~~
 deque([3, 7, 1, 4])
 deque([4, 1, 7, 3])
-
+```
 
 
 # 2. DFS(Depth-First Search)
@@ -70,7 +70,7 @@ deque([4, 1, 7, 3])
     * ## 더이상 2번의 과정을 수행할 수 없을 때까지 반복한다.
 
 ## DFS 소스코드 구현
-~~~
+```{.python}
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end = ' ')
@@ -93,7 +93,7 @@ graph = [
 visited = [False] * 9  # 인덱스 0은 사용 하지 않기 위해 1~8 만 필요
 
 dfs(graph, 1, visited)
-~~~
+```
 1 2 7 6 8 3 4 5 
 
 
@@ -106,7 +106,7 @@ dfs(graph, 1, visited)
     * ## 더이상 2번의 과정을 수행할 수 없을 때까지 반복한다.  
 
 ## BFS 소스코드 구현
-~~~
+```{.python}
 from collections import deque
 
 def bfs(graph, start, visited):
@@ -139,7 +139,7 @@ graph = [
 visited = [False] * 9  # 인덱스 0은 사용 하지 않기 위해 1~8 만 필요
 
 bfs(graph, 1, visited)
-~~~
+```
 1 2 3 8 7 4 5 6 
 
 
@@ -154,7 +154,7 @@ bfs(graph, 1, visited)
     ## 00011
     ## 11111
     ## 00000
-~~~
+```{.python}
 n, m = map(int,input().split())
 
 graph=[]
@@ -186,7 +186,7 @@ for i in range(n):
             print(ans)
 
 print(ans)
-~~~
+```
 3 3
  001
  010
@@ -205,7 +205,7 @@ print(ans)
 * ## 이때 동빈이가 탈출하기 위해 움직여야 하는 최소 칸의 개수를 구하세요
     * ## 칸을 셀때는 시작칸과 마지막 칸을 모두 포함해서 계산합니다.
 
-~~~
+```{.python}
 from collections import deque
 import numpy as np
 n, m = map(int,input().split())
@@ -235,7 +235,7 @@ def bfs_maze(x,y):
 
 bfs_maze(0,0)
 print(bfs_maze(0,0))
-~~~
+```
   
 5 6  
  101010  
