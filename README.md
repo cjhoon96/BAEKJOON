@@ -70,7 +70,7 @@ deque([4, 1, 7, 3])
     * ## 더이상 2번의 과정을 수행할 수 없을 때까지 반복한다.
 
 ## DFS 소스코드 구현
-```{.python}
+```python
 def dfs(graph, v, visited):
     visited[v] = True
     print(v, end = ' ')
