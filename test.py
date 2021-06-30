@@ -1,5 +1,6 @@
-a = [[100],[1,2,3],[99,100],[55]]
+a = ['a','b','c']
 
-a.sort()
+a = str(a)
 
-print(a)
+for i in a:
+    print(i)
