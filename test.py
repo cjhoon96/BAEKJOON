@@ -1,7 +1,11 @@
+from collections import deque
+
+queue = deque()
+
 a = ['a','b','c']
 
-for i in a:
-    if i == 'b':
-        a.remove(i)
-    if i == 'c':
-        print(i)
+queue.append(a)
+
+b, c, d = queue.popleft()
+
+print(b,c,d)
