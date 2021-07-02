@@ -38,11 +38,10 @@ for _ in range(M):
     a, b, c = map(int,input().split())                  # a에서 b로 갈때의 거리 c(ost)를 입력 받아 graph에 저장한다.
     graph[a].append((b,c))                              # 양방향인 경우 graph[b].append((a,c))도 추가
 
-dists = [INF for i in range(N + 1)]                     # 1번 노드의 좌표를 인덱스로 바로 받을 수 있도록 길이를 N+1 로 잡는다.
 
 def dijkstra(start):
     q = list()
-
+    dists = [INF for i in range(N + 1)]                 # 1번 노드의 좌표를 인덱스로 바로 받을 수 있도록 길이를 N+1 로 잡는다.
     dists[start] = 0                                    # 2번
     heapq.heappush(q, (dists[start], start))
 
@@ -57,9 +56,11 @@ def dijkstra(start):
             cost = now_dist + i[1]                      # 3-3
             if cost < dists[i[0]]:
                 dists[i[0]] = cost
-                heapq.heappus(q, (cost, i[0]))
+                heapq.heappush(q, (cost, i[0]))
+    
+    return dists
 
-dijkstra(start)
+dists = dijkstra(start)
 
 print(dists)                                            # dists에는 start 노드부터 각 인덱스의 노드까지 가는 거리가 저장된다. 
                                                         # 만약 거리가 INF 라면 해당 노드에 도달하지 못했다는 것이다.
