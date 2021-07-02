@@ -61,5 +61,6 @@ def dijkstra(start):
 
 dijkstra(start)
 
-print(dists)                                            # dists에는 start 노드부터 각 인덱스의 노드까지 가는 거리가 저장된다. 만약 거리가 INF 라면 해당 노드에 도달하지 못했다는 것이다.
+print(dists)                                            # dists에는 start 노드부터 각 인덱스의 노드까지 가는 거리가 저장된다. 
+                                                        # 만약 거리가 INF 라면 해당 노드에 도달하지 못했다는 것이다.
 ```
