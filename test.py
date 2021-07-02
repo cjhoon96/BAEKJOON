@@ -9,3 +9,4 @@ queue.append(a)
 b, c, d = queue.popleft()
 
 print(b,c,d)
+
