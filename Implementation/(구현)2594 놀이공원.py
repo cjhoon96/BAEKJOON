@@ -46,15 +46,15 @@ n = int(input())
 
 schedule = []
 for _ in range(n):
-    start, end = input().split()
-    start = int(start[:2])*60 + int(start[2:]) - 10
-    end = int(end[:2])*60 + int(end[2:]) + 10
+    start, end = map(int, input().split())
+    start = start // 100 * 60 + start % 100 - 10
+    end = end // 100 * 60 + end % 100 + 10
     schedule.append((start, end))
 
-schedule.sort()
 
-open = 10 * 60
-close = 22 * 60
+schedule.sort()
+open = 600
+close = 1320
 
 max_free = max((minus(schedule[0][0], open), minus(close,schedule[n-1][1])))
 
@@ -63,8 +63,9 @@ now_end = schedule[0][1]
 for i in range(1,n):
     next_start = schedule[i][0]
     free_time = minus(next_start, now_end)
-    now_end = schedule[i][1]
     if max_free < free_time:
         max_free = free_time 
+    if now_end < schedule[i][1]:
+        now_end = schedule[i][1]
 
 print(max_free)
