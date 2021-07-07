@@ -99,28 +99,26 @@ arrived = False
 visited = [-1 for _ in range(N+1)]
 q = []
 
-q.append((0, 0, A, None))
+q.append((0, 0, A))
 
 while q:
-    shame, t_c, now, last = heapq.heappop(q)
+    shame, t_c, now = heapq.heappop(q)
     max_shame = shame
     
     if now == B:
         arrived = True
         Shame = shame
         break
-    if visited[now] <= shame:
-        continue
 
     visited[now] = shame
     for next, cost in graph[now]:
-        if next == last:
+        if visited[next] <= cost:
             continue
         if t_c + cost > C:
             continue
         if shame < cost:
             max_shame = cost
-        heapq.heappush(q, (max_shame, t_c + cost, next, now))
+        heapq.heappush(q, (max_shame, t_c + cost, next))
 
 if arrived:
     print(Shame)

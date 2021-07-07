@@ -13,27 +13,37 @@ for _ in range(M):
 
 arrived = False
 
-visited = set([A])
+visited = [1e9 for _ in range(N+1)]
+visited[A] = 0
 q = []
 
-q.append((0, 0, A, visited))
+q.append((0, 0, A))
 
 while q:
-    shame, t_c, now, n_visited= heapq.heappop(q)
-
+    shame, t_c, now= heapq.heappop(q)
+    max_shame = shame
+    
+    if visited[next] <= maxi:
+        continue
+    visited[next] = maxi
+    
     if now == B:
         arrived = True
         Shame = shame
         break
 
+    if visited[now] != shame:
+        continue
+
     for next, cost in graph[now]:
-        if next in n_visited:
-            continue
         if t_c + cost > C:
             continue
+        maxi = max((shame, cost))
+        if shame < cost:
+            max_shame = cost
+        print(now,next,visited)
         
-        heapq.heappush(q, (max((shame, cost)), t_c + cost, next, n_visited|set([next])))
-        print(list(q))
+        heapq.heappush(q, (max_shame, t_c + cost, next))
 
 if arrived:
     print(Shame)
@@ -48,5 +58,14 @@ else:
 2 4 2
 3 4 6
 4 5 1
+
+
+6 6 1 6 11
+1 2 5
+2 3 5
+1 4 6
+3 5 1
+4 5 2
+5 6 1
 
 '''

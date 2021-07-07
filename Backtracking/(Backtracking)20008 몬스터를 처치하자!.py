@@ -60,15 +60,57 @@ University > 충남대학교 > 제4회 생각하는 프로그래밍 대회 H번
 
 문제를 다시 작성한 사람: jh05013
 문제를 만든 사람: potion
+
+2021. 03. 09.(목) 기준 파이썬 1위!!!
+| 등수 | 제출 번호 | 시도 | 아이디 | 메모리 | 시간 | 언어 | 코드 길이 | 제출한 시간 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 30774870 | 1 | cjhoon96 | 29200 | 168 | Python 3 / 수정 | 945 | 1분 전 |
+| 2 | 23150128 | 1 | happiness96 | 31824 | 492 | Python 3 | 1743 | 8달 전 |
+| 3 | 22895381 | 1 | scvhero | 109156 | 2636 | Python 3 | 302 | 9달 전 |
+
 '''
 
 N, HP = map(int,input().split())
 
 skill = []
-cool = [0 for _ in range(N)]
+cooling = [0 for _ in range(N)]
 for _ in range(N):
-    skill.append(list(map(int,input().split())))
+    skill.append(tuple(map(int,input().split())))
 
-time = 0
+min_time = 1e9
 
-while HP:
+def bfs(skill, cooling, HP, time):
+    global min_time
+    time += 1
+    if min_time <= time:
+        return
+    check = []
+    for i in range(N):
+        if not cooling[i]:
+            check.append(i)
+        else:
+            cooling[i] -= 1
+            if not cooling[i]:
+                check.append(i)
+    if  len(check) == 0:
+        bfs(skill, cooling, HP, time)
+
+    else:
+        for idx in check:
+            next_cool = cooling.copy()
+            now_skill = skill[idx]
+            next_HP = HP - now_skill[1]
+
+            if next_HP <= 0:
+                if min_time > time:
+                    min_time = time
+                print('last deal: ', time, next_cool, next_HP)
+                return
+
+            next_cool[idx] = skill[idx][0]
+            bfs(skill, next_cool, next_HP, time)
+            print(time, next_cool, next_HP, check)
+
+bfs(skill, cooling, HP, 0)
+print(min_time)
+
