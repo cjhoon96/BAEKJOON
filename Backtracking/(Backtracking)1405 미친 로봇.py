@@ -24,30 +24,26 @@ https://www.acmicpc.net/problem/1405
 0.75
 '''
 
-import sys
-input = sys.stdin.readline
 from collections import deque
 
 N, e, w, s, n  = map(int,input().split())
+e, w, s, n = e / 100, w / 100, s / 100, n / 100
+dx = (1, -1, 0, 0)
+dy = (0, 0, 1, -1)
+pct_lst = (e, w, n, s)
 
-action = ((1, 0), (-1, 0), (0, 1), (0, -1))
-pct_lst = (e / 100, w / 100, n / 100, s / 100)
-
-pct = 1
-def bfs(x, y, node, trace, now_pct):
+pct = 0
+def dfs(x, y, node, trace, now_pct):
     global pct
     if node == N:
+        pct += now_pct
         return
     for i in range(4):
-        act = action[i]
-        nx, ny = x + act[0], y + act[1]
-        n_pct = now_pct * pct_lst[i]
-        if (nx, ny) in trace:
-            pct -= n_pct
-            continue
-        bfs(nx, ny, node + 1, trace|set([(nx, ny)]), n_pct)
+        nx, ny = x + dx[i], y + dy[i]
+        if (nx, ny) not in trace:
+            dfs(nx, ny, node + 1, trace|set([(nx, ny)]), now_pct * pct_lst[i])
     return
-    
-bfs(0, 0, 0, set([(0,0)]), 1)
+
+dfs(0, 0, 0, set([(0,0)]), 1)
 
 print(pct)
