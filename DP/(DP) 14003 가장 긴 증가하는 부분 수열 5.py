@@ -46,9 +46,9 @@ for i in range(N):
         dp.append(A[i])
         len_dp[i] = len(dp) - 1
 
-print(len(dp) - 1)
-
 l = len(dp) - 1
+
+print(l)
 
 lst = []
 
@@ -56,8 +56,7 @@ for i in range(N - 1, -1, -1):
     if len_dp[i] == l:
         lst.append(A[i])
         l -= 1
-        if l == 1:
-            break
+        
 lst.reverse()
 
 for i in lst:
