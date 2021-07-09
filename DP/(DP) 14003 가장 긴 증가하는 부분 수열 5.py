@@ -34,15 +34,31 @@ N = int(input())
 
 A = tuple(map(int,input().split()))
 
-dp = [A[0]]
+dp = [-1e9]
+len_dp = [0 for _ in range(N)]
 
-for now in A[1:]:
-    if dp[-1] >= now:
-        dp[bisect_left(dp, now)] = now
+for i in range(N):
+    if dp[-1] >= A[i]:
+        len_dp[i] = bisect_left(dp, A[i])
+        dp[len_dp[i]] = A[i]
+        
     else:
-        dp.append(now)
+        dp.append(A[i])
+        len_dp[i] = len(dp) - 1
 
-print(len(dp))
+print(len(dp) - 1)
 
-for num in dp:
-    print(num, end = ' ')
+l = len(dp) - 1
+
+lst = []
+
+for i in range(N - 1, -1, -1):
+    if len_dp[i] == l:
+        lst.append(A[i])
+        l -= 1
+        if l == 1:
+            break
+lst.reverse()
+
+for i in lst:
+    print(i, end = ' ')
