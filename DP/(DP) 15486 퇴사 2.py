@@ -94,7 +94,8 @@ N = 7인 경우에 다음과 같은 상담 일정표를 보자.
 
 N = int(input())
 
-dic = {0 : (0, 0, set())}
+dic = {0 : (0, 0)}
+off = {i : set() for i in range(1, N + 1)}
 for i in range(1, N + 1):
 	T, P = map(int,input().split())
 	if i + T - 1 > N:
@@ -102,10 +103,9 @@ for i in range(1, N + 1):
 	else:
 		dic[i] = (T, P, set([ i + j for j in range(T)]))
 
-print(dic)
 pay_dp = [dic[i][1] for i in range(N + 1)]
 idx = 0
-print(pay_dp)
+
 for i in range(1, N + 1):
 	now = pay_dp[i]
 	maxi = now
@@ -121,6 +121,5 @@ for i in range(1, N + 1):
 			maxi = pay
 
 	pay_dp[i] = maxi
-	print(pay_dp)
 
 print(max(pay_dp))
