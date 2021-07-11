@@ -99,6 +99,8 @@ else:
     for i in range(n):
         print(''.join(open_map[i]))
 
+
+
 '''
 8
 ...**..*

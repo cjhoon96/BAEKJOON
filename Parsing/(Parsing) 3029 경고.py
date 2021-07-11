@@ -37,6 +37,7 @@ https://www.youtube.com/watch?v=9sFyfF34iPw&t=60s
 예제 출력 2 
 02:01:26
 '''
+
 import sys
 input = sys.stdin.readline
 

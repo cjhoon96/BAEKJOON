@@ -1,10 +1,6 @@
-n = int(input())
-a = list(map(int, input().split()))
-c = [0] * 1001
-for i in range(n): 
-    c[a[i]] = max(c[:a[i]]) + a[i]
-    print(c)
-print(max(c))
+n = 'abc'
+
+print(n.replace('d',''))
 
 '''
 5 5 1 5 10
