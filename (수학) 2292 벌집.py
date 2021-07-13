@@ -37,3 +37,4 @@ while True:
     f += 1
     f_last += next_f
     next_f += 6
+'''사진 첨부'''
