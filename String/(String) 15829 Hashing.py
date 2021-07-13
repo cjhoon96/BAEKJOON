@@ -1,5 +1,5 @@
 '''
-https://www.acmicpc.net/status?user_id=cjhoon96&problem_id=15829&from_mine=1
+https://www.acmicpc.net/problem/15829
 Hashing 서브태스크출처
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
 1 초	512 MB	9918	3183	2732	32.809%
