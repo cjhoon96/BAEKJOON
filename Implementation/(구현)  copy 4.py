@@ -53,6 +53,6 @@ for _ in range(int(input())):
     H, W, N = map(int,input().split())
     f = N%H
     if f == 0:
-        print(H * 100 + N//H +1)
+        print(H * 100 + N//H)
     else:
         print(f *100 + N//H + 1) 
