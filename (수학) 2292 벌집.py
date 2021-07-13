@@ -16,7 +16,7 @@ https://www.acmicpc.net/problem/2292
 
 예제 입력 1 
 13
-예제 출력 1 
+예제 출력 1  
 3
 출처
 ICPC > Regionals > Asia Pacific > Korea > Nationwide Internet Competition > Seoul Nationalwide Internet Competition 2004 B번

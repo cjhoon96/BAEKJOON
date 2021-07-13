@@ -44,4 +44,4 @@ for _ in range(int(input())):
             s += f[i][j]
             next.append(s)
         f.append(next)
-    print(f[-1][-1])
+    print(f[-1][-1]) 
