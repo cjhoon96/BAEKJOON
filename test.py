@@ -1,10 +1,5 @@
-a = 'abcdefghijklmnopqrstuvwxyz'
-b = input()
-for i in a:
-    if i in b:
-        print(b.count(i), end = ' ')
-    else:
-        print(-1, end = ' ')
+dic = {1 : 2}
+print(dic, dic[1])
 '''
 5 5 1 5 10
 1 2 5
