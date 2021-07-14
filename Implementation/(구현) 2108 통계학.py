@@ -61,6 +61,10 @@ N개의 수가 주어졌을 때, 네 가지 기본 통계값을 구하는 프로
 문제의 오타를 찾은 사람: jh05013, skynet
 '''
 
+import sys
+input = sys.stdin.readline
+from collections import Counter
+
 n = int(input())
 
 lst = []
@@ -68,38 +72,21 @@ visited = {}
 for _ in range(n):
     a = int(input())
     lst.append(a)
-    if a not in visited:
-        visited[a] = 0
-print(visited)
+
 lst.sort()
 
-s = 0
+cnt_dic = Counter(lst).most_common()
+
 maxi = max(lst)
 mini = min(lst)
-max_cnt = 0
-max_lst = []
 
-for i in range(n):
-    now = lst[i]
-    s += now
-    if not visited[now]:
-        visited[now] = 1
-        now_cnt = lst.count(now)
-        if max_cnt < now_cnt:
-            max_lst = [now]
-            max_cnt = now_cnt
-        
-        elif max_cnt == now_cnt:
-            max_lst.append(now)
 
-print(int(round(s / n, 0)))
+print(int(round(sum(lst) / n, 0)))
 print(lst[n//2])
 
-if len(max_lst) > 1:
-    max_lst.sort()
-    print(max_lst[1])
-
+if len(cnt_dic) > 1 and cnt_dic[0][1] == cnt_dic[1][1]:
+    print(cnt_dic[1][0])
 else:
-    print(max_lst[0])
+    print(cnt_dic[0][0])
 
 print(maxi - mini)
