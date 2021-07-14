@@ -55,6 +55,46 @@ front
 문제의 오타를 찾은 사람: compro0317
 '''
 
+
+'''
+deque 가 아닌 queue를 import했을때 첫 원소와 마지막 원소를 단순히 불러오기만 하는경우에서 오류 발생
+import queue
+import sys
+input = sys.stdin.readline
+
+q = queue.Queue()
+
+for _ in range(int(input())):
+    cmd = input().split()
+
+    if cmd[0] == 'pop':
+        if queue:
+            print(q.get())
+        else:
+            print(-1)
+
+    elif cmd[0] == 'size':
+        print(q.qsize())
+    
+    elif cmd[0] == 'empty':
+        print(q.empty())
+    
+    elif cmd[0] == 'front':
+        if queue:
+            print(q[0])
+        else:
+            print(-1)
+    
+    elif cmd[0] == 'back':
+        if queue:
+            print(q[-1])
+        else:
+            print(-1)
+
+    else:
+        q.put(int(cmd[1]))
+'''
+
 from collections import deque
 import sys
 input = sys.stdin.readline
