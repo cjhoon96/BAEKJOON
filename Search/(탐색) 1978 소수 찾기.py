@@ -23,6 +23,9 @@ https://www.acmicpc.net/problem/1978
 '''
 #Sieve of Eratosthenes
 
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 
 lst = list(map(int,input().split()))
