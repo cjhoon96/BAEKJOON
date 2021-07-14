@@ -100,3 +100,46 @@ for _ in range(int(input())):
         cmd, X = cmd.split()
         stack.append(int(X))
     
+
+'''
+인상적인 코드
+1
+from sys import stdin
+2
+​
+3
+stack = []
+4
+next(stdin)
+5
+for line in stdin:
+6
+    command = line.split()
+7
+    if command[0] == 'push':
+8
+        stack.append(command[1])
+9
+    elif command[0] == 'pop':
+10
+        if stack: print(stack.pop())
+11
+        else: print(-1)
+12
+    elif command[0] == 'size':
+13
+        print(len(stack))
+14
+    elif command[0] == 'empty':
+15
+        if stack: print(0)
+16
+        else: print(1)
+17
+    elif command[0] == 'top':
+18
+        if stack: print(stack[-1])
+19
+        else: print(-1)
+
+'''
