@@ -34,14 +34,15 @@ N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로�
 정렬
 '''
 
-from bisect import bisect_left
 import sys
 input = sys.stdin.readline
 
 lst = []
 for i in range(int(input())):
     n = int(input())
-    lst.insert(bisect_left(lst, n), n)
+    lst.append(n)
+
+lst.sort()
 
 for i in lst:
     print(i)
