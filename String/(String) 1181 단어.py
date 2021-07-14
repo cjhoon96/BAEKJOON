@@ -62,7 +62,6 @@ for _ in range(n):
     else:
         dic[l] = [a]
         key.append(l)
-    print(a,dic)
 
 key.sort()
 
