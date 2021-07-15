@@ -58,6 +58,54 @@ NO
 문제의 오타를 찾은 사람: bgjuw12
 데이터를 추가한 사람: djm03178
 '''
+'''
+n = int(input())
+
+lst = []
+for _ in range(n):
+    lst.append(int(input()))
+
+stack = []
+a = 1
+idx = 0
+ans = []
+possible = True
+visited = [0] * (n + 1)
+while idx < n:
+    if stack:
+        now = lst[idx]
+        check = stack[-1]
+
+        if now == check:
+            idx += 1
+            stack.pop()
+            ans.append('-')
+
+        elif not visited[now]:
+            stack.append(a)
+            visited[a] = 1
+            ans.append('+')
+            a += 1
+
+        else:
+            possible = False
+            break
+
+    else:
+        stack.append(a)
+        visited[a] = 1        
+        ans.append('+')
+        a += 1
+
+if possible:
+    for i in ans:
+        print(i)
+
+else:
+    print('NO')
+'''
+import sys
+input = sys.stdin.readline
 
 n = int(input())
 
@@ -65,4 +113,67 @@ lst = []
 for _ in range(n):
     lst.append(int(input()))
 
-while True:
+stack = []
+a = 1
+ans = []
+possible = True
+for now in lst:
+    if a <= now:
+        while a <= now:
+            stack.append(a)
+            a += 1
+            ans.append('+')
+            
+        stack.pop()
+        ans.append('-')
+        
+    else:
+        if stack[-1] == now:
+            stack.pop()
+            ans.append('-')
+        
+        else:
+            possible = False
+            break
+
+if possible:
+    print('\n'.join(ans))
+
+else:
+    print('NO')
+
+'''n = int(input())
+
+lst = []
+for _ in range(n):
+    lst.append(int(input()))
+
+stack = []
+a = 1
+ans = []
+possible = True
+for now in lst:
+    if a <= now:
+        while a <= now:
+            a += 1
+            ans.append('+')
+        ans.append('-')
+        last = now - 1
+        print(last)
+    else:
+        if now == last:
+            ans.append('-')
+            last -= 1
+            print(last)
+        
+        else:
+            possible = False
+            print(last, now) 
+            break
+
+if possible:
+    for i in ans:
+        print(i)
+
+else:
+    print('NO')'''
