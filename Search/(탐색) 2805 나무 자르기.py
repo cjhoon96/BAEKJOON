@@ -57,29 +57,18 @@ T = tuple(map(int,input().split()))
 
 L, R = 1, max(T)
 
-while True:
+while L <= R:
     M = (L + R) // 2
     l = 0
-    if L >= M:
-        break
     
     for t in T:
         if t > M:
             l += t - M
-    print(l, L, R, M)
+            
     if l >= m:
-        L = M
+        L = M + 1
     
     else:
-        R = M
+        R = M - 1
 
-l = 0
-for t in T:
-    if t > R:
-        l += t - R
-
-if l >= m:
-    print(R)
-
-else:
-    print(L)
+print(R)
