@@ -58,7 +58,6 @@ for _ in range(int(input())):
     while True:
         now = queue.popleft()
         now_p = p[now]
-        print(queue, p, now, now_p)
         for i in p:
             if now_p < i:
                 queue.append(now)
