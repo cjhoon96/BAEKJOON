@@ -64,7 +64,8 @@ while True:
         break
     
     for t in T:
-        l += t - M
+        if t > M:
+            l += t - M
     print(l, L, R, M)
     if l >= m:
         L = M
@@ -74,7 +75,8 @@ while True:
 
 l = 0
 for t in T:
-    l += t - R
+    if t > R:
+        l += t - R
 
 if l >= m:
     print(R)
