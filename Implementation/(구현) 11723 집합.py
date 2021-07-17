@@ -84,38 +84,38 @@ F# (.NET): 64 MB
 Visual Basic (.NET): 64 MB
 '''
 
-s = set()
+import sys
+input = sys.stdin.readline
+
+s = [0 for _ in range(21)]
 
 for _ in range(int(input())):
     cmd = tuple(input().split())
     c = cmd[0]
     if c == 'add':
         x = int(cmd[1])
-        s.add(x)
+        if not s[x]:
+            s[x] = 1
     
     elif c == 'remove':
         x = int(cmd[1])
-        if x in s:
-            s.remove(x)
+        if s[x]:
+            s[x] = 0
     
     elif c == 'check':
         x = int(cmd[1])
-        if x in s:
-            print(1)
+        print(s[x])
 
-        else:
-            print(0)
-    
     elif c == 'toggle':
         x = int(cmd[1])
-        if x in s:
-            s.remove(x)
+        if s[x]:
+            s[x] = 0
     
         else:
-            s.add(x)
+            s[x] = 1
     
     elif c == 'all':
-        s = set([i + 1 for i in range(20)])
+        s = [1 for _ in range(21)]
     
     else:
-        s = set()
+        s = [0 for _ in range(21)]
