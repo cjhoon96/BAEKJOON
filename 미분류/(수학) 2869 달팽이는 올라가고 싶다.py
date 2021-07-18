@@ -1,5 +1,5 @@
 '''
-https://www.acmicpc.net/problem/2869
+https://www.acmicpc.net/problem/2869 
 달팽이는 올라가고 싶다 출처다국어
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
 0.15 초 (추가 시간 없음) (하단 참고)	128 MB	97510	25454	21493	27.643%

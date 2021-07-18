@@ -31,7 +31,7 @@ https://www.acmicpc.net/problem/2775
 예제 출력 1 
 6
 10
-'''
+''' 
 
 for _ in range(int(input())):
     k = int(input())

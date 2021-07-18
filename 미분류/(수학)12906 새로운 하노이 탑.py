@@ -1,5 +1,5 @@
 '''
-https://www.acmicpc.net/problem/12906
+https://www.acmicpc.net/problem/12906 
 새로운 하노이 탑
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
 5 초	512 MB	690	387	295	58.416%

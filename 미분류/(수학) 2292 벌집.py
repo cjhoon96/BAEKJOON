@@ -36,5 +36,5 @@ while True:
         break
     f += 1
     f_last += next_f
-    next_f += 6
+    next_f += 6 
 '''사진 첨부'''
