@@ -50,17 +50,14 @@ import heapq
 n, x = map(int,input().split())
 order = list(map(int,input().split()))
 
-L = sum(order) // x + 1
+L = sum(order) // x
+
 R = n 
 
-while True:
-    if L >= R:
-        print(R)
-        break
-    M = (L + R) //2
+while L < R:
+    M = (L + R) // 2
     lines = order[:M]
     heapq.heapify(lines)
-    
     for now in order[M:]:
         mini = heapq.heappop(lines)
         mini += now
@@ -69,5 +66,16 @@ while True:
             break
         heapq.heappush(lines, mini)
     else:
-        R = M - 1
+        R = M
 
+lines = order[:L]
+heapq.heapify(lines)
+for now in order[L:]:
+    mini = heapq.heappop(lines)
+    mini += now
+    if mini > x:
+        print(R)
+        break
+    heapq.heappush(lines, mini)
+else:
+    print(L)

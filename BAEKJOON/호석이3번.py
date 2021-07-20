@@ -82,7 +82,7 @@ n = int(input())
 
 num_lst = [0] + list(map(int,input().split()))
 visited = [0 for _ in range(n + 1)]
-tree = [[] for _ in range(n + 1)]
+tree = {i:[] for _ in range(1, n + 1)}
 
 for _ in range(n - 1):
     x, y = map(int,input().split())
@@ -104,17 +104,15 @@ while queue:
         queue.append(array + [i])
         appended = True
     if not appended:
-        l = len(array)
-        for i in range(2,l + 1):
-            for bulb in combinations(array, i):
-                bulb = tuple(bulb)
-                last = 0
-                for j in bulb:
-                    now = num_lst[j]
-                    if now < last:
-                        break
-                    last = now
-                else:
-                    bulbs.add(bulb)
+        num_array = [num_lst[i] for i in array]
+        l = len(num_array)
+        q = deque
+        while q:
 
-print(len(bulbs))
+print(len(bulbs)%1000000007)
+
+def dfs(ar, last_idx, l):
+    added = False
+    for i in range(last_idx + 1, l):
+        if num_lst[i] >= num_lst[last_idx]:
+            ar.append(i)
