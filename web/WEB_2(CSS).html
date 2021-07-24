@@ -1,14 +1,24 @@
+<!doctype html>
 <html>
 <head> 
-<title>WEB1 - html</title>
-<meta charset = "utf-8">
+  <title>WEB1 - html</title>
+  <meta charset = "utf-8">
+  <style> 
+    a{
+      color:red;
+      text-decoration: none;
+    } 
+    h1{
+      font-size:45px; text-align:center;
+    }
+  </style>
 </head>
 
 <body>
   <h1><a href = "WEB_0(index).html">WEB</a></h1>
   <ol>
     <li><a href = "WEB_1(HTML).html">HTML</a></li>
-    <strong><li><a href = "WEB_2(CSS).html">CSS</a></li></strong>
+    <strong><li><a href = "WEB_2(CSS).html"style = "text-decoration: underline">CSS</a></li></strong>
     <li><a href = "WEB_3(JavaScript).html">JavaScript</a></li>
   </ol>
   <ol start = '2'>
@@ -19,7 +29,41 @@
     </p>
     <p>현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다. 또한 다양한 애니메이션 기능이 추가되어 어도비 플래시를 어느 정도 대체하고 있다.
     </p>
+    <h3>Selector & Declaration & Property</h3>
+      <ol type = 'i'>
+        <h3> <li> <h3> <xmp> <style>  </style> </xmp> </h3> </li> </h3>
+        해당 태그의 사이의 문법을 css로 하겠다는 것을 알려주는 태그로 헤드에 집어 넣는다<br>
+        모든 a 태그의 글자에 대해 빨간색으로 표기를 하겠다는 코드 html의 폰트 태그와 달리 a태그가 달린 모든 글자들의 색을 바꿀 수 있는 큰 효과가 있다.<br>
+        중복된 코드를 단 하나의 코드로 대체할 수 있다.<br>
+        <strong> O{}를 Selector(선택자)라고 하며 어느 부분에 효과를 줄지 지정해 준다.</strong>
+        <strong> {} 안쪽의 효과는 Declaration(선언)이라고 한다.</strong>
+        <strong> Declaration의 color 이나 test-decoration 을 Property 라고 한며 red나 underline, </strong>
+        ex) <br>
+        <strong><xmp> <style> a{color:red;} </style> </xmp></strong>
+        <br>
 
+
+        <h3><li> style="" 속성 </li></h3>
+        html 태그 안에 <strong>html의</strong> 속성 <strong>style=""</strong> 을 통해 ""안에 css의 효과를 집어넣는다.<br>
+        <strong>이 경우 태그 안쪽에 속성을 통해 효과를 주기 때문에 Selector(선택자)가 필요하지 않다.</strong>
+      </ol>
+    <h3>Declarations(Properties:Values;)</h3>
+      <ol type = 'i'>
+        <h3> <li> <h3> <xmp> color:'(색상)' </xmp> </h3> </li> </h3>
+        텍스트의 색을 바꿔주는 property로 value로 원하는 색상을 영어 또는 rgb(-,-,-) 을 통해 원하는 색상을 집어넣을수 있다.
+        <h3> <li> <h3> <xmp> text-decoration:--- </xmp> </h3> </li> </h3>
+        텍스트를 꾸며주는 property 로 value를 통헤 none으로 기존에 있던 설정을 없애줄 수 있으며 underline으로 밑줄을 만들어 주는 등의 효과를 줄 수 있다.<br>
+        <h3> <li> <h3> <xmp> font-size:--px </xmp> </h3> </li> </h3>
+        텍스트의 크기를 바꿔주는 property로 value값으로 숫자px를 줘 픽셀 값으로 크기를 정한다.<br>
+        <h3> <li> <h3> <xmp> text-align:---</xmp> </h3> </li> </h3>
+        텍스트의 배치를 바궈주는 property로 대표적으로 center가 있다.<br><br><br><br>
+        ex) <br>
+        <strong><xmp> <a href = "WEB_2(CSS).html"style = "color: red; text-decoration: underline; font-size:45px; text-align:center"> css </a> </xmp></strong>
+        <strong>=></strong><br>
+        <a href = "WEB_2(CSS).html"style = "color: red; text-decoration: underline; font-size:45px; text-align:center"> css </a>
+        <br>
+
+      </ol>
   </ol>
 </body>
 
