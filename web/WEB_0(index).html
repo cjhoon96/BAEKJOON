@@ -5,22 +5,41 @@
   <meta charset = "utf-8">
 
   <style> 
+    body{
+      margin:1px;
+    }
+    #active{
+      color:cornflowerblue
+    }
+    .saw {
+      color:gray;
+    }
+    .category{
+      border-right:3px solid gray;
+      width:100px;
+      margin:2px;
+      padding:30px;
+      font-size:20px;
+    }
     a{
-      color:red;
+      color:black;
       text-decoration: none;
     } 
     h1{
-      font-size:45px; text-align:center;
+      font-size:55px; text-align:center;
+      border-bottom:4px solid gray;
+      margin:2px;
+      padding:20px;
     }
   </style>
 </head>
 
 <body>
-  <h1><a href = "WEB_0(index).html"style = "text-decoration: underline">WEB</a></h1>
-  <ol>
-    <li><a href = "WEB_1(HTML).html">HTML</a></li>
-    <li><a href = "WEB_2(CSS).html">CSS</a></li>
-    <li><a href = "WEB_3(JavaScript).html">JavaScript</a></li>
+  <h1><a href="WEB_0(index).html" style="text-decoration: underline">WEB</a></h1>
+  <ol class="category">
+    <strong><li><a href = "WEB_1(HTML).html" class="saw">HTML</a></li></strong>
+    <strong><li><a href = "WEB_2(CSS).html"style = "text-decoration: underline" class="saw">CSS</a></li></strong>
+    <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
   </ol> 
 
   <h2> <li> WEB </li></h2>
