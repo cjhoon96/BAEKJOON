@@ -3,104 +3,78 @@
 <head>
   <title>WEB1 - html</title>
   <meta charset = "utf-8">
-
-  <style> 
-    body{
-      margin:1px;
-    }
-    #active{
-      color:cornflowerblue
-    }
-    .saw {
-      color:gray;
-    }
-    .category{
-      border-right:3px solid gray;
-      width:100px;
-      margin:2px;
-      padding:30px;
-      font-size:20px;
-    }
-    a{
-      color:black;
-      text-decoration: none;
-    } 
-    h1{
-      font-size:55px; text-align:center;
-      border-bottom:4px solid gray;
-      margin:2px;
-      padding:20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1><a href="WEB_0(index).html" style="text-decoration: underline">WEB</a></h1>
-  <ol class="category">
-    <strong><li><a href = "WEB_1(HTML).html" class="saw">HTML</a></li></strong>
-    <strong><li><a href = "WEB_2(CSS).html"style = "text-decoration: underline" class="saw">CSS</a></li></strong>
-    <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
-  </ol> 
-
-  <h2> <li> WEB </li></h2>
-  <ul>
-    <h3> <li> Web Browser </li> </h3>
-      정보를 요청 client(고객) 라 부름
-    <h3> <li> Web Server </li> </h3>
-      정보를 응답 server 라 부름 
+  <div id = "grid">
+    <ol class="category">
+      <strong><li><a href = "WEB_1(HTML).html" class="saw">HTML</a></li></strong>
+      <strong><li><a href = "WEB_2(CSS).html" class="saw">CSS</a></li></strong>
+      <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
+    </ol> 
+    <div id="text">
+      <h2> <li> WEB </li></h2>
       <ul>
-        <h4> <li> Web Hosting </li> </h4>
-        <h4> <li> Web Server </li> </h4>
+        <h3> <li> Web Browser </li> </h3>
+          정보를 요청 client(고객) 라 부름
+        <h3> <li> Web Server </li> </h3>
+          정보를 응답 server 라 부름 
+          <ul>
+            <h4> <li> Web Hosting </li> </h4>
+            <h4> <li> Web Server </li> </h4>
+          </ul>
       </ul>
-  </ul>
 
-  <h4> ex) </h4>
-  <pre>
-    Web Server가 설치된 컴퓨터에 index.html이라는 파일이 있다. 
-    Web Browser 이 설치된 컴퓨터에서 http://(주소)/index.html 를 검색 했을 때 
-    Web Server가 설치된 컴퓨터에서 index.html파일을 찾아 코드로 Web Browser가 설치된 컴퓨터로 쏘아 준다.
-    이 코드를 Web Browser가 읽어서 화면에 출력한다.
-  </pre>
+      <h4> ex) </h4>
+      <pre>
+        Web Server가 설치된 컴퓨터에 index.html이라는 파일이 있다. 
+        Web Browser 이 설치된 컴퓨터에서 http://(주소)/index.html 를 검색 했을 때 
+        Web Server가 설치된 컴퓨터에서 index.html파일을 찾아 코드로 Web Browser가 설치된 컴퓨터로 쏘아 준다.
+        이 코드를 Web Browser가 읽어서 화면에 출력한다.
+      </pre>
 
-  <ul>
-    <h3> <li> Web Hosting </li> </h3>
-    <p>
-      인터넷이 연결 되어 있는 컴퓨터 웹서버를 운영하기 위한 컴퓨터 host를 빌려주는 회사를 Web Hosting이라고 한다.<br> 
-      대표적으로 <a href = "https://github.com/"><strong>github</strong></a>가 있다.
-    </p>
-
-
-    <h3> <li> Web Server </li> </h3>
-    <p>
-      수업에서 Apache를 사용해 server 설치<br>
       <ul>
-        <h4><li>127.0.0.1</li></h4>
-          웹 브라우저가 설치되어 있는 컴퓨터를 가르키는 특수한 <strong>I</strong>nternet <strong>P</strong>rotocol <strong>Address</strong><br>
-        <h4><li><a href = "http://127.0.0.1/index.html">http://<strong>127.0.0.1</strong>/index.html</a></li></h4>
-          웹브라우저가 자신의 컴퓨터에 설치되어있는 웹 서버에 접속하여 index.html 파일을 요청 => <strong>htdocs</strong> 디렉토리에서 파일을 찾도록 기본적으로 설정이 되어있다.<br>
-          htdocs 폴더로 현재 내가 작성한 html 파일 및 사진들을 옮겨준다.<br>
-        <h4><li>http://127.0.0.1/index.html 와 file:///C:/Bitnami/wampstack-8.0.8-0/apache2/htdocs/index.html 의 차이</li></h4>
-          file://은 웹서버의 개입 없이 웹 브라우저가 직접 저장된 index.html 파일을 직접 읽어서 화면에 열어주는 것이다.<br>
-          http:// 은 <strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol (웹브라우저와 웹서버가 서로 통신할 떄 사용하는 통신 규약)을 이용하여 데이터를 가져오는 것이다.<br>
-        <h4><li>오류 발생</li></h4>
-          <a href = "http://127.0.0.1/index.html">http://127.0.0.1/index.html</a> 으로 접속 하였으나 오류 발생(내가 작성한 html들이 뜨지 않음)<br>
-          포트가 81로 성정 되어 있는 것이 원인으로 추정 <a href = "http://127.0.0.1:81/index.html">http://127.0.0.1:81/index.html</a> 을 통해 접속시 해결됨<br>
-          (아직 지식이 깊이 않아 포트에 대한 개념은 없음)<br>
-          <img src="Bitnami.png"width="450"><br>
-          Bitnami WAMP manager-windows에서 Manage Servers 의 Apache Web Server를 클릭 후 Configure 를 클릭<br>
-          <img src="porterror2.png"width="450"><br>
-          포트가 81로 되어있는것을 볼 수 있다.<br>
-          <img src="porterror1.png"width="450"><br>
-          포트를 80으로 수정<br>
-          이제 <a href = "http://127.0.0.1/index.html">http://127.0.0.1/index.html</a> 으로 접속시 문제없이 원하는 화면이 뜬다.<br>
-      
-      http://127.0.0.1/index.html 와 <br>
-      file:///C:/Bitnami/wampstack-8.0.8-0/apache2/htdocs/index.html<br>의 차이
-      
-      </ul>
-    </p>
-  </ul>
+        <h3> <li> Web Hosting </li> </h3>
+        <p>
+          인터넷이 연결 되어 있는 컴퓨터 웹서버를 운영하기 위한 컴퓨터 host를 빌려주는 회사를 Web Hosting이라고 한다.<br> 
+          대표적으로 <a href = "https://github.com/"><strong>github</strong></a>가 있다.
+        </p>
 
+
+        <h3> <li> Web Server </li> </h3>
+        <p>
+          수업에서 Apache를 사용해 server 설치<br>
+          <ul>
+            <h4><li>127.0.0.1</li></h4>
+              웹 브라우저가 설치되어 있는 컴퓨터를 가르키는 특수한 <strong>I</strong>nternet <strong>P</strong>rotocol <strong>Address</strong><br>
+            <h4><li><a href = "http://127.0.0.1/index.html">http://<strong>127.0.0.1</strong>/index.html</a></li></h4>
+              웹브라우저가 자신의 컴퓨터에 설치되어있는 웹 서버에 접속하여 index.html 파일을 요청 => <strong>htdocs</strong> 디렉토리에서 파일을 찾도록 기본적으로 설정이 되어있다.<br>
+              htdocs 폴더로 현재 내가 작성한 html 파일 및 사진들을 옮겨준다.<br>
+            <h4><li>http://127.0.0.1/index.html 와 file:///C:/Bitnami/wampstack-8.0.8-0/apache2/htdocs/index.html 의 차이</li></h4>
+              file://은 웹서버의 개입 없이 웹 브라우저가 직접 저장된 index.html 파일을 직접 읽어서 화면에 열어주는 것이다.<br>
+              http:// 은 <strong>H</strong>yper <strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol (웹브라우저와 웹서버가 서로 통신할 떄 사용하는 통신 규약)을 이용하여 데이터를 가져오는 것이다.<br>
+            <h4><li>오류 발생</li></h4>
+              <a href = "http://127.0.0.1/index.html">http://127.0.0.1/index.html</a> 으로 접속 하였으나 오류 발생(내가 작성한 html들이 뜨지 않음)<br>
+              포트가 81로 성정 되어 있는 것이 원인으로 추정 <a href = "http://127.0.0.1:81/index.html">http://127.0.0.1:81/index.html</a> 을 통해 접속시 해결됨<br>
+              (아직 지식이 깊이 않아 포트에 대한 개념은 없음)<br>
+              <img src="Bitnami.png"width="450"><br>
+              Bitnami WAMP manager-windows에서 Manage Servers 의 Apache Web Server를 클릭 후 Configure 를 클릭<br>
+              <img src="porterror2.png"width="450"><br>
+              포트가 81로 되어있는것을 볼 수 있다.<br>
+              <img src="porterror1.png"width="450"><br>
+              포트를 80으로 수정<br>
+              이제 <a href = "http://127.0.0.1/index.html">http://127.0.0.1/index.html</a> 으로 접속시 문제없이 원하는 화면이 뜬다.<br>
+          
+          http://127.0.0.1/index.html 와 <br>
+          file:///C:/Bitnami/wampstack-8.0.8-0/apache2/htdocs/index.html<br>의 차이
+          
+          </ul>
+        </p>
+      </ul>
+    </div>
+  </div>
 
 </body>
 

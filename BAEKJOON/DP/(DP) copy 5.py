@@ -27,5 +27,40 @@ https://www.acmicpc.net/problem/1106
 출처
 문제를 번역한 사람: baekjoon
 문제의 오타를 찾은 사람: ldd0901, pos10022, semtax
-
 '''
+import sys
+input = sys.stdin.readline
+from math import ceil
+
+c, n = map(int,input().split())
+
+cost_lst = [tuple(map(int,input().split())) for _ in range(n)]    
+
+rng = 1e9
+for cost,plus in cost_lst:
+    now_rng = ceil(c/plus) * cost
+    if rng > now_rng:
+        rng = now_rng
+
+dp = [0 for _ in range(rng + 1)]    # 해당 인덱스 값이 현재 지불한 코스트일때 추가로 모을 수 있는 손님의 최대 인원
+
+for cost, plus in cost_lst:
+    n_cost = cost
+    n_plus = plus
+    while n_cost <= rng:
+        dp[n_cost] = max(dp[n_cost], n_plus)
+        n_cost += cost
+        n_plus += plus
+
+for i in range(rng + 1):
+    maxi = dp[i]
+    now_dp = dp[:i + 1]
+    for j in range(1, i//2 + 1):
+        L, R = now_dp[j], now_dp[-j-1]
+        if L and R and maxi < L + R:
+            maxi = L + R
+    dp[i] = maxi
+    
+    if maxi >= c:
+        print(i)
+        break
