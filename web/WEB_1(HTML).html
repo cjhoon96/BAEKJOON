@@ -7,10 +7,23 @@
 </head>
 
 <body>
-  <h1><a href = "WEB_0(index).html">WEB</a></h1>
+  <input type=button value="night" onclick="
+  var target = document.querySelector('body');
+  if(this.value == 'night'){
+    target.style.backgroundColor = 'rgb(26, 7, 0)';
+    target.style.color = 'white';
+    this.value = 'day';
+  } else  {
+    target.style.backgroundColor = 'white'; 
+    target.style.color = 'black';
+    this.value = 'night';
+  }
+  ">
+
+  <h1><a href = "WEB_0(index).html" class="saw">WEB</a></h1>
   <div id = "grid">
     <ol class="category">
-      <strong><li><a href = "WEB_1(HTML).html" style = "text-decoration: underline" class="saw" id="active">HTML</a></li></strong>
+      <strong><li><a href = "WEB_1(HTML).html" class="saw" id="active">HTML</a></li></strong>
       <strong><li><a href = "WEB_2(CSS).html" class="saw">CSS</a></li></strong>
       <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
     </ol>
@@ -215,6 +228,7 @@
             </ul>
             <h3><li>value: 입력 태그의 초기값(사용자가 변경 가능)</li></h3>
             <h3><li>name: 서버로 전달되는 이름</li></h3>
+            <h3><li>event: 사용자와 상호작용을 가능하게 해줌 속성값으로 자바스크립트 코드를 작성해준다.</li></h3>
           </ul>
         </ol>
 

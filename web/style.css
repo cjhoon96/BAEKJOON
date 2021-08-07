@@ -3,8 +3,13 @@
         margin:1px;
     }
     #active{
-        color:cornflowerblue
+        color:cornflowerblue;
+        text-decoration: underline;
     }
+    a{
+        color:black;
+        text-decoration: none;
+    } 
     .saw {
         color:gray;
     }
@@ -16,10 +21,6 @@
         font-size:20px;
         padding-left: 40px;
     }
-    a{
-        color:black;
-        text-decoration: none;
-    } 
     h1{
         font-size:55px; text-align:center;
         border-bottom:7px solid gray;
@@ -27,9 +28,11 @@
         padding:20px;
     }
     .ex{
-        border: 6px solid rgb(0, 128, 248);
+        border: 6px solid rgba(91, 153, 168, 0.842);
         padding: 10px;
+        color:black;
         display: inline-block;
+        background-color: rgba(187, 225, 231, 0.863);
     }
     #grid{
         display: grid;
