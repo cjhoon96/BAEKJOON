@@ -2,17 +2,21 @@
         min-width: 1085px;
         margin:1px;
     }
+    
     #active{
         color:cornflowerblue;
         text-decoration: underline;
     }
+
     a{
         color:black;
         text-decoration: none;
     } 
+
     .saw {
         color:gray;
     }
+
     .category{
         border-right:5px solid gray;
         width:100px;
@@ -21,12 +25,14 @@
         font-size:20px;
         padding-left: 40px;
     }
+
     h1{
         font-size:55px; text-align:center;
         border-bottom:7px solid gray;
         margin:2px;
         padding:20px;
     }
+
     .ex{
         border: 6px solid rgba(91, 153, 168, 0.842);
         padding: 10px;
@@ -34,14 +40,24 @@
         display: inline-block;
         background-color: rgba(187, 225, 231, 0.863);
     }
+    .exNight{
+        border: 6px solid rgba(14, 68, 83, 0.842);
+        padding: 10px;
+        color:rgb(255, 255, 255);
+        display: inline-block;
+        background-color: rgba(108, 109, 109, 0.863);
+    }
+
     #grid{
         display: grid;
         grid-template-columns: 170px 1fr;
     }
+
     #text{
         padding-left: 25px;
         padding-right: 30px;
     }
+
     @media(max-width:1395px){
         #grid{
             display: block;
