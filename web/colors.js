@@ -19,6 +19,8 @@ function setColor(sel, clr){
     target.style.color = clr
 }
 
+
+
 // let divList = document.querySelectorAll('div')
 
 // divList.classSwitch = function (now, next){

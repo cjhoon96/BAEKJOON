@@ -4,21 +4,11 @@
   <title>WEB1 - html</title>
   <meta charset = "utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="colors.js"></script>
 </head>
 
 <body>
-  <input type=button value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value == 'night'){
-    target.style.backgroundColor = 'rgb(26, 7, 0)';
-    target.style.color = 'white';
-    this.value = 'day';
-  } else  {
-    target.style.backgroundColor = 'white'; 
-    target.style.color = 'black';
-    this.value = 'night';
-  }
-  ">
+  <input id="night_day" type=button value="night" onclick="NightDayHandler(this);">
 
   <h1><a href = "WEB_0(index).html" class="saw">WEB</a></h1>
   <div id = "grid">
