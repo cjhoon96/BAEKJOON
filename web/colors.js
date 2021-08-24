@@ -14,6 +14,18 @@ let Body = {
     }
 }
 
+let A = {
+    setColor:function (clr) {
+        let alist = document.querySelectorAll('a');
+        let i = 0;
+        while(i < alist.length){
+            alist[i].style.color = clr;
+            i++;
+        }
+    }
+    
+}
+
 function setColor(sel, clr){
     var target = document.querySelector(sel);
     target.style.color = clr
@@ -36,17 +48,18 @@ function classSwitch(now, next) {
     let lst = document.querySelectorAll("." + now)
     lst.forEach(div => {
         div.setAttribute('class',next)
-        console.log(div.className)
     })
 }
 
 function NightDayHandler (self) {
-    if(self.value === 'night'){
+    if(self.value === 'night'){                                
         Body.setAllColor('white', 'rgb(10, 16, 63)');
+        A.setColor('rgb(103, 160, 245)');
         classSwitch('ex', 'exNight');
         self.value = 'day';
     } else {
         Body.setAllColor('black', 'white');
+        A.setColor('rgb(0, 89, 223)');
         classSwitch('exNight', 'ex');
         self.value = 'night'
     }

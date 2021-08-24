@@ -4,9 +4,9 @@
     }
     
     a{
-        color:black;
         text-decoration: none;
-    } 
+        font-weight: bold;
+    }
 
     #active{
         color:cornflowerblue;
@@ -18,7 +18,7 @@
     }
 
     .category{
-        border-right:5px solid gray;
+        border-right:5px solid rgb(103, 160, 245);
         width:100px;
         margin:2px;
         padding:30px;
