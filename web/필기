@@ -7,10 +7,13 @@ fetch(---).then(function(response){
 서버가 응답하는 동안 then의 함수를 실행
 
 
+
+
 response 객체
 기본 속성 값으로 200을 가지고 있으며
 fetch 의 객체가 없는 파일 인 경우 404를 속성값으로 갖는다
 따라서 if 문과 response.status를 통해 경고창을 띄우는 등의 응용이 가능하다
+
 
 
 
