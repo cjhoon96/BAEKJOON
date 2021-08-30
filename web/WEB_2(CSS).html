@@ -1,6 +1,6 @@
 <!doctype html>
-<html>
-<head> 
+<html> 
+<head>
   <title>WEB1 - html</title>
   <meta charset = "utf-8">
   <link rel="stylesheet" href="style.css">
@@ -10,271 +10,39 @@
 <body>
   <input id="night_day" type=button value="night" onclick="NightDayHandler(this);">
 
-  <h1><a href="WEB_0(index).html" class="saw">WEB</a></h1>
-  <div id="grid">
+  <h1><a href="#!WEB" class="saw" onclick="fetchPage('WEB')">WEB</a></h1>
+  <div id = "grid">
     <ol class="category">
-      <strong><li><a href = "WEB_1(HTML).html" class="saw">HTML</a></li></strong>
-      <strong><li><a href = "WEB_2(CSS).html" class="saw" id="active">CSS</a></li></strong>
-      <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
-    </ol>
+      <strong><li><a href = "#!html" class="saw" onclick="fetchPage('html')">HTML</a></li></strong>
+      <strong><li><a href = "#!css" class="saw" onclick="fetchPage('css')">CSS</a></li></strong>
+      <strong><li><a href = "#!javascript" class="saw" onclick="fetchPage('javascript')">JavaScript</a></li></strong>
+    </ol> 
     <div id="text">
-      <ol start = '2'>
-        <h2> <li> CSS </li></h2>
-        <p><b>종속형 시트</b> 또는 <b>캐스케이딩 스타일 시트</b>(<span lang="en">Cascading Style Sheets</span>, <b>CSS</b>)는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로, HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다.
-        </p>
-        <p>마크업 언어(ex: HTML)가 웹사이트의 몸체를 담당한다면 <b>CSS</b>는 옷과 액세서리처럼 꾸미는 역할을 담당한다고 할 수 있다. 즉, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀 다른 웹사이트처럼 꾸밀 수 있다.
-        </p>
-        <p>현재 개발 중인 CSS3의 경우 그림자 효과, 그라데이션, 변형 등 그래픽 편집 프로그램으로 제작한 이미지를 대체할 수 있는 기능이 추가되었다. 또한 다양한 애니메이션 기능이 추가되어 어도비 플래시를 어느 정도 대체하고 있다.
-        </p>
-      </ol>
-
-
-      <ol type = "I">
-          <h3><li>Selector & Declarations</li></h3>
-            <ol type = 'i'>
-              <p>
-              <h3><li> style="---" 속성 </li></h3>
-              html 태그 안에 <strong>html의</strong> 속성 <strong>style=""</strong> 을 통해 ""안에 css의 효과를 집어넣는다.<br>
-              <strong>이 경우 태그 안쪽에 속성을 통해 효과를 주기 때문에 Selector(선택자)가 필요하지 않다.</strong><br><br>
-              <div class="ex">
-                ex) <br>
-                <strong><xmp> <a href = "WEB_2(CSS).html"style = "color: red; text-decoration: underline; font-size:45px; text-align:center"> css </a> </xmp></strong>
-                
-              </div>
-              </p>
-
-              
-              <p>
-              <h3> <li> <h3> <xmp> <style>  </style> </xmp> </h3> </li> </h3>
-              해당 태그의 사이의 문법을 css로 하겠다는 것을 알려주는 태그로 헤드에 집어 넣는다<br>
-              모든 a 태그의 글자에 대해 빨간색으로 표기를 하겠다는 코드 html의 폰트 태그와 달리 a태그가 달린 모든 글자들의 색을 바꿀 수 있는 큰 효과가 있다.<br>
-              중복된 코드를 단 하나의 코드로 대체할 수 있다.<br>
-              <strong> O{}를 Selector(선택자)라고 하며 어느 부분에 효과를 줄지 지정해 준다.</strong><br>
-              <strong> {} 안쪽의 효과는 Declaration(선언)이라고 한다.</strong><br>
-              <strong> Declaration의 color 이나 test-decoration 을 Property 라고 한며 red나 underline, </strong><br><br>
-              <div class="ex">
-                ex) <br>
-                <strong><xmp> <style> a{color:red;} </style> </xmp></strong>
-                </p>
-              </div>
-
-
-              <p>
-              <h3><li> tag 선택자 </li></h3>
-
-
-              </p>
-
-              <p>
-              <h3><li> class="---" 선택자 </li></h3>
-              html 태그 안에 <strong>html의</strong> 속성 <strong>class="---"</strong> 을 통해 ""안에 하나의 그룹처럼 사용할 선택자의 이름을 정해준다.<br>
-              이후 i의 style 태그 안에 .---{} 즉 .(선택자의 이름){} 을 사용하여 효과를 준다.<br>
-              선택자는 class="saw active" 의 예시와 같이 여러개를 스페이스로 구분하여 지정하여 줄 수 있으며 이 경우 style 태그에서 효과가 중복될경우 해당 마지막으로 지정한 효과가 적용된다.<br><br>
-              <div class="ex">
-                ex) <br>
-                <strong><pre><xmp> 
-  <head>
-    <style>
-      .saw{
-        color:gray;
-      }
-      .active{
-        color:red;
-      }
-    </style>
-  </head>
-  <a href = "WEB_2(CSS).html"class="saw active"> css </a> 
-                </xmp></pre></strong>
-                <strong>=> 이경우 마지막으로 지정된 .active의 효과가 적용되 css는 빨간색으로 출력된다.</strong>
-                </p>
-              </div>
-
-              <p>
-              <h3><li> id="---" 선택자 </li></h3>
-              html 태그 안에 <strong>html의</strong> 속성 <strong>id="---"</strong> 을 통해 ""안에 하나의 그룹처럼 사용할 선택자의 이름을 정해준다.<br>
-              사용 방법은 class 선택자와 동일 하지만 .대신 #이 선택자 이름 앞에 들어가며 우선 순위는 class 선택자보다 무조건 높다.<br>
-              선택자는 class="saw active" 의 예시와 같이 여러개를 스페이스로 구분하여 지정하여 줄 수 있으며 이 경우 style 태그에서 효과가 중복될경우 해당 마지막으로 지정한 효과가 적용된다.<br>
-              한가지만 사용할 수 있다.<br><br>
-              <div class="ex">
-                ex) <br>
-                <strong><pre><xmp> 
-  <head>
-    <style>
-      #active{
-        color:gray;
-      }
-      .saw{
-        color:red;
-      }
-    </style>
-  </head>
-  <a href = "WEB_2(CSS).html"class="saw" id="active"> css </a> 
-                </xmp></pre></strong>
-                <strong>=> 이경우 id 선택자인 #active의 효과가 우선순위가 더 우위에 있으므로 css는 회색으로 출력된다.</strong>
-                </p>
-              </div>
-
-            
-            </ol>
-            <br><br>
-
-
-          <h3><li>Selector(선택자) 우선 순위</li></h3>
-            <h4>tag 선택자 << class 선택자 << id 선택자</h4>
-            이 외의 다양한 선택자를 이용해 코드의 양을 줄임과 동시에 정교하게 작성할 수 있다.<br>
-            선택자들을 ,로 묶어 공통된 효과를 정리 함으로서 코드의 양을 획기적으로 줄일 수 있다.
-            <br><br><br><br><br>
-
-
-
-          <h3><li>Declarations(Properties:Values;)</li></h3>
-            <ol type = 'i'>
-              <h3> <li> color:'(색상)' </li> </h3>
-              텍스트의 색을 바꿔주는 property로 value로 원하는 색상을 영어 또는 rgb(-,-,-) 을 통해 원하는 색상을 집어넣을수 있다.<br>
-
-
-              <h3> <li> text-decoration:--- </li> </h3>
-              텍스트를 꾸며주는 property 로 value를 통헤 none으로 기존에 있던 설정을 없애줄 수 있으며 underline으로 밑줄을 만들어 주는 등의 효과를 줄 수 있다.<br>
-              
-              
-              <h3> <li> font-size:--px </li> </h3>
-              텍스트의 크기를 바꿔주는 property로 value값으로 숫자px를 줘 픽셀 값으로 크기를 정한다.<br>
-              
-              
-              <h3> <li> text-align:--- </li> </h3>
-              텍스트의 배치를 바궈주는 property로 대표적으로 center가 있다.<br><br>
-              <div class="ex">
-                ex) <br>
-                <strong><xmp> <a href = "WEB_2(CSS).html"style = "color: red; text-decoration: underline; font-size:45px; text-align:center"> css </a> </xmp></strong>
-                <strong>=></strong><br>
-                <a href = "WEB_2(CSS).html"style = "color: red; text-decoration: underline; font-size:45px; text-align:center"> css </a>
-                <br>
-              </div>
-
-
-              <h3><li>background-color:---</li></h3>
-              박스모델의 백그라운드 색깔을 지정해 준다.
-
-              <h3> <li> BOX MODEL </li> </h3>
-                <ol type="a">
-                  <h4><li>border-width:---</li></h4>
-                  네면 테두리의 너비를 설정하는 property로 value값으로 px값을 받는다.<br>
-
-                  <h4><li>border-color:---</li></h4>
-                  테두리의 색을 설정하는 property로 value로 원하는 색상을 영어 또는 rgb(-,-,-) 을 통해 원하는 색상을 집어넣을수 있다.<br>
-
-                  <h4><li>border-style:---</li></h4>
-                  테두리의 스타일을 지정하는 property로 value 값으로 none, dotted, inset, dashed, solid 등을 집어넣을수 있다.<br>
-                  또한 두개의 value를 주는 경우 세로|가로 순으로 띄어쓰기를 통해 구분하여 입력하게 되며<br>
-                  세개의 value를 주는 경우 위|가로|아래 순으로 띄어쓰기로 구분하고<br>
-                  네개의 value를 주는 경우 위|오른쪽|아래|왼쪽 순으로 띄어쓰기로 구분하여 입력한다.<br>
-
-                  <h4><li>display:---</li></h4>
-                  요소를 어떻게 보여줄지를 결정한다.<br>
-                  <ul>
-                    <h5><li>none: 보이지 않게 한다.</li></h5>
-                    <h5><li>block: block level elemant로 만들어준다. 영역은 기본적으로 가로 영역을 모두 채우며 다음 태그는 줄바꿈이 된것으로 보인다. div, p, h, li 태그등이 block으로 기본 설정 되어 있다.</li></h5>
-                    <h5><li>inline: inline element로 만들어준다. block과 달리 줄바꿈이 되지 않으며 width와 height를 지정 할 수 없다. word같은 문서에서 볼드, </li></h5>
-                  </ul>
-
-                  <h4><li>border:</li></h4>
-                  border 과 관련된 property의 value값을 순서에 상관없이 스페이스 구분으로 코드의 양을 획기적으로 줄일 수 있다.<br>
-
-                  <h4><li>padding:--px</li></h4>
-                  테두리와 요소사이의 간격을 만들어 주는 property로 value 값으로 px값을 받는다.<br>
-
-                  <h4><li>margin:--px</li></h4>
-                  테두리와 테두리 사이의 간격을 조절해 주는 property로 value 값으로 px값을 받는다.<br>
-
-                  <h4><li>width:--px</li></h4>
-                  테두리의 가로 너비를 조절해주는 property로 value 값으로 px값을 받는다.<br>
-
-                  <h4><li>height:--px</li></h4>
-                  테두리의 세로 너비를 조절해주는 property로 value 값으로 px값을 받는다.<br>
-                  
-                  <h4><li>border-bottom:</li></h4>
-                  테두리의 아래 가로선만 그려준다.<br>
-
-                  <h4><li>border-right:</li></h4>
-                  테두리의 오른쪽 가로선만 그려준다.<br>
-                  
-                  <img src="box.png">
-
-                </ol>
-                  
-                <ul>
-                  <h4><li>block level elemant: 영역은 기본적으로 가로 영역을 모두 채우며 다음 태그는 줄바꿈이 된것으로 보인다. div, p, h, li 태그등이 기본값으로 설정 되어 있다.</li></h4>
-                  <h4><li>inline element: block과 달리 줄바꿈이 되지 않으며 width와 height를 지정 할 수 없다. 요소의 크기만큼의 크기를 가지고 있으며 a 같은 태그들이 기본값으로 설정 되어 있다. </li></h4>
-                  <h4><li>기본 설정 값들은 display:---를 통해 바꿔줄 수 있다.</li></h4>
-                </ul>
-              <div class="ex">
-                ex) <br>
-                <strong><xmp>  </xmp></strong>
-                <strong>=></strong>
-
-                <br>
-              </div>
-            
-            <h3> <li> grid </li> </h3>
-
-
-            </ol>
-          
-          
-          <h3><li>Media Queries</li></h3>
-          <strong>반응형 웹을 만들기 위한 필수 요소이다.</strong><br>
-          <strong>사용법은 크게 세가지로</strong><br>
-            <ul>
-              <li>html 의 head의 link태그의 media속성에 지정하는 방법</li>
-              <li>css 파일내에서 @media로 지정하는 방법</li>
-              <li>css 파일 내에서 import 하는 방법</li>
-            </ul>
-          <strong>이 있다.</strong><br><br>
-          <div class="ex">
-            <strong>이중 @media를 사용하는 방법을 살펴보면 </strong><br>
-            <strong><xmp>
-  @media--효과를 줄 미디어(not,and 사용)--(--조건문--){
-    --선택자--{
-      --적용할 효과--                  
-    }
-  }
-            </xmp></strong>
-            <strong>를 통해 효과를 줄 수 있다.</strong>
-          </div><br><br>
-          <strong>미디어 유형</strong><br>
-          <ul>
-            <li>all 모든장치</li>
-            <li>screen 컴퓨터 화면 또는 스마트 기기 화면</li>
-            <li>tv 영상과 음성이 함께 출력되는 장치</li>
-            <li>projection 프로젝터 장치</li>
-            <li>handler 손에 들고다니는 소형장치</li>
-            <li>speech 음성 출력 장치</li>
-            <li>aural 음성 합성 장치 (화면을 소리로 출력해주는 장치)</li>
-            <li>embossed 점자 인쇄 장치 (화면을 읽어 종이에 점자를 찍어내는 장치)</li>
-            <li>tty 디스플레이 기능이 제한된 장치</li>
-            <li>braille 점자 표시 장치</li>
-            <li>width 웹페이지 가로 너비</li>
-            <li>height 웹페이지 세로 높이</li>
-            <li>device-width 기기의 가로 너비</li>
-            <li>device-height 기기의 세로 높이</li>
-            <li>orientation 기기의 화면방향 (portrait:세로,landscape:가로)</li>
-            <li>aspect-ratio 화면 비율</li>
-            <li>device-aspect-ratio 단말기기의 화면 비율</li>
-            <li>color 기기의 비트 수</li>
-            <li>color-index 기기의 색상 수</li>
-            <li>monochrome 기기가 흑백일 때 픽셀당 비트 수</li>
-            <li>resoulution 기기의 해상력</li>
-            <li>scan TV의 스캔 방식</li>
-            <li>grid 기기의 그리드/비트맵</li>
-            <li><strong>기본값은 all이다.</strong></li>
-          </ul><br>
-
-          <h3><li>css 파일과 link 태그</li></h3>
-          여러 파일에 공통적인 효과를 사용하는 경우 style태그 안의 내용을 css 파일에 작성후 style 태그 대신 link 태그를 사용하여 효과적으로 작성할 수 있다.
-          
-      </ol>
+      <article>
+        
+      </article>
     </div>
   </div>
+
+  <script>
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      });
+    }
+
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('welcome');
+    }
+    
+
+
+  </script>
+  
   <br><br><br><br><br><br>
 </body>
 

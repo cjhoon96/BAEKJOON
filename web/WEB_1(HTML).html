@@ -10,240 +10,39 @@
 <body>
   <input id="night_day" type=button value="night" onclick="NightDayHandler(this);">
 
-  <h1><a href = "WEB_0(index).html" class="saw">WEB</a></h1>
+  <h1><a href="#!WEB" class="saw" onclick="fetchPage('WEB')">WEB</a></h1>
   <div id = "grid">
     <ol class="category">
-      <strong><li><a href = "WEB_1(HTML).html" class="saw" id="active">HTML</a></li></strong>
-      <strong><li><a href = "WEB_2(CSS).html" class="saw">CSS</a></li></strong>
-      <strong><li><a href = "WEB_3(JavaScript).html" class="saw">JavaScript</a></li></strong>
-    </ol>
+      <strong><li><a href = "#!html" class="saw" onclick="fetchPage('html')">HTML</a></li></strong>
+      <strong><li><a href = "#!css" class="saw" onclick="fetchPage('css')">CSS</a></li></strong>
+      <strong><li><a href = "#!javascript" class="saw" onclick="fetchPage('javascript')">JavaScript</a></li></strong>
+    </ol> 
     <div id="text">
-      <ol>
-      <h2> <li> HTML </li></h2>
-      <a href="https://www.w3.org/TR/html52/"target="_blank"title="html5.2 specification">Hypertext markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications. <br>
-
-      </ol>
-      <ul>
-        <h3><li> TAG </li></h3>
-
-        <ol type = "i">
-          <h3> <li> <h3> <xmp> <html></html> </xmp> </h3> </li> </h3>
-          <strong>전체를 묶어주는 최고위층 태그</strong> <br>
-          관용적으로 위에 <!doctype html> 을 써준다.<br>
-          <h3> <li> <h3> <xmp> <head></head> </xmp> </h3> </li> </h3>
-          <strong>본문을 설명해주는 태그를 묶어주는 고위층 태그</strong> <br>
-          <h3> <li> <h3> <xmp> <body></body> </xmp> </h3> </li> </h3>
-          <strong>본문을 묶어주는 고위층 태그</strong> <br>
-          <h3> <li> <h3> <xmp> <a href="#"></a> </xmp> </h3> </li> </h3>
-          <strong>HTML의 약자의 첫글자  HyperText가 의미하는 태그로 닻(anchor)의 첫글자를 딴 태그이다.</strong> <br>
-          <strong>태그 사이의 문자 또는 문장을 속성 href으로 정해준 링크로 연결해 준다.</strong> <br>
-          <strong>또한 target="" 속성을 통해 해당 링크를 어떤식으로 열지를 정해준다. _blank-링크된 문서를 새로운 윈도우나 탭(tab)에서 오픈함.</strong> <br>
-            <ul>
-              <li>target="_blank" - 링크된 문서를 새로운 윈도우나 탭(tab)에서 오픈함.</li>
-              <li>target="_self" - 링크된 문서를 링크가 위치한 현재 프레임에서 오픈함. 기본값으로 생략 가능.</li>
-              <li>target="_parent" - 링크된 문서를 현재 프레임의 부모 프레임에서 오픈함.</li>
-              <li>target="_top" - 링크된 문서를 현재 윈도우 전체에서 오픈함.</li>
-              <li>target="프레임 이름" - 링크된 문서를 명시된 프레임에서 오픈함.</li>
-              <li>target="" - </li>
-              <li>target="" - </li>
-            </ul>
-          <strong>또한 title="" 속성을 통해 해당 링크로 마우스를 올렸을시 어떤 링크인지 알려 줄 수 있다.</strong> <br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp> <a href="https://www.w3.org/TR/html52/"target="_blank"title="html5.2 specification">Hypertext markup Language (HTML)</a> </xmp></strong>
-            <strong>=></strong>
-            <a href="https://www.w3.org/TR/html52/"target="_blank"title="html5.2 specification">Hypertext markup Language (HTML)</a>
-          </div>
-
-
-          <h3> <li> <h3> <xmp> <strong> </strong> </xmp> </h3> </li> </h3>
-          사이에 있는 글자를 볼드체로 만들어주는 태그이다. <br>
-
-          <h3> <li> <h3> <xmp> <u> </u> </xmp> <h3> </li> </h3>
-          글자에 밑줄을 작성해 주는 태그이다. <br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp>Hypertext markup Language (HTML) is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</xmp></strong>
-            <strong>=></strong>
-            Hypertext markup Language (HTML) is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications. <br>
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <h(num in [1,7])></h(num in [1,7])> </xmp> </h3> </li> </h3>
-          제목을 나타내는 태그로 이를 사용시 1~7까지 숫자가 커질수록 글자의 크기를 작게 할 수 있다. 이때 글자는 일반적인 글장 비해 더 두꺼우며 줄이 바뀌는 것을 알 수 있다.<br><br>
-          <div class="ex">
-            ex) <br>
-            <xmp> <h2>W3C</h2> </xmp>
-            <xmp> <h3>W3C</h3> </xmp>
-            <xmp> <h4>W3C</h4> </xmp></strong>
-            <strong>=></strong>
-            <h2>W3C</h2>
-            <h3>W3C</h3>
-            <h4>W3C</h4>
-          </div><br>
-
-          <h3> <li> <h3> <xmp> <br> </xmp> </h3> </li> </h3>
-          줄을 바꿔주는 태그이다. 단순히 코드 상에서 줄을 바꾸는 것은 페이지에 적용되지 않는다. 따라서 위 코드를 통해 줄을 바꿔주어야 한다.<br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp> a<br>b<br>c </xmp></strong>
-            <strong>=></strong> <br>
-            a<br>b<br>c<br>
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <p></p> </xmp> </h3> </li> </h3>
-          단락을 나타내 주는 태그이다. 위의 br 태그와 사용은 비슷하지만 해당 태그 안의 문장들이 하나의 단락임을 알려줌으로서 보다 정보로서 가치있게 해준다.<br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp> <p>abc</p><p>def</p> </xmp></strong>
-            <strong>=></strong>
-            <p>abc</p><p>def</p>
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <img src=""> , <img src="" width=""> / <img source=""> </xmp> </h3> </li> </h3>
-          이미질를 출력해 준다. 여기서 scr과 source, width 는 속성(*Attribute)으로 순서는 상관 없다. scr과 source 은 사진의 이름 혹은 주소, width는 사진의 크기를 지정해 준다.<br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp> <img src="Cjhoon'sVape.jpg"> </xmp></strong>
-            <strong>=></strong>
-            <img src="Cjhoon'sVape.jpg"width="450">
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <li></li> </xmp> </h3> </li> </h3>
-          <h3> <li> <h3> <xmp> <ul></ul> </xmp> </h3> </li> </h3>
-          li 는 목차를 알려주는 태그이며 ul과 ol은 li의 부모격 되는 태그로 5번의 p의 문맥을 끊어 주는 것과 같이 연관된 목차를 묶어주는 역할을 한다.<br>
-          ul은 Unordered List의 약자로 목차의 앞에 *을 붙여 주며 ol은 Ordered List의 약자로 앞에 항목의 번호를 매겨주는 차이가 있다.<br>
-          또한 ol은 속성 type 를 통해 앞의 숫자를 다른 문자로 바꿀 수 있으며 start를 통해 앞의 숫자의 시작 번호를 지정해 줄 수 있다. <br>
-          type = '1' 기본적으로 숫자로 설정되어 있지만 일전에 변경한 경우 다시 설정할때 사용한다.<br>
-          type = 'A' 대문자 알파벳으로 변경한다.<br>
-          type = 'a' 소문자 알파벳으로 변경한다.<br>
-          type = 'I' 대문자 로마 숫자로 변경한다.<br>
-          type = 'i' 소문자 로마 숫자로 변경한다.<br>
-          start = '51' 시작 숫자가 51로 정해진다.<br> 등등<br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp>
-  <ul>
-    <li> HTML </li>
-    <li> CSS </li>
-    <li> JavaScript </li>
-  </ul>
-  <ol>
-    <li> HTML </li>
-    <li> CSS </li>
-    <li> JavaScript </li>
-  </ol>
-  <ol type = 'I'>
-    <li> HTML </li>
-    <li> CSS </li>
-    <li> JavaScript </li>
-  </ol>
-            </xmp></strong>
-            <strong>=></strong>
-            <ul>
-              <li> HTML </li>
-              <li> CSS </li>
-              <li> JavaScript </li>
-            </ul>
-            <ol>
-              <li> HTML </li>
-              <li> CSS </li>
-              <li> JavaScript </li>
-            </ol>
-            <ol type = 'I'>
-              <li> HTML </li>
-              <li> CSS </li>
-              <li> JavaScript </li>
-            </ol>
-          </div>
-          <br>
-
-          <h3> <li> <h3> <xmp> <font color = "색깔"> '글자' </font> </xmp> </h3> </li> </h3>
-          사이의 글자를 지정한 색으로 출력해 주는 태그<br><br>
-          <div class="ex">
-            ex) <br>
-            <strong><xmp> <font color = "red"> 글자 </font> </xmp></strong>
-            <strong>=></strong>
-            <font color = "red"> 글자 </font> 
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <title></title> </xmp> </h3> </li> </h3>
-          <strong>본문을 설명해주는 태그</strong> <br>
-          사이의 글자를 웹페이지의 제목으로 설정해주는 태그이다. <br>
-
-          <h3> <li> <h3> <xmp> <meta charset = ""> </xmp> </h3> </li> </h3>
-          <strong>본문을 설명해주는 태그</strong> <br>
-          문서를 읽는 규칙을 정해준다. <br><br>
-
-          <div class="ex">
-            ex) <br>
-            <strong><xmp>
-  <head>
-  <title>WEB1 - html</title>
-  <meta charset = "utf-8">
-  </head>
-            </xmp></strong>
-          </div>
-          <br>
-
-
-          <h3> <li> <h3> <xmp> <div></div> </xmp> </h3> </li> </h3>
-          아무런 효과가 없는 태그로 class, id 등을 통해 css 효과를 줄 때 유용하다.<br><br>
-
-
-          <h3> <li> <h3> <xmp> <input> </xmp> </h3> </li> </h3>
-          사용자로부터 정보를 받아들이는 용도로 사용되는 태그로 type이라는 속성을 이용해 입력 약식을 여러가지로 변경 가능하다.<br>
-          <ul>
-            <h3><li>type: 입력 태그의 유형</li></h3>
-            <h4>type속성값</h4>
-            <ul>
-              <li>text: 텍스트 입력창을 생성</li>
-              <li>password: 비밀번호 입력창을 생성</li>
-              <li>radio: 라디오 버튼을 생성</li>
-              <li>checkbox: 체크박스를 생성</li>
-              <li>file: 파일이름 입력창 생성</li>
-              <li>image: 이미지 전송버튼 생성</li>
-              <li>hidden: 사용자에게 보이지 않지만 서버로 전송</li>
-              <li>submit: 서버로 제출하는 버튼을 생성</li>
-              <li>button: 일반 버튼을 생성</li>
-            </ul>
-            <h3><li>value: 입력 태그의 초기값(사용자가 변경 가능)</li></h3>
-            <h3><li>name: 서버로 전달되는 이름</li></h3>
-            <h3><li>event: 사용자와 상호작용을 가능하게 해줌 속성값으로 자바스크립트 코드를 작성해준다.</li></h3>
-          </ul>
-        </ol>
-
-
-
-
-
-
-        <h3><li>Attribute</li></h3>
-        <strong>태그가 태그의 이름 만으로 정보가 부족할때 속성을 통해 더 많은 의미를 부여해 줄 수 있다. 속성의 순서는 상관이 없다.</strong>
-        <br>
-        <br>
-
-
-        <br>
-
-
-
-
-        <h3><li>웹페이지들이 사용하는 태그를 통계적으로 보여주는 사이트</li></h3>
-        https://www.advancedwebranking.com/html/
+      <article>
         
-      </ul>
+      </article>
     </div>
   </div>
+
+  <script>
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      });
+    }
+
+    if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('welcome');
+    }
+    
+
+
+  </script>
+
   <br><br><br><br><br><br>
 </body>
 </html>
