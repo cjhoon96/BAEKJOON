@@ -1,0 +1,3 @@
+<strong><li><a href = "#!html" class="saw" onclick="fetchPage('html')">HTML</a></li></strong>
+<strong><li><a href = "#!css" class="saw" onclick="fetchPage('css')">CSS</a></li></strong>
+<strong><li><a href = "#!javascript" class="saw" onclick="fetchPage('javascript')">JavaScript</a></li></strong>

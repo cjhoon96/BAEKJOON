@@ -13,9 +13,7 @@
   <h1><a href="#!WEB" class="saw" onclick="fetchPage('WEB')">WEB</a></h1>
   <div id = "grid">
     <ol class="category">
-      <strong><li><a href = "#!html" class="saw" onclick="fetchPage('html')">HTML</a></li></strong>
-      <strong><li><a href = "#!css" class="saw" onclick="fetchPage('css')">CSS</a></li></strong>
-      <strong><li><a href = "#!javascript" class="saw" onclick="fetchPage('javascript')">JavaScript</a></li></strong>
+      
     </ol> 
     <div id="text">
       <article>
@@ -39,6 +37,11 @@
       fetchPage('welcome');
     }
     
+    fetch('list').then(function(response){
+      response.text().then(function(text){
+        document.querySelector('.category').innerHTML = text;
+      })
+    });
 
 
   </script>

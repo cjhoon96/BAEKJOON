@@ -37,6 +37,13 @@
     } else {
       fetchPage('welcome');
     }
+
+    fetch('list').then(function(response){
+      response.text().then(function(text){
+        let items = text.split(',');
+        document.querySelector('.category').innerHTML = text;
+      })
+    });
     
 
 
