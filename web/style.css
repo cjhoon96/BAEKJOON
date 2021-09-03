@@ -48,6 +48,7 @@
         background-color: rgba(108, 109, 109, 0.863);
     }
 
+    
     #grid{
         display: grid;
         grid-template-columns: 170px 1fr;
