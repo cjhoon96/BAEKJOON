@@ -6,6 +6,6 @@ button.addEventListener('click', addSchedule);
 
 function addSchedule(){
     let temp = document.createElement('li')
-    temp.innerHTML = input.ariaValueMax;
+    temp.innerHTML = input.value;
     list.appendChild(temp)
 }
