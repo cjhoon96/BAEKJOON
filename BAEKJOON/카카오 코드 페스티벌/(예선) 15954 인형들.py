@@ -1,4 +1,5 @@
 """
+https://www.acmicpc.net/problem/15954
 인형들 스페셜 저지출처
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
 1 초 (추가 시간 없음)	512 MB	12332	2010	1427	18.137%
@@ -43,4 +44,32 @@ Contest > 카카오 코드 페스티벌 > 카카오 코드 페스티벌 2018 예
 
 import sys
 input = sys.stdin.readline
+import math
+from decimal import *
 
+N, K = map(int,input().split())
+
+lst = list(map(int,input().split()))
+
+mini = math.inf
+
+for i in range(N - K + 1):
+    s = sum(lst[i : i + K - 1])
+    print('s=',s)
+    for j in range(N - K - i + 1):
+        s += lst[i + K - 1 + j]
+        print(lst[i+j], s)
+        l = K + j
+        m = s / l
+
+        v = 0
+        for k in range(i , i + K + j):
+            print(k)
+            v += (lst[k] - m) ** 2
+        
+        v /= l
+
+        if v < mini:
+            mini = v
+
+print(math.sqrt(mini))
