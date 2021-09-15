@@ -29,6 +29,7 @@ input.addEventListener('keydown', function(e){
 button.addEventListener('click', addSchedule);
 
 function addSchedule(){
+	totalDel();
 	let target = input.value 
 	if(target != "HH MM Contents"){
 		alert(target);
@@ -50,19 +51,16 @@ function addSchedule(){
 			unassigned.push(target);
 		}
 		input.value = "";
-		renewal();
+		update();
 	}
 
 }
 
-function renewal(){
-	for (let i = 0; i < tList.length; i++){
-		remove(tList[i]);
-	}
+function update(){
 	for (let i = 0; i < tList.length; i++){
 		let t = tList[i];
 		let temp = document.createElement('tr');
-		temp.className = t
+		temp.id = t;
 		temp.innerHTML = '<td><input type="checkbox"> </td>' + '<td>' + t + '</td>'
 											+ '<td>' + schdDic[t] + '</td>'
 											+ '<td>' + 'Correction' + '</td>'
@@ -71,8 +69,15 @@ function renewal(){
 	}
 }
 
+
+function totalDel(){
+	for (let i = 0; i < tList.length; i++){
+		remove(tList[i]);
+	}
+}
 function remove(id){
 	let target = document.getElementById(id);
+	alert(id)
 	table.removeChild(target);
 }
 

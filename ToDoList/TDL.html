@@ -9,8 +9,13 @@
 				border: 3px solid #0448a1;
 				border-collapse:collapse;
 			}
+			thead {
+				font-size: large;
+			}
 			th, td{
 				border: 3px solid #0448a1;
+				font-weight: bold;
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -23,7 +28,7 @@
 		<div>
 			<input type="text" id="input" value="HH MM Contents" style="color:rgb(206, 206, 206)">
 			<button type="button" id="button">추가</button>
-			<button type="button" onclick="renewal()">전체 삭제</button>
+			<button type="button" onclick="totalDel()">전체 삭제</button>
 		</div>
 
 		<table>
@@ -37,13 +42,7 @@
 				</tr>
 			</thead>
 			<tbody id="tableBody">
-				<tr class = "Schedule">
-					<td><input type="checkbox"> </td>
-					<td>Time</td>
-					<td>Schedule</td>
-					<td>Correction</td>
-					<td>Progress</td>
-				</tr>
+
 			</tbody>
 		</table>
 
