@@ -7,11 +7,11 @@ let unassigned = [];
 let checked = [];
 
 
-//입력창을 클릭할 시 효과를 적용
+// 입력창을 클릭할 시 효과를 적용
 input.addEventListener('click', function(){
 	let target = this.value
 	let targetStyle = this.style
-	
+	alert(target)
 	if(target === "HH MM Contents"){
 		this.value = '';
 		targetStyle.color="black";
@@ -131,7 +131,9 @@ function allCheck(){
 
 
 
-function checkedDel()
+function checkedDel(){
+  
+}
 
 function remove(id){
 	let target = document.getElementById(id);
