@@ -28,13 +28,14 @@
 		<div>
 			<input type="text" id="input" value="HH MM Contents" style="color:rgb(206, 206, 206)">
 			<button type="button" id="button">추가</button>
-			<button type="button" onclick="totalDel()">전체 삭제</button>
+			<button type="button" onclick="totalReset()">전체 삭제</button>
+			<button type="button" onclick="checkedDel()">체크된 일정 삭제</button>
 		</div>
 
 		<table>
 			<thead>
 				<tr>
-					<th><input id='totalCheck' type="checkbox" onclick="alert(this.checked)"> </th>
+					<th><input id='totalCheck' type="checkbox"> </th>
 					<th>Time</th>
 					<th>Schedule</th>
 					<th>Correction</th>

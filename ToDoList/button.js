@@ -4,19 +4,21 @@ let table = document.getElementById('tableBody');
 let schdDic = {};
 let tList = [];
 let unassigned = [];
-let checked = [];
-
+let checkedList = [];
+let allChecked = false;
+let mainCheck = document.getElementById('totalCheck')
+let classCheck = document.getElementsByClassName('checkBox');
 
 // 입력창을 클릭할 시 효과를 적용
 input.addEventListener('click', function(){
 	let target = this.value
 	let targetStyle = this.style
-	alert(target)
+  
 	if(target === "HH MM Contents"){
 		this.value = '';
 		targetStyle.color="black";
 	}
-})
+});
 
 
 //입력창에서 엔터를 칠 시 효과를 적용
@@ -24,11 +26,34 @@ input.addEventListener('keydown', function(e){
 	if(e.key === 'Enter'){
 		addSchedule();
 	}
-})
+});
 
 
 // 추가 버튼을 클릭할시 addSchedule함수가 실행 되도록 적용
 button.addEventListener('click', addSchedule);
+
+mainCheck.addEventListener('click', function(){
+	let check = this.checked;
+	
+	if (check){
+		for (let i = 0; i < classCheck.length; i++){
+			let now = classCheck[i];
+			
+			if (!now.checked){
+				now.checked = true;
+				checkedList.push(now.parentElement.parentElement.id);
+			} 
+		}
+	} else{
+		for (let i = 0; i < classCheck.length; i++){
+			let now = classCheck[i];
+			now.checked = false;
+		}
+		checkedList = [];
+	}
+});
+
+
 
 
 
@@ -65,7 +90,7 @@ function addSchedule(){
 		update();
 	}
 
-}
+};
 
 // update함수 표에 내용을 출력해 주는 함수
 function update(){
@@ -73,7 +98,7 @@ function update(){
 		let t = tList[i];
 		let temp = document.createElement('tr');
 		temp.id = t;
-		temp.innerHTML = '<td><input type="checkbox" class="checkBox"> </td>' + '<td>' + t + '</td>'
+		temp.innerHTML = '<td><input type="checkbox" class="checkBox" > </td>' + '<td>' + t + '</td>'
 											+ '<td>' + schdDic[t] + '</td>'
 											+ '<td>' + 'Correction' + '</td>'
 											+ '<td>' + 'Progress' + '</td>';
@@ -82,22 +107,36 @@ function update(){
 	for (let i = 0; i < unassigned.length; i++){
 		let temp = document.createElement('tr');
 		temp.id = i;
-		temp.innerHTML = '<td><input type="checkbox" class="checkBox"> </td>' + '<td>None</td>'
+		temp.innerHTML = '<td><input type="checkbox" class="checkBox" > </td>' + '<td>None</td>'
 											+ '<td>' + unassigned[i] + '</td>'
 											+ '<td>' + 'Correction' + '</td>'
 											+ '<td>' + 'Progress' + '</td>';
 		table.appendChild(temp);
 	}
-}
+	
+	Array.from(classCheck).forEach(function(element) {
+		element.addEventListener('click', function(){
+			let target = this.parentElement.parentElement.id;
+			alert(this.checked)
+			if (this.checked){
+				checkedList.push(target);
+				alert(this.checked);
+				alert(target);
+				alert(checkedList[-1]);
+			} else{
+				checkedList.splice(checkedList.indexOf(target));
+			}
+		})
+	})
+};
 
 
 //totalDel 함수 표에 출력된 모든 일정을 지워주는 함수 tList와 schdDic, unassigned는 그대로 두기 때문에 화면 갱신용으로만 사용
 function totalDel(){
-	let target = document.getElementsByClassName("checkBox");
-	for (var i = 0; i < target.length; i++){
-		target[i].checked = true;
+	while (table.hasChildNodes()){
+		table.removeChild(table.firstChild);
 	}
-}
+};
 
 
 //totalReset모든 일정 데이터를 삭제 하는 함수 totalDel함수를 통해 표의 일정을 삭제후 
@@ -105,35 +144,28 @@ function totalDel(){
 function totalReset(){
 	totalDel();
 	tList = [];
-}
+	schdDic = {};
+	unassigned = [];
+	
+};
 
 
 // check 된 일정들을 삭제하는 함수
 function checkedDel(){
-	for (let i = 0; i < checked.length; i++){
-		let t = checked[i];
+	for (let i = 0; i < checkedList.length; i++){
+		let t = checkedList[i];
 		remove(t);
-		tList.splice(tList.indexOf(t), 1);
+		if (t.includes(':')){
+			tList.splice(tList.indexOf(t), 1);
+			delete schdDic[t];
+		} else{
+			unassigned.splice(unassigned.indexOf(t));
+		}
 	}
-	checked = [];
-}
-
-function allCheck(){
-	let check = this.checked;
-	for (let i = 0; i < tList.length; i++){
-
-	}
-	
-	for (let i = 0; i < unassigned.length; i++){
-
-	}
-}
+	checkedList = [];
+};
 
 
-
-function checkedDel(){
-  
-}
 
 function remove(id){
 	let target = document.getElementById(id);
