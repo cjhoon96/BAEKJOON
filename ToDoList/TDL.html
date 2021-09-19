@@ -4,18 +4,27 @@
 		<title>To Do List</title>
 		<meta charset = "utf-8">
 		<style>
+			#Title{
+				text-align: center;
+			}
+			#Buttons{
+				text-align: center;
+			}
+			
 			table {
-				width: 70%;
-				border: 3px solid #0448a1;
-				border-collapse:collapse;
+				margin-left:auto;
+				margin-right:auto;
+				width: 40%;
 			}
 			thead {
 				font-size: large;
 			}
-			th, td{
+			table, th, td{
 				border: 3px solid #0448a1;
 				font-weight: bold;
 				text-align: center;
+				border: 3px solid #0448a1;
+				border-collapse:collapse;
 			}
 		</style>
 	</head>
@@ -23,30 +32,34 @@
 	<body>
 
 		<!-- 제목 -->
-		<h1>To Do List</h1>
+		<div id='Title'>
+			<h1>To Do List</h1>
+		</div>
 
-		<div>
+		<div id='Buttons'>
 			<input type="text" id="input" value="HH MM Contents" style="color:rgb(206, 206, 206)">
 			<button type="button" id="button">추가</button>
+			<br>
 			<button type="button" onclick="totalReset()">전체 삭제</button>
 			<button type="button" onclick="checkedDel()">체크된 일정 삭제</button>
 		</div>
+		<br><br>
+		<div id='table'>
+			<table>
+				<thead>
+					<tr>
+						<th><input id='totalCheck' type="checkbox"> </th>
+						<th>Time</th>
+						<th>Schedule</th>
+						<th>Correction</th>
+						<th>Progress</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">
 
-		<table>
-			<thead>
-				<tr>
-					<th><input id='totalCheck' type="checkbox"> </th>
-					<th>Time</th>
-					<th>Schedule</th>
-					<th>Correction</th>
-					<th>Progress</th>
-				</tr>
-			</thead>
-			<tbody id="tableBody">
-
-			</tbody>
-		</table>
-
+				</tbody>
+			</table>
+		</div>
 		
 		<script src="button.js"></script>
 	</body>
