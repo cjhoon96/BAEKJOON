@@ -58,3 +58,25 @@ console.log(Chae.name, '\'s average score is', Chae.sum()/3);
 
 //생성자 안에서 메소드를 만드는 단점: 데이터 소모량이 많아 생산성이 떨어짐
 //prototype을 통해 생산성을 높여준다
+
+
+
+
+function Score_1(name, a, b, c){
+	this.name = name;
+	this.first = a;
+	this.second = b;
+	this.third = c;
+}
+
+let Chae_1 = new Score_1('Jihoon', 10, 20, 30)
+
+Score_1.prototype.sum = function(){
+	return (this.first+this.second+this.third) + '   made by prototype';
+}
+Score_1.prototype.print = function(){
+	return this;
+}
+
+console.log(Chae_1.sum())
+console.log(Chae_1.print())
