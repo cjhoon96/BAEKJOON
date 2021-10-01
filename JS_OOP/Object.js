@@ -17,13 +17,11 @@ let Grade = {
 	Dongjoon : 90,
 	Seongjae : 90,
 	sum : function(){
-	
+
 	},
 	mean : function(){
 
-	},
-	
-
+	}
 }
 
 
