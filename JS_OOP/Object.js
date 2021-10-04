@@ -81,3 +81,20 @@ console.log(Chae_1.print())
 
 // https://caniuse.com	문법을 사용할 수 있는지 확인 해당 문법을 제공하는 웹 브라우저들을 확인할 수 있다.
 // https://babeljs.io	작성한 코드를 오래전부터 지원하고 있는 모든 브라우저에서 사용할 수 있는 코드로 변환해 준다
+
+
+
+//Class
+
+class scoreClass{
+	constructor(name, a, b, c){
+    this.name = name;
+    this.first = a;
+    this.second = b;
+    this.third = c;
+	}
+
+}
+
+let Cjhoon = new scoreClass('Cjhoon', 10, 20, 30);
+console.log(Cjhoon)
