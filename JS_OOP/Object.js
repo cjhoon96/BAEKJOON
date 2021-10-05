@@ -93,8 +93,77 @@ class scoreClass{
     this.second = b;
     this.third = c;
 	}
+  sum(){
+    return (this.first + this.second + this.third);
+  }
+}
 
+//extends 를 통해 이미 만들어 둔 class로 부터 상속 받을 수 있다.
+class extends_scoreClass extends scoreClass{
+	constructor(name, a, b, c, d){
+		super(name, a, b, c);				// socreClass 상속받을 공통된 생성자
+		this.forth = d;						// 추가된 생성자만 정해준다.
+	}
+	sum(){
+		return super.sum() + this.forth;	// super 뒤에 . 이오면 상속받을 함수
+	}
+	avg(){
+		return (this.first + this.second + this.third + this.forth)/3;
+	}
 }
 
 let Cjhoon = new scoreClass('Cjhoon', 10, 20, 30);
 console.log(Cjhoon)
+Cjhoon.sum = function(){
+  return (this.first + this.second + this.third) + 'new';
+}
+
+let extends_Cjhoon = new extends_scoreClass('extends_cjhoon', 10, 20, 30, 100);
+console.log(extends_Cjhoon)
+console.log(extends_Cjhoon.avg())
+
+
+
+//__proto__
+
+let superObj = {superVal:'super'}
+let subObj = {subVal:'sub'}
+subObj.__proto__ = superObj;	//subObj이 superObj의 자식임을 알려줌
+console.log('subObj.subVal =', subObj.subVal);
+console.log('subObj.superVal =', subObj.superVal);
+subObj.superVal = 'sub';
+console.log('subObj.superVal =', subObj.superVal, '수정가능하지만');
+console.log('superObj.superVal =', superObj.superVal, '는 수정되지 않는다.');
+
+
+
+//Object.create()
+let subObj_1 = Object.create(superObj);
+subObj_1.subVal = 'sub';
+console.log('subObj_1.subVal =', subObj_1.subVal);
+console.log('subObj_1.superVal =', subObj_1.superVal);
+subObj_1.superVal = 'sub';
+console.log('subObj_1.superVal =', subObj_1.superVal, '수정가능하지만');
+console.log('superObj.superVal =', superObj.superVal, '는 수정되지 않는다.');
+
+debugger;
+
+
+
+
+
+// 함수와 객체
+
+var kim = {name:'kim', first:10, second:20}
+var lee = {name:'lee', first:10, second:10}
+function sum(){
+	return this.first+this.second;
+}
+function sum_1(prefix){
+	return prefix+(this.first+this.second);
+}
+console.log('sum.call(kim)==>',sum.call(kim));
+console.log('sum_1.call(kim, 20)',sum_1.call(kim, 20))
+console.log('sum_1.call(kim)',sum_1.call(kim, '==>'))
+console.log('sum_1.call(kim, 20)',sum_1.call('==>', kim)) // 오류 객체를 앞에 써야 한다
+// 함수.call() 괄호 안에 객체를 넣으면 해당 객체에 할당되는 메소드처럼 작동한다.
