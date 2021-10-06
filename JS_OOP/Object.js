@@ -162,8 +162,81 @@ function sum(){
 function sum_1(prefix){
 	return prefix+(this.first+this.second);
 }
+function sum_2(prefix){
+	return prefix+(this.first+this.second);
+}
+
+//.call
 console.log('sum.call(kim)==>',sum.call(kim));
-console.log('sum_1.call(kim, 20)',sum_1.call(kim, 20))
-console.log('sum_1.call(kim)',sum_1.call(kim, '==>'))
-console.log('sum_1.call(kim, 20)',sum_1.call('==>', kim)) // 오류 객체를 앞에 써야 한다
+console.log('sum_1.call(kim, 20)',sum_1.call(kim, 20));
+console.log('sum_1.call(kim)',sum_1.call(kim, '==>'));
+console.log('sum_1.call(kim, 20)',sum_1.call('==>', kim)); // 오류 객체를 앞에 써야 한다
 // 함수.call() 괄호 안에 객체를 넣으면 해당 객체에 할당되는 메소드처럼 작동한다.
+
+//.call
+let kimSum = sum_1.bind(kim, '-->');
+console.log('kimSum()', kimSum());
+//함수의 this까지 픽스된 새로운 함수를 만들어준다.
+
+
+
+
+
+
+
+//prototype vs __proto__
+//함수란 무엇인가?
+//자바스크립트에서 함수는 객체이다. 
+// 함수 Person 객체를 생성시 Person's prototype 객체도 생성된다.
+// 이때 Person 객체 내에 prototype이라는 생성자가 만들어 지며 이는 Person's prototype 객체를 가르킨다.
+// 따라서 Person.prototype을 통해 Person's prototype 객체를 불러 올 수 있다.
+
+// 또한 Person's prototype 객체 안에는 constructor 생성자가 만들어 지며 이는 Person을 가르킨다.
+
+//함수.prototype.sum = function(){}를 생성하면 Person's prototype 객체에 sum이라는 함수가 생성자로 만들어진다.
+
+// let kim = new Person('kim', 10, 20)을 생성하면 Person의 constructor 함수를 통해 생성된 생성자 이외에 __proto__생성자가 생성된다.
+//이 __proto__ 는 Person's prototype를 가르킨다. 따라서 Person.prototype과 kim.__proto__는 같은 객체 Person's prototype을 가르킨다.
+//javascript는 kim의 생성자를 불러올때 kim안에 해당 생성자가 있는지 확인하고 없는 경우 kim.__proto__ 즉 Person's prototype 내에 해당 생성자가 있는지 확인후 불러오기로 약속되어있다.
+
+
+//call 을 통한 객체의 계승
+
+function Person(name,  first, second){
+	this.name = name;
+	this.first = first;	
+	this.second = second;
+}
+
+Person.prototype.sum = function(){
+	return this.first + this.second;
+}
+
+function PersonPlus(name, first, second, third){
+	Person.call(this, name, first, second);
+	this.third = third;
+}
+
+PersonPlus.prototype.avg = function(){
+	return	(this.first + this.second + this.third)/3;
+}
+
+//console.log('kim_1.sum()', kim_1.sum());
+//이상태로는 오류가 발생한다. kim_1에 sum이 없으므로 __proto__를 통해 PersonPlus's prototype을 참조한다 
+//하지만 여기에도 없으므로 다시  PersonPlus's prototype의 __proto__를 참조하지만 여기에도 존재 하지 않아 오류가 난다.
+//PersonPlus's prototype의 __proto__가 Person's prototype를 가르키도록 하면 해결 가능하다.
+//다음을 추가해 준다.
+
+// PersonPlus.prototype.__proto__ = Person.prototype;
+//하지만 이는 표준이 아니다.
+//==>
+PersonPlus.prototype = Object.create(Person.prototype);
+//이는 Person.prototype를 __proto__로 하는 새로운 객체를 생성하고 이를 PersonPlus.prototype으로 만들어 주는 것이다.
+
+// 하지만 이도 약간의 문제가 있다.
+console.log('kim_1.constructor', kim_1.constructor);
+let kim_1 = new PersonPlus('kim', 10, 20, 30);
+
+console.log(kim_1)
+console.log('kim_1.sum()', kim_1.sum());
+console.log('kim.avg()', kim_1.avg());
