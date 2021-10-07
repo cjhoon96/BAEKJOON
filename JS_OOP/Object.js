@@ -217,10 +217,25 @@ function PersonPlus(name, first, second, third){
 	this.third = third;
 }
 
+
+PersonPlus.prototype = Object.create(Person.prototype);
+console.log(PersonPlus.prototype.constructor)
+PersonPlus.prototype.constructor = PersonPlus
+
 PersonPlus.prototype.avg = function(){
 	return	(this.first + this.second + this.third)/3;
 }
+let kim_1 = new PersonPlus('kim', 10, 20, 30);
+let kim_2 = new PersonPlus('kim2', 10, 20, 30);
+console.log('kim_1.constructor', kim_1.constructor);
 
+console.log(kim_1)
+console.log('kim_1.sum()', kim_1.sum());
+console.log('kim.avg()', kim_1.avg());
+console.log(PersonPlus.prototype.constructor)
+console.log(kim_1.__proto__)
+console.log(kim_1.__proto__ === kim_2.__proto__)
+console.log(PersonPlus.prototype)
 //console.log('kim_1.sum()', kim_1.sum());
 //이상태로는 오류가 발생한다. kim_1에 sum이 없으므로 __proto__를 통해 PersonPlus's prototype을 참조한다 
 //하지만 여기에도 없으므로 다시  PersonPlus's prototype의 __proto__를 참조하지만 여기에도 존재 하지 않아 오류가 난다.
@@ -228,15 +243,10 @@ PersonPlus.prototype.avg = function(){
 //다음을 추가해 준다.
 
 // PersonPlus.prototype.__proto__ = Person.prototype;
-//하지만 이는 표준이 아니다.
+//하지만 이는 표준이 아니다.(아래 방법보다 더 효율적)
 //==>
-PersonPlus.prototype = Object.create(Person.prototype);
+// PersonPlus.prototype = Object.create(Person.prototype);
 //이는 Person.prototype를 __proto__로 하는 새로운 객체를 생성하고 이를 PersonPlus.prototype으로 만들어 주는 것이다.
 
-// 하지만 이도 약간의 문제가 있다.
-console.log('kim_1.constructor', kim_1.constructor);
-let kim_1 = new PersonPlus('kim', 10, 20, 30);
-
-console.log(kim_1)
-console.log('kim_1.sum()', kim_1.sum());
-console.log('kim.avg()', kim_1.avg());
+// 하지만 이도 약간의 문제가 있다. Person.prototype의 constructor은 더이상 PersonPlus를 가르키지 않는다.
+// 따라서 PersonPlus.prototype.constructor = PersonPlus 로 재 지정해준다.
