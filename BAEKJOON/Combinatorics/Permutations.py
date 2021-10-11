@@ -31,6 +31,12 @@ def permutation(arr, r):
         if not used[i]:
             result.append(arr[i])
             used[i] = True
+            #방문처리 한후 (평행 세계와 비슷) ==> 이를 응용하여 경로도 만들 수 있음
             permutation(arr, r)
             result.pop()
             used[i] = False
+            #다시 원래대로 복구한다.
+
+result = []
+used = [False] * 4
+permutation([1, 2, 3, 4], 3)
