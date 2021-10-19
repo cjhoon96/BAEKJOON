@@ -50,6 +50,6 @@
         * /servlet/query?a=10&b=90 : 요청 URI
         * HTTP/1.1 : HTTp 프로토콜 버전
 
-        요청 메서드 : GET, PUT, POST, PUSH, OPTIONS 등의 요청 방식이 온다.
-        요청 URI : 요청하는 자원의 위치를 명시한다.
+        요청 메서드 : GET, PUT, POST, PUSH, OPTIONS 등의 요청 방식이 온다.  
+        요청 URI : 요청하는 자원의 위치를 명시한다.  
         HTTP 프로토콜 버전 : 웹 브라우저가 사용하는 프로토콜 버전이다.
