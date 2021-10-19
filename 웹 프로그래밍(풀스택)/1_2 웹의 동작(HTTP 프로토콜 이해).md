@@ -27,9 +27,13 @@
 
 
 * ## URL
- URL (**U**niform **R**esource **L**ocator)
-    * 인터넷 상의 자원의 위치
+    URL (**U**niform **R**esource **L**ocator)
+
+    *  인터넷 상의 자원의 위치
     * 특정 웹 서버의 특정 파일에 접근 하기 위한 경로 혹은 주소
+
     | 접근 프로토콜 | ://IP 주소 또는 도메인의 이름 | /문서의 경로 | /문서의 이름 |
     |---|---|---|---|
     | http | ://www.sunnyvale.co.kr | /docs | /index.html |
+
+    여러 자원들의 위치를 나타낸다.
