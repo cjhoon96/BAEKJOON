@@ -87,5 +87,5 @@ WAS도 보통 자체적으로 웹 서버 기능을 내장하고 있다.
 
 
 
-![WAS](./WAS.png)  
+![WAS](./WAS.png){: width="70%" height="70%"}</center>
 WAS (Web Application Server)
