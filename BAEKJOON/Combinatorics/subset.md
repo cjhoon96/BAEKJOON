@@ -1,6 +1,6 @@
 # 부분집합 구현
 ## 비트연산자의 활용
-'''python
+```python
 lst = list(map(int,input().split()))
 
 n = len(lst)
@@ -19,7 +19,7 @@ for i in range(1 << n):
     Power_set.append(sub_set)
 
 print(Power_set)
-'''
+```
 
 첫번째 for문의 range(1 << n) 을 통해 해당 범위내의 이진법들을 돌며 부분 집합들을 만든다.
 각 이진수는 각 자리수와 매칭 되는 원소의 포함 관계를 나타낸다.
