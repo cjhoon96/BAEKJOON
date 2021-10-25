@@ -237,7 +237,8 @@
             ex) span, a, strong...<br><br>
         
         <li>position:static, relative, absolute</li>
-            속성으로 특별한 배치를 할 수 있다.<br>
+            position속성으로 특별한 배치를 할 수 있다.<br>
+            상대적/절대적인 위치에 엘리먼트를 배치하는 것이 수월하다.<br><br>
             <ul>
                 <li>static</li> 
                     position 속성의 기본은 static<br>
