@@ -221,6 +221,18 @@
 |               footer              |  
 +-----------------------------------+  
         </pre>
+
+    <h3><li>엘리먼트 배치 방식</li></h3>
+        <ul>
+            <li>Display:Block</li>
+                display 속성이 block이거나 inline-block인 경우 그 엘리먼트들은 벽돌을 쌓는 블록을 가지고 쌓인다.<br>
+                ex)div, p...<br><br>
+
+            <li>Display:Inline</li>
+                display 속성이 inline인 경우 우측으로, 그리고 아래쪽으로 빈자리를 차지하며 흐른다.<br>
+                높이와 넓이를 지정해도 반영이 되지 않는다.<br>
+                ex) span, a, strong...<br><br>
+        </ul>
 </ol>
 
 
