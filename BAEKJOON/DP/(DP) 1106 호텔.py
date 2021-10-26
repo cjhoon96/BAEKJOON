@@ -21,7 +21,7 @@ https://www.acmicpc.net/problem/1106
 예제 입력 1 
 12 2
 3 5
-1 1
+1 1 
 예제 출력 1 
 8
 출처
