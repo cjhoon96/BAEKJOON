@@ -72,7 +72,7 @@ service 호출!!
 따라서 새로 고침을 할 경우 destroy() 메서드가 호출 되어 **destroy 호출!!**이 출력되고   
 메모리가 더이상 존재하지 않아 **LifeCycleServlet 생성!! init 호출!! service 호출!!** 가 출력되게 된다.  
 
-
+![ServletLifcycle](ServletLifcycle.png)
 
 *	WAS는 서블릿 요청을 받으면 해당 서블릿이 메모리에 있는지 확인
 *	if (메모리에 없음) {  
