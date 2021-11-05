@@ -80,9 +80,9 @@ else:
 
 '''
 
-from collections import deque
+from collections import deque;
 
-import sys 
+import sys ;
 input = sys.stdin.readline
 
 def bfs(a, b, bridge, N):
