@@ -73,6 +73,8 @@ __service 호출!!__ 만 출력되는 것을 볼 수 있다.
 따라서 새로 고침을 할 경우 destroy() 메서드가 호출 되어 **destroy 호출!!** 이 출력되고   
 메모리가 더이상 존재하지 않아 __LifeCycleServlet 생성!! init 호출!! service 호출!!__ 가 출력되게 된다.  
 
+
+# Servlet Lifecycle
 ![ServletLifcycle](ServletLifcycle.png)
 
 *	WAS는 서블릿 요청을 받으면 해당 서블릿이 메모리에 있는지 확인
@@ -83,3 +85,19 @@ __service 호출!!__ 만 출력되는 것을 볼 수 있다.
 	-service()메소드를 실행  
 
 *	was가 종료되거나, 웹 어플리케이션이 새롭게 갱신될 경우 destroy() 메소드가 실행
+
+
+
+# service(request, response) 메소드
+
+HttpServlet의 service메소드는 템플릿 메소드 패턴으로 구현한다.
+
+클라이언트의 요청이 GET일 경우에는 자신이 가지고 있는 doGet(request, response)메소드를 호출
+클라이언트의 요청이 Post일 경우에는 자신이 가지고 있는 doPost(request, response)를 호출
+ 
+# LifecycleServlet 수정 실습
+
+Service(request, response)메소드 주석처리
+HttpServlet의 doGet(request, response)메소드 오버라이딩
+HttpServlet의 doPost(request, response)메소드 오버라이딩
+ 
