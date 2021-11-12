@@ -1,4 +1,4 @@
-edu.
+edu.bgis.co.kr
 
 1
 
