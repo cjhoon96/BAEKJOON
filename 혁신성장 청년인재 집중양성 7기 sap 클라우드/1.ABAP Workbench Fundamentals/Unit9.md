@@ -531,15 +531,15 @@ WRITE:/ gv_percentage,
     
     CONSTANTS gc_pi LIKE pa_rad VALUE '3.14'.
     
-    *IF pa_op = 'R'.
-    *  rst = 2 * pi * pa_rad.
-    *  WRITE: 'result : ', rst.
-    *ELSEIF pa_op = 'A'.
-    *  rst = pi * pa_rad ** 2.
-    *  WRITE: 'result : ', rst.
-    *ELSE.
-    *  WRITE  'Invalid Operator!'.
-    *ENDIF.
+    IF pa_op = 'R'.
+      rst = 2 * pi * pa_rad.
+      WRITE: 'result : ', rst.
+    ELSEIF pa_op = 'A'.
+      rst = pi * pa_rad ** 2.
+      WRITE: 'result : ', rst.
+    ELSE.
+      WRITE  'Invalid Operator!'.
+    ENDIF.
     
     
     CASE pa_op.
