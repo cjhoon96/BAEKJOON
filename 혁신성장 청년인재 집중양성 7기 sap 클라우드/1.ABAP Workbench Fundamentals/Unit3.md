@@ -65,6 +65,10 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
     * #### se84
   
       : **Object Navigator**
+      
+    * #### se93
+  
+      : **Maintain Transaction** t_code를 탐색 수정 삭재할 수 있다.
   
     
   

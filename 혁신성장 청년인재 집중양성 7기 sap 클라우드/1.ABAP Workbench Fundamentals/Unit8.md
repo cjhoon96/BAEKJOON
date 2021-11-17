@@ -20,7 +20,7 @@
 
 
 
-![structureofrepository](./img/structureofrepository.png)
+![structureofrepository](./img/structureofrepository.png)igkkcl
 
 application component
 
@@ -190,7 +190,8 @@ The features of the ABAP programming language are as follows:
 
 * WRITE 
   * 화면에 어떤 값을 출력할때 사용한다.
-  * 여러개를 출력할때는 WRITE: 뒤에 출력할 내용을 , 로 구분하여 작성한다.
+  * 여러개를 출력할때는 WRITE: 뒤에 출력할 내용을 , 로 구분하여 작성한다. 
+    * 이 경우 , 뒤에 /을 붙여 줄바꿈을 해줄 수 있다.
   * 이러한 작성방식을 ***Chained statement***라고 한다.
 
 
@@ -199,7 +200,7 @@ NEW-LINE : 줄을 바꾼다?
 
 
 
-
+##### Program ZABAP_SYNTAX_B23    Of    Package *ZBC400_B23* 
 
 ```ABAP
 *&---------------------------------------------------------------------*
@@ -216,9 +217,11 @@ PARAMETERS pa_num TYPE i.
 * pa_num 을 int 타입으로 초기화하고 이 변수에 들어갈 값을 입력할 selection screen을 생성한다.
 
 MOVE pa_num  TO gv_result.
+gv_result = pa_num.
 * pa_num 에 할당된 값을 gv_result 에 할당한다.
 
 ADD 1 TO gv_result.
+gv_result = gv_result + 1.
 * gv_result에 1을 더해준다.
 
 WRITE 'Your input: '.
@@ -233,6 +236,26 @@ WRITE: 'Result    : ',
 * 'Result    : ' 와 gv_result 에 할당된 값을 한줄에 출력한다.
 ```
 
+##### Program *ZABAP_INPUT_B23*   Of   Package *ZBC400_B23* 
+
+```ABAP
+*&---------------------------------------------------------------------*
+*& Report ZABAP_INPUT_B23
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT ZABAP_INPUT_B23.
+
+parameters: pa_int Type i,
+            pa_str Type string.
+
+write: pa_int,
+     / pa_str.
+
+new-line.
+write '김 철수'.
+```
+
 
 
 
@@ -241,15 +264,173 @@ WRITE: 'Result    : ',
 
 line의 일부를 주석처리 할때는 "를 붙여 줄의 마지막에 작성한다.
 
+Key Word 에 커서를 올리고 f1키를 누르면 해당 ABAP KeyWord의 설명과 예제를 살펴볼 수 있다.
+
+
+
+
+
+* ## ABAP Editor
+
+  메뉴창의 utilities => settings => ABAP Editor => Text - Based Editor 
+
+  를 통해 이전 버전의 에디터로 바꿀 수 있다.
+
+  * ### Options Provided by the New ABAP Editor
+
+    * 
+
+
+
+* ## Activation Programs
+
+  ![activate](./img/activate.png)
+
+  프로그램을 생성하고 저장하면 inactive version으로 저장된다. ctrl + f3 나 active 버튼을 클릭함으로서 프로그램을 active version으로 바꿔줘야 실행이 가능하다.
+
+  ![activate1](./img/activate1.png)
+
+  active version 과 inactive version 이 동시에 존재하는 경우 수정하고 있는 유저는 inactive version을 보고 있지만 이외의 유저들은 active version 프로그램만 볼 수 있다.
+
+  
+
+****
+
+****
+
+
+
+## Execrcise 12
+
+* ## Business Example 
+
+  You want to create an ABAP program that takes simple user input, modifies the data, and outputs the information to a screen.
+
+  In your package, create an executable program named ***ZBC400_B23_HELLO***.
+
+  Enable the user to enter a name on the selection screen, which will be output later in the list, together with the 'Hello' text.
+
+  * #### Template:
+
+    None
+
+  * #### Solution 
+
+    ***BC400_GSS_HELLO***
+
+    1. Create program ***ZBC400_B23_HELLO*** without a TOP include
+
+    2. in the next dialog box, make sure that the program type is Executable Program. Set the status of th eprogram to a meaningful value.
+
+    3. Define input field pa_name on the selection screen with type string.
+
+    4. Implement the output of the Hello World! text. To do this, use the ABAP WRITE statement.
+
+    5. Make sure that the output appears on a new line. To do so , use the NEW-LINE statement.
+
+    6. Using a chained statement, implement the output text 'Hello' together with the input name from the selection screen.
+
+    7. Check your program for syntax errors. Activate and test it.
+
+       
+
+  ##### Program *ZBC400_B23_HELLO*   Of   Package *ZBC400_B23* 
+
+  ```abap
+  *&---------------------------------------------------------------------*
+  *& Report ZBC400_23_HELLO
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT ZBC400_23_HELLO.
+  
+  PARAMETERS pa_name type string.
+  *write 'Hello World!'.
+  *new-line.
+  *write: 'Hello',
+  *       pa_name.
+  
+  write: 'Hello World!',
+       / 'Hello',
+         pa_name.
+  ```
+
+  
+
+****
+
+****
+
+
+
+## Lesson4 Finalizing ABAP Development Projects
+
+
+
+![transaction](./img/transaction.png)
+
+일반적으로 프로그램 이름과 t_code는 같은 이름으로 만든다.
+
+* ## To create a Transaction
+
+
+
+
+
+
+
+
+
+![transaction1](./img/transaction1.png)
+
+
+
+* ## To add a Transaction to Personal Favorites
+
+
+
+
+
+
+
+
+
+
+
+* ## T_CODE 생성 과정
+
+  ![transaction2](./img/transaction2.png)
+
+  ![transaction3](./img/transaction3.png)
+
+  ![transaction4](./img/transaction4.png)
+
+  ![transaction5](./img/transaction5.png)
+
+  ![transaction6](./img/transaction6.png)
+
+
+
+![releasechange](./img/releasechange.png)
+
+![releasechange](./img/releasechange1.png)
+
+
+
+se01을 통해 Transport Organizer 에 접근 후 대상을 클릭하고 f9 버튼이나 용달차 버튼 클릭
+
+한번 release 된 request 는 다시 사용할 수 없다.
+
+release 후 release 한 request를 클릭후 create request를 누르면 기존과 같은 텍스트의 request를 생성할 수 있다.
+
+![releasechange2](./img/releasechange2.png)
+
+Modul pool
+
+Program and dynpro (dialog transaction)
+
 
 
 
 
 ![](./img/)
-
-****
-
-****
-
-## Lesson4 Finalizing ABAP Development Projects
-
