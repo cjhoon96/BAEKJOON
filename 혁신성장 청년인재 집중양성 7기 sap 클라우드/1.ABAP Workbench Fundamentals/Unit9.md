@@ -20,76 +20,90 @@
 
 
 
+* ## Standard Data Type
+
+  #### *<u>단골문제</u>*
+
+  * ### Complete Data Type
+
+    | Standard Type | Description                                                  |
+    | ------------- | ------------------------------------------------------------ |
+    | D             | Type for **date**         format: **YYYYMMDD**    **length 8 (fixed)** |
+    | T             | Type for **time**         format: **HHMMSS**         **length 6 (fixed)** |
+    | I, INT8       | Type for **integer**    either **length 4** (fixed) (for I) , or **length 8** (fixed for INT 8) |
+    | F             | Type for **Floating Point Num**    **length 8 (fixed)**      |
+    | STRING        | Type for **Dynamic Length Character String**                 |
+    | XSTRING       | Type for **Dynamic Length Byte Sequence (HeXadecimal String)** |
+    | DECFLOAT16    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 8 bytes with 16 decimal places (fixed)** |
+    | DECFLOAT34    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 16 bytes with 34 decimal places (fixed)** |
 
 
-* ## Complete Data Type
+  * ### Incomplete Data Type
 
-  | Standard Type | Description                                                  |
-  | ------------- | ------------------------------------------------------------ |
-  | D             | Type for **date**         format: **YYYYMMDD**    **length 8 (fixed)** |
-  | T             | Type for **time**         format: **HHMMSS**         **length 6 (fixed)** |
-  | I, INT8       | Type for **integer**    either **length 4** (fixed) (for I) , or **length 8** (fixed for INT 8) |
-  | F             | Type for **Floating Point Num**    **length 8 (fixed)**      |
-  | STRING        | Type for **Dynamic Length Character String**                 |
-  | XSTRING       | Type for **Dynamic Length Byte Sequence (HeXadecimal String)** |
-  | DECFLOAT16    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 8 bytes with 16 decimal places (fixed)** |
-  | DECFLOAT34    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 16 bytes with 34 decimal places (fixed)** |
+    TYPE 뒤에 LENGTH 로 길이를 정해주거나 변수명 뒤에 (_길이_) 를 붙여 길이를 정해줄수 있다.
 
-* ## Incomplete Data Type
+    | Standard Type | Description                                                  |
+    | ------------- | ------------------------------------------------------------ |
+    | C             | Type for **Character String** (**C**haracter) for which the length is to be specified |
+    | N             | Type for **Numerical Character String** (**N**umerical Character) for which the length is to be specified |
+    | X             | Type for **Byte Sequence** (He**X**adecimal String) for which the length is to be specified |
+    | P             | Type for **Packed Number** (**P**acked number) for which the length is to be specified (In the definition of a packed number, the number of decimal points might also be specified.)  소숫점 자리수를 적게 사용하고자 할때 사용 |
 
-  TYPE 뒤에 LENGTH 로 길이를 정해주거나 변수명 뒤에 (_길이_) 를 붙여 길이를 정해줄수 있다.
+    
 
-  | Standard Type | Description                                                  |
-  | ------------- | ------------------------------------------------------------ |
-  | C             | Type for **Character String** (**C**haracter) for which the length is to be specified |
-  | N             | Type for **Numerical Character String** (**N**umerical Character) for which the length is to be specified |
-  | X             | Type for **Byte Sequence** (He**X**adecimal String) for which the length is to be specified |
-  | P             | Type for **Packed Number** (**P**acked number) for which the length is to be specified (In the definition of a packed number, the number of decimal points might also be specified.)  소숫점 자리수를 적게 사용하고자 할때 사용 |
+    ##### Program *ZABAP_STDTYPE_B23* of Package *ZBC400_B23*
 
-  
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_STDTYPE_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_stdtype_b23.
+    
+    PARAMETERS: pa_date TYPE d.
+    
+    DATA: gv_date TYPE d.
+    
+    gv_date = '20211117'.
+    
+    WRITE: 'Today:    ', gv_date,
+         / 'Birthday: ', pa_date.
+    
+    
+    
+    
+    DATA: gv_char TYPE c LENGTH 10,
+          gv_num  TYPE n LENGTH 4,
+          gv_int  type i .
+    ```
 
-  ##### Program *ZABAP_STDTYPE_B23* of Package *ZBC400_B23*
+    
 
-  ```ABAP
-  *&---------------------------------------------------------------------*
-  *& Report ZABAP_STDTYPE_B23
-  *&---------------------------------------------------------------------*
-  *&
-  *&---------------------------------------------------------------------*
-  REPORT zabap_stdtype_b23.
-  
-  PARAMETERS: pa_date TYPE d.
-  
-  DATA: gv_date TYPE d.
-  
-  gv_date = '20211117'.
-  
-  WRITE: 'Today:    ', gv_date,
-       / 'Birthday: ', pa_date.
-  
-  
-  
-  
-  DATA: gv_char TYPE c LENGTH 10,
-        gv_num  TYPE n LENGTH 4,
-        gv_int  type i .
-  ```
-
-  
 
 * ## Local Data Types
 
   ![localdatatype](./img/localdatatype.png)
 
   해당 프로그램 안에서만 사용할 수 있다.
+  
+  tv : single value
+  ts : 
+  tt : 테이블
 
 
 
 * ## Global Data Types
 
   ![global](./img/global.png)
-
-
+  
+  abap 딕셔너리에 선언되어있는 데이터 타입
+  
+  세가지로 존재한다.
+  
+  * elementary type
+  * structure type
+  * type for internal table (internal type)
 
 * ## Definition of Variable Data Objects
 
@@ -554,7 +568,595 @@ WRITE:/ gv_percentage,
     ENDCASE.
     ```
 
+* ## Loops (반복문)
+
+  ![loop](./img/loop.png)
+
+  * DO. 
+
+    EXIT. 으로 빠져나오지 않으면  무한 반복
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_LOOP_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_loop_b23.
     
+    DATA: gv_rslt TYPE i.
+    
+    PARAMETERS: pa_num TYPE i.
+    
+    DO.
+      gv_rslt = gv_rslt + sy-index.
+      IF pa_num = sy-index.
+        WRITE:/ 'result : ', gv_rslt.
+        EXIT.
+      ENDIF.
+    ENDDO.
+    
+    *Program ZABAP_LOOP_B23
+    *input  :          10
+    *result :          55
+    ```
+
+    
+
+  * DO n TIMES.
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_LOOP_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_loop_b23.
+    
+    DATA: gv_rslt TYPE i.
+    
+    PARAMETERS: pa_num TYPE i.
+    
+    DO pa_num TIMES.
+      gv_rslt = gv_rslt + sy-index.
+    ENDDO.
+    
+    WRITE:/ 'result : ', gv_rslt.
+    
+    *Program ZABAP_LOOP_B23
+    *input  :          10
+    *result :          55
+    ```
+
+    
+
+    n번 반복
+
+    
+
+  * WHILE.  --- ENDWILE.
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_LOOP_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_loop_b23.
+    
+    DATA: gv_rslt TYPE i.
+    
+    PARAMETERS: pa_num TYPE i.
+    
+    WHILE sy-index <= pa_num.
+      gv_rslt = gv_rslt + sy-index.
+    ENDWHILE.
+    WRITE:/ 'result : ', gv_rslt.
+    
+    *Program ZABAP_LOOP_B23
+    *input  :          10
+    *result :          55
+    ```
+
+    조건문이 사실인 동안 반복
+
+  * SELECT ... FROM ... . --- ENDSELECT.
+
+    
+
+  * LOOP AT <internal table> --- ENDLOOP
+
+  
+
+  * ### 실습 - 구구단
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_GUGU_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_gugu_b23.
+    
+    DATA: gv_rslt TYPE i.
+    
+    PARAMETERS: pa_dan TYPE i.
+    
+    
+    IF pa_dan > 1 AND pa_dan < 10.
+    
+      WHILE sy-index <= 9.
+        gv_rslt = pa_dan * sy-index.
+        WRITE:/ pa_dan, ' * ', sy-index, ' = ', gv_rslt.
+      ENDWHILE.
+    
+    
+      DO 9 TIMES.
+        gv_rslt = pa_dan * sy-index.
+        WRITE:/ pa_dan, ' * ', sy-index, ' = ', gv_rslt.
+      ENDDO.
+    
+    ELSEIF pa_dan < 2.
+      WRITE:/ '2 이상을 입력하시오.'.
+    ELSE.
+      WRITE:/ '9 이하를 입력하시오.'.
+    ENDIF.
+    
+    * Program ZABAP_GUGU_B23
+    * input : 3 
+    *          3   *           1   =           3
+    *          3   *           2   =           6
+    *          3   *           3   =           9
+    *          3   *           4   =          12
+    *          3   *           5   =          15
+    *          3   *           6   =          18
+    *          3   *           7   =          21
+    *          3   *           8   =          24
+    *          3   *           9   =          27
+    *          3   *           1   =           3
+    *          3   *           2   =           6
+    *          3   *           3   =           9
+    *          3   *           4   =          12
+    *          3   *           5   =          15
+    *          3   *           6   =          18
+    *          3   *           7   =          21
+    *          3   *           8   =          24
+    *          3   *           9   =          27
+    ```
+
+  * 실습 - 구구단 업그레이드
+
+    ##### ZABAP_GUGU_B23
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZABAP_GUGU_B23
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zabap_gugu_b23.
+    
+    DATA: gv_rslt TYPE i.
+    
+    PARAMETERS: pa_dan TYPE i.
+    
+    DATA: gv_dan TYPE i.
+    gv_dan = 2.
+    
+    IF pa_dan > 1 AND pa_dan < 10.
+      WHILE gv_dan <= pa_dan.
+        WRITE:/ gv_dan, '단'.
+        DO 9 TIMES.
+          gv_rslt = gv_dan * sy-index.
+          WRITE:/ gv_dan, ' * ', sy-index, ' = ', gv_rslt.
+        ENDDO.
+        ULINE.
+        gv_dan = gv_dan + 1.
+      ENDWHILE.
+    
+    ELSEIF pa_dan < 2.
+      WRITE:/ '2 이상을 입력하시오.'.
+    ELSE.
+      WRITE:/ '9 이하를 입력하시오.'.
+    ENDIF.
+    
+    *Program ZABAP_GUGU_B23
+    *input : 9
+    * 2  단
+    * 2   *           1   =           2
+    * 2   *           2   =           4
+    * 2   *           3   =           6
+    * 2   *           4   =           8
+    * 2   *           5   =          10
+    * 2   *           6   =          12
+    * 2   *           7   =          14
+    * 2   *           8   =          16
+    * 2   *           9   =          18
+    *
+    * 3  단
+    * 3   *           1   =           3
+    * 3   *           2   =           6
+    * 3   *           3   =           9
+    * 3   *           4   =          12
+    * 3   *           5   =          15
+    * 3   *           6   =          18
+    * 3   *           7   =          21
+    * 3   *           8   =          24
+    * 3   *           9   =          27
+    *
+    * 4  단
+    * 4   *           1   =           4
+    * 4   *           2   =           8
+    * 4   *           3   =          12
+    * 4   *           4   =          16
+    * 4   *           5   =          20
+    * 4   *           6   =          24
+    * 4   *           7   =          28
+    * 4   *           8   =          32
+    * 4   *           9   =          36
+    *
+    * 5  단
+    * 5   *           1   =           5
+    * 5   *           2   =          10
+    * 5   *           3   =          15
+    * 5   *           4   =          20
+    * 5   *           5   =          25
+    * 5   *           6   =          30
+    * 5   *           7   =          35
+    * 5   *           8   =          40
+    * 5   *           9   =          45
+    *
+    * 6  단
+    * 6   *           1   =           6
+    * 6   *           2   =          12
+    * 6   *           3   =          18
+    * 6   *           4   =          24
+    * 6   *           5   =          30
+    * 6   *           6   =          36
+    *6   *           7   =          42
+    *6   *           8   =          48
+    *6   *           9   =          54
+    *
+    *7  단
+    *7   *           1   =           7
+    *7   *           2   =          14
+    *7   *           3   =          21
+    *7   *           4   =          28
+    *7   *           5   =          35
+    *7   *           6   =          42
+    *7   *           7   =          49
+    *7   *           8   =          56
+    *7   *           9   =          63
+    *
+    *8  단
+    *8   *           1   =           8
+    *8   *           2   =          16
+    *8   *           3   =          24
+    *8   *           4   =          32
+    *8   *           5   =          40
+    *8   *           6   =          48
+    *8   *           7   =          56
+    *8   *           8   =          64
+    *8   *           9   =          72
+    *
+    *9  단
+    *9   *           1   =           9
+    *9   *           2   =          18
+    *9   *           3   =          27
+    *9   *           4   =          36
+    *9   *           5   =          45
+    *9   *           6   =          54
+    *9   *           7   =          63
+    *9   *           8   =          72
+    *9   *           9   =          81
+    ```
+
+    ```ABAP
+    DO pa_dan TIMES.
+      gv_index = sy-index.
+      IF sy-index = 1.
+        CONTINUE.
+      ENDIF.
+      DO 9 TIMES.
+        gv_rslt = gv_index * sy-index.
+        WRITE:/ gv_index, '*', sy-index, '=', gv_rslt.
+      ENDDO.
+    ENDDO.
+    ```
+
+    
+
+* ## System Fields (Excerpt)
+
+  sy-index
+
+  * 루프 횟수를 리턴해준다.
+
+  ![sy-subrc](./img/sy-subrc.png)
+
+  sy-subrc
+
+  * 정상적으로 실행 됐는지 않됐는지 확인 
+    * 해당 테이블에 데이터가 존재할 경우
+      * return 0
+    * 그 이외는 
+      * 일반적으로 return 4 
+
+
+
+
+
+##### ZABAP_RETURN_B23
+
+```ABAP
+*&---------------------------------------------------------------------*
+*& Report ZABAP_RETURN_B23
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT zabap_return_b23.
+
+* structurevariable
+DATA: gs_spfli TYPE spfli.
+
+* structure type 의 필드 이름
+* data element를 참조
+PARAMETERS: pa_car TYPE spfli-carrid,
+            pa_con TYPE spfli-connid.
+
+
+* SINGLE : 한건의 데이터를 불러올때 사용
+SELECT SINGLE *
+  INTO gs_spfli         " 불러온 데이터를 gs_spfli 에 할당하겠다.
+  FROM spfli
+  WHERE carrid = pa_car
+    AND connid = pa_con.
+
+IF sy-subrc = 0.
+  WRITE: gs_spfli-carrid,
+         gs_spfli-connid,
+         gs_spfli-cityfrom,
+         gs_spfli-cityto.
+ELSE.
+  WRITE 'Sorry, no data found!'.
+ENDIF.
+
+*Report ZABAP_RETURN_B23
+*INPUT
+*PA_CAR:	AA
+*PA_CON:	0017
+*RESULT
+*AA  0017 NEW YORK             SAN FRANCISCO
+```
+
+
+
+
+
+
+
+
+
+* ## Exercise 14
+
+  ```ABAP
+  *&---------------------------------------------------------------------*
+  *& Report ZBC400_B23_COMPUTE
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT zbc400_b23_compute.
+  
+  PARAMETERS: pa_int1 TYPE i,
+              pa_int2 TYPE i,
+              pa_op   TYPE c LENGTH 1.
+  
+  DATA gv_rslt TYPE p LENGTH 16 DECIMALS 2.
+  
+  
+  CASE pa_op.
+    WHEN '+'.
+      gv_rslt = pa_int1 + pa_int2.
+      WRITE: / pa_int1, '+', pa_int2, '=', gv_rslt.
+    WHEN '-'.
+      gv_rslt = pa_int1 - pa_int2.
+      WRITE: / pa_int1, '-', pa_int2, '=', gv_rslt.
+    WHEN '*'.
+      gv_rslt = pa_int1 * pa_int2.
+      WRITE: / pa_int1, '*', pa_int2, '=', gv_rslt.
+    WHEN '/'.
+      IF pa_int2 = 0.
+        WRITE / 'PA_INT2 Error'.
+      ELSE.
+        gv_rslt = pa_int1 / pa_int2.
+        WRITE: / pa_int1, '/', pa_int2, '=', gv_rslt.
+      ENDIF.
+    WHEN OTHERS.
+      WRITE 'PA_OP Error'.
+  ENDCASE.
+  ```
+
+  ```abap
+  IF ( pa_op = '+' OR
+       pa_op = '-' OR
+       pa_op = '*' OR
+       pa_op = '/' AND pa_int2 <> 0 ).
+    CASE pa_op.
+      WHEN '+'.
+        gv_rslt = pa_int1 + pa_int2.
+      WHEN '-'.
+        gv_rslt = pa_int1 - pa_int2.
+      WHEN '*'.
+        gv_rslt = pa_int1 * pa_int2.
+      WHEN '/'.
+        gv_rslt = pa_int1 / pa_int2.
+    ENDCASE.
+    WRITE: gv_rslt.
+  
+  ELSE.
+    WRITE 'error'.
+  ENDIF.
+  ```
+
+
+
+
+
+* ## Dialog Messages
+
+  ![dialogmessage](./img/dialogmessage.png)
+
+  **MESSAGE** **t**nnn(message_class )
+
+  | MESSAGE     | **t** | nnn              | (message_class )                                             | WITH v1 v2 v3 v4                                             |
+  | ----------- | ----- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ABAP 명령어 |       | 번호 000~999까지 | REPORT 부분 뒤에 MESSAGE-ID message_class로 지정해 준경우 쓸필요 없다. | optional 하게 추가  with 뒤는 플레이스 홀더 variable 값들을 4개까지 |
+
+   ```abap
+   REPORT zbc400_b23_compute MESSAGE-ID ZMESSAGE_B23.
+   
+   
+     WHEN OTHERS.
+       WRITE 'PA_OP Error'(paop).
+       MESSAGE i000(zmessage_b23) WITH pa_op.
+       MESSAGE i000 WITH pa_op.					"REPORT뒤에서 지정해 준경우
+       MESSAGE w000 WITH pa_op DISPLAY LIKE 'S'.
+       MESSAGE s005 WITH sy-uname sy-datum
+                         sy-uzeit sy-repid.
+                         
+   * 하드코딩에 사용
+       MESSAGE 'Invalid Operator!' TYPE 'I'. 		"타입 대문자로!!!!
+   ```
+
+  
+
+  i : 팝업으로 디스플레이된다.
+
+  s: success 메세지라고도 한다. 에러 없이 처리 됐을때 스테이터스바에 디스플레이 된다.
+
+  w:
+
+  e: 
+
+  a: 모델 다이얼로그 박스에서 팝업으로
+
+  x: short dump 화면 잘 쓰지 않는다. 
+
+  ![messageclass](./img/messageclass.png)
+
+  ![messageclass](./img/messageclass1.png)
+
+  ![messageclass](./img/messageclass2.png)
+
+  ![messageclass](./img/messageclass3.png)
+
+  ![messageclass](./img/messageclass4.png)
+
+  ![messageclass](./img/messageclass5.png)
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+****
+
+
+
+## Lesson3. Analyzing Programs with the ABAP Debugger
+
+* ## Debugging 접근방법
+
+  * ### ABAP Editor 에서 접근
+
+    ![debug](./img/debug.png)
+
+    ![debug](./img/debug1.png)
+
+    프로그램을 우클릭해 디버깅 메뉴로 접근해 프로그램을 실행시킨다.
+
+    
+
+    ![debug](C:\Users\HP450G2\OneDrive\바탕 화면\debug2.png)
+
+    ![debug](./img/debug3.png)
+
+    또는 break point 버튼을 클릭후 원하는 지점에 break point를 설정해 프로그램을 실행한다.
+
+    
+
+  * ### /h 를 통해 접근
+
+    ![debug](./img/debug4.png)
+
+    프로그램을 실행한후 t_code /h를 입력한다.
+
+    ![debug](./img/debug5.png)
+
+    상태창에 Debugging switched on 이 뜬 것을 확인한후 실행하면 debugging 창으로 접근 할 수 있다.
+
+  * ### System 메뉴를 통한 접근
+
+    ![debug](./img/debug6.png)
+
+    프로그램을 실행한 후 system => utilities => debug ABAP 를 클릭한다.
+
+    ![debug](./img/debug5.png)
+
+    상태창에 Debugging switched on 이 뜬 것을 확인한후 실행하면 debugging 창으로 접근 할 수 있다.
+
+
+
+
+
+
+
+
+
+* ## Single Step
+
+  ![debug](./img/debug8.png)
+
+  
+
+  
+
+  
+
+* ## Breakpoints
+
+  ![debug](./img/debug9.png)
+
+
+
+* ## Change of Field Contents
+
+  ![debug](./img/debug10.png)
+
+  변수들을 더블 클릭하면 변수 창에 해당 변수들이 등록 된다.
+
+  Change 를 통해 입력한 변수들을 바꿀 수 있다.
+
+  상수는 변경이 불가능하다. 
+
+
+
+
 
 
 
@@ -568,10 +1170,45 @@ WRITE:/ gv_percentage,
 
 
 
-****
-
-****
 
 
 
-## Lesson3. Analyzing Programs with the ABAP Debugger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+strlen()
+
+charlen()
+
+ipow ( base = i exp = j ) : i**j
+
+문자열 결합
+
+* 문자열 && 문자열
+
+* CONCATENATE 'AAA' pa_name INTO gv_str
+
+논리 연산자
+
+* = EQ
+* <> NQ
+
+
+
+
+
+* * * 
