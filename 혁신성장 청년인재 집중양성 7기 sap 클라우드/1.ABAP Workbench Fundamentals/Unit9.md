@@ -4,9 +4,23 @@
 
 
 
-## Lesson1. Defining Elementary Data Objects
+# Lesson1. Defining Elementary Data Objects
 
+****
 
+## 개요
+
+기본 데이터 오브젝트의 사용과 ABAP 프로그램에서 기본 데이터 오브젝트가 어떻게 정의되는지 설명한다.
+
+* TYPE 과 VARIABLE의 차이점과 사용 방식
+* LOCAL / GLOBAL DATA TYPE의 차이점과 사용방식
+* LITERAL, CONSTANTS, TEXT SYMBAL의 사용
+
+## 목표
+
+*  DATA TYPE 및 DATA OBJECT 비교
+
+****
 
 
 
@@ -14,9 +28,21 @@
 
   ![typeobject](./img/typeobject.png)
 
-  데이터 타입은 값을 담을 수 있다.
+  * ### Data Object
 
-  데이터 오브젝트는 값을 담을 수 있는 용기이다.
+    데이터 오브젝트의 유형에 따라 해당 기술적 속성이 정의된다.
+  
+  * ### Interface Parameters
+  
+    인터페이스 매개변수의 유형에 따라 모듈화 단위가 호출될 때 전송되는 실제 배개변수의 유형이 결정된다.
+  
+  * ### Input / Output Fields
+  
+    입력/출력 필드의 유형을 통해 기술적 특징에 대한 추가 정보가 제공될 수 있다.
+  
+    
+
+****
 
 
 
@@ -26,16 +52,16 @@
 
   * ### Complete Data Type
 
-    | Standard Type | Description                                                  |
-    | ------------- | ------------------------------------------------------------ |
-    | D             | Type for **date**         format: **YYYYMMDD**    **length 8 (fixed)** |
-    | T             | Type for **time**         format: **HHMMSS**         **length 6 (fixed)** |
-    | I, INT8       | Type for **integer**    either **length 4** (fixed) (for I) , or **length 8** (fixed for INT 8) |
-    | F             | Type for **Floating Point Num**    **length 8 (fixed)**      |
-    | STRING        | Type for **Dynamic Length Character String**                 |
-    | XSTRING       | Type for **Dynamic Length Byte Sequence (HeXadecimal String)** |
-    | DECFLOAT16    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 8 bytes with 16 decimal places (fixed)** |
-    | DECFLOAT34    | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 16 bytes with 34 decimal places (fixed)** |
+    | Standard Type  | Description                                                  |
+    | -------------- | ------------------------------------------------------------ |
+    | **D**          | Type for **date**         format: **YYYYMMDD**    **length 8 (fixed)** |
+    | **T**          | Type for **time**         format: **HHMMSS**         **length 6 (fixed)** |
+    | **I, INT8**    | Type for **integer**    either **length 4** (fixed) (for I) , or **length 8** (fixed for INT 8) |
+    | **F**          | Type for **Floating Point Num**    **length 8 (fixed)**      |
+    | **STRING**     | Type for **Dynamic Length Character String**                 |
+    | **XSTRING**    | Type for **Dynamic Length Byte Sequence (HeXadecimal String)** |
+    | **DECFLOAT16** | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 8 bytes with 16 decimal places (fixed)** |
+    | **DECFLOAT34** | Types for **DECimal FLOATing Point numbers** with mantissa and exponent    **length 16 bytes with 34 decimal places (fixed)** |
 
 
   * ### Incomplete Data Type
@@ -44,10 +70,10 @@
 
     | Standard Type | Description                                                  |
     | ------------- | ------------------------------------------------------------ |
-    | C             | Type for **Character String** (**C**haracter) for which the length is to be specified |
-    | N             | Type for **Numerical Character String** (**N**umerical Character) for which the length is to be specified |
-    | X             | Type for **Byte Sequence** (He**X**adecimal String) for which the length is to be specified |
-    | P             | Type for **Packed Number** (**P**acked number) for which the length is to be specified (In the definition of a packed number, the number of decimal points might also be specified.)  소숫점 자리수를 적게 사용하고자 할때 사용 |
+    | **C**         | Type for **Character String** (**C**haracter) for which the length is to be specified |
+    | **N**         | Type for **Numerical Character String** (**N**umerical Character) for which the length is to be specified |
+    | **X**         | Type for **Byte Sequence** (He**X**adecimal String) for which the length is to be specified |
+    | **P**         | Type for **Packed Number** (**P**acked number) for which the length is to be specified (In the definition of a packed number, the number of decimal points might also be specified.)  소숫점 자리수를 적게 사용하고자 할때 사용<br>LENGTH * 2 의 길이로 생기며 마지막은 + - 를 결정하는 칸이 된다. 또 DECIMALS 만큼이 소숫점 아래 자리수로 할당되며 나머지는 정수부분으로 할당된다. |
 
     
 
@@ -78,97 +104,104 @@
           gv_int  type i .
     ```
 
-    
+
+
+
+****
+
+
 
 
 * ## Local Data Types
 
   ![localdatatype](./img/localdatatype.png)
 
-  해당 프로그램 안에서만 사용할 수 있다.
+  STD Data Type 을 사용하면 프로그램에서 기본 표준 데이터 유형보다 더 완전하거나 복합적인 로컬 데이터 유형을 선언할 수 있다.
   
-  tv : single value
-  ts : 
-  tt : 테이블
+  Local Data Type은 해당 프로그램 안에만 존재하므로 해당 프로그램에서만 사용할 수 있다.
+  
+  **Types 문 사용!!**
+  
+  #### 변수 이름 설정
+  
+  * tv : Single Value
+  * ts : Structure
+  * tt : Table 
 
 
 
 * ## Global Data Types
 
   ![global](./img/global.png)
+
+  ABAP 딕셔너리에 선언되어있는 Data Type 은 관련된 SAP 시스템 전반에서 사용할 수 있으며 Global Data Type 이라고 한다.
+
   
-  abap 딕셔너리에 선언되어있는 데이터 타입
-  
-  세가지로 존재한다.
-  
+
+  #### 세가지로 유형으로 존재한다.
+
   * elementary type
   * structure type
   * type for internal table (internal type)
+
+
+
+****
+
+
 
 * ## Definition of Variable Data Objects
 
   ![definingobject](./img/definingobject.png)
 
-  * type_name에는 STD Data Type 또는 현재 프로그램에서 정의한 Local Data Type이 올 수 있다.
+  * type_name에는 STD Data Type 또는 Global Data Type 또는 현재 프로그램에서 정의한 Local Data Type이 올 수 있다.
   * LIKE는 기준으로 왼쪽의 변수를 오른쪽 변수의 타입으로 초기화한다.
+
+  ![ex](./img/ex.png)
+
+#### VALUE : 기본값을 할당해 준다.
+
+* ## 실습
+
+  ```ABAP
+  *&---------------------------------------------------------------------*
+  *& Report ZABAP_VARIABLE_B23
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT zabap_variable_b23.
+  
+  TYPES tv_percentage TYPE p LENGTH 3 DECIMALS 2.
+  
+  DATA: gv_percentage TYPE tv_percentage,
+        gv_int1       TYPE i VALUE 20,
+        gv_city       TYPE c LENGTH 20 VALUE 'Seoul',
+        gv_int2       LIKE gv_int1,
+        gv_carrid     TYPE s_carr_id.
+  
+  
+  gv_percentage = '52.027'.
+  * 지정한 DECIMALS를 초과하면 반올림하여 지정한만큼만 나타낸다.
+  
+  CONSTANTS gc_pi TYPE tv_percentage VALUE '3.14'.
+  
+  
+  WRITE:/ gv_percentage,
+        / gv_int1,
+        / gv_city,
+        / gv_int2,
+        / gv_carrid.
+  ```
 
   
 
-* ## Categories of Data Types
 
 
+* ## Data Type 검색방법 
 
+  ![makedatatype](./img/makedatatype.png)
 
-
-
-
-![ex](./img/ex.png)
-
-P 타입 - LENGTH * 2 의 길이로 생기며 마지막은 + - 를 결정하는 칸이 된다. 또 DECIMALS 만큼이 소숫점 아래 자리수로 할당되며 나머지는 정수부분으로 할당된다. 
-
-VALUE : 기본값을 할당해 준다.
-
-
-
-```ABAP
-*&---------------------------------------------------------------------*
-*& Report ZABAP_VARIABLE_B23
-*&---------------------------------------------------------------------*
-*&
-*&---------------------------------------------------------------------*
-REPORT zabap_variable_b23.
-
-TYPES tv_percentage TYPE p LENGTH 3 DECIMALS 2.
-
-DATA: gv_percentage TYPE tv_percentage,
-      gv_int1       TYPE i VALUE 20,
-      gv_city       TYPE c LENGTH 20 VALUE 'Seoul',
-      gv_int2       LIKE gv_int1,
-      gv_carrid     TYPE s_carr_id.
-
-
-gv_percentage = '52.027'.
-* 지정한 DECIMALS를 초과하면 반올림하여 지정한만큼만 나타낸다.
-
-CONSTANTS gc_pi TYPE tv_percentage VALUE '3.14'.
-
-
-WRITE:/ gv_percentage,
-      / gv_int1,
-      / gv_city,
-      / gv_int2,
-      / gv_carrid.
-```
-
-
-
-## 이부분은 다시 확인 
-
-![makedatatype](./img/makedatatype.png)
-
-
-
-![display](./img/display.png)
+  ![display](./img/display.png)
 
 
 
@@ -180,12 +213,12 @@ WRITE:/ gv_percentage,
 
   ![literal](./img/literal.png)
 
-  소숫점이 들어갈 때에는 ''을 써주어야 한다. 소숫점이 문장의 끝으로 인식되어 오류!!
+  #### 소숫점이 들어갈 때에는 'xx.xxx'와 같이 '로 감싸주어야한다. 소숫점이 문장의 끝으로 인식되어 오류!!
 
-  상수를 선언할때는 CONSTANTS 를 사용한다. ==> 수정 불가능
+  #### 상수를 선언할때는 CONSTANTS 를 사용한다. ==> 수정 불가능
 
   ```ABAP
-  CONSTANTS gc_myconst TYPE type_name VALUE (LITERAL | IS INITIAL) .
+  CONSTANTS gc_myconst TYPE type_name VALUE ( LITERAL | IS INITIAL ) .
   CONSTANTS gc_pi TYPE tv_percentage VALUE '3.14'.
   ```
 
@@ -247,7 +280,12 @@ WRITE:/ gv_percentage,
 
   ![where](./img/where.png)
 
+  * ### 전역 데이터 타입의 장점
   
+    * 시스템 전체에서 사용되므로 시스템 일관성이 향상되며 관리 작업이 줄어든다.
+      * 재사용이 가능하며 유지보수가 수월하다.
+    * 사용처 리스트 사용 시 해당 데이터 유형을 사용하는 저장소 오브젝트가 포함된다.
+    * 데이터 유형의 의미 정보가 정의될 오브젝트의 비지니스 새역과 일치한다.
 
 
 
@@ -279,9 +317,21 @@ WRITE:/ gv_percentage,
 
 
 
-## Lesson2. Using Basic ABAP Statements
+# Lesson2. Using Basic ABAP Statements
 
+****
 
+## 개요
+
+기본 데이터 오브젝트에 값을 채우는 방법과 ABAP 에서 계산을 수행하느느 방법에 대해 설명한다.
+
+## 목표
+
+*  기본 데이터 오브젝트에 값을 채우는 방법
+* ABAP에서 계산을 수행하는 방법
+* 기본 프로그래밍 개념의 ABAP 구문 이해
+
+****
 
 
 
@@ -344,10 +394,24 @@ WRITE:/ gv_percentage,
 
   ![calculation](./img/calculation.png)
 
-  strlen: 문자열의 길이를 반환
+  * ### + : 덧셈
 
+  * ### - : 뺄셈
+
+  * ### \* : 곱셈
+  
+  * ### / : 나눗셈
+  
+  * ### \** : 거듭제곱
+  
+  * ### DIV : 나머지가 없는 정수 나누기
+  
+  * ### MOD : 정수 나누기 후 나머지
+  
+  ###   
+  
   ##### ZABAP_CALC_B23
-
+  
   ```ABAP
   *&---------------------------------------------------------------------*
   *& Report ZABAP_CALC_B23
@@ -375,11 +439,11 @@ WRITE:/ gv_percentage,
   *Percentage :             50.
   *Length     :          26
   ```
-
+  
   * #### 실습 - 할인가 출력하기
-
+  
     ##### ZABAP_DISC_B23
-
+  
     ```ABAP
     *&---------------------------------------------------------------------*
     *& Report ZABAP_DISC_B23
@@ -414,15 +478,15 @@ WRITE:/ gv_percentage,
     * pa_rslt1 =       80.00
     * pa_rslt2 =      120.00
     ```
-
+  
     
-
+  
     
-
+  
   * 
-
+  
     ##### ZABAP_DIV_B23
-
+  
     ```ABAP
     *&---------------------------------------------------------------------*
     *& Report ZABAP_DIV_B23
@@ -519,7 +583,7 @@ WRITE:/ gv_percentage,
 
   IS NOT INITIAL 각 변수마다 이니셜밸류 값을 갖는데
 
-  * #### 실습 - 원둘레
+  * ### 실습 - 원둘레
 
     * pa-rad - 반지름
     * pa-op 
@@ -572,9 +636,9 @@ WRITE:/ gv_percentage,
 
   ![loop](./img/loop.png)
 
-  * DO. 
+  * ### DO문
 
-    EXIT. 으로 빠져나오지 않으면  무한 반복
+    **EXIT. 으로 빠져나오지 않으면  무한 반복**
 
     ```ABAP
     *&---------------------------------------------------------------------*
@@ -603,7 +667,7 @@ WRITE:/ gv_percentage,
 
     
 
-  * DO n TIMES.
+  * ### DO n TIMES 문
 
     ```ABAP
     *&---------------------------------------------------------------------*
@@ -634,7 +698,7 @@ WRITE:/ gv_percentage,
 
     
 
-  * WHILE.  --- ENDWILE.
+  * ### WHILE 문
 
     ```ABAP
     *&---------------------------------------------------------------------*
@@ -660,11 +724,11 @@ WRITE:/ gv_percentage,
 
     조건문이 사실인 동안 반복
 
-  * SELECT ... FROM ... . --- ENDSELECT.
+  * ### SELECT ... FROM ... . --- ENDSELECT.
 
     
 
-  * LOOP AT <internal table> --- ENDLOOP
+  * ### LOOP AT <internal table> --- ENDLOOP
 
   
 
@@ -724,7 +788,7 @@ WRITE:/ gv_percentage,
     *          3   *           9   =          27
     ```
 
-  * 실습 - 구구단 업그레이드
+  * ### 실습 - 구구단 업그레이드
 
     ##### ZABAP_GUGU_B23
 
@@ -868,14 +932,46 @@ WRITE:/ gv_percentage,
 
 * ## System Fields (Excerpt)
 
-  sy-index
+  ### sy-mandt
 
-  * 루프 횟수를 리턴해준다.
+  * 로그온 클라이언트
 
+  ### sy-uname
+
+  * 사용자 로그온 이름
+
+  ### sy-langu
+  
+  * 사용자 로그온 언어
+  
+  ### sy-datum
+  
+  * ABAP 시스템 현지 일자
+  
+  ### sy-uzeit
+  
+  * ABAP 시스템 현지 시간
+  
+  ### sy-tcode
+  
+  * 현재 트랜잭션 코드
+  
+  ### sy-repid
+  
+  * 현재 ABAP 프로그램 이름
+  
+  ### sy-index
+  
+  * DO / WHILE 문의 루프 횟수
+  
   ![sy-subrc](./img/sy-subrc.png)
-
-  sy-subrc
-
+  
+  ### sy-tabix
+  
+  * Loop 문의 루프 횟수
+  
+  ### sy-subrc
+  
   * 정상적으로 실행 됐는지 않됐는지 확인 
     * 해당 테이블에 데이터가 존재할 경우
       * return 0
@@ -1074,11 +1170,9 @@ ENDIF.
 
 ****
 
-****
 
 
-
-## Lesson3. Analyzing Programs with the ABAP Debugger
+# Lesson3. Analyzing Programs with the ABAP Debugger
 
 * ## Debugging 접근방법
 
@@ -1188,27 +1282,106 @@ ENDIF.
 
 
 
+* ## 부록
+
+  strlen() - string 형의 길이를 반환한다.
+
+  charlen() - character 형의 길이를 반환한다.
+
+  
+
+  #### ipow ( base = i exp = j ) : i**j
+
+  
+
+  문자열 결합
+
+  * 문자열 && 문자열
 
 
-strlen()
+  * CONCATENATE 'AAA' pa_name INTO gv_str
 
-charlen()
+  논리 연산자
 
-ipow ( base = i exp = j ) : i**j
+  * = EQ
 
-문자열 결합
-
-* 문자열 && 문자열
-
-* CONCATENATE 'AAA' pa_name INTO gv_str
-
-논리 연산자
-
-* = EQ
-* <> NQ
+  * <> NQ
 
 
 
 
 
-* * * 
+
+* * *
+
+
+
+## 학습평가
+
+* ### 다음중 컴플리트 ABAP STD TYPE은 무엇인가?
+
+  * #### <u>T (시간)</u>
+
+  * **C (문자)**
+
+  * **N (숫자)**
+
+  * #### <u>INT8 (8 바이트 길이의 정수)</u>
+
+  * #### <u>D (일자)</u>
+
+
+
+
+
+* ### 다음중 IF 문에서 논리식 앞에 사용하여 부정을 공식화하는 연산자는 무엇인가?
+
+  * **AND**
+
+  * **OR**
+
+  * **END** 
+
+  * #### <u>NOT</u>
+
+
+
+
+
+* ### 다음중 Message 문의 구문에 필요한 항목은 무엇인가?
+
+  * #### <u>메시지번호</u>
+
+  * #### <u>메시지유형</u>
+
+  * #### <u>메시지클래스</u>
+
+  * **메시지역할**
+
+
+
+
+
+* ### 중첩 루프에서 자신이 위치한 루프의 루프패스 수는 어디에 포함되어 있는가?
+
+  * #### <u>sy-index</u>
+
+  * **sy-repid**
+
+  * **sy-uname**
+
+  * **sy-mandt**
+
+
+
+
+
+* ### 다음중 디버거를 시작하기 위해 화면의 명령어 필드에 입력하는 시스템 명령어는 무엇인가?
+
+  * **/d**
+
+  * #### <u>/h</u>
+
+  * **/i**
+
+  * **/a**

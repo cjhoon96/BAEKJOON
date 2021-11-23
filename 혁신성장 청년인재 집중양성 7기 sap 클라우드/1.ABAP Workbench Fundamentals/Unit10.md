@@ -4,7 +4,19 @@
 
 # Lesson1. Explaining Modularizagion
 
- 
+****
+
+##  개요
+
+프로그램의 일부를 모듈화 단위로 저장해야 하는 이유에 대해 설명한다.
+
+## 목표
+
+* 모듈화 기법의 이해 
+
+****
+
+
 
 * ## Modularization 의 세가지 장점
 
@@ -35,7 +47,7 @@
 
   ![localprogram](./img/localprogram.png)
 
-  각 프로그램의 Subroutine과 Local_class는 각 프로그램내에서만 사용할 수 있다.
+  각 프로그램의 **Subroutine과 Local_class의 method**는 각 프로그램내에서만 사용할 수 있다.
 
 
 
@@ -49,7 +61,7 @@
 
   ![globalmodule](./img/globalmodule.png)
 
-  Function group 의 Function module과 Global_class 의 Method 들은 여러 프로그램들에서 사용 가능하다.
+  **Function group 의 Function module과 Global_class 의 Method** 들은 여러 프로그램들에서 사용 가능하다.
 
 
 
@@ -59,11 +71,39 @@
 
   ![separating](./img/separating.png)
 
+  모듈화 단위는 호출 프로그램의 데이터 오브젝트를 직접 사용하지 않는 것이 바람직하며 
+
+  반대로 호출하는 프로그램도 모듈화 단위의 데이터를 직접 변경하지 않는다. 이를 **데이터 캡슐화** 라고 한다. 
+
   프로그램은 Global Modularization 의 데이터를 다이렉트로 access 할 수 없다.
+
+  
+
+  데이터의 캡슐화는 투명하고 유지보수가 가능한 소스코드를 개발하는데 있어 중요한 기능이다.
+
+  데이터 오브젝트의 내용이 변경된 위치를 훨씬 쉽게 파악할 수 있다.
+
+  모듈화 단위 내 여러 데이터 오브젝트의 내용이 상호 종속적인 경우 등에도 더욱 간편하게 모듈화 단위 내 데이터가 일관된 방식으로 변경되도록 보장할 수 있다.
+
+****
+
+* ## Data Transports, Parameters, and Interface
 
   ![datatrans](./img/datatrans.png)
 
-   Function Module은 CALL FUNCTION  '' 구문을 통해 인터페이스를 이용하여 access하며
+  ### 매개 변수의 구분 기준
+
+  * 모듈화 단위로 데이터 전달 (**Importing Parameters**)
+  * 모듈화 단위에서 호출자로 데이터 리턴 (**Exporting Parameters**)
+  * 모듈화 단위로 데이터 전달, 변경된 데이터 리턴 (**Changing Parameters**)
+
+  
+
+  #### 서브루틴은 Changing 매개 변수와 매우 특수한 Using 매개변수만 사용할 수 있으며 데이터 전송 제어옵션이 엄격히 제한된다.
+
+  #### 따라서 가능하면 로컬 프로그램 모듈화에서 로컬 클래스를 사용한다.
+
+  Function Module은 CALL FUNCTION  '' 구문을 통해 인터페이스를 이용하여 access하며
 
    Method는 CALL METHOD 구문을 통해  Signature을 이용하여 access한다.
 
@@ -88,6 +128,24 @@
 
 
 # Lesson2. Defining and Calling Subroutines
+
+****
+
+## 개요
+
+ABAP 프로그램에 서브루틴을 적용하는 방법에 대해 설명한다. 
+
+매개변수 전달에 서브루틴 인터페이스가 어떤 식으로 사용되는지 알아보고 다양한 전송 유형이 사용되는 방식에 대해서도 살펴본다.
+
+## 목표
+
+* 서브루틴 정의 및 호출 방법
+* 서브루틴을 사용한 모듈화
+* 디버깅 모드로 서브루틴 실행
+
+****
+
+
 
 * ## Modularization Using Subroutines within Programs
 
@@ -182,7 +240,7 @@
 
   * #### Formal Parameter
 
-    * 서브루틴의 DEFINITION에서  파라미터
+    * 서브루틴의 DEFINITION에서   사용할 파라미터
 
   
 
@@ -196,8 +254,10 @@
 
     * 복사/제본해서 빌려주는 개념
 
-    * #### USING VALUE(p_a) TYPE i.
+    * 생성 과정에서 오랜 시간이 걸릴 수 있다.
 
+    * #### USING VALUE(p_a) TYPE i.
+  
     ```ABAP
     *&---------------------------------------------------------------------*
     *& Report ZB23_00003
@@ -233,8 +293,10 @@
 
     * 원본을 주는 개념
 
+    * 시간이 오래 걸리는 대용량 내부 테이블에 대한 복사본 생성 과정을 피할 수 있다.
+  
     * #### USING p_a TYPE i.
-
+  
     ```ABAP
     *&---------------------------------------------------------------------*
     *& Report ZB23_00003
@@ -261,9 +323,9 @@
       p_a = 7.
     ENDFORM.
     ```
-
+  
   * #### Call By Value and Result
-
+  
     ```ABAP
     *&---------------------------------------------------------------------*
     *& Report ZB23_00003
@@ -298,14 +360,14 @@
     
     ENDFORM.
     ```
-
+  
     
-
+  
   
 
 
 
-인터페이스 정의 X
+### 인터페이스 정의 X
 
 ```ABAP
 PERFORM calc_parm.
@@ -347,7 +409,7 @@ FORM calc_parm .
 ENDFORM.
 ```
 
-인터페이스 정의
+### 인터페이스 정의
 
 ```ABAP
 DATA: gv_a TYPE i,
@@ -385,9 +447,9 @@ ENDFORM.
 
 
 
-인터페이스를 정의해서 사용하는 것을 권장 
+#### 인터페이스를 정의해서 사용하는 것을 권장 
 
-액츄얼 파라미터 포멀 파라미터의 개수는 같아야한다.
+#### 액츄얼 파라미터 포멀 파라미터의 개수는 같아야한다.
 
 
 
@@ -413,9 +475,9 @@ ENDFORM.
 
 
 
+* ## Local and Global Data Objects
 
-
-
+  ![dataobject](./img/dataobject.png)
 
 
 
@@ -598,21 +660,71 @@ ENDFORM.
 
 # Lesson3. Calling Function Moules
 
-Function Group 이 선행 되어야 하며 그 안에 Function Module이 들어간다.
+****
 
-서브루틴은 다른 프로그램에서 사용할 수 없어 재사용 성이 떨어지는 반면 Function Module은 다른 프로그램에서도 사용 가능하다.
+## 개요
 
+함수 모듈을 검색하고 그 인터페이스와 문서를 분석하며 해당 함수 ㅁ듈의 함수를 테스트하는 방법에 대해 설명한다.
 
+프로그램에서 기존 함수 모듈을 사용하고 오류를 캐치 및 처리하는 방법을 학습한다.
 
-![functiongroup](./img/functiongroup.png)
+마지막으로 함수 모듈을 생성하고 다른 프로그램에서 재사용 할 수 있도록 함수를 캡슐화 한다.
 
-![module](./img/module.png)
+## 목표
+
+* 함수 모듈 검색 방법
+* 함수 모듈의 사용 및 기능에 대한 정보를 확보하는 방법
+* 프로그램에서 함수 모듈을 호출 하는 방법
+* 함수 그룹 및 함수 모듈 생성 방법
+* BAPI 와 BAPI의 특수한 속성
+
+****
+
+* ## Structure of Function Groups
+
+  Function Group 이 선행 되어야 하며 그 안에 Function Module이 들어간다.
+
+  서브루틴은 다른 프로그램에서 사용할 수 없어 재사용 성이 떨어지는 반면 Function Module은 다른 프로그램에서도 사용 가능하다.
+
+  ![functiongroup](./img/functiongroup.png)
+
+  ### 함수를 구성하는 요소
+
+  * Data Objects
+    * 데이터 오브젝트는 함수 그룹에서 전역적이다. 즉, 그룸 내 모든 함수 모듈에 표시되며 그룹 내 모든 함수 모듈에 의해 변경될 수 있다.
+  * Subroutines
+    * 서브루틴은 그룹 내 모든 함수 모듈에서 호출 될 수 있다.
+  * Screens
+    * 화면은 그룹 내 모든 함수 모듈에서 호출될 수 있다.
+
+  
+
+  ![module](./img/module.png)
 
 
 
 * ### Elements of the Interface of a Function Module
 
-  * Import
+  * #### Importing Parameter
+
+    * 함수 모듈이 호출되면 호출 프로그램이 함수 모듈에 값이나 변수를 전송한다. 
+    * Optional 매개변수라면 이 매개변수에 값이나 변수를 제공하지 않아도 된다.
+
+  * #### Exporting Parameter
+
+    * 호출 프로그램은 "수신 변수"를 Exporting 매개변수에 지정하는 방식으로 함수 모듈 출력을 수락한다.
+    * Exporting 매개변수는 항상 옵션으로 제공된다.
+
+  * #### Changing Parameter
+
+    * 함수 모듈이 변경 매개변수를 사용하면 변수가 호출 프로그램에서 함수 모듈로 전송되고 호출 마지막에 리턴된다.
+
+  * #### Exceptions
+
+    * 특정 오류 상황에서 함수 모듈에 의해 예외가 발생할 수 있으며 이 경우 함수 모듈에 각 처리 오류에 대한 정보가 제공된다.
+    * 호출 프로그램에서 예외를 처리해야한다.
+
+    
 
   
 
@@ -642,9 +754,13 @@ Function Group 이 선행 되어야 하며 그 안에 Function Module이 들어�
 
 
 
+* ## Documentation and Test Environment
+
+  ![function1](./img/function1.png)
+
+  #### 함수를 테스트 해볼 수 있다. 필수 !!!!
 
 
-![function1](./img/function1.png)
 
 * ## Call of Function Modules
 
@@ -689,16 +805,12 @@ Function Group 이 선행 되어야 하며 그 안에 Function Module이 들어�
       WRITE 'Unknown Error'.
   ENDCASE.
   ```
-
-
-
-![function1](./img/function3.png)
-
-Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
-
-
-
-![function4](./img/function4.png)
+  
+  ![function1](./img/function3.png)
+  
+  #### Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
+  
+  ![function4](./img/function4.png)
 
 
 
@@ -860,6 +972,17 @@ Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
 
 # Lesson4. Creating Function Moules
 
+****
+
+## 개요
+
+함수 그룹 및 함수 모듈 생성 방법에 대해 설명한다.
+
+## 목표
+
+* 함수 그룹 생성
+* 함수 모듈 생성
+
 * ## Creation of Function Groups
 
   ![creationfunctiongroup](./img/creationfunctiongroup.png)
@@ -868,13 +991,13 @@ Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
 
 
 
-* Exception 종류
+* ## Exception 종류
 
-  * System Exception
+  * ### System Exception
 
     분모가 0인경우.
 
-  * Business Exception
+  * ### Business Exception
 
     분모가 분자보다 큰경우
 
@@ -995,7 +1118,7 @@ Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
 
   
 
-![](./img/)
+
 
  
 
@@ -1015,35 +1138,119 @@ Pattern을 통해 함수 명을 입력하여 call 할 수 있다.
 
 
 
-* ## Lesson5. Describing Business Application Programming Interfaces (BAPIs)
+# Lesson5. Describing Business Application Programming Interfaces (BAPIs)
 
+****
+
+## 개요
+
+BAPI(**B**usiness **A**pplication **P**rogramming **I**nterface)에 대해 소개한다.
+
+## 목표
+
+* BAPI를 사용한 모듈화
+
+****
+
+  
+
+* ## **B**usiness **A**pplication **P**rogramming **I**nterface (BAPI)
+
+![BAPI](./img/BAPI.png)
+
+
+
+
+
+* ## Use of BAPIs
+
+  ![BAPI1](./img/BAPI1.png)
+
+  BAPI는 **SAP 시스템과 외부 시스템 모두**에서 이용 가능한 함수이다.
+
+
+
+* ## BAPI Explorer
+
+   ![BAPI2](./img/BAPI2.png)
+
+  BAPI Explorer 는 **BAPI 트랜잭션**으로 접근할 수 있다.
+
+  Hierarchy 탭을 통해 업무별로 정리된 BAPI들을 볼 수 있으며 Alphabetical 탭을 이용해 알파벳 순으로 나열된 BAPI들을 볼 수 있다.
+
+  BAPI를 클릭하여 나오는 정보중 Function Module
+
+
+
+* ## Properties of a BAPI Function Module
+
+   ![BAPI3](./img/BAPI3.png)
    
-
-  
-
+   ### BAPI에 대한 함수 모듈의 기술 요구사항
    
+   * 명명 규칙: BAPI <비지니스 오브젝트 이름><메소드 이름>
+   * 원격 기능 지원
+   * 사용자 다이얼로그 또는 메시지 없음
+   * BAPI 구조의 이름 접두부: BAPI
+     * 이 BAPI에 생성된 ABAP 딕셔너리 구조의 컴포넌트를 사용하여 인터페이스 매개변수의 유형이 지정된다.
+   * 릴리스 4.6 까지 매개변수 변경 없음
+   * 예외 발생 없음
+     * 특수 EXPORTING 매개변수인 RETURN을 통해 사용자에게 오류가 보고된다.
 
+
+
+* ## 실습
+
+  ```ABAP
+  *&---------------------------------------------------------------------*
+  *& Report ZB23_00006
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT zb23_00006.
   
-
-   
-
+  PARAMETERS p_id TYPE bapibname-bapibname.
   
-
-   
-
+  DATA gs_return TYPE bapiret2.
   
-
-  ****
-
-  ****
-
+  CALL FUNCTION 'BAPI_USER_DISPLAY'
+    EXPORTING
+      username = p_id
+    IMPORTING
+      return   = gs_return.
   
+  IF gs_return IS NOT INITIAL.
+    WRITE:/ gs_return-message.
+  ENDIF.
+  ```
+
+
+
+
+
+
+
+* ## BAPI Call in an  ABAP Program
+
+   ![bapi4](./img/bapi4.png)
+
+
+
+ ![](./img/)
+
+
+
+****
+
+****
+
+
 
 * ## Lesson6. Calling Methods of Global Classes
 
    
 
-  
+  뒤에 내용은 다음에 이어서 한다
 
    
 
