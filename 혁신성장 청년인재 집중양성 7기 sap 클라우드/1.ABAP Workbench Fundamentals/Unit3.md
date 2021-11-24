@@ -38,6 +38,10 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
 
       : **ABAP Dictionary : Initial Screen**
 
+    * #### se16
+
+      : **Data Browser**
+
     * #### se24
 
       : **Class Builder**
@@ -53,9 +57,9 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
     * #### se38
 
       : **ABAP Editor**
-
+  
     * #### se51
-
+  
       : **Screen Painter**
   
     * #### se80
