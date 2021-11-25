@@ -1096,6 +1096,14 @@ DATA <테이블 변수> TYPE <Transparent Table>.
 
   * 기본값은 KEY 값으로 오름차순 정렬된다.
 
+* ## AS
+
+  ```ABAP
+  FROM spfli AS s INNER JOIN scarr AS c
+  ```
+
+  
+
 * ### REFRESH
 
   * 내부 테이블의 전체 내용을 삭제한다.
@@ -1124,4 +1132,4 @@ DATA <테이블 변수> TYPE <Transparent Table>.
 
 ​	![SAP](./img/SAP.png)
 
-실행 화면에서 시스템을 통해 결과창 윗부분에 작성될 텍스트를 넣을 수 있다.app
+실행 화면에서 시스템을 통해 결과창 윗부분에 작성될 텍스트를 넣을 수 있다.appsort

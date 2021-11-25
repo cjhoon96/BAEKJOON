@@ -94,7 +94,9 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
   
     
   
-    
+    * #### icon
+  
+      : **Display View "Icon maintenance": Overview** SAP의 모든 아이콘을 조회한다.
   
     * #### end
   

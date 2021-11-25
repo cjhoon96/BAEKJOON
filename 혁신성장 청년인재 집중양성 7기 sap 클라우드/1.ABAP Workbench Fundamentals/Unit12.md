@@ -1,4 +1,4 @@
-# Unit 12 Data Modeling and Data Retrieval
+# **Unit** 12 Data Modeling and Data Retrieval
 
 
 
@@ -123,14 +123,15 @@
 CASE 1)
 
 ```ABAP
- SELECT ... WHERE <키를 모두 나열하면> ===> 1건
-
-​ SELECT SINGLE * WHERE <키를 모두 나열하더라도...>
+SELECT SINGLE * INTO <스트럭쳐> FROM <테이블> WHERE <키를 모두 나열하더라도...>
 * 컴퓨터 입장에서 single이 없는 경우 한건인지 두건인지 알 수 없다. => table로 인식한다.
 
-​ SELECT * INTO <스트럭쳐> WHERE <키를 몸두 나열하고>.
+SELECT * INTO <스트럭쳐> FROM <테이블> WHERE <키를 몸두 나열하고>.
+...
+ENDSELECT.
 
-   ENDSELECT.
+SELECT * INTO TABLE <테이블> FROM <테이블> WHERE <키를 몸두 나열하고>.
+
 ```
 
 
@@ -591,6 +592,8 @@ CASE 3)
 
   
 
+  
+
 * ## Exercise 28
 
   ##  
@@ -611,13 +614,213 @@ CASE 3)
 
 
 
-![](./img/)
+
 
 # Lesson 4. Describing Other Aspects of Database Access
 
 
 
+* ## Read Data from Client-Specific Tables
 
+  ![datamodel](./img/datamodel21.png)
+
+  CLIENT SPECIFIED를 통해 다른 클라이언트의 데이터를 가져올 수 있다.
+
+  거의 쓸일 없음
+
+* # Database Indexes
+
+  ![datamodel](./img/datamodel22.png)
+
+  PRIMARY KEY
+
+  SECONDERY KEY
+
+  이빨 빠진 상태면 탐색은 되지만 느리다
+
+  중간을 건너뛰면 세컨더리 인덱스를 쓸 수 없다.
+
+  ![datamodel](./img/datamodel23.png)
+
+  ![datamodel](./img/datamodel24.png)
+
+  테이블의 ROW가 10000개면 10000번의 비교를 해야 찾을 수 있다.
+
+  하지만 SECONDARY INDEX를 설계를 해 놓으면 SECONDARY INDEX 테이블이 자동으로 만들어지며 이는 오름차순 정렬이 되어있다. = > 찾고자 하는 데이터가 뭉쳐져 있다. 처음부터 뒤질 필요가 없다 (이분탐색?')
+
+  
+
+  단점 무조건 SECONDARY INDEX 테이블이 만들어진다
+
+  
+
+  
+
+  ![datamodel](./img/datamodel25.png)
+
+  데이터 인터페이스는
+
+  OPEN SQL 을 NATIVE SQL로 번역해주며
+
+  MANDT 를 입력해주고
+
+  한번 가져온 데이터를 SAP Table Buffer 에 저장해 두고 다시 탐색할때 더 빠르게 탐색할 수 있게 해준다.
+
+  
+
+  
+
+  ### 속도를 높이는 방법
+
+  KEY를 잘 활용한다. = > SECONDARY INDEX를 잘 활용한다.
+
+  버퍼를 잘 활용하느냐 = > SQL 문을 얼마나 잘 짜느냐
+
+  
+
+  
+
+  
+
+* ## Join Condition
+
+  ![datamodel](./img/datamodel26.png)
+
+  ![datamodel](./img/datamodel27.png)
+
+  한번의 OPEN SQL 을 통해 
+
+  항공사코드(CARRID), 항공사이름(CARRNAME), 항공편(CONNID), 출발국가(CITYFROM), 도착국가(CITYTO)를 취득하고 싶다.
+
+  
+
+  | SPFLI     | CARRID CONNID CITYFROM CITYTO | MAIN TABLE       |
+  | --------- | ----------------------------- | ---------------- |
+  | **SCARR** | **CARRID CARRNAME**           | **SUB    TABLE** |
+
+  탐색하고 싶은 COLUMN 을 더 많이 가지고 있는 테이블을 MAIN TABLE로 지정한다.
+
+  ```ABAP
+  SELECT ...
+    FROM <MAIN TABLE> 
+    INNER JOIN <SUB TABLE> ON <MAIN TABLE>~<연결 column> = <SUB TABLE>~<연결 column>
+  
+  ```
+
+   
+
+  * ### 실습
+
+    항공사코드(CARRID), 항공사이름(CARRNAME), 항공편(CONNID), 출발국가(CITYFROM), 도착국가(CITYTO), 국제선/국내선 여부()
+
+    | SPFLI     | CARRID CONNID CITYFROM CITYTO | MAIN TABLE       |
+    | --------- | ----------------------------- | ---------------- |
+    | **SCARR** | **CARRID CARRNAME**           | **SUB    TABLE** |
+
+    국제선/국내선 여부는 로직으로 구현
+
+    컬럼에 국제선은 I, 국내선은 D로 채우기.
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZB23_00016
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zb23_00016.
+    
+    TYPES: BEGIN OF ts_rslt,
+             carrid   TYPE spfli-carrid,
+             carrname TYPE scarr-carrname,
+             connid   TYPE spfli-carrid,
+             countryfr TYPE spfli-countryfr,
+             countryto   TYPE spfli-countryto,
+             flight   TYPE c LENGTH 1,
+           END OF ts_rslt.
+    
+    DATA: gt_rslt TYPE TABLE OF ts_rslt,
+          gw_rslt LIKE LINE  OF gt_rslt.
+    
+    SELECT spfli~carrid scarr~carrname spfli~connid spfli~countryfr spfli~countryto
+      INTO TABLE gt_rslt
+      FROM spfli INNER JOIN scarr
+        ON spfli~carrid = scarr~carrid.
+    
+    
+    cl_demo_output=>display_data( gt_rslt ).
+    
+    
+    LOOP AT gt_rslt into gw_rslt.
+      if gw_rslt-countryfr = gw_rslt-countryto.
+        gw_rslt-flight = 'D'.
+      else.
+        gw_rslt-flight = 'I'.
+      endif.
+      modify gt_rslt from gw_rslt index sy-tabix TRANSPORTING flight.
+    endloop.
+    
+    cl_demo_output=>display_data( gt_rslt ).
+    ```
+
+    ```ABAP
+    *&---------------------------------------------------------------------*
+    *& Report ZB23_00016
+    *&---------------------------------------------------------------------*
+    *&
+    *&---------------------------------------------------------------------*
+    REPORT zb23_00016.
+    
+    TYPES: BEGIN OF ts_rslt,
+             carrid    TYPE spfli-carrid,
+             carrname  TYPE scarr-carrname,
+             connid    TYPE spfli-carrid,
+             countryfr TYPE spfli-countryfr,
+             countryto TYPE spfli-countryto,
+             flight    TYPE c LENGTH 1,
+           END OF ts_rslt.
+    
+    DATA: gt_rslt TYPE TABLE OF ts_rslt,
+          gw_rslt LIKE LINE  OF gt_rslt.
+    
+    SELECT s~carrid c~carrname s~connid s~countryfr s~countryto
+      INTO TABLE gt_rslt
+      FROM spfli AS s INNER JOIN scarr AS c
+        ON s~carrid = c~carrid.
+    
+    
+    cl_demo_output=>display_data( gt_rslt ).
+    
+    
+    LOOP AT gt_rslt INTO gw_rslt.
+      IF gw_rslt-countryfr = gw_rslt-countryto.
+        gw_rslt-flight = 'D'.
+      ELSE.
+        gw_rslt-flight = 'I'.
+      ENDIF.
+      MODIFY gt_rslt FROM gw_rslt INDEX sy-tabix TRANSPORTING flight.
+    ENDLOOP.
+    
+    cl_demo_output=>display_data( gt_rslt ).
+    ```
+
+    
+
+  
+
+![datamodel](./img/datamodel28.png)
+
+![datamodel](./img/datamodel29.png)
+
+
+
+
+
+
+
+
+
+![datamodel](./img/datamodelpng)
 
 # Lesson 5. Implementing Authorization Checks 
 
+# SKIP
