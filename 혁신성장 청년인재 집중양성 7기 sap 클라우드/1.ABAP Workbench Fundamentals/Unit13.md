@@ -705,6 +705,161 @@ Selection Screen은 항상 Screen Number 가 1000번이다.
   **SBOOK-LOCCURAM** 
 
   **SBOOK-LOCCURKEY**
+  
+  ```ABAP
+  *&---------------------------------------------------------------------*
+  *& Report ZB23_QUIZ_09
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT zb23_quiz_09.
+  
+  TYPE-POOLS: icon,
+              col.
+  
+  TYPES: BEGIN OF ts_rslt,
+           id        TYPE scustom-id,
+           name      TYPE scustom-name,
+           fldate    TYPE sbook-fldate,
+           loccuram  TYPE sbook-loccuram,
+           loccurkey TYPE sbook-loccurkey,
+           custtype  TYPE sbook-custtype,
+         END OF ts_rslt.
+  
+  TYPES: tt_rslt TYPE TABLE OF ts_rslt,
+         tr_fld  TYPE RANGE OF sbook-fldate,
+         tr_id   TYPE RANGE OF scustom-id.
+  
+  DATA: gt_rslt TYPE tt_rslt,
+        gw_rslt LIKE LINE OF gt_rslt.
+  
+  PARAMETERS : p_carid TYPE scarr-carrid OBLIGATORY.
+  
+  SELECT-OPTIONS: s_fld FOR gw_rslt-fldate,
+                  s_id  FOR gw_rslt-id.
+  
+  
+  
+  
+  
+  
+  INITIALIZATION.
+    PERFORM init_1000 using p_carid s_fld[] s_id[].
+  
+  
+  
+  
+  AT SELECTION-SCREEN.
+    PERFORM check USING p_carid.
+  
+  
+  START-OF-SELECTION.
+    PERFORM get_data USING p_carid s_fld[] s_id[]
+                     CHANGING gt_rslt.
+  
+  
+  
+  
+  *&---------------------------------------------------------------------*
+  *& Form INIT_1000
+  *&---------------------------------------------------------------------*
+  *& text
+  *&---------------------------------------------------------------------*
+  *& -->  p1        text
+  *& <--  p2        text
+  *&---------------------------------------------------------------------*
+  FORM init_1000 using p_carid type scarr-carrid
+                       p_fld   type tr_fld
+                       p_id    type tr_id.
+  
+    DATA ls_temp LIKE LINE OF p_fld.
+    ls_temp-sign = 'I'.
+    ls_temp-option = 'BT'.
+  *  ls_temp-low = sy-datum+0(4) && '0101'.
+  *  ls_temp-low+0(4) = ls_temp-low+0(4) - 1.
+  *  concatenate a b into c.
+    concatenate sy-datum+0(4) '0101' into ls_temp-low.
+    ls_temp-low+0(4) = ls_temp-low+0(4) - 1.
+    ls_temp-high = sy-datum.
+    APPEND ls_temp TO p_fld.
+  ENDFORM.
+  
+  
+  *&---------------------------------------------------------------------*
+  *& Form check
+  *&---------------------------------------------------------------------*
+  *& text
+  *&---------------------------------------------------------------------*
+  *&      --> P_CARID
+  *&      --> S_FLD
+  *&      --> S_ID
+  *&---------------------------------------------------------------------*
+  FORM check  USING    p_carid TYPE scarr-carrid.
+    TRY.
+        CALL METHOD cl_bc400_flightmodel=>check_authority
+          EXPORTING
+            iv_carrid   = p_carID
+            iv_activity = '03'.
+      CATCH cx_bc400_no_auth.
+        MESSAGE e000(zb23_flight) WITH p_carID.
+    ENDTRY.
+  ENDFORM.
+  
+  
+  *&---------------------------------------------------------------------*
+  *& Form get_data
+  *&---------------------------------------------------------------------*
+  *& text
+  *&---------------------------------------------------------------------*
+  *&      --> P_CARID
+  *&      --> S_FLD
+  *&      --> S_ID
+  *&      <-- GT_RSLT
+  *&---------------------------------------------------------------------*
+  FORM get_data  USING    p_carid TYPE scarr-carrid
+                          p_fld   TYPE tr_fld
+                          p_id    TYPE tr_id
+                 CHANGING p_rslt  TYPE tt_rslt.
+  
+    DATA: lv_cnt  TYPE i VALUE 0,
+          lw_rslt LIKE LINE OF p_rslt.
+  
+    SELECT sc~id sc~name sb~fldate sb~loccuram sb~loccurkey sb~custtype
+      INTO TABLE p_rslt
+      FROM sbook AS sb INNER JOIN scustom AS sc
+        ON sb~customid = sc~id
+     WHERE sb~carrid = p_carid
+       AND sb~cancelled <> 'X'
+       AND sb~fldate IN p_fld
+       AND sc~id     IN p_id.
+  
+    SORT p_rslt BY id fldate DESCENDING.
+  
+    LOOP AT p_rslt INTO lw_rslt.
+  
+      WRITE:/ lw_rslt-id   COLOR COL_KEY,
+              lw_rslt-name COLOR COL_KEY,
+              lw_rslt-fldate,
+              lw_rslt-loccuram,
+              lw_rslt-loccurkey.
+      IF lw_rslt-custtype = 'B'.
+        WRITE icon_green_light AS ICON.
+      ELSE.
+        WRITE icon_yellow_light AS ICON.
+      ENDIF.
+      lv_cnt = lv_cnt + 1.
+    ENDLOOP.
+    WRITE:/ lv_cnt.
+  
+  ENDFORM.
+  ```
+  
+  ```ABAP
+    concatenate sy-datum+0(4) '0101' into ls_temp-low.
+    ls_temp-low+0(4) = ls_temp-low+0(4) - 1.
+  ```
+  
+  
 
 
 
