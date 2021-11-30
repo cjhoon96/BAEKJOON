@@ -52,10 +52,36 @@
 
 
 
+# 학습평가
+
+* ### 다음 중 ABAP 딕셔너리에서 제공되는 유형 범주는 무엇인가?
+
+  * #### <u>Data Element</u>
+
+  * #### <u>Structure</u>
+
+  * **Index**
+
+  * #### <u>Table Type</u>
 
 
 
 
 
+* ### ABAP 딕셔너리 에 존재하는 범주인 것은?
 
- 
+  * #### <u>Data Elements</u>
+
+  * #### <u>Sturctures</u>
+
+  * **Indexes**
+
+  * #### <u>Table Types</u>
+
+
+
+
+
+* ### 
+
+  

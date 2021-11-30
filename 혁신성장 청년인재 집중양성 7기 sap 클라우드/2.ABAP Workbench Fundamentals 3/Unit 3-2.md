@@ -442,3 +442,53 @@ table 유형(Standard, Sorted, Hashed)
   ***Primary Key*** 탭에서 ***Key Definition***을 *Key Components* 로 놓고 ***Key Category***를 *Non-Unique*로 놓은 후 
 
   ***Key Component***에 정렬 기준이 될 Key들을 추가한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 학습평가
+
+* ### 데이터 요소에 대한 설명을 작성하여 화면 필드에 필드 도움말을 지정할 수 있다.
+
+  * #### <u>True</u>
+
+  * **False**
+
+
+
+* ### 다음중 도메인에서 찾을 수 있는 technical information는 무엇인가?
+
+  * #### <u>Data Type</u>
+
+  * #### <u>Field Length</u>
+
+  * #### <u>Output Characteristics</u>
+
+  * **Field Labels**
+
+  
+
+
+
+* ### Data Elements are based on domains or built-in types.
+
+  * #### <u>True</u>
+
+  * **False**
+
+
+
+* ### Field labels contain keywords of different lengths (short, medium, and long) with can be assigned to screen fields referencing definitions in the ABAP Dictionary. Which of the following dictionary definitions can be used to maintain these field labels?
+
+  * 
