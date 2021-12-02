@@ -38,6 +38,10 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
 
       : **ABAP Dictionary : Initial Screen**
 
+    * #### se14
+
+      :**ABAP Dictionary: Database Utility** Conversion을 수행
+
     * #### se16
 
       : **Data Browser**
@@ -53,9 +57,9 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
     * #### se41
 
       : **Menu Painter**
-
+  
     * #### se38
-
+  
       : **ABAP Editor**
   
     * #### se51
@@ -88,6 +92,14 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
   
       : **Configuration of RFC Connections** RFC의 connection을 확인 할 수 있다.
   
+      
+  
+    * #### st22
+  
+      :**ABAP Runtime Errors - All Clients** 오류 내역들을 볼 수 있다.
+      
+      
+      
     * #### bapi
   
       : **BAPI Explorer** 여러 BAPI들을 탐색할 수 있다.

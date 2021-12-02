@@ -28,10 +28,12 @@ function fnReset() {
 //            해당 element의 tagName(태그명)이 TD인 경우 해당 엘리먼트의 innerHTML 즉 태그사이 내부 내용을 
 function fnPushExpr(oEvent) {
   var target = oEvent.target                // Click 이벤트가 발생한 지점을 element로 가져온다.
-  console.log(target.tagName)   
-  if (target.tagName === 'TD'){             // element의 태그명이 TD 인 경우
-    oDispExpr.value += target.innerHTML;    // innerHTML을 이용해 입력창에 element에 해당하는 태그 사이의 내용을 불러와  oDispExpr.value += 을 통해 기존 입력창 내용 뒤에 추가한다.
-  }
+  // console.log(target.tagName)
+  oDispExpr.value += target.innerText;   
+//   if (target.tagName === 'TD'){             // element의 태그명이 TD 인 경우
+//     oDispExpr.value += target.innerText;    // innerHTML을 이용해 입력창에 element에 해당하는 태그 사이의 내용을 불러와  oDispExpr.value += 을 통해 기존 입력창 내용 뒤에 추가한다.
+//     //innerHTML도 가능
+//   }
 }
 
 // fnCalc 계산 결과 창에 입력하는 함수 = 버튼을 클릭하실 호출된다.     (추가한 기능 입력 필드에서 엔터를 누를시 호출되는 함수 내부에서도 호출된다.)
@@ -96,4 +98,3 @@ function fnCalcByEnter(oEvent) {
 // function fnCalc() {
 //   oCalcRslt.value = eval(oDispExpr.value);
 // }
-
