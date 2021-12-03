@@ -48,25 +48,35 @@
 
 * ## View 생성하기
 
-  <img src="./img/view.png" alt="view" style="zoom:75%;" />
+  <img src="./img/view.png" alt="view" style="zoom:67%;" />
 
   ![view](./img/view1.png)
 
-  <img src="./img/view2.png" alt="view" style="zoom:75%;" />
+  <img src="./img/view2.png" alt="view " style="zoom:67%;" />
 
-  <img src="./img/view3.png" alt="view " style="zoom:75%;" />
+  <img src="./img/view3.png" alt="view " style="zoom:67%;" />
 
-  ![view](./img/view4.png)
+  #### Relationships를 누르면 Foreign 키로 연관되어 있는 테이블 들을 보여준다.
 
-  ![view](./img/view5.png)
+  <img src="./img/view4.png" alt="view" style="zoom:67%;" />
 
-  ![view](./img/view6.png)
+  #### 체크를 통해 해당 테이블을 INNER JOIN할 수 있다.
+
+  <img src="./img/view5.png" alt="view" style="zoom:67%;" />
+
+  #### Join Condition이 없을 경우 Cross-Product 가 나오게 된다.
+
+  <img src="./img/view6.png" alt="view" style="zoom:67%;" />
+
+  ![view](./img/view17.png)
+
+  컬럼 데신 *을 입력하면 모든 컬럼을 가져온다.
 
   ![view](./img/view7.png)
 
   ![view](./img/view8.png)
 
-  ![view](./img/view9.png)
+  <img src="./img/view9.png" alt="view" style="zoom:67%;" />
 
   ![view](./img/view10.png)
 
@@ -147,7 +157,84 @@
 
 
 
-![view](./img/view)
+
+
+* ## Cross-Product as Starting Situation
+
+  Join Condition을 지우면 Cross-Product 가 나오게 된다 => 의미 없는 데이터 (의미가 있는 경우도 있지만 주로 쓰지 않음)
+
+
+
+
+
+
+
+
+
+* ## Projection View
+
+  하나의 테이블에서 사용할 컬럼만 가져다 쓰는 View
+
+  하나의 컬럼 내에서의 조건을 넣을 수는 없다.
+
+  ![view](./img/view)
+
+<img src="./img/view11.png" alt="view" style="zoom:67%;" />
+
+![view](./img/view12.png)
+
+<img src="./img/view13.png" alt="view" style="zoom:67%;" />
+
+<img src="./img/view15.png" alt="view" style="zoom:67%;" />
+
+
+
+
+
+* ## Selection Condition
+
+  <img src="./img/view14.png" alt="view" style="zoom:67%;" />
+
+  <img src="./img/view16.png" alt="view" style="zoom:67%;" />
+
+  #### Projection Join에서는 불가능????
+
+
+
+
+
+```ABAP
+SELECT * FROM <직원> INNER JOIN <부서>
+		   ON <직원>-부서코드 = <부서>-부서코드
+```
+
+#### Left Outer Join 필요
+
+#### MANDT는 항상 필수
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![view](./img/view.)
+
+
+
+
+
+
 
 
 

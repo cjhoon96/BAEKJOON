@@ -66,13 +66,17 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
   
       : **Screen Painter**
   
+    * #### se54
+  
+      :**Generate Table Maintenance Dialog**
+  
     * #### se80
   
       : **object navigator**
   
     * #### se84
   
-      : **Object Navigator**
+      : **Repository Info System** RIP
       
     * #### se93
   
