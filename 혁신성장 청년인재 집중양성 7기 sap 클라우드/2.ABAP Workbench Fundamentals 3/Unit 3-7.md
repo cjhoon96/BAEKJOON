@@ -92,13 +92,77 @@
 
 
 
+* ## Enhance Table
+
+  SAP에서 제공해준 Table에 컬럼 등의 요소를 추가하는 것
+
+  Change를 통해 수정을 하는 경우 오류가 많아진다.
+
+  Append Structures 기능 이용
+
+  컬럼을 추가하는 경우 ZZ이나 YY를 이름 앞에 붙여서 추가한다.
+
+  * 기존에 있는 컬럼과 겹치는 경우 오류 확인 후 수정하면 되지만
+
+    업그레이드될 때 동일명의 컬럼을 SAP에서 추가하는 경우 충돌이 발생할 수 있다.
+
+  
+
+
+
+* ## Append Structures
+
+  #### ZB23_00001이 SAP에서 제공한 테이블이라고 가정gbdat
+
+  ![enhance](./img/enhance.png)
+
+  ![enhance](./img/enhance1.png)
+
+  ![enhance](./img/enhance2.png)
+
+  ![enhance](./img/enhance3.png)
+
+  ![enhance](./img/enhance9.png)
+
+  #### LCHAR / LRAW의 Data Type은 사용할 수 없다.
 
 
 
 
 
+* ## Enhancement of Table
 
+  ![enhance](./img/enhance4.png)
 
+  ![enhance](./img/enhance5.png)
+
+  ![enhance](./img/enhance6.png)
+
+  #### 테이블을 수정하고 Active하면 Warning이 뜬다.
+
+  #### 해당 Sturcture의 모든 Component 가 CHAR타입이면 WRITE를 통해 Structure를 출력할 수 있다.
+
+  
+
+  
+
+  ![enhance](./img/enhance7.png)
+
+  ![enhance](./img/enhance8.png)
+
+  ![enhance](./img/enhance9.png)
+
+  
+
+  
+
+  
+
+  
+
+  
+
+![enhance](./img/enhance)
 
 
 
