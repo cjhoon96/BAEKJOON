@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<5조 group = "5조" type="SAP">
+    <member>
+        <l_name>소연</l_name>
+        <f_name>권</f_name>
+    </member>
+    <member>
+        <l_name>문영</l_name>
+        <f_name>김</f_name>
+    </member>    
+    <member>
+        <l_name>수연</l_name>
+        <f_name>김</f_name>
+    </member>    
+    <member>
+        <l_name>지훈</l_name>
+        <f_name>채</f_name>
+    </member>
+</5조>

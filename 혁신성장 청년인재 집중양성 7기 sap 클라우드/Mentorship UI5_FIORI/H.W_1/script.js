@@ -41,10 +41,6 @@ function fnCalc() {
   oCalcRslt.value = eval(oDispExpr.value);  // eval 함수는 입력받은 수식 텍스트를 계산하여 return해준다. 해당 리턴값을 oCalcRslt.value에 배정 즉 결과창에 입력 해준다.
 }
 
-<tr>
-  <td></td>
-  <td></td>
-</tr>
 
 // 기존에 없던 내용 (추가기능)   수식이 입력된 상태에서 입력필드에서 enter 키를 누를시 = 버튼을 클릭할 때와 같은 동작을 하도록 설정해 준다.
 oDispExpr.addEventListener("keydown", fnCalcByEnter);
