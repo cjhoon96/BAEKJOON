@@ -506,6 +506,22 @@
 
 
 
+
+
+
+
+* ## POS_LOW/HIGH
+
+  
+
+  
+
+  
+
+  
+
+  
+
 * ## 실습
 
   시나리오: 커피주문 화면 만들기
@@ -534,11 +550,15 @@
   * 초기값 설정하기
     * 기본 음료는 아메리카노
 
-![screen](img/screen.png)
-
 
 
 * ## Header SELECTION-OPTION
+
+
+
+
+
+
 
 
 
@@ -552,10 +572,191 @@
 
 
 
+* ## Tabstrips on Selection Screens
 
+  Subscreen으로 만들어준다.
 
+  * Subscreen area on the selection screen for the tabstrip
+  * Individual tab titles
+  * Selection screens as subscreens for each tab
 
+  ```ABAP
+  SELECTION-SCREEN BEGIN OF SCREEN <NNN> AS SUBSCREEN
+  	...
+  SELECTION-SCREEN END OF SCREEN <NNN>
+  ```
+
+  으로 서브스크린에 들어갈 내용을 입력해 준다.
+
+  ```ABAP
+  SELECTION-SCREEN BEGIN OF TABBED BLOCK <NAME> FOR <N> LINES
+  	SELECTION-SCREEN TAB (10) tab1 USER-COMMAND comm1 DEFAULT SCREEN <NNN>.
+  	SELECTION-SCREEN TAB (10) tab2 USER-COMMAND comm2 DEFAULT SCREEN <NNN>.
+  	SELECTION-SCREEN TAB (10) tab3 USER-COMMAND comm3 DEFAULT SCREEN <NNN>.
+  SELECTION-SCREEN END OF BLOCK tab-block.
+  
+  INITIALIZATION.
+  * Setting texts for pushbuttons
+    tab1 = 'Connection' (001).
+    tab2 = 'Flight' (002).
+    tab3 = 'Bokking' (003).
+  * Opotional : setting initial active tab
+    tab_block-activetab = 'COMM2'.
+    tab_block-dynnr = 102.
+  ```
+
+  을 통해  이전에 만들어둔 Subscreen을 넣어준다.
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  ```ABAP
+  *&---------------------------------------------------------------------*
+  *& Report ZTAWB23_04
+  *&---------------------------------------------------------------------*
+  *&
+  *&---------------------------------------------------------------------*
+  REPORT ztawb23_04.
+  
+  DATA: gs_spfli TYPE spfli,
+        gt_spfli LIKE TABLE OF gs_spfli.
+  
+  SELECTION-SCREEN BEGIN OF SCREEN 101 AS SUBSCREEN.
+    SELECT-OPTIONS: so_carr FOR gs_spfli-carrid.
+  SELECTION-SCREEN END OF SCREEN 101.
+  
+  SELECTION-SCREEN BEGIN OF SCREEN 102 AS SUBSCREEN.
+    SELECT-OPTIONS: so_conn FOR gs_spfli-connid.
+  SELECTION-SCREEN END OF SCREEN 102.
+  
+  SELECTION-SCREEN BEGIN OF SCREEN 103 AS SUBSCREEN.
+    PARAMETERS: pa_one AS CHECKBOX,
+                pa_two AS CHECKBOX,
+                pa_thr AS CHECKBOX.
+  SELECTION-SCREEN END OF SCREEN 103.
+  
+  SELECTION-SCREEN BEGIN OF TABBED BLOCK tab_block FOR 5 LINES.
+    SELECTION-SCREEN TAB (20) tab1 USER-COMMAND comm1 DEFAULT SCREEN 101.
+    SELECTION-SCREEN TAB (20) tab2 USER-COMMAND comm2 DEFAULT SCREEN 102.
+    SELECTION-SCREEN TAB (20) tab3 USER-COMMAND comm3 DEFAULT SCREEN 103.
+  SELECTION-SCREEN END OF BLOCK tab_block.
+  
+  
+  INITIALIZATION.
+    tab1 = 'Connection'.
+    tab2 = 'connection'.
+    tab3 = 'Check list'.
+  
+    tab_block-activetab = 'COMM2'.
+    tab_block-dynnr     = '102'.
+  ```
+
+  ![screen](img/screen18.png)
 
 
 
 # Lesson 3. Implementing Input Checks and Creation Variants
+
+* ## Input Check
+
+  ```ABAP
+  AT SELECTION-SCREEN ON so_conn.
+    IF so_conn-low BETWEEN '900' AND '999'.
+      MESSAGE '다시 선택하시오' TYPE 'E'.
+    ENDIF.
+  ```
+
+  ![screen](img/screen19.png)
+
+  
+
+  
+
+  ```ABAP
+  AT SELECTION-SCREEN ON HELP-REQUEST FOR pa_one.
+    MESSAGE 'f1 help' TYPE 'I'.
+  ```
+
+  ![screen](img/screen20.png)
+
+  ### F4IF_INT_TABLE_VALUE_REQUEST 확인해 보기!!!
+
+  ```ABAP
+  AT SELECTION-SCREEN ON so_conn.
+    IF so_conn-low BETWEEN '900' AND '999'.
+      MESSAGE '다시 선택하시오' TYPE 'E'.
+    ENDIF.
+  
+  AT SELECTION-SCREEN ON HELP-REQUEST FOR pa_one.
+    MESSAGE 'f1 help' TYPE 'I'.
+  
+  START-OF-SELECTION.
+    CASE tab_block-activetab.
+      WHEN 'COMM1'.
+        WRITE:/ '1번 탭이 눌렸다.'.
+  
+        SELECT *
+          FROM spfli
+          INTO CORRESPONDING FIELDS OF TABLE gt_spfli
+         WHERE carrid IN so_carr.
+  
+        LOOP AT gt_spfli INTO gs_spfli.
+          WRITE:/ gs_spfli-carrid,
+                  gs_spfli-connid,
+                  gs_spfli-cityfrom,
+                  gs_spfli-cityto.
+          CLEAR: gs_spfli.
+        ENDLOOP.
+  
+      WHEN 'COMM2'.
+        WRITE:/ '2번 탭이 눌렸다.'.
+  
+        SELECT *
+          FROM sflight
+          INTO CORRESPONDING FIELDS OF TABLE gt_sflight
+         WHERE connid IN so_conn.
+  
+        LOOP AT gt_spfli INTO gs_spfli.
+          WRITE:/ gs_sflight-carrid,
+                  gs_sflight-connid,
+                  gs_sflight-seatsmax,
+                  gs_sflight-seatsocc.
+          CLEAR: gs_sflight.
+        ENDLOOP.
+      WHEN 'COMM3'.
+        WRITE:/ '3번 탭이 눌렸다.'.
+    ENDCASE.
+  ```
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![screen](img/screen.png)
