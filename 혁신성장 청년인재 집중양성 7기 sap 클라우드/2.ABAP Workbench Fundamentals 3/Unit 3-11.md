@@ -173,7 +173,31 @@ PopScreen 101 102 103
 
 
 
-## 
+
+
+
+
+* ## Transaction 만들기
+
+  <img src="img/program15.png" alt="program" style="zoom:75%;" />
+
+  <img src="img/program16.png" alt="program" style="zoom:75%;" />
+
+  #### 트랜잭션의 이름은 z나 y로 시작해야한다.
+
+  <img src="img/program17.png" alt="program" style="zoom:75%;" />
+
+  #### Screen number에 만들어둔 screen number를 넣는다.
+
+  <img src="img/program18.png" alt="program" style="zoom:75%;" />
+
+  #### 트랜잭션을 입력하면 이전에 만들어둔 화면으로 연결되는 것을 볼 수 있다.
+
+  #### 트랜잭션을 만들어 줘야 실행 가능하다.
+
+  
+
+
 
 
 
@@ -187,7 +211,7 @@ PopScreen 101 102 103
 
 
 
-* 
+
 
 * ## Creating Screens
 
@@ -279,29 +303,11 @@ PopScreen 101 102 103
 
 
 
-* SET GET PARAMETERS
+* ## SET GET PARAMETERS
 
 
 
-* ## Transaction 만들기
-
-  <img src="img/program15.png" alt="program" style="zoom:75%;" />
-
-  <img src="img/program16.png" alt="program" style="zoom:75%;" />
-
-  #### 트랜잭션의 이름은 z나 y로 시작해야한다.
-
-  <img src="img/program17.png" alt="program" style="zoom:75%;" />
-
-  #### Screen number에 만들어둔 screen number를 넣는다.
-
-  <img src="img/program18.png" alt="program" style="zoom:75%;" />
-
-  #### 트랜잭션을 입력하면 이전에 만들어둔 화면으로 연결되는 것을 볼 수 있다.
-
-
-
-
+## 
 
 
 
