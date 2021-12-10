@@ -1,19 +1,182 @@
-<?xml version="1.0" encoding="utf-8"?>
-<5조 group = "5조" type="SAP">
-    <member>
-        <l_name>소연</l_name>
-        <f_name>권</f_name>
-    </member>
-    <member>
-        <l_name>문영</l_name>
-        <f_name>김</f_name>
-    </member>    
-    <member>
-        <l_name>수연</l_name>
-        <f_name>김</f_name>
-    </member>    
-    <member>
-        <l_name>지훈</l_name>
-        <f_name>채</f_name>
-    </member>
-</5조>
+<?xml version="1.0" encoding="UTF-8"?>
+<SAP type="국비지원">
+
+    <Class class="1반">
+        <Teacher>정은미</Teacher>
+        <mentorship>
+            <Group group = "1조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+
+            <Group group = "2조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+
+            <Group group = "3조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+
+            <Group group = "4조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+
+            <Group group = "5조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+
+            <Group group = "6조">
+                <Mentor>
+                    <name></name>
+                    <name></name>
+                </Mentor>
+
+                <Student>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                    <name></name>
+                </Student>
+            </Group>
+        </mentorship>
+    </Class>
+
+    <Class class="2반">
+        <Teacher>박이배</Teacher>
+        <Mentorship>
+            <Group group = "1조">
+                <Mentor>
+                    <name>이원오</name>
+                    <name>문선민</name>
+                </Mentor>
+
+                <Student>
+                    <name>김경민</name>
+                    <name>김현식</name>
+                    <name>김현수</name>
+                    <name>김소연</name>
+                </Student>
+            </Group>
+
+            <Group group = "2조">
+                <Mentor>
+                    <name>문선민</name>
+                    <name>이원오</name>
+                </Mentor>
+
+                <Student>
+                    <name>이의준</name>
+                    <name>안건우</name>
+                    <name>강지예</name>
+                    <name>박지원</name>
+                </Student>
+            </Group>
+
+            <Group group = "3조">
+                <Mentor>
+                    <name>신명환</name>
+                    <name>김정호</name>
+                </Mentor>
+
+                <Student>
+                    <name>김혜연</name>
+                    <name>나해가찬</name>
+                    <name>최상아</name>
+                    <name>고장건</name>
+                </Student>
+            </Group>
+
+            <Group group = "4조">
+                <Mentor>
+                    <name>김정호</name>
+                    <name>신명환</name>
+                </Mentor>
+
+                <Student>
+                    <name>이수민</name>
+                    <name>조현영</name>
+                    <name>심소현</name>
+                    <name>왕희수</name>
+                </Student>
+            </Group>
+
+            <Group group = "5조">
+                <Mentor>
+                    <name>한우택</name>
+                    <name>신행준</name>
+                </Mentor>
+
+                <Student>
+                    <name>권소연</name>
+                    <name>김문영</name>
+                    <name>김수연</name>
+                    <name>채지훈</name>
+                </Student>
+            </Group>
+
+            <Group group = "6조">
+                <Mentor>
+                    <name>신행준</name>
+                    <name>한우택</name>
+                </Mentor>
+
+                <Student>
+                    <name>모은수</name>
+                    <name>신형섭</name>
+                    <name>이은주</name>
+                    <name>이현우</name>
+                </Student>
+            </Group>
+        </Mentorship>
+    </Class>
+
+</SAP>
