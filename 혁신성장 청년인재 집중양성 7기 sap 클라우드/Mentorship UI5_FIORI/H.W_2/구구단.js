@@ -1,8 +1,11 @@
+var dan
 var numLst = prompt('숫자를 입력하세요');
 
-numLst.split(' ');
-for (i in numLst){
-    gugu(parseInt(i));
+numLst = numLst.split(' ');
+console.log(numLst);
+for (var i = 0 ; i < numLst.length ; i++){
+    dan = parseInt(numLst[i]);
+    gugu(dan);
 }
 
 function gugu(n){
