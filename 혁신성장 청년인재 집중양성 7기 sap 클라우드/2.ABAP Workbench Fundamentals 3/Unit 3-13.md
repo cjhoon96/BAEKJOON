@@ -14,7 +14,7 @@
 
   screen Painter에서 아이콘을 추가한후 변수명을 정해준다.
 
-  이후 해당 변수명을 TOP에서 TYPE ICONS_TEXT로 선언해 주고
+  이후 해당 변수명을 TOP에서 TYPE ICONS-TEXT로 선언해 주고
 
   PBO에 SET_ICON 모듈을 표현해 준다.
 
