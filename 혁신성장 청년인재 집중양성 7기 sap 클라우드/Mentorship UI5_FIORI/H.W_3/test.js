@@ -18,4 +18,3 @@ test.print = function(){
 };
 
 test.print();
-
