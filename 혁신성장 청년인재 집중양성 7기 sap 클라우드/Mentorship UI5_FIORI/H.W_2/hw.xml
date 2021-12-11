@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SAP type="국비지원">
-
+<IITP>
     <Class class="1반">
         <Teacher>정은미</Teacher>
         <mentorship>
@@ -178,5 +177,4 @@
             </Group>
         </Mentorship>
     </Class>
-
-</SAP>
+</IITP>
