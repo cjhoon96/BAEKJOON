@@ -447,6 +447,12 @@
 
 
 
+
+
+
+
+
+
 * ## Exercise 3
 
   #### ZBC405_B23_SOL - MAIN
@@ -587,7 +593,16 @@
   ENDFORM.
   ```
 
-  
+
+
+
+
+
+
+
+
+
+
 
 # Lesson 2. Implementing Multiple Selection Screens
 
@@ -601,7 +616,9 @@
   SELECTION-SCREEN END OF SCREEN ###
   ```
 
-  와 같이 구현한다.
+  와 같이 구현한다. 안에는 PARAMETERS / SELECT-OPTIONS와 같은 구문이 들어가며
+
+  블럭, LINE 등이 들어갈 수 있으며 이들이 SUBSCREEN을 구성하는 내용이 된다.
 
   
 
@@ -619,6 +636,17 @@
   tab_block-activetab = 'comm2'.
   ```
 
+  미리 정의해 둔 SUBSCREEN을 탭 하나로 사용하는 방식
+  
+  | 구문                                                    | 의미                                                         |
+  | ------------------------------------------------------- | ------------------------------------------------------------ |
+  | SELECTION-SCREEN                                        |                                                              |
+  | TAB                                                     |                                                              |
+  | ( <Maximum Length of tab page> )                        | 탭 페이지의 제목을 위한 텍스트의 최대 글자수를 입력한다. 소괄호 안에 정수를 넣는 구조이다. |
+  | <Name of tab page>                                      | 탭페이지의 이름을 정한다.  <br/>텝페이지의 이름에 들어갈 text를 정할때 사용한다.<br/>1000번 Screen Elements List의 Element Name에 들어갈 내용 |
+  | USER-COMMAND<br/><User command for switching tab pages> | 해당 탭페이지의 fctcode를 정해준다. 눌렸을때 user commend에 넘겨줄 값 |
+  | DEFAULT SCREEN ###.                                     | 해당 탭 페이지에 넣어줄 subscreen을 정해준다.                |
+  
   
 
 
@@ -838,7 +866,16 @@
   AT SELECTION-SCREEN ON VALUE-REQUEST FOR [<param>|<sel_opt-low>|<sel_opt-high>].
   ```
 
-  
+
+
+
+
+
+TVARVC 테이블
+
+
+
+
 
 * ## 실습
 
@@ -921,6 +958,73 @@
 
   버튼이 눌려졌을 때 PAI에 해당하는 AT SELECTION-SCREEN이벤트의 로직이 실행된다.
 
+ 
+
+* ## Selection Screen ABAP 이벤트 
+
+  버튼 작동 등의 동작이 수행되면 PAI 에 해당하는 AT SELECTION-SCREEN 이벤트가 수행 된다.
+
+  * 여기서 INPUT CHECK 등을 통해 오류/ 경고 메시지가 있는 경우 SELECTION-SCREEN으로 돌아가게 되며 
+  * 이외의 경우 PBO에 해당하는 AT SELECTION-SCREEN OUTPUT 이벤트가 수행되어 화면 갱신을 한다.
+
+  
+
+* ## BUTTON In SELECTION-SCREEN
+
+  버튼이 눌리면 AT SELECTION-SCREEN 이벤트가 수행된다.
+
+  사용자가 선택한 버튼의 USER-COMMAND (FCTCODE)가 ***USSCRFIELDS-UCOMM***에 저장된다(TOP에 선언해 줘야 한다.)
+
+  ```ABAP
+  TABLES: usscrfields.
+  ```
+
+  usscrfields-ucomm에 대한 case문을 통해 when '<버튼 fctcode>' 의 안에 버튼이 눌렸을시의 로직을 구현하는 것이 합리적이다.
+
+  AT SELECTION-SCREEN 이벤트의 로직을 수행한 후 수정된 값을 바탕으로
+
+  AT SELECTION-SCREEN OUTPUT이벤트가 수행된다.
+
+  여기서는 일반적으로 
+
+  ```ABAP
+  LOOP AT SCREEN.
+  ...
+  ENDLOOP.
+  ```
+
+  구문을 통해 SCREEN을 돌며 각 SCREEN ENTRY들의 INPUT, ACTIVE 등의 값들을 바꿔줄 수 있다.
+
+  * 1 : 동작 0 : 동작 안함
+
+  이러한 로직의 타겟을 명확히 하기 위해
+
+  ```ABAP
+  IF SY-DYNNR = '타겟 스크린 넘버'.
+  ...
+  ENDIF.
+  ```
+
+   안에 로직을 넣어 수행할 수 있다.
+
+  
+
+  또한 TOP에서 MODIF ID 를 이용해 ID를 할당하게 되면 SCREEN ENTRY의 GROUP1에 해당 내용이 할당되는데
+
+  * Selection-Screen 에서는 group 1만 사용이 가능하다.
+
+  이를 이용해 
+
+  ```ABAP
+  IF SCREEN-GROUP1 = '할당한 그룹명'.
+  ...
+  ENDIF.
+  ```
+
+  안에 로직을 넣어 타겟을 더 명확히 할 수 있다.
+
+
+
 
 
 
@@ -929,9 +1033,9 @@ SCREEN이라는 Structure와 SCREEN이라는 System Table
 
 
 
-Selection-Screen 에서는 group 1만 사용이 가능하다.
 
-따라서 MODIFID 를 이용해 ID를 할당하게 되면 SCREEN의 GROUP 1에 할다이 된다.
+
+
 
 
 

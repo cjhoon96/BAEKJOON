@@ -967,7 +967,7 @@ DATA <테이블 변수> LIKE STANDARD TABLE OF <Structure>.
 * Internal Table 변수를 이용해 Internal Table 변수를 정의
 DATA <테이블 변수> LIKE <테이블 변수>.
 * Transparent Table 을 이용해 Internal Table 변수를 정의
-DATA <테이블 변수> TYPE STANDARD TABLE OF <Transparent Table>.
+DATA <테이블 변수> TYPE TABLE OF <Transparent Table>.
 * Table Type 을 이용해 Internal Table 변수를 정의 
 DATA <테이블 변수> TYPE <Table Type>.
 	"ex) ZB23_QUIZ_05
@@ -982,7 +982,7 @@ DATA <Structure뱐수> TYPE <Structure타입>.
 * Internal Table 변수를 이용해 Structure 변수를 정의
 DATA <Structure변수> LIKE LINE OF <테이블 변수>.
 * Transparent Table 을 이용해 Structure 변수를 정의
-DATA <테이블 변수> TYPE <Transparent Table>.
+DATA <Structure변수> TYPE <Transparent Table>.
 
 
 ```
@@ -1133,3 +1133,4 @@ DATA <테이블 변수> TYPE <Transparent Table>.
 ​	![SAP](./img/SAP.png)
 
 실행 화면에서 시스템을 통해 결과창 윗부분에 작성될 텍스트를 넣을 수 있다.appsort
+
