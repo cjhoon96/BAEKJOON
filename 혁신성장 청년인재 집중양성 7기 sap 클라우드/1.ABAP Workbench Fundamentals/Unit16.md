@@ -155,8 +155,12 @@ order by
 
   거의 쓸일 없다.
 
-  ![sql](./img/sql6.png)
+  INTO 를 사용할 경우 기존에 INTERNAL TABLE에 있던 데이터를 모두 삭제하고 다시 넣는 것
 
+  APPENDING은 기존에 있던 데이터 뒤에 새로운 데이터를 넣어 준다.
+  
+  ![sql](./img/sql6.png)
+  
   거의 쓸일 없다.
 
 
