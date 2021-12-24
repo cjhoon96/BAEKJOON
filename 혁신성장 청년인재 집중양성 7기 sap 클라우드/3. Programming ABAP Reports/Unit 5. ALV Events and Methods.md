@@ -498,4 +498,32 @@ CL_ALV_EVENT_TOOLBAR_SET 이라는 타입의 reference 변수가 있다.
 
 
 
+# 부록
+
+#### 중요 !!!
+
+class 의 이벤트 수행 후 다시 PBO가 실행 되도록 하는 방법
+
+CREAT OBJECT 의 GO_ALV에서 EXPORTING 의 I_APPL_EVENTS에 'X'를 할당해 준다.!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img src="img/event.png" alt="event" style="zoom:75%;" />
