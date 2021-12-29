@@ -781,6 +781,10 @@ LINE TYPE - STRUCTURE TYPE 이 들어감
 
 # <u>*다음 중 search help에서 inner join을 사용하는 View 유형(type)은?*</u> 
 
+DATABASE VIEW
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=smkim1541&logNo=220902981184
+
 
 
 
@@ -884,7 +888,7 @@ IMPORTING 파라미터와 EXCEPTIONS만을 사용 가능하다.
 
 
 
-## 다음 중 lock object를 사용하는 순서로 옳은 것은? 
+# *<u>다음 중 lock object를 사용하는 순서로 옳은 것은?</u>* 
 
 PROGRAMMING DATABASE UPDATES     UNIT 3
 
@@ -967,6 +971,22 @@ DATA: GT_DATA TYPE GTY_1,
 
 
 
+# *<u>ABAP Standard type C, D, N, STRING 및 T와 호환이 되는 generic data type은?</u>* 
+
+clike?
+
+https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenbuilt_in_types_generic.htm
+
+
+
+
+
+
+
+# *<u>다음 중 사용자가 잘못 입력한 값을 수정할 수 있도록 selection screen에서 Input Check 내용에 해당하는 것은?</u>*
+
+보기 필요
+
 
 
 
@@ -975,7 +995,7 @@ DATA: GT_DATA TYPE GTY_1,
 
 ## Super 클래스의 메서드를 Sub 클래스에서 사용할 수 없도록 하기 위해 메서드를 정의하는 곳은? 
 
-
+private section
 
 
 
@@ -985,37 +1005,185 @@ DATA: GT_DATA TYPE GTY_1,
 
 ## 클래스의 static method 구현에서 액세스할 수 있는 클래스 component는? 
 
+Static Component 들만 access 가능하다. 
 
 
-## 다음 중 필드에 잘못된 값을 입력하면 오류 메시지가 표시되고 커서가 해당 필드에 표시하기 위해 사용하는 이 벤트는? 
+
+
+
+
+
+
+
+## 다음 중 필드에 잘못된 값을 입력하면 오류 메시지가 표시되고 커서가 해당 필드에 표시하기 위해 사용하는 이벤트는? 
+
+at selection screen - pai
+
+
 
 
 
 ## Executable program에서 
 
 ```ABAP
-AT SELECTION SCREEN, AT SELECTION-SCREEN OUTPUT, INITIALIZATION, STARTOFSELECTION 
+AT SELECTION-SCREEN, AT SELECTION-SCREEN OUTPUT, INITIALIZATION, START-OF-SELECTION 
 ```
 
 ## 이벤트 블록을 사용합니다. ABAP 런타임이 호출하는 순서로 옳은 것은? 
+
+INITIALIZATION -> AT SELECTION-SCREEN OUTPUT -> AT SELECTION-SCREEN -> START-OF-SELECTION
+
+
+
+
 
 
 
 ## 새로운 function group을 만들 때 자동으로 생성되는 객체는? 
 
+LZFMTOP(자동생성)
+
+LZFMUXX(자동생성_작동작성)
+
+
+
+
+
+
+
 
 
 ## Search help에서 Outer join을 사용하는 View type은? 
 
+HELP VIEW
 
 
-## 다음 중 검색 도움말(Search Help)에 대한 설명으로 옳지 않은 것은? 
+
+
+
+## 다음 설명 중 옳은 것은?
+
+#### 세상에나,,,
+
+
+
+
+
+## Transparent table에 필드 유형 CURR(CURRENCY)를 추가하려고 할 때 해야 할 것은?. 
+
+CURRENCY/QUANTITY FIELD에 통화와 금액을 연결해 주는 과정?
+
+REFERENCE TABLE, REF.FIELD
+
+
+
+
+
+## 다음 설명 중 옳은 것은?
+
+#### 세상에나,,,
+
+
+
+
+
+##  필수 입력 필드가 있는 화면(Screen)에서 모든 필수 입력 필드를 채워지지 않고 취소 버튼을 사용하여 화면을 종료하려고 할 때 처리 방법은? 
+
+PBO의 FUNCTION KEY에서 CANCEL의 FUNCTION TYPE을 E TYPE (EXIT COMMAND)으로 준 후
+
+```ABAP
+MODULE <MODULE NAME> AT EXIT-COMMAND.
+```
+
+으로 처리한다.
+
+LEAVE PROGRAM.
+
+
+
+
+
+
+
+## 다음 ABAP 구문 검사에서 오류가 발생하는 것은? 
+
+보기 필요
+
+
+
+
+
+
+
+## 다음 중 ALV의 필드 카탈로그(field catalog)에 대한 내용으로 옳지 않은 것은? 
+
+참조할 범위가 너무 광범위
+
+
+
+
+
+
+
+
+
+# <u>*SAP 시스템의 모든 ABAP repository 객체(object)에서 직접 액세스할 수 있는 데이터 타입은 어디에 정의 정의 되어야 하는가?*</u> 
+
+
+
+
+
+
+
+## 다음 중 필드의 label이 저장되는 것은? 
+
+alv?
+
+
+
+
+
+
+
+
+
+### 다음 중 ABAP 편집기(Editor)와 ABAP 디버거(debugger) 모두에서 수행할 수 있는 것은?
+
+
+
+
+
+
+
+
+
+
+
+## 다음 중 검색 도움말에 대한 설명으로 옳지 않은 것은?
+
+
+
+
+
+
+
+
+
+## 다음 중 generic character-type CLIKE와 호환되는 ABAP 데이터 타입이 아닌 것은?
+
+**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like 
+
+
+
+
+
+
 
 
 
 ## 다음 중 ABAP Report에서 사용자 입력을 허용하는 구문은? 
 
-
+???? parameter / select-options?
 
 
 
