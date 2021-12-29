@@ -4,15 +4,15 @@
 
 EXCEP								-CHAR1
 
-* CANCELLED               -SBOOK
+* CANCELLED               							-SBOOK
 
-CUSTOMID					   -SCUSTOM
+ID						   -SCUSTOM				
 
-CUSTOMNAME                -SCUSTOM
+NAME 	               -SCUSTOM
 
 CARRID 							- ZTEVAL_B00
 
-CARRNAME                      -SCARR
+CARRNAME                									-SCARR
 
 CONNID						   - ZTEVAL_B00
 
