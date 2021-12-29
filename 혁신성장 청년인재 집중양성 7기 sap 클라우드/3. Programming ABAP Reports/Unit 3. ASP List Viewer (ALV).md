@@ -10,6 +10,16 @@
 
 * ## ALV Standard Functions
 
+  | Standard Function           | Description                                                  |
+  | --------------------------- | ------------------------------------------------------------ |
+  | Details                     | 선택한 행의 데이터를 modal dialog box에 display한다.         |
+  | Sort ascending / descending | 선택한 행을 기준으로 오름차순, 내림 차순 정렬 해준다.        |
+  | Search                      | 사용자가 검색어와 검색 순서(열 또는 행)를 지정할 수 있습니다. |
+  | Set filter                  | 사용자가 선택하는 필터 기준에 따라 화면에 표시되는 데이터 세트를 제한합니다. |
+  | Total                       | 사용자가 선택하는 숫자열에 대한 총계, 산술 평균, 최대값 또는 최소값을 표시한다. |
+  | Export                      | 설치되어 있는 다른 어플리케이션으로 데이터를 열 수 있다.     |
+  | Layout                      | 현재의 표시 구성을 변경할 수 있다.                           |
+  
   
 
 
@@ -249,8 +259,10 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
 
 * ## CONTAINER CONTROL
 
-  #### ZB23_00045_TOP
+  Reference 변수를 생성하고 이 변수를 이용해 Container Control Instance를 생성한다.
 
+  #### ZB23_00045_TOP
+  
   ```ABAP
   *&---------------------------------------------------------------------*
   *& Include          ZB23_00045_TOP
@@ -260,7 +272,7 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
   
   DATA: gt_data TYPE TABLE OF sbook,
         gs_data LIKE LINE OF gt_data.
-  
+        
   DATA: go_cont TYPE REF TO cl_gui_custom_container,
         go_alv  TYPE REF TO cl_gui_alv_grid.
   
@@ -268,20 +280,20 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
     SELECT-OPTIONS: so_car FOR gs_data-carrid,
                     so_con FOR gs_data-connid,
                     so_fld FOR gs_data-fldate.
-  SELECTION-SCREEN END OF BLOCK blk1.
+SELECTION-SCREEN END OF BLOCK blk1.
   ```
 
   ##### TOP에 
-
+  
   ```ABAP
   DATA: go_cont TYPE REF TO cl_gui_custom_container,
-        go_alv  TYPE REF TO cl_gui_alv_grid.
+      go_alv  TYPE REF TO cl_gui_alv_grid.
   ```
 
   ##### ???????? 의 참조 변수(REFERENCE VARIABLE)를 만들어준다.
 
   #### SCREEN 100 - FLOW LOGIC
-
+  
   ```ABAP
   PROCESS BEFORE OUTPUT.
     MODULE status_0100.
@@ -290,13 +302,13 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
     MODULE .
   
   PROCESS AFTER INPUT.
-    MODULE user_command_0100.
+  MODULE user_command_0100.
   ```
 
   ##### SCREEN 100 의 PBO에 MODULE INIT_ALV. 를 작성하고 더블클릭하여 PBO에 모듈을 생성한다.
 
   #### ZB23_00045_O01 - Module INIT_ALV OUTPUT
-
+  
   ```ABAP
   *&---------------------------------------------------------------------*
   *& Module INIT_ALV OUTPUT
@@ -336,7 +348,7 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
   
   
     ENDIF.
-  ENDMODULE.
+ENDMODULE.
   ```
 
   
@@ -362,7 +374,7 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
   ##### Instance에는 ALV GRID의 reference variable 이름이 들어가며 CLASS / INTERFACE에는 ALV GRID의  CLASS가 들어간다.
 
   #### ZB23_00045_O01 - Module INIT_ALV OUTPUT
-
+  
   ```ABAP
   *&---------------------------------------------------------------------*
   *& Module INIT_ALV OUTPUT
@@ -433,20 +445,13 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
   
   
     ENDIF.
-  ENDMODULE.
+ENDMODULE.
   ```
 
   <img src="img/alv26.png" alt="AVL" style="zoom:75%;" />
 
   
 
-  
-
-  
-
-  
-
-  
 
 ```ABAP
    CALL METHOD go_alv->set_table_for_first_display
@@ -454,14 +459,20 @@ ALV GRID CONTROL의 OBJECT를 생성하기 위해서는 CL_GUI_ALV_GRID 클래�
 *       i_buffer_active            = 
 *       i_bypassing_buffer         =
         i_consistency_check        = "Managing display variants
+* 									 
         i_structure_name           = "Global structure type for field catalog
-        is_variant                 = "Managing display variants
-        i_save                     = "Managing display variants
-        i_default                  = "Managing display variants
+* 									 필드 카탈로그의 전역 구조 유형
+        is_variant                 = "Managing display variants  		-+
+        i_save                     = "Managing display variants  		-+=> 표시 변형 관리
+        i_default                  = "Managing display variants  		-+
         is_layout                  = "Structure for displaying control
+* 									 컨트롤 ㅍ시 구조
         is_print                   = "Structure for displaying print list
+* 									 인쇄 리스트 표시ㅣ 구조
         it_special_groups          = "Internaltable with field group texts
+* 									 필드 그룹 텍스트가 있는 내부 테이블
         it_toolbar_excluding       = "Internal table with inactive functions
+* 									 비활성 기능이 있는 내부 테이블
 *       it_hyperlink               =
 *       it_alv_graphics            =
 *       it_except_qinfo            =
@@ -521,4 +532,9 @@ refresh_table_display메소드를 추가해 준다.
     ENDIF.
 ```
 
-s
+
+
+
+
+
+
