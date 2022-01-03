@@ -41,10 +41,11 @@ console.log(whatDay('2021.12.31'));
 
 
 
+
+
 //2. 배열 문제
 
 // 큰 값 부터 나열하기
-
  var aValue = [32, 23, 15, 24, 5, 17, 34];
 
  aValue.sort(function(a, b){
@@ -77,3 +78,151 @@ console.log(whatDay('2021.12.31'));
      }
  })
  console.log(aValue);
+
+ //bc 를 포함한 값만 남기기
+
+var aValue = ['abcd', 'abc', 'def', 'bcd', 'cde'];
+
+aValue = aValue.filter(function(a){
+    return a.includes('bc');
+})
+console.log(aValue);
+
+//a 값의 길이가 3 이상인 것과 b의 값이 짝수인 값을 출력하기
+var aValue = [
+    {a : 'ab', b : 3},
+    {a : 'cde', b : 4},
+    {a : 'edb', b : 3},
+    {a : 'ea', b : 6},
+    {a : 'acde', b : 4}
+]
+
+aValue = aValue.filter(function(obj){
+    if (obj.a.length >= 3){
+        return !(obj.b % 2);
+    }
+})
+
+console.log(aValue)
+
+//sort는 기존의 배열을 자체를 바꾸는 반면 filter는 새로운 배열을 반환한다!!
+
+
+
+
+
+
+//3. 객체(Math) 문제
+
+//하기 조건을 충족하는 임의의 숫자 6개를 반환하는 함수 만들기
+//조건1. 생성되는 숫자는 1 ~ 45 내에서 생성
+//조건2. 중복 숫자 허용 안됨
+
+function random6(){
+    var arr = []; 
+    var n = 0;
+    var num;
+
+    while (n !== 6){
+        num = Math.floor(Math.random() * 45 + 1);
+        console.log(num)
+        if (arr.indexOf(num) === -1){
+            arr.push(num);
+            n++;
+        }
+    }
+    return arr;
+}
+
+aValue = random6();
+console.log(aValue);
+// 30
+// 21
+// 12
+// 35
+// 12
+// 41
+// 33
+// [ 30, 21, 12, 35, 41, 33 ]
+
+
+
+
+
+
+//4. Array.sort 문제
+//하기 조건을 충족하는 Array.sort 함수를 직접 만들기
+//조건1. 파라미터는 2개
+//조건2. 첫번째 파라미터는 Sort할 Array를 받음
+//조건3. 두번째 파라미터는 함수(Logic)를 받음
+
+function dflt(a, b){
+    return a - b;
+}
+
+function sortArray(arr, func){
+    let temp;
+    let lngth = arr.length;
+    for (let i = 0 ; i < lngth - 1 ; i ++){
+        for (let j = i + 1 ; j < lngth ; j++){
+            if (func(arr[i], arr[j]) > 0){
+                temp = arr[i];
+                arr[i] = arr[j]
+                arr[j] = temp;
+                console.log(i, j, arr)
+            }
+        }
+    }
+    return arr
+}
+
+var aValue = [3, 10, 30, 2, 4];
+console.log(aValue)
+console.log(sortArray(aValue, function(a, b){
+    console.log(a, b, !!(a - b))
+    return a - b;
+}));
+// console.log(sortArray(aValue, function(a, b){
+//     return b - a;
+// }))
+
+
+// function sortArray(arr, func(a, b) = dflt(a, b)){
+//     let temp;
+//     let lngth = arr.length;
+//     for (let i = 0 ; i < lngth - 1 ; i ++){
+//         for (let j = i + 1 ; j < lngth ; j++){
+//             if (func(arr[i], arr[j])){
+//                 temp = arr[i];
+//                 arr[i] = arr[j]
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+//     return arr
+// }
+
+
+
+
+
+
+//5.Array.filter 문제
+//하기 조건을 충족하는 Array.filter 함수를 직접 만들기
+//조건1. 파라미터는 총 2개
+//조건2. 첫번째 파라미터는 Filter할 Array를 받음
+//조건3. 두번째 파라미터는 함수(Logic)를 받음
+function filterArray(arr, func){
+	var newArray = [];
+  for (let i = 0 ; i < arr.length ; i++){
+    if (func(arr[i])){
+			newArray.push(arr[i]);
+    }
+  }
+	return newArray;
+}
+
+var aValue = [3, 10, 30, 2, 4];
+console.log(filterArray(aValue, function(a){
+	return !(a % 2)
+}))
