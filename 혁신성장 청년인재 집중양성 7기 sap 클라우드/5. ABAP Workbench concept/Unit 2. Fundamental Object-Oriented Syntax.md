@@ -539,7 +539,7 @@
 
   PUBLIC 세션에 생성한다.
 
-  METHOD 이름은 CONSTURUCTOR을 사용해야 한다.
+  METHOD 이름은 CONSTRUCTOR을 사용해야 한다.
 
   
 
