@@ -12,16 +12,15 @@ var aList = [
 ];
 
 
-// aList.sort(function(a, b){
-//   if (a.parent >= b.parent){
-//     return 1;
-//   }else if (a.parent === b.parent){
-//     return a.key > b.key;
-//   }else{
-//     return -1;
-//   }
-// })
-
+aList.sort(function(a, b){
+  if (a.parent >= b.parent){
+    return 1;
+  }else if (a.parent === b.parent){
+    return a.key > b.key;
+  }else{
+    return -1;
+  }
+})
 for (var i = 0 ; i < aList.length ; i++){
   console.log(aList[i])
 }
