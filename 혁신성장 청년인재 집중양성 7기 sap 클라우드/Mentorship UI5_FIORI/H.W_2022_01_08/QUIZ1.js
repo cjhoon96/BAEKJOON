@@ -5,7 +5,8 @@ let today_1 = new Date();
 console.log(today_1);                     // 1.4
 today_1.setMonth(today_1.getMonth() + 1); // 2.4
 console.log(today_1);                 
-today_1.setDate(today_1.getDate() - today_1.getDate());  // 2.4 -4일==> 1.31
+today_1.setDate(today_1.getDate() - today_1.getDate());  // 2.4 -4일==> 1.31                 
+// today_1.setDate(0);
 
 console.log(today_1);
 

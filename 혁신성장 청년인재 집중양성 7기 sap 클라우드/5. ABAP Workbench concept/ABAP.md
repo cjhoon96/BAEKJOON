@@ -2382,8 +2382,6 @@ F8
 
 
 
-
-
 ## 76. 다음 중 generic character-type CLIKE와 호환되는 ABAP 데이터 타입이 아닌 것은?
 
 **c**, **n**, and **string** plus the date/time types **d**, **t** and character-like 
@@ -2455,3 +2453,77 @@ X38X-HKWR-XXD5T
 cjhoon96@gmail.com
 
 white96020#
+
+3번
+
+다음 중 CLASS의 VISIBLE 속성에 대한 설명으로 올바르지 않은 것은? 
+
+read-only
+
+
+
+
+
+6번
+
+다음중 Structure type 이 될 수 없는 것은 무엇인가?
+
+type line of   /  like
+
+
+
+
+
+43
+
+44
+
+다음 중 ALV의 필드 카탈로그(field catalog)에 대한 내용으로 옳지 않은 것은?
+
+specify the sort order of the display table
+
+
+
+
+
+46
+
+다음 중 데이터 Type 중 deep 데이터 type은?
+
+string
+
+Character-type includes elementary types C, D, N, and T; numeric includes the elementary types F, I, P, and X. The deep types STRING and XSTRING are not supported.
+
+
+
+
+
+61
+
+다음 중 data object를 생성하는 구문이 아닌 것은?
+
+class-data? types?
+
+
+
+66
+
+다음 중 search help를 할당할 수 없는 대상은?
+
+table type?
+
+
+
+
+
+
+
+Character-type includes elementary types C, D, N, and T; numeric includes the elementary types F, I, P, and X. The deep types STRING and XSTRING are not supported.
+
+
+
+
+
+Constants are special [static attributes](javascript:call_link('abenstatic_attribute_glosry.htm')), whose values are specified when they are declared and which cannot be changed later. Constants are declared using the statement [**CONSTANTS**](javascript:call_link('abapconstants.htm')). Constants are not instance-specific and exist only once for all the objects in a class.
+
+In particular, it is possible to define constants in the public visibility section of global classes, which makes the use of [type groups](javascript:call_link('abentype_group_1_glosry.htm')) in this context obsolete.
