@@ -1,19 +1,5 @@
 //2. 배열 문제
-
-// 큰 값 부터 나열하기
-// var aValue = [32, 23, 15, 24, 5, 17, 34];
-var aValue = [1, 2, 3, 4, 5];
-console.log(aValue);
-aValue.sort(function (a, b) {
-  //  if(a < b) return 1;
-  //  if(a === b) return 0;
-  //  if(a > b) return -1;
-  console.log(a, b);
-  return b - a;
-});
-console.log(aValue);
-
-//a가 작은 값 부터 나열하되 만약 a가 같은 값이며 b값이 큰거부터 나열하기
+  
 var aValue = [
   { a: 1, b: 3 },
   { a: 2, b: 2 },
@@ -24,7 +10,7 @@ var aValue = [
 ];
 
 aValue.sort(function (obj1, obj2) {
-  if (obj1.a < obj2.a) {
+  if (obj1.a > obj2.a) {
     return true;
   } else if (obj1.a === obj2.a) {
     return obj2.b - obj1.b;
@@ -52,7 +38,7 @@ var aValue = [
   { a: "acde", b: 4 },
 ];
 
-aValue = aValue.filter(function (obj) {
+aValue = aValue.filter(function (obj) { 
   if (obj.a.length >= 3) {
     return !(obj.b % 2);
   }

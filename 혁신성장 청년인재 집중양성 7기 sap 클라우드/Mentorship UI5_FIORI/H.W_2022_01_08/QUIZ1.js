@@ -10,23 +10,17 @@ today_1.setDate(today_1.getDate() - today_1.getDate());  // 2.4 -4일==> 1.31
 
 console.log(today_1);
 
+
 //오늘부터 30일 뒤 구하기
 let today_2 = new Date();
 today_2.setDate(today_2.getDate() + 30);
-console.log(today_2);
+console.log(today_2); 
+
 
 //특정 날짜의 요일 구하는 함수 만들기
 
 // let inputDate = prompt("날짜를 입력하세요 YYYY.MM.DD");
-let Day = {
-  0: "월",
-  1: "화",
-  2: "수",
-  3: "목",
-  4: "금",
-  5: "토",
-  6: "일",
-};
+let Day = ["일", "월", "화", "수", "목", "금", "토"];
 
 function whatDay(inputDate) {
   let today;
@@ -39,7 +33,7 @@ function whatDay(inputDate) {
     parseInt(inputDate[2])
   );
   console.log(today);
-  return Day[today.getUTCDay()];
+  return Day[today.getDay()];
 }
 
 // console.log(whatDay(inputDate));

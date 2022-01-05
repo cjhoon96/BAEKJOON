@@ -5,12 +5,12 @@
 //조건2. 중복 숫자 허용 안됨
 
 function random6() {
-  var arr = [];
+  var arr = []; 
   var n = 0;
   var num;
 
-  while (n !== 6) {
-    num = Math.floor(Math.random() * 45 + 1);
+  while (n !== 6) { 
+    num = Math.floor( Math.random() * 45 + 1 );
     console.log(num);
     if (arr.indexOf(num) === -1) {
       arr.push(num);

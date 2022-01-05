@@ -3,23 +3,14 @@
 var aList;
 
 var aList = [
+  { key: 1, parent: undefined },
   { key: 2, parent: 1 },
   { key: 6, parent: 3 },
   { key: 4, parent: 2 },
-  { key: 1, parent: undefined },
   { key: 5, parent: 2 },
   { key: 3, parent: 1 }
 ];
-
-aList.sort(function(a, b){
-  if (a.parent >= b.parent){
-    return 1;
-  }else if (a.parent === b.parent){
-    return a.key > b.key;
-  }else{
-    return -1;
-  }
-})
+ 
 
 for (var i = 0 ; i < aList.length ; i++){
   now = aList[i];
@@ -30,6 +21,17 @@ for (var i = 0 ; i < aList.length ; i++){
 var oTree = [aList[0]];
 
 console.log(oTree);
+// aList.sort(function(a, b){
+//   if (a.parent >= b.parent){
+//     return 1;
+//   }else if (a.parent === b.parent){
+//     return a.key > b.key;
+//   }else{
+//     return -1;
+//   }
+// })
+
+
 
 
 // var Tree = aList.shift();
