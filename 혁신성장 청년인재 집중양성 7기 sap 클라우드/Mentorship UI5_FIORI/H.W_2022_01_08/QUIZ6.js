@@ -1,26 +1,28 @@
 //1.	응용 문제
 //예시 코드
 var aList;
+var now;
 
 var aList = [
   { key: 1, parent: undefined },
   { key: 2, parent: 1 },
-  { key: 6, parent: 3 },
+  { key: 3, parent: 1 },
   { key: 4, parent: 2 },
   { key: 5, parent: 2 },
-  { key: 3, parent: 1 }
+  { key: 6, parent: 3 },
 ];
- 
+
+var oTree = [aList[0]];
 
 for (var i = 0 ; i < aList.length ; i++){
   now = aList[i];
   now.child = aList.filter(function(a){
-    return a.parent == now.key;
+    return now.key = a.parent;
   })
 }
-var oTree = [aList[0]];
 
 console.log(oTree);
+
 // aList.sort(function(a, b){
 //   if (a.parent >= b.parent){
 //     return 1;
@@ -30,8 +32,6 @@ console.log(oTree);
 //     return -1;
 //   }
 // })
-
-
 
 
 // var Tree = aList.shift();

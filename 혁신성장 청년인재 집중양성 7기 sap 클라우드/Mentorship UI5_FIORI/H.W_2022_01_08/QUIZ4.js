@@ -111,7 +111,7 @@ function bubbleSort(arr, func = dflt) {
   for (let i = len - 1; i > 0; i--) {
     for (let j = 0; j < i; j++) {
 
-      console.log(arr[j], arr[j + 1], i);
+      console.log(arr[j], arr[j + 1], i);S
       
       if (func(arr[j + 1], arr[j]) < 0) {
         temp = arr[j];

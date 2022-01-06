@@ -2,7 +2,7 @@
 
 
 
-# Lesson 1. Describing Classic Business Add-Ins (BAdis)
+# Lesson 1. Describing Classic Business Add-Ins (BAdIs)
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-# Lesson 2. Enhancing Programs Using Classic BAdis
+# Lesson 2. Enhancing Programs Using Classic BAdIs
 
  
 
@@ -24,4 +24,4 @@
 
 
 
-# Lesson 3. Explaining Additional Details of Business Add-Ins (BAdis)
+# Lesson 3. Explaining Additional Details of Business Add-Ins (BAdIs)

@@ -40,7 +40,7 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
 
     * #### se14
 
-      :**ABAP Dictionary: Database Utility** Conversion을 수행
+      : **ABAP Dictionary: Database Utility** Conversion을 수행
 
     * #### se16
 
@@ -48,7 +48,7 @@ login을 할때 클라이언트를 지정해 줌으로 써 다양한 용도, 기
 
     * #### se19
 
-      ##### : BAdI Builder: Initial Screen for Implementations
+      : **BAdI Builder: Initial Screen for Implementations**
 
     * #### se24
 

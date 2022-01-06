@@ -8,7 +8,7 @@ function random6() {
   var arr = []; 
   var n = 0;
   var num;
-
+ 
   while (n !== 6) { 
     num = Math.floor( Math.random() * 45 + 1 );
     console.log(num);
