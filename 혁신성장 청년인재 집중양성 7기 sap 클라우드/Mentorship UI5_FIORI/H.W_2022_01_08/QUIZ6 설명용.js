@@ -3,32 +3,26 @@
 var aList;
 
 var aList = [
-  { key: 2, parent: 1 },
-  { key: 6, parent: 3 },
-  { key: 4, parent: 2 },
   { key: 1, parent: undefined },
+  { key: 2, parent: 1 },
+  { key: 3, parent: 1 },
+  { key: 4, parent: 2 },
   { key: 5, parent: 2 },
-  { key: 3, parent: 1 }
+  { key: 6, parent: 3 },
 ];
 
 
-aList.sort(function(a, b){
-  if (a.parent >= b.parent){
-    return 1;
-  }else if (a.parent === b.parent){
-    return a.key > b.key;
-  }else{
-    return -1;
-  }
-})
-for (var i = 0 ; i < aList.length ; i++){
-  console.log(aList[i])
-}
+
 for (var i = 0 ; i < aList.length ; i++){
   now = aList[i];
   now.child = aList.filter(function(a){
-    return a.parent == now.key;
+    return a.parent === now.key;
   })
+
+//filter 의 동작 ==> aList.filter( function(  ) )
+
+
+
   console.log('**********************************************************************************************************************************************************')
   console.log('**********************************************************************************************************************************************************')
   console.log("*& key", i + 1)

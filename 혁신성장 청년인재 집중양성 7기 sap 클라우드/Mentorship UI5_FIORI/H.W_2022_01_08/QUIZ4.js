@@ -105,20 +105,26 @@ console.log(
 //*& 가장 마지막 index를 기준으로 잡고 				  *
 //*&$계속 기준 index에 가장 큰 값을 뒤로 보낸다 *
 //*&--------------------------------------------*
+function dflt(a, b) {
+  return a - b;
+}
+
+
+a(a);
+
+
+
 function bubbleSort(arr, func = dflt) {
   let temp; 
   let len = arr.length;
   for (let i = len - 1; i > 0; i--) {
     for (let j = 0; j < i; j++) {
 
-      console.log(arr[j], arr[j + 1], i);S
-      
       if (func(arr[j + 1], arr[j]) < 0) {
         temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
       }
-      console.log(arr);
     }
   }
   return arr;
@@ -142,7 +148,7 @@ var aValue = [
 
 function objAc (obj1, obj2) {
   if (obj1.a > obj2.a) {
-    return true;
+    return 1;
   } else if (obj1.a === obj2.a) {
     return obj2.b - obj1.b;
   } else {

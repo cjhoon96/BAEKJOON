@@ -12,12 +12,13 @@ var aList = [
   { key: 6, parent: 3 },
 ];
 
+
 var oTree = [aList[0]];
 
 for (var i = 0 ; i < aList.length ; i++){
   now = aList[i];
   now.child = aList.filter(function(a){
-    return now.key = a.parent;
+    return now.key === a.parent;
   })
 }
 

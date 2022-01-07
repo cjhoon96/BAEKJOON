@@ -1,5 +1,18 @@
 //2. 배열 문제
-  
+//큰 값부터 나열하기
+var aValue;
+
+aValue = [ 32, 23, 15, 24, 5, 17, 34 ];
+
+aValue.sort(function(a, b){
+  console.log(a, b, b - a);
+  return b - a;
+})
+
+
+// a가 작은 값부터 나열하되, 만약 a가 같은 값이며 b값이 큰 거부터 나열하기
+var aValue;
+
 var aValue = [
   { a: 1, b: 3 },
   { a: 2, b: 2 },
