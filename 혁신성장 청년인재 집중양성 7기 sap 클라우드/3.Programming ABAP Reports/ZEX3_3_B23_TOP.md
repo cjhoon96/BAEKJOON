@@ -6,9 +6,9 @@ EXCEP								-CHAR1
 
 * CANCELLED               -SBOOK
 
-CUSTOMID					   -SCUSTOM
+ID									   -SCUSTOM
 
-CUSTOMNAME                -SCUSTOM
+NAME				                -SCUSTOM
 
 CARRID 							- ZTEVAL_B00
 
