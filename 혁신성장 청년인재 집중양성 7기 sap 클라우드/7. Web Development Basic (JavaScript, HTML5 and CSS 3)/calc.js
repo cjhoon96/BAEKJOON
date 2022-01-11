@@ -21,9 +21,7 @@ Inputs.map((Input)=>{
 })
 
 resetBtn.addEventListener('click', function(){
-  alert('click');
   for (var i = 0 ; i < Inputs.length ; i++){
-    alert(i);
     Inputs[i].value = '';
   }
   rslt.innerText = '';
