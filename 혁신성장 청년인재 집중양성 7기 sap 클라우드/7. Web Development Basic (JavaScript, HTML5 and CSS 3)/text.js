@@ -1,4 +1,8 @@
-var fruit = ["Banana", "Orange", "Apple", "Mango"];
+var i = 0;
 
-var x = fruit.pop();
-console.log(x, fruit);
+var arr = ["배", "사과", "오렌지", "딸기"];
+
+while (i < arr.length) {
+  console.log(arr[i]);
+  i++;
+}
