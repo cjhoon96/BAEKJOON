@@ -280,19 +280,23 @@
 
   <img src="img/bas49.png" alt="bas" style="zoom:75%;" />
   
-  
+  #### HTML 5 어플리케이션 런타임을 적용하면 호스트 또는 경로 레벨에서 이 대상을 동적으로 사용할 수 있다.
   
   <img src="img/bas50.png" alt="bas" style="zoom:75%;" />
   
-  
+  #### HTML 5 어플리케이션 런타임이 백엔드 요청에서 SAP-CLIENT와 해당 값을 헤더로 전파
   
   <img src="img/bas51.png" alt="bas" style="zoom:75%;" />
   
-  
+  #### 대상을 SAP Business Application Studio에 공개
   
   <img src="img/bas52.png" alt="bas" style="zoom:75%;" />
   
+  #### dev_abap - 확장성 시나리오 지원, SAP UI5 ABAP 저장소로의 개발 또는 배포 
   
+  #### odata_abap - SAP Gateway의 ODATA기능
+  
+  #### 공백 없이 쉼표로 구분한다.
   
   
   
@@ -307,51 +311,23 @@
   <img src="img/bas57.png" alt="bas" style="zoom:75%;" />
   
   <img src="img/bas58.png" alt="bas" style="zoom:75%;" />
-  
+
   #### 처음에는 오류 나는 경우가 많다.
-  
+
   <img src="img/bas59.png" alt="bas" style="zoom:75%;" />
 
-  <img src="img/bas60.png" alt="bas" style="zoom:75%;" />
+  
 
-  <img src="img/bas61.png" alt="bas" style="zoom:75%;" />
+  
 
-  <img src="img/bas62.png" alt="bas" style="zoom:75%;" />
+  
 
-  <img src="img/bas63.png" alt="bas" style="zoom:75%;" />
-
-  <img src="img/bas64.png" alt="bas" style="zoom:75%;" />
-
-  <img src="img/bas65.png" alt="bas" style="zoom:75%;" />
-
-  <img src="img/bas66.png" alt="bas" style="zoom:75%;" />
-
-  <img src="img/bas67.png" alt="bas" style="zoom:75%;" />
-
-  <img src="img/bas68.png" alt="bas" style="zoom:75%;" />
-  
-  <img src="img/bas69.png" alt="bas" style="zoom:75%;" />
-  
-  <img src="img/bas70.png" alt="bas" style="zoom:75%;" />
-  
-  <img src="img/bas71.png" alt="bas" style="zoom:75%;" />
-  
-  <img src="img/bas72.png" alt="bas" style="zoom:75%;" />
-  
-  <img src="img/bas73.png" alt="bas" style="zoom:75%;" />
-  
-  
-  
-  
-  
-  
-  
   210.16.199.140
-  
+
   edu.bgis.co.kr
-  
+
   8001
-  
+
   
   
   

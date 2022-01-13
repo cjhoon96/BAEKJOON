@@ -14,9 +14,21 @@
 
 
 
-* ## Modularization
+* ## sap.ui.require() 및 sap.ui.define()
 
-  sap.ui.define() 에 사용할 모듈을 정의한다.
+  sap.ui.define 은 실제 비동기 모듈(AMD, Asynchronous Module Definitions)를 지원하도록 설계되었다.
+
+  모듈의 동기 로딩은 jQuery.sap.require()를 사용하여수행했다. 모듈을 선언할때는 jQuery.sap.declare()를 사용했다.
+
+  sapui5 1.52 버전 부터는 이 jQuery함수가 모두 더이상 사용되지 않는다.
+
+
+
+
+
+
+
+### p.82 부터
 
 
 
@@ -56,12 +68,12 @@
 
 
 
-myLib 폴더 => MessageManager.js
+##### myLib 폴더 => MessageManager.js 생성
 
 ```javascript
 sap.ui.define([
     "sap/m/MessageBox"
-
+    //사용할 라이브러리의 모듈???
 ], function(MessageBox) {
     return {
         reportSuccess: function (pMsg, pTitle){
@@ -137,5 +149,23 @@ sap.ui.define([
 
 </body>
 </html>
+```
+
+<img src="img/bas62.png" alt="bas" style="zoom:75%;" />
+
+#### Run => Open configurations 또는
+
+#### .vscode/launch.json 으로 들어가 아래 내용을 수정한다.
+
+##### .vscode/launch.json
+
+```javascript
+{
+"args": [
+	"--open",
+	"index.html"
+],
+    
+}
 ```
 
