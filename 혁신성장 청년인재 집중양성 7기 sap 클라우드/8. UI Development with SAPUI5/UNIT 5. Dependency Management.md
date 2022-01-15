@@ -45,7 +45,7 @@
   
 
   ```javascript
-  sap.ui.define(sModule, aDependecies, vFactory, bExport);
+  sap.ui.define(sModule, aDependecies, vFactory, bExport); //
   ```
 
   #### sModule
@@ -56,7 +56,15 @@
 
   종속 모듈을 리스트로 작성한다. 
 
-  Ex )  ["sap/m/MessageBox",  "sap/ui/core/format/dataFormat"]
+  Ex )  ["sap/m/MessageBox",  "sap/ui/core/format/dataFormat"] 
+
+  함수의 변수에 순서대로 mapping 된다. 변수의 이름은 의미가 없다.
+
+  변수명은 가독성을 높이기 위해서 같게 해주는 것이다.
+
+  미리 로드 하고 실행할 시점에 가져다 쓴다.
+
+  권고 사항은 10개 이하
 
   #### vFactory
 
@@ -71,13 +79,13 @@
   ##### SAP 소유 코드에서만 사용해야 한다.
 
   
-
   
-
+  
+  
   * ### Ex )
-
+  
     #### zclb23_003 / webapp / myLib / MessageManager.js
-
+  
     ```javascript
     sap.ui.define(
         ["sap/m/MessageBox"], 			//aDependecies 
@@ -92,7 +100,7 @@
         
     });
     ```
-
+  
     
 
 
@@ -190,9 +198,6 @@
   
   
   
-  
-  
-  sap.ui.require([])   비 동기화로 
 
 
 
