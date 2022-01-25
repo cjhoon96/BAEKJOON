@@ -329,6 +329,24 @@
   
 
   
+  
+  ### 10번
+  
+  <img src="img/stock77.png" alt="stock" style="zoom:75%;" />
+  
+  <img src="img/stock78.png" alt="stock" style="zoom:75%;" />
+  
+  <img src="img/stock79.png" alt="stock" style="zoom:75%;" />
+  
+  322와 321 차이 찾아보기
+  
+  <img src="img/stock80.png" alt="stock" style="zoom:75%;" />
+  
+  
+  
+  
+  
+  
 
 
 
@@ -340,7 +358,7 @@
 
 
 
-# Exercise 13.
+# Exercise 14.
 
 
 
@@ -352,7 +370,21 @@
 
 * ## 실습
 
+  <img src="img/stock81.png" alt="stock" style="zoom:75%;" />
 
+  <img src="img/stock82.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock83.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock84.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock85.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock86.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock87.png" alt="stock" style="zoom:75%;" />
+
+  <img src="img/stock88.png" alt="stock" style="zoom:75%;" />
 
 
 
