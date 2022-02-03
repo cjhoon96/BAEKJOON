@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="iitp.zclb23007.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <l:Grid  id="idGrid1">
+                            <l:content>
+
+                                <Label id="lblFrstname" text="First Name">
+                                    <layoutData>
+                                        <l:GridData  id="gdFirst" span="L2 M4 S8"></l:GridData>
+                                    </layoutData>
+                                </Label>
+
+                                <Input id="inpFrstname" value="" placeholder="Input name">
+                                    <layoutData>
+                                        <l:GridData id="grFirst" span="L2 M4 S8"></l:GridData>
+                                    </layoutData>
+                                </Input>
+
+                                
+                                <Label id="lblLastname" text="First Name">
+                                    <layoutData>
+                                        <l:GridData  id="gdLast" span="L2 M4 S8"></l:GridData>
+                                    </layoutData>
+                                </Label>
+
+                                <Input id="inpLastname" value="" placeholder="Input name">
+                                    <layoutData>
+                                        <l:GridData id="grLast" span="L2 M4 S8"></l:GridData>
+                                    </layoutData>
+                                </Input>
+
+                            </l:content>
+                        </l:Grid>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

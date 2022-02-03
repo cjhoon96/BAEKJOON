@@ -1,0 +1,62 @@
+<mvc:View
+    controllerName="iitp.zclb23008.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <f:SimpleForm id="simForm" layout="ResponsiveGridLayout" width="50%">
+                            <f:toolbar>
+                                <Toolbar id="toolBar">
+                                    <Title id="Title" text="Condition"></Title>
+                                    <ToolbarSpacer id="toolSpace"></ToolbarSpacer>
+                                    <Button id="btnSch" icon="sap-icon://search"></Button>
+                                </Toolbar>
+                            </f:toolbar>
+                            <f:content>
+                                <Label id="lblName1" text="Name" labelFor="inpName"></Label>
+                                <Input id="inpName" value="" placeholder="Input name"></Input>
+                            </f:content>
+                        </f:SimpleForm>
+
+                        <f:SimpleForm id="simForm1">
+                            <f:content>
+                                <core:Title id="perData" text="Person Data"></core:Title>
+                                <Label id="lblName2" text="Name"></Label>
+                                <Input id="idFrName" value="Gildong" editable="false"></Input>
+                                <Input id="idLsName" value="Hong" editable="false"></Input>
+                                <Label id="lblBirDt" text="Birth Day"></Label>
+                                <Input id="idBirDt" value="19991231" editable="false"></Input>
+
+                                <core:Title id="compData" text="Company Data"></core:Title>
+                                <Label id="lblComp" text="Company Name"></Label>
+                                <Input id="inpComp" value="IITP Company"></Input>
+                                <Label id="lblEntDt" text="Entered Date"></Label>
+                                <Input id="inpEntDt" value="20210101"></Input>
+                            </f:content>
+                        </f:SimpleForm>
+
+                        <f:SimpleForm id="simForm2">
+                            <f:content>
+                                <core:Title id="perAdd" text="Person Address"></core:Title>
+                                <Label id="lblAdd" text="Street / City"></Label>
+                                <Input id="idAddress" value="####### Seoul" editable="false"></Input>
+
+                                <core:Title id="tellNum" text="Phone"></core:Title>
+                                <Label id="lblPhone" text="Tel No."></Label>
+                                <Input id="idTellNum" value="82 1234 5678" editable="false"></Input>
+                            </f:content>
+                        </f:SimpleForm> 
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

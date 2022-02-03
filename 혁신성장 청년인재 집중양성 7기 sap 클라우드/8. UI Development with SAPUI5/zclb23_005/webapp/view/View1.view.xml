@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="iitp.zclb23005.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <l:VerticalLayout id = 'idVert'>
+                        <l:content>
+                            <Label id="lblTeam" text="Team Name"></Label>
+                            <Input id = "inpTeam" description="Enter Team Name"></Input>
+                            <Button id = "btnSearch" text="Search" press = "onSearch"></Button>
+                        </l:content>
+                    </l:VerticalLayout>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

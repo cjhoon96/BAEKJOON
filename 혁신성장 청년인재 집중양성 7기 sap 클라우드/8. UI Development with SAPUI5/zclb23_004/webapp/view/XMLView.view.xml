@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="iitp.zclb23004.controller.XMLView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Text id = "idText" text = "XML View"></Text>
+                        <CheckBox id = "idChk1" text = "Check Box1" select = "onSelect"></CheckBox>
+
+                        <!-- JS View Embedded -->
+                        <mvc:JSView id="idJSView" viewName="iitp.zclb23004.view.JSView"></mvc:JSView>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
