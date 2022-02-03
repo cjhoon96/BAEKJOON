@@ -118,3 +118,127 @@
   ```
 
   
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Exercise 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Exercise 8
+
+```
+<mvc:View
+    controllerName="sap..dialogs.controller.View"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <l:VerticalLayout id="idVerti">
+                        <l:content>
+                            <Button id="idBtn" press="onOpenDialog" text="Open dialog"/>
+                            <Text id="idText"/>
+                        </l:content>
+                    </l:VerticalLayout>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
+```
+
+```
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Dialog id="idDialog" title="XML Fragment Dialog">
+        <buttons>
+            <Button id="idBtnFrag" press="onCloseDialog" text="OK"/>
+        </buttons>
+        <content>
+            <f:SimpleForm id="form">
+                <f:content>
+                    <Label id="idLbl" text="Name"/>
+                    <Input id="idInput"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+
+    </Dialog>
+</core:FragmentDefinition>
+```
+
+```
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/Fragment"
+],
+    /**
+     * @param {typeof sap.ui.core.mvc.Controller} Controller
+     */
+    function (Controller, Fragment) {
+        "use strict";
+
+        return Controller.extend("sap..dialogs.controller.View", {
+            onInit: function () {
+
+            },
+
+            onOpenDialog: function () {
+                var oView = this.getview();
+
+                //create dialog lazily
+                if (!this.byId("idDialog")) {
+                    Fragment.load({
+                        id: oView.getId(),
+                        name: "sap.training.dialogs.view.Dialog",
+                        controller: this
+                    }).then(function (oDialog) {
+                        oView.addDependent(oDialog);
+                        oDialog.open();
+                    });
+                } else {
+                    this.byId("idDialog").open();
+                }
+            },
+
+            onCloseDialog: function () {
+                this.byId("idDialog").close();
+                var oInput = this.byId("idInput");
+                var oText = this.byId("idText");
+                oText.setText("Hello, " + oInput.getValue());
+            }
+        });
+    });
+```
+
