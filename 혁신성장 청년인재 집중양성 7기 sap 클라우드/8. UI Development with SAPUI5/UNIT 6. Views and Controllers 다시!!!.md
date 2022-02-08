@@ -12,11 +12,9 @@
 
 
 
-
-
 * ## View Instantiation 
 
-  
+  view를 Instantiate 하기 위해서는 
 
   
 
@@ -121,6 +119,89 @@
 * ## XML Views
 
   View 파일 명에는 Main.view.xml 이 온다.
+  
+  ```xml
+  <mvc:View
+      controllerName="iitp.zclb23004.controller.XMLView"
+      xmlns:mvc="sap.ui.core.mvc"
+      displayBlock="true"
+      xmlns="sap.m"
+  >
+      <Shell id="shell">
+          <App id="app">
+              <pages>
+                  <Page id="page" title="{i18n>title}">
+                      <content>
+                          <Text id = "idText" text = "XML View"></Text>
+                          <CheckBox id = "idChk1" text = "Check Box1" select = "onSelect"></CheckBox>
+  
+                          <!-- JS View Embedded -->
+                          <mvc:JSView id="idJSView" viewName="iitp.zclb23004.view.JSView"></mvc:JSView>
+                      </content>
+                  </Page>
+              </pages>
+          </App>
+      </Shell>
+  </mvc:View>
+  ```
+  
+  ```javascript
+  sap.ui.define([
+      "sap/ui/core/mvc/Controller"
+  ],
+      /**
+       * @param {typeof sap.ui.core.mvc.Controller} Controller
+       */
+      function (Controller) {
+          "use strict";
+  
+          return Controller.extend("iitp.zclb23004.controller.XMLView", {
+              onInit: function () {
+  
+              },
+  
+              onSelect: function () {
+                  var onCheckbox = this.getview().byId("idChk1");
+  
+                  if (onCheckbox.getSelected()){
+                      onCheckbox.setText("Yes");
+                  } else {
+                      onCheckbox.setText("No");
+                  }
+              }
+          });
+      });
+  ```
+  
+  ```javascript
+  sap.ui.jsview(
+      "iitp.zclb23004.view.JSView",
+      {
+          getcontrollerName: function () {
+              return "iitp.zclb23004.controller.JSView";
+          },
+          createContent: function () {
+              
+  
+              var oCheckBox = new sap.m.CheckBox(this.createId("idCheckBox"), {
+                  text: "No"
+              });
+  
+  
+              var oButton = new sap.m.Button("idBtn", {
+                  text: "Button (JS View)",
+                  // press: function () {
+                  //     alert("JavaScript View Button Event");
+                  // }
+              });
+              return [oCheckBox, oButton];
+          }
+      }
+  
+  )
+  ```
+  
+  
 
 
 
@@ -166,14 +247,6 @@
 
 * ## zclb23_004
 
-
-
-
-
-
-
-* ## views
-
   ##### XMLView.view.xml
 
   ```xml
@@ -200,9 +273,9 @@
   
   
   ```
-  
+
   ##### XMLView.controller.js
-  
+
   ```javascript
   sap.ui.define([
       "sap/ui/core/mvc/Controller"
@@ -227,7 +300,7 @@
           });
       });
   ```
-  
+
   ##### JSView.view.js
 
   ```javascript
@@ -253,7 +326,7 @@
       }
   })
   ```
-  
+
   ##### JSView.controller.js
 
   ```javascript
@@ -276,7 +349,7 @@
       })
   })
   ```
-  
+
   ##### index.html
 
   ```html
@@ -321,6 +394,7 @@
   </body>
   </html>
   ```
-  
+
   
 
+  

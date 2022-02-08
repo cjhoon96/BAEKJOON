@@ -405,7 +405,7 @@ sap.ui.define([
   </html>
   ```
 
-  
+  <img src="img/modularization.png" alt="bas" style="zoom:75%;" />
 
   
 

@@ -18,7 +18,66 @@ xmlns:l="sap.ui.layout"
 
 * ## sap.ui.layout.VerticalLayout Control
 
+  #### iitp.zclb23_005.view.View1.view.js
 
+  ```xml
+  <mvc:View
+      controllerName="iitp.zclb23005.controller.View1"
+      xmlns:mvc="sap.ui.core.mvc"
+      displayBlock="true"
+      xmlns="sap.m"
+      xmlns:l="sap.ui.layout"
+  >
+      <Shell id="shell">
+          <App id="app">
+              <pages>
+                  <Page id="page" title="{i18n>title}">
+                      <l:VerticalLayout id = 'idVert'>
+                          <l:content>
+                              <Label id="lblTeam" text="Team Name"></Label>
+                              <Input id = "inpTeam" description="Enter Team Name"></Input>
+                              <Button id = "btnSearch" text="Search" press = "onSearch"></Button>
+                          </l:content>
+                      </l:VerticalLayout>
+                  </Page>
+              </pages>
+          </App>
+      </Shell>
+  </mvc:View>
+  ```
+
+  #### iitp.zclb23_005.controller.View1.controller.js
+
+  ```javascript
+  sap.ui.define([
+      "sap/ui/core/mvc/Controller",
+      "sap/m/MessageBox"   
+  ],
+      /**
+       * @param {typeof sap.ui.core.mvc.Controller} Controller
+       */
+      function (Controller, MessageBox) {
+          "use strict";
+  
+          return Controller.extend("iitp.zclb23005.controller.View1", {
+              onInit: function () {
+  
+              },
+  
+              onSearch: function () {
+                  var oInput = this.getView().byId("inpTeam");
+                  var inpValue = oInput.getValue();
+                  var showText = "Hello, " + inpValue;
+  
+                  MessageBox.show(showText, {
+                      title: "Welcome To ...."
+                  });
+              }
+          });
+      });
+  ```
+
+  
 
 
 
