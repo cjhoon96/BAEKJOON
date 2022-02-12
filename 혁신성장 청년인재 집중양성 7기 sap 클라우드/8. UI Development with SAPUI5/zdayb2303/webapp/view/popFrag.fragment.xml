@@ -1,0 +1,31 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog id="digPopup" title="Chief Information">
+        <f:SimpleForm>
+            <f:content>
+                <core:Title text="Chief Information"/>
+                <l:VerticalLayout >
+                <Label text="Name:"/>
+                <Input value="20210001"  editable="false" />
+                <Text text="Kim gill dong"/>
+                <Label text="Entered Date:"/>
+                <Input value="2020.12.2" editable="false"/>
+                <Label text="Org:"/>
+                <Input value="D001" description="" editable="false"/>
+                <Text text="SAP ERP Team"/>
+                <Label text="Grade:"/>
+                <Input value="Manager" editable="false"/>
+                <Label text="E-Mail:"/>
+                <Input value="test@gmail.com" editable="false"/>
+                </l:VerticalLayout>
+            </f:content>
+        </f:SimpleForm>
+        <endButton>
+            <Button id="btnClose" text="Close" press="onClose"></Button>
+        </endButton>
+    </Dialog>
+
+</core:FragmentDefinition>

@@ -119,10 +119,10 @@ fragment는 view 폴더에 생성한다.
                     alert(valMainText.getValue());
                 },
                 onFragClick: function () {
-                    <!--위의 실습에서는 부모에 해당하는 View.view.xml로 거슬러 올라가는 과정인 반면-->
-                    <!--지금은 controller 에서 fragment에 직접 접근해야 하는 상황이다.-->
-                    <!--따라서 sap.ui.core.Fragment.createId를 통해 idXmlFrag의 idInputFrag를 id로 갖는-->
-                    <!--input 필드를 찾아 접근할 수 있는 id를 생성한 후 byId로 접근하고 있다.-->
+                    <!--기본적으로 fragment 안의 id는 그대로 사용되지만 -->
+                    <!--fragment 안의 id 규칙-->
+                    <!--fragment ID 가 지정되지 않은 경우 ID 앞에 view ID만 붙는다.-->
+    				<!--fragment ID가 지정되면 ID 앞에 view ID와 fragment ID가 모두 붙습니다.-->
                     var valFragText = this.byId(sap.ui.core.Fragment.createId("idXmlFrag", "idInputFrag"));
                     alert(valFragText.getValue());
                 }
@@ -136,9 +136,9 @@ fragment는 view 폴더에 생성한다.
   
   * ### 실습- dialog 태그를 이용한 popup 창으로 활용
   
-    #### iitp.zclb23_010
+    #### iitp.zclb23_011
   
-    #### PopupFrag.fragment.xml
+    #### PopupFrag.fragment.xml  
   
     ```xml
     <core:FragmentDefinition
@@ -267,14 +267,30 @@ fragment는 view 폴더에 생성한다.
 
 
 
-# 여기부터!!!
+
 
 * ## JavaScript Fragments
 
   ```javascript
-  sap.ui.jsfragment("_name space_.view._f")
+  sap.ui.jsfragment("sap.training.fragments.view.MyJsFrag", {
+      			 //name space   project   폴더  fragment name
+      createContent: function (oController) {
+          var oInput = new sap.m.Input(this.createId("idInput"));
+          
+          var oButton = new sap.m.Button({
+              text: "Say Hello (JavaScript Fragment)",
+              press: [oController.onJsButtonPress, oController]
+          });
+  
+          var oText = new sap.m.Text(this.createId("idText"));
+  
+          return new sap.ui.layout.HorizontalLayout({
+              content: [oInput, oButton, oText]
+          });
+      } 
+  })
   ```
-
+  
   
   
   
@@ -295,9 +311,128 @@ fragment는 view 폴더에 생성한다.
 
 # Exercise 7
 
+### sap.training.fragments
 
+#### MyJsFrag.fragment.js
 
+```js
+sap.ui.jsfragment("sap.training.fragments.view.MyJsFrag", {
 
+    createContent: function (oController) {
+        var oInput = new sap.m.Input(this.createId("idInput"));
+        
+        var oButton = new sap.m.Button({
+            text: "Say Hello (JavaScript Fragment)",
+            press: [oController.onJsButtonPress, oController]
+        });
+
+        var oText = new sap.m.Text(this.createId("idText"));
+
+        return new sap.ui.layout.HorizontalLayout({
+            content: [oInput, oButton, oText]
+        });
+    } 
+})
+```
+
+#### MyXmlFrag.fragment.xml
+
+```xml
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout"
+>
+    <l:HorizontalLayout id="idHori">
+        <l:content>
+            <Input id="idInput"/>
+            <Button id="idBtnXML" text="Say Hello (XML Fragment)" press="onXmlButtonPress"/>
+            <Text id="idText"/>
+        </l:content>
+    </l:HorizontalLayout>
+</core:FragmentDefinition>
+```
+
+#### View.view.xml
+
+```xml
+<mvc:View xmlns:layout="sap.ui.layout"
+    controllerName="sap.training.fragments.controller.View"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <layout:VerticalLayout id="idVerti">
+                            <l:content>
+                                <core:Fragment id="idJsFrag" fragmentName="sap.training.fragments.view.MyJsFrag" type="JS"/>
+                                <core:Fragment id="idXmlFrag" fragmentName="sap.training.fragments.view.MyXmlFrag" type="XML"/>
+                            </l:content>
+                        </layout:VerticalLayout>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
+```
+
+#### View.controller.js
+
+```js
+sap.ui.define([
+    "sap/ui/core/mvc/Controller"
+],
+    /**
+     * @param {typeof sap.ui.core.mvc.Controller} Controller
+     */
+    function (Controller) {
+        "use strict";
+
+        return Controller.extend("sap.training.fragments.controller.View", {
+            onInit: function () {
+
+            },
+
+            onXmlButtonPress: function (oEvent) {
+                var oInput = this.byId(sap.ui.core.Fragment.createId("idXmlFrag", "idInput"));
+                var oText = this.byId(sap.ui.core.Fragment.createId("idXmlFrag", "idText"));
+
+                oText.setText("Hello " + oInput.getValue());
+            },
+
+            onJsButtonPress: function (oEvent) {
+                var oInput = this.byId(sap.ui.core.Fragment.createId("idJsFrag", "idInput"));
+                var oText = this.byId(sap.ui.core.Fragment.createId("idJsFrag", "idText"));
+
+                oText.setText("Hello " + oInput.getValue());
+            }
+        });
+    });
+
+```
+
+<img src="/img/fragment2.png" alt="fragment" style="zoom:80%;" />
+
+<img src="/img/fragment3.png" alt="fragment" style="zoom:80%;" />
+
+js View를 사용하는 경우  load문을 사용할시 view.js 파일 내부에서 
+
+```js
+var oMyController = {
+	onButtonPress: function (oEvent){
+		...
+	}
+}
+```
+
+와 같이 선언하여 oMyController를 controller로 지정할 수 있다.
 
 
 
@@ -310,7 +445,28 @@ fragment는 view 폴더에 생성한다.
 # Exercise 8
 
 ```xml
-   <mvc:View
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Dialog id="idDialog" title="XML Fragment Dialog">
+        <buttons>
+            <Button id="idBtnFrag" press="onCloseDialog" text="OK"/>
+        </buttons>
+        <content>
+            <f:SimpleForm id="form">
+                <f:content>
+                    <Label id="idLbl" text="Name"/>
+                    <Input id="idInput"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>
+```
+
+```xml
+<mvc:View
     controllerName="sap..dialogs.controller.View"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
@@ -332,28 +488,6 @@ fragment는 view 폴더에 생성한다.
         </App>
     </Shell>
 </mvc:View>
-```
-
-```xml
-<core:FragmentDefinition
-    xmlns:core="sap.ui.core"
-    xmlns:f="sap.ui.layout.form"
-    xmlns="sap.m">
-    <Dialog id="idDialog" title="XML Fragment Dialog">
-        <buttons>
-            <Button id="idBtnFrag" press="onCloseDialog" text="OK"/>
-        </buttons>
-        <content>
-            <f:SimpleForm id="form">
-                <f:content>
-                    <Label id="idLbl" text="Name"/>
-                    <Input id="idInput"/>
-                </f:content>
-            </f:SimpleForm>
-        </content>
-
-    </Dialog>
-</core:FragmentDefinition>
 ```
 
 ```javascript

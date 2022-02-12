@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="iitp23.cjh.zdayb2303.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <core:Fragment id="idMainFrag" fragmentName="iitp23.cjh.zdayb2303.view.mainFrag" type="XML"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

@@ -87,6 +87,6 @@ $metadata를 이용하여
 | ----------------------------------------------------------- | --------------- | ------------- |
 | http://edu.bgis.co.kr:8001/sap/opu/odata/sap/ux_travel_srv/ | UX_C_Carrier_TP | ?$format=json |
 
-
+http://edu.bgis.co.kr:8001/sap/opu/odata/sap/ux_travel_srv/UX_C_Carrier_TP('AA')?$expand=to_Connection&$format=json
 
  		

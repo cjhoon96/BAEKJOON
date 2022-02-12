@@ -1,0 +1,66 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+>
+    <f:SimpleForm id="simForm" layout="ResponsiveGridLayout" width="50%">
+        <f:toolbar>
+            <Toolbar id="toolBar">
+                <Title id="Title" text="Condition"></Title>
+                <ToolbarSpacer id="toolSpace"></ToolbarSpacer>
+                <Button id="btnSch" icon="sap-icon://search" press="onSrch"/>
+            </Toolbar>
+        </f:toolbar>
+
+        <f:content>
+            <Label id="lblTeamNo" text="Team No" labelFor="idTeam">
+                <layoutData>
+                    <l:GridData id="lblteamNum" span="L1 M2 S1"/>
+                </layoutData>
+            </Label>
+            <ComboBox id="idTeam" items="{/team}" selectionChange="onSelectionChange">
+                <items>
+                    <core:Item id="itemDept" text="{tName}"></core:Item>
+                </items>
+            </ComboBox>
+
+            <Label id="lblEmpNo" text="Employee Number" labelFor="inpEmpNo">
+                <layoutData>
+                    <l:GridData id="lblEmpNum" span="L1 M2 S1"/>
+                </layoutData>
+            </Label>
+            <Input id="inpEmpNo"></Input>
+
+        </f:content>
+    </f:SimpleForm>
+    <Panel id="infoPanel" expandable="true" expand="true" headerText="Employ Information">
+        <content>
+            <f:SimpleForm id="smpleForm">
+                <f:content>
+                    <core:Title id="perTitle" text="Personal Information"></core:Title>
+                    <Label id="lblName" text="Name"></Label>
+                    <Input id="idName" value="20210001" editable="false" description="Hong Gil Dong"></Input>
+                    <Label id="lblEnterDate" text="Entered Date"></Label>
+                    <Input id="idEDT" value="2020. 12. 2" editable="false"></Input>
+                    <Label id="lblGrade" text="Grade"></Label>
+                    <Input id="idGrade" value="Manager" editable="false"></Input>
+                    <Label id="lblEmail" text="E-Mail"></Label>
+                    <Input id="idEmail" value="test@gmail.com" editable="false"></Input>
+                    
+                    <core:Title id="orgTitle" text="Org. Information"></core:Title>
+                    
+                    <Label id="lblOrg" text="Org"></Label>
+                    <Input id="idOrg" value="D001" editable="false" description="SAP ERP Team"></Input>
+
+                    <Label id="lblChief" text="Org"></Label>
+                    <Input id="idChief" value="20210001" editable="false" description="Kim Chel Soo"></Input>
+                    <Button id="btnChiefInfo" text="Chief Info" press="onChief"/>
+                    
+                    <Label id="lblImg" text="Image"></Label>
+                    <Image id="snow" src="../img/snow.jpg" width="150px"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Panel>
+</core:FragmentDefinition>
