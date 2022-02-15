@@ -195,7 +195,7 @@
     </mvc:View>
     ```
 
-    <img src="/img/binding3.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding3.png" alt="binding" style="zoom:80%;" />
 
   * ### Property Binding 실습2 zclb23_013
 
@@ -317,7 +317,7 @@
     </mvc:View>
     ```
 
-    <img src="/img/binding1.png" alt="binding" style="zoom:80%;" /><img src="/img/binding2.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding1.png" alt="binding" style="zoom:80%;" /><img src="img/binding2.png" alt="binding" style="zoom:80%;" />
 
     #### 태그 내부의 각 property 들에 ***{\_경로_}*** 를 통해 binding 하고 있다.
 
@@ -487,7 +487,7 @@
     </mvc:View>
     ```
 
-    <img src="/img/binding5.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding5.png" alt="binding" style="zoom:80%;" />
 
     
 
@@ -638,7 +638,7 @@
     
     ```
   
-    <img src="/img/binding4.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding4.png" alt="binding" style="zoom:80%;" />
 
 
 
@@ -759,7 +759,7 @@
     </mvc:View>
     ```
 
-    <img src="/img/binding6.png" alt="binding" style="zoom:80%;" /><img src="/img/binding7.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding6.png" alt="binding" style="zoom:80%;" /><img src="img/binding7.png" alt="binding" style="zoom:80%;" />
 
     
 
@@ -981,11 +981,11 @@
     </mvc:View>
     ```
 
-    <img src="/img/binding8.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding8.png" alt="binding" style="zoom:80%;" />
 
-    <img src="/img/binding9.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding9.png" alt="binding" style="zoom:80%;" />
 
-    <img src="/img/binding10.png" alt="binding" style="zoom:80%;" />
+    <img src="img/binding10.png" alt="binding" style="zoom:80%;" />
 
     
 
@@ -1249,6 +1249,10 @@
 
 * ## Formatter Function 
 
+  Formatter Function은 채ㅜ
+
+  
+
   complex 안해줘도 지장 없음(현 버전)
 
   
@@ -1260,9 +1264,9 @@
   * ## Filter
 
     
-
+  
     #### iitp.zclb23_018/view/View1.view.js
-
+  
     ```xml
     <mvc:View
         controllerName="iitp.zclb23018.controller.View1"
@@ -1328,9 +1332,9 @@
         </Shell>
     </mvc:View>
     ```
-
+  
     #### iitp.zclb23_018/controller/View1.controller.js
-
+  
     ```javascript
     sap.ui.define([
         "sap/ui/core/mvc/Controller",
@@ -1395,9 +1399,9 @@
         });
     ```
 
-    <img src="/img/formatter1.png" alt="formatter" style="zoom:67%;" />
+    <img src="img/formatter1.png" alt="formatter" style="zoom:67%;" />
 
-    <img src="/img/formatter2.png" alt="formatter" style="zoom:67%;" />
+    <img src="img/formatter2.png" alt="formatter" style="zoom:67%;" />
 
     
 
@@ -1458,8 +1462,8 @@
     
 
     
-
+  
     
-
+  
     
 
