@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="iitp.zclb23013.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Input id="inpLname" value="{/lastName}"/>
+                        <Input id="inpFname" value="{/firstName}"/>
+                        <CheckBox id="chk1" text="Check Box1" selected="{/enabled}"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

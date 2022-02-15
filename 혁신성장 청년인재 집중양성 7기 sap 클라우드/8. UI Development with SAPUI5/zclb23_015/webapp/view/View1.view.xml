@@ -1,0 +1,43 @@
+<mvc:View
+    controllerName="iitp.zclb23015.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Table id="tabList" items="{/companies}">
+                            <columns>
+
+                                <Column id="colName">
+                                    <header>
+                                        <Text id="colNameTxt" text="Company Name"/>
+                                    </header>
+                                </Column>
+                                
+                                <Column id="colCity">
+                                    <header>
+                                        <Text id="colCityTxt" text="City"/>
+                                    </header>
+                                </Column>
+
+                            </columns>
+
+                            <items>
+                                <ColumnListItem  id="colList">
+                                    <cells>
+                                        <Text id="celNameTxt" text="{name}"/>
+                                        <Text id="celCityTxt" text="{city}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

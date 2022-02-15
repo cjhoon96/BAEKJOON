@@ -1,0 +1,83 @@
+<mvc:View
+    controllerName="iitp.zdayb2305.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <t:Table    id="MainTable" 
+                                    rows="{/Product}" 
+                                    rowSelectionChange="onRowChange" 
+                                    selectionMode="Single"
+                                    selectionBehavior="Row"
+                                    visibleRowCount="10"
+                                    title="Carrier">
+                            <t:columns>
+                                <t:Column id="colProduct">
+                                    <t:label>
+                                        <Text id="lblProduct" text="Product"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplProduct" text="{Product}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colProductName">
+                                    <t:label>
+                                        <Text id="lblProductName" text="Product Name"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplProductName" text="{ProductName}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colPrice">
+                                    <t:label>
+                                        <Text id="lblPrice" text="Price"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplPrice" text="{Price}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colCurrency">
+                                    <t:label>
+                                        <Text id="lblCurrency" text="Currency"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplCurrency" text="{Currency}"/>
+                                    </t:template>
+                                </t:Column>
+                            </t:columns>
+                        </t:Table>
+                        <Panel id="infoPanel" expandable="true" expand="true" headerText="Product Information">
+                            <f:SimpleForm id="smpleForm">
+                                <f:content>
+                                    <core:Title id="titleProdInfo" text="Product Info"/>
+                                    <Label id="lblPrdct" text="Product"/>
+                                    <Text id="txtProduct" text="{Product}"/>
+                                    <Label id="lblPrdctName" text="Product Name"/>
+                                    <Text id="txtProductName" text="{ProductName}"/>
+                                    <Label id="lblPrc" text="Price"/>
+                                    <Text id="txtPrice" text="{Price}"/>
+                                    <Text id="txtCurrency" text="{Currency}"/>
+                                    
+                                    <core:Title id="titleImg" text="Product Image"/>
+                                    <Label id="lblProductPictureURL" text="Photo"/>
+                                    <Image id="Photo" src="{ProductPictureURL}"></Image>
+                                </f:content>
+                            </f:SimpleForm>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

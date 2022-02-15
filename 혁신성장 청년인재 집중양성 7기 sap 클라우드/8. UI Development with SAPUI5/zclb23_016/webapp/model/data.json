@@ -1,0 +1,14 @@
+{
+    "data":
+        [
+            {
+                "department": "HR",
+                "employee": [{"name": "Mayer"}, {"name": "Treusch"}, {"name": "Schmitt"}, {"name": "Stark"}]
+            },
+            
+            {
+                "department": "Support",
+                "employee": [{"name": "Muller"}, {"name": "Agassi"}, {"name": "Duck"}, {"name": "Pan"}]
+            }
+        ]
+}

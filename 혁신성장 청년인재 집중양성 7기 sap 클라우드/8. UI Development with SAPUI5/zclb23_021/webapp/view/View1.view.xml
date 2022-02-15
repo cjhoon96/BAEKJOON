@@ -1,0 +1,63 @@
+<mvc:View
+    controllerName="iitp.zclb23021.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <t:Table    id="idTableBooking" 
+                                    rows="{/UX_C_Booking_TP}" 
+                                    rowSelectionChange="onBookingChange" 
+                                    selectionMode="Single"
+                                    selectionBehavior="Row"
+                                    visibleRowCount="10"
+                                    title="Booking Data">
+                            <t:columns>
+                                <t:Column id="colCarrid">
+                                    <t:label>
+                                        <Text id="colTxtCarrid" text="Carrier"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="txtCarrid" text="{Carrid}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colConnid">
+                                    <t:label>
+                                        <Text id="colTxtConnid" text="Connection"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="txtConnid" text="{Connid}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colFldate">
+                                    <t:label>
+                                        <Text id="colTxtFldate" text="Flight Date"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="txtFldate" text="{path:'Fldate', type:'sap.ui.model.type.Date'}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colBookid">
+                                    <t:label>
+                                        <Text id="colTxtBookid" text="Booking No."/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="txtBookid" text="{Bookid}"/>
+                                    </t:template>
+                                </t:Column>
+                            </t:columns>
+                        </t:Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

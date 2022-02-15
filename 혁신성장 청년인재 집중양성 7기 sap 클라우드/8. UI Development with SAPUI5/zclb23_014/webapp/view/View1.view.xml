@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="zclb23014.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <List id="idList" items="{/companies}"> 
+                            <items>
+                                <StandardListItem id="stdListItem" title="{name}" description="{city}"></StandardListItem> <!--종속적인 데이터를 binding 할때는 /를 생략한다.-->
+                            </items>
+                        </List>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

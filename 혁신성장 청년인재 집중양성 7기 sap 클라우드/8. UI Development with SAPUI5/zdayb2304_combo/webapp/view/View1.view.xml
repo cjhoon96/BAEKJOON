@@ -1,0 +1,103 @@
+<mvc:View
+    controllerName="iitp.cjh.zdayb2304combo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <ComboBox id="comboBox" items="{/UX_C_Carrier_TP}" selectionChange="onChange">
+                            <items>
+                                <core:ListItem id="item" text="{Carrid}"></core:ListItem>
+                            </items>
+                        </ComboBox>
+                        
+                        <t:Table    id="SubTable" 
+                                    rows="{to_Connection}"
+                                    rowSelectionChange="onConnChange" 
+                                    selectionMode="Single"
+                                    selectionBehavior="Row"
+                                    visibleRowCount="5"
+                                    title="Flight Connection">
+                            <t:columns>
+                                <t:Column id="colConnid">
+                                    <t:label>
+                                        <Text id="lblConnid" text="Connection ID"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplConnid" text="{Connid}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colCityfrom">
+                                    <t:label>
+                                        <Text id="lblCityfrom" text="City From"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplCityfrom" text="{Cityfrom}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colAirpfrom">
+                                    <t:label>
+                                        <Text id="lblAirpfrom" text="Airport From"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplAirpfrom" text="{Airpfrom}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colCityto">
+                                    <t:label>
+                                        <Text id="lblCityto" text="City To"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplCityto" text="{Cityto}"/>
+                                    </t:template>
+                                </t:Column>
+                                
+                                <t:Column id="colAirpto">
+                                    <t:label>
+                                        <Text id="lblAirpto" text="Airport To"/>
+                                    </t:label>
+                                    <t:template>
+                                        <Text id="tplAirpto" text="{Airpto}"/>
+                                    </t:template>
+                                </t:Column>
+                            </t:columns>
+                        </t:Table>
+                        <Panel id="infoPanel" expandable="true" expand="true" headerText="Connection Information">
+                            <f:SimpleForm id="smpleForm">
+                                <f:content>
+                                    <core:Title id="titleFlInfo" text="Flight Info"/>
+                                    <Label id="lblCarr" text="Airline Code"/>
+                                    <Text id="txtCarrid" text="{Carrid}"/>
+                                    <Label id="lblConn" text="Connection ID"/>
+                                    <Text id="txtConnid" text="{Connid}"/>
+                                    
+                                    <core:Title id="titleDeparture" text="Departure Info"/>
+                                    <Label id="lblFrom" text="City From"/>
+                                    <Text id="txtCityFrom" text="{Cityfrom}"/>
+                                    <Label id="lblAirfrom" text="Airport From"/>
+                                    <Text id="txtAirpfrom" text="{Airpfrom}"/>
+                                    
+                                    <core:Title id="titleDestination" text="Destination Info"/>
+                                    <Label id="lblTo" text="City To"/>
+                                    <Text id="txtCityTo" text="{Cityto}"/>
+                                    <Label id="lblAirto" text="Airport To"/>
+                                    <Text id="txtAirpto" text="{Airpto}"/>
+                                </f:content>
+                            </f:SimpleForm>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
