@@ -10,7 +10,7 @@
 
 http://edu.bgis.co.kr:8001/sap/opu/odata/sap/ux_travel_srv
 
-<img src="/img/OData1.png" alt="OData" style="zoom:67%;" />
+<img src="img/OData1.png" alt="OData" style="zoom:67%;" />
 
 
 
