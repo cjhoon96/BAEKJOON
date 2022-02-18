@@ -14,69 +14,69 @@
 
   **SEGW** T-code 를 이용해 SAP GATEWAY SERVICE BUILDER 로 간다.
 
-  <img src="/img/gw1.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw1.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw2.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw2.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw3.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw3.png" alt="gw" style="zoom:80%;" />
   
   Data Model은 
   
-  <img src="/img/gw4.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw4.png" alt="gw" style="zoom:80%;" />
   
   직접 생성할 수도 있으며
   
-  <img src="/img/gw5.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw5.png" alt="gw" style="zoom:80%;" />
   
   import 해올 수도 있다.
   
   
   
-  <img src="/img/gw6.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw6.png" alt="gw" style="zoom:80%;" />
   
   우리는 그중 ***Import => <u>D</u>DIC Structure*** 을 통해 ABAP Dictionary에서 import 하여 실습한다.
   
-  <img src="/img/gw7.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw7.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw8.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw8.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw9.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw9.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw10.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw10.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw11.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw11.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw12.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw12.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw13.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw13.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw14.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw14.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw15.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw15.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw16.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw16.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw17.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw17.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw15.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw15.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw18.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw18.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw19.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw19.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw20.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw20.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw21.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw21.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw22.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw22.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw23.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw23.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw24.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw24.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw25.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw25.png" alt="gw" style="zoom:80%;" />
   
-  <img src="/img/gw26.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw26.png" alt="gw" style="zoom:80%;" />
   
   
   
@@ -170,13 +170,13 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
   <ENTITY_SET>\_GET_ENTITY
 
-  <img src="/img/gw27.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw27.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw31.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw31.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw32.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw32.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw33.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw33.png" alt="gw" style="zoom:80%;" />
 
   ```ABAP
     METHOD flightset_get_entity.
@@ -293,27 +293,27 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
   
 
-<img src="/img/gw34.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw34.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw35.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw35.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw36.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw36.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw37.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw37.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw38.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw38.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw39.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw39.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw40.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw40.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw41.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw41.png" alt="gw" style="zoom:80%;" />
 
 /sap/opu/odata/SAP/ZCLB23_GW_SRV/FlightSet(Airlineid='LH',Connectid='0400',Flightdate=datetime'2021-08-21T00:00:00')
 
 
 
-<img src="/img/gw54.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw54.png" alt="gw" style="zoom:80%;" />
 
 
 
@@ -333,7 +333,7 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
 * ## Exercise 7.
 
-  <img src="/img/gw56.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw56.png" alt="gw" style="zoom:80%;" />
 
   #### PRODUCTSET_GET_ENTITYSET
 
@@ -369,7 +369,7 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
     ENDMETHOD.
   ```
 
-  <img src="/img/gw57.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw57.png" alt="gw" style="zoom:80%;" />
 
   
 
@@ -454,11 +454,11 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
   ENDMETHOD.
   ```
 
-  <img src="/img/gw58.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw58.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw59.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw59.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw60.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw60.png" alt="gw" style="zoom:80%;" />
 
   /sap/opu/odata/SAP/ZGW100_B23_STUDENT_SRV_02/ProductSet('HT-1000')?$format=json
 
@@ -480,15 +480,15 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
 
 
-<img src="/img/gw62.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw62.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw63.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw63.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw64.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw64.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw65.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw65.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw66.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw66.png" alt="gw" style="zoom:80%;" />
 
 #### connectionset_get_entityset
 
@@ -534,9 +534,9 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
   ENDMETHOD.
 ```
 
-<img src="/img/gw67.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw67.png" alt="gw" style="zoom:80%;" />
 
-<img src="/img/gw68.png" alt="gw" style="zoom:80%;" />
+<img src="img/gw68.png" alt="gw" style="zoom:80%;" />
 
 
 
@@ -548,15 +548,15 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
 * ## Navigation Property
 
-  <img src="/img/gw69.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw69.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw70.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw70.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw71.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw71.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw72.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw72.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw73.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw73.png" alt="gw" style="zoom:80%;" />
 
   ```ABAP
     METHOD flightset_get_entityset.
@@ -638,11 +638,11 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
   
 * ## Exercise 9.
 
-  <img src="/img/gw74.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw74.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw75.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw75.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw76.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw76.png" alt="gw" style="zoom:80%;" />
 
   
 
@@ -690,13 +690,13 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
   
 
-  <img src="/img/gw77.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw77.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw78.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw78.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw79.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw79.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw80.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw80.png" alt="gw" style="zoom:80%;" />
 
   
 
@@ -822,11 +822,11 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
   /sap/opu/odata/SAP/ZGW100_B23_STUDENT_SRV_02/BusinessPartnerSet('0100000000')?$expand=Products
 
-  <img src="/img/gw81.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw81.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw82.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw82.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw83.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw83.png" alt="gw" style="zoom:80%;" />
 
 
 

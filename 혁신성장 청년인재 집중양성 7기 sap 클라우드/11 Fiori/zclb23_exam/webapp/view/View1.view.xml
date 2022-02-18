@@ -1,0 +1,120 @@
+<mvc:View
+    controllerName="iitp.zclb23exam.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:t="sap.ui.table"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <l:Grid id="Grid">
+                            <l:content>
+                                <Text id="tab">            
+                                    <layoutData>
+                                        <l:GridData id="grTab" span="L1 M1 S1"/>
+                                    </layoutData>
+                                </Text>
+                                <Label id="lblDeptCombo" text="Department:  " labelFor="comboDept">            
+                                    <layoutData>
+                                        <l:GridData id="grLbl" span="L1 M3 S8"/>
+                                    </layoutData>
+                                </Label>
+                                <ComboBox id="comboDept" items="{/EtDepSet}" selectionChange="onDepChange">       
+                                    <items>
+                                        <core:ListItem id="item" text="{Dtext}"/>
+                                    </items>
+                                </ComboBox>
+                            </l:content>
+                        </l:Grid>
+                        
+                        <Panel id="empTblPanel" expandable="true" expand="true" headerText="Employee List">
+                            <f:SimpleForm id="smpleForm" layout="ResponsiveGridLayout">
+                                <f:content>
+                                    <t:Table    id="tblEmployee"
+                                                rowSelectionChange="onEmpChange" 
+                                                selectionMode="Single"
+                                                selectionBehavior="Row"
+                                                visibleRowCount="5"
+                                                title="Employee List">
+                                        <t:columns>
+                                            <t:Column id="colPernr">
+                                                <t:label>
+                                                    <Text id="lblPernr" text="Employee Number"/>
+                                                </t:label>
+                                                <t:template>
+                                                    <Text id="tplPernr" text="{Pernr}"/>
+                                                </t:template>
+                                            </t:Column>
+                                            
+                                            <t:Column id="colEname">
+                                                <t:label>
+                                                    <Text id="lblEname" text="Name"/>
+                                                </t:label>
+                                                <t:template>
+                                                    <Text id="tplEname" text="{Ename}"/>
+                                                </t:template>
+                                            </t:Column>
+                                            
+                                            <t:Column id="colBegda">
+                                                <t:label>
+                                                    <Text id="lblBegda" text="Enter Date"/>
+                                                </t:label>
+                                                <t:template>
+                                                    <Input id="tplBegda" value="{Begda}"/>
+                                                </t:template>
+                                            </t:Column>
+                                            
+                                            <t:Column id="colGrade">
+                                                <t:label>
+                                                    <Text id="lblGrade" text="Grade"/>
+                                                </t:label>
+                                                <t:template>
+                                                    <Text id="tplGrade" text="{GradeT}"/>
+                                                </t:template>
+                                            </t:Column>
+                                            
+                                            <t:Column id="colDepid">
+                                                <t:label>
+                                                    <Text id="lblDepid" text="Department"/>
+                                                </t:label>
+                                                <t:template>
+                                                    <Text id="tplDepid" text="{Depid}"/>
+                                                </t:template>
+                                            </t:Column>
+                                        </t:columns>
+                                    </t:Table>
+                                </f:content>
+                            </f:SimpleForm>
+                        </Panel>
+                        <Panel id="empInfoPanel" expandable="true" expand="true" headerText="Employee Information">
+                            <f:SimpleForm id="infoForm" layout="ResponsiveGridLayout">
+                                <f:content>
+                                    <Label id="lblTxtDepid" text="Department No." labelFor="txtDepid"/>
+                                    <Text id="txtDepid" text="{Depid}"/>       
+                                    <Label id="lblTxtDtext" text="Department Name" labelFor="txtDtext"/>
+                                    <Text id="txtDtext" text="{Dtext}"/>
+
+                                    <Label id="lblTxtPernr" text="Employee Number" labelFor="txtPernr"/>
+                                    <Text id="txtPernr" text="{Pernr}"/>
+                                    <Label id="lblTxtEname" text="Name" labelFor="txtEname"/>
+                                    <Text id="txtEname" text="{Ename}"/>
+                                    <Label id="lblTxtBegda" text="Enter Date" labelFor="txtBegda"/>
+                                    <Text id="txtBegda" text="{Begda}"/>
+                                    <Label id="lblTxtGradeT" text="Grade" labelFor="txtGradeT"/>
+                                    <Text id="txtGradeT" text="{GradeT}"/>
+                                </f:content>
+                            </f:SimpleForm>
+                        </Panel>
+                        <core:Fragment fragmentName="iitp.zclb23exam.view.dialogPop" type="XML"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

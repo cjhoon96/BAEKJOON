@@ -1,0 +1,16 @@
+<mvc:View
+    controllerName="iitp.zfiorib23master.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <List id="listDep" items="{/EtDepSet}" footerText="End of List" noDataText="No Department" showNoData="true">
+        <items>
+            <ObjectListItem id="objListDept" type="Navigation" title="{Depid}" press="onSelectChange">
+                <attributes>
+                    <ObjectAttribute id="objAttr" title="Department" text="{Dtext}"/>
+                </attributes>
+            </ObjectListItem>
+        </items>
+    </List>
+</mvc:View>

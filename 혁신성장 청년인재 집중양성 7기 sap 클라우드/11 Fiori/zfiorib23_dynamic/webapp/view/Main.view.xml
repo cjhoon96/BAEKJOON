@@ -1,0 +1,35 @@
+<mvc:View
+    controllerName="iitp.zfiorib23dynamic.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Table id="tbDept" items="{/EtDepSet}">
+                            <columns>
+                                <Column id="colDepId">
+                                    <header><Text id="txtDepId" text="Department"/></header>
+                                </Column>
+                                <Column id="colDepName">
+                                    <header><Text id="txtDepName" text="Department Name"/></header>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="colList" press="onItemClick" type="Navigation">
+                                    <cells>
+                                        <ObjectIdentifier id="objIdDept" title="{Depid}"/>
+                                        <Text id="celTxtName" text="{Dtext}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

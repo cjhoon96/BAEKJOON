@@ -1,0 +1,97 @@
+<mvc:View
+    controllerName="iitp.zfiorib23dynamic.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+    <f:DynamicPage id="dynPageCarrier" headerExpanded="true" toggleHeaderOnTitleClick="true">
+        <!-- headerExpanded : Expanded 여부를 결정해준다. -->
+        <!-- toggleHeaderOnTitleClick 헤더 타이틀 부분이나 expand 버튼을 눌러 expand 여부를 결정할 수 있도록 한다. -->
+        <!-- 둘다 false인 경우 구현해도 뜨지 않으며 true false 인경우 확장 된 상태로 계속 유지된다. -->
+        <f:title>
+            <f:DynamicPageTitle id="dynPageTlt">
+                <f:breadcrumbs>
+                    <Breadcrumbs id="brdCrm">
+                        <Link id="linkBack" text="Back" press="onBack"/>
+                    </Breadcrumbs>
+                </f:breadcrumbs>
+                <!-- 이전 단계에 대한 링크 목록을 제공하여 사용자가 항목 사이를 이동할 수 있게 해준다. -->
+                
+                <f:heading>
+                    <Title id="hTltTxt" text="Heading"/>
+                </f:heading>
+                <f:expandedContent>
+                    <Text id="expContTxt" text="Expanded Content"/>
+                </f:expandedContent>
+                <!-- heading 태그 밑에 들어갈 글자를 넣을 수 있으며 이는 expand 여부에 따라 표시여부가 결정된다. -->
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader id="dynPageHeader" pinnable="true">
+            <!-- pinnable 고정할 수 있는 pin 버튼이 추가되며 이를 누를시 헤더 부분이 스크롤을 내려도 고정된다. -->
+                <f:content>
+                    <FlexBox id="flexBox" alignContent="Start" justifyContent="SpaceAround">
+                    <!-- alignContent FlexBox의 글자 세로 배치를 결정한다 
+                    https://sapui5.hana.ondemand.com/#/api/sap.m.FlexAlignContent%23properties -->
+                    <!-- justifyContent FlexBox의 글자의 가로 배치를 결정한다. 
+                    https://sapui5.hana.ondemand.com/#/api/sap.m.FlexJustifyContent-->
+                        <items>
+                            <layout:HorizontalLayout id="horLayout" allowWrapping="true">
+                            <!-- allowWrapping 줄이 길어질 경우 자동 줄바꿈할지 여부를 결정한다. -->
+                                <layout:VerticalLayout id="vrtLayout">
+                                    <ObjectAttribute id="objAttr" text="Employee of Department"/>
+                                </layout:VerticalLayout>
+                            </layout:HorizontalLayout>
+                        </items>
+                    </FlexBox>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <Table id="tbEmpList" items="{/EtEmpSet}">
+                <columns>
+                    <Column id="colEmpNo">
+                        <header><Text id="coltxtEmpNo" text="Employee No."/></header>
+                    </Column>
+                    <Column id="colEmpNm">
+                        <header><Text id="coltxtEmpNm" text="Employee Name"/></header>
+                    </Column>
+                    <Column id="colEntDt">
+                        <header><Text id="coltxtEntDt" text="Enter Date"/></header>
+                    </Column>
+                    <Column id="colGrade">
+                        <header><Text id="coltxtGrade" text="Grade"/></header>
+                    </Column>
+                    <Column id="colDept">
+                        <header><Text id="coltxtDept" text="Department"/></header>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="colList">
+                        <cells>
+                            <Text id="celTxtPernr" text="{Pernr}"/>
+                            <Text id="celTxtEname" text="{Ename}"/>
+                            <Text id="celTxtBegda" text="{Begda}"/>
+                            <Text id="celTxtGrade" text="{Grade}"/>
+                            <Text id="celTxtDtext" text="{Dtext}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+    <!-- <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell> -->
+</mvc:View>

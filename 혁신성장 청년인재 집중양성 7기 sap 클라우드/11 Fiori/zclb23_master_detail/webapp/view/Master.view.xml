@@ -1,0 +1,16 @@
+<mvc:View
+    controllerName="iitp.zclb23masterdetail.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <List id="listDep" items="{/UX_C_Carrier_TP}" footerText="End of List" noDataText="No Department" showNoData="true">
+        <items>
+            <ObjectListItem id="objListDept" type="Navigation" title="{Carrid}" press="onSelectChange">
+                <attributes>
+                    <ObjectAttribute id="objAttr" title="Airline" text="{Carrname}"/>
+                </attributes>
+            </ObjectListItem>
+        </items>
+    </List>
+</mvc:View>

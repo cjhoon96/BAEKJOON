@@ -353,8 +353,10 @@
 
   <img src="img/FIORI50.png" alt="FIORI" style="zoom:75%;" />
 
-  <img src="img/FIORI51.png" alt="FIORI" style="zoom:75%;" />
+  https://edu.bgis.co.kr:8443/sap/bc/ui2/flp?sap-client=100&sap-language=EN#Shell-home
 
+  <img src="img/FIORI51.png" alt="FIORI" style="zoom:75%;" />
+  
   <img src="img/FIORI52.png" alt="FIORI" style="zoom:75%;" />
   
   <img src="img/FIORI53.png" alt="FIORI" style="zoom:75%;" />

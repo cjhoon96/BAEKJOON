@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="iitp.zclb23masterdetail.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Table id="tbConn" items="{/UX_C_Connection_TP}">
+        <columns>
+            <Column id="colCarrid">
+                <header><Text id="colTxtCarrid" text="Airline ID"/></header>
+            </Column>
+            <Column id="colConnid">
+                <header><Text id="colTxtConnid" text="Connection No."/></header>
+            </Column>
+            <Column id="colCityfrom">
+                <header><Text id="colTxtCityfrom" text="City From"/></header>
+            </Column>
+            <Column id="colAirpfrom">
+                <header><Text id="colTxtAirpfrom" text="Airport From"/></header>
+            </Column>
+            <Column id="colCityto">
+                <header><Text id="colTxtCityto" text="City To"/></header>
+            </Column>
+            <Column id="colAirpto">
+                <header><Text id="colTxtAirpto" text="Airport To"/></header>
+            </Column>
+        </columns>
+
+        <items>
+            <ColumnListItem id="colListItem">
+                <cells>
+                    <Text id="celCarrid" text="{Carrid}"/>
+                    <Text id="celConnid" text="{Connid}"/>
+                    <Text id="celCityfrom" text="{Cityfrom}"/>
+                    <Text id="celAirpfrom" text="{Airpfrom}"/>
+                    <Text id="celCityto" text="{Cityto}"/>
+                    <Text id="celAirpto" text="{Airpto}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

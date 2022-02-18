@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="iitp.zfiorib23master.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <SplitApp id="splitApp">
+                            <masterPages></masterPages>
+                            <detailPages></detailPages>
+                        </SplitApp>
+                        <!-- 화면을 분할하여 사용할 수 있도록 해준다.
+                        MANIFEST.JSON 파일을 이용해 MASTERPAGES와 DETAILPAGES에 VIEW 파일을 연결해준다. -->
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

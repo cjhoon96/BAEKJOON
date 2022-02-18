@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="iitp.zfiorib23master.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Table id="tbEmp" items="{/EtEmpSet}">
+        <columns>
+            <Column id="colEmpno">
+                <header><Text id="colTxtEmpno" text="Employee No."/></header>
+            </Column>
+            <Column id="colEmpName">
+                <header><Text id="colTxtEmpName" text="Employee Name."/></header>
+            </Column>
+            <Column id="colEntDt">
+                <header><Text id="colTxtEntDt" text="Enter Date"/></header>
+            </Column>
+            <Column id="colGrade">
+                <header><Text id="colTxtGrade" text="Grade"/></header>
+            </Column>
+            <Column id="colDepid">
+                <header><Text id="colTxtDepid" text="Department"/></header>
+            </Column>
+        </columns>
+
+        <items>
+            <ColumnListItem id="colListItem">
+                <cells>
+                    <Text id="celPernr" text="{Pernr}"/>
+                    <Text id="celEname" text="{Ename}"/>
+                    <Text id="celBegda" text="{Begda}"/>
+                    <Text id="celGrade" text="{Grade}"/>
+                    <Text id="celDtext" text="{Dtext}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

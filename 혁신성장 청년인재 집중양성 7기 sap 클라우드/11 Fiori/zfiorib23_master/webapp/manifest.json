@@ -1,0 +1,133 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "iitp.zfiorib23master",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZUX410DEMO_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.98.0",
+      "libs": {
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "iitp.zfiorib23master.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "iitp.zfiorib23master.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+            "name": "RouteView1",
+            "pattern": "RouteView1",
+            "target": [
+              "TargetView1"
+            ]
+        },  
+
+        {
+          "name": "Main",
+          "pattern": "",
+          "target": ["Main"]
+        },
+
+        {
+          "name": "Detail",
+          "pattern": "Detail/{selDepid}",
+          "target": ["Detail"]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "View1",
+            "viewName": "View1"
+          },
+  
+        "Main": {
+          "viewType": "XML",
+          "viewName": "Main",
+          "controlAggregation": "masterPages",
+          "controlId": "splitApp"
+        },
+        "Detail": {
+          "viewType": "XML",
+          "viewName": "Detail",
+          "controlAggregation": "detailPages",
+          "controlId": "splitApp"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "iitp.zfiorib23master.view.View1",
+      "type": "XML",
+      "async": true,
+      "id": "View1"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<mvc:View xmlns:control="sap.gantt.control"
+    controllerName="iitp.zclb23dynamic.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Table id="tblCarr" items="{/UX_C_Carrier_TP}"> 
+                            <columns>
+                                <Column id="colCarrid">
+                                    <header><Text id="txtCarrid" text="Airline ID"/></header>
+                                </Column>
+                                <Column id="colCarrName">
+                                    <header><Text id="txtCarrName" text="Airline Name"/></header>
+                                </Column>
+                                <Column id="colCurrcode">
+                                    <header><Text id="txtCurrcode" text="Currency"/></header>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="colList" press="onItemClick" type="Navigation">
+                                    <cells>
+                                        <ObjectIdentifier id="objIdDept" title="{Carrid}"/>
+                                        <Text id="celCarrname" text="{Carrname}"/>
+                                        <Text id="celCurrcode" text="{Currcode}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
