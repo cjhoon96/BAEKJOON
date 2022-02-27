@@ -30,7 +30,7 @@
   
   import 해올 수도 있다.
   
-  
+   
   
   <img src="img/gw6.png" alt="gw" style="zoom:80%;" />
   
@@ -78,7 +78,7 @@
   
   <img src="img/gw26.png" alt="gw" style="zoom:80%;" />
   
-  
+   
   
   Direct navigation to the CRUD methods of DPC EXT class:
   
@@ -234,15 +234,15 @@ SERVICE IMPLEMENTATION (DPC) 두가지 방법
 
   <ENTITY_SET>\_GET_ENTITYSET
 
-  <img src="/img/gw27.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw27.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw28.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw28.png" alt="gw" style="zoom:80%;" />
 
   \_GET_ENTITYSET 을 선택 후 Redefine method 버튼을 클릭한다.
 
-  <img src="/img/gw29.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw29.png" alt="gw" style="zoom:80%;" />
 
-  <img src="/img/gw30.png" alt="gw" style="zoom:80%;" />
+  <img src="img/gw30.png" alt="gw" style="zoom:80%;" />
 
   ```ABAP
     METHOD flightset_get_entityset.

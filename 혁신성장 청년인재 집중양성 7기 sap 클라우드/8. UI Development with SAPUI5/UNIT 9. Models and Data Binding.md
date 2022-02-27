@@ -1467,3 +1467,128 @@
   
     
 
+
+
+
+
+
+
+
+
+```
+
+    <f:DynamicPage id="dynamicPage" preserveHeaderStateOnScroll="true" headerExpanded="true" toggleHeaderOnTitleClick="true">
+        <!-- 페이지 Header 부분 -->
+        <f:title>
+            <f:DynamicPageTitle id="dynPageTlt">
+                <f:heading>
+                    <Title id="hTltTxt" text="Stock Data"/>
+                </f:heading>
+                <f:expandedContent>
+                    <Text text="지점내 재고 조회"/>
+                </f:expandedContent>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- 헤더부분 (접히는 부분으로 지점의 사진? 로고? 와 지점 명 지점의 주소를 입력 -->
+        <f:header>
+            <f:DynamicPageHeader id="dynPageHeader" pinnable="true">
+                <FlexBox alignItems="Start" justifyContent="SpaceAround">
+                    <items>
+                        <Panel>
+                        <!-- <l:HorizontalLayout> -->
+                            <Image src="/img/snow.jpg" height="5%" width="5%">
+                                <layoutData>
+                                    <l:GridData span="L2 M1 S1"></l:GridData>
+                                </layoutData>
+                            </Image>
+                            <!-- <Text text="img"/> -->
+                            <l:VerticalLayout>
+                                <Text text="서울 은평지점"/>
+                                <Text text="서울 은평구 연서로 29길 30-4"/>
+                            </l:VerticalLayout>
+                        <!-- </l:HorizontalLayout> -->
+                        </Panel>
+                    </items>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        
+        <f:content>
+
+            <t:Table 
+                id="tblStock"
+                rows="{/Stock}"
+                selectionMode="Single"
+                visibleRowCount="100">
+                <t:extension>
+                    <OverflowToolbar style="Clear">
+                        <Label text="Product" labelFor="inputProd"/>
+                        <Input id="inputProd" width="20%"/>
+                        <Label text="to" labelFor="inputProdTo"/>
+                        <Input id="inputProdTo" width="20%"/>
+                        <ToolbarSpacer/>
+                        <Button text="조회" press="onSearch"/>
+                        <Button text="PO요청" press="onCreate"/>
+                    </OverflowToolbar>
+                    <!-- <l:HorizontalLayout>
+                        <Title text="Product"/>
+                        <Input id="inputProd"/>
+                        <Text text="to"/>
+                        <Input id="inputProdTo"/>
+                        <ToolbarSpacer/>
+                        <Button text="조회" press="onSearch"/>
+                        <Button text="PO요청" press="onCreate"/>
+                    </l:HorizontalLayout> -->
+                </t:extension>
+                
+                <t:columns>
+                    <t:Column>
+                        <Label text="상품코드"/>
+                        <t:template>
+                            <Text text="{prodId}"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="상품명"/>
+                        <t:template>
+                            <Text text="{prodName}"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="사이즈"/>
+                        <t:template>
+                            <Text text="{prodSize}"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="재고수량"/>
+                        <t:template>
+                            <Text text="{stock}"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="입고예정수량"/>
+                        <t:template>
+                            <Text text="0"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="안전재고"/>
+                        <t:template>
+                            <Text text="{safety}"/>
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Label text="가용재고?"/>
+                        <t:template>
+                            <Text text="{= ${stock} - ${safety} }"/>
+                        </t:template>
+                    </t:Column>
+                </t:columns>
+            </t:Table>
+        </f:content>
+    </f:DynamicPage>
+```
+
