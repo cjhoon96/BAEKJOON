@@ -17,7 +17,7 @@ sap.ui.define([
 
             getRouter: function () {
                 return UIComponent.getRouterFor(this);
-
+ 
             },
             _onObjectMatched: function (oEvent) {
                 var parmDepid = oEvent.getParameter("arguments").selDepid;
