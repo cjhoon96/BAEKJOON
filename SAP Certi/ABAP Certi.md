@@ -286,9 +286,12 @@ secondary key 로 접근할때
 
 항상 primary key 로 접근할때 
 
+<BR/>
+
 ****
 
-* hashed internal table : primary key로만 구성
+hashed internal table : primary key로만 구성
+
 * 오직 1개 라인만 조회
 * index 사용 X
 * left-justified fully qualified of the key
@@ -350,8 +353,6 @@ secondary key 로 접근할때
   | N   | 문자형 데이터(숫자) 1~65535                               |
   | P   | 소수 값을 가질 수 있는 타입으로 LENGTH 와 DECIMAL 의 길이를 지정 1~16 |
   | X   | Hexadecimal(16진수) 타입 1~65535                      |
-  
-  
 
 Size 지정해야 하는 data type (C, N, P, X) 
 
@@ -410,7 +411,6 @@ Size 지정해야 하는 data type (C, N, P, X)
 * **<u>*SAP reference IMG*</u>** 에서 검색
 
 * **<u>*TADIR / MODSAPT* </u>** 테이블 조회
-
 
 Application Hierarchy 에서는 찾을 수 없다.
 
@@ -559,11 +559,7 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 ##### Domain
 
-
-
 lable 를 설정할 수 있는 위치 (Data element)
-
-
 
 <BR/>
 
@@ -822,8 +818,6 @@ context mapping : context 간 연결 (component controllers and view controllers
 
 <BR/>
 
-
-
 # Q18.
 
 ### Which objects are automatically created when you create a new function group?
@@ -985,4 +979,496 @@ structure에 컬럼 두개를 만들어서 table에 include 시킨다.
 
 <BR/>
 
+# Q21.
 
+### How is an ABAP program with several dialog steps executed?
+
+#### 여러개의 DIALOG 단계가 존재하는 ABAP 프로그램은 어떻게 실행되는가?
+
+#### Please choose the correct answer.
+
+### *<u>Usually, dialog steps are assigned to different dialog work</u>*
+
+### *<u>processes.</u>*
+
+    보통 DIALOG 단계들은 별도의 DIALOG WORK PROCESS 들을 할당 받는다.
+
+##### The program is always executed in just one dialog work process with roll out.
+
+프로그램은 항상 ROLL OUT 을 통해 단 하나의 DIALOG WORK PROCESS 에서 실행된다.
+
+##### The ABAP dispatcher takes over the entire execution without assigning any work process.
+
+ABAP 디스패처는 어떤 WORK PROCESS 도 할당하지 않고 전체 실행을 인계한다.
+
+##### The program is always executed in just one dialog work process without roll out
+
+프로그램은 항상 ROLL OUT 없이 단 하나의 DIALOG WORK PROCESS 에서 실행된다.
+
+<BR/>
+
+****
+
+abap dispature : work process load balancing
+dialog work process : roll-in, roll-out 계속 발생.
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q22.(skip)
+
+### When starting the Debugger, what circumstance causes the runtime error DEBUGGING_NOT_POSSIBLE?
+
+#### 디버깅을 시작할때 DEBUGGING_NOT_POSSIBLE 런타임 오류가 발생하는 상황은 무엇인가?
+
+#### Please choose the correct answer.
+
+When more than six sessions are already associated with this login user
+
+로그인된 사용자로 6개 이상의 세션이 이미 연결되어있는경우
+When more than five sessions are already associated with this login user
+
+로그인된 사용자로 5개 이상의 세션이 이미 연결되어있는경우
+
+Starting a non-exclusive mode in a productive system
+
+productive system에서 NON-EXCLUSIVE 시작
+
+When the number of debugging sessions on the server exceeds the value defined by the profile parameter rdisp/wpdbug_max_no
+
+서버의 디버깅 세션 수가 프로파일 매개 변수 rdisp/wpdbug_max_no에 의해 정의된 값을 초과하는 경우
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q23.
+
+### Which statement will interrupt the processing of the current screen and branch to new screen?
+
+#### 다음중 현 SCREEN 의 프로세스를 일시 정지 시키고 새로운 SCREEN 으로 분기 될 구문은 무엇인가?
+
+#### Please choose the correct answer.
+
+### *<u>CALL SCREEN \<NNNN></u>*
+
+##### LEAVE TO SCREEN \<NNNN>
+
+##### None of the above
+
+##### SET SCREEN \<NNNN>
+
+<BR/>
+
+****
+
+screen 이동방법, 
+leave to screen 200 : 현재 화면에서 나와서 200 으로 간다.
+call screen 200 : 200으로 갔다가 다시 호출 위치로 돌아온다.
+
+##### 중지가 아닌 일시 정지의 의미를 갖는 interrupt 기억
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q24.
+
+### What does SAP recommend that you use a hashed table?
+
+#### 해시 테이블을 사용하는 것을 SAP에서 권장하는 경우는 무엇인가?
+
+#### Please choose the correct answer.
+
+##### When a table is very large and you want to access the table by index only.
+
+테이블의 크기가 매우 크고 index 만을 통해 테이블에 접근하기를 원하는 경우
+
+### *<u>When a table is very large and you want to access the </u>*
+
+### *<u>table by key only</u>*
+
+    테이블의 크기가 매우 크고 key 만을 통해 테이블에 접근하기를 원하는 경우
+
+##### When a table must be accessible by both index and key
+
+테이블이 index와 key 모두를 통해 접근이 가능해야 하는 경우
+
+##### When a table must be sorted automatically by key in ascending order *<u>(sorted table</u>*)
+
+테이블이 key를 통해 자동으로 정렬 돼야 하는 경우 ***<u>(sorted table)</u>***
+
+<BR/>
+
+---
+
+hashed internal table : primary key로만 구성
+
+- 오직 1개 라인만 조회
+- index 사용 X
+- left-justified fully qualified of the key
+
+---
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q25.
+
+### Which does the field catalog allow you to do?
+
+#### FIELD CATALOG 의 기능은?
+
+#### 3 correct
+
+### *<u>Add a field to the display</u>*
+
+    DISPLAY 할 FIELD 추가
+
+### *<u>Change the display order of a column</u>*
+
+    COLUMN 의 DIPLAY 순서 변경
+
+##### Specify the sort order of the display table
+
+DISPLAY 되는 TABLE의 정렬 순서 지정
+
+### *<u>Change the title of a column</u>*
+
+    COLUMN 의 TITLE 변경
+
+#### Produce a striped pattern for the display lines (layout 기능)
+
+표시선에 대한 STRIPED 패턴 생성
+
+<BR/>
+
+****
+
+ALV 컬럼 제어 기능 : 
+
+field catalog 
+
+* 컬럼 추가
+
+* 특정 컬럼 숨기기
+
+* 출력 순서 변경
+
+* 컬럼 title 변경
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q26.
+
+### You Created the following ABAP Code:
+
+```abap
+DATA x TYPE REF TO DATA
+DATA y TYPE REF TO OBJECT
+ASSIGN x TO <fs>
+ASSIGN y TO <fs>
+```
+
+### You want to add a declaration of \<fs> to the Code.
+
+#### 당신은 FIELD-SYBOL \<fs> 의 선언문을 코드에 추가하기를 원한다.
+
+### Which of the Following Declarations are Valid?
+
+#### 다음중 유효한 선언문은 무엇인가?
+
+#### 2 correct
+
+### *<u>FIELD-SYMBOLS \<fs> TYPE ANY</u>*
+
+##### FIELD-SYMBOLS \<fs> TYPE REF TO ANY
+
+### *<u>FIELD-SYMBOLS \<fs></u>*
+
+##### FIELD-SYMBOLS TYPE REF TO DATA
+
+<br/>
+
+****
+
+Field-symbols : 특정 변수로 point 할 수 있는 변수.
+X와 Y의 Type 이 다르기 때문(DATA type과 Object type)에 두가지를 모두 받을 수 있는 Any로 type 설정. 지정 하지 않은 경우 default 가 Type ANY.
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q27.
+
+### Which hook method exists for all controller types?
+
+#### 다음 HOOK METHOD 중 모든 CONTROLLER TYPE 에서 존재하는 것은?
+
+#### Please choose the correct answer.
+
+##### wddoonopen( )  -- window
+
+##### wddoonclose( ) – window
+
+### *<u>wddoinit( )</u>*
+
+##### wddobeforenavigation( )  -- component
+
+<BR/>
+
+****
+
+WEB Dynpro 의 controller 종류
+: component, window, view, custom, configuration controller
+모두 가지고 있는 hook method : wddoinit( ), wddoexit( )
+
+![Q27_1.jpg](.\IMG\Q27_1.jpg)
+![Q27_2.jpg](.\IMG\Q27_2.jpg)
+![Q27_3.jpg](.\IMG\Q27_3.jpg)
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q28.
+
+### When you add programming logic to your ABAP program that checks authorizations, which of the following do you have to create?
+
+#### ABAP PROGRAM 에 권한 부여를 확인하는 LOGIC을 추가할때 다음중 생성해야하는 것은?
+
+#### 2 correct
+
+
+
+### *<u>An authorization object</u>*
+
+##### An authorization Access
+
+### *<u>An authorization role</u>*
+
+##### An authorization profile
+
+
+
+****
+
+authorization check : 
+
+[Authorization Check(권한 점검) : 네이버 블로그](https://m.blog.naver.com/softwon1/221873016346)
+
+Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) 에서 Role 생성 후 할당
+
+즉 권한 부여 확인을 위해서는 
+
+* *<u>**Authorization object**</u>*
+
+* *<u>**Role**</u>* 
+
+을 생성해 주어야한다.
+
+**** 
+
+<br/>
+
+<br/>
+
+<br/>
+
+****
+
+****
+
+<br/>
+
+<br/>
+
+# Q29.
+
+### When included in a structure, which elementary field types allow the structure to be considered a character-type data object?
+
+#### STRUCTURE 에 포함될때 CHARACTER TYPE DATA OBJECT로 여겨지는 ELEMENTARY FIELD TYPE 은?
+
+#### 4 correct
+
+
+
+### *<u>C</u>*
+
+### *<u>D</u>*
+
+### *<u>N</u>*
+
+##### X
+
+##### XSTRING
+
+##### F
+
+### *<u>T</u>*
+
+##### I
+
+##### STRING
+
+<BR/>
+
+****
+
+Numeric types: I, F, P.
+Character types: C, D, N, T.
+Hexadecimal types: X
+
+[ABAP Data Types](https://www.abaptutorial.com/abap-programming/abap-data-types/)
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q30.
+
+### What happens when an authorization check fails?
+
+#### 권한 체크에 실패한 경우 어떤일이 발생하는가?
+
+#### Please choose the correct answer.
+
+### *<u>The system field SY-SUBRC is set to a value other than zero.</u>*
+
+    SYSTEM FIELD SY-SUBRC 가 '0' 이 아닌 값으로 설정된다
+
+##### A CX_AUTH_FAILED type exception is raised.
+
+CX_AUTH_FAILED 유형의 예외가 발생한다. 
+
+##### The program is terminated.
+
+프로그램이 종료된다.
+
+##### A type E message is displayed.
+
+유형 E 메시지가 표시된다.
+
+<BR/>
+
+****
+
+* 0 : 사용자는 권한을 가지고 있다.
+
+* 4 : 사용자는 권한을 가지고 있지 않다.
+
+* 8 : 권한 체크에 기술된 필드의 수가 정확하지 않다.
+
+* 12 : 권한 오브젝트가 존재하지 않는다.
+
+즉 권한 체크 로직을 실행한 직후 SY-SUBRC 를 통해 권한 여부에 따라 처리하는 로직을 추가로 작성해 주어야 한다.
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
