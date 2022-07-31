@@ -1321,8 +1321,6 @@ WEB Dynpro 의 controller 종류
 
 #### 2 correct
 
-
-
 ### *<u>An authorization object</u>*
 
 ##### An authorization Access
@@ -1330,8 +1328,6 @@ WEB Dynpro 의 controller 종류
 ### *<u>An authorization role</u>*
 
 ##### An authorization profile
-
-
 
 ****
 
@@ -1372,8 +1368,6 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 #### STRUCTURE 에 포함될때 CHARACTER TYPE DATA OBJECT로 여겨지는 ELEMENTARY FIELD TYPE 은?
 
 #### 4 correct
-
-
 
 ### *<u>C</u>*
 
@@ -1470,5 +1464,479 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 ****
 
 <BR/>
+
+<BR/>
+
+# Q31.
+
+### You add the CREATE PROTECTED addition to a class definition.
+
+#### class 정의에 CREATE PROTECTED 를 추가한다.
+
+### From where you can instantiate the class?
+
+#### 어떤 클래스에서 인스턴스화 할 수 있는가?
+
+#### 3 correct
+
+# *<u>From the class itself</u>*
+
+##### From any protected class
+
+# *<u>From a friend class</u>*
+
+# *<u>From a child class</u>*
+
+##### From a parent class
+
+<BR/>
+
+****
+
+* CREATE PUBLIC이 추가된 클래스
+  
+  패키지 개념의 프레임워크 내에서 클래스가 보이는 모든 위치에서 인스턴스화할 수 있습니다.  
+
+* CREATE PROTECTED가 추가된 클래스
+  
+  * SUBCLASS METHOD
+  
+  * CLASS 자체의 METHOD 
+  
+  * FRIEND CLASS METHOD
+  
+  에서만 인스턴스화할 수 있습니다.  
+
+* CREATE PRIVATE가 추가된 클래스
+  
+  클래스 자체의 메서드 또는 친구의 메서드에서만 인스턴스화할 수 있습니다. 
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q32.
+
+### What is data binding?
+
+#### DATA BINDING 이란 무엇인가?
+
+#### Please choose the correct answer.
+
+##### Connecting an outbound plug on one view to the inbound plug of another view
+
+하나의 VIEW 에 있는 OUTBOUND PLUG 를 다른 VIEW 의 INBOUND PLUG 에 연결
+
+# *<u>Connecting the values of user interface</u>*
+
+# *<u>elements to the context attributes of</u>*
+
+# *<u>the corresponding controller</u>*
+
+    USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연결
+
+##### Connecting a context node in one controller to a context node in another controller
+
+하나의 CONTROLLER 에 있는 CONTEXT NODE 를 다른 CONTROLLER 에 있는 CONTEXT NODE 에 연결
+
+##### Connecting one Web Dynpro component to another Web Dynpro component
+
+하나의 WEB DYNPRO COMPONENT 를 다른 WEB DYNPRO COMPONENT 에 연결
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q33.
+
+### Which of the following statements regarding search helps are true?
+
+#### 다음중 SEARCH HELP 에 대한 설명중 옳은 것은?
+
+#### 3 correct
+
+## *<u>Help views can also be used for the selection method for search help.</u>*
+
+    HELP VIEW 들은 SEARCH HELP 를 위한 SELECTION METHOD 에 사용될 수 있다.
+
+##### You can use a maintenance view for the search help selection method.
+
+MAINTENANACE VIEW 를 SEACH HELP SELECTION METHO 에 사용할 수 있다.
+
+## *<u>You can use transparent tables for the search help selection method.</u>*
+
+    TRANSPARENT TABLE 을 SEARCH HELP SELECTION METHOD 에 사용할 수 있다.
+
+## *<u>You can use a database view for the search help</u>*
+
+## *<u>selection method.</u>*
+
+    DB VIEW 를 SEARCH HELP SELECTION METHOD 에 사용할 수 있다.
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q34.
+
+### You can use the logical expression IS SUPPLIED for any formal parameter passed to which modularization unit?
+
+#### 어떤 모듈화 단위에서 전달되는 FORMAL PARAMETER 에 논리식 IS SUPPLIED 을 사용할 수 있는가?
+
+#### 3 correct
+
+## *<u>Instance method</u>*
+
+##### Subroutine (FORM routine)
+
+## *<u>Static method</u>*
+
+## *<u>Function module</u>*
+
+<BR/>
+
+****
+
+if AA is supplied.  (import parameter 의 값이 전송 되었는가?)
+   write : aa.
+else
+   write ‘Nothing’.
+endif.
+
+subroutine에서 사용하면 syntax 에러 발생
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q35.    ?????????????????????? downcast 다시
+
+### You need to perform a downcast. What should you do?
+
+#### DOWNCAST를 수행하려면 무엇을 해야하는가?
+
+#### 2 correct
+
+##### Use the operator “=“.
+
+"=" 연산자 사용
+
+## *<u>Perform the downcast only if an upcast has already</u>*
+
+## *<u>been done for the object reference.</u>*
+
+    UPCAST 가 OBJECT 참조 완료되어야 DOWNCAST 가능하다.
+
+##### Assign a subclass reference to a superclass reference.
+
+##### (upcasting에 대한 설명)
+
+SUBCLASS 참조를 SUPERCLASS 참조에 할당한다.
+
+## *<u>Catch the exception CX_SY_MOVE_CAST_ERROR.</u>*
+
+<BR/>
+
+****
+
+downcast : ?= 로 처리
+move를 사용 시 에러가 발생하면 CX_SY_MOVE_CATE_ERROR exception 이 발생함.
+
+부모 Class의 Object를 자식 class의 Object에 할당 
+Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
+Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
+따라서 Down-Cast를 사용하여 access 한다.
+
+Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
+
+따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 EXCEPTIONS을 처리해준다.
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q36.
+
+### How many work areas are available in the Debugger?
+
+디버거에서 사용할 수 있는 WORK AREA 는 몇개인가?
+
+Please choose the correct answer.
+
+##### 7
+
+##### 9
+
+## *<u>12</u>*
+
+##### 15
+
+<br/>
+
+****
+
+debug tab 수
+
+* DESKTOP1 
+
+* DESKTOP2 
+
+* DESKTOP3 
+
+* STANDARD 
+
+* STRUCTURES 
+
+* TABLES 
+
+* OBJECTS 
+
+* DETAILDISPLAY 
+
+* DATA EXPLORER 
+
+* BREAK./WATCHPOINT 
+
+* DIFF 
+
+* SCRIPT
+
+****
+
+<br/>
+
+<br/>
+
+<br/>
+
+****
+
+****
+
+<br/>
+
+<br/>
+
+# Q37.
+
+### Which of the following conditions must be fulfilled when using a GROUP BY clause in a SELECT statement?
+
+#### SELECT 문에서 GROUP BY 절을 사용할 때 만족해야되는 조건은 무엇인가?
+
+#### 2 correct
+
+##### The fields after GROUP BY must have a character type. (숫자도 올 수 있음)
+
+GROUP BY 절 뒤의 FIELD 는 CHARCTER TYPE 이어야한다.
+
+##### The SELECT statement must also have a WHERE clause. (where 절 없어도 됨)
+
+SELECT 문은 WHERE 절도 있어야한다.
+
+## *<u>The table in the FROM clause must be a transparent</u>*
+
+## *<u>table.</u>*
+
+    FROM 절의 TABLE 은 TRANSPARENT TABLE 이어야한다.
+
+## *<u>All fields in the SELECT clause that are not part of an</u>*
+
+## *<u>aggregate function must be listed after GROUP BY.</u>*
+
+    SELECT 문에서 집계 함수의 대상이 아닌 모든 FIELD 들은 GROUP BT 뒤에 작성해야만 
+
+    한다. 
+
+<BR/>
+
+****
+
+table 종류 :
+transparent table
+cluster table : group by 절에 사용할 수 없다.
+pool table : group by 절에 사용할 수 없다.
+
+[[SAP ABAP] DB Table 3가지 : 네이버 블로그](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100)
+
+****
+
+<BR/>
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+<BR/>
+
+# Q38.
+
+### Which of the following can you do with the ABAP debugger?
+
+#### 다음중 ABAP DEBUGGER 로 할 수 있는 것은?
+
+#### 3 correct
+
+##### Analyze SQL traces. (SQL trace에서 하는 기능)
+
+SQL TRACE 분석
+
+## *<u>Analyze memory usage.</u>*
+
+메모리 사용량 분석
+
+#### Change source code. (debugging 하는 중 source code를 못바꾼다.)
+
+SOURCE CODE 수정
+
+## *<u>Analyze internal tables</u>*
+
+ITAB 분석
+
+## *<u>Compare data objects.</u>*
+
+DATA OBJECT 비교
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q39.
+
+### What is the default length of the type C data type?
+
+#### DATA TYPE C  의 기본 길이는 무엇인가?
+
+#### Please choose the correct answer.
+
+##### 1–65535
+
+##### 100
+
+## *<u>1</u>*
+
+##### 10
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q40.
+
+### Which of the following are valid control level changes within a loop over an internal table?
+
+#### 다음중 ITAB 의 LOOP 에서 유효한 CONTROL LEVEL 변경은 무엇인가?
+
+#### 2 correct
+
+## *<u>END of \<f></u>*
+
+##### COLLECT
+
+## LAST  (아마 AT LAST, 또는 AT FIRST 로 문제가 나왔을 것이다.)
+
+##### SUM
+
+<BR/>
+
+****
+
+control level processing (internal table)
+
+```abap
+LOOP AT it INTO wa.
+  AT FIRST. (맨 앞에서..)
+    코딩
+  ENDAT.
+
+  AT END OF carrid. (특정 값이 끝났을 때..)
+    코딩
+  ENDAT.
+
+  AT NEW carrid.
+    코딩
+  ENDAT.    
+
+  AT LAST. (맨 마지막에서..)
+    코딩
+  ENDAT.
+
+ENDLOOP.
+```
+
+위 구문을 사용하기 위해서 sorting(정렬) 된 상태여야 한다.
+
+****
+
+<BR/>
+
+****
+
+****
 
 <BR/>
