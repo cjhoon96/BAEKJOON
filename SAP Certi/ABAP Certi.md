@@ -1940,3 +1940,360 @@ ENDLOOP.
 ****
 
 <BR/>
+
+# Q41.
+
+### When is an ENDSELECT not required for a SELECT?
+
+#### SELECT 문에서 ENDSELECT 구문이 필요하지 않은 경우는 무엇인가?
+
+#### 3 correct
+
+##### When the FROM is a view
+
+FROM 절에 사용되는 것이 VIEW 일 경우
+
+## *<u>When you specify into a table</u>*
+
+테이블로 지정하는 경우 
+
+## *<u>When you do a SELECT SINGLE</u>*
+
+SELECT SINGLE 을 하는 경우
+
+## *<u>When you specify a join of tables</u>*
+
+테이블을 JOIN 하는 경우 
+
+## *<u>When you specify appending a table</u>*
+
+테이블 APPENDING 하는 경우
+
+<BR/>
+
+****
+
+select * into table it from abc.  => 기존 데이터를 지우고 입력
+select * appending it from abc. => 기존 데이터에 추가해서 입력
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q42.
+
+### Which data element property do you set so that the system logs changes to the content of fields with this data element?
+
+#### 시스템 로그가 이 DATA ELEMENT 로 된 필드의 내용의 변경에 대한 LOG 를 남기려면 DATA ELEMNT 속성을 설정해야 하는가?
+
+#### Please choose the correct answer.
+
+
+
+## *<u>Change document</u>*
+
+##### Documentation
+
+##### PARAMETER ID
+
+##### Input history
+
+<BR/>
+
+****
+
+SE11 > Data element > Further characteristics tab > change document 에서 처리
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q43.
+
+### What does the enhancement category for a database table or structure do?
+
+#### DB TABLE 이나 STRUCTURE 에 대한 ENHANCEMENT CATEGORY 가 하는 것은 무엇인가?
+
+#### 3 correct
+
+##### Makes a table Unicode-compliant
+
+테이블이 UNICODE 호환 되도록한다.
+
+## *<u>Can identify where program behavior may change</u>*
+
+프로그램 동작이 변경될 수 있는 위치를 식별할 수 있다.
+
+## *<u>Can produce warnings at incompatible points for the structure</u>*
+
+structure 에 대해 호환되지 않는 지점에 대한 경고를 생성할 수 있다.
+
+## *<u>Specifies the types of changes that can be made to the structure</u>*
+
+structure 에 적용할 수 있는 변경의 type 을 지정한다.
+
+<br/>
+
+****
+
+Enhancement Category 사용 이점 : 
+
+프로그램의 영향력 방지. 구조적 모순점에 대한 경고 생성. 
+
+테이블이나 STRUCTURE 생성시 뜨는 WARNING 메시지를 기억하면 편하다.
+
+*<u>**"Enhancement category for --- missing"**</u>*
+
+[[SAP/ABAP] 테이블, 구조 생성 시 warning (Enhancement category for table missing)](https://sssinga.tistory.com/227)
+
+****
+
+# Q44.
+
+### Which of the following must you do to be able to use a Business Add-in(BAdI)?
+
+#### BADi를 사용하기 위해 해야할 것은 무엇인가?
+
+#### 2 correct
+
+##### Modify the adapter class (adapter class : BAdIs를 얻어오기 위한 것)
+
+ADPTER CLASS 수정
+
+## *<u>Write code for methods</u>*
+
+METHOD 에대한 CODE 작성
+
+##### Activate the enhancement project (customer exit)
+
+ENHANCEMENT PROJECT  ACTIVATE 하기
+
+## *<u>Create the BADI implementation</u>*
+
+BAdI IMPLEMENTATION 생성
+
+<BR/>
+
+****
+
+BAdIs : method에 프로그램 코딩, 
+
+****
+
+<br/>
+
+# Q45.
+
+### You want to move a transport request from the development system to the subsequent system. Which of the following are prerequisites for this?
+
+#### 개발 시스템에서 부속 시스템으로 전송요청을 이동하고자 한다. 다음중 전제조건을 고르시오?
+
+#### 2 correct
+
+## *<u>All objects included in the transport request must be activated.</u>*
+
+전송 요청에 포함된 모든 OBJECT를 활성화
+
+## *<u>The transport request must be released</u>*
+
+전송 요청이 RELEASE 되어야 한다.
+
+##### All tasks of the transport request must be assigned to the same user. (여러 user를 등록하여 요청)
+
+전송 요청의 모든 TASK 들은 동일한 사용자에게 할당되어야 한다. 
+
+##### The extended program check must show no warnings. (warnings 이 있어도 request 요청 됨)
+
+<BR/>
+
+****
+
+change request 설명
+activate, CDC에 요청해야 함.
+
+****
+
+<BR/>
+
+# Q46.
+
+### What is the event block that all of your code changes belongs to if you do not explicitly code any event blocks in an executable program?
+
+#### executable program에서 어떤 EVENT BLOCK도 명시적으로 CODING 하지 않은 경우 모든 코드 변경이 속하는 EVENT BLOCK 은 무엇인가?
+
+#### Please choose the correct answer.
+
+
+
+## *<u>START-OF-SELECTION</u>*
+
+##### INITIALIZATION
+
+##### LOAD-OF-PROGRAM
+
+##### AT SELECTION-SCREEN OUTPUT
+
+<BR/>
+
+****
+
+executable program 에서 명시하지 않아도 무조건 발동 : start-of-selection
+
+****
+
+<BR/>
+
+# Q47.
+
+### What will happen at runtime when accessing a buffered table?
+
+#### BUFFER 된 테이블에 접근할때 RUNTIME 에서 발생하는 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+
+
+##### All SELECT statements will read data from the buffer.
+
+모든 SELECT 문은 BUFFER 에서 데이터를 읽어온다.
+
+##### Following an update to a buffered record, all table buffers in the system will be updated. (synchronization 이벤트 실행 시 만)
+
+버퍼된 RECORD로 UPDATE 하면 시스템의 모든 BUFFER 가 UPDATE 된다. 
+
+##### If table data is read using indexes, the table buffer will not be filled. (X)
+
+테이블 데이터가 INDEX 를 통해 READ 되는 경우 테이블 BUFFER 는 채워지지 않는다.
+
+## *<u>If data is read from the table buffer, the existing indexes are not used.</u>*
+
+데이터가 TABLE BUFFER 로 부터 READ 되는 경우 기존 인덱스는 사용되지 않는다.
+
+<BR/>
+
+****
+
+by-pass buffer
+ABAP join
+select .. .by pass buffer.
+select … for update
+native SQL
+index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index를 사용하지 않는다.
+
+****
+
+<BR/>
+
+# Q48.
+
+### You want to add a field ZZPRICE to the SAP standard transparent table EKKO.
+
+#### 당신은 ZZPRICE 필드를 SAP STANDARD TRANSPARENT TABLE EKKO 에 추가하기를 원한다.
+
+### Which of the following actions result in an enhancement of the SAP standard?
+
+#### 다음 행동중 SAP STANDARD 의 ENHANCEMENT 에대한
+
+#### 2 correct
+
+
+
+##### Insert ZZPRICE at the end of the table
+
+테이블의 마지막에 ZZPRICE 삽입
+
+##### Insert ZZPRICE into an SAP structure for the table
+
+TABLE 을 위한 SAP STRUCTURE 에 ZZPRICE 삽입
+
+## *<u>Create an append structure and add ZZPRICE to it.</u>*
+
+APPEND STRUCTURE 생성 후 이에 ZZPRICE 추가
+
+## *<u>Add ZZPRICE to the customizing include for the table</u>*
+
+TABLE 을 위한 CUSTOMIZING INCLUDE 에 ZZPRICE 추가
+
+<BR/>
+
+****
+
+append structure 컬럼 추가
+ci_include (customizing include) 사용
+
+****
+
+<BR/>
+
+# Q49.
+
+### Where are fixed values for fields stored?
+
+#### 필드의 고정값 은 어디에 저장되는가?
+
+#### Please choose the correct answer.
+
+##### Table
+
+## *<u>Domain</u>*
+
+##### Structure
+
+##### Data element
+
+##### Field
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q50.
+
+### Which of the following ABAP data types are compatible with the generic character-type CLIKE?
+
+#### 다음 ABAP DATA TYPE들 중 GENERIC CHARACTER TYPE CLIKE와 호환 되는 것은?
+
+#### 3 correct
+
+## *<u>N</u>*
+
+## *<u>STRING</u>*
+
+##### XSTRING
+
+## *<u>C</u>*
+
+##### DECFLOAT
+
+<BR/>
+
+****
+
+clike character-type : c, d, n, t, string and character-type flat structures
+csecuence text-type : c, string    When the FROM is a view
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
