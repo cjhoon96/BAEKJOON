@@ -1994,8 +1994,6 @@ select * appending it from abc. => 기존 데이터에 추가해서 입력
 
 #### Please choose the correct answer.
 
-
-
 ## *<u>Change document</u>*
 
 ##### Documentation
@@ -2135,8 +2133,6 @@ activate, CDC에 요청해야 함.
 
 #### Please choose the correct answer.
 
-
-
 ## *<u>START-OF-SELECTION</u>*
 
 ##### INITIALIZATION
@@ -2162,8 +2158,6 @@ executable program 에서 명시하지 않아도 무조건 발동 : start-of-sel
 #### BUFFER 된 테이블에 접근할때 RUNTIME 에서 발생하는 것은 무엇인가?
 
 #### Please choose the correct answer.
-
-
 
 ##### All SELECT statements will read data from the buffer.
 
@@ -2207,8 +2201,6 @@ index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index�
 #### 다음 행동중 SAP STANDARD 의 ENHANCEMENT 에대한
 
 #### 2 correct
-
-
 
 ##### Insert ZZPRICE at the end of the table
 
@@ -2297,3 +2289,560 @@ csecuence text-type : c, string    When the FROM is a view
 ****
 
 <BR/>
+
+# Q51.
+
+### What are the advantages of defining texts symbols in executable programs?
+
+#### EXECUTABLE PROGRAM 을 개발하는데 있어 TEXT SYMBOL을 정의하는 것의 이점은 무엇인가?
+
+#### 2 correct
+
+##### The same text symbol can be used by other programs
+
+같은 TEXT SYMBOL 이 다른 프로그램에서도 사용 될 수 있다.
+
+## *<u>They facilitate multilingual functionality</u>*
+
+다국어 기능을 지원한다.
+
+##### Then can store up to 256 characters
+
+256자까지 저장할 수 있다.
+
+## *<u>They are easier to maintain than literals</u>*
+
+LITERAL 보다 유지 보수 하기 쉽다.
+
+<BR/>
+
+****
+
+multilingual functionality
+132 characters
+공유불가, 유지보수 쉽다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q52.
+
+### When would you call the RFC function module synchronously?
+
+#### 어느경우 RFC FUNCTION MODULE을 동기적으로 호출하는가?
+
+#### 2 correct
+
+## *<u>During two-way communication</u>*
+
+TWO-WAY  통신 중인 경우
+
+## *<u>During queue processing</u>*
+
+QUEUE 처리중인 경우
+
+##### During unidirectional communication
+
+UNIDIRECTIONAL 통신 중인 경우
+
+##### During interactive communication
+
+INTERACTIVE 통신 중인 경우
+
+<BR/>
+
+****
+
+RFC function module 이 언제 sync 방식으로 작동하는가?
+Q-RFC 무조건 동기방식. 
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q53.
+
+### The statements CALL BADI and GET BADI are used for which type of BAdIs?
+
+#### CALL BAdI 와 GET BAdI 구문은 어느 타입의 BAdI 를 위해 사용되는가?
+
+#### Please choose the correct answer.
+
+
+
+##### Classical BAdI
+
+##### None of the above
+
+## *<u>New BAdI</u>*
+
+##### Classical DDic
+
+<BR/>
+
+****
+
+class BAdIs 찾는 방법
+: find CL_EXITHANDLER
+
+
+NEW BAdIs 찾는 방법
+: get BAdIs
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q54. (Skip)
+
+### Which of the following are valid combinations of event visibility and handler method visibility?
+
+#### 다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
+
+#### 2 correct
+
+
+
+##### Private event and public handler
+
+##### Protected event and public handler
+
+## *<u>Public event and protected handler</u>*
+
+## *<u>Private event and private handler</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q55.
+
+### Which of the following ABAP statements throws an error at the syntax check?
+
+#### 다음중 ERROR 나 SYNTAX CHECK 를 띄우는 ABAP 구문은?
+
+#### Please choose the correct answer.
+
+##### DATA variable(5) TYPE p.
+
+## *<u>DATA variable(5) TYPE t.</u>*
+
+##### DATA variable.
+
+##### DATA variable(5) TYPE n.
+
+<BR/>
+
+****
+
+t type은 6 user-defined alphanumeric characters.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q56.
+
+### What can you do with the code inspector?
+
+CODE INSPECTOR 로 할 수 있는 것은?
+
+#### 2 correct
+
+
+
+## Create your own inspections, object sets and check variants
+
+자체 검사, 개체 세트 및 변형 확인
+
+## Create an object set to represent the programs and objects to be inspected
+
+검사할 프로그램 및 개체를 나타내는 OBJECT 집합을 생성
+
+##### Create only local inspections, objects sets and check variants (global 가능)
+
+로컬 검사와 OBJECT 집합만을 생성하며 변수 검사 수행
+
+##### Choose from only the performance, security and user interface check categories
+
+성능, 보안, 사용자 인터페이스 검사 카테고리에서만 선택
+
+<BR/>
+
+****
+
+프로그램 coding check : (tcode : SCI)
+다국어 처리, 변수 선언 후 미사용. local, global 생성
+setup : inspection name, object set name, check variant name
+
+****
+
+<BR/>
+
+# Q57.
+
+### Which comparison operators can you use in a logical expression related to the WHERE clause of the SELECT statement?
+
+SELECT 문의 WHERE 절과 관련된 논리식에서 사용할 수 있는 비교 연산자는?
+
+3 correct 
+
+
+EQ (equals)
+LIKE (fits pattern)
+
+## *<u>CP (contains pattern) </u>*
+
+## – 특정 문자열 pattern 을 가진 문자열
+
+## *<u>CO (contains only) </u>*
+
+## – 오직 그 문자를 반드시 포함한 문자열
+
+GT (greater than)
+<BR/>
+
+****
+
+CP, CO 는 String function.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q58.
+
+### Which controller types can exist within a Web Dynpro component?
+
+WEB DYNPRO COMPONENT 내에 존재할 수 있는 CONTROLLER TYPE 은?
+
+3 correct 
+
+
+## *<u>Window controller</u>*
+
+## *<u>View controller</u>*
+
+User controller
+
+## *<u>Component controller</u>*
+
+Application controller
+
+<BR/>
+
+****
+
+추가로 configuration controller, custom controller
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q59.
+
+### What is the SAP recommended naming convention for append structures of standard SAP tables?
+
+표준 SAP 테이블의 APPEND STRUCTURE 에 대해 SAP 에서 권장하는 네이밍 룰은 무엇인가?
+
+ Please choose the correct answer.
+
+
+The name of the append structure must start with ZA.
+APPEND STRUCTURE 의 이름은 ZA 로 시작
+
+The components of an append structure should start with Z or Y.
+APPEND STRUCTURE의 구성요소는 Z 나 Y 로 시작되어야 한다.
+
+The name of the append structure must start with ZZ or YY.
+
+APPEND STRUCTURE의 이름은 ZZ 나 YY로 시작해야한다.
+
+## *<u>The components of an append structure should start with ZZ or YY.</u>*
+
+APPEND STRUCTURE의 구성요소는 ZZ나 YY로 시작해야한다.
+
+<BR/>
+
+****
+
+structure name 은 ZAS
+
+테이블명 : 정해지지 않았음.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q60.
+
+### You enhance an SAP standard global class by defining a post-method for an SAP method. The original SAP method has an EXPORT parameter named PARM1.
+
+너는 SAP 메소드에 대한 POST-METHOD 를 정의하여 SAP STANDARD GLOBAL CLASS 를 ENHANCE 하려고 한다. 기존 SAP METHOD 는 PARM1 이라는 EXPORT 파라미터를 가지고 있다.
+
+### Which parameters does the post-method have?
+
+POST-METHOD 는 어떤 파라미터를 가지고 있는가?
+
+Please choose the correct answer
+
+
+A RETURNING parameter named PARM1
+An EXPORT parameter named PARM1
+An OMPORT parameter named PARM1
+
+## *<u>A CHANGING parameter named PARM1</u>*
+
+<BR/>
+
+****
+
+implicit enhancement : SAP에서 명하시지 않아도 넣을 수 있는 것.
+                    <=실행전에 넣을 수 있는 method : pre-method
+SAP에서 제공해주는 std method
+                    <=실행 후에 넣을 수 있는 method : post-method
+export parameter 가 post-method 가 change되었을 때, changing parameter 로 바뀜.
+(pre-method도 동일)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q61.
+
+### dbtab is a transparent table. What is declared by the following statement? DATA myvar TYPE dbtab.
+
+DBTAB 은 TRANSPARENT TABLE 이다. 다음 문장에 의해 선언되는것은?
+
+Please choose the correct answer.
+
+
+An elementary field
+
+## *<u>A structure variable</u>*
+
+A reference to an internal table
+An internal table
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q62.
+
+### You have 2 objects:
+
+### O1 of type class C1 and O2 of type class C2.
+
+### Class C2 is a subclass of class C1. Which of the following statements implements an upcast?
+
+#### CLASS C2 는 C1 의 SUBCLASS 이다. 다음중 UPCAST 를 구현한 구문은?
+
+Please choose the correct answer.
+
+
+MOVE O1 TO O2.
+MOVE O1 ?TO O2.
+
+## *<u>O1 = O2.</u>*
+
+O2 ?= O1 (downcast).
+
+<BR/>
+
+****
+
+O2 : subclass , O2 => O1 이 되어야 upcast, O1 =>  O2 는 downcast,
+Move A to B : A => B
+B = A : A => B
+
+****
+
+<BR/>
+
+# Q63.
+
+### Which of the following is a true statement?
+
+다음중 옳은 것은?
+
+2 correct 
+
+
+## *<u>An access key is required to enhance an SAP application using a user exit.</u>*
+
+USER EXIT 을 사용하여 SAP APPLICATION 을 ENHANCE 하려면 ACCESS KEY 가 필요하다.
+An access key is required to implement an implicit enhancement point. (언제든지)
+
+ACCESS KEY 는 IMPLICIT ENHANCEMENT POINT 를 구현하기 위해 필요하다.
+
+An access key is required to implement business add-ins.
+
+BAdI 를 구현하기 위해 ACCESS KEY 가 필요하다.
+
+## An access key is required to modify SAP repository objects.
+
+SAP REPOSITORY OBJECT 를 수정하기 위해 ACCESS KEY 가 필요하다.
+
+<BR/>
+
+****
+
+access key : SAP standard modification, User Exit.
+
+****
+
+<BR/>
+
+Question 64: 
+Each work process… 
+There are 3 correct answers to this question.
+Response: 
+    Can make database changes spanning multiple database LUWs.
+    Uses a pool of database connections established when the SAP NetWeaver Application Server ABAP started.
+    Is independent of other work processes.
+    Can only make database changes within a single database LUW.
+    Uses a database connection to a work process established when the SAP NetWeaver Application Server ABAP started.
+DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
+
+Question 65
+Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
+Please choose the correct answer.
+Response: 
+    Database and operating system abstraction
+    Business process management
+    Multi-channel access
+    Master data management
+SAP GUI
+SAP Application : Application Layer platform
+SAP Database
+
+Question 66: 
+You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
+ Please choose the correct answer.
+Response: 
+    Assign function type E to the Cancel button and handle it in a module with the addition AT EXIT-COMMAND.
+    Set the function code assigned to the Cancel button to CANCEL and handle it in a module with the addition AT EXIT-COMMAND.
+    Use the LOOP AT SCREEN. ... ENDLOOP statement to set the "required" property of the input fields to zero.
+    Set the function type assigned to the Cancel button to S and handle it in a module with the addition AT EXIT-COMMAND.
+Function type : E
+Module exit AT Exit-command
+
+Question 67: 
+Which of the following steps are required to set up a shared memory area?
+There are 3 correct answers to this question.
+Response: 
+    Declare a catalog object
+    Enable multiple versions of an area root class
+    Call the attach_for_write method of area root class
+    Generate an area root class
+    Set the root object
+읽는 메소드 : attach for read
+set root class object to area
+
+Question 68: 
+What is unique about a singleton?
+There are 2 correct answers to this question.
+Response: 
+    It cannot be defined as FINAL.
+    It must be instantiated using a public instance constructor.
+    It must be instantiated using a protected instance constructor.
+    It must be instantiated using a private instance constructor.
+    It must be instantiated using a static protected constructor.
+    It must be instantiated using a static public constructor.
+    It must be defined as FINAL.
+    must be instantiated using a static private constructor.
+singleton : create object를 할 수 없고, method를 통해서 object를 생성할 수 있다.
+final을 사용하여 상속 방지
+constructor를 static으로 선언.
+
+Question 69: (skip)
+An ABAP program processes the following expression:
+ r = a / b + c
+ Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
+ There are 2 correct answers to this question
+ Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
+Response: 
+    DATA: r TYPE p DECMALS 2,
+a TYPE i VLAUE 201,
+b TYPE i VALUE 200,
+c TYPE f.
+    DATA: r TYPE p,
+a type I VALUE 201,
+b type I VALUE 200,
+c type i.
+    DATA: r TYPE p DECIMALS 2,
+a TYPE i VALUE 201,
+b TYPE i VALUE 200,
+c TYPE 
+    DATA: r TYPE f,
+a TYPE i VALUE 201,
+b TYPE i VALUE 200,
+c TYPE f.
+
+Question 70: 
+How would you define a method of an ABAP class to prevent this method from being available in a subclass?
+Please choose the correct answer.
+Response: 
+    Final
+    Private
+    Protected
+    Abstract
+자식 클래스에서 부모의 method를 못보게 하는 방법 private
