@@ -2579,8 +2579,6 @@ Application controller
 
  Please choose the correct answer.
 
-
-
 The name of the append structure must start with ZA.
 APPEND STRUCTURE 의 이름은 ZA 로 시작
 
@@ -2624,8 +2622,6 @@ structure name 은 ZAS
 POST-METHOD 는 어떤 파라미터를 가지고 있는가?
 
 Please choose the correct answer
-
-
 
 A RETURNING parameter named PARM1
 An EXPORT parameter named PARM1
@@ -3050,79 +3046,231 @@ ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 
 
 <BR/>
 
-Question 71: 
-A structure has enhancement category 3, can be enhanced (character-type).
-Which set of elementary types is allowed for the new fields?
-Please choose the correct answer.
-Response: 
-    C,D,N,X
-    D,I,string, T
-    C,D,N,T
-    F,I,P,X
+# Q71.
+
+### A structure has enhancement category 3, can be enhanced (character-type).
+
+STRUCTURE 은 ENHANCE 될 수 있는 3가지 ENHANCEMENT CATEGORY가 있다.다.
+
+### Which set of elementary types is allowed for the new fields?
+
+다음중 새로운 FIELD에 허용되는 ELEMENT TYPE 들만 모아 놓은 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+C,D,N,X
+D,I,string, T
+
+## *<u>C,D,N,T</u>*
+
+F,I,P,X
+
+<BR/>
+
+****
+
 Clike : CNDT and string
 csequence : c and string
 string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (여기서는 character-type 옵션이므로)
 
-Question 72: 
-Which components of the class can be accessed in the implementation of a static method in that class?
-There are 2 correct answers to this question
-Response: 
-    Instance attributes
-    Types
-    All events
-    Constants
+#### ENHANCEMENT CATEGORYS
+
+1. Can be Enhanced(deep) - we can enhance this table/structure with a deep structure, reference fields or any other valid field types.
+
+2. Can be Enhanced (Character-Type or Numeric) - we can enhance the tables/structure with fields that are strictly character or numeric types eg: C,N,D,T,I etc.
+
+3. Can be Enhanced (Character Type) - can be enhanced by only including character type fields
+
+4. Cannot Be Enhanced - Restricting Enhancement of the table/structure post creation.
+
+****
+
+<BR/>
+
+****
+
+<BR/>
+
+# Q72.
+
+### Which components of the class can be accessed in the implementation of a static method in that class?
+
+어떤 COMPONENT 들이 해당 클래스의 STATIC METHOD 의 IMPLEMENTATION 에 접근할 수 있는가?
+
+#### 2 correct
+
+Instance attributes
+
+## *<u>Types</u>*
+
+All events
+
+## *<u>Constants</u>*
+
+<BR/>
+
+****
+
 static method에서 접근 할 수 있는 것. : static attribute , Types, constants
 
-Question 73: 
-What does a Web Dynpro component contain?
-There are 3 correct answers to this question.
-Response: 
-    Multiple views within a window
-    A context
-    Component controller
-    UI elements
-    Exactly one interface controller
+****
+
+<BR/>
+
+# Q73.
+
+### What does a Web Dynpro component contain?
+
+WEB DYNPRO COMPONENT 가 포함하는 것은?
+
+#### 3 correct
+
+## Multiple views within a window
+
+ A context
+
+## Component controller
+
+UI elements
+
+## Exactly one interface controller
+
+<BR/>
+
+****
+
+[Web Dynpro 개념 정리 : 네이버 블로그](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=megabzr&logNo=220342641347)
+
 context : 각 controller 마다 모두 존재.
-UI element : View controller에 전재.
+UI element : View controller에 존재.
 interface controller , component controller : 무조건 하나
 
-Question 74: 
-What are the advantages of modularization?
-There are 3 correct answers to this question
-Response: 
-    Transparency
-    Performance
-    Maintainability
-    Profitability across DBMS
-    Reusability
+A CONTEXT 라고 되어있어서 틀린것으로 보임
+
+****
+
+<BR/>
+
+# Q74.
+
+### What are the advantages of modularization?
+
+MODUL 화의 장점은?
+
+#### 3 correct
+
+## Transparency
+
+Performance
+
+## Maintainability
+
+Profitability across DBMS
+
+## Reusability
+
+<BR/>
+
+****
+
+모듈화의 장점은 
+
+* TRANSPARENCY 투명성
+
+* MAINTAINABILITY 유지보수성
+
+* REUSABILITY 재사용성
+
 모듈화 : class, function, subroutine 
 profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
-Question 75: 
-Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
-There are 4 correct answers to this question.
-Response: 
-    INCLUDE
-    TYPE-POOL
-    METHOD
-    FUNCTION-POOL
-    PROGRAM
-    CLASS-POOL
-    REPORT
-    FUNCTION MODULE
-    INTERFACE-POOL
-실행 가능 단위 (se80에서 F8로 실행되는 프로그램) : Method, function module, module pool (screen program, online program), class-pool, report)
+****
 
-Question 76: 
-Which of the following are true statements?
-There are 3 correct answers to this question.
-Response: 
-    You can also select predefined data types to define the data type of the data element.
-    Reference data types can be used to define the data type of the data element.
-    Field labels are defined for the domain.
+<BR/>
+
+# Q75.
+
+### Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
+
+ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로그램의 타입이나 프로그램의 부분은 무엇인가?
+
+#### 4 correct
+
+INCLUDE
+TYPE-POOL
+
+## METHOD
+
+FUNCTION-POOL
+
+PROGRAM
+
+## CLASS-POOL
+
+## REPORT
+
+## FUNCTION MODULE
+
+INTERFACE-POOL
+
+<BR/>
+
+****
+
+실행 가능 단위 (se80에서 F8로 실행되는 프로그램) : 
+
+* Method
+
+* function module
+
+* module pool (screen program, online program)
+
+* class-pool
+
+* report
+
+****
+
+<BR/>
+
+# Q76.
+
+### Which of the following are true statements?
+
+다음중 옳은 것을 고르시오
+
+#### 3 correct
+
+## You can also select predefined data types to define the data type of the data element.
+
+PREDEFINED DATA TYPE 으로 DATA ELEMENT 의 DATA TYPE 을 정의 할 수 있다.
+
+## Reference data types can be used to define the data type of the data element.
+
+REFERENCE DATA TYPE 은 DATA ELEMENT 의 DATA TYPE 을 정의하는데 사용될 수 있다.
+
+##### Field labels are defined for the domain.
+
+FIELD LABEL 은 DOMAIN 에서 정의된다.
+
+## The technical attributes of the data element can be defined by a domain, that is, the data type, the field length, and the number of decimal places.
+
+DATA ELEMENT 의 기술적 속성은 DOMAIN에 의해 정의며 이는 DATA TYPE , FIELD 의 길이, DECIMAL PLACE 의 길이 가 있다.
+
+<BR/>
+
+****
 
 Field labels : data element에서 셋업
 data element의 기술적인 정보는 domain이 가지고 있다 .(data type, field lemgth, decimal places 등등)
+
+![data_element.png](.\IMG\data_element.png)
+
+
+
+****
+
+<BR/>
 
 Question 77: 
 Each component has an interface; of what does this interface consist?
