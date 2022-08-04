@@ -3089,6 +3089,8 @@ string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (
 
 ****
 
+****
+
 <BR/>
 
 # Q72.
@@ -3117,6 +3119,12 @@ static method에서 접근 할 수 있는 것. : static attribute , Types, const
 
 <BR/>
 
+****
+
+****
+
+<BR/>
+
 # Q73.
 
 ### What does a Web Dynpro component contain?
@@ -3125,15 +3133,15 @@ WEB DYNPRO COMPONENT 가 포함하는 것은?
 
 #### 3 correct
 
-## Multiple views within a window
+## *<u>Multiple views within a window</u>*
 
  A context
 
-## Component controller
+## *<u>Component controller</u>*
 
 UI elements
 
-## Exactly one interface controller
+## *<u>Exactly one interface controller</u>*
 
 <BR/>
 
@@ -3151,6 +3159,12 @@ A CONTEXT 라고 되어있어서 틀린것으로 보임
 
 <BR/>
 
+****
+
+****
+
+<BR/>
+
 # Q74.
 
 ### What are the advantages of modularization?
@@ -3159,15 +3173,15 @@ MODUL 화의 장점은?
 
 #### 3 correct
 
-## Transparency
+## *<u>Transparency</u>*
 
 Performance
 
-## Maintainability
+## *<u>Maintainability</u>*
 
 Profitability across DBMS
 
-## Reusability
+## *<u>Reusability</u>*
 
 <BR/>
 
@@ -3188,6 +3202,12 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 <BR/>
 
+****
+
+****
+
+<BR/>
+
 # Q75.
 
 ### Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
@@ -3199,17 +3219,17 @@ ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로�
 INCLUDE
 TYPE-POOL
 
-## METHOD
+## *<u>METHOD</u>*
 
 FUNCTION-POOL
 
 PROGRAM
 
-## CLASS-POOL
+## *<u>CLASS-POOL</u>*
 
-## REPORT
+## *<u>REPORT</u>*
 
-## FUNCTION MODULE
+## *<u>FUNCTION MODULE</u>*
 
 INTERFACE-POOL
 
@@ -3233,6 +3253,12 @@ INTERFACE-POOL
 
 <BR/>
 
+****
+
+****
+
+<BR/>
+
 # Q76.
 
 ### Which of the following are true statements?
@@ -3241,11 +3267,11 @@ INTERFACE-POOL
 
 #### 3 correct
 
-## You can also select predefined data types to define the data type of the data element.
+## *<u>You can also select predefined data types to define the data type of the data element.</u>*
 
 PREDEFINED DATA TYPE 으로 DATA ELEMENT 의 DATA TYPE 을 정의 할 수 있다.
 
-## Reference data types can be used to define the data type of the data element.
+## *<u>Reference data types can be used to define the data type of the data element.</u>*
 
 REFERENCE DATA TYPE 은 DATA ELEMENT 의 DATA TYPE 을 정의하는데 사용될 수 있다.
 
@@ -3253,7 +3279,7 @@ REFERENCE DATA TYPE 은 DATA ELEMENT 의 DATA TYPE 을 정의하는데 사용될
 
 FIELD LABEL 은 DOMAIN 에서 정의된다.
 
-## The technical attributes of the data element can be defined by a domain, that is, the data type, the field length, and the number of decimal places.
+## *<u>The technical attributes of the data element can be defined by a domain, that is, the data type, the field length, and the number of decimal places.</u>*
 
 DATA ELEMENT 의 기술적 속성은 DOMAIN에 의해 정의며 이는 DATA TYPE , FIELD 의 길이, DECIMAL PLACE 의 길이 가 있다.
 
@@ -3266,53 +3292,160 @@ data element의 기술적인 정보는 domain이 가지고 있다 .(data type, f
 
 ![data_element.png](.\IMG\data_element.png)
 
+****
 
+<BR/>
+
+****
 
 ****
 
 <BR/>
 
-Question 77: 
-Each component has an interface; of what does this interface consist?
-There are 2 correct answers to this question.
-Response: 
-    Interface controller
-    Data Container
-    Interface view
-    Interface context
+# Q77.
+
+### Each component has an interface; of what does this interface consist?
+
+각 component 는 interface 를 가지고 있다. 이 interface 들은 무엇으로 구성되어있는가?
+
+#### 2 correct
+
+Interface controller
+Data Container
+
+## *<u>Interface view</u>*
+
+## *<u>Interface context</u>*
+
+<br/>
+
+****
+
 Web dynpro 가 가지고 있는 것 : Interface controller, interface view.
 
-Question 78: 
-What types of changes to the repository does SAP provide?
-There are 3 correct answers to this question.
-Response: 
-    SAP Notes
-    Deployments from SDN.SAP.COM
-    Transports
-    Support Packages
-    Enhancement Packages
-SAP Notes : bugs patch. 
-STD를 변경할 때 제공되는 것 : SAP Notes, Support package(SAP Notes의 집합), Enhancement Packages, 추가로 upgrade version.
+****
 
-Question 79: 
-Which of the following are features of the Context in Web Dynpro?
-There are 2 correct answers to this question
-Response: 
-    Every Web Dynpro controller has multiple Contexts
-    Every Web Dynpro controller has one Context
-    Data is shared between controllers through Context mapping
-    Data is transferred from one Context to another by firing plugs
+<br/>
+
+****
+
+****
+
+<BR/>
+
+# Q78.
+
+### What types of changes to the repository does SAP provide?
+
+SAP 는 REPOSITORY 변환하는데 있어 어떤 유형들을 제공하는가?
+
+#### 3 correct
+
+## *<u>SAP Notes</u>*
+
+Deployments from SDN.SAP.COM
+
+Transports
+
+## *<u>Support Packages</u>*
+
+## *<u>Enhancement Packages</u>*
+
+<BR/>
+
+****
+
+SAP Notes : bugs patch. 
+STD를 변경할 때 제공되는 것 : 
+
+* SAP Notes
+
+* Support package(SAP Notes의 집합)
+
+* Enhancement Packages
+
+* 추가로 upgrade version.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q79.
+
+### Which of the following are features of the Context in Web Dynpro?
+
+다음중 WEB DYNPRO 의 CONTEXT 특징은 무엇인가?
+
+2 correct 
+
+##### Every Web Dynpro controller has multiple Contexts
+
+모든 WEB DYNPRO CONTROLLER 는 여러 CONTEXT 들을 가지고 있다.
+
+## *<u>Every Web Dynpro controller has one Context</u>*
+
+모든 WEB DYNPRO CONTROLLER 들은 하나의 CONTEXT 를 가지고 있다.
+
+## *<u>Data is shared between controllers through Context mapping</u>*
+
+DATA 는 CONTEXT MAPPING 을 통해 CONTROLLER들 사이에서 공유된다.
+
+##### Data is transferred from one Context to another by firing plugs
+
+DATA 는 FIREING PLUG 방식으로 하나의 CONTEXT 로 부터 다른 CONTEXT 로 이동된다.
+
+<BR/>
+
+****
+
 Context는 각 controller 별로 한 개씩 갖는다.
 context mapping : context 간 Data sharing or Data Transferring.
 firing plugs : 각 view(화면)간 이동을 위해 필요한 것.
 
-Question 80: 
-To which context object is the attribute LEAD_SELECTION_INDEX related?
-Please choose the correct answer.
-Response: 
-    Element
-    Node
-    Attribute
-    Supply function
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q80.
+
+### To which context object is the attribute LEAD_SELECTION_INDEX related?
+
+LEAD_SELECTION_INDEX 속성과 관련된 CONTEXT OBJECT 는?
+
+#### Please choose the correct answer.
+
+Element
+
+## *<u>Node</u>*
+
+Attribute
+Supply function
+
+<BR/>
+
+****
+
 Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
 화면은 data binding에 의해서 context와 연결되어 있음.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
