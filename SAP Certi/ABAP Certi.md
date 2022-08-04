@@ -2381,8 +2381,6 @@ Q-RFC 무조건 동기방식.
 
 #### Please choose the correct answer.
 
-
-
 ##### Classical BAdI
 
 ##### None of the above
@@ -2397,7 +2395,6 @@ Q-RFC 무조건 동기방식.
 
 class BAdIs 찾는 방법
 : find CL_EXITHANDLER
-
 
 NEW BAdIs 찾는 방법
 : get BAdIs
@@ -2419,8 +2416,6 @@ NEW BAdIs 찾는 방법
 #### 다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
 
 #### 2 correct
-
-
 
 ##### Private event and public handler
 
@@ -2478,8 +2473,6 @@ CODE INSPECTOR 로 할 수 있는 것은?
 
 #### 2 correct
 
-
-
 ## Create your own inspections, object sets and check variants
 
 자체 검사, 개체 세트 및 변형 확인
@@ -2515,7 +2508,6 @@ setup : inspection name, object set name, check variant name
 SELECT 문의 WHERE 절과 관련된 논리식에서 사용할 수 있는 비교 연산자는?
 
 3 correct 
-
 
 EQ (equals)
 LIKE (fits pattern)
@@ -2553,7 +2545,6 @@ WEB DYNPRO COMPONENT 내에 존재할 수 있는 CONTROLLER TYPE 은?
 
 3 correct 
 
-
 ## *<u>Window controller</u>*
 
 ## *<u>View controller</u>*
@@ -2587,6 +2578,7 @@ Application controller
 표준 SAP 테이블의 APPEND STRUCTURE 에 대해 SAP 에서 권장하는 네이밍 룰은 무엇인가?
 
  Please choose the correct answer.
+
 
 
 The name of the append structure must start with ZA.
@@ -2634,6 +2626,7 @@ POST-METHOD 는 어떤 파라미터를 가지고 있는가?
 Please choose the correct answer
 
 
+
 A RETURNING parameter named PARM1
 An EXPORT parameter named PARM1
 An OMPORT parameter named PARM1
@@ -2669,7 +2662,6 @@ DBTAB 은 TRANSPARENT TABLE 이다. 다음 문장에 의해 선언되는것은?
 
 Please choose the correct answer.
 
-
 An elementary field
 
 ## *<u>A structure variable</u>*
@@ -2696,7 +2688,6 @@ An internal table
 #### CLASS C2 는 C1 의 SUBCLASS 이다. 다음중 UPCAST 를 구현한 구문은?
 
 Please choose the correct answer.
-
 
 MOVE O1 TO O2.
 MOVE O1 ?TO O2.
@@ -2725,15 +2716,15 @@ B = A : A => B
 
 2 correct 
 
-
 ## *<u>An access key is required to enhance an SAP application using a user exit.</u>*
 
 USER EXIT 을 사용하여 SAP APPLICATION 을 ENHANCE 하려면 ACCESS KEY 가 필요하다.
-An access key is required to implement an implicit enhancement point. (언제든지)
+
+##### An access key is required to implement an implicit enhancement point. (언제든지)
 
 ACCESS KEY 는 IMPLICIT ENHANCEMENT POINT 를 구현하기 위해 필요하다.
 
-An access key is required to implement business add-ins.
+##### An access key is required to implement business add-ins.
 
 BAdI 를 구현하기 위해 ACCESS KEY 가 필요하다.
 
@@ -2751,98 +2742,429 @@ access key : SAP standard modification, User Exit.
 
 <BR/>
 
-Question 64: 
-Each work process… 
-There are 3 correct answers to this question.
-Response: 
-    Can make database changes spanning multiple database LUWs.
-    Uses a pool of database connections established when the SAP NetWeaver Application Server ABAP started.
-    Is independent of other work processes.
-    Can only make database changes within a single database LUW.
-    Uses a database connection to a work process established when the SAP NetWeaver Application Server ABAP started.
+# Q64.
+
+### Each work process…
+
+각 WORK PROCESS 들은 
+
+#### 3 correct
+
+##### Can make database changes spanning multiple database LUWs.
+
+여러 DB LUW에 걸쳐 DB 를 수정할 수 있다.
+
+##### Uses a pool of database connections established when the SAP NetWeaver Application Server ABAP started.
+
+SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 DB CONNECTION 의 PULL 을 사용한다.
+
+## *<u>Is independent of other work processes.</u>*
+
+다른 WORK PROCESS 들과 독립 되어있다.
+
+## *<u>Can only make database changes within a single database LUW.</u>*
+
+SINGLE DB LUW 내에서만 DB 를 수정할 수 있다.
+
+## *<u>Uses a database connection to a work process established when the SAP NetWeaver Application Server ABAP started.</u>*
+
+SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WORK PROCESS 에 대한 DB CONNECTION 을 사용한다.
+
+<BR/>
+
+****
+
 DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
 
-Question 65
-Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
-Please choose the correct answer.
-Response: 
-    Database and operating system abstraction
-    Business process management
-    Multi-channel access
-    Master data management
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q65.
+
+### Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
+
+다음중 SAP NETWEAVER 의 어플리케이션 LAYER PLATFORM 에서 제공되는 기능이 아닌것은?
+
+#### Please choose the correct answer.
+
+## *<u>Database and operating system abstraction</u>*
+
+DB 와 운영체제 추상화
+
+##### Business process management
+
+BUSINESS PROCESS 관리
+
+##### Multi-channel access
+
+MULTI-CHANNEL 연결 
+
+##### Master data management
+
+MASTER DATA 관리
+
+<BR/>
+
+****
+
 SAP GUI
 SAP Application : Application Layer platform
 SAP Database
 
-Question 66: 
-You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
- Please choose the correct answer.
-Response: 
-    Assign function type E to the Cancel button and handle it in a module with the addition AT EXIT-COMMAND.
-    Set the function code assigned to the Cancel button to CANCEL and handle it in a module with the addition AT EXIT-COMMAND.
-    Use the LOOP AT SCREEN. ... ENDLOOP statement to set the "required" property of the input fields to zero.
-    Set the function type assigned to the Cancel button to S and handle it in a module with the addition AT EXIT-COMMAND.
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q66.
+
+### You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
+
+당신은 필수 입력 필드를 가진 classical screen (dynpro) 를 정의하였다. 당신은 필수 입력 필드가 모두 채워지지 않더라도 Cancel button 을 사용하여 화면을 나가기를 원한다.
+
+이를 위해 무엇을 해야하는가?
+
+#### Please choose the correct answer.
+
+## *<u>Assign function type E to the Cancel button and handle it in a module with the addition AT EXIT-COMMAND.</u>*
+
+Cancel 버튼에 FUNCTION TYPE  E 를 할당하고 AT EXIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+##### Set the function code assigned to the Cancel button to CANCEL and handle it in a module with the addition AT EXIT-COMMAND.
+
+취소 버튼에 할당된 FUNCTION CODE 를 CANCEL 로 설정하고 EXCIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+##### Use the LOOP AT SCREEN. ... ENDLOOP statement to set the "required" property of the input fields to zero.
+
+LOOP AT SCREEN. \_\_\_ ENDLOOP 구문을 사용하여 입력 필드의 필수 속성을 '0'으로 할당한다.
+
+##### Set the function type assigned to the Cancel button to S and handle it in a module with the addition AT EXIT-COMMAND.
+
+취소 버튼에 할당된 FUNCTION TYPE을 S 로 설정하고 AT EXIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+****
+
 Function type : E
 Module exit AT Exit-command
 
-Question 67: 
-Which of the following steps are required to set up a shared memory area?
-There are 3 correct answers to this question.
-Response: 
-    Declare a catalog object
-    Enable multiple versions of an area root class
-    Call the attach_for_write method of area root class
-    Generate an area root class
-    Set the root object
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q67.
+
+### Which of the following steps are required to set up a shared memory area?
+
+다음중 SHARED MEMORY AREA 를 설정하는 데 필요한 단계는?
+
+#### 3 correct
+
+##### Declare a catalog object
+
+CATALOG OBJECT 선언
+
+##### Enable multiple versions of an area root class
+
+AREA ROOT CLASS 의 MULTIPLE VERSION 사용 가능으로 설정
+
+## Call the attach_for_write method of area root class
+
+AREA ROOT CLASS 의 ATTACH\_FOR\_WRITE 메소드 호출
+
+## Generate an area root class
+
+AREA ROOT CLASS 생성
+
+## Set the root object
+
+ROOT OBJECT 설정 
+
+****
+
 읽는 메소드 : attach for read
 set root class object to area
 
-Question 68: 
-What is unique about a singleton?
-There are 2 correct answers to this question.
-Response: 
-    It cannot be defined as FINAL.
-    It must be instantiated using a public instance constructor.
-    It must be instantiated using a protected instance constructor.
-    It must be instantiated using a private instance constructor.
-    It must be instantiated using a static protected constructor.
-    It must be instantiated using a static public constructor.
-    It must be defined as FINAL.
-    must be instantiated using a static private constructor.
+[SHARED MEMORY - ABAP : 네이버 블로그](https://m.blog.naver.com/aaaa123krkr/220767969301)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q68.
+
+### What is unique about a singleton?
+
+SINGLETON 에 대한 특징은?
+
+#### 2 correct
+
+##### It cannot be defined as FINAL.
+
+FINAL 로 정의될 수 없다.
+
+##### It must be instantiated using a public instance constructor.
+
+PUBLIC INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a protected instance constructor.
+
+PROTECTED INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a private instance constructor.
+
+PRIVATE INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a static protected constructor.
+
+STATIC PROTECTED CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a static public constructor.
+
+STATIC PUBLIC CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+## *<u>It must be defined as FINAL.</u>*
+
+FINAL 로 정의 되어야 한다.
+
+## *<u>must be instantiated using a static private constructor.</u>*
+
+STATIC PRIVATE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+****
+
 singleton : create object를 할 수 없고, method를 통해서 object를 생성할 수 있다.
-final을 사용하여 상속 방지
-constructor를 static으로 선언.
+***<u>final을 사용하여 상속 방지</u>***
+***<u>constructor를 static으로 선언</u>***.
 
-Question 69: (skip)
-An ABAP program processes the following expression:
- r = a / b + c
- Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
- There are 2 correct answers to this question
- Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
-Response: 
-    DATA: r TYPE p DECMALS 2,
-a TYPE i VLAUE 201,
-b TYPE i VALUE 200,
-c TYPE f.
-    DATA: r TYPE p,
-a type I VALUE 201,
-b type I VALUE 200,
-c type i.
-    DATA: r TYPE p DECIMALS 2,
-a TYPE i VALUE 201,
-b TYPE i VALUE 200,
-c TYPE 
-    DATA: r TYPE f,
-a TYPE i VALUE 201,
-b TYPE i VALUE 200,
-c TYPE f.
+****
 
-Question 70: 
-How would you define a method of an ABAP class to prevent this method from being available in a subclass?
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q69. (skip)???????????????????????????
+
+### An ABAP program processes the following expression:
+
+### r = a / b + c
+
+### Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
+
+RUNTIME 환경이 위 식에서 fixed-point arithmetic 을 사용하도록 하는 DATA 선언은?
+
+#### 2 correct
+
+#### Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
+
+```abap
+DATA: r TYPE p DECMALS 2,
+      a TYPE i VLAUE 201,
+      b TYPE i VALUE 200,
+      c TYPE f.
+```
+
+```abap
+DATA: r TYPE p,
+      a type I VALUE 201,
+      b type I VALUE 200,
+      c type i.
+```
+
+```abap
+DATA: r TYPE p DECIMALS 2,
+      a TYPE i VALUE 201,
+      b TYPE i VALUE 200,
+      c TYPE 
+```
+
+```abap
+DATA: r TYPE f,
+      a TYPE i VALUE 201,
+      b TYPE i VALUE 200,
+      c TYPE f.
+```
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q70.
+
+### How would you define a method of an ABAP class to prevent this method from being available in a subclass?
+
+ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 할수 없도록 하려면 어떻게 해야하는가?
+
+#### Please choose the correct answer.
+
+##### Final
+
+## *<u>Private</u>*
+
+##### Protected
+
+##### Abstract
+
+****
+
+자식 클래스에서 부모의 method를 못보게 하는 방법 private
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+Question 71: 
+A structure has enhancement category 3, can be enhanced (character-type).
+Which set of elementary types is allowed for the new fields?
 Please choose the correct answer.
 Response: 
-    Final
-    Private
-    Protected
-    Abstract
-자식 클래스에서 부모의 method를 못보게 하는 방법 private
+    C,D,N,X
+    D,I,string, T
+    C,D,N,T
+    F,I,P,X
+Clike : CNDT and string
+csequence : c and string
+string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (여기서는 character-type 옵션이므로)
+
+Question 72: 
+Which components of the class can be accessed in the implementation of a static method in that class?
+There are 2 correct answers to this question
+Response: 
+    Instance attributes
+    Types
+    All events
+    Constants
+static method에서 접근 할 수 있는 것. : static attribute , Types, constants
+
+Question 73: 
+What does a Web Dynpro component contain?
+There are 3 correct answers to this question.
+Response: 
+    Multiple views within a window
+    A context
+    Component controller
+    UI elements
+    Exactly one interface controller
+context : 각 controller 마다 모두 존재.
+UI element : View controller에 전재.
+interface controller , component controller : 무조건 하나
+
+Question 74: 
+What are the advantages of modularization?
+There are 3 correct answers to this question
+Response: 
+    Transparency
+    Performance
+    Maintainability
+    Profitability across DBMS
+    Reusability
+모듈화 : class, function, subroutine 
+profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
+
+Question 75: 
+Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
+There are 4 correct answers to this question.
+Response: 
+    INCLUDE
+    TYPE-POOL
+    METHOD
+    FUNCTION-POOL
+    PROGRAM
+    CLASS-POOL
+    REPORT
+    FUNCTION MODULE
+    INTERFACE-POOL
+실행 가능 단위 (se80에서 F8로 실행되는 프로그램) : Method, function module, module pool (screen program, online program), class-pool, report)
+
+Question 76: 
+Which of the following are true statements?
+There are 3 correct answers to this question.
+Response: 
+    You can also select predefined data types to define the data type of the data element.
+    Reference data types can be used to define the data type of the data element.
+    Field labels are defined for the domain.
+
+Field labels : data element에서 셋업
+data element의 기술적인 정보는 domain이 가지고 있다 .(data type, field lemgth, decimal places 등등)
+
+Question 77: 
+Each component has an interface; of what does this interface consist?
+There are 2 correct answers to this question.
+Response: 
+    Interface controller
+    Data Container
+    Interface view
+    Interface context
+Web dynpro 가 가지고 있는 것 : Interface controller, interface view.
+
+Question 78: 
+What types of changes to the repository does SAP provide?
+There are 3 correct answers to this question.
+Response: 
+    SAP Notes
+    Deployments from SDN.SAP.COM
+    Transports
+    Support Packages
+    Enhancement Packages
+SAP Notes : bugs patch. 
+STD를 변경할 때 제공되는 것 : SAP Notes, Support package(SAP Notes의 집합), Enhancement Packages, 추가로 upgrade version.
+
+Question 79: 
+Which of the following are features of the Context in Web Dynpro?
+There are 2 correct answers to this question
+Response: 
+    Every Web Dynpro controller has multiple Contexts
+    Every Web Dynpro controller has one Context
+    Data is shared between controllers through Context mapping
+    Data is transferred from one Context to another by firing plugs
+Context는 각 controller 별로 한 개씩 갖는다.
+context mapping : context 간 Data sharing or Data Transferring.
+firing plugs : 각 view(화면)간 이동을 위해 필요한 것.
+
+Question 80: 
+To which context object is the attribute LEAD_SELECTION_INDEX related?
+Please choose the correct answer.
+Response: 
+    Element
+    Node
+    Attribute
+    Supply function
+Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
+화면은 data binding에 의해서 context와 연결되어 있음.
