@@ -1345,7 +1345,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 을 생성해 주어야한다.
 
-**** 
+****
 
 <br/>
 
@@ -3449,3 +3449,1636 @@ Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
 ****
 
 <BR/>
+
+# Q81. 
+
+### You call a lock module Which exceptions could the lock module raise when a logical lock CANNOT be set?
+
+LOCK MODULE 을 호출 하려한다. LOFGICAL LOCK 이 설정될 수 없을때 LOCK MODULE 은 어떤 예외를 띄우는가?
+
+#### 2 correct 
+
+CX_SY_OPEN_SQL_ERROR
+
+## *<u>FOREIGN_LOCK</u>*
+
+CX_SY_DATA_ACCESS_ERROR
+
+## *<u>SYSTEM_FAILURE</u>*
+
+<BR/>
+
+****
+
+락을 잡으려 하다가 못 잡을 때 발생하는 에러
+foreign_lock : 다른 사람이 락을 잡고 있을 때, 발생하는 에러
+system_failure : 시스템 상의 다른 이유로 발생하는 에러
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q82. 
+
+### Which statement is used to generically define the data reference variable z1?
+
+일반적으로 데이터 REFERENCE VARIABLE Z1 을 정의 할때 사용되는 구문은 무엇인가?
+
+#### Please choose the correct answer. 
+
+
+data z1 type any
+
+data z1 type ref to PA0001
+
+data z1 type ref to data
+
+data z1 type any table
+
+#### <BR/>
+
+****
+
+generic : 어떤 데이터 type도 가리킬 수 있는 형태 
+data z1 type ref of data
+any 와 data는 동일한 기능을 갖고 있지만, any는 ref to 에 대하여 지원하지 않음.
+table key 가 지정되지 않은 table-type 도 generic type 임.
+
+
+
+#### [SAP 공식문서](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenbuilt_in_types_generic.htm)
+
+The only generic types that can be used after [**TYPE REF TO**](javascript:call_link('abaptypes_references.htm')) are **data**, for the generic typing of data references, and **object**, for the generic typing of object references.
+
+| **Type**           | **Description**                                              |
+| ------------------ | ------------------------------------------------------------ |
+| **any**            | Any data type                                                |
+| **any table**      | Internal table with any table category                       |
+| **c**              | Text field with a generic length                             |
+| **clike**          | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence**      | Text-like (**c**, **string**)                                |
+| **data**           | Any data type                                                |
+| **decfloat**       | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) (**decfloat16**, **decfloat34**) |
+| **hashed table**   | [Hashed table](javascript:call_link('abenhashed_table_glosry.htm')) |
+| **index table**    | [Index table](javascript:call_link('abenindex_table_glosry.htm')) |
+| **n**              | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) with generic length |
+| **numeric**        | Numeric ((**b**, **s**), **i**, **int8**, **p**, **decfloat16**, **decfloat34**, **f**) |
+| **object**         | Any object type (root class of the inheritance hierarchy)    |
+| **p**              | Packed number with generic length and generic number of [decimal places](javascript:call_link('abendecimal_place_glosry.htm')) |
+| **simple**         | Elementary data type including [enumerated types](javascript:call_link('abenenumerated_type_glosry.htm')) and structured types with exclusively character-like flat components |
+| **sorted table**   | [Sorted table](javascript:call_link('abensorted_table_glosry.htm')) |
+| **standard table** | [Standard table](javascript:call_link('abenstandard_table_glosry.htm')) |
+| **table**          | Standard table                                               |
+| **x**              | Byte field with generic length                               |
+| **xsequence**      | Byte-like (**x**, **xstring**)                               |
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q83.
+
+### Which of the following ABAP standard types are incomplete?
+
+다음중ABAP STANDARD TYPE 들 중 INCOMPLETE 인 것들은 무엇인가?
+
+#### 2 correct 
+
+## *<u>X</u>*
+
+F
+
+## *<u>N</u>*
+
+STRING
+
+<BR/>
+
+****
+
+incomplete : 크기를 선언해야 하는 변수 타입. (C, N, X, P)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q84. ????????????????????????????????????? 
+
+### Which of the elementary data types is deep?
+
+다음중 DEEP 타입인 ELEMENT DATA TYPE 들을 고르시오
+
+#### Please choose the correct answer.
+
+DECFLOAT34
+
+## *<u>XSTRING</u>*
+
+X
+
+N
+
+<BR/>
+
+****
+
+runtime 시 크기가 변하는 것 : string, xstring
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q85. 
+
+### Which elementary field types are considered a character type?
+
+다음 ELEMENT FIELD TYPE들 중 CHARACTER TYPE 으로 취급 되는 것은?
+
+#### 5 correct 
+
+## *<u>C</u>*
+
+## *<u>T</u>*
+
+## *<u>D</u>*
+
+I
+
+F
+
+XSTRING
+
+## *<u>STRING</u>*
+
+## *<u>N</u>*
+
+X
+
+<BR/>
+
+****
+
+|               |                                                              |
+| ------------- | ------------------------------------------------------------ |
+| **clike**     | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence** | Text-like (**c**, **string**)                                |
+
+***
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q86. 
+
+### Which of the following is a true statement?
+
+다중 사실 인 것은?
+
+#### 2 correct
+
+##### A standard table should always have a unique key.
+
+STANDARD TABEL 은 항상 UNIQUE KEY 를 보유하여야 한다.
+
+## *<u>A hashed table should always have a unique table key.</u>*
+
+HASHED TABLE 은 항상 UNIQUE TABLE KEY를 보유하여야한다.
+
+## *<u>A sorted table can have a unique or a non-unique key.</u>*
+
+SORTED TABLE 은 UNIQUE 또는 NON-UNIQUE KEY 를 가질 수 있다.
+
+##### A standard table should always have a multiple key.
+
+STANDARD TABLE 은 항상 MULTIPLE KEY 를 보유하여야 한다.
+
+<BR/>
+
+****
+
+
+
+standard table : unique, non-unique and one or a multiple key
+hashed table : unique
+sorted table : unique, non-unique
+
+****
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Q87.   11번 중복
+
+### You write a report that displays mass data in a table. You decide to use the ALV Grid control (class CL_GUI_ALV_GRID) instead of a classical list display with WRITE statements.
+
+당신은 테이블에 대량의 데이터를 디스플레이하는 report 를 작성할 수 있습니다. 당신은 WRITE 문을 사용한 CLASSICAL LIST 대신 ALV GRID CONTROL(CL_GUI_ALV_GRID) 를 사용하기로 결정하였습니다.
+
+### Which of the following functions can you offer to the user without doing any specific programming
+
+별도의 프로그래밍을 거치지 않고 사용자에게 제공할 수 있는 기능은 무엇인가?
+
+#### 2 correct
+
+#### <u>*Change column width and sequence*</u>
+
+    열 너비 및 순서 변경
+
+##### Convert currency amount columns
+
+통화, 액수 COLUMN들의  변환
+
+#### <u>*Sort and filter the data by any column*</u>
+
+    행 기준 SORT 와 FILTER 기능 구현
+
+##### Display details by double-clicking on a row
+
+ROW DOUBLE-CLICK 이벤트를 통한 세부 항목 DISPLAY
+
+<BR/>
+
+****
+
+ALV 사용시 프로그래밍 없이 가능한 기능
+컬럼 사이즈 순서 변경
+filter 기능, sorting 기능
+
+프로그래밍 없이 **<u>*개발자가 직접 지정하지 않고도 사용자가*</u>** ALV TOOL BAR 의 기능을 활용하여 조작 할 수 있는 기능을 묻는것으로 보인다.
+
+column 사이즈는 필드의 경계를 드래그 해 변경 할 수 있으며 순서 또한 field 를 드래그해 변경이 가능하다.
+
+filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
+
+****
+
+<br/>
+
+****
+
+***
+
+<BR/>
+
+# Q88. 
+
+### What is unique about a functional method? 
+
+FUNCTION METHOD 에 대한 설명으로 옳은 것은?
+
+#### 5 correct 
+
+## *<u>It can contain an importing parameter.</u>*
+
+IMPORTING PARAMETER 를 가질 수 있다.
+
+## *<u>It can contain an exporting parameter.</u>*
+
+exporting parameter 를 가질 수 있다.
+
+##### It can be used in SELECT statements.
+
+SELECT 구문이 사용될 수 있다.
+
+## *<u>It must contain a returning parameter.</u>*
+
+returning parameter 를 가질 수 있다.
+
+##### It must be a singleton.
+
+SINGLETON 이어야한다.
+
+## *<u>It can contain a changing parameter.</u>*
+
+changing parameter 를 가질 수 있다.
+
+## *<u>It can be used in logical expressions.</u>*
+
+논리 연산이 사용될 수 있다.
+
+<BR/>
+
+****
+
+functional method : 
+
+* method 의 parameter 중 retuning parameter를 가지고 있는 method. 
+
+* open sql에서 사용할 수 없다. 
+* logical expressions 에서는 사용 가능 ( a = b + zcl_abcd.f_method(ab))
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q89. 
+
+### Identify the types of layout managers. 
+
+LAYOUT MANAGER 의 TYPE들을 고르시오
+
+#### 4 correct 
+
+ColumnLayout
+
+## *<u>FlowLayout</u>*
+
+TreeLayout
+
+## *<u>RowLayout</u>*
+
+## *<u>GridLayout</u>*
+
+## *<u>MatrixLayout</u>*
+
+<br/>
+
+****
+
+Web Dynpro : layout manager 가 화면 구성을 처리 
+
+* flowlayout
+* rowlayout
+* gridlayout
+* formlayout
+* matrixlayout
+
+****
+
+<br/>
+
+****
+
+****
+
+<br/>
+
+# Q90.
+
+### What can you create using the ABAP Dictionary?
+
+ABAP DICTIONARY 에서 생성할 수 있는 것은?
+
+#### 3 correct  
+
+## *<u>Type pools</u>*
+
+## *<u>Transparent tables</u>*
+
+Internal tables
+
+Field symbols
+
+## *<u>Domains</u>*
+
+<BR/>
+
+****
+
+Type pools = Type groups.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q91. 
+
+### You want to include an element of type ‘Table’ in your web dynpro.
+
+당신은 WEB DYNPRO 에 TABLE 타입의 ELEMENT 를 추가하고싶다.
+
+### What actions add the corresponding columns to the table automatically?
+
+자동으로 테이블에 관련된 COLUMN 들을 추가하는 방법을 고르시오
+
+#### Please choose the correct answer.
+
+## *<u>Right click the table and select the ‘CREATE_BINDING’ option</u>*
+
+Include the method BIND_TABLE of IF_WD_CONTEXT_NODE.
+
+Bind the table attribute ‘DATA_SOURCE’ to the context node
+
+Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
+
+<BR/>
+
+****
+
+[TABLE 넣는 방법](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220782696432)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q92. 
+
+### Which of the following ABAP code lines is valid?
+
+다음중 가능한 ABAP CODE 는?
+
+#### 3 correct 
+
+## *<u>CONSTANTS gc_mantr TYPE mantr VALUE ‘100’</u>*
+
+##### SELECT-OPTIONS s_mantr TYPE mantr DEFAULT ‘100’  (type => for가 되어야 한다)
+
+##### DATA gc_mantr TYPE mantr DEFAULT ‘100’ ( 초기값은 default => value)
+
+## *<u>STATICS s_mantr TYPE mantr VALUE ‘100’</u>*
+
+## *<u>PARAMETERS p_mantr TYPE mantr DEFAULT ‘100’</u>*
+
+<br/>
+
+****
+
+****
+
+<BR/>
+
+# Q93. (skip)
+
+### What is the difference between a Unicode and non-Unicode program? 
+
+UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
+
+#### Please *<u>select all</u>* the correct answers that apply. 
+
+## *<u>Byte-type data objects cannot be assigned to character-type data objects.</u>*
+
+바이트 형식 데이터 개체를 문자 형식 데이터 개체에 할당할 수 없습니다.
+
+##### Byte-type data objects cannot be compared to character-type data objects.
+
+바이트 형식 데이터 개체는 문자 형식 데이터 개체와 비교할 수 없습니다.
+
+## *<u>Offset positioning in a Unicode structure is restricted to flat data objects.</u>*
+
+유니코드 구조에서 간격띄우기 위치는 플랫 데이터 개체로 제한됩니다.
+
+##### Offset positioning in a Unicode structure is restricted to character data objects.
+
+유니코드 구조에서 간격띄우기 위치는 문자 데이터 개체로 제한됩니다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q94. 
+
+### Which of the following data types are predefined ABAP data types?
+
+다음중 PREDEFINED ABAP DATA TYPE 들을 고르시오
+
+#### 3 correct 
+
+## XSTRING
+
+## STRING
+
+DECIMALS
+
+## DECFLOAT34
+
+FLOAT (è f)
+
+<BR/>
+
+****
+
+##### PREDEFINED NUMERIC TYPES
+
+* B
+* S
+* I
+* INT8
+* P
+* DECFLOAT16
+* DECFLOAT34
+* F
+
+##### PREDEFINED CHARACTER-LIKE TYPES
+
+* C
+* N
+* STRING
+
+##### PREDEFINED BYTE-LIKE TYPES
+
+* X
+* XSTRING
+
+##### PREDEFINED DATE TYPES AND TIME TYPES
+
+* D
+* T
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q95. 
+
+### Dynpros(DYNAMIC PROGRAMS) can be placed in which program types? 
+
+DYNPRO 는 어떤 프로그램 타입에 배치 될 수 있는가?
+
+#### 3 correct 
+
+## *<u>Function groups</u>*
+
+Class pools
+
+## *<u>Module pools</u>*
+
+## *<u>Executables</u>*
+
+<BR/>
+
+****
+
+화면을 가질 수 있는 것. (screen 을 갖는 것)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 96: 
+
+### What is the allowed length of the ABAP Dictionary data type DF16_DEC?
+
+DF16_DEC ABAP DICTIONARY DATA TYPE 의 허용되는 길이는?  
+
+#### Please choose the correct answer.
+
+##### The allowed length is between 0 and 16 digits.
+
+## <u>*The allowed length is between 1 and 15 digits.*</u>
+
+##### The allowed length is between 0 and 15 digits.
+
+##### The allowed length is 16 digits.
+
+<BR/>
+
+****
+
+DF16_DEC : = Decfloat16
+DF34_DEC : 1 and 31 digits = Decfloat34
+
+**Numeric Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| INT1     | 3                        | 0                 | 1-byte integer, 0 to 255                                     | [**b**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT2     | 5                        | 0                 | 2-byte integer, -32,768 to 32,767                            | [**s**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT4     | 10                       | 0                 | 4-byte integer, -2,147,483,648 to +2,147,483,647             | [**i**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT8     | 19                       | 0                 | 8-byte integer, -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807 | [**int8**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DEC      | 1-31                     | 0                 | Packed number in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| DF16_DEC | 1-15                     | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF16_RAW | 16                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_DEC | 1-31                     | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_RAW | 34                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| FLTP     | 16                       | 0                 | Floating point number                                        | [**f**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+
+
+
+**Character-Like Types**
+
+| **Type** | **Valid Places \**m\****                  | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ----------------------------------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CHAR     | 1-30000, maximum of 1333 for table fields | **m** blanks      | Character string                                             | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| LCHR     | 256-32000                                 | None              | Long character string                                        | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| SSTRING  | 1-1333                                    | Empty string      | Character string                                             | [**string**](javascript:call_link('abenbuiltin_types_character.htm')) |
+| STRING   | 256-...                                   | Empty string      | Character string ([CLOB](javascript:call_link('abenclob_glosry.htm'))) | [**string**](javascript:call_link('abenbuiltin_types_character.htm')) |
+
+
+
+**Byte-Like Types**
+
+| **Type**  | **Valid Places \**m\****                | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| --------- | --------------------------------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| RAW       | 1-32000 maximum of 255 for table fields | None              | Byte string                                                  | [**x**](javascript:call_link('abenbuiltin_types_byte.htm')), length **m** |
+| LRAW      | 256-32000                               | None              | Long byte string                                             | [**x**](javascript:call_link('abenbuiltin_types_byte.htm')), length **m** |
+| RAWSTRING | 256-...                                 | Empty string      | Byte string ([BLOB](javascript:call_link('abenblob_glosry.htm'))) | [**xstring**](javascript:call_link('abenbuiltin_types_byte.htm')) |
+
+
+
+**Special Types**
+
+Predefined data types with special semantic attributes.
+
+
+
+**Date Types/Time Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                         | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ----------------------------------- | ------------------------------------------------------------ |
+| DATS     | 8                        | 00000000          | Date in the format YYYYMMDD         | [**d**](javascript:call_link('abenbuiltin_types_date_time.htm')) |
+| TIMS     | 6                        | 000000            | Time in the format HHMMSS           | [**t**](javascript:call_link('abenbuiltin_types_date_time.htm')) |
+| ACCP     | 6                        | 6 blanks          | Posting period in the format YYYYMM | [**n**](javascript:call_link('abenbuiltin_types_character.htm')), length 6 |
+
+
+
+**Character-Like Types with Special Semantics**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| NUMC     | 1-255                    | **m** zeroes      | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) | [**n**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| CLNT     | 3                        | 000               | Client                                                       | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 3 |
+| LANG     | 1                        | Blank             | Language key                                                 | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 1 |
+
+
+
+**Currency Fields and Quantity Fields**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CURR     | 1-31                     | 0                 | [Currency field](javascript:call_link('abencurrency_field_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| CUKY     | 5                        | 5 blanks          | [Currency key](javascript:call_link('abencurrency_key_glosry.htm')) for [currency fields](javascript:call_link('abencurrency_field_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 5 |
+| QUAN     | 1-31                     | 0                 | [Quantity field](javascript:call_link('abenquantity_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| UNIT     | 2-3                      | 2 or 3 blanks     | [Unit key](javascript:call_link('abenunit_glosry.htm')) of a [quantity field](javascript:call_link('abenquantity_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+
+
+
+**Obsolete Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| DF16_SCL | 16                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format with scaling specified (obsolete) | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_SCL | 34                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format with scaling specified (obsolete) | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| PREC     | 2                        | 0                 | Obsolete data type                                           | [**s**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| VARC     | 1-...                    | None              | Obsolete data type                                           | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 97: 
+
+### What must you do to create a singleton class?
+
+SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
+
+#### 3 correct 
+
+##### Implement the IF_UMM_SINGLETON interface in the class
+
+클래스에 IF_UMM_SINGLETON 인터페이스 구현
+
+## *<u>Define the class as final</u>*
+
+클래스를 FINAL로 정의합니다.
+
+## *<u>Set the class instantiation to private</u>*
+
+클래스 인스턴스화를 PRIVATE 으로 설정합니다.
+
+##### Define the class as abstract
+
+클래스 추상화
+
+## *<u>Instantiate the class in a static method of the class itself</u>*
+
+클래스 자체의 정적 메서드로 클래스 인스턴스화
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 98: 
+
+### Which of the following values are replaceable in debugger mode?
+
+DEBUGGER MODE 에서 대체 가능한 값은 무엇인가?
+
+#### Please choose the correct answer.
+
+
+Constants
+
+Field names
+
+## *<u>Variables</u>*
+
+Table names
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 99: 
+
+### Which selection screen elements allow user input in ABAP Reports?
+
+ABAP REPORTS 에서 USER INPUT 을 가능하게 해주는 SELECTION SCREEN ELEMENT 는 무엇인가?
+
+#### 2 correct 
+
+SELECTION-SCREEN COMMENT
+
+## *<u>PARAMETERS</u>*
+
+SELECTION-SCREEN BLOCK
+
+## *<u>SELECT-OPTIONS</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 100: 
+
+### Which of the following is correct?
+
+다중 옳은 것은?
+
+#### Please choose the correct answer.
+
+## *<u>The screen attributes can be modified in the PROCESS BEFORE OUTPUT event block.</u>*
+
+화면 속성들은 PBO EVENT BLOCK 에서 수정될 수 있다.
+
+##### The screen attributes can be modified in the PROCESS AFTER INPUT event block.
+
+화면 속성들은 PAI EVENT BLOCK 에서 처리 될 수 있다.
+
+##### None of the above.
+
+옳은 것이 없다.
+
+##### The screen attributes can be modified in the PROCESS BEFORE OUTPUT and PROCESS AFTER INPUT event blocks.
+
+화면 속성은 PBO 와 PAI EVENT BLOCK 들 에서 수정될 수 있다.
+
+<BR/>
+
+****
+
+PBO 와 PAI 이해
+PBO : paramter의 속성을 바꾸고, 적합성을 확인하는 곳.
+PAI : user가 화면에서 입력받은 데이터를 처리하는 곳 
+
+****
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Question 101: 
+
+### Which of the following can you assign a search help to?
+
+다음중 SEARCH HELP 를 할당할 수 있는것은? 
+
+#### 3 correct  
+
+## *<u>Data element</u>*
+
+## *<u>Structure component</u>*
+
+## *<u>Check table</u>*
+
+##### Domain
+
+##### Table type
+
+<BR/>
+
+****
+
+search help 를 assign 할 수 있는 곳 : 
+
+* Data element
+
+* Structure component
+* Check Table. 
+
+(se11에서 테이블 조회하여 데이터 조회 시 데이터 검색 조건으로 search help 를 선택할 수 있다)
+
+****
+
+<BR/>
+
+***
+
+****
+
+<BR/>
+
+# Question 102: 
+
+### Where can you define data types that can be accessed directly by all ABAP repository objects in an SAP system?
+
+SAP SYSTEM 내 모든 ABAP REPOSITORY OBJECT에서 바로 접근 할 수 있는 DATA TYPE 을 정의 할 수 있는 곳은?  
+
+#### 2 correct 
+
+##### In a method
+
+##### In a function module
+
+## *<u>In a global class</u>*
+
+## *<u>In the ABAP dictionary</u>*
+
+<BR/>
+
+****
+
+ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타입을 정의할 수 있는 위치?
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 103: 
+
+### Which of the following statements are correct? 
+
+다음 중 옳은 것은?
+
+#### 4 correct 
+
+## *<u>Class methods assigned to the public visibility section can be accessed outside the class using the static component selector and the class name.</u>*
+
+PUBLIC SECTION 에 배치된 CLASS METHOD 들은 STATIC COMPONENT SELECTOR 와  CLASS 명을 사용해 CLASS 외부에서 접근 가능하다. 
+
+## *<u>You can call private methods within the public methods without reference to the object or class.</u>*
+
+OBJECT 나 CLASS 를 참조하지 않고 PUBLIC METHOD 내에서 PRIVATE METHOD 를 호출 할 수 있다.
+
+## *<u>Only public methods can be addressed outside the class.</u>*
+
+오직 PUBLIC METHOD 만이 CLASS 밖에서 접근할 수 있다.
+
+##### None of the above
+
+답이 없다.
+
+## *<u>Static methods can be defined in both the public and private visibility section of the class.</u>*
+
+STATIC METHOD 들은 PUBLIC 과 PRIVATE SECTION 모두에서 정의될 수 있다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 104: 
+
+### Which of the following enhancements calls a customer function module.
+
+다음중 CUSTOMER FUNCTION MODULE 을 호출 하는 ENHANCEMENT 들을 고르시오.
+
+#### 2 correct 
+
+## *<u>Customer exit</u>*
+
+## *<u>Business Transaction event</u>*
+
+##### User exit
+
+##### Business Add-in (BADIs)
+
+<BR/>
+
+****
+
+User exit : subroutine
+BAdIS : class method.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 105: 
+
+### How can you find customer exits in an ABAP program?
+
+ABAP PROGRAM 에서 CUSTOMER EXIT들을 어떻게 찾을 수 있는가?
+
+#### 2 correct 
+
+##### Search for ‘CL_EXTHANDLER’ in the program.
+
+CL_EXTHANDLER 를 검색
+
+## *<u>Search for customer exits in the Repository Information System</u>*
+
+REPOSITORY INFORMATION SYSTEM 에서 CUSTOMER EXIT 을 검색
+
+## *<u>Search for ‘CALL CUSTOMER’ in the program</u>*
+
+CALL CUSTOMER 을 검색
+
+##### Search for customer exits in the program documentation
+
+프로그램 문서에서 CUSTOMER EXITS 검색
+
+<BR/>
+
+****
+
+CL_EXTHANDLER: BAdIs
+IMG document 에서 CUSTOMER EXIT 검색
+
+**enhancement 여부 확인 방법**
+
+* **<u>*Repository Information System(SE84)*</u>** > Enhancement > customer exit or enhancement
+* **<u>*CUSTOMER-FUNCTION*</u>** 문자열 검색
+* **<u>*CL_EXITHANDLER*</u>** 문자열 검색
+* **<u>*SAP reference IMG*</u>** 에서 검색
+* **<u>*TADIR / MODSAPT*</u>** 테이블 조회
+
+Application Hierarchy 에서는 찾을 수 없다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 106: 
+
+### Which components belong to an elementary search help?
+
+ELEMENTARY SEARCH HELP 에 속하는 COMPOENENTS는? 
+
+#### 2 correct 
+
+## *<u>Import / export parameters</u>*
+
+## *<u>Selection method</u>*
+
+##### Fixed values
+
+##### Attachment to a field
+
+<BR/>
+
+****
+
+search help 구성 : 
+
+* import/ export parameters
+* selection method
+* dialog behavier (filter창)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 107: 
+
+### Subroutines provide which types of parameters?
+
+SUBROUTINE 은 어떤 타입의 PARAMETER 들을 제공하는가?
+
+#### 2 correct 
+
+## *<u>Exceptions</u>*
+
+Return values
+
+## *<u>Input/output (changing)</u>*
+
+Input
+
+Output
+
+<BR/>
+
+****
+
+subroutine 에서 제공하는 parameter종류 : changing (input/output), exceptions, USING, TABLES
+
+```ABAP
+FORM subr TABLES table_parameters
+          USING parameters
+          CHANGING parameters
+          RAISING exc1|RESUMABLE(exc1) exc2|RESUMABLE(exc2) ... .
+```
+
+
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 108: 
+
+### You have to overwrite spaces in a string with the letter ‘A’.
+
+당신은 'A' 문자로 된 문자열로 공백들을 덮어써야한다.
+
+### Which of the following statements can you use?
+
+다음주 사용할 수 있는 구문은?
+
+#### 3 correct 
+
+##### CONDENSE
+
+## OVERLAY
+
+##### SHIFT LEFT
+
+## REPLACE
+
+## TRANSLATE
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Question 109: 
+
+### Which statements are allowed for processing internal tables?
+
+다음 구문중 ITAB 을 처리할 수 있는 구문은?
+
+#### 3 correct 
+
+## *<u>DELETE</u>*
+
+## *<u>MODIFY</u>*
+
+##### SELECT
+
+##### UPDATE
+
+## *<u>INSERT</u>*
+
+<BR/>
+
+****
+
+internal table : DELETE, MODIFY, INSERT, READ, LOOP
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 110: 
+
+### can you search for suitable classic Business Add-Ins(BAdIs)?
+
+적합한 CLASSIC BAdIS 검색할 수 있는가? 
+
+#### 2 correct 
+
+##### Search in the Repository Information System and choose Enhancements=>Customer Exits 
+
+Repository Information System에서 검색하여 Enhancements=>Customer Exits를 선택합니다. 
+
+## *<u>Search for suitable entries in the relevant component in the Implementation Guide (IMG)</u>*
+
+실행 지침서(IMG)에서 관련 구성 요소에서 적합한 항목 검색
+
+## *<u>Search in an application program for the method GET_INSTANCE of class CL_EXITHANDLER</u>*
+
+응용 프로그램에서 클래스 CL_EX의 GET_INSTANCE 메서드를 검색합니다.IT 핸들러
+
+##### Use the SAP menu Tools -> ABAP Workbench -> Development -> Business Object Builder
+
+SAP MENU TOOLS  -> ABAP Workbench -> Development -> Business Object Builder 사용
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 111: 
+
+### What must before you can create a new transportable function modules?
+
+TRANSPORTABLE FUNCTION MODULE 을 생성하기 위해 해야하는 것은?
+
+#### 3 correct 
+
+##### Exception class
+
+## *<u>Function group</u>*
+
+## *<u>Package</u>*
+
+## *<u>Transport request</u>*
+
+##### Module pool
+
+<BR/>
+
+****
+
+function module 의 CDS 처리 선행 내용.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 112: 
+
+### Which of the following actions can be performed in the Process After Input (PAI) processing block?
+
+PAI 처리 블록에서 처리될 수 있는 것은?
+
+#### Please choose the correct answer.
+
+##### Set the GUI status of the screen.
+
+##### Check the function code.
+
+##### Set the title bar.
+
+## *<u>Check the function code.</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 113: 
+
+### Which of the following generic types can you use to define a field symbol that will be assigned to a character string?
+
+다음 GENERIC TYPE 들 중 CHARACTER STRING 에 할당될 수 있는 FIELD SYMBOL 을 정의하는데 사용할 수 있는 것은?
+
+#### 3 correct 
+
+## *<u>Type any</u>*
+
+## *<u>Type clike</u>*
+
+Type xsequence
+
+## *<u>Type csequence</u>*
+
+Type any table
+
+#### <BR/>
+
+****
+
+generic : 어떤 데이터 type도 가리킬 수 있는 형태 
+data z1 type ref of data
+any 와 data는 동일한 기능을 갖고 있지만, any는 ref to 에 대하여 지원하지 않음.
+table key 가 지정되지 않은 table-type 도 generic type 임.
+
+
+
+#### [SAP 공식문서](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenbuilt_in_types_generic.htm)
+
+The only generic types that can be used after [**TYPE REF TO**](javascript:call_link('abaptypes_references.htm')) are **data**, for the generic typing of data references, and **object**, for the generic typing of object references.
+
+| **Type**           | **Description**                                              |
+| ------------------ | ------------------------------------------------------------ |
+| **any**            | Any data type                                                |
+| **any table**      | Internal table with any table category                       |
+| **c**              | Text field with a generic length                             |
+| **clike**          | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence**      | Text-like (**c**, **string**)                                |
+| **data**           | Any data type                                                |
+| **decfloat**       | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) (**decfloat16**, **decfloat34**) |
+| **hashed table**   | [Hashed table](javascript:call_link('abenhashed_table_glosry.htm')) |
+| **index table**    | [Index table](javascript:call_link('abenindex_table_glosry.htm')) |
+| **n**              | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) with generic length |
+| **numeric**        | Numeric ((**b**, **s**), **i**, **int8**, **p**, **decfloat16**, **decfloat34**, **f**) |
+| **object**         | Any object type (root class of the inheritance hierarchy)    |
+| **p**              | Packed number with generic length and generic number of [decimal places](javascript:call_link('abendecimal_place_glosry.htm')) |
+| **simple**         | Elementary data type including [enumerated types](javascript:call_link('abenenumerated_type_glosry.htm')) and structured types with exclusively character-like flat components |
+| **sorted table**   | [Sorted table](javascript:call_link('abensorted_table_glosry.htm')) |
+| **standard table** | [Standard table](javascript:call_link('abenstandard_table_glosry.htm')) |
+| **table**          | Standard table                                               |
+| **x**              | Byte field with generic length                               |
+| **xsequence**      | Byte-like (**x**, **xstring**)                               |
+
+****
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Question 114: (거의 안 나올 수 있다)
+
+### How can Unicode checks be made?
+
+UNICODE  CHECK 를 하는 방법은?
+
+#### 2 correct 
+
+## *<u>By running Transaction UCCHECK</u>*
+
+## *<u>In any system (after release 6.10) by specifying the program has Unicode checks active</u>*
+
+##### Only in a Unicode system or as part of a conversion to a Unicode system
+
+##### Cannot be enforced
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 115: 
+
+### What do global types and local types have in common?
+
+GLOBAL TYPE 과 LOCAL TYPE 의 공통적으로 가지고 있는 것은?
+
+#### Please choose the correct answer.
+
+##### Search help (=>global type)
+
+##### Documentation (=>data element)
+
+##### Field labels (=>data element)
+
+## *<u>Technical information</u>* (types, sizes)
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 116: 
+
+### In which database table type is there a one-to-one relationship between the Dictionary table definition and the relevant physical table in the database?
+
+DICTIONARY TABLE 정의와 DB 의 RELEVANT PHYSICAL TABLE 사이의 관계가 1-1 관계인 DB TABLE 유형은?
+
+#### Please choose the correct answer.
+
+##### Internal table
+
+##### Cluster table (1 : N)
+
+## *<u>Transparent table</u>*
+
+##### Pooled table (1 : N)
+
+<BR/>
+
+****
+
+[DB TABLE 3가지](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100)
+
+* **TRANSPARENT TABLE**
+
+  * ABAP DICTIONARY 에 하나의 TABLE 이 실제 DB 에서도 하나의 TABLE 로 존재 
+
+    (1-1)
+
+  * TABLE BUFFERING 가능 
+
+* **CLUSTERED TABLE**  
+
+  * ABAP DICTIONARY 에 있는 N개의 CLUSTERED TABLE 은 실물 DB 에 한개의 TABLE CLUSTER 와 동일한 관계를 갖는 TABLE
+
+    (1-N)
+
+  * SECONDARY INDEX 사용 X 
+
+  * PRIMARY KEY 를 통해 접근 하지만 데이터 접근 속도가 느리다.
+
+  * STATISTICAL SQL FUNCTION 사용 불가 (SUM, MAX, MIN 등,,)
+
+  * EX) [BSEG] = BSEC + BSED + BSES + BSET
+
+* **POOLED TABLE**
+
+  * ABAP DICTIONARY 에 생성된 N개의 POOLED TABLE 은 물리적 DB 인 ORACLE DB 에 하나의 TABLE 에 데이터가 저장되어 관리됨
+
+    (1-N)
+
+  * PRIMARY KEY 나 SHOUD BE BUFFERED 기능으로 테이블에 접근 됨
+
+  * 주로 MATCH CODES, LOOKUP TABLES 가 있다. 
+
+  * SECONDARY INDEX 는 사용 X
+
+S/4HANA에서 POOLED TABLE과 CLUSTERED TABLE 은 사라짐
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 117: 
+
+### Which of the following rules must you follow when you create a static constructor?
+
+다음 RULE 들 중 STATIC CONSTRUCTOR 생성시 따라야 하는 것은?
+
+#### 3 correct 
+
+## You can ONLY define static constructors in the public section
+
+PUBLIC SECTION 만 STATIC CONSTRUCTOR를 정의 할 수 있다.
+
+## You must name the method CLASS_CONSTRUCTOR
+
+METHOD 이름을 CLASS_CONSTRUCTOR 라고 하여야 한다.
+
+##### You must name the method CONSTRUCTOR (X)
+
+METHOD 명을 CONSTRUCTOR 라고 하여야한다.
+
+## You CANNOT use parameters or exceptions
+
+PARAMETER 나 EXCEPTION 을 사용할 수 없다.
+
+##### You can use ONLY importing parameters or exceptions (instance constructor)
+
+IMPORTING PARAMETER 와 EXCEPTION 만 가질 수 있따.
+
+<BR/>
+
+****
+
+#### STATIC CONSTRUCTOR 특징
+
+* 모든 클래스는 CLASS_CONSTRUCTOR 라는 STATIC CONSTRUCTOR 를 가지고 있다.
+
+* PUBLIC SECTION에서만 정의 가능하다.
+
+* 파라미터 인터페이스를 가질 수 없다.
+
+* 클래스가 사용되기 이전에 자동으로 호출된다.
+
+  
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220760302480
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 118: 
+
+### Each ABAP program starts with an introductory statement. Which statements are correct? 
+
+각 ABAP PROGRAM 들은 소개 문구로 시작된다.
+
+#### 2 correct 
+
+##### The introductory statement must be the first line in the program.
+
+INTRODUCTORY 구문은 프로그램 첫째 줄에 존재해야한다.(첫째줄에 존재해야할 필요는 없다. 프로그램 생성시 첫줄에는 주석들이 들어가 있는 것을 볼 수 있다.)
+
+## *<u>The introductory statement can be modified.</u>* 
+
+INTRODUCTORY 구문은 수정될 수 있다. **(수정할 수 있다.)**
+
+##### The introductory statement must never be modified.
+
+INTRODUCTORY 구문은 수정되어서는 안된다.
+
+## *<u>The introductory statement must be the first statement in the program.</u>* 
+
+INTRODUCTORY 구문은 프로그램의 첫 구문이어야한다.**(INTRODUCTORY 구문들은 구문들 중에서는 제일 먼저 나온다.)**
+
+<BR/>
+
+****
+
+#### introductory statements for programs :
+
+- REPORT
+- PROGRAM
+- FUNCTION-POOL
+- CLASS-POOL
+- INTERFACE-POOL
+- TYPE-POOL
+
+https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_statement.htm
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 119: 
+
+### In which sequence are the following ABAP Events triggered?
+
+ABAP EVENT 가 실행되는 순서는?
+
+#### Please choose the correct answer.
+
+##### START-OF-SELECTION => AT SELECTION-SCREEN => INITIALIZATION
+
+##### INITIALIZATION => START-OF-SELECTION => AT SELECTION-SCREEN
+
+## *<u>INITIALIZATION => AT SELECTION-SCREEN => START-OF-SELECTION</u>*
+
+##### AT SELECTION-SCREEN => INITIALIZATION => START-OF-SELECTION
+
+<BR/>
+
+****
+
+LOAD-OF-PAGE -> ***<u>INITIALIZATION</u>*** -> AT SELECTION-SCREEN OUTPUT -> ***<u>AT SELECTION-SCREEN</u>*** [ON] [VALUE-REQUEST FOR] -> ***<u>START-OF-SELECTION</u>*** -> TOP-OF-PAGE -> END-OF-SELECTION
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 120: 
+
+### For which of the following purposes can you use the ABAP dictionary?
+
+다음 중 ABAP  DICTIONARY 를 사용하여 할 수 있는 것은 무엇입니까?
+
+#### 2 correct 
+
+##### To maintain program translations
+
+프로그램 변환 유지 관리
+
+## *<u>To activate logging for transparent tables</u>*
+
+TRANSPARENT TABLE LOGGING 활성화 
+
+## *<u>To create lock objects</u>*
+
+LOCK OBJECT 생성
+
+##### To create development classes
+
+개발 CLASS 생성
