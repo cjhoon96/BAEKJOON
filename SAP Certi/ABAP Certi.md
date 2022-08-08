@@ -8056,3 +8056,111 @@ PBO FLOW LOGIC 처리 없이 화면이 다시 DISPLAY 되며 오직 필드 B,C �
 
 <BR/>
 
+# Question 201: 
+
+## You created a transparent table and during activation got a warning message "Enhancement category for table missing".
+
+## What do you have to do to eliminate the warning message? 
+
+당신은 투명 테이블을 성하였다 그리고 활성화하는 동안  "Enhancement category for table missing" WARNING MESSAGE 가 표시되었다. WARNING MESSAGE 를 없애려면 어떻게 해야 하는가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+#### Select the option Not Classified from the enhancement category.
+
+ENHANCEMENT CATEGORY 에서 NOT CLASSIFIED OPTION 을 선택한다. 
+
+#### Provide the correct reference field for the Currency or Quantity field.
+
+통화 또는 수량 필드에 올바른 REFERENCE FIELD 를 제공한다. 
+
+## *<u>Select any option other than Not Classified from the enhancement category</u>*
+
+ENHANCEMENT CATEGORY 에서 NOT CLASSIFIED 이외의 OPTION 을 선택한다.
+
+#### Change the Data Class and Size category in the technical settings.
+
+TECHNICAL SETTING 에서 DATA CLASS 와 SIZE CATEGORY 를 변경한다.
+
+<BR/>
+
+****
+
+https://sssinga.tistory.com/227
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 202: ????????????????????????????
+
+## At most, how many menu items (including functions, separators and sub- menus) can a menu have on the screen?
+
+최대 몇 개의 메뉴 항목(INCLUDING FUNCTION, SEPARATORS AND SUB- MENUS)을 화면에 표시할 수 있습니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### 10
+
+##### 20
+
+## *<u>15</u>*
+
+##### None of the above
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 203: 
+
+## Your task is to enhance the screen of an SAP standard application.
+
+## How do you determine if there is a customer exit for this task?
+
+당신의 작업은 SAP STANDARD APPLICATION 의 화면을 ENHANCE 하는 것이다.
+
+이 작업에 대한 CUSTOMER EXIT 이 있는지 어떻게 확인합니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## You search in the flow logic of the screen for CAL CUSTOMER-SUBSCREEN statement
+
+화면의 FLOW LOGIC에서 CALL CUSTER-SUBSCREEN 문을 검색합니다.
+
+##### You search in the source code of the application for GET BADI statement
+
+응용 프로그램의 소스 코드에서 GET BADI 문을 검색합니다.
+
+##### You use the BAdI Builder (transaction SE19) to check for a suitable Business Add-In(BAdI)
+
+BADI Builder(T-CODE SE19)를 사용하여 적합한 BADI 가 있는지 확인합니다.
+
+##### You search in the SAP reference Implementation Guide (IMG) for a suitable user exit
+
+적절한 USER EXIT 를 SAP 참조 IMPLEMENTATION GUIDE (IMG)에서 검색한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
