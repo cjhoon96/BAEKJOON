@@ -7451,3 +7451,608 @@ Response:
 
 <BR/>
 
+# Question 184: 
+
+## Which of the following statements are true?
+
+다음중 옳은 것은?
+
+#### 3 correct 
+
+Response: 
+
+## *<u>Implicit enhancement can be used to enhance SAP objects developed prior to SAP NetWeaver 7.0.</u>*
+
+IMPLICIT ENHANCEMENT SAP NETWEAVER 7.0 이전 버전에서 개발한 SAP OBJECT 를 ENHANCE할 수 있다.
+
+## *<u>An implicit enhancement point can be used to insert code in an SAP program and is always available to the customer.</u>*
+
+IMPLICIT ENHANCEMENT POINT 는 SAP PROGRAM 에 CODE 를 삽입될 수 있으며 고객은 항상 사용할 수 있다. 
+
+## *<u>Implicit enhancement options allow you to enhance interface parameters for function modules and methods without modifying the repository object.</u>*
+
+IMPLICIT ENHANCEMENT OPTION 은 REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
+
+##### None of the above.
+
+답이 없다.
+
+<BR/>
+
+****
+
+implicit 의 경우 function 또는 method에 parameter 등이 가능하다 (optional parameters 일 때)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 185: 
+
+## Which SELECT statement will always bypass the SAP table buffers?
+
+SAP TABLE 버퍼를 항상 우회하는 SELECT 문은?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SELECT … INTO TABLE …
+
+##### SELECT … ENDSELECT.
+
+## *<u>SELECT … FOR UPDATE …</u>*
+
+##### SELECT … SINGLE …
+
+<br/>
+
+*****
+
+****
+
+<br/>
+
+# Question 186: 
+
+## Your program performs a data base update by calling function modules in an update task.
+
+프로그램은 업데이트 작업에서 함수 모듈을 호출하여 데이터베이스 업데이트를 수행합니다. 
+
+## Which ABAP statements can be used in the program to discard all update requests for the current SAP logical unit of work(LUW)?
+
+프로그램에서 현재 SAP LUW(논리 작업 단위)에 대한 모든 업데이트 요청을 취소하는 데 사용할 수 있는 ABAP 문장은 무엇입니까?
+
+#### 3 correct 
+
+Response: 
+
+## <u>*MESSAGE TYPE A*</u>
+
+##### MESSAGE TYPE E
+
+## <u>*ROLLBACK WORK*</u>
+
+## <u>*MESSAGE TYPE X*</u>
+
+##### MESSAGE TYPE W
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 187: ??????????????????????
+
+## Which statements are true about a class that has granted friendship to another class?
+
+다음 중 다른 클래스에 FRIENDSHIP을 부여한 클래스에 대한 설명 중 옳은 것은?
+
+#### 4 correct
+
+Response: 
+
+## *<u>All classes that inherit from the friend (subclasses) also have the same access.</u>*
+
+친구로 부터 상속받은 모든 CLASS 들은 같은 ACCESS 권한을 갖는다.
+
+## *<u>The friend has access to protected attributes.</u>*
+
+FRIEND 는 PROTECTED 속성에 접근할 수 있다.
+
+##### All classes the friend has granted friendship access status to also have the same access.
+
+FRIEND 가 FRIENDSHIP 접근 STATUS를 부여한 모든 클래스도 동일한 접근 권한을 가진다.
+
+## *<u>The friend has access to private attributes.</u>*
+
+FRIEND 는 PRIVATE 속성에 액세스할 수 있다.
+
+## *<u>The friend has access to public attributes.</u>*
+
+FRIEND 는 PUBLIC 속성에 접근할 수 있다.
+
+<BR/>
+
+****
+
+Granting friendship is not inherited. A friend of a superclass is, therefore, not automatically a friend of its subclasses.
+
+FRIENDSHIP 을 부여하는 것은 상속되지 않는다. 그러므로 SUPERCLASS 의 FRIEND 는 자동적으로 SUBCLASS 의 FRIEND가 아니다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 188: 
+
+## How do you embed a subscreen in a main screen?
+
+MAIN SCREEN 에 SUBSCREEN 을 EMBED 하려면 어떻게 해야하는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+Use SET SUBSCREEN in the flow logic of the main screen.
+
+MAIN SCREEN 의 FLOW LOGIC 에 SET SUBSCREEN 구문을 사용한다. 
+
+Use SET SUBSCREEN in a PBO module of the main screen.
+
+MAIN SCREEN 의 PBO MODULE 에 SET SUBSCREEN 구문을 사용한다.
+
+Use CALL SUBSCREEN in a PBO module of the main screen (pai, pbo 모두에서 call 해주어야 한다)
+
+MAIN SCREEN 의 PBO MODULE 에 CALL SUBSCREEN 구문을 사용한다.
+
+Use CALL SUBSCREEN in the flow logic of the main screen.
+
+MAIN SCREEN 의 FLOW LOGIC 에 CALL SUBSCREEN 구문을 사용한다.
+
+<BR/>
+
+****
+
+call subscreen 으로 호출 하며 main screen 의 logic 을 PAI, PBO 모두 넣어주어야 한다.
+
+****
+
+<BR/>
+
+*****
+
+*****
+
+<BR/>
+
+# Question 189: 
+
+## You use Unified Modelling language (UML) to design your classes. You want to describe the message exchange between objects. Which diagram can you use?
+
+당신은 CLASS 를 DESIGN 하기 위해 UML(UNIFIED MODELLING LANGUAGE) 을 사용한다. 
+
+당신은 OBJECT 간 MESSAGE 교환을 설명하려 한다. 
+
+어떤 DIAGRAM 을 사용할 수 있는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Class diagram
+
+##### Object diagram
+
+##### Component diagram
+
+## *<u>Sequence diagram</u>*
+
+<BR/>
+
+****
+
+객체와 객체간의 데이터 이동 diagram.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 190: 
+
+## Which of the following enhancement options does not require any preparation from SAP?
+
+다음 ENHANCEMENT OPTION 들 중 SAP 로 부터 어떠한 준비도 필요하지 않는 것은? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Explicit enhancement point
+
+## <u>*Implicit enhancement point*</u>
+
+##### Explicit enhancement sections
+
+##### New BAdIs
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 191: 
+
+## You are using the new debugger and you want to change the content of an internal table.Which actions are allowed?
+
+당신은 NEW DEBUGGER 를 사용중이다. 또한 당신은 ITAB 의 CONTENT 를 바꾸길 원한다. 허용되는 행위는 무엇인가?
+
+## 3 correct 
+
+Response: 
+
+## *<u>Delete the selected rows.</u>*
+
+선택된 ROW 삭제
+
+##### Delete table from memory.
+
+메모리 부터 TABLE 삭제 
+
+## *<u>Delete the entire contents of a table.</u>*
+
+테이블의 CONTENT 전체 삭제
+
+## *<u>Change row content and press Enter (\<ENTER>).</u>*
+
+ROW CONTENT 변경, ENTER 키 누르기
+
+##### Change row content and press Save (\<CTRL> + S).
+
+ROW CONTENT 변경, SAVE 버튼(\<CTRL> + S) 누르기
+
+<BR/>
+
+*****
+
+행 추가, 행 삭제 등 가능.
+
+*****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 192:??????????????????????
+
+## Which of the following is a true statement?
+
+다음중 옳은 것은?
+
+#### 3 correct 
+
+## *<u>A package can be nested.</u>*
+
+패키지를 중첩할 수 있습니다.
+
+## *<u>All customer repository objects have to be assigned to a package.</u>*
+
+모든 CUSTOMER 리포지토리 OBJECT를 패키지에 할당해야 합니다.
+
+## <u>*Packages use interfaces and visibility to make their elements visible to other packages.*</u>
+
+패키지는 인터페이스와 가시성을 사용하여 다른 패키지에서 해당 요소를 볼 수 있도록 합니다.
+
+##### The transport layer is a mandatory input field for the package. (optional)
+
+TRANSPORT LAYER는 패키지의 필수 입력 필드입니다. (선택사항)
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 193: 
+
+## Function modules provide which types of parameters?
+
+FUNCTION MODULE 은 어떤 파라미터 타입을 제공하는가?
+
+#### 4 correct 
+
+##### Return values (function methods)
+
+## <u>*Exceptions*</u>
+
+## <u>*Output*</u>
+
+## <u>*Input*</u>
+
+## <u>*Input/output (changing)*</u>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 194: 
+
+## Which of the following predefined data types are character types?
+
+다음중 CHARACTER TYPE 인 PREDEFINED DATA TYPE 은?
+
+#### 3 correct 
+
+Response: 
+
+##### P
+
+## *<u>N</u>*
+
+## *<u>T</u>*
+
+## *<u>D</u>*
+
+##### X
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 195: 
+
+## You define a generic variable that can hold the ABAP types C, D, N, STRING, and T. You want to restrict the use of other ABAP types. Which generic data type must you use in the definition?
+
+당신은 ABAP TYPE C, D, T,  N, STRING TYPE들을 담을 수 있는 GENERIC VARIABLE를 정의하려 한다. 당신은 다른 ABAP TYPE들은 거절 하고 싶다. 다음중 올바른 GENERIC DATA TYPE 정의는? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SIMPLE
+
+##### DATA
+
+## *<u>CLIKE</u>*
+
+##### CSEQUENCE
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 196: 
+
+## Identify the types of controller. 
+
+CONTROLLER 의 TYPE 을 식별하라
+
+## 5 correct 
+
+## Custom controller
+
+## Window controller
+
+Consumer controller
+
+## View controller
+
+## Configuration controller
+
+## Component controller
+
+<BR/>
+
+****
+
+Web dynpro 의 controller 
+
+https://wiki.scn.sap.com/wiki/display/WDABAP/Controllers+in++Web+Dynpro+for+ABAP
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 197: 
+
+## A work process…
+
+WORK PROCESS 는 ...
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Stays linked to a screen through the dispatcher.
+
+DISPATCHER 를 통해 화면에 연결된 상태를 유지한다.
+
+##### Becomes inactive while waiting for a user.
+
+USER 를 기다리는 동안 비활성화 된다.
+
+##### Becomes active while waiting for a user.
+
+USER 를 기다리는 동안 활성화 된다.
+
+## <u>*Uses a common memory area called shared memory.*</u>
+
+SHARED MEMORY 라고 불리는 공통된 MEMORY AREA를 사용한다. 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 198: 
+
+## What are the differences between displaying in a full screen and in a container?
+
+FULL SCREEN 과 CONTAINER 에서 DISPLAY 하는 것의 차이는 무엇인가?
+
+#### 2 correct 
+
+Response: 
+
+##### Only a full-screen ALV allows the use of event handling.
+
+FULL-SCREEN ALV 만 EVENT HANDLING 을 사용할 수 있다.
+
+##### The full screen requires Dynpro programming.
+
+FULL SCREEN 은 DYNPRO PROGRAMMING 을 요구한다. 
+
+## *<u>The container requires the use of an additional object</u>*
+
+CONTAINER 는 ADDITIONAL OBJECT 의 사용이 요구된다.
+
+(CL_GUI_CUSTOM_CONTAINER CLASS 를 이용함.)
+
+#### Only an ALV in a container allows the use of event handling.
+
+오직 CONATINER 에서의 ALV  만이  EVENT HANDLING 이 허용된다. 
+
+#### The only difference is that the container name must be specified when creating the ALV object.
+
+단 하나의 차이점은 CONTAINER NAME 이 ALV OBJECT 를 생성할때 특정되어야 한다는 것이다.
+
+## *<u>Any type of ALV allows the use of event handling.</u>*
+
+어떤  ALV 의 타입이든  EVENT HANDLING 의 사용이 허용된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 199: 
+
+## In which program types can you create dialog screens?
+
+어떤 프로그램 타입에서 DIALOG SCREEN 을 생성할 수 있는가?
+
+#### 3 correct 
+
+Response: 
+
+## Function group
+
+## Module pool
+
+##### Interface pool
+
+## Executable program
+
+##### Class pool
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 200: 
+
+# ????????????MESSAGE TYPE 과 CHAIN 관련 공부
+
+## A screen has the following PAI flow logic:
+
+PROCESS AFTER INPUT
+FIELD A MODULE check_A
+FIELD A MODULE check_B
+CHAIN.
+FIELD:C,D
+MODULE check_CD
+ENDCHAIN
+FIELD:C,B.
+MODULE check_CB
+ENDCHAIN
+
+## What happens if the application senda a type E message during the check_CB module processing?
+
+프로그램이 check_CB 모듈을 처리하는 동안 E 유형 메시지를 보내면 어떻게 됩니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### The screen is NOT displayed again. Processing terminates and the user must restart the ABAP program
+
+화면이 다시 표시 되지 않는다. 처리가 종료되고 사용자가 ABAP 프로그램을 다시 시작해야한다.
+
+##### The screen is displayed again and the PBO flow logic is processed. Only fields B and C are ready for input.
+
+화면이 다시 표시되고 PBO FLOW LOGIC 이 처리된다. 필드 B 와 C 가 INPUT 될수 있게 된다.
+
+##### The screen is displayed again without processing the PBO flow logic. All fields are ready for input.
+
+PBO FLOW LOGIC 처리 없이 다시 화면이 DISPLAY 된다. 모든 필드들이 INPUT 될 수 있게 된다.
+
+## *<u>The screen is displayed again without processing the PBO logic flow. Only fields B and C are ready for input</u>*
+
+PBO FLOW LOGIC 처리 없이 화면이 다시 DISPLAY 되며 오직 필드 B,C 만이 INPUT 될 수 있게 된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
