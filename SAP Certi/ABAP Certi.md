@@ -8140,7 +8140,7 @@ Response:
 
 Response: 
 
-## You search in the flow logic of the screen for CAL CUSTOMER-SUBSCREEN statement
+## *<u>You search in the flow logic of the screen for CAL CUSTOMER-SUBSCREEN statement</u>*
 
 화면의 FLOW LOGIC에서 CALL CUSTER-SUBSCREEN 문을 검색합니다.
 
@@ -8163,4 +8163,237 @@ BADI Builder(T-CODE SE19)를 사용하여 적합한 BADI 가 있는지 확인합
 ****
 
 <BR/>
+
+# Question 204: 
+
+## Which options are available for a JOIN in ABAP Open SQL?
+
+다음중 ABAP OPEN SQL 에서 JOIN 에 가능한 OPTION 은?
+
+#### 3 correct 
+
+Response: 
+
+##### CROSS JOIN
+
+## <u>*INNER JOIN*</u>
+
+## <u>*LEFT OUTER JOIN*</u>
+
+## <u>*FULL JOIN*</u>
+
+##### RIGHT OUTER JOIN
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 205: 
+
+## How can you declare an internal table using the transparent table A as its line type?
+
+LINE TYPE 으로 TRANSPARENT TABLE A 를 사용하는 ITAB 을 어떻게 선언해 줄 수 있는가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### DATA gt_itab TYPE REF TO a.
+
+## <u>*DATA gt_itab TYPE TABLE OF a.*</u>
+
+##### DATA gt_itab TYPE a.
+
+##### DATA gt_itab TYPE LINE OF a.
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 206: 
+
+## What is mandatory for automatic data transport between a variable and an input field on a classical screen (dynpro)?
+
+CLASSICAL SCREEN(DYNPRO)에서 변수와 인풋 필드 사이의 자동 데이터 전송을 위해 필수적인 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### The property OUTPUT of the input field must be set.
+
+INPUT FIELD 의 OUTPUT PROPERTY 가 서정되어야 한다. 
+
+## <u>*The name of the variable and the name of the input field must be identical.  (same name)*</u>
+
+변소의 일므과 INPUT FIELD 의 이름은 동일해야한다.
+
+##### The variable must be declared using the DATA statement.
+
+DATA 구문을 사용하여 변수를 선언해주어야 한다.
+
+##### The variable must be declared using the TABLES statement.
+
+TABLES 구문을 사용하여 변수를 선언해 주어야한다.
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 207:
+
+## Which of the following statements are true? 
+
+#### 2 correct 
+
+Response: 
+
+## <u>*A conversion routine can be assigned to a domain.*</u>
+
+CONVERSION ROUTINE 은 DOMAIN 에 할당 될 수 있다.
+
+##### You define the value range in the data element. (domain)
+
+DATA ELEMENT 에서 VALUE RANGE 를 정의할 수 있다.
+
+## <u>*You can enter documentation for the data element in the ABAP Dictionary.*</u>
+
+ABAP DICTIONARY 에서 DATA ELEMENT 를 위한 DOCUMENTATION 를 입력할 수 있다. 
+
+##### A conversion routine can be assigned to a data element. (domain)
+
+CONVERSION ROUTINE 은 DATA ELEMENT 에 할당될 수 있다.
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 208: 
+
+## Which of the following can you use to enhance SAP standard tables and structures with fields?
+
+다음중 SAP STANDARD TABLE 과 STRUCTURE 에서 FIELD 에 대해 ENHANCE 할 때 사용할 수 있는것은?? 
+
+#### 2 correct 
+
+Response: 
+
+## <u>*Customizing includes (ci_include)*</u>
+
+##### Append search helps
+
+##### Field exits
+
+## *<u>Append structures</u>*
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 209: 
+
+## What data type you can create in the ABAP Dictionary?
+
+ABAP DICTIONARY 에서 생성할 수 있는 DATA TYPE 은?
+
+#### Please choose the correct answer
+
+Response: 
+
+##### Secondary index
+
+##### Lock object
+
+##### Type group
+
+## *<u>Structure</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 210: 
+
+## You want to loop over an internal table without copying each table row to a work area.How can you achieve this using a field symbol?
+
+당신은 각 TABLE ROW를  WORK AREA 로 복사하지 않고 ITAB 위를 루프하려고 한다. FIELD SYMBOL을 사용하여 이 작업을 수행할 수 있는 방법은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### LOOP AT \<itab> REFERENCE INTO \<field_symbol>. ENDLOOP.
+
+##### LOOP AT \<itab> INTO \<field_symbol>. ENDLOOP.
+
+## <u>*LOOP AT \<itab> ASSIGNING \<field_symbol>. ENDLOOP.*</u>
+
+##### LOOP AT \<itab> TRANSPORTING INTO \<field_symbol>. ENDLOOP.
+
+<BR/>
+
+*****
+
+
+field symbol 사용 syntax 문제
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 211: 
+
+## Which rules do you have to consider when working with pooled tables?
+
+POOLED TABLE 로 작업할 때 고려해야 할 규칙은 무엇입니까?
+
+#### 2 correct 
+
+Response: 
+
+## <u>*Only key fields should be used in ORDER BY clauses*</u>
+
+ORDER BY 절에는 키 필드만 사용해야 한다.
+
+## <u>*Only key fields should be used in WHERE condition*</u>
+
+WHERE 조건에서는 키 필드만 사용해야 한다.
+
+##### An append structure can be created
+
+APPEND STRUCTURE 를 생성할 수 있다.
+
+##### All fields can be used in indexes
+
+모든 필드를 인덱스에서 사용할 수 있다.
 
