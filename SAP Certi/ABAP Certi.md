@@ -3948,9 +3948,11 @@ Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
 
 <BR/>
 
-# Q93. (skip)
+# Q93. (skip)(그냥 한번 봐둬라.. ) 
 
-### What is the difference between a Unicode and non-Unicode program? 
+# 217번이랑 같은 문제인데 답이 다름
+
+## What is the difference between a Unicode and non-Unicode program? 
 
 UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
 
@@ -8396,4 +8398,661 @@ APPEND STRUCTURE 를 생성할 수 있다.
 ##### All fields can be used in indexes
 
 모든 필드를 인덱스에서 사용할 수 있다.
+
+<bR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 212: 
+
+## How can you add a session breakpoint to your program?
+
+프로그램에서 BREAKPOINT 을 어떻게 추가할 수 있는가?
+
+#### 2 correct 
+
+Response: 
+
+## <u>*Set a breakpoint in the ABAP editor*</u>
+
+ABAP EDITOR 에서 BREAKPOINT 설정한다.
+
+##### Set a breakpoint in the ABAP editor and select Save.
+
+ABAP 편집기에서 BREAKPOINT 을 설정하고 저장을 선택한다.
+
+##### Set a breakpoint in the ABAP debugger and press F8
+
+ABAP 디버거에서 BREAKPOINT 을 설정하고 F8 키를 누른다.
+
+## <u>*Execute command /h*</u>
+
+/h 명령 실행 한다.
+
+<BR/>
+
+*****
+
+debug 를 하기 위한 break point 문제
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 213: ??????????????????????????????
+
+## For which of the following requirements can you implement a functional method?
+
+다음 요구 사항들 중 FUNCTIONAL METHOD 를 구현 할 수 있는 것은? 
+
+#### 2 correct answers 
+
+Response: 
+
+## <u>*A factory method that returns an object reference*</u>
+
+OBJECT REFERENCE 를 반환하는 FACTORY METHOD 
+
+##### A method to set an instance attribute with one importing parameter and no other parameters
+
+다른 PARAMETER 를 제외하고 하나의 IMPORTING PARAMETER 를 사용하여 INSTANCE ATTRIBUTE 를  설정하는 METHOD 
+
+##### A handler method for an event that has a returning parameter
+
+RETURNING PARAMETER 를 가지는 EVENT 를 위한 HANDLER METHOD 
+
+## <u>*A private static helper method that returns a single value as the result of an algorithm*</u>
+
+알고리즘의 결과로 SINGLE VALUE 를 반환하는 PRIVATE STATIC HELPER METHOD 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 214: 
+
+## Which of the following predefined ABAP types is incomplete?
+
+다음 PREDEFINED ABAP TYPE 중 INCOMPLETE 인 것은? 
+
+#### Please choose the correct answer.
+
+Response:
+
+##### XSTRING
+
+##### STRING
+
+## *<u>P</u>*
+
+##### F
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 215: ????????????????
+
+## Which statement is true?
+
+#### Please choose the correct answer.
+
+Response: 
+
+#### A database LUW cannot be placed within an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 내에 배치할 수 없다.
+
+#### A database LUW must be placed within an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 내에 있어야 한다.
+
+## <u>*An SAP LUW must be placed within a database LUW.*</u>
+
+SAP LUW는 데이터베이스 LUW 내에 배치되어야 한다.
+
+#### A database LUW must be placed without an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 없이 배치해야 한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 216: (그냥 한번 봐둬라.. )
+
+## If you are using external debugging (debugging of HTTP and RFC requests, which arrive in your ABAP system), what will the Debugger do?
+
+EXTERNAL DEBBUGING (ABAP 시스템에 도착하는 HTTP 및 RFC 요청 디버깅)을 사용하는 경우 DEBUGGER 는 무엇을 합니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>May or may not stop, depending on external factors.</u>*
+
+외부 요인에 따라 중지되거나 중지되지 않을 수 있다.
+
+##### Always stop when the external breakpoint is reached.
+
+외부 중단점에 도달하면 항상 중지한다.
+
+##### Never stop; external breakpoints operate on users other than your own.
+
+절대 중단되지 않는다. 외부 중단점은 사용자가 아닌 다른 사용자에서 작동한다.
+
+##### Do not stop when the external breakpoint is reached.
+
+외부 중단점에 도달했을 때 중지하지 않는다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 217: (그냥 한번 봐둬라.. )
+
+# 93번이랑 같은 문제인데 답이 다름
+
+## What is the difference between a Unicode and non-Unicode program? 
+
+UNICODE PROGRAM 과 NON-UNICODE PROGRAM 의 차이는?
+
+#### Please select all the correct answers that apply.
+
+Response: 
+
+## <u>*Byte-type data objects cannot be compared to character-type data objects.*</u>
+
+## <u>*Offset positioning in a Unicode structure is restricted to flat data objects.*</u>
+
+## <u>*Byte-type data objects cannot be assigned to character-type data objects.*</u>
+
+## <u>*Offset positioning in a Unicode structure is restricted to character data objects.*</u>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 218: 
+
+## You write the following ABAP statement
+
+SELECT SINGLE carrid connid cityfrom cityto
+From spfli
+INTO gs_spfli
+WHERE carrid = pa_car
+AND connid = pa_con
+
+## How are the fields in the field list of the SELECT statement copied to the target structure gs_spfli?
+
+SELECT 문의 FIELD LIST 에서 FIELD 들은 GS_SPFLI STRUCTURE 에 어떻게 복사되는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### They are copied to fields with the same name
+
+같은 이름을 가진 필드에 복사된다.
+
+##### They are copied to fields with the same type
+
+동일한 TYPE 을 가진 필그데 복사된다.
+
+##### They are copied from right to left
+
+오른쪽에서 왼쪽으로 복사된다.
+
+## *<u>They are copied from left to right</u>* 
+
+(왼쪽부터 차례대로 들어간다.)
+
+왼쪽 부터 오른쪽으로 복사된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 219: 
+
+## An executable ABAP program contains a standard selection screen and uses the event blocks AT SELECTION SCREEN, AT SELECTION-SCREEN OUTPUT, INITIALIZATION, START-OFSELECTION.
+
+## In which sequence will ABAP runtime call these event blocks?
+
+EVENT BLOCK 순서
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### AT SELECTION-SCREEN OUTPUT => INITIALIZATION => AT SELECTION-SCREEN => START-OF-SELECTION
+
+## *<u>INITIALIZATION => AT SELECTION-SCREEN OUTPUT => AT SELECTION-SCREEN => START-OF-SELECTION</u>*
+
+LOAD-OF-PROGRAM
+INITIALIZATION
+AT SELECTION-SCREEN OUTPUT
+AT SELECTION-SCREEN
+START-OF-SELECTION
+END-OF-SELECTION
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 220: 
+
+## What is variable-length structure called? 
+
+가변길이 STRUCTURE 를 뭐라 부르는가?
+
+#### Please choose the correct answer.
+
+Response:
+
+##### Nested link structure
+
+## *<u>Nested structure</u>*
+
+##### Flat structure
+
+##### Link structure
+
+<BR/>
+
+****
+
+크기가 변하는 structure.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 221: 
+
+## Which events can exist in all types of programs that actually contain executable statements?
+
+실행 가능한 구문들을 포함하고 있는 프로그램들의 모든 타입들에서 존재할 수 있는 EVENT 는?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### INITIALIZATION
+
+## <u>*LOAD-OF-PROGRAM*</u>
+
+##### AT PF##
+
+##### AT LINE-SELECTION
+
+##### AT USER-COMMAND
+
+##### START-OF-SELECTION
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 222: 
+
+## To which ABAP Dictionary definition can you assign fixed values?
+
+ABAP DICTIONARY 정의에서  FIXED VALUE 를 할당할 수 있는 것은? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Field of a transparent table
+
+##### Data element
+
+## *<u>Domain</u>*
+
+##### Component of a structure
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 223: ????????????????
+
+## You are establishing the business logic layer for a Web Dynpro Component. Which service types are available in the Service Call wizard?
+
+WEB DYNPRO 구성요소의 BUSINESS LOGIC LAYER 를 설정하고 있다. 어떤 SERVICE TYPE 이 SERVICE CALL WIZARD 에서 사용할 수 있는가?
+
+#### 3 correct 
+
+Response: 
+
+##### Transaction code
+
+## <u>*Class method*</u>
+
+## <u>*Function module*</u>
+
+##### Function group
+
+## <u>*Web service proxy*</u>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 224: 
+
+## What are the declarative statements used to define the selection?
+
+SELECTION  정의에 사용하는 선언문은?
+
+#### 3 correct 
+
+Response:
+
+##### None of the above
+
+## <u>*PARAMETERS*</u>
+
+## <u>*SELECTION-SCREEN*</u>
+
+## <u>*SELECT-OPTIONS*</u>
+
+<BR/>
+
+****
+
+입력 화면 만드는 것이 가능한 문
+
+****
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 225: 
+
+## You want to add a field type CURR to a transparent table. What else must you do?
+
+TRANSPARENT TABLE 에 CURR 필드 타입을 추가하기를 원한다. 해야하는것이 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## <u>*Create a reference to a field of type CUKY.*</u>
+
+CUKY 유형의 필드에 대한 참조를 만든다.
+
+##### Add a check table that contains a field of type CUKY.
+
+CUKY 유형의 필드를 포함하는 체크 테이블을 추가한다.
+
+##### Create a new field CUKY as a pre-defined type.
+
+사전 정의된 유형으로 새 필드 CUKY를 작성한다.
+
+##### Add a key fieldof type CUKY.
+
+CUKY 유형의 키 필드를 추가한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 226:???????????????? 
+
+## What is the root class in the RTTS inheritance tree?
+
+RTTS  상속 트리 에서 ROOT CLASS 는 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### CL_ABAP_DATADESCR
+
+## *<u>CL_ABAP_TYPEDESCR</u>*
+
+##### CL_ABAP_ELEMDESCR
+
+##### CL_ABAP_COMPLEXDESCR
+
+<BR/>
+
+*****
+
+RTTS : runtime type system : runtime 중 변수 type 확인하는 기능
+
+*****
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 227:??????????????? 
+
+## You want to select data from two tables and store the result in as structure.
+
+ Table PARTNER contains the fields PART_ID and KIND.
+ Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+ The structure is defined as follows
+ DATA: BEGIN OF wa_result,
+ Part_id type partner-part_id, cont_id type contract-cont_id,
+ Cont_type TYPE contract-cont_type,
+ END of wa_result,
+ Lt_result type table of wa_result.
+ How can you replace the following SELECT statement with an outer join?
+ SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
+ SELECT cont_id from CONTRACT into wa_result-cont_id WHERE part EQ   
+ wa_partner-part_id And DIVISION eq ‘Water’. 
+ Append wa_result to lt_result. 
+ ENDSELECT.
+ If sy-subrc<>0. CLEAR wa_result-cont_id
+ APPEND wa_result TO lt_result. ENDIF.
+  ENDSELECT.
+
+##  Please choose the correct answer.
+
+Response:
+
+##### SELECT part_idcont_id from partner LEFT JOIN contract on partner-part_id = contract-part_id AND partner-kind EQ ‘Residential’ INTO CORRESPONDING FIELDS OF TABLE lt_result WHERE division eq ‘Water’.
+
+## <u>*SELECT part_idcont_id from partner AS A LEFT JOIN contract AS b ON a~part_id = b~part_id INTO CORRESPONDING FIELDS OF TABLE lt_result WHERE kind = ‘Residential’ and AND division EQ ‘Water’.*</u>
+
+##### SELECT part_idcont_id from partner AS A LEFT JOIN contract AS b ON a~part_id = b~part_id AND b~division EQ ‘Water’ INTO TABLElt_result WHERE kind = ‘Residential’
+
+##### SELECT part_idcont_id from partner LEFT JOIN contract on partner-part_id = contract-part_id AND contract-division EQ ‘Water’ INTO TABLE lt_result WHERE kind EQ ‘Residential’.
+
+<BR/>
+
+****
+
+****
+
+<br/>
+
+# Question 228: 
+
+## Which statements are true?
+
+#### 5 correct 
+
+Response:
+
+## <u>*The ALV Object Model can define a sort criteria for initial display.*</u>
+
+ALV 개체 모델은 초기 표시를 위한 정렬 기준을 정의할 수 있습니다.
+
+## <u>*The ALV Grid requires a table refresh after programmatically changing the ALV.*</u>
+
+프로그래밍 방식으로 ALV를 변경한 후 ALV 그리드를 새로 고쳐야 합니다.
+
+## <u>*The ALV Grid uses a reference to the data table for display.*</u>
+
+ALV 그리드는 데이터 테이블에 대한 참조를 사용하여 표시합니다.
+
+## <u>*The ALV Object Model uses a reference to the data table for display.*</u>
+
+ALV 개체 모델은 데이터 테이블에 대한 참조를 사용하여 표시합니다.
+
+## <u>*The ALV Grid can define a sort criteria for initial display.*</u>
+
+ALV 그리드는 초기 표시를 위한 정렬 기준을 정의할 수 있습니다.
+
+##### The ALV Object Model requires a table refresh after programmatically changing the ALV. (classic ALV 설명)
+
+ALV 개체 모델은 ALV를 프로그래밍 방식으로 변경한 후 테이블을 새로 고쳐야 합니다(기존 ALV 명)).
+
+<BR/>
+
+****
+
+OM ALV : object model ALV 
+
+****
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 229: 
+
+## Global data types defined in SAP systems are…
+
+SAP SYSTEM 에서 정의된 GLOBAL DATA TYPE 은... 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Date types defined in the program using ABAP Dictionary types.
+
+ABAP DICTIONARY TYPE 을 사용하여 프로그램에서 정의된 DATA TYPE 이다. 
+
+##### Date types does not defined Dictionary types.
+
+DICTIONARY TYPE 에서 정의되지 않은 DATA TYPE 이다.
+
+##### Data defined in the program that is visible to all the routines/statements within the ABAP program.
+
+ABAP 프로그램 내의 모든 ROUTINE/STATEMENT 에서 볼 수 있는 프로그램에 정의된 데이터 이다.
+
+## *<u>ABAP Dictionary types.</u>*
+
+ABAP DICTIONARY TYPE 이다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 230: 
+
+## How do you create lock objects and lock modules for use in ABAP programs that access the database?
+
+DB 에 접근 하는 ABAP 프로그램에서 사용하기 위한 LOCK OBJECT 와 LOCK MODULE 을 생성하는 방법은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Use the Function Builder to create the lock modules. The lock objects are created in the program logic
+
+LOCK MODUEL 을 생성하기 위해 FUNCTION BUILDER 를 사용한다. LOCK OBJECT 는 PROGRAM LOGIC 에서 생성된다.
+
+##### Use the ABAP dictionary to create the lock objects. Use the function builder to create the lock modules
+
+ABAP DICTIONARY 를 사용하여 LOCK OBJECT 를 생성한다.  FUNCTION BUILDER 를 사용하여 LOCK MODULE 을 생성한다.
+
+##### Use the Function Builder to create the lock modules and the lock objects
+
+FUNCTION BUILDER 를 사용하여 LOCK MODULE과 LOCK OBJECT 를 생성한다.
+
+## *<u>Use the ABAP Dictionary to create the lock objects. The lock modules are created automatically</u>*
+
+ABAP DICTIONARY 를 사용하여 LOCK OBJECT 를 생성한다. LOCK MODULE 은 자동으로 생성된다.
+
+<br/>
+
+****
+
+****
+
+<br/>
 
