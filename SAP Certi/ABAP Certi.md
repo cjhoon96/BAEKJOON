@@ -10,7 +10,7 @@
 
 # Q1.
 
-### In which controller type can you embed a service call?
+## In which controller type can you embed a service call?
 
 #### 서비스 호출을 포함할 수 있는 컨트롤러 유형은 무엇입니까?
 
@@ -18,11 +18,15 @@
 
 ##### Configuration controller
 
-#### ***<u>Component controller</u>***
+## ***<u>Component controller</u>***
 
 ##### Interface controller
 
 ##### View controller
+
+<BR/>
+
+****
 
 Service calls can only always be embedded in global controllers, that is, in the component controller or in additionally created custom controllers. 
 
@@ -32,33 +36,39 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 반면에 View controller에 서비스 호출을 내장하는 것은 불가능하다.
 
-<br/><br/>
-
-****
-
 ****
 
 <br/>
+
+<BR/>
+
+****
+
+****
 
 <br/>
 
 # Q2.
 
-### The update function modules. Which statement can be used to discard all update requests for the current SAP LUW?
+## The update function modules. Which statement can be used to discard all update requests for the current SAP LUW?
 
-#### 현 SAP LUW 의 모든 UPDATE 요청을 취소하는데 사용할 수 있는 구문은?
+##### 현 SAP LUW 의 모든 UPDATE 요청을 취소하는데 사용할 수 있는 구문은?
 
 #### 2 correct
 
 ##### MESSAGE exxx(nnn).
 
-#### <u>*ROLLBACK WORK.*</u>
+## <u>*ROLLBACK WORK.*</u>
 
 ##### EXIT.
 
 ##### DELETE UPDATE.
 
-#### <u>*MESSAGE axxx(nnn).*</u>
+## <u>*MESSAGE axxx(nnn).*</u>
+
+<BR/>
+
+****
 
 LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA에 저장하고, UPDATE PROCESS 를 거쳐서 수정할 내역을 GROUPING 하여 DB 프로세스에 저장하는 개념이다.
 
@@ -71,6 +81,8 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 두가지 방법이 있다.
 
+****
+
 <br/><br/>
 
 ****
@@ -79,21 +91,19 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 <br/>
 
-<br/>
-
 # Q3.
 
-### Which of the following statements are correct?
+## Which of the following statements are correct?
 
-#### 다음중 옳은 것은?
+##### 다음중 옳은 것은?
 
 #### 3 correct
 
-#### *<u>An enhancement spot can contain either an explicit enhancement point and enhancemnet section or a new BAdI.</u>*
+## *<u>An enhancement spot can contain either an explicit enhancement point and enhancemnet section or a new BAdI.</u>*
 
 Enhancement spot 에는 Explicit enhancement point 또는 enhancement section 또는 새로운 BAdI가 포함 될 수 있으나 세가지 모두를 포함할 수는 없다.
 
-#### *<u>An enhancement spot can contain one or more simple or composite enhancements.</u>*
+## *<u>An enhancement spot can contain one or more simple or composite enhancements.</u>*
 
 Enhancement spot 은 하나 이상의 simple 또는 composite enhancement 를 포함 할 수 있다.
 
@@ -103,7 +113,7 @@ Enhancement spot 은 explicit enhancement point 와 explicit enhancement section
 
 **<u>*(Spot 에는 enhancement point 와 enhancement section은 같이 넣을 수 있지만 new BAdIs는 함께 넣을 수 없다.)*</u>**
 
-#### *<u>An enhancement spot can contain an explicit enhancement point and an enhancement section.</u>*
+## *<u>An enhancement spot can contain an explicit enhancement point and an enhancement section.</u>*
 
 Enhancement spot 은 explicit enhancement point 와 enhancement section 을 포함 할 수 있다.
 
@@ -115,25 +125,25 @@ Enhancement spot 은 explicit enhancement point 와 enhancement section 을 포�
 
 ****
 
-<br/><br/>
+<br/>
 
 # Q4.
 
-### Which of the following features do you have to consider when you use shared objects?
+## Which of the following features do you have to consider when you use shared objects?
 
 #### shared object들을 사용할 때 고려해야 하는 기능은 다음 중 무엇입니까?
 
 #### 3 correct
 
-#### <u>*Concurrent read accesses are supported*</u>
+## <u>*Concurrent read accesses are supported*</u>
 
 동시 읽기 액세스가 지원됩니다.
 
-#### <u>*Memory bottlenecks result in runtime errors and have to be caught*</u>
+## <u>*Memory bottlenecks result in runtime errors and have to be caught*</u>
 
 메모리 병목 현상이 발생하면 런타임 오류가 발생하므로 이를 파악해야 함
 
-#### <u>*Data is saved as attributes of objects*</u>
+## <u>*Data is saved as attributes of objects*</u>
 
 데이터가 개체의 속성으로 저장됩니다.
 
@@ -171,11 +181,9 @@ Enhancement spot 은 explicit enhancement point 와 enhancement section 을 포�
 
 <br/>
 
-<br/>
-
 # Q5.
 
-### You are writing a function module that will be called from external system via remote function call (RFC). How do you report an error back to the external caller?
+## You are writing a function module that will be called from external system via remote function call (RFC). How do you report an error back to the external caller?
 
 #### 당신은 RFC(원격 함수 호출)를 통해 외부 시스템에서 호출되는 함수 모듈을 작성하고 있다. 외부 호출자에게 오류를 보고하려면 어떻게 해야 하는가?
 
@@ -185,7 +193,7 @@ Enhancement spot 은 explicit enhancement point 와 enhancement section 을 포�
 
 참조로 전달된 EXPORTING parameters에 오류 데이터를 씁니다.
 
-#### *<u>Write the error data into a CHANGING parameters passed by value.</u>*
+## *<u>Write the error data into a CHANGING parameters passed by value.</u>*
 
 값으로 전달된 CHANGING parameters에 오류 데이터를 기록합니다.
 
@@ -211,29 +219,29 @@ Enhancement spot 은 explicit enhancement point 와 enhancement section 을 포�
 
 ****
 
-<br/><br/>
+<br/>
 
 # Q6. ?????????????????????????????????
 
-### Which must a search help do?
+## Which must a search help do?
 
 #### Search help 가 해야하는 작업은?
 
 #### 4 correct
 
-#### *<u>Be used from a screen</u>*
+## *<u>Be used from a screen</u>*
 
 screen 에서 활용
 
-#### *<u>Have a dialog with the user</u>*
+## *<u>Have a dialog with the user</u>*
 
 사용자와의 대화
 
-#### *<u>Allow the user to select a response</u>*
+## *<u>Allow the user to select a response</u>*
 
 사용자 응답 선택 허용
 
-#### *<u>Determine the values for selection by the user</u>*
+## *<u>Determine the values for selection by the user</u>*
 
 사용자가 선택할 값 결정
 
@@ -258,11 +266,11 @@ LPos 컬럼 순서, SPos : Dialog 컬럼 순서, Exp : 선택값 return 값 결�
 
 ****
 
-<br/><br/>
+<br/>
 
 # Q7.
 
-### When should you use a hashed internal table?
+## When should you use a hashed internal table?
 
 #### hashed internal table은 언제 사용해야 합니까?
 
@@ -272,7 +280,7 @@ LPos 컬럼 순서, SPos : Dialog 컬럼 순서, Exp : 선택값 return 값 결�
 
 index 로 접근할때
 
-#### *<u>When accessing mainly single records</u>*
+## *<u>When accessing mainly single records</u>*
 
 주로 단일 record 로 접근할때 
 
@@ -282,7 +290,7 @@ secondary key 로 접근할때
 
 ##### When accessing using the left-justified part of the key
 
-#### *<u>When accessing always by primary key</u>*
+## *<u>When accessing always by primary key</u>*
 
 항상 primary key 로 접근할때 
 
@@ -304,11 +312,11 @@ hashed internal table : primary key로만 구성
 
 ****
 
-<br/><br/>
+<br/>
 
 # Q8.
 
-### Which data types are incomplete ABAP standard data types?
+## Which data types are incomplete ABAP standard data types?
 
 #### incomplete standard data type 들을 고르시오
 
@@ -318,11 +326,11 @@ hashed internal table : primary key로만 구성
 
 ##### F
 
-#### <u>*C*</u>
+## <u>*C*</u>
 
-#### <u>*N*</u>
+## <u>*N*</u>
 
-#### <u>*P*</u>
+## <u>*P*</u>
 
 <br/>
 
@@ -362,8 +370,6 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 <br/>
 
-<br/>
-
 ****
 
 ****
@@ -380,17 +386,15 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 #### Select all the correct answers
 
-#### <u>*Use the Repository Information System*</u>
+## <u>*Use the Repository Information System*</u>
 
     Repositorty Information System 을 사용
 
-#### <u>*Search for the character string CUSTOMER-FUNCTION*</u>
+## <u>*Search for the character string CUSTOMER-FUNCTION*</u>
 
     "CUSTOMER-FUNCTION" 문자열을 검색한다.
 
-#### <u>*Look for a customer exit in the SAP reference IMG within an*</u>
-
-#### <u>*application area*</u>
+## <u>*Look for a customer exit in the SAP reference IMG within an application area*</u>
 
     Application 영역 내의 SAP 참조 IMG에서 customer exit 을 찾는다.
 
@@ -420,29 +424,25 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 <br/>
 
-<br/>
-
 ****
 
 ****
-
-<br/>
 
 <br/>
 
 # Q10.
 
-### You want to develop a program that processes character type data.
+## You want to develop a program that processes character type data.
 
-#### 당신은 CHARACTER TYPE 데이터를 처리하는 프로그램을 개발하려 한다.
+##### 당신은 CHARACTER TYPE 데이터를 처리하는 프로그램을 개발하려 한다.
 
-### When you implement the program, you can either use the classical string statements or the newer strings expressions and functions
+## When you implement the program, you can either use the classical string statements or the newer strings expressions and functions
 
-#### 프로그램을 구현할 때 클래식 문자열 문을 사용하거나 최신 문자열 표현식 및 함수를 사용할 수 있습니다.
+##### 프로그램을 구현할 때 클래식 문자열 문을 사용하거나 최신 문자열 표현식 및 함수를 사용할 수 있습니다.
 
-### What are the main benefits of using string expressions and string functions?
+## What are the main benefits of using string expressions and string functions?
 
-#### 문자열 표현식과 함수를 사용하는 주된 이점은 무엇인가?
+##### 문자열 표현식과 함수를 사용하는 주된 이점은 무엇인가?
 
 #### 2 correct
 
@@ -450,11 +450,11 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 성능을 크게 향상시킬 수 있다.
 
-#### <u>*You can reduce the number of intermediate variables*</u>
+## <u>*You can reduce the number of intermediate variables*</u>
 
     매개변수의 수를 줄일 수 있다.
 
-#### <u>*You can write compact syntax instead of a long sequence of*</u>
+## <u>*You can write compact syntax instead of a long sequence of*</u>
 
 #### <u>*statements*</u>
 
@@ -483,21 +483,19 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 <br/>
 
-<br/>
-
 # Q11.
 
-### You write a report that displays mass data in a table. You decide to use the ALV Grid control (class CL_GUI_ALV_GRID) instead of a classical list display with WRITE statements.
+## You write a report that displays mass data in a table. You decide to use the ALV Grid control (class CL_GUI_ALV_GRID) instead of a classical list display with WRITE statements.
 
-#### 당신은 테이블에 대량의 데이터를 디스플레이하는 report 를 작성할 수 있습니다. 당신은 WRITE 문을 사용한 CLASSICAL LIST 대신 ALV GRID CONTROL(CL_GUI_ALV_GRID) 를 사용하기로 결정하였습니다.
+당신은 테이블에 대량의 데이터를 디스플레이하는 report 를 작성할 수 있습니다. 당신은 WRITE 문을 사용한 CLASSICAL LIST 대신 ALV GRID CONTROL(CL_GUI_ALV_GRID) 를 사용하기로 결정하였습니다.
 
-### Which of the following functions can you offer to the user without doing any specific programming
+## Which of the following functions can you offer to the user without doing any specific programming
 
-#### 별도의 프로그래밍을 거치지 않고 사용자에게 제공할 수 있는 기능은 무엇인가?
+별도의 프로그래밍을 거치지 않고 사용자에게 제공할 수 있는 기능은 무엇인가?
 
 #### 2 correct
 
-#### <u>*Change column width and sequence*</u>
+## <u>*Change column width and sequence*</u>
 
     열 너비 및 순서 변경
 
@@ -505,7 +503,7 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 통화, 액수 COLUMN들의  변환
 
-#### <u>*Sort and filter the data by any column*</u>
+## <u>*Sort and filter the data by any column*</u>
 
     행 기준 SORT 와 FILTER 기능 구현
 
@@ -536,8 +534,6 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 ****
 
 ****
-
-<br/>
 
 <br/>
 
@@ -9056,3 +9052,388 @@ ABAP DICTIONARY 를 사용하여 LOCK OBJECT 를 생성한다. LOCK MODULE 은 �
 
 <br/>
 
+# Question 231: 
+
+## What can be defined using an implicit enhancement option?
+
+IMPLICIT ENHANCEMENT OPTION 으로 정의될 수 있는 것은?
+
+#### 3 correct 
+
+Response: 
+
+##### Replacement for SAP function modules
+
+SAP FUNCTION MODULE  대체
+
+## <u>*Replacements for global SAP methods*</u>
+
+GLOBAL SAP METHOD 대체
+
+## <u>*Additional attributes in global SAP classes*</u>
+
+GLOBAL SAP CLASS 의 ATTRIBUTE 추가
+
+## *<u>Additional parameters in SAP function modules</u>*
+
+SAP FUNCTION MODULE 에 PARAMETER 추가
+
+##### Additional exceptions in SAP function modules
+
+SAP FUNCTION MODULE 에 EXCEPTION 추가
+
+<br/>
+
+****
+
+****
+
+<br/>
+
+# Question 232: 
+
+## Which of the following standard types is numeric?
+
+다음 STANDARD TYPE 들 중 NUMERIC TYPE 인 것은?
+
+#### 3 correct 
+
+Response: 
+
+## <u>*I*</u>
+
+## <u>*P*</u>
+
+## <u>*F*</u>
+
+##### Decfloat32
+
+<BR/>
+
+*****
+
+*****
+
+<BR/>
+
+# Question 233:
+
+## Table A and table B are partially buffered.Which of the following SELECT statements always access the database?
+
+TABLE A 와 TABLE B 는 PARTIALLY BUFFER 가 설정되어있다.
+
+다음 SELECT 구문 들 중 DB 에 항상 접근 하는 것은?
+
+#### 2 correct 
+
+##### SELECT a b FROM table A INTO CORRESPONDING FIELDS OF TABLE lt_AB
+
+## <u>*SELECT SINGLE FOR UPDATE a b FROM table A INTO CORRESPONDING FIELDS OF ls_A WHERE c EQ ‘1234’.*</u>
+
+## <u>*SELECT a b c d FROM table A JOIN table B ON table A~a EQ table B~eINTO CORRESPONDING FIELDS OF TABLE lt_A_B.*</u>
+
+##### SELECT SINGLE CLIENT SPECIFIED a b FROM table AINTO CORRESPONDING FIELDS OF ls_AB.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 234: 
+
+## Which of the following regarding search helps is a true statement?
+
+다음중 SEARCH HELP 에 대한 설명으로 옳은 것은?
+
+#### Please select all the correct answers that apply.
+
+## <u>*The LPos parameter defines the position of the search help parameter in the search hit list.*</u>
+
+LPos PARAMETER 는 SEARCH HIT LIST 에서 SEARCH HELP PARAMETER 의 위치를 정의한다.
+
+## <u>*The interface for the search help is defined by the IMP (import) and EXP (export) flag of the search help parameter.*</u>
+
+SEARCH HELP 에 대한 INTERFACE 는 SEARCH HELP PARAMETER 의 IMP, EXP FLAG 로 정의된다.
+
+## <u>*The SPos parameter defines the position of the input field on the dialog screen.*</u>
+
+SPos PARAMETER 는 DIALOG SCREEN 의 INPUT FIELD 의 위치를 정의한다.
+
+## <u>*The text table for the selection method is automatically populated if the text table is attached to the database table being used as the selection method.*</u>
+
+만약 TEXT TABLE 이 SEELCTION METHOD 에서 사용중인 DB TABLE 에 연결되어있다면  DSELECTION METHOD 의 TEXT TABLE이 자동으로 채워진다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 235: 
+
+## The order of fields for a transparent table in the database…
+
+DB 에 있는 TRANSPARENT TABLE 의 FIELD 순서는...  
+
+#### Please choose the correct answer.
+
+##### Is created in the order of the Data Dictionary.
+
+DATA DICTIONARY 의 순서대로 정의된다.
+
+## <u>*Is allowed to be different than the ABAP Dictionary.*</u>
+
+ABAP DICTIONARY 와 다르게 정의되는 것이 허용된다.
+
+##### Needs to match the ABAP Dictionary.
+
+ABAP DICTIONARY 와 일치하여야 한다.
+
+##### Is created in the order of the ABAP Dictionary.
+
+ABAP DICTIONARY 의 순서대로 정의된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 236: 
+
+## You create a function group ZATP. What is the name of the corresponding main program?
+
+당신은 ZATP FUNCTION GROUP 을 생성했다.
+
+관련 MAIN PROGRAM 의 이름은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SAPFZATP
+
+##### SAPMZATP
+
+## *<u>SAPLZATP</u>*
+
+##### ZATP
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 237: 
+
+## When you define local classes in ABAP, which syntactical sequence must you follow?
+
+ABAP 의 LOCAL CLASS 를 정의 할때 어떤 따ㅏ야할 SYNTACTICAL SEQUENCE 는?(구문 순서?)  
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>PUBLIC SECTION, PROTECTED SECTION, PRIVATE SECTION</u>*
+
+##### PRIVATE SECTION, PROTECTED SECTION, PUBLIC SECTION
+
+##### The order is handled automatically.
+
+##### The order doesn’t matter.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 238: 
+
+## You are making changes to a program that already has a transaction code linked to it. Your colleague is testing the transaction in your development system. At what point can the changed version of the program be tested?
+
+이미 연결된 트랜잭션 코드가 있는 프로그램을 변경하고 있다. 당신의 동료가 당신의 개발 시스템에서 트랜잭션을 테스트하고 있다. 변경된 버전의 프로그램은 어느 시점에 테스트할 수 있는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### When you release the transport requests for the program
+
+프로그램의 TRANSPORT REQUEST 를 RELEASE 할 때
+
+##### When you save the program
+
+프로그램을 저장할때
+
+##### When you perform a syntax check on the program
+
+프로그램의 구문 검사를 수행할때
+
+## When you activate the program
+
+프로그램을 ACTIVATE 할때
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 240: 
+
+## What is the difference between the INITIALIZATION and AT SELECTION-SCREEN OUTPUT events?
+
+INITIALIZATION EVENT 와 AT SELECTION-SCREEN OUTPUT EVENT 의 차이는 무엇인가?
+
+#### Please choose the correct answer
+
+Response: 
+
+##### · INITIALIZATION can overwrite the default value of a PARAMETERS field
+
+##### · AT SELECTIION-SCREEN OUTPUT can overwrite the default values of a PARAMETERS field
+
+INITIALIZATION 은 파라미터 필드의 기본 값을 덮어 쓸 수 있다.
+
+AT SELECTION-SCREEN OUTPU 은 파라미터 필드의 기본값을 덮어 쓸 수 있다.
+
+##### · INITIALIZATION cannot change pushbutton texts
+
+##### · AT SELECTION-SCREEN OUTPUT can change pushbutton texts
+
+INITIALIZATION PUSHBUTTON 의 TEXT 를 변경할 수 없다.
+
+ATA SELECTION-SCREEN OUTPUT 은 PUSH BUTTON 의 TEXT 를 변경할 수 있다.
+
+##### · INITIALIZATION can change the properties of the screen fields
+
+##### · AT SELECTION-SCREEN OUTPUT cannot change the properties of the screen field (PBO에서)
+
+INITIALIZATION 은 SCREEN FIELD 의 PROPERTY를 변경할 수 있다.
+
+AT SELECTION-SCREEN OUTPUT 에서는 SCREEN FIELD 의 PROPERTY 를 변경할 수 없다.
+
+## <u>*· INITIALIZATION is only processed once.*</u>
+
+## <u>*· AT SELECTION-SCREEN OUTPUT can be processed multiple times*</u>
+
+INITIALIZATION은 단 한번만 수행된다.
+
+AT SELECTION-SCREEN OUTPUT 은 여러번 수행될 수 있다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 250: 
+
+## You want to select all the records from a database table where field CITY contains substring ‘BU’ in any position. Which WHERE clause can you use in an Open SQL select statement?
+
+임의의 위치에 SUBSTRING 'BU' 를 포함하고 있는 CITY FIELD 의  데이터를 DB TABLE 로 부터 모두 SELECT 하기를 원한다. OPEN SQL SELECT 구문 에서 어떤  WHERE 절을 사용할 수 있겠는가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>WHERE city LIKE ‘%BU%’</u>*
+
+##### WHERE city LIKE ‘_BU’
+
+##### WHERE city LIKE ‘%BU*’
+
+##### WHERE city LIKE ‘*BU*’
+
+
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 251: 
+
+## You want to read data from two database tables A and B using a database join. Database table B contains details for data records stored in database table A. Your result should contain all combinations of matching rows from A and B plus all rows from A that do not have matching rows in B. Which statement do you use?
+
+ DB JOIN 을 사용하여 두 DB TABLE A 와 B 에서 데이터를 읽어오려한다. DB TABLE B 는 DB TABLE A 에 저장된 DATA RECORD 의 세부항목을 포함한다. 결과에는 A 와 B 의 모든 ROW 조합과 A 의 모든 ROW 가 포함되어야한다. 어떤 구문을 사용해야하는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>SELECT … FROM a LEFT OUTER JOIN b …</u>*
+
+##### SELECT … FROM a JOIN b …
+
+##### SELECT … FROM a INNER JOIN b …
+
+##### SELECT … FROM b RIGHT OUTER JOIN a …
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 252: 
+
+## Which actions release a database lock?  (Database lock을 말함)
+
+DB LOCK 을 해제 하는 작업은 무엇인가?
+
+#### 7 correct 
+
+Response: 
+
+## <u>*The display of a dialog message type E*</u>
+
+## <u>*The display of an SAP screen*</u>
+
+## <u>*A CALL TRANSACTION*</u>
+
+##### ENQUEUE_
+
+##### DEQUEUE_
+
+## <u>*A SUBMIT*</u>
+
+##### ROLLBACK WORK
+
+## <u>*The display of a dialog message type A*</u>
+
+## <u>*An “/n” in the command field*</u>
+
+## <u>*COMMIT WORK*</u>
+
+##### A call to a function module
+
+<BR/>
+
+****
+
+****
+
+<BR/>
