@@ -156,7 +156,7 @@ hashed internal table : primary key로만 구성
 
 ****
 
-# SEARCH HELP
+# ABAP DICTIONARY
 
 # Q6. ?????????????????????????????????
 
@@ -204,6 +204,82 @@ LPos 컬럼 순서, SPos : Dialog 컬럼 순서, Exp : 선택값 return 값 결�
 ****
 
 <br/>
+
+# Q12. 
+
+## Where should the labels for fields be stored?
+
+#### 필드들의 라벨은 어디에 저장되어야 하는가?
+
+#### Please choose the correct answer.
+
+##### Field
+
+##### Table
+
+##### Structure
+
+## *<u>Data element</u>*
+
+##### Domain
+
+lable 를 설정할 수 있는 위치 (Data element)
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q15.
+
+## How can you maintain documentation for input fields on your screen?
+
+화면의 INPUT FIELD에 대한 문서를 어떻게 유지 보수 할 수 있는가?
+
+#### Please choose the correct answer.
+
+##### Add documentation to the SCREEN table at PROCESS AFTER INPUT (PAI).
+
+PAI 에서 SCREEN 테이블에 문서를 추가한다.
+
+##### Define text tables for the underlying structure.
+
+underlying structure 를 위한 TEXT 테이블을 정의한다. 
+
+##### Add documentation to the SCREEN table at PROCESS BEFORE OUTPUT (PBO).
+
+PBO 에서 SCREEN 테이블에 문서를 추가한다.
+
+## <u>*Add documentation to the underlying data element.*</u>
+
+    underlying DATA ELEMENT 에 문서를 추가한다.
+
+<BR/>
+
+****
+
+INPUT FIELD 를 위한 문서 document는 F1 HELP 를 말하는 것으로 data element에서 지원하는 기능
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
 
 
 
@@ -265,6 +341,74 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 
 
+
+
+
+
+
+****
+
+****
+
+****
+
+# SCREEN
+
+# Q13.
+
+## You build a dialog screen with an input field in an ABAP program.
+
+#### 당신은 ABAP PROGRAM 에서 INPUT FIELD 를 가진 DIALOG SCREEN 을 생성합니다.
+
+## How do you ensure that the contents of the screen field can be accessed in the program?
+
+#### SCREEN FIELD 의 내용이 프로그래에서 접근 가능하게 하려면 어떻게 해야하는가?
+
+#### Please choose the correct answer.
+
+##### Enter the name of a data object in the Paramter ID attribute of
+
+##### the screen field
+
+스크린 필드의 PARAMETER ID 속성에 DATA OBJECT의 이름을 입력
+
+##### Use a MOVE statement in a PAI module to copy the data to a
+
+##### data object
+
+PAI MODULE에서 MOVE 구문을 사용하여 DATA OBJECT 에 DATA 를 COPY 
+
+##### Use the GET statement in the program to transport the data
+
+##### from the screen field
+
+프로그램에서 GET 문을 사용하여 화면 필드에서 데이터 전송
+
+## <u>*Define a data object in the program with the same name as*</u>
+
+## *<u>the screen field</u>*
+
+    프로그램에서 화면 필드와 이름이 같은 데이터 개체 정의
+
+<BR/>
+
+****
+
+screen 의 input field 와 프로그램의 변수 연동 방법 
+
+<u>***변수명과 field 명을 동일***</u>하게 맞추면 자동 연동 됨.    
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -726,3 +870,38 @@ It is not possible, on the other hand, to embed service calls in view controller
 ****
 
 <br/>
+
+# Q14.
+
+## After which statement will the runtime system initialize the ABAP memory (internal session)
+
+어떤 구문 뒤에 런타임 시스템이 ABAP 메모리를 초기화 하는가?
+
+#### Please choose the correct answer.
+
+##### CALL TRANSACTION
+
+##### SUBMIT… AND RETURN
+
+##### SUBMIT
+
+## *<u>LEAVE TO TRANSACTION</u>*
+
+<BR/>
+
+****
+
+SAP 메모리 공유 시
+instance 프로그램에서 LEAVE TO TRANSACTION 문을 호출하면 이전 존재하는 instance를 모두 초기화 시키고 새로운 instance를 생성하여 프로그램을 실행한다.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>

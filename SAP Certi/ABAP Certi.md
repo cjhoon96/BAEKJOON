@@ -537,7 +537,7 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 <br/>
 
-# Q12.  여기부터
+# Q12. 
 
 ## Where should the labels for fields be stored?
 
@@ -567,17 +567,15 @@ lable 를 설정할 수 있는 위치 (Data element)
 
 <BR/>
 
-<BR/>
-
 # Q13.
 
-### You build a dialog screen with an input field in an ABAP program.
+## You build a dialog screen with an input field in an ABAP program.
 
-#### 당신은 ABAP PROGRAM 에서 INPUT FIELD 를 가진 DIALOG SCREEN 을 생성합니다.
+당신은 ABAP PROGRAM 에서 INPUT FIELD 를 가진 DIALOG SCREEN 을 생성합니다.
 
-### How do you ensure that the contents of the screen field can be accessed in the program?
+## How do you ensure that the contents of the screen field can be accessed in the program?
 
-#### SCREEN FIELD 의 내용이 프로그래에서 접근 가능하게 하려면 어떻게 해야하는가?
+SCREEN FIELD 의 내용이 프로그래에서 접근 가능하게 하려면 어떻게 해야하는가?
 
 #### Please choose the correct answer.
 
@@ -599,9 +597,9 @@ PAI MODULE에서 MOVE 구문을 사용하여 DATA OBJECT 에 DATA 를 COPY
 
 프로그램에서 GET 문을 사용하여 화면 필드에서 데이터 전송
 
-#### <u>*Define a data object in the program with the same name as*</u>
+## <u>*Define a data object in the program with the same name as*</u>
 
-#### *<u>the screen field</u>*
+## *<u>the screen field</u>*
 
     프로그램에서 화면 필드와 이름이 같은 데이터 개체 정의
 
@@ -619,21 +617,17 @@ screen 의 input field 와 프로그램의 변수 연동 방법
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q14.
 
-### After which statement will the runtime system initialize the ABAP memory (internal session)
+## After which statement will the runtime system initialize the ABAP memory (internal session)
 
-#### 어떤 구문 뒤에 런타임 시스템이 ABAP 메모리를 초기화 하는가?
+어떤 구문 뒤에 런타임 시스템이 ABAP 메모리를 초기화 하는가?
 
 #### Please choose the correct answer.
 
@@ -643,7 +637,7 @@ screen 의 input field 와 프로그램의 변수 연동 방법
 
 ##### SUBMIT
 
-#### *<u>LEAVE TO TRANSACTION</u>*
+## *<u>LEAVE TO TRANSACTION</u>*
 
 <BR/>
 
@@ -658,21 +652,17 @@ instance 프로그램에서 LEAVE TO TRANSACTION 문을 호출하면 이전 존�
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q15.
 
-### How can you maintain documentation for input fields on your screen?
+## How can you maintain documentation for input fields on your screen?
 
-#### 화면의 INPUT FIELD에 대한 문서를 어떻게 유지 보수 할 수 있는가?
+화면의 INPUT FIELD에 대한 문서를 어떻게 유지 보수 할 수 있는가?
 
 #### Please choose the correct answer.
 
@@ -688,7 +678,7 @@ underlying structure 를 위한 TEXT 테이블을 정의한다.
 
 PBO 에서 SCREEN 테이블에 문서를 추가한다.
 
-#### <u>*Add documentation to the underlying data element.*</u>
+## <u>*Add documentation to the underlying data element.*</u>
 
     underlying DATA ELEMENT 에 문서를 추가한다.
 
@@ -704,25 +694,21 @@ INPUT FIELD 를 위한 문서 document는 F1 HELP 를 말하는 것으로 data e
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q16.
 
-### Which of the following statements about the Object Navigator are true?
+## Which of the following statements about the Object Navigator are true?
 
-#### OBJECT NAVIGATOR 에 대한 구문중 옳은 것은?
+OBJECT NAVIGATOR 에 대한 구문중 옳은 것은?
 
 #### 4 correct
 
-#### *<u>The ABAP Dictionary can be maintained in the Object Navigator.</u>*
+## *<u>The ABAP Dictionary can be maintained in the Object Navigator.</u>*
 
     ABAP DICTIONARY 는 OBJECT NAVIGATOR 에서 유지 보수 될 수 있다.
 
@@ -734,17 +720,17 @@ BAdI IMPLEMENTATION 을 생성할 수 있다.
 
 CUSTOMER PROJECT 를 생성 할 수 있다.
 
-#### *<u>Menus can be displayed and edited in the Object Navigator.</u>*
+## *<u>Menus can be displayed and edited in the Object Navigator.</u>*
 
     메뉴가 DISPLAY 되며 수정될 수 있다.
 
-#### *<u>Screens can be displayed and edited in the Object Navigator.</u>*
+## *<u>Screens can be displayed and edited in the Object Navigator.</u>*
 
     SCREEN 이 DISPLAY 되며 수정될 수 있다.
 
-#### *<u>ABAP programs can be displayed and edited in the Object </u>*
+## *<u>ABAP programs can be displayed and edited in the Object</u>*
 
-#### *<u>Navigator.</u>*
+## *<u>Navigator.</u>*
 
     ABAP 프로그램이 DISPLAY 되며 수정될 수 있다.
 
@@ -764,15 +750,13 @@ structure 관리, 메뉴관리, screen 관리 등,  BAdIS 는 SE18, SE19 에서 
 
 <br/>
 
-<br/>
-
 ****
 
 ****
 
 <br/>
 
-<br/>
+
 
 # Q17.???????????? WEB DYN 공부 다시
 
