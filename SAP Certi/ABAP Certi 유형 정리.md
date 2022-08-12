@@ -6,6 +6,52 @@
 
 
 
+
+
+
+
+***
+
+****
+
+****
+
+# SAP ARCHITECTURE
+
+
+
+## PRESENTATION PROCESS
+
+* SAP GUI FOR WINDOW
+* SAP GUI FOR JAVA
+* SAP GUI FOR HTML
+
+
+
+## APPLICATION PROCESS
+
+### (DISPATCHER + WORK PROCESS + LOCAL BUFFER 로 구성)
+
+### DISPATCHER
+
+* CLIENT 요청을 QUEUE 에 저장 / WORK PROCESS 에 할당
+
+### WORK PROCESS
+
+* #### 
+
+
+
+## DATABASE PROCESS 
+
+* APPLICATION DATA
+* CUSTOMIZED DATA
+* R/3 REPOSITORY DATA
+
+
+
+
+
 ****
 
 ****
@@ -101,17 +147,71 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 
 
+
+
+
+
+
+
 ****
 
 ****
 
 ****
 
-# SEARCH HELP
+# ABAP DICTIONARY
 
 
 
-## Search help : 
+## DATABASE  TABLE
+
+
+
+
+
+
+
+## VIEW
+
+
+
+## DATA TYPE
+
+* ### DATA ELEMENT
+
+  * 
+  * 
+
+  * 필드 라벨들을 저장한다.
+  * F1 HELP 을 지원한다.
+
+
+
+* ### STRUCTURE  TYPE
+
+
+
+* ### TABLE  TYPE
+
+
+
+
+
+
+
+## TYPE GROUP
+
+
+
+
+
+## DOMAIN
+
+
+
+
+
+## SEARCH HELP 
 
 * ### ABAP DICTIONARY SEARCH HELP 를 통해 할당 가능 
 
@@ -159,13 +259,94 @@ Size 지정해야 하는 data type (C, N, P, X)
 
   필요 데이터가 두개 이상의 테이블에 존재한다면 테이블 엔트리는 FOREIGN KEY 로 연결된 VIEW 를 사용하여야 한다.
 
+* ### 용도
+
+  * DATA ELEMENT 에 SEARCH HELP 추가
+
+  * TABLE FIELD 에 SEARCH HELP 추가
+
+  * SCREEN FIELD 에 SEARCH HELP 추가
 
 
-## 용도
 
-* DATA ELEMENT 에 SEARCH HELP 추가
-* TABLE FIELD 에 SEARCH HELP 추가
-* SCREEN FIELD 에 SEARCH HELP 추가
+## LOCK OBJECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
+****
+
+****
+
+# OBJECT NAVIGATOR
+
+
+
+## T-CODE SE80 
+
+ABAP DICTIONARY 는 OBJECT NAVIGATOR 에서 유지 보수 될 수 있다. 
+
+메뉴가 DISPLAY 되며 수정될 수 있다.
+
+SCREEN 이 DISPLAY 되며 수정될 수 있다.
+
+ABAP 프로그램이 DISPLAY 되며 수정될 수 있다.
+
+structure 관리, 메뉴관리, screen 관리 등
+
+
+
+BAdIS 는 SE18, SE19 에서 관리.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+****
+
+****
+
+# Modularization
+
+
+
+## FUNCTION
+
+* ### FUNCTION  GROUP
+
+  FUNCTION GROUP 을 생성시 
+
+  * **1개의 FUNCTION POOL** 과
+  * **두개의 INCLUDE 파일** 
+    * **TXX** - 전역변수
+    * **UXX** - FUNCTION 프로그램
+
+  이 생성된다.
+
+
 
 
 
@@ -196,7 +377,15 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 
 
+****
 
+****
+
+****
+
+# SCREEN
+
+DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해당 필드의 이름과 동일 DATA OBJECT 를 정의하면 자동 연동되어 이를 통해 접근 가능하다. 
 
 
 
@@ -218,11 +407,14 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 ## 별도의 프로그래밍을 거치지 않고 제공할 수 있는 기능
 
-* 열 너비 및 순서 변경
-* 행 기준 SORT 와 FILTER 기능 구현
-* 
+* 컬럼 사이즈 순서 변경
+* filter 기능, sorting 기능
 
+프로그래밍 없이 **<u>*개발자가 직접 지정하지 않고도 사용자가*</u>** ALV TOOL BAR 의 기능을 활용하여 조작 할 수 있는 기능을 묻는것으로 보인다.
 
+column 사이즈는 필드의 경계를 드래그 해 변경 할 수 있으며 순서 또한 field 를 드래그해 변경이 가능하다.
+
+filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 
 
@@ -258,6 +450,10 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 * **<u>*TADIR / MODSAPT*</u>** 테이블 조회
 
+* CMOD SMOD
+
+  CUSTOMER-EXIT
+  
   
 
 ## EXPLICIT ENHANCEMENT
@@ -296,7 +492,11 @@ ABAP EDITOR 메뉴에서 EDIT > ENHANCEMENT OPERATIONS > SHOW IMPLICIT ENHANCEME
 
 ## CUSTOMER EXIT
 
+* ### 관리
 
+  CMOD 에서 조회 가능하며
+
+  SMOD 에서 프로젝트 관리
 
 * ### 찾는법
 
@@ -316,9 +516,43 @@ ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포
 
 
 
+## TABLE / STRUCTURE ENHANCEMENT
 
+* ### INCLUDE STRUCTURE
 
+  공통으로 사용되는 필드들을 테이블에 INCLUDE 하여 사용
 
+* ### APPEND STRUCTURE
+
+  하나의 테이블이나 STRUCTURE 에만 할당할 수 있는 STRUCTURE
+
+  필드명은 YY 또는 ZZ 로 시작
+
+  POOLED CLUSTERED 테이블에 사용 불가
+
+  LCHAR, LRAW 같은 LONG 타입이 존재하는 테이블에서도 사용 불가
+
+  #### 용도
+
+  * STANDARD / CBO 테이블에 신규 필드 추가
+
+  * FOREIGN KEY 추가 및 정의
+  * 도움말 추가
+
+* ## TABLE ENHANCEMENT CATEGORY
+
+  테이블 활성시 조회되는 경고창
+
+  APPEND / INCLUDE 기능을 사용하기 위한 유형 선택을 하라는 메시지
+
+  | TYPE                                                   | 내용                                                         |
+  | ------------------------------------------------------ | ------------------------------------------------------------ |
+  | CANNOT BE ENHANCED                                     | APPEND / INCLUDE 기능 사용 불가                              |
+  | CAN BE ENHANCED( CHARACTER TYPE)                       | APPEND / INCLUDE 사용 가능 / CHARACTER 타입을 가진 필드들로 확장 |
+  | CAN BE ENHANCED( CHARACTER TYPE OR NUMERIC)            | APPEND / INCLUDE 사용 가능 / CHARACTER 타입과 숫자 타입 을 가진 필드들로 확장 |
+  | CAN BE ENHANCED( DEEP) / OR CAN BE ENHANCED (ANY TYPE) | APPEND / INCLUDE 사용 가능 / 모든 데이터 타입을 사용 가능 (SSTRING 타입 지원 X) |
+
+  
 
 
 
@@ -336,7 +570,7 @@ ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포
 
 
 
-## 
+
 
 Service calls can only always be embedded in global controllers, that is, in the ***<u>component controller</u>*** or in additionally created ***<u>custom controllers</u>***. 
 
@@ -348,11 +582,50 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 
 
+## VIEW
+
+
+
+## WINDOW
+
+* VIEW 를 모아둔 단위
+* 다른 뷰나 컴포넌트에서 재사용 할 수 있는 단위
+* INTERFACE VIEW 를 통해 호출
+
+
+
+## CONTROLLER
+
+* COMPONENT 에 사용자의 요청이 들어오는 경우 비지니스 로직 호출
+* VIEW CONTROLLER 
+* GLOBAL CONTROLLER
+* CUSTOM CONTROLLER
 
 
 
 
 
+## CONTEXT
+
+* 다양한 PROPERTY 를 가지는 데이터 저장소
+
+* NODE 와 ATTRIBUTE 로 구성
+
+* ### NODE
+
+  하위에 ATTRIBUTE 를 가짐
+
+  최상위에 있는 것이 루트 노드 
+
+* ### ATTRIBUTE 
+
+  최하위 구성요소
+
+
+
+## DATA BINDING
+
+VIEW CONTROLLER 의 CONTEXT-ATTRIBUTE 와 그것의 LAYOUT 에서의 UI ELEMENT 사이의 <u>**데이터 자동 전송**</u>을 설정하는 프로세스
 
 
 
@@ -451,6 +724,10 @@ RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때
 # 기타
 
 
+
+## 각종 구문
+
+LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초기화 시키고 새로운 INSTANCE를 생성하여 프로그램을 실행 시킬 수 있다.( ABAP 메모리 초기화 )
 
 
 

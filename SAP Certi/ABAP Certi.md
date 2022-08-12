@@ -537,9 +537,9 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 <br/>
 
-# Q12.
+# Q12.  여기부터
 
-### Where should the labels for fields be stored?
+## Where should the labels for fields be stored?
 
 #### 필드들의 라벨은 어디에 저장되어야 하는가?
 
@@ -551,7 +551,7 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 ##### Structure
 
-#### *<u>Data element</u>*
+## *<u>Data element</u>*
 
 ##### Domain
 
