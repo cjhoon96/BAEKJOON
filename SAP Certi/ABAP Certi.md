@@ -760,9 +760,9 @@ structure 관리, 메뉴관리, screen 관리 등,  BAdIS 는 SE18, SE19 에서 
 
 # Q17.???????????? WEB DYN 공부 다시
 
-### What process is used to establish the automatic transport of data between the view controller's context-attributes and the UI element in its layout?
+## What process is used to establish the automatic transport of data between the view controller's context-attributes and the UI element in its layout?
 
-#### VIEW CONTROLLER 의 CONTEXT-ATTRIBUTE 와 그것의 LAYOUT 에서의 UI ELEMENT 사이의 데이터 자동 전송을 설정하는 프로세스는 무엇인가?
+VIEW CONTROLLER 의 CONTEXT-ATTRIBUTE 와 그것의 LAYOUT 에서의 UI ELEMENT 사이의 데이터 자동 전송을 설정하는 프로세스는 무엇인가?
 
 #### Please choose the correct answer.
 
@@ -772,7 +772,7 @@ structure 관리, 메뉴관리, screen 관리 등,  BAdIS 는 SE18, SE19 에서 
 
 ##### Data migration
 
-#### *<u>Data binding</u>*
+## *<u>Data binding</u>*
 
 <BR/>
 
@@ -788,25 +788,21 @@ context mapping : context 간 연결 (component controllers and view controllers
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q18.
 
-### Which objects are automatically created when you create a new function group?
+## Which objects are automatically created when you create a new function group?
 
-#### 새로운 FUNCTION GROUP 을 생성할 시 자동으로 생성되는 OBJECT 는?
+새로운 FUNCTION GROUP 을 생성할 시 자동으로 생성되는 OBJECT 는?
 
 #### Please choose the correct answer.
 
-### *<u>A function pool and two include programs</u>*
+## *<u>A function pool and two include programs</u>*
 
 ##### A function pool and two subroutine pools
 
@@ -836,27 +832,23 @@ function group 생성 시 자동 생성되는 프로그램은
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q19.
 
-### What are the prerequisites when creating an append structure for a standard SAP table?
+## What are the prerequisites when creating an append structure for a standard SAP table?
 
-#### STANDARD SAP TABLE 에 APPEND STRUCTURE 기능으로 필드를 추가할 때 선행되야할 요구사항은 무엇인가?
+STANDARD SAP TABLE 에 APPEND STRUCTURE 기능으로 필드를 추가할 때 선행되야할 요구사항은 무엇인가?
 
 #### 2 correct
 
-### *<u>The enhancement category of the table is NOT set to</u>*
+## *<u>The enhancement category of the table is NOT set to</u>*
 
-### *<u>‘Not enhaceable’ (can not be enhanced)</u>*
+## *<u>‘Not enhaceable’ (can not be enhanced)</u>*
 
     Enhancement 카테고리가 'Not enhanceable' 로 설정되어있지 않아야 한다.
 
@@ -868,9 +860,9 @@ function group 생성 시 자동 생성되는 프로그램은
 
 APPEND STRUCTURE 생성이 가능하기 전에 테이블이 복사 되어야 한다. 
 
-### *<u>The fields in the append structure should start with</u>*
+## *<u>The fields in the append structure should start with</u>*
 
-### *<u>YY or ZZ</u>*
+## *<u>YY or ZZ</u>*
 
     필드명은 YY 또는 ZZ 으로 시작되어야한다.
 
@@ -890,21 +882,17 @@ field 추가 할 때 field 명은 YY 또는 ZZ 로 시작해야 한다..
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q20.
 
-### You want to define two database tables with different structures. Both tables should contain the fields CHANGE_DATE and CHANGE_TIME.
+## You want to define two database tables with different structures. Both tables should contain the fields CHANGE_DATE and CHANGE_TIME.
 
-#### 당신은 다른 STRUCTURE 로 두개의 DB TABLE을 정의하고자 한다. 두 테이블 모두 CHANGE_DATE 와 CHANGE_TIME FIELD 를 포함 하여야한다.
+당신은 다른 STRUCTURE 로 두개의 DB TABLE을 정의하고자 한다. 두 테이블 모두 CHANGE_DATE 와 CHANGE_TIME FIELD 를 포함 하여야한다.
 
 ### How do you implement this in order to minimize the maintenance effort?
 
@@ -916,9 +904,9 @@ field 추가 할 때 field 명은 YY 또는 ZZ 로 시작해야 한다..
 
 두개의 필드로 APPEND STRUCTRE 를 정의한 후 해당 DB TABLE 모두에 배치
 
-### *<u>Define a structure with these two fields and include this</u>*
+## *<u>Define a structure with these two fields and include this</u>*
 
-### <u>*structure in both database tables.*</u>
+## <u>*structure in both database tables.*</u>
 
     이 두개의 필드로 구성된 STRUCTURE 를 정의한 후 두개의 DB TABLE에 INCLUDE 한다.
 
@@ -949,27 +937,23 @@ structure에 컬럼 두개를 만들어서 table에 include 시킨다.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q21.
 
-### How is an ABAP program with several dialog steps executed?
+## How is an ABAP program with several dialog steps executed?
 
-#### 여러개의 DIALOG 단계가 존재하는 ABAP 프로그램은 어떻게 실행되는가?
+여러개의 DIALOG 단계가 존재하는 ABAP 프로그램은 어떻게 실행되는가?
 
 #### Please choose the correct answer.
 
-### *<u>Usually, dialog steps are assigned to different dialog work</u>*
+## *<u>Usually, dialog steps are assigned to different dialog work</u>*
 
-### *<u>processes.</u>*
+## *<u>processes.</u>*
 
     보통 DIALOG 단계들은 별도의 DIALOG WORK PROCESS 들을 할당 받는다.
 
@@ -998,36 +982,33 @@ dialog work process : roll-in, roll-out 계속 발생.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q22.(skip)
 
-### When starting the Debugger, what circumstance causes the runtime error DEBUGGING_NOT_POSSIBLE?
+## When starting the Debugger, what circumstance causes the runtime error DEBUGGING_NOT_POSSIBLE?
 
-#### 디버깅을 시작할때 DEBUGGING_NOT_POSSIBLE 런타임 오류가 발생하는 상황은 무엇인가?
+디버깅을 시작할때 DEBUGGING_NOT_POSSIBLE 런타임 오류가 발생하는 상황은 무엇인가?
 
 #### Please choose the correct answer.
 
-When more than six sessions are already associated with this login user
+##### When more than six sessions are already associated with this login user
 
 로그인된 사용자로 6개 이상의 세션이 이미 연결되어있는경우
-When more than five sessions are already associated with this login user
+
+##### When more than five sessions are already associated with this login user
 
 로그인된 사용자로 5개 이상의 세션이 이미 연결되어있는경우
 
-Starting a non-exclusive mode in a productive system
+## *<u>Starting a non-exclusive mode in a productive system</u>*
 
-productive system에서 NON-EXCLUSIVE 시작
+productive system에서 NON-EXCLUSIVE 모드가 시작된 경우
 
-When the number of debugging sessions on the server exceeds the value defined by the profile parameter rdisp/wpdbug_max_no
+##### When the number of debugging sessions on the server exceeds the value defined by the profile parameter rdisp/wpdbug_max_no
 
 서버의 디버깅 세션 수가 프로파일 매개 변수 rdisp/wpdbug_max_no에 의해 정의된 값을 초과하는 경우
 
@@ -1041,17 +1022,15 @@ When the number of debugging sessions on the server exceeds the value defined by
 
 <BR/>
 
-<BR/>
-
 # Q23.
 
-### Which statement will interrupt the processing of the current screen and branch to new screen?
+## Which statement will interrupt the processing of the current screen and branch to new screen?
 
-#### 다음중 현 SCREEN 의 프로세스를 일시 정지 시키고 새로운 SCREEN 으로 분기 될 구문은 무엇인가?
+다음중 현 SCREEN 의 프로세스를 일시 정지 시키고 새로운 SCREEN 으로 분기 될 구문은 무엇인가?
 
 #### Please choose the correct answer.
 
-### *<u>CALL SCREEN \<NNNN></u>*
+## *<u>CALL SCREEN \<NNNN></u>*
 
 ##### LEAVE TO SCREEN \<NNNN>
 
@@ -1075,21 +1054,17 @@ call screen 200 : 200으로 갔다가 다시 호출 위치로 돌아온다.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q24.
 
-### What does SAP recommend that you use a hashed table?
+## What does SAP recommend that you use a hashed table?
 
-#### 해시 테이블을 사용하는 것을 SAP에서 권장하는 경우는 무엇인가?
+해시 테이블을 사용하는 것을 SAP에서 권장하는 경우는 무엇인가?
 
 #### Please choose the correct answer.
 
@@ -1097,9 +1072,7 @@ call screen 200 : 200으로 갔다가 다시 호출 위치로 돌아온다.
 
 테이블의 크기가 매우 크고 index 만을 통해 테이블에 접근하기를 원하는 경우
 
-### *<u>When a table is very large and you want to access the </u>*
-
-### *<u>table by key only</u>*
+## *<u>When a table is very large and you want to access the table by key only</u>*
 
     테이블의 크기가 매우 크고 key 만을 통해 테이블에 접근하기를 원하는 경우
 
@@ -1127,29 +1100,25 @@ hashed internal table : primary key로만 구성
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q25.
 
-### Which does the field catalog allow you to do?
+## Which does the field catalog allow you to do?
 
-#### FIELD CATALOG 의 기능은?
+FIELD CATALOG 의 기능은?
 
 #### 3 correct
 
-### *<u>Add a field to the display</u>*
+## *<u>Add a field to the display</u>*
 
     DISPLAY 할 FIELD 추가
 
-### *<u>Change the display order of a column</u>*
+## *<u>Change the display order of a column</u>*
 
     COLUMN 의 DIPLAY 순서 변경
 
@@ -1157,7 +1126,7 @@ hashed internal table : primary key로만 구성
 
 DISPLAY 되는 TABLE의 정렬 순서 지정
 
-### *<u>Change the title of a column</u>*
+## *<u>Change the title of a column</u>*
 
     COLUMN 의 TITLE 변경
 
@@ -1187,19 +1156,15 @@ field catalog
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q26.
 
-### You Created the following ABAP Code:
+## You Created the following ABAP Code:
 
 ```abap
 DATA x TYPE REF TO DATA
@@ -1208,21 +1173,21 @@ ASSIGN x TO <fs>
 ASSIGN y TO <fs>
 ```
 
-### You want to add a declaration of \<fs> to the Code.
+## You want to add a declaration of \<fs> to the Code.
 
-#### 당신은 FIELD-SYBOL \<fs> 의 선언문을 코드에 추가하기를 원한다.
+당신은 FIELD-SYBOL \<fs> 의 선언문을 코드에 추가하기를 원한다.
 
-### Which of the Following Declarations are Valid?
+## Which of the Following Declarations are Valid?
 
-#### 다음중 유효한 선언문은 무엇인가?
+다음중 유효한 선언문은 무엇인가?
 
 #### 2 correct
 
-### *<u>FIELD-SYMBOLS \<fs> TYPE ANY</u>*
+## *<u>FIELD-SYMBOLS \<fs> TYPE ANY</u>*
 
 ##### FIELD-SYMBOLS \<fs> TYPE REF TO ANY
 
-### *<u>FIELD-SYMBOLS \<fs></u>*
+## *<u>FIELD-SYMBOLS \<fs></u>*
 
 ##### FIELD-SYMBOLS TYPE REF TO DATA
 
@@ -1239,21 +1204,17 @@ X와 Y의 Type 이 다르기 때문(DATA type과 Object type)에 두가지를 �
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q27.
 
-### Which hook method exists for all controller types?
+## Which hook method exists for all controller types?
 
-#### 다음 HOOK METHOD 중 모든 CONTROLLER TYPE 에서 존재하는 것은?
+다음 HOOK METHOD 중 모든 CONTROLLER TYPE 에서 존재하는 것은?
 
 #### Please choose the correct answer.
 
@@ -1261,9 +1222,9 @@ X와 Y의 Type 이 다르기 때문(DATA type과 Object type)에 두가지를 �
 
 ##### wddoonclose( ) – window
 
-### *<u>wddoinit( )</u>*
+## *<u>wddoinit( )</u>*
 
-##### wddobeforenavigation( )  -- component
+## wddobeforenavigation( )  -- component
 
 <BR/>
 
@@ -1283,29 +1244,25 @@ WEB Dynpro 의 controller 종류
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q28.
 
-### When you add programming logic to your ABAP program that checks authorizations, which of the following do you have to create?
+## When you add programming logic to your ABAP program that checks authorizations, which of the following do you have to create?
 
-#### ABAP PROGRAM 에 권한 부여를 확인하는 LOGIC을 추가할때 다음중 생성해야하는 것은?
+ABAP PROGRAM 에 권한 부여를 확인하는 LOGIC을 추가할때 다음중 생성해야하는 것은?
 
 #### 2 correct
 
-### *<u>An authorization object</u>*
+## *<u>An authorization object</u>*
 
 ##### An authorization Access
 
-### *<u>An authorization role</u>*
+## *<u>An authorization role</u>*
 
 ##### An authorization profile
 
@@ -1331,29 +1288,25 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 <br/>
 
-<br/>
-
 ****
 
 ****
-
-<br/>
 
 <br/>
 
 # Q29.
 
-### When included in a structure, which elementary field types allow the structure to be considered a character-type data object?
+## When included in a structure, which elementary field types allow the structure to be considered a character-type data object?
 
-#### STRUCTURE 에 포함될때 CHARACTER TYPE DATA OBJECT로 여겨지는 ELEMENTARY FIELD TYPE 은?
+STRUCTURE 에 포함될때 CHARACTER TYPE DATA OBJECT로 여겨지는 ELEMENTARY FIELD TYPE 은?
 
 #### 4 correct
 
-### *<u>C</u>*
+## *<u>C</u>*
 
-### *<u>D</u>*
+## *<u>D</u>*
 
-### *<u>N</u>*
+## *<u>N</u>*
 
 ##### X
 
@@ -1361,7 +1314,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ##### F
 
-### *<u>T</u>*
+## *<u>T</u>*
 
 ##### I
 
@@ -1383,25 +1336,21 @@ Hexadecimal types: X
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q30.
 
-### What happens when an authorization check fails?
+## What happens when an authorization check fails?
 
-#### 권한 체크에 실패한 경우 어떤일이 발생하는가?
+권한 체크에 실패한 경우 어떤일이 발생하는가?
 
 #### Please choose the correct answer.
 
-### *<u>The system field SY-SUBRC is set to a value other than zero.</u>*
+## *<u>The system field SY-SUBRC is set to a value other than zero.</u>*
 
     SYSTEM FIELD SY-SUBRC 가 '0' 이 아닌 값으로 설정된다
 
@@ -1437,35 +1386,31 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q31.
 
-### You add the CREATE PROTECTED addition to a class definition.
+## You add the CREATE PROTECTED addition to a class definition.
 
-#### class 정의에 CREATE PROTECTED 를 추가한다.
+class 정의에 CREATE PROTECTED 를 추가한다.
 
-### From where you can instantiate the class?
+## From where you can instantiate the class?
 
-#### 어떤 클래스에서 인스턴스화 할 수 있는가?
+어떤 클래스에서 인스턴스화 할 수 있는가?
 
 #### 3 correct
 
-# *<u>From the class itself</u>*
+## *<u>From the class itself</u>*
 
 ##### From any protected class
 
-# *<u>From a friend class</u>*
+## *<u>From a friend class</u>*
 
-# *<u>From a child class</u>*
+## *<u>From a child class</u>*
 
 ##### From a parent class
 
@@ -1497,21 +1442,17 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q32.
 
-### What is data binding?
+## What is data binding?
 
-#### DATA BINDING 이란 무엇인가?
+DATA BINDING 이란 무엇인가?
 
 #### Please choose the correct answer.
 
@@ -1519,11 +1460,7 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 하나의 VIEW 에 있는 OUTBOUND PLUG 를 다른 VIEW 의 INBOUND PLUG 에 연결
 
-# *<u>Connecting the values of user interface</u>*
-
-# *<u>elements to the context attributes of</u>*
-
-# *<u>the corresponding controller</u>*
+## *<u>Connecting the values of user interface elements to the context attributes of the corresponding controller</u>*
 
     USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연결
 
@@ -1545,13 +1482,11 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 <BR/>
 
-<BR/>
-
 # Q33.
 
-### Which of the following statements regarding search helps are true?
+## Which of the following statements regarding search helps are true?
 
-#### 다음중 SEARCH HELP 에 대한 설명중 옳은 것은?
+다음중 SEARCH HELP 에 대한 설명중 옳은 것은?
 
 #### 3 correct
 
@@ -1561,7 +1496,7 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 ##### You can use a maintenance view for the search help selection method.
 
-MAINTENANACE VIEW 를 SEACH HELP SELECTION METHO 에 사용할 수 있다.
+MAINTENANACE VIEW 를 SEACH HELP SELECTION METHOD 에 사용할 수 있다.
 
 ## *<u>You can use transparent tables for the search help selection method.</u>*
 
@@ -1583,11 +1518,9 @@ MAINTENANACE VIEW 를 SEACH HELP SELECTION METHO 에 사용할 수 있다.
 
 <BR/>
 
-<BR/>
-
 # Q34.
 
-### You can use the logical expression IS SUPPLIED for any formal parameter passed to which modularization unit?
+## You can use the logical expression IS SUPPLIED for any formal parameter passed to which modularization unit?
 
 #### 어떤 모듈화 단위에서 전달되는 FORMAL PARAMETER 에 논리식 IS SUPPLIED 을 사용할 수 있는가?
 
@@ -1619,13 +1552,9 @@ subroutine에서 사용하면 syntax 에러 발생
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
@@ -1641,11 +1570,9 @@ subroutine에서 사용하면 syntax 에러 발생
 
 "=" 연산자 사용
 
-## *<u>Perform the downcast only if an upcast has already</u>*
+## *<u>Perform the downcast only if an upcast has already been done for the object reference.</u>*
 
-## *<u>been done for the object reference.</u>*
-
-    UPCAST 가 OBJECT 참조 완료되어야 DOWNCAST 가능하다.
+    UPCAST 가 OBJECT REFERENCE 에대해 완료되어야 DOWNCAST 가능하다.
 
 ##### Assign a subclass reference to a superclass reference.
 
@@ -1677,19 +1604,15 @@ Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q36.
 
-### How many work areas are available in the Debugger?
+## How many work areas are available in the Debugger?
 
 디버거에서 사용할 수 있는 WORK AREA 는 몇개인가?
 
@@ -1739,21 +1662,17 @@ debug tab 수
 
 <br/>
 
-<br/>
-
 ****
 
 ****
-
-<br/>
 
 <br/>
 
 # Q37.
 
-### Which of the following conditions must be fulfilled when using a GROUP BY clause in a SELECT statement?
+## Which of the following conditions must be fulfilled when using a GROUP BY clause in a SELECT statement?
 
-#### SELECT 문에서 GROUP BY 절을 사용할 때 만족해야되는 조건은 무엇인가?
+SELECT 문에서 GROUP BY 절을 사용할 때 만족해야되는 조건은 무엇인가?
 
 #### 2 correct
 
@@ -1796,21 +1715,17 @@ pool table : group by 절에 사용할 수 없다.
 
 <BR/>
 
-<BR/>
-
 ****
 
 ****
-
-<BR/>
 
 <BR/>
 
 # Q38.
 
-### Which of the following can you do with the ABAP debugger?
+## Which of the following can you do with the ABAP debugger?
 
-#### 다음중 ABAP DEBUGGER 로 할 수 있는 것은?
+다음중 ABAP DEBUGGER 로 할 수 있는 것은?
 
 #### 3 correct
 
@@ -1836,6 +1751,8 @@ DATA OBJECT 비교
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -1844,7 +1761,7 @@ DATA OBJECT 비교
 
 # Q39.
 
-### What is the default length of the type C data type?
+## What is the default length of the type C data type?
 
 #### DATA TYPE C  의 기본 길이는 무엇인가?
 
@@ -1860,6 +1777,8 @@ DATA OBJECT 비교
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -1868,9 +1787,9 @@ DATA OBJECT 비교
 
 # Q40.
 
-### Which of the following are valid control level changes within a loop over an internal table?
+## Which of the following are valid control level changes within a loop over an internal table?
 
-#### 다음중 ITAB 의 LOOP 에서 유효한 CONTROL LEVEL 변경은 무엇인가?
+다음중 ITAB 의 LOOP 에서 유효한 CONTROL LEVEL 변경은 무엇인가?
 
 #### 2 correct
 
@@ -1915,6 +1834,8 @@ ENDLOOP.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -1923,9 +1844,9 @@ ENDLOOP.
 
 # Q41.
 
-### When is an ENDSELECT not required for a SELECT?
+## When is an ENDSELECT not required for a SELECT?
 
-#### SELECT 문에서 ENDSELECT 구문이 필요하지 않은 경우는 무엇인가?
+SELECT 문에서 ENDSELECT 구문이 필요하지 않은 경우는 무엇인가?
 
 #### 3 correct
 
@@ -1935,13 +1856,13 @@ FROM 절에 사용되는 것이 VIEW 일 경우
 
 ## *<u>When you specify into a table</u>*
 
-테이블로 지정하는 경우 
+INTO 를 테이블로 지정하는 경우 
 
 ## *<u>When you do a SELECT SINGLE</u>*
 
 SELECT SINGLE 을 하는 경우
 
-## *<u>When you specify a join of tables</u>*
+##### When you specify a join of tables
 
 테이블을 JOIN 하는 경우 
 
@@ -1960,13 +1881,15 @@ select * appending it from abc. => 기존 데이터에 추가해서 입력
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
 
 <BR/>
 
-# Q42.
+# Q42. 여기부터
 
 ### Which data element property do you set so that the system logs changes to the content of fields with this data element?
 

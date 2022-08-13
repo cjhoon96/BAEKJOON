@@ -38,7 +38,52 @@
 
 ### WORK PROCESS
 
-* #### 
+* #### D
+
+  보통 1개의 DIALOG PROCESS 가 처리할 수 있는 것은 10 명의 ACTIVE USER
+
+  rdisp/wp_no_dia 조절
+
+  rdisp/max_wprun_time 파라미터에서 PROCESS 가 실행되는 MAX TIME 정의
+
+  초과시 종료
+
+  * 디스패처가 WORK PROCESS 와 USER REQUEST 를 연결
+  * REQUEST 는 DIALOG REQUEST QUEUE 에 저장
+  * 가용한 DIALOG WP 에 FIFO 방식으로 분배 / 연결
+  * DIALOG WP 는 USER CONTEXT 를 ROLL IN 
+    * **ROLL IN** : SHARED MEMORY 에 저장되어 있던 USER CONTEXT 를 DIALOG WP 의 ROLL AREA 로 가져옴
+  * DIALOG WP 는 DISPATCHER 에 결과 RETURN
+  * USER CONTEXT 를 SHARED MEMORY 에 ROLL OUT
+    * **ROLL OUT** : DIALOG WP 의 ROLL AREA => SHARED MEMORY 의 USER CONTEXT 저장
+
+  * **여러개의 SCREEN 으로 구성 되어 있는 경우 <u>각각 다른 DIALOG WP</u>** 에 의해 수행
+  * **DIALOG STEP 은 하나의 PROCESS** 만 처리
+  * **각각의 DIALOG STEPS 는 다른 WORK PROCESS 에 의해 진행**된다.
+  * abap dispature : work process load balancing
+  * **dialog work process : roll-in, roll-out 계속 발생.**
+
+* #### B
+
+  가급적 시스템당 2개
+
+* #### S
+
+  출력시 필요
+
+  시스템당 1개이상
+
+* #### V
+
+  UPDATE 
+
+  시스템당 1개 이상
+
+* #### E
+
+  ENQUEUE/SAP LEVEL 의 LOCK 
+
+  시스템당 1개
 
 
 
@@ -60,11 +105,9 @@
 
 # DATA TYPE
 
-|      |      |
-| ---- | ---- |
-|      |      |
+https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-18-Data-TypeBuilt-in-Data-Types
 
-* Complete stadard types
+* ## Complete stadard types
 
   길이를 지정해 줄 수 없는 Data Type
 
@@ -81,7 +124,7 @@
   | STRING              | ?                 |
   | XSTRING             | ?                 |
 
-* Incomplete standard types
+* ## Incomplete standard types
 
   길이를 정의해 줄 수 있는 Data Type
 
@@ -98,9 +141,25 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 
 
-|      |      |
-| ---- | ---- |
-|      |      |
+### Numeric types: I, F, P.
+
+### Character types: C, D, N, T.
+
+### Hexadecimal types: X
+
+[ABAP Data Types](https://www.abaptutorial.com/abap-programming/abap-data-types/)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,9 +224,38 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 ## DATABASE  TABLE
 
+* ### TRANSPARENT TABLE
 
+  * ABAP DICTIONARY 에 하나의 TABLE 이 실제 DB 에서도 1대 1로 대응 된다.
 
+  * 1:1
+  * GROUP BY 절 사용 가능
+  * SECONDARY INDEX 허용 
+  * BUFFERING 가능
 
+* ### CLUSTERED TABLE
+
+  * ABAP DICTIONARY 에 있는 N개의 CLUSTERED TABLE 은 DB 에 한개의 TABLE CLUSTER 과 N : 1 의 관계를 갖고 있다.
+  * N : 1
+  * 여러개의 ABAP DICTIONARY 에 있는 CLUSTERED TABLE 로 부터 유지 관리 되어진다.
+  * SECONDARY INDEX 사용 X
+  * PRIMARY KEY 통해 접근 
+  * 접근 속도 느림
+  * GROUP BY 절 사용 불가
+  * JOIN 불가
+
+* ### POOLED TABLE
+
+  * ABAP DICTIONARY 에 생성된 N개의 POOLED TABLE 은 물리적 DB 인 ORACLE DB 에 하나의 TABLE 에 대이터가 관리 된다.
+  * N : 1
+  * PRIMARY KEY 나 SHOUD BE BUFFERED 기능으로 접근 되어진다.
+  * SECONDARY INDEX 사용 X
+  * GROUP BY 절 사용 X
+  * JOIN 사용 X
+
+  https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100
+
+   
 
 
 
@@ -323,6 +411,66 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 
 
+
+
+
+
+
+
+***
+
+*****
+
+****
+
+# DEBUGGER
+
+## 기능
+
+* MEMORY 사용량 분석
+* ITAB 분석
+* DATA OBJECT 비교
+* 소스 코드 수정 불가
+* SQL TRACE 분석 불가 (SQL TRACE 에서 가능)
+
+디버깅을 시작할때 DEBUGGING_NOT_POSSIBLE 런타임 오류가 발생하는 상황은 productive system에서 NON-EXCLUSIVE 모드가 시작된 경우
+
+## DEBUGGER TAB 
+
+총 12개
+
+* DESKTOP1 
+
+* DESKTOP2 
+
+* DESKTOP3 
+
+* STANDARD 
+
+* STRUCTURES 
+
+* TABLES 
+
+* OBJECTS 
+
+* DETAILDISPLAY 
+
+* DATA EXPLORER 
+
+* BREAK./WATCHPOINT 
+
+* DIFF 
+
+* SCRIPT
+
+
+
+
+
+
+
+
+
 ****
 
 ****
@@ -331,7 +479,11 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 # Modularization
 
+## IS SUPPLIED 
 
+* IMPORTING PARAMETER 에 값이 들어왔는지를 확인한다.
+* FUNCTION 과 CLASS 의 METHOD 에서만 사용 가능
+* SUBROUTINE 에서 사용 불가 !!
 
 ## FUNCTION
 
@@ -389,6 +541,18 @@ DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해�
 
 
 
+## SCREEN 이동방법
+
+* ### leave to screen 200 : 
+
+  현재 화면에서 나와서 200 으로 간다.
+
+* ### call screen 200 : 
+
+  200으로 갔다가 다시 호출 위치로 돌아온다. 
+
+  (중지가 아닌 일시 정지의 의미를 갖는 interrupt )
+
 
 
 
@@ -417,6 +581,178 @@ column 사이즈는 필드의 경계를 드래그 해 변경 할 수 있으며 �
 filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 
+
+
+
+
+
+## FIELD CATALOG
+
+* 컬럼 추가
+* 특정 컬럼 숨기기
+
+* 출력 순서 변경
+
+* 컬럼 title 변경
+
+
+
+
+
+
+
+
+
+
+
+****
+
+****
+
+****
+
+# OOP
+
+
+
+## FIELD SYMBOL
+
+### 선언문
+
+* 명시적인 선언 (FULLY TYPE)
+
+  ```ABAP
+  DATA: LT_MARA LIKE STADARD TABLE OF MARA WITH HEADER LINE.
+  
+  FIELD-SYMBOLS : <FS> LIKE MARA.
+  FIELD-SYMBOLS : <FS> TYPE MARA.
+  FIELD-SYMBOLS : <FS> LIKE LINE OF MARA.
+  ```
+
+* 일반 적인 선언 (GENERIC TYPE)
+
+  ```ABAP
+  FIELD-SYMBOLS : <FS>.
+  FIELD-SYMBOLS : <FS> TYPE ANY.
+  FIELD-SYMBOLS : <FS> TYPE ANY TABLE.
+  ```
+
+  TYPE 을 명시 해 주지 않을 경우 ANY 로 자동 설정
+
+### 할당
+
+https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-25-Field-Symbol
+
+
+
+
+
+
+
+## CLASS
+
+* ## LOCAL CLASS
+
+  
+
+  
+
+  
+
+  * CREATE PUBLIC이 추가된 클래스
+
+    패키지 개념의 프레임워크 내에서 클래스가 보이는 모든 위치에서 인스턴스화할 수 있습니다.  
+
+  * CREATE PROTECTED가 추가된 클래스
+
+    * SUBCLASS METHOD
+
+    * CLASS 자체의 METHOD 
+
+    * FRIEND CLASS METHOD
+
+    에서만 인스턴스화할 수 있습니다.  
+
+  * CREATE PRIVATE가 추가된 클래스
+
+    클래스 자체의 메서드 또는 친구의 메서드에서만 인스턴스화할 수 있습니다. 
+
+  
+
+  
+
+* ## GLOBAL CLASS
+
+  
+
+  
+
+
+
+
+
+
+
+## DOWNCAST
+
+* 부모 Class의 Object를 자식 class의 Object에 할당 
+
+* Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
+
+* Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
+  따라서 Down-Cast를 사용하여 access 한다.
+
+* Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
+
+  따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 
+
+  CX_SY_MOVE_CAST_ERROR EXCEPTIONS을 처리해준다.
+
+* move를 사용 시 에러가 발생하면 CX_SY_MOVE_CAST_ERROR exception 이 발생함.
+
+
+
+
+
+
+
+****
+
+****
+
+****
+
+# 권한
+
+## authorization check : 
+
+[Authorization Check(권한 점검) : 네이버 블로그](https://m.blog.naver.com/softwon1/221873016346)
+
+Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) 에서 Role 생성 후 할당
+
+즉 권한 부여 확인을 위해서는 
+
+* *<u>**Authorization object**</u>*
+
+* *<u>**Role**</u>* 
+
+을 생성해 주어야한다.
+
+
+
+## 권한 체크 LOGIC
+
+권한 체크 LOGIC 은 결과로 SY-SUBRC 의 값을 변경한다.
+
+* 0 : 사용자는 권한을 가지고 있다.
+
+* 4 : 사용자는 권한을 가지고 있지 않다.
+
+* 8 : 권한 체크에 기술된 필드의 수가 정확하지 않다.
+
+* 12 : 권한 오브젝트가 존재하지 않는다.
+
+즉 권한 체크 로직을 실행한 직후 SY-SUBRC 를 통해 권한 여부에 따라 처리하는 로직을 추가로 작성해 주어야 한다.
 
 
 
@@ -597,11 +933,30 @@ It is not possible, on the other hand, to embed service calls in view controller
 ## CONTROLLER
 
 * COMPONENT 에 사용자의 요청이 들어오는 경우 비지니스 로직 호출
+
+* COMPONENT CONTROLLER
+
+  서비스 호출이 가능하다.
+
+* WINDOW CONTROLLER 
+
 * VIEW CONTROLLER 
+
 * GLOBAL CONTROLLER
+
 * CUSTOM CONTROLLER
 
+  서비스 호출이 가능하다.
 
+* CONFIGURATION
+
+## CONTROLLER METHOD
+
+모두 가지고 있는 hook method : wddoinit( ), wddoexit( )
+
+![Q27_1.jpg](C:/Users/jihoon/TIL/SAP Certi/IMG/Q27_1.jpg)
+![Q27_2.jpg](C:/Users/jihoon/TIL/SAP Certi/IMG/Q27_2.jpg)
+![Q27_3.jpg](C:/Users/jihoon/TIL/SAP Certi/IMG/Q27_3.jpg)
 
 
 
@@ -623,11 +978,11 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 
 
-## DATA BINDING
+## DATA BINDING 
 
 VIEW CONTROLLER 의 CONTEXT-ATTRIBUTE 와 그것의 LAYOUT 에서의 UI ELEMENT 사이의 <u>**데이터 자동 전송**</u>을 설정하는 프로세스
 
-
+USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연결
 
 
 
@@ -737,3 +1092,55 @@ LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초�
 * 중간단계 변수 등이 준다.
 * 긴 구문 대신 구문이 COMPACT 해진다. 
 * 속도 향상 X 가독성 X 
+
+
+
+## CONTROL LEVEL PROCESSING(internal table)
+
+용어 기억!!!
+
+```abap
+LOOP AT it INTO wa.
+  AT FIRST. (맨 앞에서..)
+    코딩
+  ENDAT.
+
+  AT END OF carrid. (특정 값이 끝났을 때..)
+    코딩
+  ENDAT.
+
+  AT NEW carrid.
+    코딩
+  ENDAT.    
+
+  AT LAST. (맨 마지막에서..)
+    코딩
+  ENDAT.
+
+ENDLOOP.
+```
+
+위 구문을 사용하기 위해서 sorting(정렬) 된 상태여야 한다.
+
+
+
+
+
+## SELECT APPENDING  ITAB
+
+* 기존의 ITAB 의 데이터를 덮어 씌우는 INTO 절과 달리
+
+  데이터를 APPEND 하는 방식
+
+  
+
+## SELECT ... ENDSELECT
+
+* INTO TALBE 인경우 사용 불가
+* SELECT SINGLE 을 하는 경우 사용 불가
+* APPENDING 구문 사용 하는 경우 사용 불가
+
+
+
+
+
