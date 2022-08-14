@@ -63,6 +63,153 @@ dialog work process : roll-in, roll-out 계속 발생.
 
 <BR/>
 
+# Q45.
+
+## You want to move a transport request from the development system to the subsequent system. Which of the following are prerequisites for this?
+
+개발 시스템에서 부속 시스템으로 전송요청을 이동하고자 한다. 다음중 전제조건을 고르시오?
+
+#### 2 correct
+
+## *<u>All objects included in the transport request must be activated.</u>*
+
+전송 요청에 포함된 모든 OBJECT를 활성화
+
+## *<u>The transport request must be released</u>*
+
+전송 요청이 RELEASE 되어야 한다.
+
+##### All tasks of the transport request must be assigned to the same user. (여러 user를 등록하여 요청)
+
+전송 요청의 모든 TASK 들은 동일한 사용자에게 할당되어야 한다. 
+
+##### The extended program check must show no warnings. (warnings 이 있어도 request 요청 됨)
+
+<BR/>
+
+****
+
+change request 설명
+activate, CDC에 요청해야 함.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q64.
+
+## Each work process…
+
+각 WORK PROCESS 들은 
+
+#### 3 correct
+
+##### Can make database changes spanning multiple database LUWs.
+
+여러 DB LUW에 걸쳐 DB 를 수정할 수 있다.
+
+##### Uses a pool of database connections established when the SAP NetWeaver Application Server ABAP started.
+
+SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 DB CONNECTION 의 PULL 을 사용한다.
+
+## *<u>Is independent of other work processes.</u>*
+
+다른 WORK PROCESS 들과 독립 되어있다.
+
+## *<u>Can only make database changes within a single database LUW.</u>*
+
+SINGLE DB LUW 내에서만 DB 를 수정할 수 있다.
+
+## *<u>Uses a database connection to a work process established when the SAP NetWeaver Application Server ABAP started.</u>*
+
+SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WORK PROCESS 에 대한 DB CONNECTION 을 사용한다.
+
+<BR/>
+
+****
+
+DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q65.
+
+## Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
+
+다음중 SAP NETWEAVER 의 어플리케이션 LAYER PLATFORM 에서 제공되는 기능이 아닌것은?
+
+#### Please choose the correct answer.
+
+## *<u>Database and operating system abstraction</u>*
+
+DB 와 운영체제 추상화
+
+##### Business process management
+
+BUSINESS PROCESS 관리
+
+##### Multi-channel access
+
+MULTI-CHANNEL 연결 
+
+##### Master data management
+
+MASTER DATA 관리
+
+<BR/>
+
+****
+
+SAP GUI
+SAP Application : Application Layer platform
+SAP Database
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -212,6 +359,218 @@ Hexadecimal types: X
 ****
 
 <BR/>
+
+# Q50.
+
+## Which of the following ABAP data types are compatible with the generic character-type CLIKE?
+
+다음 ABAP DATA TYPE들 중 GENERIC CHARACTER TYPE CLIKE와 호환 되는 것은?
+
+#### 3 correct
+
+## *<u>N</u>*
+
+## *<u>STRING</u>*
+
+##### XSTRING
+
+## *<u>C</u>*
+
+##### DECFLOAT
+
+<BR/>
+
+****
+
+clike character-type : c, d, n, t, string and character-type flat structures
+csecuence text-type : c, string    When the FROM is a view
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q55.
+
+## Which of the following ABAP statements throws an error at the syntax check?
+
+다음중 ERROR 나 SYNTAX CHECK 를 띄우는 ABAP 구문은?
+
+#### Please choose the correct answer.
+
+##### DATA variable(5) TYPE p.
+
+## *<u>DATA variable(5) TYPE t.</u>*
+
+##### DATA variable.
+
+##### DATA variable(5) TYPE n.
+
+<BR/>
+
+****
+
+t type은 6 user-defined alphanumeric characters.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q69. (skip)???????????????????????????
+
+## An ABAP program processes the following expression:
+
+### r = a / b + c
+
+## Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
+
+RUNTIME 환경이 위 식에서 fixed-point arithmetic 을 사용하도록 하는 DATA 선언은?
+
+#### 2 correct
+
+#### Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
+
+```abap
+DATA: r TYPE p DECMALS 2,
+      a TYPE i VLAUE 201,
+      b TYPE i VALUE 200,
+      c TYPE f.
+```
+
+<BR/>
+
+```abap
+DATA: r TYPE p,
+      a type I VALUE 201,
+      b type I VALUE 200,
+      c type i.
+```
+
+<BR/>
+
+## *<u>ANSWER</u>*
+
+```abap
+DATA: r TYPE p DECIMALS 2,
+      a TYPE i VALUE 201,
+      b TYPE i VALUE 200,
+      c TYPE 
+```
+
+<BR/>
+
+## *<u>ANSWER</u>*
+
+```abap
+DATA: r TYPE f,
+      a TYPE i VALUE 201,
+      b TYPE i VALUE 200,
+      c TYPE f.
+```
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q71.
+
+### A structure has enhancement category 3, can be enhanced (character-type).
+
+STRUCTURE 은 ENHANCE 될 수 있는 3가지 ENHANCEMENT CATEGORY가 있다.다.
+
+### Which set of elementary types is allowed for the new fields?
+
+다음중 새로운 FIELD에 허용되는 ELEMENT TYPE 들만 모아 놓은 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+C,D,N,X
+D,I,string, T
+
+## *<u>C,D,N,T</u>*
+
+F,I,P,X
+
+<BR/>
+
+****
+
+Clike : CNDT and string
+csequence : c and string
+string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (여기서는 character-type 옵션이므로)
+
+#### ENHANCEMENT CATEGORYS
+
+1. Can be Enhanced(deep) - we can enhance this table/structure with a deep structure, reference fields or any other valid field types.
+
+2. Can be Enhanced (Character-Type or Numeric) - we can enhance the tables/structure with fields that are strictly character or numeric types eg: C,N,D,T,I etc.
+
+3. Can be Enhanced (Character Type) - can be enhanced by only including character type fields
+
+4. Cannot Be Enhanced - Restricting Enhancement of the table/structure post creation.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -557,11 +916,114 @@ pool table : group by 절에 사용할 수 없다.
 
 <BR/>
 
+# Q42. 
 
+## Which data element property do you set so that the system logs changes to the content of fields with this data element?
 
+#### 시스템 로그가 이 DATA ELEMENT 로 된 필드의 내용의 변경에 대한 LOG 를 남기려면 DATA ELEMNT 속성을 설정해야 하는가?
 
+#### Please choose the correct answer.
 
+## *<u>Change document</u>*
 
+##### Documentation
+
+##### PARAMETER ID
+
+##### Input history
+
+<BR/>
+
+****
+
+SE11 > Data element > Further characteristics tab > change document 에서 처리
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q47.
+
+## What will happen at runtime when accessing a buffered table?
+
+BUFFER 된 테이블에 접근할때 RUNTIME 에서 발생하는 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+##### All SELECT statements will read data from the buffer.
+
+모든 SELECT 문은 BUFFER 에서 데이터를 읽어온다.
+
+##### Following an update to a buffered record, all table buffers in the system will be updated. (synchronization 이벤트 실행 시 만)
+
+버퍼된 RECORD로 UPDATE 하면 시스템의 모든 BUFFER 가 UPDATE 된다. 
+
+##### If table data is read using indexes, the table buffer will not be filled. (X)
+
+테이블 데이터가 INDEX 를 통해 READ 되는 경우 테이블 BUFFER 는 채워지지 않는다.
+
+## *<u>If data is read from the table buffer, the existing indexes are not used.</u>*
+
+데이터가 TABLE BUFFER 로 부터 READ 되는 경우 기존 인덱스는 사용되지 않는다.
+
+<BR/>
+
+****
+
+by-pass buffer
+ABAP join
+select .. .by pass buffer.
+select … for update
+native SQL
+index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index를 사용하지 않는다.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q49.
+
+## Where are fixed values for fields stored?
+
+필드의 고정값 은 어디에 저장되는가?
+
+#### Please choose the correct answer.
+
+##### Table
+
+## *<u>Domain</u>*
+
+##### Structure
+
+##### Data element
+
+##### Field
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -650,6 +1112,219 @@ structure 관리, 메뉴관리, screen 관리 등,  BAdIS 는 SE18, SE19 에서 
 ****
 
 <br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+*****
+
+*****
+
+# PROGRAMS
+
+
+
+# Q46.
+
+## What is the event block that all of your code changes belongs to if you do not explicitly code any event blocks in an executable program?
+
+executable program에서 어떤 EVENT BLOCK도 명시적으로 CODING 하지 않은 경우 모든 코드 변경이 속하는 EVENT BLOCK 은 무엇인가?
+
+#### Please choose the correct answer.
+
+## *<u>START-OF-SELECTION</u>*
+
+##### INITIALIZATION
+
+##### LOAD-OF-PROGRAM
+
+##### AT SELECTION-SCREEN OUTPUT
+
+<BR/>
+
+****
+
+executable program 에서 명시하지 않아도 무조건 발동 : start-of-selection
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q51.
+
+## What are the advantages of defining texts symbols in executable programs?
+
+EXECUTABLE PROGRAM 을 개발하는데 있어 TEXT SYMBOL을 정의하는 것의 이점은 무엇인가?
+
+#### 2 correct
+
+##### The same text symbol can be used by other programs
+
+같은 TEXT SYMBOL 이 다른 프로그램에서도 사용 될 수 있다.
+
+## *<u>They facilitate multilingual functionality</u>*
+
+다국어 기능을 지원한다.
+
+##### Then can store up to 256 characters
+
+256자까지 저장할 수 있다.
+
+## *<u>They are easier to maintain than literals</u>*
+
+LITERAL 보다 유지 보수 하기 쉽다.
+
+<BR/>
+
+****
+
+multilingual functionality
+132 characters
+공유불가, 유지보수 쉽다.
+
+****
+
+<BR/>
+
+<br/>
+
+****
+
+****
+
+<BR/>
+
+# Q66.
+
+## You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
+
+당신은 필수 입력 필드를 가진 classical screen (dynpro) 를 정의하였다. 당신은 필수 입력 필드가 모두 채워지지 않더라도 Cancel button 을 사용하여 화면을 나가기를 원한다.
+
+이를 위해 무엇을 해야하는가?
+
+#### Please choose the correct answer.
+
+## *<u>Assign function type E to the Cancel button and handle it in a module with the addition AT EXIT-COMMAND.</u>*
+
+Cancel 버튼에 FUNCTION TYPE  E 를 할당하고 AT EXIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+##### Set the function code assigned to the Cancel button to CANCEL and handle it in a module with the addition AT EXIT-COMMAND.
+
+취소 버튼에 할당된 FUNCTION CODE 를 CANCEL 로 설정하고 EXCIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+##### Use the LOOP AT SCREEN. ... ENDLOOP statement to set the "required" property of the input fields to zero.
+
+LOOP AT SCREEN. \_\_\_ ENDLOOP 구문을 사용하여 입력 필드의 필수 속성을 '0'으로 할당한다.
+
+##### Set the function type assigned to the Cancel button to S and handle it in a module with the addition AT EXIT-COMMAND.
+
+취소 버튼에 할당된 FUNCTION TYPE을 S 로 설정하고 AT EXIT-COMMAND 가 추가된 모듈에서 처리한다.
+
+****
+
+Function type : E
+Module exit AT Exit-command
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q75.
+
+## Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
+
+ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로그램의 타입이나 프로그램의 부분은 무엇인가?
+
+#### 4 correct
+
+##### INCLUDE
+
+##### TYPE-POOL
+
+## *<u>METHOD</u>*
+
+##### FUNCTION-POOL
+
+##### PROGRAM
+
+## *<u>CLASS-POOL</u>*
+
+## *<u>REPORT</u>*
+
+## *<u>FUNCTION MODULE</u>*
+
+##### INTERFACE-POOL
+
+<BR/>
+
+****
+
+실행 가능 단위 (se80에서 F8로 실행되는 프로그램) : 
+
+* Method
+
+* function module
+
+* module pool (screen program, online program)
+
+* class-pool
+
+* report
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -900,6 +1575,71 @@ subroutine에서 사용하면 syntax 에러 발생
 ****
 
 <BR/>
+
+# Q74.
+
+## What are the advantages of modularization?
+
+MODUL 화의 장점은?
+
+#### 3 correct
+
+## *<u>Transparency</u>*
+
+Performance
+
+## *<u>Maintainability</u>*
+
+Profitability across DBMS
+
+## *<u>Reusability</u>*
+
+<BR/>
+
+****
+
+모듈화의 장점은 
+
+* TRANSPARENCY 투명성
+
+* MAINTAINABILITY 유지보수성
+
+* REUSABILITY 재사용성
+
+모듈화 : class, function, subroutine 
+profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1396,6 +2136,240 @@ Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
 
 <BR/>
 
+# Q54. (Skip)
+
+## Which of the following are valid combinations of event visibility and handler method visibility?
+
+다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
+
+#### 2 correct
+
+##### Private event and public handler
+
+##### Protected event and public handler
+
+## *<u>Public event and protected handler</u>*
+
+## *<u>Private event and private handler</u>*
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q54. (Skip) 
+
+## Which of the following are valid combinations of event visibility and handler method visibility?
+
+다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
+
+#### 2 correct
+
+##### Private event and public handler
+
+##### Protected event and public handler
+
+## *<u>Public event and protected handler</u>*
+
+## *<u>Private event and private handler</u>*
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q62.
+
+## You have 2 objects:
+
+## O1 of type class C1 and O2 of type class C2.
+
+## Class C2 is a subclass of class C1. Which of the following statements implements an upcast?
+
+CLASS C2 는 C1 의 SUBCLASS 이다. 다음중 UPCAST 를 구현한 구문은?
+
+#### Please choose the correct answer.
+
+##### MOVE O1 TO O2.
+
+##### MOVE O1 ?TO O2.
+
+## *<u>O1 = O2.</u>*
+
+##### O2 ?= O1 (downcast).
+
+<BR/>
+
+****
+
+O2 : subclass , O2 => O1 이 되어야 upcast, O1 =>  O2 는 downcast,
+Move A to B : A => B
+B = A : A => B
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q68.
+
+## What is unique about a singleton?
+
+SINGLETON 에 대한 특징은?
+
+#### 2 correct
+
+##### It cannot be defined as FINAL.
+
+FINAL 로 정의될 수 없다.
+
+##### It must be instantiated using a public instance constructor.
+
+PUBLIC INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a protected instance constructor.
+
+PROTECTED INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a private instance constructor.
+
+PRIVATE INSTANCE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a static protected constructor.
+
+STATIC PROTECTED CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+##### It must be instantiated using a static public constructor.
+
+STATIC PUBLIC CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+## *<u>It must be defined as FINAL.</u>*
+
+FINAL 로 정의 되어야 한다.
+
+## *<u>must be instantiated using a static private constructor.</u>*
+
+STATIC PRIVATE CONTRUCTOR 를 사용하여 인스턴스화 해야한다.
+
+****
+
+singleton : create object를 할 수 없고, method를 통해서 object를 생성할 수 있다.
+***<u>final을 사용하여 상속 방지</u>***
+***<u>constructor를 static으로 선언</u>***.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q70.
+
+## How would you define a method of an ABAP class to prevent this method from being available in a subclass?
+
+ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 할수 없도록 하려면 어떻게 해야하는가?
+
+#### Please choose the correct answer.
+
+##### Final
+
+## *<u>Private</u>*
+
+##### Protected
+
+##### Abstract
+
+****
+
+자식 클래스에서 부모의 method를 못보게 하는 방법 private
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q72.
+
+## Which components of the class can be accessed in the implementation of a static method in that class?
+
+어떤 COMPONENT 들이 해당 클래스의 STATIC METHOD 의 IMPLEMENTATION 에 접근할 수 있는가?
+
+#### 2 correct
+
+Instance attributes
+
+## *<u>Types</u>*
+
+All events
+
+## *<u>Constants</u>*
+
+<BR/>
+
+****
+
+static method에서 접근 할 수 있는 것. : static attribute , Types, constants
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1729,6 +2703,346 @@ structure에 컬럼 두개를 만들어서 table에 include 시킨다.
 
 <BR/>
 
+# Q43.
+
+## What does the enhancement category for a database table or structure do?
+
+DB TABLE 이나 STRUCTURE 에 대한 ENHANCEMENT CATEGORY 가 하는 것은 무엇인가?
+
+#### 3 correct
+
+##### Makes a table Unicode-compliant
+
+테이블이 UNICODE 호환 되도록한다.
+
+## *<u>Can identify where program behavior may change</u>*
+
+프로그램 동작이 변경될 수 있는 위치를 식별할 수 있다.
+
+## *<u>Can produce warnings at incompatible points for the structure</u>*
+
+structure 에 대해 호환되지 않는 지점에 대한 경고를 생성할 수 있다.
+
+## *<u>Specifies the types of changes that can be made to the structure</u>*
+
+structure 에 적용할 수 있는 변경의 type 을 지정한다.
+
+<br/>
+
+****
+
+Enhancement Category 사용 이점 : 
+
+프로그램의 영향력 방지. 구조적 모순점에 대한 경고 생성. 
+
+테이블이나 STRUCTURE 생성시 뜨는 WARNING 메시지를 기억하면 편하다.
+
+*<u>**"Enhancement category for --- missing"**</u>*
+
+[[SAP/ABAP] 테이블, 구조 생성 시 warning (Enhancement category for table missing)](https://sssinga.tistory.com/227)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q44.
+
+## Which of the following must you do to be able to use a Business Add-in(BAdI)?
+
+BADi를 사용하기 위해 해야할 것은 무엇인가?
+
+#### 2 correct
+
+##### Modify the adapter class (adapter class : BAdIs를 얻어오기 위한 것)
+
+ADPTER CLASS 수정
+
+## *<u>Write code for methods</u>*
+
+METHOD 에대한 CODE 작성
+
+##### Activate the enhancement project (customer exit)
+
+ENHANCEMENT PROJECT  ACTIVATE 하기
+
+## *<u>Create the BADI implementation</u>*
+
+BAdI IMPLEMENTATION 생성
+
+<BR/>
+
+****
+
+BAdIs : method에 프로그램 코딩, 
+
+****
+
+<br/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q48.
+
+## You want to add a field ZZPRICE to the SAP standard transparent table EKKO.
+
+당신은 ZZPRICE 필드를 SAP STANDARD TRANSPARENT TABLE EKKO 에 추가하기를 원한다.
+
+## Which of the following actions result in an enhancement of the SAP standard?
+
+다음 행동중 SAP STANDARD 의 ENHANCEMENT 에대한
+
+#### 2 correct
+
+##### Insert ZZPRICE at the end of the table
+
+테이블의 마지막에 ZZPRICE 삽입
+
+##### Insert ZZPRICE into an SAP structure for the table
+
+TABLE 을 위한 SAP STRUCTURE 에 ZZPRICE 삽입
+
+## *<u>Create an append structure and add ZZPRICE to it.</u>*
+
+APPEND STRUCTURE 생성 후 이에 ZZPRICE 추가
+
+## *<u>Add ZZPRICE to the customizing include for the table</u>*
+
+TABLE 을 위한 CUSTOMIZING INCLUDE 에 ZZPRICE 추가
+
+<BR/>
+
+****
+
+append structure 컬럼 추가
+ci_include (customizing include) 사용
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q53.
+
+## The statements CALL BADI and GET BADI are used for which type of BAdIs?
+
+CALL BAdI 와 GET BAdI 구문은 어느 타입의 BAdI 를 위해 사용되는가?
+
+#### Please choose the correct answer.
+
+##### Classical BAdI
+
+##### None of the above
+
+## *<u>New BAdI</u>*
+
+##### Classical DDic
+
+<BR/>
+
+****
+
+class BAdIs 찾는 방법
+: find CL_EXITHANDLER
+
+NEW BAdIs 찾는 방법
+: get BAdIs
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q59.
+
+## What is the SAP recommended naming convention for append structures of standard SAP tables?
+
+표준 SAP 테이블의 APPEND STRUCTURE 에 대해 SAP 에서 권장하는 네이밍 룰은 무엇인가?
+
+ Please choose the correct answer.
+
+The name of the append structure must start with ZA.
+APPEND STRUCTURE 의 이름은 ZA 로 시작
+
+The components of an append structure should start with Z or Y.
+APPEND STRUCTURE의 구성요소는 Z 나 Y 로 시작되어야 한다.
+
+The name of the append structure must start with ZZ or YY.
+
+APPEND STRUCTURE의 이름은 ZZ 나 YY로 시작해야한다.
+
+## *<u>The components of an append structure should start with ZZ or YY.</u>*
+
+APPEND STRUCTURE의 구성요소는 ZZ나 YY로 시작해야한다.
+
+<BR/>
+
+****
+
+structure name 은 ZAS
+
+테이블명 : 정해지지 않았음.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q63.
+
+## Which of the following is a true statement?
+
+다음중 옳은 것은?
+
+#### 2 correct 
+
+## *<u>An access key is required to enhance an SAP application using a user exit.</u>*
+
+USER EXIT 을 사용하여 SAP APPLICATION 을 ENHANCE 하려면 ACCESS KEY 가 필요하다.
+
+##### An access key is required to implement an implicit enhancement point. (언제든지)
+
+ACCESS KEY 는 IMPLICIT ENHANCEMENT POINT 를 구현하기 위해 필요하다.
+
+##### An access key is required to implement business add-ins.
+
+BAdI 를 구현하기 위해 ACCESS KEY 가 필요하다.
+
+## *<u>An access key is required to modify SAP repository objects.</u>*
+
+SAP REPOSITORY OBJECT 를 수정하기 위해 ACCESS KEY 가 필요하다.
+
+<BR/>
+
+****
+
+access key : SAP standard modification, User Exit.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q71.
+
+### A structure has enhancement category 3, can be enhanced (character-type).
+
+STRUCTURE 은 ENHANCE 될 수 있는 3가지 ENHANCEMENT CATEGORY가 있다.다.
+
+### Which set of elementary types is allowed for the new fields?
+
+다음중 새로운 FIELD에 허용되는 ELEMENT TYPE 들만 모아 놓은 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+C,D,N,X
+D,I,string, T
+
+## *<u>C,D,N,T</u>*
+
+F,I,P,X
+
+<BR/>
+
+****
+
+Clike : CNDT and string
+csequence : c and string
+string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (여기서는 character-type 옵션이므로)
+
+#### ENHANCEMENT CATEGORYS
+
+1. Can be Enhanced(deep) - we can enhance this table/structure with a deep structure, reference fields or any other valid field types.
+
+2. Can be Enhanced (Character-Type or Numeric) - we can enhance the tables/structure with fields that are strictly character or numeric types eg: C,N,D,T,I etc.
+
+3. Can be Enhanced (Character Type) - can be enhanced by only including character type fields
+
+4. Cannot Be Enhanced - Restricting Enhancement of the table/structure post creation.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1903,6 +3217,94 @@ DATA BINDING 이란 무엇인가?
 
 <BR/>
 
+# Q58.
+
+## Which controller types can exist within a Web Dynpro component?
+
+WEB DYNPRO COMPONENT 내에 존재할 수 있는 CONTROLLER TYPE 은?
+
+3 correct 
+
+## *<u>Window controller</u>*
+
+## *<u>View controller</u>*
+
+User controller
+
+## *<u>Component controller</u>*
+
+Application controller
+
+<BR/>
+
+****
+
+추가로 configuration controller, custom controller
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q73.
+
+## What does a Web Dynpro component contain?
+
+WEB DYNPRO COMPONENT 가 포함하는 것은?
+
+#### 3 correct
+
+## *<u>Multiple views within a window</u>*
+
+ A context
+
+## *<u>Component controller</u>*
+
+UI elements
+
+## *<u>Exactly one interface controller</u>*
+
+<BR/>
+
+****
+
+[Web Dynpro 개념 정리 : 네이버 블로그](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=megabzr&logNo=220342641347)
+
+context : 각 controller 마다 모두 존재.
+UI element : View controller에 존재.
+interface controller , component controller : 무조건 하나
+
+A CONTEXT 라고 되어있어서 틀린것으로 보임
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1983,7 +3385,52 @@ DATA BINDING 이란 무엇인가?
 
 <br/>
 
+# Q67.
 
+## Which of the following steps are required to set up a shared memory area?
+
+다음중 SHARED MEMORY AREA 를 설정하는 데 필요한 단계는?
+
+#### 3 correct
+
+##### Declare a catalog object
+
+CATALOG OBJECT 선언
+
+##### Enable multiple versions of an area root class
+
+AREA ROOT CLASS 의 MULTIPLE VERSION 사용 가능으로 설정
+
+## Call the attach_for_write method of area root class
+
+AREA ROOT CLASS 의 ATTACH\_FOR\_WRITE 메소드 호출
+
+## Generate an area root class
+
+AREA ROOT CLASS 생성
+
+## Set the root object
+
+ROOT OBJECT 설정 
+
+****
+
+읽는 메소드 : attach for read
+set root class object to area
+
+[SHARED MEMORY - ABAP : 네이버 블로그](https://m.blog.naver.com/aaaa123krkr/220767969301)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -2053,7 +3500,48 @@ DATA BINDING 이란 무엇인가?
 
 <br/>
 
+# Q52.
 
+## When would you call the RFC function module synchronously?
+
+어느경우 RFC FUNCTION MODULE을 동기적으로 호출하는가?
+
+#### 2 correct
+
+## *<u>During two-way communication</u>*
+
+TWO-WAY  통신 중인 경우
+
+## *<u>During queue processing</u>*
+
+QUEUE 처리중인 경우
+
+##### During unidirectional communication
+
+UNIDIRECTIONAL 통신 중인 경우
+
+##### During interactive communication
+
+INTERACTIVE 통신 중인 경우
+
+<BR/>
+
+****
+
+RFC function module 이 언제 sync 방식으로 작동하는가?
+Q-RFC 무조건 동기방식. 
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -2254,6 +3742,118 @@ select * into table it from abc.  => 기존 데이터를 지우고 입력
 select * appending it from abc. => 기존 데이터에 추가해서 입력
 
 ****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q56.
+
+## What can you do with the code inspector?
+
+CODE INSPECTOR 로 할 수 있는 것은?
+
+#### 2 correct
+
+## *<u>Create your own inspections, object sets and check variants</u>*
+
+자체 검사, 개체 세트 및 변형 확인
+
+## *<u>Create an object set to represent the programs and objects to be inspected</u>*
+
+검사할 프로그램 및 개체를 나타내는 OBJECT 집합을 생성
+
+##### Create only local inspections, objects sets and check variants (global 가능)
+
+로컬 검사와 OBJECT 집합만을 생성하며 변수 검사 수행
+
+##### Choose from only the performance, security and user interface check categories
+
+성능, 보안, 사용자 인터페이스 검사 카테고리에서만 선택
+
+<BR/>
+
+****
+
+프로그램 coding check : (tcode : SCI)
+다국어 처리, 변수 선언 후 미사용. local, global 생성
+setup : inspection name, object set name, check variant name
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q57.
+
+## Which comparison operators can you use in a logical expression related to the WHERE clause of the SELECT statement?
+
+SELECT 문의 WHERE 절과 관련된 논리식에서 사용할 수 있는 비교 연산자는?
+
+#### 3 correct 
+
+## <u>*EQ (equals)*</u>
+
+## <u>*LIKE (fits pattern)*</u>
+
+CP (contains pattern)
+
+– 특정 문자열 pattern 을 가진 문자열
+
+CO (contains only)
+
+– 오직 그 문자를 반드시 포함한 문자열
+
+## *<u>GT (greater than)</u>*
+
+<BR/>
+
+****
+
+CP, CO 는 String function.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q61.
+
+## dbtab is a transparent table. What is declared by the following statement? 
+
+## DATA myvar TYPE dbtab.
+
+DBTAB 은 TRANSPARENT TABLE 이다. 다음 문장에 의해 선언되는것은?
+
+#### Please choose the correct answer.
+
+##### An elementary field
+
+## *<u>A structure variable</u>*
+
+##### A reference to an internal table
+
+##### An internal table
 
 <BR/>
 

@@ -32,11 +32,17 @@
 
 ### (DISPATCHER + WORK PROCESS + LOCAL BUFFER 로 구성)
 
+BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
+
 ### DISPATCHER
 
 * CLIENT 요청을 QUEUE 에 저장 / WORK PROCESS 에 할당
 
 ### WORK PROCESS
+
+* 각 WORK PROCESS 들은 독립되어있다.
+* SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WP 에 대한 DB CONNECTION 을 사용한다.
+* DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
 
 * #### D
 
@@ -97,6 +103,19 @@
 
 
 
+
+
+## CHANGE REQUEST 
+
+* ACTIVATE 되어 있어야한다.
+* PACKAGE RELEASE 되어있어야한다.
+
+
+
+
+
+
+
 ****
 
 ****
@@ -147,13 +166,21 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 ### Hexadecimal types: X
 
-[ABAP Data Types](https://www.abaptutorial.com/abap-programming/abap-data-types/)
 
 
 
 
+## GENERIC TYPE
 
+## clike character-type :
 
+c, d, n, t, string and character-type flat structures
+
+## csecuence text-type : 
+
+c, string    When the FROM is a view
+
+[ABAP Data Types](https://www.abaptutorial.com/abap-programming/abap-data-types/)***<u>(꼭 보기)</u>***
 
 
 
@@ -256,6 +283,21 @@ Size 지정해야 하는 data type (C, N, P, X)
   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100
 
    
+  
+* ### TABLE BUFFER 
+
+  * 데이터가 TABLE BUFFER 로 부터 READ 되는 경우 기존 인덱스는 사용되지 않는다.
+
+    by-pass buffer
+    ABAP join
+    select .. .by pass buffer.
+    select … for update
+    native SQL
+
+    index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index를 사용하지 않는다.
+
+    
+
 
 
 
@@ -269,9 +311,9 @@ Size 지정해야 하는 data type (C, N, P, X)
 
   * 
   * 
-
   * 필드 라벨들을 저장한다.
   * F1 HELP 을 지원한다.
+  * SE11 > DATA ELEMENT > FUTHER CHARACTERISTICS TAB > CHANGE DOCUMENT 를 통해 **필드 내용의 변경에 대한 LOG**를 남기도록 설정 가능하다. 
 
 
 
@@ -295,7 +337,7 @@ Size 지정해야 하는 data type (C, N, P, X)
 
 ## DOMAIN
 
-
+고정값 과 같은 TECHNICAL 속성을 정의한다. 
 
 
 
@@ -415,6 +457,58 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 
 
+****
+
+*****
+
+*****
+
+# PROGRAMS
+
+
+
+## REPORT PROGRAM
+
+* 명시하지 않아도 무조건 발동 되며 어떤 EVENT BLOCK 도 명시 되어있지 않은 경우 모든 코드는 **<u>START-OF-SELECTION</u>** EVENT BLOCK 에 속한다.
+
+
+
+
+
+
+
+
+
+## TEXT SYMBOL
+
+프로그램 개발할때 SELECTION SCREEN 의 INPUT FIELD LABEL 의 TEXT 를 설정해 주던 창을 기억하면 쉽게 이해 할 수 있다.
+
+* 다국어 기능을 지원
+* LITERAL 보다 유지 보수가 쉽다.
+* 다른 프로그램에서 공유하여 사용할 수 없다.
+* 132 자 까지 가능하다.
+
+
+
+화면 생성 후 필수 입력 필드가 모두 채워지지 않더라도 CANCEL BUTTON 으로 화면을 벗어나기 위해서는 CANCEL 버튼에 FUNCTION TYPE E 를 할당, AT EXIT-COMMAND 가 추가된 모듈에서 LOGIC을 처리해 줘야한다.
+
+ 
+
+## 실행 가능 단위 (se80에서 F8로 실행되는 프로그램) : 
+
+* Method
+* function module
+* module pool (screen program, online program)
+* class-pool
+* report
+* INCLUDE / TYPE-POOL / FUNCTION-POOL /  
+
+
+
+
+
+
+
 
 
 ***
@@ -479,6 +573,18 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 # Modularization
 
+## 모듈화의 장점
+
+* TRANSPARENCY 투명성
+* MAINTAINABILITY 유지보수성
+
+* REUSABILITY 재사용성
+
+모듈화 : class, function, subroutine 
+profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
+
+
+
 ## IS SUPPLIED 
 
 * IMPORTING PARAMETER 에 값이 들어왔는지를 확인한다.
@@ -522,6 +628,8 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 두가지 방법이 있다.
 
 
+
+### SINGLE DB LUW  내에서만  DB 를  수정할 수 있다.
 
 
 
@@ -689,7 +797,9 @@ https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-25-Field-Symbol
 
 
 
+* ## STATIC METHOD 
 
+  * STATIC METHOD 에서는 **<u>STATIC ATTRIBUTE / TYPES / CONSTANTS</u>** 만 접근 가능하다.
 
 
 
@@ -713,6 +823,46 @@ https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-25-Field-Symbol
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## EVENT 와 HANDLER VISIBILITY 가능한 조합
+
+#### 확실하지 않다 추가로 문제가 나올때 마다 답과 비교, 분석, 수정 요망
+
+* PUBLIC EVENT <> PROTECTED HANLER
+* PRIVATE EVENT <> PRIVAT HANDLER
+
+
+
+
+
+
+
+
+
+## SINGLETON
+
+* CREATE OBJECT 할 수 없다.
+* METHOD 를 통해서 OBJECT 를 생성할 수 있다.
+* FINAL 로 정의 하여 상속을 방지한다.
+* STATIC PRIVATE CONSTRUCTOR 를 사용하여 인스턴스화 해야한다.
 
 
 
@@ -768,6 +918,12 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 
 
+
+
+
+
+
+
 ****
 
 ****
@@ -800,6 +956,8 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ABAP 프로그램의 약속된 특적 위치에서 정의 없이 ENHANCEMENT 를 적용
 
+ABAP EDITOR 메뉴에서 EDIT > ENHANCEMENT OPERATIONS > SHOW IMPLICIT ENHANCEMENT OPTIONS 에서 확인 가능
+
 - include의 끝 위치
 - Class의 Private, Protected 그리고 Public section의 끝 위치
 - Class 구현의 끝 위치
@@ -808,15 +966,37 @@ ABAP 프로그램의 약속된 특적 위치에서 정의 없이 ENHANCEMENT 를
 - form, functions, methods의 시작과 끝 위치
 - method의 파라미터 CHANGING, IMPORTING 그리고 EXPORTING의 끝 위치
 
-ABAP EDITOR 메뉴에서 EDIT > ENHANCEMENT OPERATIONS > SHOW IMPLICIT ENHANCEMENT OPTIONS 에서 확인 가능
+실행전에 넣을 수 있는 method : pre-method
+
+실행 후에 넣을 수 있는 method : post-method
+
+export parameter 가 post-method 가 change되었을 때, changing parameter 로 바뀜.
+(pre-method도 동일)
+
+
+
+
+
+
 
 ## BAdI
 
+* ### 선행되어야 하는 것
 
+  * METHOD 에 대한 CODE 작성
+  * BAdI IMPLEMENTATION 생성
 
 * ### 찾는법
 
-  * CL_EXITHANDER / GET_INSTANCE METHODS
+  * ### CLASSICAL BAdIs 찾는 방법
+  
+    : find CL_EXITHANDLER / GET_INSTANCE METHODS
+  
+    
+  
+  * ### NEW BAdIs 찾는 방법
+  
+    : get BAdIs / CALL BAdI
 
 
 
@@ -864,6 +1044,8 @@ ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포
 
   필드명은 YY 또는 ZZ 로 시작
 
+  STRUCTURE NAME 은 ZAS 권장??? 확실치 않음
+
   POOLED CLUSTERED 테이블에 사용 불가
 
   LCHAR, LRAW 같은 LONG 타입이 존재하는 테이블에서도 사용 불가
@@ -875,20 +1057,95 @@ ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포
   * FOREIGN KEY 추가 및 정의
   * 도움말 추가
 
-* ## TABLE ENHANCEMENT CATEGORY
+* ### TABLE ENHANCEMENT CATEGORY
 
-  테이블 활성시 조회되는 경고창
+  테이블 활성시 조회되는 경고창을 떠올리면 이해하기 쉽다.
 
   APPEND / INCLUDE 기능을 사용하기 위한 유형 선택을 하라는 메시지
+
+  * 프로그램 동작이 변경 될 수 있는 위치를 식별할 수 있으며
+  * STRUCTURE 에 대해 호환되지 않는 지점에 대한 경고를 생성할 수 있다.
+  * STRUCTURE 에 적용할 수 있는 변경의 TYPE 을 지정한다.
 
   | TYPE                                                   | 내용                                                         |
   | ------------------------------------------------------ | ------------------------------------------------------------ |
   | CANNOT BE ENHANCED                                     | APPEND / INCLUDE 기능 사용 불가                              |
-  | CAN BE ENHANCED( CHARACTER TYPE)                       | APPEND / INCLUDE 사용 가능 / CHARACTER 타입을 가진 필드들로 확장 |
+  | CAN BE ENHANCED( CHARACTER TYPE)                       | APPEND / INCLUDE 사용 가능 / CHARACTER 타입을 가진 필드들로 확장 / CNDT 가능 STRING 은 DEEP 이 되어야 가능하다. |
   | CAN BE ENHANCED( CHARACTER TYPE OR NUMERIC)            | APPEND / INCLUDE 사용 가능 / CHARACTER 타입과 숫자 타입 을 가진 필드들로 확장 |
   | CAN BE ENHANCED( DEEP) / OR CAN BE ENHANCED (ANY TYPE) | APPEND / INCLUDE 사용 가능 / 모든 데이터 타입을 사용 가능 (SSTRING 타입 지원 X) |
 
-  
+  Enhancement Category 사용 이점 : 
+
+  프로그램의 영향력 방지. 구조적 모순점에 대한 경고 생성. 
+
+  테이블이나 STRUCTURE 생성시 뜨는 WARNING 메시지를 기억하면 편하다.
+
+  *<u>**Enhancement category for --- missing**</u>*
+
+  [[SAP/ABAP] 테이블, 구조 생성 시 warning (Enhancement category for table missing)](
+
+
+
+## ACCESS KEY
+
+* SAP STANDARD MODIFICATION , USER EXIT , SAP REPOSITORY OBJECT 수정 에 필요
+* BADI , IMPLICIT ENHANCEMENT 구현에는 필요 없다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -906,7 +1163,7 @@ ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포
 
 
 
-
+[Web Dynpro 개념 정리 : 네이버 블로그](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=megabzr&logNo=220342641347) ***<u>(꼭보기)</u>***
 
 Service calls can only always be embedded in global controllers, that is, in the ***<u>component controller</u>*** or in additionally created ***<u>custom controllers</u>***. 
 
@@ -934,21 +1191,29 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 * COMPONENT 에 사용자의 요청이 들어오는 경우 비지니스 로직 호출
 
-* COMPONENT CONTROLLER
+* ### COMPONENT CONTROLLER
 
   서비스 호출이 가능하다.
 
-* WINDOW CONTROLLER 
+  무조건 하나
 
-* VIEW CONTROLLER 
+* ### INTERFACE CONTROLLER
 
-* GLOBAL CONTROLLER
+  무조건 하나
 
-* CUSTOM CONTROLLER
+* ### WINDOW CONTROLLER 
+
+* ### VIEW CONTROLLER 
+
+  * UI ELEMENT 를 포함
+
+* ### GLOBAL CONTROLLER
+
+* ### CUSTOM CONTROLLER
 
   서비스 호출이 가능하다.
 
-* CONFIGURATION
+* ### CONFIGURATION
 
 ## CONTROLLER METHOD
 
@@ -1028,11 +1293,21 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 
 
+## SHARED MEMORY AREA 를 설정에 필요한 단계
+
+* AREA ROOT CLASS 생성
+
+* AREA ROOT CLASS 의 ATTACH\_FOR\_WRITE 메소드 호출
+
+  (LOCK 을 거는 구문)
+
+* ROOT OBJECT 설정
+
+[SHARED MEMORY - ABAP : 네이버 블로그](https://m.blog.naver.com/aaaa123krkr/220767969301)
 
 
 
-
-
+읽는 메소드 : attach for read
 
 
 
@@ -1059,6 +1334,11 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때 오류내역은 CHANGING PARAMETER 에 TABLE 형태로 전달된다.
 
 
+
+## RFC 가 SYNC 방식으로 작동 하는 경우
+
+* Q-RFC 인 경우 (무조건 동기 방식)[QUEUE]
+* TWO-WAY COMMUNICATION 을 하는 동안
 
 
 
@@ -1144,3 +1424,32 @@ ENDLOOP.
 
 
 
+## 비교 연산자 CO CP
+
+* ### CP (CONTAINS PATTERN)
+
+  특정 문자열 PATTERN 을 가진 문자열
+
+* ### CO (CONTAINS ONLY)
+
+  오직 그 문자를 반드시 포함한 문자열
+
+* **<u>위 둘은 WHERE 절에 사용 불가</u>**
+
+
+
+
+
+
+
+
+
+## 각종 기능
+
+### CODE INSPECTOR  (tcode : SCI)
+
+* 자체 검사, 개체 세트 및 변형 확인
+* 검사할 프로그램 및 개체를 나타내는 OBJECT 집합 생성
+* LOCAL 뿐 아니라 GLOBAL INSPECTION 을 생성할 수 있다.
+* 다국어 처리, 변수 선언 후 미사용. local, global 생성
+* setup : inspection name, object set name, check variant name

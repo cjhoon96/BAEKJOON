@@ -1889,9 +1889,9 @@ select * appending it from abc. => 기존 데이터에 추가해서 입력
 
 <BR/>
 
-# Q42. 여기부터
+# Q42. 
 
-### Which data element property do you set so that the system logs changes to the content of fields with this data element?
+## Which data element property do you set so that the system logs changes to the content of fields with this data element?
 
 #### 시스템 로그가 이 DATA ELEMENT 로 된 필드의 내용의 변경에 대한 LOG 를 남기려면 DATA ELEMNT 속성을 설정해야 하는가?
 
@@ -1915,6 +1915,8 @@ SE11 > Data element > Further characteristics tab > change document 에서 처�
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -1923,9 +1925,9 @@ SE11 > Data element > Further characteristics tab > change document 에서 처�
 
 # Q43.
 
-### What does the enhancement category for a database table or structure do?
+## What does the enhancement category for a database table or structure do?
 
-#### DB TABLE 이나 STRUCTURE 에 대한 ENHANCEMENT CATEGORY 가 하는 것은 무엇인가?
+DB TABLE 이나 STRUCTURE 에 대한 ENHANCEMENT CATEGORY 가 하는 것은 무엇인가?
 
 #### 3 correct
 
@@ -1955,23 +1957,33 @@ Enhancement Category 사용 이점 :
 
 테이블이나 STRUCTURE 생성시 뜨는 WARNING 메시지를 기억하면 편하다.
 
-*<u>**"Enhancement category for --- missing"**</u>*
+*<u>**Enhancement category for --- missing**</u>*
 
 [[SAP/ABAP] 테이블, 구조 생성 시 warning (Enhancement category for table missing)](https://sssinga.tistory.com/227)
 
 ****
 
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q44.
 
-### Which of the following must you do to be able to use a Business Add-in(BAdI)?
+## Which of the following must you do to be able to use a Business Add-in(BAdI)?
 
-#### BADi를 사용하기 위해 해야할 것은 무엇인가?
+BADi를 사용하기 위해 해야할 것은 무엇인가?
 
 #### 2 correct
 
 ##### Modify the adapter class (adapter class : BAdIs를 얻어오기 위한 것)
 
-ADPTER CLASS 수정
+ADㅁPTER CLASS 수정
 
 ## *<u>Write code for methods</u>*
 
@@ -1995,11 +2007,19 @@ BAdIs : method에 프로그램 코딩,
 
 <br/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q45.
 
-### You want to move a transport request from the development system to the subsequent system. Which of the following are prerequisites for this?
+## You want to move a transport request from the development system to the subsequent system. Which of the following are prerequisites for this?
 
-#### 개발 시스템에서 부속 시스템으로 전송요청을 이동하고자 한다. 다음중 전제조건을 고르시오?
+개발 시스템에서 부속 시스템으로 전송요청을 이동하고자 한다. 다음중 전제조건을 고르시오?
 
 #### 2 correct
 
@@ -2028,11 +2048,19 @@ activate, CDC에 요청해야 함.
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q46.
 
-### What is the event block that all of your code changes belongs to if you do not explicitly code any event blocks in an executable program?
+## What is the event block that all of your code changes belongs to if you do not explicitly code any event blocks in an executable program?
 
-#### executable program에서 어떤 EVENT BLOCK도 명시적으로 CODING 하지 않은 경우 모든 코드 변경이 속하는 EVENT BLOCK 은 무엇인가?
+executable program에서 어떤 EVENT BLOCK도 명시적으로 CODING 하지 않은 경우 모든 코드 변경이 속하는 EVENT BLOCK 은 무엇인가?
 
 #### Please choose the correct answer.
 
@@ -2054,11 +2082,19 @@ executable program 에서 명시하지 않아도 무조건 발동 : start-of-sel
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q47.
 
-### What will happen at runtime when accessing a buffered table?
+## What will happen at runtime when accessing a buffered table?
 
-#### BUFFER 된 테이블에 접근할때 RUNTIME 에서 발생하는 것은 무엇인가?
+BUFFER 된 테이블에 접근할때 RUNTIME 에서 발생하는 것은 무엇인가?
 
 #### Please choose the correct answer.
 
@@ -2093,15 +2129,23 @@ index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index�
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q48.
 
-### You want to add a field ZZPRICE to the SAP standard transparent table EKKO.
+## You want to add a field ZZPRICE to the SAP standard transparent table EKKO.
 
-#### 당신은 ZZPRICE 필드를 SAP STANDARD TRANSPARENT TABLE EKKO 에 추가하기를 원한다.
+당신은 ZZPRICE 필드를 SAP STANDARD TRANSPARENT TABLE EKKO 에 추가하기를 원한다.
 
-### Which of the following actions result in an enhancement of the SAP standard?
+## Which of the following actions result in an enhancement of the SAP standard?
 
-#### 다음 행동중 SAP STANDARD 의 ENHANCEMENT 에대한
+다음 행동중 SAP STANDARD 의 ENHANCEMENT 에대한
 
 #### 2 correct
 
@@ -2132,11 +2176,19 @@ ci_include (customizing include) 사용
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q49.
 
-### Where are fixed values for fields stored?
+## Where are fixed values for fields stored?
 
-#### 필드의 고정값 은 어디에 저장되는가?
+필드의 고정값 은 어디에 저장되는가?
 
 #### Please choose the correct answer.
 
@@ -2152,6 +2204,8 @@ ci_include (customizing include) 사용
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2160,9 +2214,9 @@ ci_include (customizing include) 사용
 
 # Q50.
 
-### Which of the following ABAP data types are compatible with the generic character-type CLIKE?
+## Which of the following ABAP data types are compatible with the generic character-type CLIKE?
 
-#### 다음 ABAP DATA TYPE들 중 GENERIC CHARACTER TYPE CLIKE와 호환 되는 것은?
+다음 ABAP DATA TYPE들 중 GENERIC CHARACTER TYPE CLIKE와 호환 되는 것은?
 
 #### 3 correct
 
@@ -2187,6 +2241,8 @@ csecuence text-type : c, string    When the FROM is a view
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2195,9 +2251,9 @@ csecuence text-type : c, string    When the FROM is a view
 
 # Q51.
 
-### What are the advantages of defining texts symbols in executable programs?
+## What are the advantages of defining texts symbols in executable programs?
 
-#### EXECUTABLE PROGRAM 을 개발하는데 있어 TEXT SYMBOL을 정의하는 것의 이점은 무엇인가?
+EXECUTABLE PROGRAM 을 개발하는데 있어 TEXT SYMBOL을 정의하는 것의 이점은 무엇인가?
 
 #### 2 correct
 
@@ -2229,6 +2285,8 @@ multilingual functionality
 
 <BR/>
 
+<br/>
+
 ****
 
 ****
@@ -2237,9 +2295,9 @@ multilingual functionality
 
 # Q52.
 
-### When would you call the RFC function module synchronously?
+## When would you call the RFC function module synchronously?
 
-#### 어느경우 RFC FUNCTION MODULE을 동기적으로 호출하는가?
+어느경우 RFC FUNCTION MODULE을 동기적으로 호출하는가?
 
 #### 2 correct
 
@@ -2270,6 +2328,8 @@ Q-RFC 무조건 동기방식.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2278,9 +2338,9 @@ Q-RFC 무조건 동기방식.
 
 # Q53.
 
-### The statements CALL BADI and GET BADI are used for which type of BAdIs?
+## The statements CALL BADI and GET BADI are used for which type of BAdIs?
 
-#### CALL BAdI 와 GET BAdI 구문은 어느 타입의 BAdI 를 위해 사용되는가?
+CALL BAdI 와 GET BAdI 구문은 어느 타입의 BAdI 를 위해 사용되는가?
 
 #### Please choose the correct answer.
 
@@ -2306,17 +2366,19 @@ NEW BAdIs 찾는 방법
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
 
 <BR/>
 
-# Q54. (Skip)
+# Q54. (Skip) 
 
-### Which of the following are valid combinations of event visibility and handler method visibility?
+## Which of the following are valid combinations of event visibility and handler method visibility?
 
-#### 다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
+다음중 이벤트의 VISIBILITY 와 HANDLER METHOD 의 VISIBILITY 의 유효한 조합은 무엇인가?
 
 #### 2 correct
 
@@ -2330,6 +2392,8 @@ NEW BAdIs 찾는 방법
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2338,9 +2402,9 @@ NEW BAdIs 찾는 방법
 
 # Q55.
 
-### Which of the following ABAP statements throws an error at the syntax check?
+## Which of the following ABAP statements throws an error at the syntax check?
 
-#### 다음중 ERROR 나 SYNTAX CHECK 를 띄우는 ABAP 구문은?
+다음중 ERROR 나 SYNTAX CHECK 를 띄우는 ABAP 구문은?
 
 #### Please choose the correct answer.
 
@@ -2362,6 +2426,8 @@ t type은 6 user-defined alphanumeric characters.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2370,17 +2436,17 @@ t type은 6 user-defined alphanumeric characters.
 
 # Q56.
 
-### What can you do with the code inspector?
+## What can you do with the code inspector?
 
 CODE INSPECTOR 로 할 수 있는 것은?
 
 #### 2 correct
 
-## Create your own inspections, object sets and check variants
+## *<u>Create your own inspections, object sets and check variants</u>*
 
 자체 검사, 개체 세트 및 변형 확인
 
-## Create an object set to represent the programs and objects to be inspected
+## *<u>Create an object set to represent the programs and objects to be inspected</u>*
 
 검사할 프로그램 및 개체를 나타내는 OBJECT 집합을 생성
 
@@ -2404,26 +2470,36 @@ setup : inspection name, object set name, check variant name
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q57.
 
-### Which comparison operators can you use in a logical expression related to the WHERE clause of the SELECT statement?
+## Which comparison operators can you use in a logical expression related to the WHERE clause of the SELECT statement?
 
 SELECT 문의 WHERE 절과 관련된 논리식에서 사용할 수 있는 비교 연산자는?
 
-3 correct 
+#### 3 correct 
 
-EQ (equals)
-LIKE (fits pattern)
+## <u>*EQ (equals)*</u>
 
-## *<u>CP (contains pattern) </u>*
+## <u>*LIKE (fits pattern)*</u>
 
-## – 특정 문자열 pattern 을 가진 문자열
+CP (contains pattern)
 
-## *<u>CO (contains only) </u>*
+– 특정 문자열 pattern 을 가진 문자열
 
-## – 오직 그 문자를 반드시 포함한 문자열
+CO (contains only)
 
-GT (greater than)
+– 오직 그 문자를 반드시 포함한 문자열
+
+## *<u>GT (greater than)</u>*
+
 <BR/>
 
 ****
@@ -2431,6 +2507,8 @@ GT (greater than)
 CP, CO 는 String function.
 
 ****
+
+<BR/>
 
 <BR/>
 
@@ -2442,7 +2520,7 @@ CP, CO 는 String function.
 
 # Q58.
 
-### Which controller types can exist within a Web Dynpro component?
+## Which controller types can exist within a Web Dynpro component?
 
 WEB DYNPRO COMPONENT 내에 존재할 수 있는 CONTROLLER TYPE 은?
 
@@ -2468,6 +2546,8 @@ Application controller
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2476,7 +2556,7 @@ Application controller
 
 # Q59.
 
-### What is the SAP recommended naming convention for append structures of standard SAP tables?
+## What is the SAP recommended naming convention for append structures of standard SAP tables?
 
 표준 SAP 테이블의 APPEND STRUCTURE 에 대해 SAP 에서 권장하는 네이밍 룰은 무엇인가?
 
@@ -2508,6 +2588,8 @@ structure name 은 ZAS
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2516,19 +2598,21 @@ structure name 은 ZAS
 
 # Q60.
 
-### You enhance an SAP standard global class by defining a post-method for an SAP method. The original SAP method has an EXPORT parameter named PARM1.
+## You enhance an SAP standard global class by defining a post-method for an SAP method. The original SAP method has an EXPORT parameter named PARM1.
 
 너는 SAP 메소드에 대한 POST-METHOD 를 정의하여 SAP STANDARD GLOBAL CLASS 를 ENHANCE 하려고 한다. 기존 SAP METHOD 는 PARM1 이라는 EXPORT 파라미터를 가지고 있다.
 
-### Which parameters does the post-method have?
+## Which parameters does the post-method have?
 
 POST-METHOD 는 어떤 파라미터를 가지고 있는가?
 
 Please choose the correct answer
 
-A RETURNING parameter named PARM1
-An EXPORT parameter named PARM1
-An OMPORT parameter named PARM1
+##### A RETURNING parameter named PARM1
+
+##### An EXPORT parameter named PARM1
+
+##### An OMPORT parameter named PARM1
 
 ## *<u>A CHANGING parameter named PARM1</u>*
 
@@ -2555,18 +2639,21 @@ export parameter 가 post-method 가 change되었을 때, changing parameter 로
 
 # Q61.
 
-### dbtab is a transparent table. What is declared by the following statement? DATA myvar TYPE dbtab.
+## dbtab is a transparent table. What is declared by the following statement? DATA myvar TYPE dbtab.
 
 DBTAB 은 TRANSPARENT TABLE 이다. 다음 문장에 의해 선언되는것은?
 
-Please choose the correct answer.
+#### Please choose the correct answer.
 
-An elementary field
+##### An elementary field
 
 ## *<u>A structure variable</u>*
 
-A reference to an internal table
-An internal table
+##### A reference to an internal table
+
+##### An internal table
+
+<BR/>
 
 <BR/>
 
@@ -2578,22 +2665,23 @@ An internal table
 
 # Q62.
 
-### You have 2 objects:
+## You have 2 objects:
 
-### O1 of type class C1 and O2 of type class C2.
+## O1 of type class C1 and O2 of type class C2.
 
-### Class C2 is a subclass of class C1. Which of the following statements implements an upcast?
+## Class C2 is a subclass of class C1. Which of the following statements implements an upcast?
 
-#### CLASS C2 는 C1 의 SUBCLASS 이다. 다음중 UPCAST 를 구현한 구문은?
+CLASS C2 는 C1 의 SUBCLASS 이다. 다음중 UPCAST 를 구현한 구문은?
 
-Please choose the correct answer.
+#### Please choose the correct answer.
 
-MOVE O1 TO O2.
-MOVE O1 ?TO O2.
+##### MOVE O1 TO O2.
+
+##### MOVE O1 ?TO O2.
 
 ## *<u>O1 = O2.</u>*
 
-O2 ?= O1 (downcast).
+##### O2 ?= O1 (downcast).
 
 <BR/>
 
@@ -2607,13 +2695,21 @@ B = A : A => B
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q63.
 
-### Which of the following is a true statement?
+## Which of the following is a true statement?
 
 다음중 옳은 것은?
 
-2 correct 
+#### 2 correct 
 
 ## *<u>An access key is required to enhance an SAP application using a user exit.</u>*
 
@@ -2627,7 +2723,7 @@ ACCESS KEY 는 IMPLICIT ENHANCEMENT POINT 를 구현하기 위해 필요하다.
 
 BAdI 를 구현하기 위해 ACCESS KEY 가 필요하다.
 
-## An access key is required to modify SAP repository objects.
+## *<u>An access key is required to modify SAP repository objects.</u>*
 
 SAP REPOSITORY OBJECT 를 수정하기 위해 ACCESS KEY 가 필요하다.
 
@@ -2641,9 +2737,17 @@ access key : SAP standard modification, User Exit.
 
 <BR/>
 
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 # Q64.
 
-### Each work process…
+## Each work process…
 
 각 WORK PROCESS 들은 
 
@@ -2679,6 +2783,8 @@ DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2687,7 +2793,7 @@ DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 
 
 # Q65.
 
-### Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
+## Which of the following capabilities is provided by the Application Layer platform of SAP Netweaver?
 
 다음중 SAP NETWEAVER 의 어플리케이션 LAYER PLATFORM 에서 제공되는 기능이 아닌것은?
 
@@ -2721,6 +2827,8 @@ SAP Database
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2729,7 +2837,7 @@ SAP Database
 
 # Q66.
 
-### You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
+## You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this?
 
 당신은 필수 입력 필드를 가진 classical screen (dynpro) 를 정의하였다. 당신은 필수 입력 필드가 모두 채워지지 않더라도 Cancel button 을 사용하여 화면을 나가기를 원한다.
 
@@ -2762,6 +2870,8 @@ Module exit AT Exit-command
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2770,7 +2880,7 @@ Module exit AT Exit-command
 
 # Q67.
 
-### Which of the following steps are required to set up a shared memory area?
+## Which of the following steps are required to set up a shared memory area?
 
 다음중 SHARED MEMORY AREA 를 설정하는 데 필요한 단계는?
 
@@ -2784,15 +2894,15 @@ CATALOG OBJECT 선언
 
 AREA ROOT CLASS 의 MULTIPLE VERSION 사용 가능으로 설정
 
-## Call the attach_for_write method of area root class
+## *<u>Call the attach_for_write method of area root class</u>*
 
 AREA ROOT CLASS 의 ATTACH\_FOR\_WRITE 메소드 호출
 
-## Generate an area root class
+## *<u>Generate an area root class</u>*
 
 AREA ROOT CLASS 생성
 
-## Set the root object
+## *<u>Set the root object</u>*
 
 ROOT OBJECT 설정 
 
@@ -2807,6 +2917,8 @@ set root class object to area
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2815,7 +2927,7 @@ set root class object to area
 
 # Q68.
 
-### What is unique about a singleton?
+## What is unique about a singleton?
 
 SINGLETON 에 대한 특징은?
 
@@ -2863,6 +2975,8 @@ singleton : create object를 할 수 없고, method를 통해서 object를 생�
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2871,11 +2985,11 @@ singleton : create object를 할 수 없고, method를 통해서 object를 생�
 
 # Q69. (skip)???????????????????????????
 
-### An ABAP program processes the following expression:
+## An ABAP program processes the following expression:
 
 ### r = a / b + c
 
-### Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
+## Which of the following data declarations would cause the runtime environment to use fixed-point arithmetic for the above expression?
 
 RUNTIME 환경이 위 식에서 fixed-point arithmetic 을 사용하도록 하는 DATA 선언은?
 
@@ -2890,12 +3004,18 @@ DATA: r TYPE p DECMALS 2,
       c TYPE f.
 ```
 
+<BR/>
+
 ```abap
 DATA: r TYPE p,
       a type I VALUE 201,
       b type I VALUE 200,
       c type i.
 ```
+
+<BR/>
+
+## *<u>ANSWER</u>*
 
 ```abap
 DATA: r TYPE p DECIMALS 2,
@@ -2904,12 +3024,18 @@ DATA: r TYPE p DECIMALS 2,
       c TYPE 
 ```
 
+<BR/>
+
+## *<u>ANSWER</u>*
+
 ```abap
 DATA: r TYPE f,
       a TYPE i VALUE 201,
       b TYPE i VALUE 200,
       c TYPE f.
 ```
+
+<BR/>
 
 <BR/>
 
@@ -2921,7 +3047,7 @@ DATA: r TYPE f,
 
 # Q70.
 
-### How would you define a method of an ABAP class to prevent this method from being available in a subclass?
+## How would you define a method of an ABAP class to prevent this method from being available in a subclass?
 
 ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 할수 없도록 하려면 어떻게 해야하는가?
 
@@ -2943,6 +3069,8 @@ ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2951,11 +3079,11 @@ ABAP 클래스의 METHOD 를 정의하되 이 METHOD 를 SUBCLASS 에서 사용 
 
 # Q71.
 
-### A structure has enhancement category 3, can be enhanced (character-type).
+## A structure has enhancement category 3, can be enhanced (character-type).
 
 STRUCTURE 은 ENHANCE 될 수 있는 3가지 ENHANCEMENT CATEGORY가 있다.다.
 
-### Which set of elementary types is allowed for the new fields?
+## Which set of elementary types is allowed for the new fields?
 
 다음중 새로운 FIELD에 허용되는 ELEMENT TYPE 들만 모아 놓은 것은 무엇인가?
 
@@ -2990,6 +3118,8 @@ string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -2998,7 +3128,7 @@ string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (
 
 # Q72.
 
-### Which components of the class can be accessed in the implementation of a static method in that class?
+## Which components of the class can be accessed in the implementation of a static method in that class?
 
 어떤 COMPONENT 들이 해당 클래스의 STATIC METHOD 의 IMPLEMENTATION 에 접근할 수 있는가?
 
@@ -3022,6 +3152,8 @@ static method에서 접근 할 수 있는 것. : static attribute , Types, const
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3030,7 +3162,7 @@ static method에서 접근 할 수 있는 것. : static attribute , Types, const
 
 # Q73.
 
-### What does a Web Dynpro component contain?
+## What does a Web Dynpro component contain?
 
 WEB DYNPRO COMPONENT 가 포함하는 것은?
 
@@ -3062,6 +3194,8 @@ A CONTEXT 라고 되어있어서 틀린것으로 보임
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3070,7 +3204,7 @@ A CONTEXT 라고 되어있어서 틀린것으로 보임
 
 # Q74.
 
-### What are the advantages of modularization?
+## What are the advantages of modularization?
 
 MODUL 화의 장점은?
 
@@ -3105,28 +3239,31 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
 
 <BR/>
 
-# Q75.
+# Q75.???????????필기 찾기 여기부터
 
-### Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
+## Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
 
 ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로그램의 타입이나 프로그램의 부분은 무엇인가?
 
 #### 4 correct
 
-INCLUDE
-TYPE-POOL
+##### INCLUDE
+
+##### TYPE-POOL
 
 ## *<u>METHOD</u>*
 
-FUNCTION-POOL
+##### FUNCTION-POOL
 
-PROGRAM
+##### PROGRAM
 
 ## *<u>CLASS-POOL</u>*
 
@@ -3134,7 +3271,7 @@ PROGRAM
 
 ## *<u>FUNCTION MODULE</u>*
 
-INTERFACE-POOL
+##### INTERFACE-POOL
 
 <BR/>
 
@@ -3153,6 +3290,8 @@ INTERFACE-POOL
 * report
 
 ****
+
+<BR/>
 
 <BR/>
 
