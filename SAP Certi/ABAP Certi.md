@@ -3303,7 +3303,7 @@ ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로�
 
 # Q76.
 
-### Which of the following are true statements?
+## Which of the following are true statements?
 
 다음중 옳은 것을 고르시오
 
@@ -3338,6 +3338,8 @@ data element의 기술적인 정보는 domain이 가지고 있다 .(data type, f
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3346,18 +3348,19 @@ data element의 기술적인 정보는 domain이 가지고 있다 .(data type, f
 
 # Q77.
 
-### Each component has an interface; of what does this interface consist?
+## Each component has an interface; of what does this interface consist?
 
 각 component 는 interface 를 가지고 있다. 이 interface 들은 무엇으로 구성되어있는가?
 
 #### 2 correct
 
-Interface controller
-Data Container
+## *<u>Interface controller</u>*
+
+##### Data Container
 
 ## *<u>Interface view</u>*
 
-## *<u>Interface context</u>*
+##### Interface context
 
 <br/>
 
@@ -3369,6 +3372,8 @@ Web dynpro 가 가지고 있는 것 : Interface controller, interface view.
 
 <br/>
 
+<BR/>
+
 ****
 
 ****
@@ -3377,7 +3382,7 @@ Web dynpro 가 가지고 있는 것 : Interface controller, interface view.
 
 # Q78.
 
-### What types of changes to the repository does SAP provide?
+## What types of changes to the repository does SAP provide?
 
 SAP 는 REPOSITORY 변환하는데 있어 어떤 유형들을 제공하는가?
 
@@ -3385,9 +3390,9 @@ SAP 는 REPOSITORY 변환하는데 있어 어떤 유형들을 제공하는가?
 
 ## *<u>SAP Notes</u>*
 
-Deployments from SDN.SAP.COM
+##### Deployments from SDN.SAP.COM
 
-Transports
+##### Transports
 
 ## *<u>Support Packages</u>*
 
@@ -3412,6 +3417,8 @@ STD를 변경할 때 제공되는 것 :
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3420,11 +3427,11 @@ STD를 변경할 때 제공되는 것 :
 
 # Q79.
 
-### Which of the following are features of the Context in Web Dynpro?
+## Which of the following are features of the Context in Web Dynpro?
 
 다음중 WEB DYNPRO 의 CONTEXT 특징은 무엇인가?
 
-2 correct 
+#### 2 correct 
 
 ##### Every Web Dynpro controller has multiple Contexts
 
@@ -3454,6 +3461,8 @@ firing plugs : 각 view(화면)간 이동을 위해 필요한 것.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3462,18 +3471,19 @@ firing plugs : 각 view(화면)간 이동을 위해 필요한 것.
 
 # Q80.
 
-### To which context object is the attribute LEAD_SELECTION_INDEX related?
+## To which context object is the attribute LEAD_SELECTION_INDEX related?
 
 LEAD_SELECTION_INDEX 속성과 관련된 CONTEXT OBJECT 는?
 
 #### Please choose the correct answer.
 
-Element
+##### Element
 
 ## *<u>Node</u>*
 
-Attribute
-Supply function
+##### Attribute
+
+##### Supply function
 
 <BR/>
 
@@ -3486,6 +3496,8 @@ Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3494,17 +3506,17 @@ Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
 
 # Q81. 
 
-### You call a lock module Which exceptions could the lock module raise when a logical lock CANNOT be set?
+## You call a lock module Which exceptions could the lock module raise when a logical lock CANNOT be set?
 
 LOCK MODULE 을 호출 하려한다. LOFGICAL LOCK 이 설정될 수 없을때 LOCK MODULE 은 어떤 예외를 띄우는가?
 
 #### 2 correct 
 
-CX_SY_OPEN_SQL_ERROR
+##### CX_SY_OPEN_SQL_ERROR
 
 ## *<u>FOREIGN_LOCK</u>*
 
-CX_SY_DATA_ACCESS_ERROR
+##### CX_SY_DATA_ACCESS_ERROR
 
 ## *<u>SYSTEM_FAILURE</u>*
 
@@ -3520,6 +3532,8 @@ system_failure : 시스템 상의 다른 이유로 발생하는 에러
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3528,20 +3542,19 @@ system_failure : 시스템 상의 다른 이유로 발생하는 에러
 
 # Q82. 
 
-### Which statement is used to generically define the data reference variable z1?
+## Which statement is used to generically define the data reference variable z1?
 
 일반적으로 데이터 REFERENCE VARIABLE Z1 을 정의 할때 사용되는 구문은 무엇인가?
 
 #### Please choose the correct answer. 
 
+##### data z1 type any
 
-data z1 type any
+##### data z1 type ref to PA0001
 
-data z1 type ref to PA0001
+## *<u>data z1 type ref to data</u>*
 
-data z1 type ref to data
-
-data z1 type any table
+##### data z1 type any table
 
 #### <BR/>
 
@@ -3584,6 +3597,8 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3592,7 +3607,7 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 # Q83.
 
-### Which of the following ABAP standard types are incomplete?
+## Which of the following ABAP standard types are incomplete?
 
 다음중ABAP STANDARD TYPE 들 중 INCOMPLETE 인 것들은 무엇인가?
 
@@ -3600,11 +3615,11 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 ## *<u>X</u>*
 
-F
+##### F
 
 ## *<u>N</u>*
 
-STRING
+##### STRING
 
 <BR/>
 
@@ -3616,27 +3631,29 @@ incomplete : 크기를 선언해야 하는 변수 타입. (C, N, X, P)
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
 
 <BR/>
 
-# Q84. ????????????????????????????????????? 
+# Q84. ??????????????????????????????????? 
 
-### Which of the elementary data types is deep?
+## Which of the elementary data types is deep?
 
 다음중 DEEP 타입인 ELEMENT DATA TYPE 들을 고르시오
 
 #### Please choose the correct answer.
 
-DECFLOAT34
+##### DECFLOAT34
 
 ## *<u>XSTRING</u>*
 
-X
+##### X
 
-N
+##### N
 
 <BR/>
 
@@ -3648,15 +3665,17 @@ runtime 시 크기가 변하는 것 : string, xstring
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
 
 <BR/>
 
-# Q85. 
+# Q85.  CNDT 는 확실한데 STRING 이 불확실 그럼 XSTRING은?
 
-### Which elementary field types are considered a character type?
+## Which elementary field types are considered a character type?
 
 다음 ELEMENT FIELD TYPE들 중 CHARACTER TYPE 으로 취급 되는 것은?
 
@@ -3668,17 +3687,17 @@ runtime 시 크기가 변하는 것 : string, xstring
 
 ## *<u>D</u>*
 
-I
+##### I
 
-F
+##### F
 
-XSTRING
+##### XSTRING
 
 ## *<u>STRING</u>*
 
 ## *<u>N</u>*
 
-X
+##### X
 
 <BR/>
 
@@ -3693,6 +3712,8 @@ X
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3701,7 +3722,7 @@ X
 
 # Q86. 
 
-### Which of the following is a true statement?
+## Which of the following is a true statement?
 
 다중 사실 인 것은?
 
@@ -3727,13 +3748,13 @@ STANDARD TABLE 은 항상 MULTIPLE KEY 를 보유하여야 한다.
 
 ****
 
-
-
 standard table : unique, non-unique and one or a multiple key
 hashed table : unique
 sorted table : unique, non-unique
 
 ****
+
+<BR/>
 
 <BR/>
 
@@ -3755,7 +3776,7 @@ sorted table : unique, non-unique
 
 #### 2 correct
 
-#### <u>*Change column width and sequence*</u>
+## <u>*Change column width and sequence*</u>
 
     열 너비 및 순서 변경
 
@@ -3763,7 +3784,7 @@ sorted table : unique, non-unique
 
 통화, 액수 COLUMN들의  변환
 
-#### <u>*Sort and filter the data by any column*</u>
+## <u>*Sort and filter the data by any column*</u>
 
     행 기준 SORT 와 FILTER 기능 구현
 
@@ -3797,7 +3818,7 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 # Q88. 
 
-### What is unique about a functional method? 
+## What is unique about a functional method? 
 
 FUNCTION METHOD 에 대한 설명으로 옳은 것은?
 
@@ -3813,7 +3834,7 @@ exporting parameter 를 가질 수 있다.
 
 ##### It can be used in SELECT statements.
 
-SELECT 구문이 사용될 수 있다.
+SELECT 구문에서 사용될 수 있다.
 
 ## *<u>It must contain a returning parameter.</u>*
 
@@ -3829,7 +3850,7 @@ changing parameter 를 가질 수 있다.
 
 ## *<u>It can be used in logical expressions.</u>*
 
-논리 연산이 사용될 수 있다.
+논리 연산에서 사용될 수 있다.
 
 <BR/>
 
@@ -3846,6 +3867,8 @@ functional method :
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3854,17 +3877,17 @@ functional method :
 
 # Q89. 
 
-### Identify the types of layout managers. 
+## Identify the types of layout managers. 
 
 LAYOUT MANAGER 의 TYPE들을 고르시오
 
 #### 4 correct 
 
-ColumnLayout
+##### ColumnLayout
 
 ## *<u>FlowLayout</u>*
 
-TreeLayout
+##### TreeLayout
 
 ## *<u>RowLayout</u>*
 
@@ -3888,6 +3911,8 @@ Web Dynpro : layout manager 가 화면 구성을 처리
 
 <br/>
 
+<BR/>
+
 ****
 
 ****
@@ -3896,7 +3921,7 @@ Web Dynpro : layout manager 가 화면 구성을 처리
 
 # Q90.
 
-### What can you create using the ABAP Dictionary?
+## What can you create using the ABAP Dictionary?
 
 ABAP DICTIONARY 에서 생성할 수 있는 것은?
 
@@ -3906,9 +3931,9 @@ ABAP DICTIONARY 에서 생성할 수 있는 것은?
 
 ## *<u>Transparent tables</u>*
 
-Internal tables
+##### Internal tables
 
-Field symbols
+##### Field symbols
 
 ## *<u>Domains</u>*
 
@@ -3922,6 +3947,8 @@ Type pools = Type groups.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3930,11 +3957,11 @@ Type pools = Type groups.
 
 # Q91. 
 
-### You want to include an element of type ‘Table’ in your web dynpro.
+## You want to include an element of type ‘Table’ in your web dynpro.
 
 당신은 WEB DYNPRO 에 TABLE 타입의 ELEMENT 를 추가하고싶다.
 
-### What actions add the corresponding columns to the table automatically?
+## What actions add the corresponding columns to the table automatically?
 
 자동으로 테이블에 관련된 COLUMN 들을 추가하는 방법을 고르시오
 
@@ -3942,11 +3969,11 @@ Type pools = Type groups.
 
 ## *<u>Right click the table and select the ‘CREATE_BINDING’ option</u>*
 
-Include the method BIND_TABLE of IF_WD_CONTEXT_NODE.
+##### Include the method BIND_TABLE of IF_WD_CONTEXT_NODE.
 
-Bind the table attribute ‘DATA_SOURCE’ to the context node
+##### Bind the table attribute ‘DATA_SOURCE’ to the context node
 
-Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
+##### Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
 
 <BR/>
 
@@ -3958,6 +3985,8 @@ Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -3966,7 +3995,7 @@ Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
 
 # Q92. 
 
-### Which of the following ABAP code lines is valid?
+## Which of the following ABAP code lines is valid?
 
 다음중 가능한 ABAP CODE 는?
 
@@ -3983,6 +4012,8 @@ Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
 ## *<u>PARAMETERS p_mantr TYPE mantr DEFAULT ‘100’</u>*
 
 <br/>
+
+<BR/>
 
 ****
 
@@ -4018,6 +4049,8 @@ UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4026,21 +4059,21 @@ UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
 
 # Q94. 
 
-### Which of the following data types are predefined ABAP data types?
+## Which of the following data types are predefined ABAP data types?
 
 다음중 PREDEFINED ABAP DATA TYPE 들을 고르시오
 
 #### 3 correct 
 
-## XSTRING
+## *<u>XSTRING</u>*
 
-## STRING
+## *<u>STRING</u>*
 
-DECIMALS
+##### DECIMALS
 
-## DECFLOAT34
+## *<u>DECFLOAT34</u>*
 
-FLOAT (è f)
+##### FLOAT (=>f)
 
 <BR/>
 
@@ -4077,6 +4110,8 @@ FLOAT (è f)
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4085,7 +4120,7 @@ FLOAT (è f)
 
 # Q95. 
 
-### Dynpros(DYNAMIC PROGRAMS) can be placed in which program types? 
+## Dynpros(DYNAMIC PROGRAMS) can be placed in which program types? 
 
 DYNPRO 는 어떤 프로그램 타입에 배치 될 수 있는가?
 
@@ -4109,6 +4144,8 @@ Class pools
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4117,7 +4154,7 @@ Class pools
 
 # Question 96: 
 
-### What is the allowed length of the ABAP Dictionary data type DF16_DEC?
+## What is the allowed length of the ABAP Dictionary data type DF16_DEC?
 
 DF16_DEC ABAP DICTIONARY DATA TYPE 의 허용되는 길이는?  
 
@@ -4226,6 +4263,8 @@ Predefined data types with special semantic attributes.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4234,7 +4273,7 @@ Predefined data types with special semantic attributes.
 
 # Question 97: 
 
-### What must you do to create a singleton class?
+## What must you do to create a singleton class?
 
 SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
 
@@ -4262,6 +4301,8 @@ SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4270,20 +4311,21 @@ SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
 
 # Question 98: 
 
-### Which of the following values are replaceable in debugger mode?
+## Which of the following values are replaceable in debugger mode?
 
 DEBUGGER MODE 에서 대체 가능한 값은 무엇인가?
 
 #### Please choose the correct answer.
 
+##### Constants
 
-Constants
-
-Field names
+##### Field names
 
 ## *<u>Variables</u>*
 
-Table names
+##### Table names
+
+<BR/>
 
 <BR/>
 
@@ -4295,19 +4337,21 @@ Table names
 
 # Question 99: 
 
-### Which selection screen elements allow user input in ABAP Reports?
+## Which selection screen elements allow user input in ABAP Reports?
 
 ABAP REPORTS 에서 USER INPUT 을 가능하게 해주는 SELECTION SCREEN ELEMENT 는 무엇인가?
 
 #### 2 correct 
 
-SELECTION-SCREEN COMMENT
+##### SELECTION-SCREEN COMMENT
 
 ## *<u>PARAMETERS</u>*
 
-SELECTION-SCREEN BLOCK
+##### SELECTION-SCREEN BLOCK
 
 ## *<u>SELECT-OPTIONS</u>*
+
+<BR/>
 
 <BR/>
 
@@ -4319,7 +4363,7 @@ SELECTION-SCREEN BLOCK
 
 # Question 100: 
 
-### Which of the following is correct?
+## Which of the following is correct?
 
 다중 옳은 것은?
 
@@ -4353,6 +4397,8 @@ PAI : user가 화면에서 입력받은 데이터를 처리하는 곳
 
 <BR/>
 
+<BR/>
+
 ****
 
 ***
@@ -4361,7 +4407,7 @@ PAI : user가 화면에서 입력받은 데이터를 처리하는 곳
 
 # Question 101: 
 
-### Which of the following can you assign a search help to?
+## Which of the following can you assign a search help to?
 
 다음중 SEARCH HELP 를 할당할 수 있는것은? 
 
@@ -4394,6 +4440,8 @@ search help 를 assign 할 수 있는 곳 :
 
 <BR/>
 
+<BR/>
+
 ***
 
 ****
@@ -4402,7 +4450,7 @@ search help 를 assign 할 수 있는 곳 :
 
 # Question 102: 
 
-### Where can you define data types that can be accessed directly by all ABAP repository objects in an SAP system?
+## Where can you define data types that can be accessed directly by all ABAP repository objects in an SAP system?
 
 SAP SYSTEM 내 모든 ABAP REPOSITORY OBJECT에서 바로 접근 할 수 있는 DATA TYPE 을 정의 할 수 있는 곳은?  
 
@@ -4426,6 +4474,8 @@ ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4434,7 +4484,7 @@ ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타
 
 # Question 103: 
 
-### Which of the following statements are correct? 
+## Which of the following statements are correct? 
 
 다음 중 옳은 것은?
 
@@ -4462,6 +4512,8 @@ STATIC METHOD 들은 PUBLIC 과 PRIVATE SECTION 모두에서 정의될 수 있�
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4470,7 +4522,7 @@ STATIC METHOD 들은 PUBLIC 과 PRIVATE SECTION 모두에서 정의될 수 있�
 
 # Question 104: 
 
-### Which of the following enhancements calls a customer function module.
+## Which of the following enhancements calls a customer function module.
 
 다음중 CUSTOMER FUNCTION MODULE 을 호출 하는 ENHANCEMENT 들을 고르시오.
 
@@ -4495,6 +4547,8 @@ BAdIS : class method.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4503,7 +4557,7 @@ BAdIS : class method.
 
 # Question 105: 
 
-### How can you find customer exits in an ABAP program?
+## How can you find customer exits in an ABAP program?
 
 ABAP PROGRAM 에서 CUSTOMER EXIT들을 어떻게 찾을 수 있는가?
 
@@ -4546,6 +4600,8 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 <BR/>
 
+<br/>
+
 ****
 
 ****
@@ -4554,7 +4610,7 @@ Application Hierarchy 에서는 찾을 수 없다.
 
 # Question 106: 
 
-### Which components belong to an elementary search help?
+## Which components belong to an elementary search help?
 
 ELEMENTARY SEARCH HELP 에 속하는 COMPOENENTS는? 
 
@@ -4582,6 +4638,8 @@ search help 구성 :
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4590,7 +4648,7 @@ search help 구성 :
 
 # Question 107: 
 
-### Subroutines provide which types of parameters?
+## Subroutines provide which types of parameters?
 
 SUBROUTINE 은 어떤 타입의 PARAMETER 들을 제공하는가?
 
@@ -4625,6 +4683,8 @@ FORM subr TABLES table_parameters
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4633,11 +4693,11 @@ FORM subr TABLES table_parameters
 
 # Question 108: 
 
-### You have to overwrite spaces in a string with the letter ‘A’.
+## You have to overwrite spaces in a string with the letter ‘A’.
 
 당신은 'A' 문자로 된 문자열로 공백들을 덮어써야한다.
 
-### Which of the following statements can you use?
+## Which of the following statements can you use?
 
 다음주 사용할 수 있는 구문은?
 
@@ -4645,13 +4705,15 @@ FORM subr TABLES table_parameters
 
 ##### CONDENSE
 
-## OVERLAY
+## *<u>OVERLAY</u>*
 
 ##### SHIFT LEFT
 
-## REPLACE
+## *<u>REPLACE</u>*
 
-## TRANSLATE
+## *<u>TRANSLATE</u>*
+
+<BR/>
 
 <BR/>
 
@@ -4663,7 +4725,7 @@ FORM subr TABLES table_parameters
 
 # Question 109: 
 
-### Which statements are allowed for processing internal tables?
+## Which statements are allowed for processing internal tables?
 
 다음 구문중 ITAB 을 처리할 수 있는 구문은?
 
@@ -4689,6 +4751,8 @@ internal table : DELETE, MODIFY, INSERT, READ, LOOP
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4697,7 +4761,7 @@ internal table : DELETE, MODIFY, INSERT, READ, LOOP
 
 # Question 110: 
 
-### can you search for suitable classic Business Add-Ins(BAdIs)?
+## can you search for suitable classic Business Add-Ins(BAdIs)?
 
 적합한 CLASSIC BAdIS 검색할 수 있는가? 
 
@@ -4713,13 +4777,15 @@ Repository Information System에서 검색하여 Enhancements=>Customer Exits를
 
 ## *<u>Search in an application program for the method GET_INSTANCE of class CL_EXITHANDLER</u>*
 
-응용 프로그램에서 클래스 CL_EX의 GET_INSTANCE 메서드를 검색합니다.IT 핸들러
+응용 프로그램에서 클래스 CL_EXITHANDLER 의 GET_INSTANCE 메서드를 검색합니다.IT 핸들러
 
 ##### Use the SAP menu Tools -> ABAP Workbench -> Development -> Business Object Builder
 
 SAP MENU TOOLS  -> ABAP Workbench -> Development -> Business Object Builder 사용
 
 <BR/>
+
+<br/>
 
 ****
 
@@ -4729,7 +4795,7 @@ SAP MENU TOOLS  -> ABAP Workbench -> Development -> Business Object Builder 사�
 
 # Question 111: 
 
-### What must before you can create a new transportable function modules?
+## What must before you can create a new transportable function modules?
 
 TRANSPORTABLE FUNCTION MODULE 을 생성하기 위해 해야하는 것은?
 
@@ -4755,6 +4821,8 @@ function module 의 CDS 처리 선행 내용.
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4763,7 +4831,7 @@ function module 의 CDS 처리 선행 내용.
 
 # Question 112: 
 
-### Which of the following actions can be performed in the Process After Input (PAI) processing block?
+## Which of the following actions can be performed in the Process After Input (PAI) processing block?
 
 PAI 처리 블록에서 처리될 수 있는 것은?
 
@@ -4771,11 +4839,13 @@ PAI 처리 블록에서 처리될 수 있는 것은?
 
 ##### Set the GUI status of the screen.
 
-##### Check the function code.
+##### Modify screen attributes dynamically.
 
 ##### Set the title bar.
 
 ## *<u>Check the function code.</u>*
+
+<BR/>
 
 <BR/>
 
@@ -4787,7 +4857,7 @@ PAI 처리 블록에서 처리될 수 있는 것은?
 
 # Question 113: 
 
-### Which of the following generic types can you use to define a field symbol that will be assigned to a character string?
+## Which of the following generic types can you use to define a field symbol that will be assigned to a character string?
 
 다음 GENERIC TYPE 들 중 CHARACTER STRING 에 할당될 수 있는 FIELD SYMBOL 을 정의하는데 사용할 수 있는 것은?
 
@@ -4797,11 +4867,11 @@ PAI 처리 블록에서 처리될 수 있는 것은?
 
 ## *<u>Type clike</u>*
 
-Type xsequence
+##### Type xsequence
 
 ## *<u>Type csequence</u>*
 
-Type any table
+##### Type any table
 
 #### <BR/>
 
@@ -4841,6 +4911,8 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 | **xsequence**      | Byte-like (**x**, **xstring**)                               |
 
 ****
+
+<BR/>
 
 <BR/>
 
@@ -4892,6 +4964,8 @@ GLOBAL TYPE 과 LOCAL TYPE 의 공통적으로 가지고 있는 것은?
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4900,7 +4974,7 @@ GLOBAL TYPE 과 LOCAL TYPE 의 공통적으로 가지고 있는 것은?
 
 # Question 116: 
 
-### In which database table type is there a one-to-one relationship between the Dictionary table definition and the relevant physical table in the database?
+## In which database table type is there a one-to-one relationship between the Dictionary table definition and the relevant physical table in the database?
 
 DICTIONARY TABLE 정의와 DB 의 RELEVANT PHYSICAL TABLE 사이의 관계가 1-1 관계인 DB TABLE 유형은?
 
@@ -4960,6 +5034,8 @@ S/4HANA에서 POOLED TABLE과 CLUSTERED TABLE 은 사라짐
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -4968,7 +5044,7 @@ S/4HANA에서 POOLED TABLE과 CLUSTERED TABLE 은 사라짐
 
 # Question 117: 
 
-### Which of the following rules must you follow when you create a static constructor?
+## Which of the following rules must you follow when you create a static constructor?
 
 다음 RULE 들 중 STATIC CONSTRUCTOR 생성시 따라야 하는 것은?
 
@@ -5016,6 +5092,8 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -5024,9 +5102,11 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&
 
 # Question 118: 
 
-### Each ABAP program starts with an introductory statement. Which statements are correct? 
+## Each ABAP program starts with an introductory statement. Which statements are correct? 
 
 각 ABAP PROGRAM 들은 소개 문구로 시작된다.
+
+다음중 옳은 것은?
 
 #### 2 correct 
 
@@ -5065,6 +5145,8 @@ https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_stat
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -5073,7 +5155,7 @@ https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_stat
 
 # Question 119: 
 
-### In which sequence are the following ABAP Events triggered?
+## In which sequence are the following ABAP Events triggered?
 
 ABAP EVENT 가 실행되는 순서는?
 
@@ -5097,6 +5179,8 @@ LOAD-OF-PAGE -> ***<u>INITIALIZATION</u>*** -> AT SELECTION-SCREEN OUTPUT -> ***
 
 <BR/>
 
+<BR/>
+
 ****
 
 ****
@@ -5105,7 +5189,7 @@ LOAD-OF-PAGE -> ***<u>INITIALIZATION</u>*** -> AT SELECTION-SCREEN OUTPUT -> ***
 
 # Question 120: 
 
-### For which of the following purposes can you use the ABAP dictionary?
+## For which of the following purposes can you use the ABAP dictionary?
 
 다음 중 ABAP  DICTIONARY 를 사용하여 할 수 있는 것은 무엇입니까?
 
@@ -5129,6 +5213,8 @@ LOCK OBJECT 생성
 
 <br/>
 
+<BR/>
+
 ****
 
 ****
@@ -5137,7 +5223,7 @@ LOCK OBJECT 생성
 
 # Question 121: 
 
-### What is the Web Dynpro programming model is based on?
+## What is the Web Dynpro programming model is based on?
 
 WEB DYNPRO 프로그래밍 모델은 무엇을 기반으로 하는가?
 
@@ -5171,7 +5257,7 @@ controller : 사용자입력 check, 화면 흐름 제어, 데이터 흐름제어
 
 # Question 122: 
 
-### You want to use a BAdI to extend the functions of an SAP program. Which of the following tasks is necessary?
+## You want to use a BAdI to extend the functions of an SAP program. Which of the following tasks is necessary?
 
 당신은 SAP 프로그램의 함수를 확장하기 위해 BAdI를 사용하기를 원한다. 다음중 필수인 것은?
 
@@ -5211,7 +5297,7 @@ CL_EXITHANDLER 통해 class 를 구현
 
 # Question 123: 
 
-### What scheduling technique is used by the ABAP dispatcher for processing user requests?
+## What scheduling technique is used by the ABAP dispatcher for processing user requests?
 
 사용자 요청을 위해 ABAP DISPATCHER 가 사용하는 SCHEDULING 기술은 무엇인가?
 
@@ -5246,7 +5332,7 @@ it saves the processing request in the request queue.
 
 # Question 124: 
 
-### Under which circumstances will the classic Debugger start as the Debugger?
+## Under which circumstances will the classic Debugger start as the Debugger?
 
 디버거로 CLASSIC 디버거가 실행되는 경우는 무엇인가?
 
@@ -5286,7 +5372,7 @@ OBJECT NAVIGATOR 의 설정에서 CLASSIC DEBUGGER 를 기본으로 설정한 �
 
 # Question 125: 
 
-### Which of the following ABAP dictionary types can you use to define domains?
+## Which of the following ABAP dictionary types can you use to define domains?
 
 다음 ABAP DICTIONARY TYPE 들 중 DOMAIN 을 정의하는데 사용할 수 있는 것은?
 
@@ -5382,7 +5468,7 @@ https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/cf/21f2e5446011d18970000
 
 # Question 126: 
 
-### Which prerequisites must be fulfilled before a repository object can be transported?
+## Which prerequisites must be fulfilled before a repository object can be transported?
 
 REPOSITORY OBJECT 가 전송되기 전에 충족 되어야 하는 사항들을 고르시오
 
@@ -5418,7 +5504,7 @@ REPOSITORY OBJECT 는 PACKAGE 에 할당되어야한다.
 
 # Question 127: 
 
-### What does a view do?
+## What does a view do?
 
 #### 4 correct
 
@@ -5451,7 +5537,7 @@ view contains a view controller (다른 view를 포함할 수 있다)
 
 # Question 128: 
 
-### What is the predefined reference variable used in ABAP OOP to address the object itself?
+## What is the predefined reference variable used in ABAP OOP to address the object itself?
 
 OBJECT 자기 자신을 가르키는 ABAP OOP 에서 사용되는 PREDEFINED REFERENCE VARIABLE 은 무엇인가?
 
@@ -5483,7 +5569,7 @@ OOP에서 자기 자신 호출
 
 # Question 129:
 
-### What can be part of the signature of an instance constructor?
+## What can be part of the signature of an instance constructor?
 
 INSTANCE CONSTRUCTOR 의 SIGNATURE 가 포함할 수 있는 것은?
 
@@ -5537,7 +5623,7 @@ class contructor 는 아무것도 없어야 한다.
 
 # Question 131: 
 
-### Which statements about ABAP are true?
+## Which statements about ABAP are true?
 
 ABAP 에 대한 설명중 옳은 것은?
 
@@ -5626,7 +5712,7 @@ SMOD 는 정의 관리(조회 등)
 
 # Question 134: 
 
-### What do you have to take into account before you decide to buffer a table?
+## What do you have to take into account before you decide to buffer a table?
 
 TABLE BUFFER를 결정하기 전에 고려해야할 사항은 무엇인가? 
 
@@ -5664,7 +5750,7 @@ DB 서버는 테이블 BUFFERING 을 허용해야한다.
 
 <BR/>
 
-# Question 135: 
+# Question 135: 여기부터
 
 ### What is the best order to provide an event handler for an ALV?
 

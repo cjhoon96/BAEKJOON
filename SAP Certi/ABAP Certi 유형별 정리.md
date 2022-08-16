@@ -194,6 +194,68 @@ SAP Database
 
 <BR/>
 
+# Question 126: 
+
+## Which prerequisites must be fulfilled before a repository object can be transported?
+
+REPOSITORY OBJECT 가 전송되기 전에 충족 되어야 하는 사항들을 고르시오
+
+#### 3 correct 
+
+##### An inactive version of the repository object must exist.
+
+REPOSITORY OBJECT 의 INACTIVE VERSION 이 존재 해야한다. 
+
+##### An application component must be assigned to the repository object.
+
+APPLICATION COMPONENT 는 REPOSITORY OBJECT 에 할당 되어야한다.
+
+## *<u>The repository object must be assigned to a change request.</u>*
+
+REPOSITORY OBJECT 는 CHANGE REQUEST 에 할당 되어야한다.
+
+## *<u>A transport layer must be assigned to the package.</u>*
+
+TRANSPORT LAYER 는 PACKAGE 에 할당 되어야한다.
+
+## *<u>The repository object must be assigned to a package.</u>*
+
+REPOSITORY OBJECT 는 PACKAGE 에 할당되어야한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 130: (skip)
+
+### The data buffered on each application server…
+
+#### Please choose the correct answer.
+
+## *<u>Depends on the users.</u>*
+
+##### Is does not the same.
+
+##### Is never the same.
+
+##### Is always the same.
+
+<BR/>
+
+***
+
+****
+
+<BR/>
+
+
+
+
+
 
 
 
@@ -839,9 +901,98 @@ Predefined data types with special semantic attributes.
 
 <BR/>
 
+# Question 113: 
+
+## Which of the following generic types can you use to define a field symbol that will be assigned to a character string?
+
+다음 GENERIC TYPE 들 중 CHARACTER STRING 에 할당될 수 있는 FIELD SYMBOL 을 정의하는데 사용할 수 있는 것은?
+
+#### 3 correct 
+
+## *<u>Type any</u>*
+
+## *<u>Type clike</u>*
+
+##### Type xsequence
+
+## *<u>Type csequence</u>*
+
+##### Type any table
+
+#### <BR/>
+
+****
+
+generic : 어떤 데이터 type도 가리킬 수 있는 형태 
+data z1 type ref of data
+any 와 data는 동일한 기능을 갖고 있지만, any는 ref to 에 대하여 지원하지 않음.
+table key 가 지정되지 않은 table-type 도 generic type 임.
 
 
 
+#### [SAP 공식문서](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenbuilt_in_types_generic.htm)
+
+The only generic types that can be used after [**TYPE REF TO**](javascript:call_link('abaptypes_references.htm')) are **data**, for the generic typing of data references, and **object**, for the generic typing of object references.
+
+| **Type**           | **Description**                                              |
+| ------------------ | ------------------------------------------------------------ |
+| **any**            | Any data type                                                |
+| **any table**      | Internal table with any table category                       |
+| **c**              | Text field with a generic length                             |
+| **clike**          | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence**      | Text-like (**c**, **string**)                                |
+| **data**           | Any data type                                                |
+| **decfloat**       | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) (**decfloat16**, **decfloat34**) |
+| **hashed table**   | [Hashed table](javascript:call_link('abenhashed_table_glosry.htm')) |
+| **index table**    | [Index table](javascript:call_link('abenindex_table_glosry.htm')) |
+| **n**              | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) with generic length |
+| **numeric**        | Numeric ((**b**, **s**), **i**, **int8**, **p**, **decfloat16**, **decfloat34**, **f**) |
+| **object**         | Any object type (root class of the inheritance hierarchy)    |
+| **p**              | Packed number with generic length and generic number of [decimal places](javascript:call_link('abendecimal_place_glosry.htm')) |
+| **simple**         | Elementary data type including [enumerated types](javascript:call_link('abenenumerated_type_glosry.htm')) and structured types with exclusively character-like flat components |
+| **sorted table**   | [Sorted table](javascript:call_link('abensorted_table_glosry.htm')) |
+| **standard table** | [Standard table](javascript:call_link('abenstandard_table_glosry.htm')) |
+| **table**          | Standard table                                               |
+| **x**              | Byte field with generic length                               |
+| **xsequence**      | Byte-like (**x**, **xstring**)                               |
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Question 115: 
+
+### What do global types and local types have in common?
+
+GLOBAL TYPE 과 LOCAL TYPE 의 공통적으로 가지고 있는 것은?
+
+#### Please choose the correct answer.
+
+##### Search help (=>global type)
+
+##### Documentation (=>data element)
+
+##### Field labels (=>data element)
+
+## *<u>Technical information</u>* (types, sizes)
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -1005,7 +1156,41 @@ hashed internal table : primary key로만 구성
 
 <BR/>
 
+# Question 109: 
 
+## Which statements are allowed for processing internal tables?
+
+다음 구문중 ITAB 을 처리할 수 있는 구문은?
+
+#### 3 correct 
+
+## *<u>DELETE</u>*
+
+## *<u>MODIFY</u>*
+
+##### SELECT
+
+##### UPDATE
+
+## *<u>INSERT</u>*
+
+<BR/>
+
+****
+
+internal table : DELETE, MODIFY, INSERT, READ, LOOP
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -1520,6 +1705,291 @@ search help 를 assign 할 수 있는 곳 :
 
 <BR/>
 
+# Question 107: 
+
+## Subroutines provide which types of parameters?
+
+SUBROUTINE 은 어떤 타입의 PARAMETER 들을 제공하는가?
+
+#### 2 correct 
+
+## *<u>Exceptions</u>*
+
+Return values
+
+## *<u>Input/output (changing)</u>*
+
+Input
+
+Output
+
+<BR/>
+
+****
+
+subroutine 에서 제공하는 parameter종류 : changing (input/output), exceptions, USING, TABLES
+
+```ABAP
+FORM subr TABLES table_parameters
+          USING parameters
+          CHANGING parameters
+          RAISING exc1|RESUMABLE(exc1) exc2|RESUMABLE(exc2) ... .
+```
+
+
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 116: 
+
+## In which database table type is there a one-to-one relationship between the Dictionary table definition and the relevant physical table in the database?
+
+DICTIONARY TABLE 정의와 DB 의 RELEVANT PHYSICAL TABLE 사이의 관계가 1-1 관계인 DB TABLE 유형은?
+
+#### Please choose the correct answer.
+
+##### Internal table
+
+##### Cluster table (1 : N)
+
+## *<u>Transparent table</u>*
+
+##### Pooled table (1 : N)
+
+<BR/>
+
+****
+
+[DB TABLE 3가지](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100)
+
+* **TRANSPARENT TABLE**
+
+  * ABAP DICTIONARY 에 하나의 TABLE 이 실제 DB 에서도 하나의 TABLE 로 존재 
+
+    (1-1)
+
+  * TABLE BUFFERING 가능 
+
+* **CLUSTERED TABLE**  
+
+  * ABAP DICTIONARY 에 있는 N개의 CLUSTERED TABLE 은 실물 DB 에 한개의 TABLE CLUSTER 와 동일한 관계를 갖는 TABLE
+
+    (1-N)
+
+  * SECONDARY INDEX 사용 X 
+
+  * PRIMARY KEY 를 통해 접근 하지만 데이터 접근 속도가 느리다.
+
+  * STATISTICAL SQL FUNCTION 사용 불가 (SUM, MAX, MIN 등,,)
+
+  * EX) [BSEG] = BSEC + BSED + BSES + BSET
+
+* **POOLED TABLE**
+
+  * ABAP DICTIONARY 에 생성된 N개의 POOLED TABLE 은 물리적 DB 인 ORACLE DB 에 하나의 TABLE 에 데이터가 저장되어 관리됨
+
+    (1-N)
+
+  * PRIMARY KEY 나 SHOUD BE BUFFERED 기능으로 테이블에 접근 됨
+
+  * 주로 MATCH CODES, LOOKUP TABLES 가 있다. 
+
+  * SECONDARY INDEX 는 사용 X
+
+S/4HANA에서 POOLED TABLE과 CLUSTERED TABLE 은 사라짐
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 120: 
+
+## For which of the following purposes can you use the ABAP dictionary?
+
+다음 중 ABAP  DICTIONARY 를 사용하여 할 수 있는 것은 무엇입니까?
+
+#### 2 correct 
+
+##### To maintain program translations
+
+프로그램 변환 유지 관리
+
+## *<u>To activate logging for transparent tables</u>*
+
+TRANSPARENT TABLE LOGGING 활성화 
+
+## *<u>To create lock objects</u>*
+
+LOCK OBJECT 생성
+
+##### To create development classes
+
+개발 CLASS 생성
+
+<br/>
+
+<BR/>
+
+****
+
+****
+
+<br/>
+
+# Question 125: 
+
+## Which of the following ABAP dictionary types can you use to define domains?
+
+다음 ABAP DICTIONARY TYPE 들 중 DOMAIN 을 정의하는데 사용할 수 있는 것은?
+
+#### 3 correct
+
+## *<u>DEC</u>*
+
+## *<u>NUMC</u>*
+
+## *<u>CHAR</u>*
+
+##### FLOAT
+
+##### DATE
+
+<BR/>
+
+****
+
+pre-define data type 을 물어보는 문제 (float 와 date는 없다)
+
+**ACCP**: Posting period. The length is set to 6 places for this data type. The format is YYYYMM. In input and output, the system inserts a point between the year and month, so the template of this data type has the format '____.__'.
+
+**CHAR**: Character string. Fields of type CHAR can have a maximum length of 1333 in tables. If you want to use longer character fields in tables, you must choose data type LCHR. There are no restrictions on the length of such fields in structures.
+
+**CLNT**: Client. Client fields always have three places.
+
+**CUKY**: Currency key. Fields of this type are referenced by fields of type CURR. The length is set to 5 places for this data type.
+
+**CURR**: Currency field. Equivalent to an amount field DEC. A field of this type must refer to a field of type CUKY (reference field). The maximum length for this data type is 31 places.
+
+**DATS**: Date. The length is set to 8 places for this data type. The output template can be defined with the user profile.
+
+**DEC**: Counter or amount field with decimal point, sign, and commas separating thousands. A DEC field has a maximum length of 31 places.
+
+**FLTP**: Floating point number. The length (including decimal places) is set to 16 places for this data type.
+
+**DF34_RAW**: Normalized decimal floating point number. Representation on the database based on type RAW. The values can be sorted and compared according to their numerical value, and they can be used in indexes. Database arithmetic is not available. Decimal floating point numbers of this type have 34 digits in the mantissa, and conform to the IEEE 754r standard. Valid values are numbers between 1E-6143 and 9.999999999999999999999999999999999E+6144, plus the corresponding negative numbers and zero.
+
+**DF34_SCL**: Scaled decimal floating point number. The difference between this type and DF34_RAWis that DF34_SCL has an additional column of the type INT2 for the scale. This column is visible, but its value is written and read automatically. The values having this data type can be sorted and compared according to their numerical value, and they can be used in indexes. Database arithmetic is not available. The system supports up to 34 decimal digits in the coefficient. Decimal floating point numbers of this type are represented internally with 34 decimal places according to the IEEE-754 standard. Valid values are numbers between 1E-6143 and 9.999999999999999999999999999999999E+6144, plus the corresponding negative numbers and zero.
+
+**DF34_DEC**: Decimal floating point number. Representation on the database with type DEC, length and number of decimal places must be specified by the programmer. The values have at most 31 digits on the database, with at most 14 decimal places. The advantage of this type is that database arithmetic is available. The disadvantage is that values are silently rounded to the specified number of decimal places when they are written into the database. An overflow can also occur when writing values into the database. In this case the system throws an ABAP-OO exception.
+
+**DF16_RAW**: Normalized decimal floating point number. Representation based on type RAW. The values can be sorted and compared according to their numerical value, and they can be used in indexes. Database arithmetic is not available. The system supports up to 16 decimal digits in the coefficient. Decimal floating point numbers of this type are represented internally with 16 decimal places according to the IEEE-754r standard. Valid values are numbers between 1E-383 and 9.999999999999999E+384, plus the corresponding negative numbers plus zero.
+
+**DF16_SCL**: Scaled decimal floating point number. The difference between this type and DF16_RAWis that DF16_SCL has an additional column of type INT2 for the scale. This column is visible, but the value is written and read automatically. The values having this data type can be sorted and compared according to their numerical value, and they can be used in indexes. Database arithmetic is not available. The system supports up to 16 decimal digits in the coefficient. Decimal floating point numbers of this type are represented internally with 16 decimal places according to the IEEE-754r standard. Valid values are numbers between 1E-383 and 9.999999999999999E+384, plus the corresponding negative numbers plus zero.
+
+**DF16_DEC**: Decimal floating point number. Representation on the database with type DEC, length and number of decimal places must be specified by the programmer. The values have at most 15 digits on the database, with at most 14 decimal places. The advantage of this type is that database arithmetic is available. The disadvantage is that values are silently rounded to the specified number of decimal places when they are written into the database. An overflow can also occur when writing values into the database. In this case, the system throws an ABAP-OO exception.
+
+**INT1**: 1-byte integer between 0 and 255. The length is set to 3 places for this data type.
+
+**INT2**: 2-byte integer between -32767 and 32767. Fields of this type must be used only for length fields. The system positions these length fields immediately in front of a long field (type LCHR, LRAW). With INSERT or UPDATE on the long field, the database interface enters the length which was actually used in the length field. The length is set to 5 places for this data type.
+
+**INT4**: 4-byte integer between -2147483648 and 2147483647.The length for this data type is limited to 10 places.
+
+**LANG**: Language key. It has its own field format for special functions. This data type always has length 1. The language key is displayed at the user interface with 2 places, but is stored with 1 place in the database. The conversion exit ISOLA converts the display at the user interface for the database and vice versa. This conversion exit is automatically allocated to a domain with data type LANG at activation.
+
+**LCHR**: Character string of any length, but has to be declared with a minimum of 256 characters. You must locate fields of this type at the end of transparent tables (in each table there can be only one such field) and must be preceded by a length field of type INT2. If there is an INSERT or UPDATE in ABAP programs, this length field must be filled with the length actually required. If the length field is not filled correctly, this leads to a data loss in the LCHR field. Fields of this type cannot be used in the WHERE condition of a SELECT statement.
+
+**LRAW**: Uninterpreted byte string of any length, but has to be declared with a minimum length of 256. You must locate fields of this type at the end of transparent tables (in each table there can be only one such field) and must be preceded by a length field of type INT2. If there is an INSERT or UPDATE in ABAP programs, this length field must be filled with the length actually required. If the length field is not filled correctly, this leads to a data loss in the LRAW field. A field of this type cannot be used in the WHERE condition of a SELECT statement.
+
+**NUMC**: Long character field in which only numbers can be entered. The length of this field is limited to a maximum of 255 places.
+
+**PREC**: Obsolete data type. The length is set to 2 places for this data type but internally it is treated like INT2. Dynpro fields of type PREC are restricted to 2 places and must not contain a sign.
+
+**QUAN**: Quantity. Equivalent to an amount field DEC. A field of this type must always refer to a units field with UNIT format (reference field). The maximum length for this data type is 31 places.
+
+**RAW**: Uninterpreted byte string. Fields of type RAW may have only a maximum length of 255 in tables. If longer raw fields are required in tables, you should select data type LRAW.
+
+**RAWSTRING**: Uninterpreted byte string of variable length. In the Dictionary a length can be specified for this type (at least 256 characters). This data type can be used in types (data elements, structures, table types) and domains. You can store binary data of type RAWSTRING in the database. There are restrictions; for a description of them, refer to the documentation of the ABAP statement 'STRING'. In ABAP, this type is implemented as a reference to a storage area of variable size. The system proposes 132 characters as the default for the output length. You cannot attach search helps to components of this type.
+
+**STRING**: Character string with variable length This data type can be used only in types (data elements, structures, table types) and domains. In the dictionary a length can be specified for this type (at least 256 characters). It can be used in database tables only with restrictions. For a description of them, refer to the documentation of the ABAP statement 'STRING'. In ABAP, this type is implemented as a reference to a storage area of variable size. The system proposes 132 characters as default for the output length. You cannot attach search helps to components of this type.
+
+**SSTRING**: Short character string with variable length. In the Dictionary the number of characters can be specified for this type (from 1 to 1333). This data type can be used only in types (data elements, structures, table types) and domains. It can be used in database tables. To do so, refer to the documentation of the ABAP statement 'STRING'. In ABAP, this type is implemented as a reference to a storage area of variable size. String fields of this type can be used in indexes and in the WHERE condition of a SELECT statement. You cannot use them in table keys.
+
+**TIMS**: Time. The length is set to 6 places for this data type. The format is HHMMSS. The template for input and output has the form '__.__.__'.
+
+**UNIT**: Unit. Fields of this type are referenced by fields of type QUAN. The length of this data type is set to 2 or 3 places.
+
+**VARC**: Character field of variable length. Creation of new fields of this data type is no longer supported.
+
+https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/cf/21f2e5446011d189700000e8322d00/content.htm?no_cache=true
+
+****
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 134: 
+
+## What do you have to take into account before you decide to buffer a table?
+
+TABLE BUFFER를 결정하기 전에 고려해야할 사항은 무엇인가? 
+
+#### Please choose the correct answer.
+
+##### The data must always be read from the buffer
+
+DATA 는 항상 BUFFER 로 부터 읽어져야한다.
+
+## *<u>The data read from the buffer may NOT be current</u>*
+
+BUFFER 로 부터 읽은 데이터가 최신의 것이 아닐 수 있다. 
+
+##### The entire table content must be loaded into the table buffer
+
+모든 테이블 CONTENT 는 테이블 BUFFER 에서 LOAD 되어야 한다.
+
+##### The database server must allow table buffering
+
+DB 서버는 테이블 BUFFERING 을 허용해야한다.
+
+<BR/>
+
+****
+
+현재 데이터가 아니기 때문에 불일치가 발생함 . (sync 가 발생해야 함)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 
 
 
@@ -1903,6 +2373,147 @@ PAI : user가 화면에서 입력받은 데이터를 처리하는 곳
 
 <BR/>
 
+# Question 112: 
+
+## Which of the following actions can be performed in the Process After Input (PAI) processing block?
+
+PAI 처리 블록에서 처리될 수 있는 것은?
+
+#### Please choose the correct answer.
+
+##### Set the GUI status of the screen.
+
+##### Check the function code.
+
+##### Set the title bar.
+
+## *<u>Check the function code.</u>*
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 118: 
+
+## Each ABAP program starts with an introductory statement. Which statements are correct? 
+
+각 ABAP PROGRAM 들은 소개 문구로 시작된다.
+
+다음중 옳은 것은?
+
+#### 2 correct 
+
+##### The introductory statement must be the first line in the program.
+
+INTRODUCTORY 구문은 프로그램 첫째 줄에 존재해야한다.(첫째줄에 존재해야할 필요는 없다. 프로그램 생성시 첫줄에는 주석들이 들어가 있는 것을 볼 수 있다.)
+
+## *<u>The introductory statement can be modified.</u>* 
+
+INTRODUCTORY 구문은 수정될 수 있다. **(수정할 수 있다.)**
+
+##### The introductory statement must never be modified.
+
+INTRODUCTORY 구문은 수정되어서는 안된다.
+
+## *<u>The introductory statement must be the first statement in the program.</u>* 
+
+INTRODUCTORY 구문은 프로그램의 첫 구문이어야한다.**(INTRODUCTORY 구문들은 구문들 중에서는 제일 먼저 나온다.)**
+
+<BR/>
+
+****
+
+#### introductory statements for programs :
+
+- REPORT
+- PROGRAM
+- FUNCTION-POOL
+- CLASS-POOL
+- INTERFACE-POOL
+- TYPE-POOL
+
+https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_statement.htm
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 119: 
+
+## In which sequence are the following ABAP Events triggered?
+
+ABAP EVENT 가 실행되는 순서는?
+
+#### Please choose the correct answer.
+
+##### START-OF-SELECTION => AT SELECTION-SCREEN => INITIALIZATION
+
+##### INITIALIZATION => START-OF-SELECTION => AT SELECTION-SCREEN
+
+## *<u>INITIALIZATION => AT SELECTION-SCREEN => START-OF-SELECTION</u>*
+
+##### AT SELECTION-SCREEN => INITIALIZATION => START-OF-SELECTION
+
+<BR/>
+
+****
+
+LOAD-OF-PAGE -> ***<u>INITIALIZATION</u>*** -> AT SELECTION-SCREEN OUTPUT -> ***<u>AT SELECTION-SCREEN</u>*** [ON] [VALUE-REQUEST FOR] -> ***<u>START-OF-SELECTION</u>*** -> TOP-OF-PAGE -> END-OF-SELECTION
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 131: 
+
+## Which statements about ABAP are true?
+
+ABAP 에 대한 설명중 옳은 것은?
+
+#### Please choose the correct answer.
+
+##### Each statement cannot begin with a keyword.
+
+##### Each statement must begin with a keyword.
+
+## *<u>Each statement must end with a period.</u>*
+
+##### ABAP keywords and additions must be in uppercase.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
 
 
 
@@ -2083,6 +2694,54 @@ DEBUGGER MODE 에서 대체 가능한 값은 무엇인가?
 
 <BR/>
 
+# Question 124: 
+
+## Under which circumstances will the classic Debugger start as the Debugger?
+
+디버거로 CLASSIC 디버거가 실행되는 경우는 무엇인가?
+
+#### 2 correct
+
+## *<u>When five modes already exist for this logon session.</u>*
+
+(logon *session이* 초과되었을 때 실행 : 6번째부터)
+
+이 LOGON SESSION 에 이미 5개의 MODE 들이 존재하는 경우
+
+##### If you manually switched to the classic Debugger during your last session.
+
+이전 SESSION 동안 CLASSIC DEBUGGER 로 전환한 경우
+
+##### When the number of debugging sessions exceeds half the number of dialog sessions.
+
+DEBUGGING SESSION 수가 DIALOG SESSION 수의 절반을 초과한 경우
+
+## <u>*When you specify the default as the classic Debugger in the settings of the Object Navigator.*</u> 
+
+(debugging 모드를 classic 으로 셋팅하면 가능하다)
+
+OBJECT NAVIGATOR 의 설정에서 CLASSIC DEBUGGER 를 기본으로 설정한 경우
+
+##### None; the new Debugger will always start as the Debugger.
+
+그런 경우는 존재 할 수 없다. NEW DEBUGGER 가 항상 DEBUGGER 로 실행된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2236,7 +2895,41 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 <BR/>
 
+# Question 111: 
 
+## What must before you can create a new transportable function modules?
+
+TRANSPORTABLE FUNCTION MODULE 을 생성하기 위해 해야하는 것은?
+
+#### 3 correct 
+
+##### Exception class
+
+## *<u>Function group</u>*
+
+## *<u>Package</u>*
+
+## *<u>Transport request</u>*
+
+##### Module pool
+
+<BR/>
+
+****
+
+function module 의 CDS 처리 선행 내용.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3129,9 +3822,127 @@ SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
 
 <BR/>
 
+# Question 117: 
 
+## Which of the following rules must you follow when you create a static constructor?
 
+다음 RULE 들 중 STATIC CONSTRUCTOR 생성시 따라야 하는 것은?
 
+#### 3 correct 
+
+## *<u>You can ONLY define static constructors in the public section</u>*
+
+PUBLIC SECTION 만 STATIC CONSTRUCTOR를 정의 할 수 있다.
+
+## *<u>You must name the method CLASS_CONSTRUCTOR</u>*
+
+METHOD 이름을 CLASS_CONSTRUCTOR 라고 하여야 한다.
+
+##### You must name the method CONSTRUCTOR (X)
+
+METHOD 명을 CONSTRUCTOR 라고 하여야한다.
+
+## *<u>You CANNOT use parameters or exceptions</u>*
+
+PARAMETER 나 EXCEPTION 을 사용할 수 없다.
+
+##### You can use ONLY importing parameters or exceptions (instance constructor)
+
+IMPORTING PARAMETER 와 EXCEPTION 만 가질 수 있따.
+
+<BR/>
+
+****
+
+#### STATIC CONSTRUCTOR 특징
+
+* 모든 클래스는 CLASS_CONSTRUCTOR 라는 STATIC CONSTRUCTOR 를 가지고 있다.
+
+* PUBLIC SECTION에서만 정의 가능하다.
+
+* 파라미터 인터페이스를 가질 수 없다.
+
+* 클래스가 사용되기 이전에 자동으로 호출된다.
+
+  
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220760302480
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 128: 
+
+## What is the predefined reference variable used in ABAP OOP to address the object itself?
+
+OBJECT 자기 자신을 가르키는 ABAP OOP 에서 사용되는 PREDEFINED REFERENCE VARIABLE 은 무엇인가?
+
+#### Please choose the correct answer.
+
+## *<u>ME</u>*
+
+##### SELF
+
+##### THIS
+
+##### SUPER
+
+<BR/>
+
+****
+
+OOP에서 자기 자신 호출 
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 129:
+
+## What can be part of the signature of an instance constructor?
+
+INSTANCE CONSTRUCTOR 의 SIGNATURE 가 포함할 수 있는 것은?
+
+#### 2 correct 
+
+## *<u>Exceptions</u>*
+
+## *<u>Import parameters</u>*
+
+##### Changing parameters
+
+##### Export parameters
+
+<BR/>
+
+****
+
+class contructor 는 아무것도 없어야 한다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3864,15 +4675,165 @@ BAdIS : class method.
 
 <BR/>
 
+# Question 105: 
 
+## How can you find customer exits in an ABAP program?
 
+ABAP PROGRAM 에서 CUSTOMER EXIT들을 어떻게 찾을 수 있는가?
 
+#### 2 correct 
 
+##### Search for ‘CL_EXTHANDLER’ in the program.
 
+CL_EXTHANDLER 를 검색
 
+## *<u>Search for customer exits in the Repository Information System</u>*
 
+REPOSITORY INFORMATION SYSTEM 에서 CUSTOMER EXIT 을 검색
 
+## *<u>Search for ‘CALL CUSTOMER’ in the program</u>*
 
+CALL CUSTOMER 을 검색
+
+##### Search for customer exits in the program documentation
+
+프로그램 문서에서 CUSTOMER EXITS 검색
+
+<BR/>
+
+****
+
+CL_EXTHANDLER: BAdIs
+IMG document 에서 CUSTOMER EXIT 검색
+
+**enhancement 여부 확인 방법**
+
+* **<u>*Repository Information System(SE84)*</u>** > Enhancement > customer exit or enhancement
+* **<u>*CUSTOMER-FUNCTION*</u>** 문자열 검색
+* **<u>*CL_EXITHANDLER*</u>** 문자열 검색
+* **<u>*SAP reference IMG*</u>** 에서 검색
+* **<u>*TADIR / MODSAPT*</u>** 테이블 조회
+
+Application Hierarchy 에서는 찾을 수 없다.
+
+****
+
+<BR/>
+
+<br/>
+
+****
+
+****
+
+<BR/>
+
+# Question 110: 
+
+## can you search for suitable classic Business Add-Ins(BAdIs)?
+
+적합한 CLASSIC BAdIS 검색할 수 있는가? 
+
+#### 2 correct 
+
+##### Search in the Repository Information System and choose Enhancements=>Customer Exits 
+
+Repository Information System에서 검색하여 Enhancements=>Customer Exits를 선택합니다. 
+
+## *<u>Search for suitable entries in the relevant component in the Implementation Guide (IMG)</u>*
+
+실행 지침서(IMG)에서 관련 구성 요소에서 적합한 항목 검색
+
+## *<u>Search in an application program for the method GET_INSTANCE of class CL_EXITHANDLER</u>*
+
+응용 프로그램에서 클래스 CL_EX의 GET_INSTANCE 메서드를 검색합니다.IT 핸들러
+
+##### Use the SAP menu Tools -> ABAP Workbench -> Development -> Business Object Builder
+
+SAP MENU TOOLS  -> ABAP Workbench -> Development -> Business Object Builder 사용
+
+<BR/>
+
+<br/>
+
+****
+
+****
+
+<BR/>
+
+# Question 122: 
+
+## You want to use a BAdI to extend the functions of an SAP program. Which of the following tasks is necessary?
+
+당신은 SAP 프로그램의 함수를 확장하기 위해 BAdI를 사용하기를 원한다. 다음중 필수인 것은?
+
+#### Please choose the correct answer.
+
+##### Call the BAdI
+
+BAdI 호출
+
+##### Create an enhancement project using a customer exit.
+
+CUSTOMER EXIT 를 사용하여 ENHANCEMENT 프로젝트 생성
+
+##### Define an interface for the BAdI.
+
+BAdI 를 위한 INTERFACE 정의
+
+## *<u>Implement a class that implements the BAdI interface.</u>*
+
+BAdI INTERFACE 를 구현하는 CLASS 구현
+
+<BR/>
+
+****
+
+CL_EXITHANDLER 통해 class 를 구현
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 133: 
+
+### SAP enhancements for customer exits are managed by which transaction?
+
+CUSTOMER EXIT 을 위한 SAP ENHANCEMENT 는 어느 TRANSACTION에서 관리 되는가? 
+
+#### Please choose the correct answer.
+
+## *<u>Transaction SMOD</u>*
+
+##### Application CMOD
+
+##### Transaction CMOD
+
+##### Neither transaction listed here
+
+<BR/>
+
+*****
+
+CMOD 는 프로젝트
+SMOD 는 정의 관리(조회 등)
+
+*****
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
 
 
 
@@ -4339,9 +5300,72 @@ Web Dynpro : layout manager 가 화면 구성을 처리
 
 <BR/>
 
+# Question 121: 
 
+### What is the Web Dynpro programming model is based on?
 
+WEB DYNPRO 프로그래밍 모델은 무엇을 기반으로 하는가?
 
+#### Please choose the correct answer.
+
+## *<u>Model View Controller (MVC)</u>*
+
+##### Business Server Pages (BSPs)
+
+##### Internet Transaction Server (ITS)
+
+##### Classic Dynpro programming
+
+<br/>
+
+***
+
+MVC paradigm 을 가지고 개발 (business logic)
+view : 화면 layout
+controller : 사용자입력 check, 화면 흐름 제어, 데이터 흐름제어 등.
+
+****
+
+<br/>
+
+****
+
+****
+
+<br/>
+
+# Question 127: 
+
+## What does a view do?
+
+#### 4 correct
+
+## *<u>Contains other views</u>*
+
+## *<u>Can be contained in a window</u>*
+
+##### Contains windows
+
+## *<u>If entered by an inbound plug, can cause an event handler method to be called</u>*
+
+## *<u>Contains a view controller</u>*
+
+<BR/>
+
+****
+
+WEB dynpro view : windows contains views
+view contains a view controller (다른 view를 포함할 수 있다)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -4977,7 +6001,37 @@ ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타
 
 <BR/>
 
+# Question 108: 
 
+## You have to overwrite spaces in a string with the letter ‘A’.
+
+당신은 'A' 문자로 된 문자열로 공백들을 덮어써야한다.
+
+## Which of the following statements can you use?
+
+다음주 사용할 수 있는 구문은?
+
+#### 3 correct 
+
+##### CONDENSE
+
+## *<u>OVERLAY</u>*
+
+##### SHIFT LEFT
+
+## *<u>REPLACE</u>*
+
+## *<u>TRANSLATE</u>*
+
+<BR/>
+
+<BR/>
+
+****
+
+***
+
+<BR/>
 
 
 
@@ -5070,6 +6124,32 @@ UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
 ##### Offset positioning in a Unicode structure is restricted to character data objects.
 
 유니코드 구조에서 간격띄우기 위치는 문자 데이터 개체로 제한됩니다.
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 114: (거의 안 나올 수 있다)
+
+### How can Unicode checks be made?
+
+UNICODE  CHECK 를 하는 방법은?
+
+#### 2 correct 
+
+## *<u>By running Transaction UCCHECK</u>*
+
+## *<u>In any system (after release 6.10) by specifying the program has Unicode checks active</u>*
+
+##### Only in a Unicode system or as part of a conversion to a Unicode system
+
+##### Cannot be enforced
 
 <BR/>
 
