@@ -542,17 +542,302 @@ string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (
 
 <BR/>
 
+# Q83.
+
+## Which of the following ABAP standard types are incomplete?
+
+다음중ABAP STANDARD TYPE 들 중 INCOMPLETE 인 것들은 무엇인가?
+
+#### 2 correct 
+
+## *<u>X</u>*
+
+##### F
+
+## *<u>N</u>*
+
+##### STRING
+
+<BR/>
+
+****
+
+incomplete : 크기를 선언해야 하는 변수 타입. (C, N, X, P)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
+# Q84. ??????????????????????????????????? 
+
+## Which of the elementary data types is deep?
+
+다음중 DEEP 타입인 ELEMENT DATA TYPE 들을 고르시오
+
+#### Please choose the correct answer.
+
+##### DECFLOAT34
+
+## *<u>XSTRING</u>*
+
+##### X
+
+##### N
+
+<BR/>
+
+****
+
+runtime 시 크기가 변하는 것 : string, xstring
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q85. 
+
+## Which elementary field types are considered a character type?
+
+다음 ELEMENT FIELD TYPE들 중 CHARACTER TYPE 으로 취급 되는 것은?
+
+#### 5 correct 
+
+## *<u>C</u>*
+
+## *<u>T</u>*
+
+## *<u>D</u>*
+
+##### I
+
+##### F
+
+##### XSTRING
+
+## *<u>STRING</u>*
+
+## *<u>N</u>*
+
+##### X
+
+<BR/>
+
+****
+
+|               |                                                              |
+| ------------- | ------------------------------------------------------------ |
+| **clike**     | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence** | Text-like (**c**, **string**)                                |
+
+***
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q94. 
+
+## Which of the following data types are predefined ABAP data types?
+
+다음중 PREDEFINED ABAP DATA TYPE 들을 고르시오
+
+#### 3 correct 
+
+## *<u>XSTRING</u>*
+
+## *<u>STRING</u>*
+
+##### DECIMALS
+
+## *<u>DECFLOAT34</u>*
+
+##### FLOAT (=>f)
+
+<BR/>
+
+****
+
+##### PREDEFINED NUMERIC TYPES
+
+* B
+* S
+* I
+* INT8
+* P
+* DECFLOAT16
+* DECFLOAT34
+* F
+
+##### PREDEFINED CHARACTER-LIKE TYPES
+
+* C
+* N
+* STRING
+
+##### PREDEFINED BYTE-LIKE TYPES
+
+* X
+* XSTRING
+
+##### PREDEFINED DATE TYPES AND TIME TYPES
+
+* D
+* T
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 96: 
+
+## What is the allowed length of the ABAP Dictionary data type DF16_DEC?
+
+DF16_DEC ABAP DICTIONARY DATA TYPE 의 허용되는 길이는?  
+
+#### Please choose the correct answer.
+
+##### The allowed length is between 0 and 16 digits.
+
+## <u>*The allowed length is between 1 and 15 digits.*</u>
+
+##### The allowed length is between 0 and 15 digits.
+
+##### The allowed length is 16 digits.
+
+<BR/>
+
+****
+
+DF16_DEC : = Decfloat16
+DF34_DEC : 1 and 31 digits = Decfloat34
+
+**Numeric Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| INT1     | 3                        | 0                 | 1-byte integer, 0 to 255                                     | [**b**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT2     | 5                        | 0                 | 2-byte integer, -32,768 to 32,767                            | [**s**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT4     | 10                       | 0                 | 4-byte integer, -2,147,483,648 to +2,147,483,647             | [**i**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| INT8     | 19                       | 0                 | 8-byte integer, -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807 | [**int8**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DEC      | 1-31                     | 0                 | Packed number in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| DF16_DEC | 1-15                     | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF16_RAW | 16                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_DEC | 1-31                     | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_RAW | 34                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| FLTP     | 16                       | 0                 | Floating point number                                        | [**f**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
 
 
 
+**Character-Like Types**
+
+| **Type** | **Valid Places \**m\****                  | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ----------------------------------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CHAR     | 1-30000, maximum of 1333 for table fields | **m** blanks      | Character string                                             | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| LCHR     | 256-32000                                 | None              | Long character string                                        | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| SSTRING  | 1-1333                                    | Empty string      | Character string                                             | [**string**](javascript:call_link('abenbuiltin_types_character.htm')) |
+| STRING   | 256-...                                   | Empty string      | Character string ([CLOB](javascript:call_link('abenclob_glosry.htm'))) | [**string**](javascript:call_link('abenbuiltin_types_character.htm')) |
 
 
 
+**Byte-Like Types**
+
+| **Type**  | **Valid Places \**m\****                | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| --------- | --------------------------------------- | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| RAW       | 1-32000 maximum of 255 for table fields | None              | Byte string                                                  | [**x**](javascript:call_link('abenbuiltin_types_byte.htm')), length **m** |
+| LRAW      | 256-32000                               | None              | Long byte string                                             | [**x**](javascript:call_link('abenbuiltin_types_byte.htm')), length **m** |
+| RAWSTRING | 256-...                                 | Empty string      | Byte string ([BLOB](javascript:call_link('abenblob_glosry.htm'))) | [**xstring**](javascript:call_link('abenbuiltin_types_byte.htm')) |
 
 
+
+**Special Types**
+
+Predefined data types with special semantic attributes.
+
+
+
+**Date Types/Time Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                         | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ----------------------------------- | ------------------------------------------------------------ |
+| DATS     | 8                        | 00000000          | Date in the format YYYYMMDD         | [**d**](javascript:call_link('abenbuiltin_types_date_time.htm')) |
+| TIMS     | 6                        | 000000            | Time in the format HHMMSS           | [**t**](javascript:call_link('abenbuiltin_types_date_time.htm')) |
+| ACCP     | 6                        | 6 blanks          | Posting period in the format YYYYMM | [**n**](javascript:call_link('abenbuiltin_types_character.htm')), length 6 |
+
+
+
+**Character-Like Types with Special Semantics**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| NUMC     | 1-255                    | **m** zeroes      | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) | [**n**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| CLNT     | 3                        | 000               | Client                                                       | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 3 |
+| LANG     | 1                        | Blank             | Language key                                                 | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 1 |
+
+
+
+**Currency Fields and Quantity Fields**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CURR     | 1-31                     | 0                 | [Currency field](javascript:call_link('abencurrency_field_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| CUKY     | 5                        | 5 blanks          | [Currency key](javascript:call_link('abencurrency_key_glosry.htm')) for [currency fields](javascript:call_link('abencurrency_field_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 5 |
+| QUAN     | 1-31                     | 0                 | [Quantity field](javascript:call_link('abenquantity_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| UNIT     | 2-3                      | 2 or 3 blanks     | [Unit key](javascript:call_link('abenunit_glosry.htm')) of a [quantity field](javascript:call_link('abenquantity_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+
+
+
+**Obsolete Types**
+
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| DF16_SCL | 16                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format with scaling specified (obsolete) | [**decfloat16**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| DF34_SCL | 34                       | 0                 | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) stored in binary format with scaling specified (obsolete) | [**decfloat34**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| PREC     | 2                        | 0                 | Obsolete data type                                           | [**s**](javascript:call_link('abenbuiltin_types_numeric.htm')) |
+| VARC     | 1-...                    | None              | Obsolete data type                                           | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -691,6 +976,48 @@ hashed internal table : primary key로만 구성
 ****
 
 <BR/>
+
+# Q92. 
+
+## Which of the following ABAP code lines is valid?
+
+다음중 가능한 ABAP CODE 는?
+
+#### 3 correct 
+
+## *<u>CONSTANTS gc_mantr TYPE mantr VALUE ‘100’</u>*
+
+##### SELECT-OPTIONS s_mantr TYPE mantr DEFAULT ‘100’  (type => for가 되어야 한다)
+
+##### DATA gc_mantr TYPE mantr DEFAULT ‘100’ ( 초기값은 default => value)
+
+## *<u>STATICS s_mantr TYPE mantr VALUE ‘100’</u>*
+
+## *<u>PARAMETERS p_mantr TYPE mantr DEFAULT ‘100’</u>*
+
+<br/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1025,13 +1352,173 @@ index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index�
 
 <BR/>
 
+# Q76.
 
+## Which of the following are true statements?
 
+다음중 옳은 것을 고르시오
 
+#### 3 correct
 
+## *<u>You can also select predefined data types to define the data type of the data element.</u>*
 
+PREDEFINED DATA TYPE 으로 DATA ELEMENT 의 DATA TYPE 을 정의 할 수 있다.
 
+## *<u>Reference data types can be used to define the data type of the data element.</u>*
 
+REFERENCE DATA TYPE 은 DATA ELEMENT 의 DATA TYPE 을 정의하는데 사용될 수 있다.
+
+##### Field labels are defined for the domain.
+
+FIELD LABEL 은 DOMAIN 에서 정의된다.
+
+## *<u>The technical attributes of the data element can be defined by a domain, that is, the data type, the field length, and the number of decimal places.</u>*
+
+DATA ELEMENT 의 기술적 속성은 DOMAIN에 의해 정의며 이는 DATA TYPE , FIELD 의 길이, DECIMAL PLACE 의 길이 가 있다.
+
+<BR/>
+
+****
+
+Field labels : data element에서 셋업
+data element의 기술적인 정보는 domain이 가지고 있다 .(data type, field lemgth, decimal places 등등)
+
+![data_element.png](C:/Users/jihoon/TIL/SAP Certi/IMG/data_element.png)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q86. 
+
+## Which of the following is a true statement?
+
+다중 사실 인 것은?
+
+#### 2 correct
+
+##### A standard table should always have a unique key.
+
+STANDARD TABEL 은 항상 UNIQUE KEY 를 보유하여야 한다.
+
+## *<u>A hashed table should always have a unique table key.</u>*
+
+HASHED TABLE 은 항상 UNIQUE TABLE KEY를 보유하여야한다.
+
+## *<u>A sorted table can have a unique or a non-unique key.</u>*
+
+SORTED TABLE 은 UNIQUE 또는 NON-UNIQUE KEY 를 가질 수 있다.
+
+##### A standard table should always have a multiple key.
+
+STANDARD TABLE 은 항상 MULTIPLE KEY 를 보유하여야 한다.
+
+<BR/>
+
+****
+
+standard table : unique, non-unique and one or a multiple key
+hashed table : unique
+sorted table : unique, non-unique
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Q90.
+
+## What can you create using the ABAP Dictionary?
+
+ABAP DICTIONARY 에서 생성할 수 있는 것은?
+
+#### 3 correct  
+
+## *<u>Type pools</u>*
+
+## *<u>Transparent tables</u>*
+
+##### Internal tables
+
+##### Field symbols
+
+## *<u>Domains</u>*
+
+<BR/>
+
+****
+
+Type pools = Type groups.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 101: 
+
+## Which of the following can you assign a search help to?
+
+다음중 SEARCH HELP 를 할당할 수 있는것은? 
+
+#### 3 correct  
+
+## *<u>Data element</u>*
+
+## *<u>Structure component</u>*
+
+## *<u>Check table</u>*
+
+##### Domain
+
+##### Table type
+
+<BR/>
+
+****
+
+search help 를 assign 할 수 있는 곳 : 
+
+* Data element
+
+* Structure component
+* Check Table. 
+
+(se11에서 테이블 조회하여 데이터 조회 시 데이터 검색 조건으로 search help 를 선택할 수 있다)
+
+****
+
+<BR/>
+
+<BR/>
+
+***
+
+****
+
+<BR/>
 
 
 
@@ -1312,13 +1799,109 @@ ABAP WORKBENCH 또는 ABAP EDITOR 에서 직접 테스트 할 수 있는 프로�
 
 <BR/>
 
+# Q95. 
 
+## Dynpros(DYNAMIC PROGRAMS) can be placed in which program types? 
 
+DYNPRO 는 어떤 프로그램 타입에 배치 될 수 있는가?
 
+#### 3 correct 
 
+## *<u>Function groups</u>*
 
+Class pools
 
+## *<u>Module pools</u>*
 
+## *<u>Executables</u>*
+
+<BR/>
+
+****
+
+화면을 가질 수 있는 것. (screen 을 갖는 것)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 99: 
+
+## Which selection screen elements allow user input in ABAP Reports?
+
+ABAP REPORTS 에서 USER INPUT 을 가능하게 해주는 SELECTION SCREEN ELEMENT 는 무엇인가?
+
+#### 2 correct 
+
+##### SELECTION-SCREEN COMMENT
+
+## *<u>PARAMETERS</u>*
+
+##### SELECTION-SCREEN BLOCK
+
+## *<u>SELECT-OPTIONS</u>*
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 100: 
+
+## Which of the following is correct?
+
+다중 옳은 것은?
+
+#### Please choose the correct answer.
+
+## *<u>The screen attributes can be modified in the PROCESS BEFORE OUTPUT event block.</u>*
+
+화면 속성들은 PBO EVENT BLOCK 에서 수정될 수 있다.
+
+##### The screen attributes can be modified in the PROCESS AFTER INPUT event block.
+
+화면 속성들은 PAI EVENT BLOCK 에서 처리 될 수 있다.
+
+##### None of the above.
+
+옳은 것이 없다.
+
+##### The screen attributes can be modified in the PROCESS BEFORE OUTPUT and PROCESS AFTER INPUT event blocks.
+
+화면 속성은 PBO 와 PAI EVENT BLOCK 들 에서 수정될 수 있다.
+
+<BR/>
+
+****
+
+PBO 와 PAI 이해
+PBO : paramter의 속성을 바꾸고, 적합성을 확인하는 곳.
+PAI : user가 화면에서 입력받은 데이터를 처리하는 곳 
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+***
+
+<BR/>
 
 
 
@@ -1473,6 +2056,38 @@ DATA OBJECT 비교
 ****
 
 <BR/>
+
+# Question 98: 
+
+## Which of the following values are replaceable in debugger mode?
+
+DEBUGGER MODE 에서 대체 가능한 값은 무엇인가?
+
+#### Please choose the correct answer.
+
+##### Constants
+
+##### Field names
+
+## *<u>Variables</u>*
+
+##### Table names
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
 
 
 
@@ -2352,11 +2967,167 @@ static method에서 접근 할 수 있는 것. : static attribute , Types, const
 
 <BR/>
 
+# Q82. 
+
+## Which statement is used to generically define the data reference variable z1?
+
+일반적으로 데이터 REFERENCE VARIABLE Z1 을 정의 할때 사용되는 구문은 무엇인가?
+
+#### Please choose the correct answer. 
+
+##### data z1 type any
+
+##### data z1 type ref to PA0001
+
+## *<u>data z1 type ref to data</u>*
+
+##### data z1 type any table
+
+#### <BR/>
+
+****
+
+generic : 어떤 데이터 type도 가리킬 수 있는 형태 
+data z1 type ref of data
+any 와 data는 동일한 기능을 갖고 있지만, any는 ref to 에 대하여 지원하지 않음.
+table key 가 지정되지 않은 table-type 도 generic type 임.
 
 
 
+#### [SAP 공식문서](https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-us/abenbuilt_in_types_generic.htm)
 
+The only generic types that can be used after [**TYPE REF TO**](javascript:call_link('abaptypes_references.htm')) are **data**, for the generic typing of data references, and **object**, for the generic typing of object references.
 
+| **Type**           | **Description**                                              |
+| ------------------ | ------------------------------------------------------------ |
+| **any**            | Any data type                                                |
+| **any table**      | Internal table with any table category                       |
+| **c**              | Text field with a generic length                             |
+| **clike**          | Character-like (**c**, **n**, and **string** plus the date/time types **d**, **t** and character-like [flat structures](javascript:call_link('abenflat_structure_glosry.htm'))) |
+| **csequence**      | Text-like (**c**, **string**)                                |
+| **data**           | Any data type                                                |
+| **decfloat**       | [Decimal floating point number](javascript:call_link('abendecfloat_glosry.htm')) (**decfloat16**, **decfloat34**) |
+| **hashed table**   | [Hashed table](javascript:call_link('abenhashed_table_glosry.htm')) |
+| **index table**    | [Index table](javascript:call_link('abenindex_table_glosry.htm')) |
+| **n**              | [Numeric text](javascript:call_link('abennumeric_text_glosry.htm')) with generic length |
+| **numeric**        | Numeric ((**b**, **s**), **i**, **int8**, **p**, **decfloat16**, **decfloat34**, **f**) |
+| **object**         | Any object type (root class of the inheritance hierarchy)    |
+| **p**              | Packed number with generic length and generic number of [decimal places](javascript:call_link('abendecimal_place_glosry.htm')) |
+| **simple**         | Elementary data type including [enumerated types](javascript:call_link('abenenumerated_type_glosry.htm')) and structured types with exclusively character-like flat components |
+| **sorted table**   | [Sorted table](javascript:call_link('abensorted_table_glosry.htm')) |
+| **standard table** | [Standard table](javascript:call_link('abenstandard_table_glosry.htm')) |
+| **table**          | Standard table                                               |
+| **x**              | Byte field with generic length                               |
+| **xsequence**      | Byte-like (**x**, **xstring**)                               |
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q88. 
+
+## What is unique about a functional method? 
+
+FUNCTION METHOD 에 대한 설명으로 옳은 것은?
+
+#### 5 correct 
+
+## *<u>It can contain an importing parameter.</u>*
+
+IMPORTING PARAMETER 를 가질 수 있다.
+
+## *<u>It can contain an exporting parameter.</u>*
+
+exporting parameter 를 가질 수 있다.
+
+##### It can be used in SELECT statements.
+
+SELECT 구문에서 사용될 수 있다.
+
+## *<u>It must contain a returning parameter.</u>*
+
+returning parameter 를 가질 수 있다.
+
+##### It must be a singleton.
+
+SINGLETON 이어야한다.
+
+## *<u>It can contain a changing parameter.</u>*
+
+changing parameter 를 가질 수 있다.
+
+## *<u>It can be used in logical expressions.</u>*
+
+논리 연산에서 사용될 수 있다.
+
+<BR/>
+
+****
+
+functional method : 
+
+* method 의 parameter 중 retuning parameter를 가지고 있는 method. 
+
+* open sql에서 사용할 수 없다. 
+* logical expressions 에서는 사용 가능 ( a = b + zcl_abcd.f_method(ab))
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 97: 
+
+## What must you do to create a singleton class?
+
+SINGLETON CLASS 를 생성하기 위해 해야하는 것은?
+
+#### 3 correct 
+
+##### Implement the IF_UMM_SINGLETON interface in the class
+
+클래스에 IF_UMM_SINGLETON 인터페이스 구현
+
+## *<u>Define the class as final</u>*
+
+클래스를 FINAL로 정의합니다.
+
+## *<u>Set the class instantiation to private</u>*
+
+클래스 인스턴스화를 PRIVATE 으로 설정합니다.
+
+##### Define the class as abstract
+
+클래스 추상화
+
+## *<u>Instantiate the class in a static method of the class itself</u>*
+
+클래스 자체의 정적 메서드로 클래스 인스턴스화
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3013,7 +3784,85 @@ string이 안되는 이유 : enhancement 옵션이 deep 이 되어야 한다.  (
 
 <BR/>
 
+# Q78.
 
+## What types of changes to the repository does SAP provide?
+
+SAP 는 REPOSITORY 변환하는데 있어 어떤 유형들을 제공하는가?
+
+#### 3 correct
+
+## *<u>SAP Notes</u>*
+
+##### Deployments from SDN.SAP.COM
+
+##### Transports
+
+## *<u>Support Packages</u>*
+
+## *<u>Enhancement Packages</u>*
+
+<BR/>
+
+****
+
+SAP Notes : bugs patch. 
+STD를 변경할 때 제공되는 것 : 
+
+* SAP Notes
+
+* Support package(SAP Notes의 집합)
+
+* Enhancement Packages
+
+* 추가로 upgrade version.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 104: 
+
+## Which of the following enhancements calls a customer function module.
+
+다음중 CUSTOMER FUNCTION MODULE 을 호출 하는 ENHANCEMENT 들을 고르시오.
+
+#### 2 correct 
+
+## *<u>Customer exit</u>*
+
+## *<u>Business Transaction event</u>*
+
+##### User exit
+
+##### Business Add-in (BADIs)
+
+<BR/>
+
+****
+
+User exit : subroutine
+BAdIS : class method.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3295,7 +4144,200 @@ A CONTEXT 라고 되어있어서 틀린것으로 보임
 
 <BR/>
 
+# Q77.
 
+## Each component has an interface; of what does this interface consist?
+
+각 component 는 interface 를 가지고 있다. 이 interface 들은 무엇으로 구성되어있는가?
+
+#### 2 correct
+
+## *<u>Interface controller</u>*
+
+##### Data Container
+
+## *<u>Interface view</u>*
+
+##### Interface context
+
+<br/>
+
+****
+
+Web dynpro 가 가지고 있는 것 : Interface controller, interface view.
+
+****
+
+<br/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q79.
+
+## Which of the following are features of the Context in Web Dynpro?
+
+다음중 WEB DYNPRO 의 CONTEXT 특징은 무엇인가?
+
+#### 2 correct 
+
+##### Every Web Dynpro controller has multiple Contexts
+
+모든 WEB DYNPRO CONTROLLER 는 여러 CONTEXT 들을 가지고 있다.
+
+## *<u>Every Web Dynpro controller has one Context</u>*
+
+모든 WEB DYNPRO CONTROLLER 들은 하나의 CONTEXT 를 가지고 있다.
+
+## *<u>Data is shared between controllers through Context mapping</u>*
+
+DATA 는 CONTEXT MAPPING 을 통해 CONTROLLER들 사이에서 공유된다.
+
+##### Data is transferred from one Context to another by firing plugs
+
+DATA 는 FIREING PLUG 방식으로 하나의 CONTEXT 로 부터 다른 CONTEXT 로 이동된다.
+
+<BR/>
+
+****
+
+Context는 각 controller 별로 한 개씩 갖는다.
+context mapping : context 간 Data sharing or Data Transferring.
+firing plugs : 각 view(화면)간 이동을 위해 필요한 것.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q80.
+
+## To which context object is the attribute LEAD_SELECTION_INDEX related?
+
+LEAD_SELECTION_INDEX 속성과 관련된 CONTEXT OBJECT 는?
+
+#### Please choose the correct answer.
+
+##### Element
+
+## *<u>Node</u>*
+
+##### Attribute
+
+##### Supply function
+
+<BR/>
+
+****
+
+Web dynpro : LEAD_SELECTION_INDEX => Node (화면에서 선택한 라인정보)
+화면은 data binding에 의해서 context와 연결되어 있음.
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q89. 
+
+## Identify the types of layout managers. 
+
+LAYOUT MANAGER 의 TYPE들을 고르시오
+
+#### 4 correct 
+
+##### ColumnLayout
+
+## *<u>FlowLayout</u>*
+
+##### TreeLayout
+
+## *<u>RowLayout</u>*
+
+## *<u>GridLayout</u>*
+
+## *<u>MatrixLayout</u>*
+
+<br/>
+
+****
+
+Web Dynpro : layout manager 가 화면 구성을 처리 
+
+* flowlayout
+* rowlayout
+* gridlayout
+* formlayout
+* matrixlayout
+
+****
+
+<br/>
+
+<BR/>
+
+****
+
+****
+
+<br/>
+
+# Q91. 
+
+## You want to include an element of type ‘Table’ in your web dynpro.
+
+당신은 WEB DYNPRO 에 TABLE 타입의 ELEMENT 를 추가하고싶다.
+
+## What actions add the corresponding columns to the table automatically?
+
+자동으로 테이블에 관련된 COLUMN 들을 추가하는 방법을 고르시오
+
+#### Please choose the correct answer.
+
+## *<u>Right click the table and select the ‘CREATE_BINDING’ option</u>*
+
+##### Include the method BIND_TABLE of IF_WD_CONTEXT_NODE.
+
+##### Bind the table attribute ‘DATA_SOURCE’ to the context node
+
+##### Generate a ‘BIND_TABLE’ method using the web dynpro method wizard.
+
+<BR/>
+
+****
+
+[TABLE 넣는 방법](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220782696432)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3854,6 +4896,180 @@ DBTAB 은 TRANSPARENT TABLE 이다. 다음 문장에 의해 선언되는것은?
 ##### A reference to an internal table
 
 ##### An internal table
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Q81. 
+
+## You call a lock module Which exceptions could the lock module raise when a logical lock CANNOT be set?
+
+LOCK MODULE 을 호출 하려한다. LOFGICAL LOCK 이 설정될 수 없을때 LOCK MODULE 은 어떤 예외를 띄우는가?
+
+#### 2 correct 
+
+##### CX_SY_OPEN_SQL_ERROR
+
+## *<u>FOREIGN_LOCK</u>*
+
+##### CX_SY_DATA_ACCESS_ERROR
+
+## *<u>SYSTEM_FAILURE</u>*
+
+<BR/>
+
+****
+
+락을 잡으려 하다가 못 잡을 때 발생하는 에러
+foreign_lock : 다른 사람이 락을 잡고 있을 때, 발생하는 에러
+system_failure : 시스템 상의 다른 이유로 발생하는 에러
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 102: 
+
+## Where can you define data types that can be accessed directly by all ABAP repository objects in an SAP system?
+
+SAP SYSTEM 내 모든 ABAP REPOSITORY OBJECT에서 바로 접근 할 수 있는 DATA TYPE 을 정의 할 수 있는 곳은?  
+
+#### 2 correct 
+
+##### In a method
+
+##### In a function module
+
+## *<u>In a global class</u>*
+
+## *<u>In the ABAP dictionary</u>*
+
+<BR/>
+
+****
+
+ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타입을 정의할 수 있는 위치?
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+****
+
+****
+
+# 노답,,
+
+# 217번이랑 같은 문제인데 답이 다름
+
+## What is the difference between a Unicode and non-Unicode program? 
+
+UNICODE 와 NON-UNICODE PROGRAM 의 차이는?
+
+#### Please *<u>select all</u>* the correct answers that apply. 
+
+## *<u>Byte-type data objects cannot be assigned to character-type data objects.</u>*
+
+바이트 형식 데이터 개체를 문자 형식 데이터 개체에 할당할 수 없습니다.
+
+##### Byte-type data objects cannot be compared to character-type data objects.
+
+바이트 형식 데이터 개체는 문자 형식 데이터 개체와 비교할 수 없습니다.
+
+## *<u>Offset positioning in a Unicode structure is restricted to flat data objects.</u>*
+
+유니코드 구조에서 간격띄우기 위치는 플랫 데이터 개체로 제한됩니다.
+
+##### Offset positioning in a Unicode structure is restricted to character data objects.
+
+유니코드 구조에서 간격띄우기 위치는 문자 데이터 개체로 제한됩니다.
 
 <BR/>
 
