@@ -3247,7 +3247,7 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 <BR/>
 
-# Q75.???????????필기 찾기 여기부터
+# Q75.???????????필기 찾기 
 
 ## Which types of programs or parts of programs can be tested directly from the ABAP Workbench or ABAP Editor?
 
@@ -5752,7 +5752,7 @@ DB 서버는 테이블 BUFFERING 을 허용해야한다.
 
 # Question 135: 여기부터
 
-### What is the best order to provide an event handler for an ALV?
+## What is the best order to provide an event handler for an ALV?
 
 ALV 를 위한 EVENT HANDLER 를 제공하기 위한 가장 적합한 순서는?
 
@@ -5792,7 +5792,7 @@ double-clicking 이벤트에 필요한 것.
 
 # Question 136: 
 
-### Which of the following are table buffering types?
+## Which of the following are table buffering types?
 
 다음중 테이블 BUFFERING TYPE 에 해당하는 것들을 고르시오
 
@@ -5818,7 +5818,7 @@ double-clicking 이벤트에 필요한 것.
 
 # Question 136: 
 
-### What can you use to achieve polymorphism?
+## What can you use to achieve polymorphism?
 
 다형성을 위해 사용할 수 있는 것은?
 
@@ -5842,7 +5842,7 @@ double-clicking 이벤트에 필요한 것.
 
 # Question 137
 
-### You are asked to enhance the GUI status of an SAP standard application How do you identify which menu exit function code you can use?
+## You are asked to enhance the GUI status of an SAP standard application How do you identify which menu exit function code you can use?
 
 당신은 SAP STANDARD APPLICATION 의 GUI STATUS 를 ENHANCE 하기를 요구 받은 상황이다.
 
@@ -5884,9 +5884,9 @@ MENU EXIT 에 해당하는 FUNCTION 명은 + 로 시작함
 
 # Question 138: 
 
-### You want to select data from two tables and store the result in as structure. Table PARTNER contains the fields PART_ID and KIND.Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+## You want to select data from two tables and store the result in as structure. Table PARTNER contains the fields PART_ID and KIND.Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
 
-### The structure is defined as follows.
+## The structure is defined as follows.
 
 ```ABAP
 DATA: BEGIN OF wa_result,
@@ -5897,7 +5897,7 @@ DATA: BEGIN OF wa_result,
 	  Lt_result type table of wa_result.
 ```
 
-### How can you replace the following SELECT statement with an outer join?
+## How can you replace the following SELECT statement with an outer join?
 
 ```ABAP
 SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
@@ -6018,7 +6018,9 @@ SELECT part_idcont_id
 
 # Question 139: ?????????????????????
 
-### Which of the following components belong to the SAP application layer?
+## Which of the following components belong to the SAP appl
+
+## ication layer?
 
 다음 중 SAP 어플리케이션 LAYER 에 속하는 COMPONENT 들을 고르시오
 
@@ -6050,7 +6052,7 @@ Database server (database layout)
 
 # Question 140: 
 
-### What features are provided by the database interface?
+## What features are provided by the database interface?
 
 DATABASE INTERFACE 가 제공하는 기능은?
 
@@ -6076,7 +6078,7 @@ DATABASE INTERFACE 가 제공하는 기능은?
 
 # Question 141: 
 
-### Which of the following is a true statement?
+## Which of the following is a true statement?
 
 #### 다음중 옳은 것은? 
 
@@ -6096,7 +6098,7 @@ LOCAL REPOSITORY OBJECT는 전송될 수 있다.
 
 ##### Inactive objects can be transported. (acive 만)
 
-액티브 되지 않은 OBJECT 들은 전송될 수 없다.
+액티브 되지 않은 OBJECT 들은 전송될 수 있다.
 
 ## *<u>Repository objects and cross-client customization objects are assigned to the workbench request.</u>*
 
@@ -6121,13 +6123,13 @@ workbench => coss-client 에 종속
 
 # Question 142: 
 
-### What must you do to define a database view using the ABAP Dictionary?
+## What must you do to define a database view using the ABAP Dictionary?
 
 ABAP DICTIONARY 를 통해 DB VIEW를 정의할때 해야하는 것은?
 
 #### 3 correct 
 
-## Choose the database tables from where the view acquires data.
+## *<u>Choose the database tables from where the view acquires data.</u>*
 
 데이터를 가져올 DB TABLE 설정
 
@@ -6135,11 +6137,11 @@ ABAP DICTIONARY 를 통해 DB VIEW를 정의할때 해야하는 것은?
 
 기본 DB TABLE 에 세팅 되어있는 버퍼 정의 
 
-## Choose the fields from the tables that should be part of the view.
+## *<u>Choose the fields from the tables that should be part of the view.</u>*
 
 VIEW의 필드가 될 TABLE의 필드 선택
 
-## Define the join conditions between the tables.
+## *<u>Define the join conditions between the tables.</u>*
 
 테이블간 JOIN CONDITION 정의
 
@@ -6157,7 +6159,7 @@ VIEW 에 대한 SELECTION 기준 정의
 
 # Question 143: 
 
-### When are the changes to the VB* table transferred to the database?
+## When are the changes to the VB* table transferred to the database?
 
 테이블의 변경사항이 DB 에 반영되는 순간은 언제인가?
 
@@ -6181,9 +6183,9 @@ VIEW 에 대한 SELECTION 기준 정의
 
 <BR/>
 
-### Question 144: 
+# Question 144: 
 
-### You have created the following repository objects:
+## You have created the following repository objects:
 
 다음 REPOSITORY OBJECT 들을 생성하였다.
 
@@ -6199,11 +6201,11 @@ VIEW 에 대한 SELECTION 기준 정의
 
   HANDLER CLASS INSTANCE 화 한 REPORT
 
-### The report does not react to the event.
+## The report does not react to the event.
 
 REPORT 는 이벤트에 반응하지 않고 있다.
 
-### How do you analyze this issue?
+## How do you analyze this issue?
 
 이 이슈를 어떻게 분석할 수 있는가?
 
@@ -6239,7 +6241,7 @@ HANDLER METHOD ON_EVT 가 REPORT의 SUBROUTINE에 정의되어있는지 확인�
 
 # Question 145: 
 
-### Which of the following statements are true?
+## Which of the following statements are true?
 
 다음중 옳은 것은?
 
@@ -6271,7 +6273,7 @@ PROJECTION VIEW 는 VIEW 정의에 포함된 테이블들은 하나 이상일 �
 
 # Question 146: 
 
-### You want to develop a validation routine for a selection screen field. If a wrong value is entered into the field an error message should be displayed and the focus should move to the field. Which event do you use to achieve this?
+## You want to develop a validation routine for a selection screen field. If a wrong value is entered into the field an error message should be displayed and the focus should move to the field. Which event do you use to achieve this?
 
 당신은 SELECTION SCREEN FIELD 를 위한 VALIDATION ROUTINE을 개발 하려 한다. 틀린 값을 필드에 입력하면 ERROR MESSAGE가 DISPLAY 되어야 하며 해당 필드로 이동 되어야 한다. 다음중 어느 이벤트에서 구현해야하는가? 
 
@@ -6295,7 +6297,7 @@ PROJECTION VIEW 는 VIEW 정의에 포함된 테이블들은 하나 이상일 �
 
 # Question 147: ??????????????????????
 
-### Which statements are considered obsolete and cannot be used in ABAP Objects?
+## Which statements are considered obsolete and cannot be used in ABAP Objects?
 
 다음중 쓸모 없고 ABAP OBJECT 에서 사용 될 수 없는 구문은?
 
@@ -6365,7 +6367,7 @@ ABAP 언어로 지원하는 ITAB 종류는 몇가지인가?
 
 # Question 149:  102 번과 동일한 문제
 
-### Where can you define global data types that are visible system-wide?
+## Where can you define global data types that are visible system-wide?
 
 #### 3 correct
 
@@ -6389,7 +6391,7 @@ ABAP 언어로 지원하는 ITAB 종류는 몇가지인가?
 
 # Question 150: 
 
-### Which data type is allowed for the reference field of the Currency field?
+## Which data type is allowed for the reference field of the Currency field?
 
 CURRENCY FIELD 의 REFERENCE FIELD 에 허용 되는 DATA TYPE 은?
 
@@ -6413,7 +6415,7 @@ CURRENCY FIELD 의 REFERENCE FIELD 에 허용 되는 DATA TYPE 은?
 
 # Question 151: (skip: 무슨 문제인지 모름)
 
-### Which screen in the ABAP Dictionary allows you to log data changes to the table?
+## Which screen in the ABAP Dictionary allows you to log data changes to the table?
 
 ABAP DICTIONARY 의 어떤 화면에서 데이터의 변경 기록을 테이블에 저장할 수 있는가?
 
@@ -6489,7 +6491,7 @@ CLASS 의 INSTANCE를 RETURN 하는 EVENT 를 생성한다.
 
 STATIC ATTRIBUTE 에 CLASS 의 INSTANCE를 저장한다.
 
-Define the class as abstract.
+##### Define the class as abstract.
 
 추상적으로 CLASS 를 정의한다.
 
@@ -6525,7 +6527,21 @@ Define the class as abstract.
 
 ****
 
-모두 프로그램 종료
+모두 프로그램 종료 만을 보면 E 까지 3개가 답이어야 한다. 
+
+ROLLBACK 여부 를 묻는 문제로 
+
+ROLLBACK 을 하는 경우 기본적으로 
+
+* MESSAGE TYPE A 
+
+* ROLLBACK WORK 구문
+
+을 사용하지만
+
+MESSAGE TYPE X 가 덤프를 띄우는 기능때문에 잘 사용하지 않을 뿐
+
+TYPE X 또한 ROLLBACK 하는 기능을 포함하고 있다.
 
 ****
 
@@ -6581,7 +6597,7 @@ DIALOG PROGRAM 에서 DB 업데이트를 묶어서 쳐리해야하는 이유는?
 
 ## *<u>To process the SAP LUW within the database LUW to ensure data consistency</u>*
 
-E데이터의 일관성을 유지하기 위해 DB LUW 내에서 SAP LUW 를 처리하기 위해
+데이터의 일관성을 유지할 목적으로  DB LUW 내에서 SAP LUW 를 처리하기 위해
 
 ##### To allow you to use SAP locks to ensure data consistency
 
@@ -6629,6 +6645,7 @@ SAP NETWEAVER 의 주요 기능은?
 
 SAP NetWeaver
   SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플리케이션 소프트웨어가 실행될 수 있도록 하드웨어 Architecture와 소프트웨어 프레임워크가 합쳐진 것)이다. SAP Application의 개발과 실행 환경을 제공하며 타 시스템과의 통합도 지원한다. 대부분 ABAP으로 작성되었으며 일부 C, C++, J2EE로도 작성되어 있다. NetWeaver의 핵심 기능은 다음과 같다
+
  - ***<u>People Integration</u>***: 조직원들이 과업을 빠르고 효율적으로 수행할 수 있도록 필요한 정보와 기능을 제공하는 것
  - ***<u>Information Integration</u>***: 회사에 필요한 모든 정보를 통합해주는 것 
  - ***<u>Process Integration</u>***: 프로세스가 여러 시스템 영역을 통합하여 흘러가는 것
@@ -7117,7 +7134,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 <BR/>
 
-# Question 172: 
+# Question 172: 여기부터
 
 ## Each button on a Dynpro (screen) requires the assignment of a function code. This function code…
 
@@ -7131,7 +7148,7 @@ Response:
 
 FUNCTION CODE가 MENU ITEM에 할당되지 않도록 합니다.
 
-## Can be used to identify when the button is clicked by looking for the function code in the screen’s OK_CODE field.
+## *<u>Can be used to identify when the button is clicked by looking for the function code in the screen’s OK_CODE field.</u>*
 
 화면의 OK_CODE 필드에서 FUNCTION CODE를 찾아 버튼을 클릭할 때 사용할 수 있습니다.
 

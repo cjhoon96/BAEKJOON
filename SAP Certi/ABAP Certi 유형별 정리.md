@@ -252,17 +252,229 @@ REPOSITORY OBJECT 는 PACKAGE 에 할당되어야한다.
 
 <BR/>
 
+# Question 139: ?????????????????????
 
+## Which of the following components belong to the SAP appl
 
+## ication layer?
 
+다음 중 SAP 어플리케이션 LAYER 에 속하는 COMPONENT 들을 고르시오
 
+#### 2 correct 
 
+## *<u>ABAP dispatcher</u>*
 
+SAP GUI (presentation layout)
 
+Database server (database layout)
 
+## *<u>Database interface</u>*
 
+<BR/>
 
+****
 
+#### SAP Architecture 관련 필기 다시 참조
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 140: 
+
+## What features are provided by the database interface?
+
+DATABASE INTERFACE 가 제공하는 기능은?
+
+### 3 correct  
+
+## *<u>Database independence of application programs</u>*
+
+## *<u>Conversion of Open SQL statements from ABAP statements into the corresponding database statements</u>*
+
+##### Syntax check of Native SQL commands
+
+##### Data consistency check using foreign key relationships
+
+## *<u>Access to SAP table buffers</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 141: 
+
+## Which of the following is a true statement?
+
+#### 다음중 옳은 것은? 
+
+#### 3 correct 
+
+## *<u>All transportable objects have to be assigned to a package.</u>*
+
+모든 TRANSPORTABLE OBJECT 들은 PACKAGE 에 할당된다. 
+
+## *<u>Client-specific customization objects are assigned to the customizing request.</u>*
+
+CLIENT-SPECIFIC CUSTOMIZATION OBJECT 들은 CUSTOMIZING REQUEST 에 할당된다.
+
+##### Local repository objects can be transported. (package에 assign되어야 한다)
+
+LOCAL REPOSITORY OBJECT는 전송될 수 있다.
+
+##### Inactive objects can be transported. (acive 만)
+
+액티브 되지 않은 OBJECT 들은 전송될 수 없다.
+
+## *<u>Repository objects and cross-client customization objects are assigned to the workbench request.</u>*
+
+REPOSITORY OBJECT 와 CROSS-CLIENT CUSTOMIZATION OBJECT 는 WORKBENCH REQUEST 에 할당된다.
+
+<BR/>
+
+****
+
+customizing => client 에 종속,
+workbench => coss-client 에 종속
+
+*****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 157: 
+
+## Which of the following are key capabilities of SAP NetWeaver?
+
+SAP NETWEAVER 의 주요 기능은?
+
+#### 3 correct 
+
+## *<u>People Integration</u>*
+
+## *<u>Application Platform</u>*
+
+##### Enterprise Resource Planning
+
+## *<u>Information Integration</u>*
+
+##### Supply Chain Management
+
+<BR/>
+
+****
+
+SAP NetWeaver
+  SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플리케이션 소프트웨어가 실행될 수 있도록 하드웨어 Architecture와 소프트웨어 프레임워크가 합쳐진 것)이다. SAP Application의 개발과 실행 환경을 제공하며 타 시스템과의 통합도 지원한다. 대부분 ABAP으로 작성되었으며 일부 C, C++, J2EE로도 작성되어 있다. NetWeaver의 핵심 기능은 다음과 같다
+
+ - ***<u>People Integration</u>***: 조직원들이 과업을 빠르고 효율적으로 수행할 수 있도록 필요한 정보와 기능을 제공하는 것
+ - ***<u>Information Integration</u>***: 회사에 필요한 모든 정보를 통합해주는 것 
+ - ***<u>Process Integration</u>***: 프로세스가 여러 시스템 영역을 통합하여 흘러가는 것
+ - <u>***Application Platform***</u>: SAP Web Application Server를 통해 데이터를 처리하는 환경(개발 및 실행환경)을 제공
+
+대부분의 대기업군들은 Business Suite를 사용하는 것 같다. Business Suite를 써야 SAP NetWeaver를 사용할 수 있고, SAP NetWeaver를 사용해야 SAP GUI 및 ABAP을 사용할 수 있을 테니까 말이다.
+
+****
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 158: 
+
+## Which of the following tools belong to the ABAP Workbench?
+
+ABAP WORKBENCH 에 속하는 TOOL들을 고르시오
+
+#### 3 correct 
+
+## Screen Painter
+
+##### Form Builder
+
+##### Easy Access Menu
+
+## Function Builder
+
+## Class Builder
+
+<BR/>
+
+****
+
+| Tool                | Information                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Object Navigator    | Transaction SE80; Used to navigate around the workbench.     |
+| ABAP Editor         | Transaction SE38; Here you can create or modify ABAP code and other implementations |
+| Function Builder    | Transaction SE37; use to create, test, and administer function modules. |
+| **Class Builder**   | Transaction SE24; for building Class objects                 |
+| **Screen Painter**  | Transaction SE51; use to design and manage screens and their elements used as Programming interfaces. |
+| Menu Painter        | Transaction SE41; for developing the Custom User Accessible menus on your screen interfaces |
+| Message Maintenance | Transaction SE91; for creating standard output messages used within your program |
+| ABAP Dictionary     | Transaction SE11; used to create and manage data definitions (tables, structures, views) without redundancies. |
+
+****
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 167: 
+
+## What is the purpose of the enqueue work process?
+
+ENQUEUE WORK PROCESS 의 목적은 무엇인가?
+
+#### Please choose the correct answer.
+
+## *<u>It manages logical locks in the lock table</u>*
+
+LOCK 테이블에서 LOGICAL LOCK 관리 
+
+##### It processes update requests
+
+UPDATE REQUEST 처리
+
+##### It processes user entries
+
+USER ENTRIES 처리
+
+##### It translates Open SQL statements
+
+OPEN SQL 구문 번역
+
+<BR/>
+
+****
+
+논리적으로 lock 설정
+
+****
+
+<BR/>
 
 
 
@@ -994,9 +1206,55 @@ GLOBAL TYPE 과 LOCAL TYPE 의 공통적으로 가지고 있는 것은?
 
 <BR/>
 
+# Question 150: 
 
+## Which data type is allowed for the reference field of the Currency field?
 
+CURRENCY FIELD 의 REFERENCE FIELD 에 허용 되는 DATA TYPE 은?
 
+#### Please choose the correct answer.
+
+## *<u>CUKY</u>*
+
+##### DEC
+
+##### UNIT
+
+##### CURR
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 170: 
+
+## What is the default length of the type P data type?
+
+DATA TYPE P 의 기본 길이는 얼마인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### 64
+
+##### 1-16
+
+##### 1
+
+## *<u>8</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -1192,11 +1450,134 @@ internal table : DELETE, MODIFY, INSERT, READ, LOOP
 
 <BR/>
 
+# Question 148: 
 
+### How many kinds of internal tables are supported in the ABAP language?
 
+ABAP 언어로 지원하는 ITAB 종류는 몇가지인가?
 
+#### Please choose the correct answer.
 
+##### 5
 
+##### 2
+
+## *<u>3</u>* (standard, sorted, hashed)
+
+##### 1
+
+<BR/>
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 160: 
+
+## Your code contains the following statement:
+
+## READ TABLE gt_itab INTO gs_struc INDEX 1.
+
+## When defining gt_itab, which internal table types can you use?
+
+GT_ITAB 을 정의할때 어떤 ITAB TYPE 을 사용할 수 있겠는가? 
+
+#### Please choose the correct answer.
+
+## *<u>Standard and sorted</u>*
+
+##### Standard, sorted, and hashed
+
+##### Standard and hashed
+
+##### Sorted and hashed
+
+<BR/>
+
+****
+
+hash 는 index와 무관
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 171: 
+
+## The following piece of code is used
+
+```ABAP
+DATA: def TYPE abc,
+Ghi LIKE xyz.
+```
+
+## Which of the four elements are data types and which are data objects?
+
+4개의 ELEMENT 중 DATA TYPE 과 DATA OBJECT 를 구분하여라
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### def, ghi - data objects
+
+##### abc, xyz - data type or data object
+
+<BR/>
+
+## <u>*abc - data type*</u>
+
+## <u>*def, ghi - data objects*</u>
+
+## *<u>xyz - data type or data objects</u>*
+
+<BR/>
+
+##### abc - data type
+
+##### def, ghi ,xyz - data objects
+
+<BR/>
+
+##### abc, xyz - data type
+
+##### def, ghi - data objects
+
+<BR/>
+
+****
+
+예외적으로 Data Type 중 일부가 LIKE 구문 뒤에 사용할 수 있는데 
+
+ABAP Dictionary에 Structure Type / Table / Classic View 가 이에 해당한다.
+
+ 
+
+SAP 에서 과거에는 사용가능하도록 만들어 놓았지만 SAP ABAP도 버젼업이 되면서
+
+LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -1988,15 +2369,161 @@ DB 서버는 테이블 BUFFERING 을 허용해야한다.
 
 ****
 
+<BR/> Question 136: 
+
+## Which of the following are table buffering types?
+
+다음중 테이블 BUFFERING TYPE 에 해당하는 것들을 고르시오
+
+#### 3 correct 
+
+##### Primary-key
+
+## *<u>Full</u>*
+
+##### Column-store
+
+## *<u>Generic</u>*
+
+## *<u>Single-record</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 142: 
+
+## What must you do to define a database view using the ABAP Dictionary?
+
+ABAP DICTIONARY 를 통해 DB VIEW를 정의할때 해야하는 것은?
+
+#### 3 correct 
+
+## *<u>Choose the database tables from where the view acquires data.</u>*
+
+데이터를 가져올 DB TABLE 설정
+
+##### Define buffering settings for the underlying database tables.
+
+기본 DB TABLE 에 세팅 되어있는 버퍼 정의 
+
+## *<u>Choose the fields from the tables that should be part of the view.</u>*
+
+VIEW의 필드가 될 TABLE의 필드 선택
+
+## *<u>Define the join conditions between the tables.</u>*
+
+테이블간 JOIN CONDITION 정의
+
+##### Define selection criteria for the view. (select condition)
+
+VIEW 에 대한 SELECTION 기준 정의
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 145: 
+
+## Which of the following statements are true?
+
+다음중 옳은 것은?
+
+#### 3 correct 
+
+## *<u>The tables included in the help view should have a foreign key relationship.</u>*
+
+HELP VIEW 에 포함된 테이블들은 FOREIGN KEY 로 RELATIONSHIP 이 잡혀있다.
+
+## *<u>The tables included in the maintenance view should have foreign key relationships.</u>*
+
+MAINTENANCE VIEW 에 포함된 테이블들은 FOREIGN KEY 로 RELATIONSHIP 이 잡혀있다.
+
+## *<u>You cannot use a pooled or cluster table for a database view.</u>*
+
+DB VIEW 에는 POOLED / CLUSTER TABLE은 사용할 수 없다.
+
+##### Projection views can have more than one table included for the view definition. (only one)
+
+PROJECTION VIEW 는 VIEW 정의에 포함된 테이블들은 하나 이상일 수 있다. 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 151: (skip: 무슨 문제인지 모름)
+
+## DICTIONARY 에 생성되어있는 것들의 변경 내용들에 대한 로그를 테이블에 저장하여 차후 확인할 수 있는 기능을 설정하는 방법에 대해 묻고 있는 것으로 보인다.
+
+https://papago.naver.com/?sk=auto&tk=ko&st=Which%20screen%20in%20the%20ABAP%20Dictionary%20allows%20you%20to%20log%20data%20changes%20to%20the%20table%3F
+
+해당 링크를 보면 TECHNICAL SETTING 에서 enable change logging 체크박스를 통해 설정 가능하다고 나와있다.
+
+## Which screen in the ABAP Dictionary allows you to log data changes to the table?
+
+ABAP DICTIONARY 의 어떤 화면에서 데이터의 변경 기록을 테이블에 저장할 수 있는가?
+
+#### Please choose the correct answer.
+
+##### Utilities  Database Object Database Utility
+
+## *<u>Technical Settings</u>*
+
+##### Attributes tab
+
+##### Utilities Settings
+
+##### Delivery and Maintenance tab
+
+<BR/>
+
+****
+
+****
+
 <BR/>
 
 
 
+# Question 152: 
 
+## What is required to fully specify a Table Type in the ABAP Dictionary?
 
+ABAP DICTIONARY 에 TABLE TYPE 을 완전히 지정하는데 무엇이 요구되는가?
 
+#### 3 correct 
 
+##### Table size
 
+## <u>*Table key*</u>
+
+## <u>*Line type*</u>
+
+##### Header line
+
+## *<u>Access type</u>*
+
+ <BR/>
+
+****
+
+table type 을 만들 때 필요한 것 : Table key, Line type, access type (standard, sorted, hashed)
+
+*****
+
+<BR/>
 
 
 
@@ -2510,6 +3037,72 @@ ABAP 에 대한 설명중 옳은 것은?
 
 <BR/>
 
+# Question 146: 
+
+## You want to develop a validation routine for a selection screen field. If a wrong value is entered into the field an error message should be displayed and the focus should move to the field. Which event do you use to achieve this?
+
+당신은 SELECTION SCREEN FIELD 를 위한 VALIDATION ROUTINE을 개발 하려 한다. 틀린 값을 필드에 입력하면 ERROR MESSAGE가 DISPLAY 되어야 하며 해당 필드로 이동 되어야 한다. 다음중 어느 이벤트에서 구현해야하는가? 
+
+#### Please choose the correct answer.
+
+## *<u>AT SELECTION-SCREEN (PAI에서)</u>*
+
+##### START-OF-SELECTION
+
+##### INITIALIZATION
+
+##### END-OF-SELECTION
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 168: 
+
+## You run an executable program which contains the following code:
+
+````ABAP
+DATA: gv_var1 TYPE n LENGTH 3,
+Gv_var2 TYPE n LENGTH 3 VALUE ‘456’.
+START-OF-SELECTION
+CLEAR gv_var2
+Gv_var2 = gv_var1.
+Gv_var1 = ‘123’.
+````
+
+## At what point does the system reserve memory for the data object gv_var1?
+
+시스템이 GV_VAR1 DATA OBJECT 를 위한 메모리를 예약하는 시점은? 
+
+#### Please choose the correct answer.
+
+##### When the assignment to gv_var2 is executed
+
+GV_VAR2 에 값이 할당 될때
+
+##### At the beginning of the START-OF-SELECTION event block
+
+START-OF-SELECTION EVENT BLOCK 이 시작될 때  
+
+##### When the value ‘123’ is assigned to the data object
+
+'123' 값이 DATA OBJECT 에 할당될때 
+
+## *<u>As soon as the program is loaded into this internal session</u>*
+
+프로그램이 내부 세션에 LOAD 되는 즉시
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -2517,6 +3110,83 @@ ABAP 에 대한 설명중 옳은 것은?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+*****
+
+****
+
+# MESSAGE
+
+# Question 154: 
+
+## Which message types behave the same regardless of the context in which they are called?
+
+호출되는 CONTEXT 에 상관 없이 동일하게 작동하는 MESSAGE TYPE 들을 고르시오
+
+#### 2 correct 
+
+##### E
+
+##### S
+
+## *<u>X</u>* (with Short dump)
+
+##### I
+
+##### W
+
+## *<u>A</u>* (without short dump)
+
+< BR/>
+
+****
+
+모두 프로그램 종료 만을 보면 E 까지 3개가 답이어야 한다. 
+
+ROLLBACK 여부 를 묻는 문제로 
+
+ROLLBACK 을 하는 경우 기본적으로 
+
+* MESSAGE TYPE A 
+
+* ROLLBACK WORK 구문
+
+을 사용하지만
+
+MESSAGE TYPE X 가 덤프를 띄우는 기능때문에 잘 사용하지 않을 뿐
+
+TYPE X 또한 ROLLBACK 하는 기능을 포함하고 있다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -2931,7 +3601,31 @@ function module 의 CDS 처리 선행 내용.
 
 <BR/>
 
+# Question 155: 
 
+## In which modularization units can you use parameters?
+
+파라미터를 사용할 수 있는 모듈화 단위는?
+
+#### 3 correct 
+
+## *<u>Subroutines</u>*
+
+## *<u>Methods</u>*
+
+Event blocks such as START-OF-SELECTION
+
+Dialog modules such as PBO modules
+
+## *<u>Function modules</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3013,6 +3707,76 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 ****
 
 <br/>
+
+# Question 143: 
+
+## When are the changes to the VB* table transferred to the database?
+
+테이블의 변경사항이 DB 에 반영되는 순간은 언제인가?
+
+#### Please choose the correct answer.
+
+##### When the enqueue work process is executed
+
+##### When an update function module is executed
+
+##### When the main program is executed
+
+## *<u>When the update work process is executed</u>*
+
+<BR/>
+
+****
+
+정보를 DB에 반영되는 시점 묻는 문제.
+
+*****
+
+<BR/>
+
+# Question 156: 
+
+## Why should you bundle database updates in your dialog programs?
+
+DIALOG PROGRAM 에서 DB 업데이트를 묶어서 쳐리해야하는 이유는?
+
+#### Please choose the correct answer. 
+
+##### To avoid database locks set by an SQL statement that persists until the end of the program
+
+프로그램이 끝날 때까지 지속되는 SQL 문으로 설정된 DB의 LOCK 을 방지하기 위해
+
+##### To be able to rollback database changes performed in the same dialog step
+
+일한 DIALOG STEP 에서 수행된 DB 변경 사항을 ROLLBACK 하기 위해
+
+## *<u>To process the SAP LUW within the database LUW to ensure data consistency</u>*
+
+E데이터의 일관성을 유지하기 위해 DB LUW 내에서 SAP LUW 를 처리하기 위해
+
+##### To allow you to use SAP locks to ensure data consistency
+
+데이터 일관성을 위해 SAP LOCK 을 사용하도록 허용하기 위해 
+
+<BR/>
+
+****
+
+All or Nothing 처리를 위해 (for data consistency)
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
 
 
 
@@ -3263,6 +4027,54 @@ field catalog
 ****
 
 <BR/>
+
+# Question 135: 여기부터
+
+## What is the best order to provide an event handler for an ALV?
+
+ALV 를 위한 EVENT HANDLER 를 제공하기 위한 가장 적합한 순서는?
+
+#### Please choose the correct answer.
+
+##### Write the handler, create the ALV, display the ALV, register for the event
+
+##### Register for the event, write the handler, create the ALV, display the ALV
+
+## *<u>Write the handler, create the ALV, register for the event, display the ALV</u>*
+
+##### Write the handler, register for the event, create the ALV, display the ALV
+
+##### Create the ALV, write the handler, register for the event, display the ALV
+
+<BR/>
+
+****
+
+user controller > class handler > alv create > event > alv display
+
+double-clicking 이벤트에 필요한 것.
+
+* A handler method for the double_click event
+* A set handler statement to register the handler to the event
+* A handler class
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
 
 
 
@@ -3944,7 +4756,279 @@ class contructor 는 아무것도 없어야 한다.
 
 <BR/>
 
+# Question 135: 여기부터
 
+### What is the best order to provide an event handler for an ALV?
+
+ALV 를 위한 EVENT HANDLER 를 제공하기 위한 가장 적합한 순서는?
+
+#### Please choose the correct answer.
+
+##### Write the handler, create the ALV, display the ALV, register for the event
+
+##### Register for the event, write the handler, create the ALV, display the ALV
+
+## *<u>Write the handler, create the ALV, register for the event, display the ALV</u>*
+
+##### Write the handler, register for the event, create the ALV, display the ALV
+
+##### Create the ALV, write the handler, register for the event, display the ALV
+
+<BR/>
+
+****
+
+user controller > class handler > alv create > event > alv display
+
+double-clicking 이벤트에 필요한 것.
+
+* A handler method for the double_click event
+* A set handler statement to register the handler to the event
+* A handler class
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 136: 
+
+## What can you use to achieve polymorphism?
+
+다형성을 위해 사용할 수 있는 것은?
+
+#### Please choose the correct answer.
+
+##### Events
+
+## *<u>Inheritance</u>*
+
+##### Subroutines
+
+##### Reports
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 144: 
+
+## You have created the following repository objects:
+
+다음 REPOSITORY OBJECT 들을 생성하였다.
+
+* ### A class with an event definition
+
+  event 정의를 가지 class
+
+* ### A handler class with a method ON_EVT which handles this event
+
+  이 이벤트를 handling 하는 ON_EVT METHOD 를 가진 HANDLER CLASS
+
+* ### A report that instantiates the handler class
+
+  HANDLER CLASS INSTANCE 화 한 REPORT
+
+## The report does not react to the event.
+
+REPORT 는 이벤트에 반응하지 않고 있다.
+
+## How do you analyze this issue?
+
+이 이슈를 어떻게 분석할 수 있는가?
+
+#### 3 correct 
+
+## *<u>Check if the implementation of the handler method ON_EVT contains the correct logic</u>*
+
+HANDLER METHOD ON_EVT 의 IMPLEMENTATION 이 올바른 로직을 포함하고 있는지 확인
+
+## *<u>Check if the event is triggered by setting a breakpoint at the RAISE EVENT statement</u>*
+
+EVENT 가 잘 발생하는지 RAISE EVENT 구문에 BREAKPOINT를 설정하여 확인한다. 
+
+## *<u>Check if the handler method is registered</u>*
+
+HANDLER METHOD 가 등록 되어있는지 확인한다.
+
+##### Check if the event is triggered by setting a breakpoint at the MESSAGE … RAISING statement. (raise event)
+
+EVENT 가 잘 발생하는지 MESSAGE ... RAISNG 구문에 BREAKPOINT를 걸어 확인한다.
+
+##### Check if the handler method ON_EVT is defined in a subroutine of the report.
+
+HANDLER METHOD ON_EVT 가 REPORT의 SUBROUTINE에 정의되어있는지 확인한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 147: ??????????????????????
+
+## Which statements are considered obsolete and cannot be used in ABAP Objects?
+
+다음중 쓸모 없고 ABAP OBJECT 에서 사용 될 수 없는 구문은?
+
+#### Please select all the correct answers that apply.
+
+## <u>*DATA ... TYPE ... OCCURS*</u>
+
+## <u>*TABLES*</u>
+
+## <u>*INFOTYPES*</u>
+
+## <u>*SEARCH*</u>
+
+## <u>*DATA ... BEGIN OF ... OCCURS*</u>
+
+## <u>*RANGES*</u>
+
+## <u>*LOOP AT dbtab*</u>
+
+## <u>*LEAVE*</u>
+
+## <u>*ON CHANGE OF*</u>
+
+<BR/>
+
+****
+
+ABAP oop에서 쓸 수 없는 syntax 모두 외워라.. (안나올 것 같다)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 153: 
+
+## Which steps are needed when implementing the singleton concept for class instantiation with minimum coding?
+
+최소한의 코딩으로 CLASS 를 INSTANCE 화 하기 위한 SIGLETON CONCEPT 를 구현 할때 필요한 단계는?
+
+#### 3 correct 
+
+## Create an instance of the class in a static constructor. (public section 에)
+
+STATIC CONTRUCTOR 에 CLASS INSTANCE 를 생성한다.
+
+## Define the instantiation of the class as private. (private section에)
+
+PRIVATE 으로 CLASS 의 INSTANCE화를 정의한다.
+
+##### Create an event that returns the instance of the class.
+
+CLASS 의 INSTANCE를 RETURN 하는 EVENT 를 생성한다.
+
+## Save the instance of the class in a static attribute. (하나의 instance만 존재)
+
+STATIC ATTRIBUTE 에 CLASS 의 INSTANCE를 저장한다.
+
+Define the class as abstract.
+
+추상적으로 CLASS 를 정의한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 161: 
+
+## In an ABAP program you have the following code sequence :
+
+DATA text TYPE string.
+
+DATA Text_ref TYPE REF TO string.
+
+DATA data_ref TYPE REF TO data.
+
+FIELD-SYMBOLS <fs> TYPE any
+
+Text = ‘Content of Data Object’
+
+GET REFERENCE OF text INTO data_ref.
+
+## Which of the following pieces of code can you use to output the content of variable text?
+
+#### 2 correct 
+
+Response: 
+
+## <u>*ASSIGN data_ref->* TO \<fs>*</u> 
+
+## <u>*WRITE \<fs>*</u>
+
+GET REFERENCE OF data_ref->* INTO text_ref. WRITE text_ref->*.
+
+## <u>*text_ref ?= data_ref.*</u>
+
+## <u>*WRITE text_ref->*.*</u>
+
+WRITE data_ref->*.
+
+<BR/>
+
+****
+
+***
+
+<BR/>
+
+# Question 163:  
+
+## In a subclass, you want to redefine a method of the super class. Which of the following conditions must be fulfilled?
+
+SUBCLASS 에서 SUPER CLASS 의 METHOD 를 REDEFINE 하고 싶다.
+
+다음중 충족 되어야 하는 조건은?
+
+#### 2 correct 
+
+## *<u>The subclass method has same visibility as the super class method</u>*
+
+SUBCLASS METHOD는 SUPER CLASS METHOD와 같은 visibility 를 가진다.
+
+##### The super class method is abstract
+
+SUPER CLASS 는 추상적이다.
+
+## *<u>The superclass method is an instance method</u>*
+
+SUPERCLASS의 METHOD는 INSTANCE METHOD 이다.
+
+##### The subclass method has a lower visibility than the super class method
+
+SUBCLASS METHOD는 SUPER CLASS METHOD보다 낮은 visibility 를 가진다.
+
+<BR/>
+
+****
+
+***
+
+<BR/>
 
 
 
@@ -4835,9 +5919,79 @@ SMOD 는 정의 관리(조회 등)
 
 <BR/>
 
+# Question 137
+
+## You are asked to enhance the GUI status of an SAP standard application How do you identify which menu exit function code you can use?
+
+당신은 SAP STANDARD APPLICATION 의 GUI STATUS 를 ENHANCE 하기를 요구 받은 상황이다.
+
+사용가능한 MENU EXIT FUNCTION 을 어떻게 식별할 것인가?
+
+#### Please choose the correct answer.
+
+#### Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
+
+이 질문에 대한 답변은 전문가에 의해 검증되지 않습니다. 직접 학습한 후 적절한 답변을 선택하십시오.
 
 
 
+##### It starts with a dollar($)
+
+## *<u>It start with a plus (+)</u>*
+
+##### It starts with an asterisk (*)
+
+##### It starts with an ampersand (&)
+
+<BR/>
+
+****
+
+https://stophyun.tistory.com/94
+
+MENU EXIT 에 해당하는 FUNCTION 명은 + 로 시작함
+
+***
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 166: 
+
+## In the CALL CUSTOMER-FUNCTION 'nnn' statement, nnn is a three-digit number used in SAP programs for which of the following types of enhancement?
+
+CALL CUSTOMER-FUNCTION 'NNN' 구문에서 NNN 이 SAP 프로그램에서 사용되는 3자리 숫자일때 어떤 타입의 ENHANCEMENT 인가? 
+
+#### Please choose the correct answer. 
+
+##### New BAdIs
+
+## *<u>Customer exits</u>*
+
+##### Business add-ins
+
+##### User exits
+
+<BR/>
+
+****
+
+https://www.guru99.com/what-is-user-and-customer-exits.html
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -5367,7 +6521,37 @@ view contains a view controller (다른 view를 포함할 수 있다)
 
 <BR/>
 
+# Question 162: 
 
+## What type of method is generated automatically by the Web Dynpro Explorer when you assign an action to a button UI element?
+
+BUTTON UI ELEMENT 에 ACTION 을 할당하였을때 WEB DYNPRO EXPLORER 에 의해 자동으로 생성되는 METHOD 의 TYPE 은 무엇인가?
+
+#### Please choose the correct answer.
+
+## *<u>Event handler method</u>*
+
+##### Standard hook method
+
+##### Ordinary method
+
+##### Supply function
+
+<BR/>
+
+****
+
+Hook method는 system에서 자동으로 호출되는 method
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -5608,6 +6792,18 @@ Q-RFC 무조건 동기방식.
 ****
 
 <BR/>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6033,9 +7229,166 @@ ABAP 프로그램에서 data type을 직접 접근할 수 있도록 데이터타
 
 <BR/>
 
+# Question 138: 
+
+## You want to select data from two tables and store the result in as structure. Table PARTNER contains the fields PART_ID and KIND.Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+
+## The structure is defined as follows.
+
+```ABAP
+DATA: BEGIN OF wa_result,
+	  Part_id type partner-part_id,
+	  cont_id type contract-cont_id,
+	  Cont_type  TYPE contract-cont_type,
+	  END of wa_result,
+	  Lt_result type table of wa_result.
+```
+
+## How can you replace the following SELECT statement with an outer join?
+
+```ABAP
+SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
+
+  SELECT cont_id 
+    from CONTRACT 
+    into wa_result-cont_id 
+   WHERE part EQ wa_partner-part_id 
+     And DIVISION eq ‘Water’. 
+
+    Append wa_result to lt_result.  
+
+  ENDSELECT. 
+
+  If sy-subrc<>0. 
+    CLEAR wa_result-cont_id.
+    APPEND wa_result TO lt_result. 
+  ENDIF.  
+ENDSELECT.
+```
 
 
 
+당신은 두개의 테이블로 부터 데이터를 SELECT 하여 STRUCTURE에 결과를 저장하기를 원한다. TABLE PARTNER 는 PART_ID 필드와 KIND 필드를 가지고 있으며 TABLE CONTRACT 는 CONT_ID, CONT_TYPE, DIVISION 필드를 가지고 있다.
+
+STRUCTURE 는 
+
+```ABAP
+DATA: BEGIN OF wa_result,
+	  Part_id type partner-part_id,
+	  cont_id type contract-cont_id,
+	  Cont_type  TYPE contract-cont_type,
+	  END of wa_result,
+	  Lt_result type table of wa_result.
+```
+
+이와 같이 정의되어있다.
+
+다음 SELECT 문을 OUTER JOIN 을 사용하여 수정한 것을 고르시오.
+
+```ABAP
+SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
+
+  SELECT cont_id 
+    from CONTRACT 
+    into wa_result-cont_id 
+   WHERE part EQ wa_partner-part_id 
+     And DIVISION eq ‘Water’. 
+
+    Append wa_result to lt_result.  
+
+  ENDSELECT. 
+
+  If sy-subrc<>0. 
+    CLEAR wa_result-cont_id.
+    APPEND wa_result TO lt_result. 
+  ENDIF.  
+ENDSELECT.
+```
+
+
+
+#### Please choose the correct answer.
+
+```ABAP
+SELECT part_idcont_id 
+  from partner 
+  LEFT JOIN contract 
+    on partner-part_id = contract-part_id 
+   AND partner-kind EQ ‘Residential’ 
+  INTO CORRESPONDING FIELDS OF TABLE lt_result 
+ WHERE division eq ‘Water’.
+```
+
+****
+
+## ANSWER!!
+
+```ABAP
+SELECT part_idcont_id 
+  from partner AS A 
+  LEFT JOIN contract AS b 
+    ON a~part_id = b~part_id 
+  INTO CORRESPONDING FIELDS OF TABLE lt_result 
+ WHERE kind = ‘Residential’ 
+   AND division EQ ‘Water’.
+```
+
+****
+
+```ABAP
+SELECT part_idcont_id 
+  from partner AS A 
+  LEFT JOIN contract AS b 
+    ON a~part_id = b~part_id 
+   AND b~division EQ ‘Water’ 
+  INTO TABLElt_result 
+ WHERE kind = ‘Residential’
+```
+
+```ABAP
+SELECT part_idcont_id 
+  from partner 
+  LEFT JOIN contract 
+    on partner-part_id = contract-part_id 
+   AND contract-division EQ ‘Water’ 
+  INTO TABLE lt_result 
+ WHERE kind EQ ‘Residential’.
+```
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 165: 
+
+## What is the result of the following arithmetic operation?
+
+```abap
+DATA: int TYPE I.
+int = 5 * ( 3 / 10 ).
+```
+
+## Please choose the correct answer.
+
+##### 2
+
+## *<u>0</u>*
+
+##### 1.5
+
+##### 1
+
+<br/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -6160,3 +7513,61 @@ UNICODE  CHECK 를 하는 방법은?
 ****
 
 <BR/>
+
+# Question 159: (skip)???????????????????????????
+
+## What does a non-exclusive debugging mode mean? 
+
+NON-EXCLUSIVE DEBUGGING 모드는 무엇을 의미하는가?
+
+#### 4 correct  
+
+## *<u>Debugging is not possible between the statements SELECT and ENDSELECT because the database cursor needs to be closed using a COMMIT.</u>*
+
+SELECT ENDSELECT 문 사이에는 디버깅이 불가능하다. 왜냐하면 COMMIT 을 사용하여 DB 커서를 닫아야하기 때문이다. 
+
+## *<u>A roll-out is forced in the application after each Debugger view.</u>*
+
+각 DEBUGGER VIEW 이후에 APPLICATION 에서 ROLL-OUT 이 강제된다.
+
+## *<u>Debugging is not possible for conversion or field exits.</u>*
+
+CONVERSION 또는 FIELD EXIT 에대해 DEBUGGING 할 수 없다.
+
+##### It may be used anywhere in the landscape.
+
+그것은 어디에서나 사용될 수 있다.
+
+## *<u>Owing to the commit, inconsistent datasets can occur in the database.</u>*
+
+커밋으로 인해 데이터베이스에서 일관성 없는 데이터 세트가 발생할 수 있습니다.
+
+##### Someone else is debugging the same source code.
+
+다른 사용자가 동일한 소스 코드를 디버깅하고 있다.
+
+<BR/>
+
+****
+
+In non-exclusive debug mode, ***<u>the system requests a roll-in/roll-out in the application after each debugger interaction.</u>*** Therefore, every debug step performs an implicit database commit. Due to the implicit database commit, you must consider the following effects when debugging in non-exclusive mode:
+
+Since implicit commits are changing operations caused by the debugger, only users with debug-change-authorization can use the non-exclusive debug mode.
+Datasets that are usually committed together might be committed in separate steps. This can cause data inconsistencies at database level. Rollbacks have no effect because intermediate results have already been committed by previous stepping.
+Note
+For this reason, the non-exclusive mode is not enabled in productive systems. If you experience non-exclusive debug mode in such systems, ABAP server you are using might be configured incorrectly.
+<u>***It is not possible to step through SELECT and ENDSELECT loops because the database cursor needs to be closed when using an implicit database COMMIT statement.***</u> In cases like this, program execution is terminated by a DBIF_RSQL_INVALID_CURSOR short dump.
+It is not possible to debug Open Cursor or Fetch commands, since the curser is closed after implicit database commit.
+
+https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa326a/d83846a8e91f46d5b0cc492d664e487c.html?version=7.52.0&locale=en-US
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+

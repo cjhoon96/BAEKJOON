@@ -30,7 +30,9 @@
 
 ## APPLICATION PROCESS
 
-### (DISPATCHER + WORK PROCESS + LOCAL BUFFER 로 구성)
+### (DISPATCHER + WORK PROCESS + LOCAL BUFFER 로 구성) 
+
+### DB INTERFACE 포함???
 
 BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
@@ -42,7 +44,9 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 ### WORK PROCESS
 
 * 각 WORK PROCESS 들은 독립되어있다.
+
 * SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WP 에 대한 DB CONNECTION 을 사용한다.
+
 * DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
 
 * #### D
@@ -86,11 +90,17 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
   시스템당 1개 이상
 
-* #### E
+* #### E (ENQUEUE WP)
 
-  ENQUEUE/SAP LEVEL 의 LOCK 
+  ENQUEUE/SAP LEVEL 의 논리적 LOCK 설정 
 
   시스템당 1개
+  
+* ### DB INRTERFACE
+
+  * OPEN SQL 번역
+  * SAP TABLE BUFFER 에 접속
+
 
 
 
@@ -99,6 +109,7 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 * APPLICATION DATA
 * CUSTOMIZED DATA
 * R/3 REPOSITORY DATA
+* DB SERVER
 
 
 
@@ -110,6 +121,15 @@ APPLICATION SERVER 의 DATA BUFFER 는 사용자에 달렸다.
 
 
 
+
+
+REPcustomizing => client 에 종속,
+workbench => coss-client 에 종속
+
+OSITORY OBJECT 와 CROSS-CLIENT CUSTOMIZATION OBJECT 는 WORKBENCH REQUEST 에 할당된다.
+
+CLIENT-SPECIFIC CUSTOMIZATION OBJECT 들은 CUSTOMIZING REQUEST 에 할당된다.
+
 REPOSITORY OBJECT 는 CHANGE REQUEST 에 할당 되어야한다.
 
 TRANSPORT LAYER 는 PACKAGE 에 할당 되어야한다.
@@ -120,6 +140,44 @@ REPOSITORY OBJECT 는 PACKAGE 에 할당되어야한다.
 
 * ACTIVATE 되어 있어야한다.
 * PACKAGE RELEASE 되어있어야한다.
+
+
+
+
+
+
+
+
+
+## SAP NETWEAVER
+
+SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플리케이션 소프트웨어가 실행될 수 있도록 하드웨어 Architecture와 소프트웨어 프레임워크가 합쳐진 것)이다. SAP Application의 개발과 실행 환경을 제공하며 타 시스템과의 통합도 지원한다. 대부분 ABAP으로 작성되었으며 일부 C, C++, J2EE로도 작성되어 있다. NetWeaver의 핵심 기능은 다음과 같다
+
+ - ***<u>People Integration</u>***: 조직원들이 과업을 빠르고 효율적으로 수행할 수 있도록 필요한 정보와 기능을 제공하는 것
+ - ***<u>Information Integration</u>***: 회사에 필요한 모든 정보를 통합해주는 것 
+ - ***<u>Process Integration</u>***: 프로세스가 여러 시스템 영역을 통합하여 흘러가는 것
+ - <u>***Application Platform***</u>: SAP Web Application Server를 통해 데이터를 처리하는 환경(개발 및 실행환경)을 제공
+
+대부분의 대기업군들은 Business Suite를 사용하는 것 같다. Business Suite를 써야 SAP NetWeaver를 사용할 수 있고, SAP NetWeaver를 사용해야 SAP GUI 및 ABAP을 사용할 수 있을 테니까 말이다.
+
+
+
+
+
+## ABAP WORKBENCH TOOLS
+
+| Tool                    | Information                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| **Object Navigator**    | Transaction SE80; Used to navigate around the workbench.     |
+| **ABAP Dictionary**     | Transaction SE11; used to create and manage data definitions (tables, structures, views) without redundancies. |
+| **ABAP Editor**         | Transaction SE38; Here you can create or modify ABAP code and other implementations |
+| **Message Maintenance** | Transaction SE91; for creating standard output messages used within your program |
+|                         |                                                              |
+| **Function Builder**    | Transaction SE37; use to create, test, and administer function modules. |
+| **Class Builder**       | Transaction SE24; for building Class objects                 |
+|                         |                                                              |
+| **Screen Painter**      | Transaction SE51; use to design and manage screens and their elements used as Programming interfaces. |
+| **Menu Painter**        | Transaction SE41; for developing the Custom User Accessible menus on your screen interfaces |
 
 
 
@@ -158,14 +216,14 @@ https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-18-Data-TypeBuilt
 
   길이를 정의해 줄 수 있는 Data Type
 
-  | NUMERIC TYPES      |                                                              |
-  | ------------------ | ------------------------------------------------------------ |
-  | P                  | 소수 값을 가질 수 있는 타입으로 LENGTH 와 DECIMAL 의 길이를 지정 1~16 |
-  | **CHARACTER TYPE** |                                                              |
-  | C                  | 일반 문자형 1~65535                                          |
-  | N                  | 문자형 데이터(숫자) 1~65535                                  |
-  | **HEXADECIMAL**    |                                                              |
-  | X                  | Hexadecimal(16진수) 타입 1~65535                             |
+  | NUMERIC TYPES      |                                                              | 기본길이 |
+  | ------------------ | ------------------------------------------------------------ | -------- |
+  | P                  | 소수 값을 가질 수 있는 타입으로 LENGTH 와 DECIMAL 의 길이를 지정 1~16 | 8        |
+  | **CHARACTER TYPE** |                                                              |          |
+  | C                  | 일반 문자형 1~65535                                          |          |
+  | N                  | 문자형 데이터(숫자) 1~65535                                  |          |
+  | **HEXADECIMAL**    |                                                              |          |
+  | X                  | Hexadecimal(16진수) 타입 1~65535                             |          |
 
 Size 지정해야 하는 data type (C, N, P, X) 
 
@@ -393,12 +451,12 @@ Predefined data types with special semantic attributes.
 
 **Currency Fields and Quantity Fields**
 
-| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**                                                  | **ABAP Type**                                                |
-| -------- | ------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| CURR     | 1-31                     | 0                 | [Currency field](javascript:call_link('abencurrency_field_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
-| CUKY     | 5                        | 5 blanks          | [Currency key](javascript:call_link('abencurrency_key_glosry.htm')) for [currency fields](javascript:call_link('abencurrency_field_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 5 |
-| QUAN     | 1-31                     | 0                 | [Quantity field](javascript:call_link('abenquantity_glosry.htm')) in [BCD](javascript:call_link('abenbcd_glosry.htm')) format | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
-| UNIT     | 2-3                      | 2 or 3 blanks     | [Unit key](javascript:call_link('abenunit_glosry.htm')) of a [quantity field](javascript:call_link('abenquantity_glosry.htm')) | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
+| **Type** | **Valid Places \**m\**** | **Initial Value** | **Meaning**       | **ABAP Type**                                                |
+| -------- | ------------------------ | ----------------- | ----------------- | ------------------------------------------------------------ |
+| CURR     | 1-31                     | 0                 | 통화 금액 필드    | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| CUKY     | 5                        | 5 blanks          | 통화 단위 키 필드 | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length 5 |
+| QUAN     | 1-31                     | 0                 | 수량 필드         | [**p**](javascript:call_link('abenbuiltin_types_numeric.htm')), length **m [DIV](javascript:call_link('abenarith_operators.htm')) 2 + 1** |
+| UNIT     | 2-3                      | 2 or 3 blanks     | 수량 단위 키필드  | [**c**](javascript:call_link('abenbuiltin_types_character.htm')), length **m** |
 
 
 
@@ -432,6 +490,18 @@ Predefined data types with special semantic attributes.
 ****
 
 # DATA OBJECTS
+
+
+
+## 선언문 규칙
+
+예외적으로 Data Type 중 일부가 LIKE 구문 뒤에 사용할 수 있는데 
+
+ABAP Dictionary에 Structure Type / Table / Classic View 가 이에 해당한다.
+
+SAP 에서 과거에는 사용가능하도록 만들어 놓았지만 SAP ABAP도 버젼업이 되면서
+
+LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 
 
@@ -487,7 +557,7 @@ Predefined data types with special semantic attributes.
 
 
 
-## DATA
+## DATAW
 
 * DATA gc_XXX TYPE XXX 
 * VALUE 를 통해 초깃값을 설정해 줄 수 있다.
@@ -575,7 +645,21 @@ Predefined data types with special semantic attributes.
   
   * 버퍼로 부터 읽은 데이터는 최신의 것이 아닐 수 있다.(데이터 불일치)
   
-    
+  * ### BUFFER TYPE
+  
+    * FULL
+  
+      테이블의 레코드가 하나 액세스되면 테이블의 모든 레코드가 버퍼에 로드된다.
+  
+    * GENERIC
+  
+      테이블의 레코드에 액세스하면 일반 키 필드(테이블 키의 왼쪽 정렬 부분, 다수의 키 필드를 지정하여 식별)에 이 레코드가 있는 모든 레코드가 버퍼에 로드된다.
+  
+    * SINGLE-RECORD
+  
+      실제로 액세스하는 테이블의 레코드만 버퍼에 로드됩니다.
+  
+      
   
     
 
@@ -584,7 +668,37 @@ Predefined data types with special semantic attributes.
 
 ## VIEW
 
+* ### DB VIEW
 
+  데이터를 가져올 DB TALBE 을 선택한다.
+
+  VIEW 에서 사용할 TABLE 의 필드를 선택
+
+   테이블간 JOIN CONDITION 정의
+
+  * TRANSPARENT TABLE 만 사용 가능 (POOLED / CLUSTER 사용 불가)
+
+  * 두개 이상의 테이블로 이루어진 경우 READ 만 가능
+  * KEY FIELD 가 모두 앞쪽에 있어야한다.
+  * INNER JOIN 사용
+
+* ### PROJECTIONVIEW
+
+  프로그램 내에서 읽어올 수 없고 SE11 에서 단순 조회만 가능
+
+  ***<u>단 1개의 테이블</u>***에 대해서 보고싶은 field 만 추려서 볼때 사용
+
+* ### MAINTENANCE VIEW
+
+  TABLE 의 유지보수에 사용
+
+  FOREIGN KEY 관계에 있는 테이블 만 JOIN 가능
+
+* ### HELP VIEW
+
+  FOREIGN KEY 관계가 있어야한다.
+
+* ### CDS VIEW
 
 ## DATA TYPE
 
@@ -611,6 +725,8 @@ Predefined data types with special semantic attributes.
 
 
 * ### TABLE  TYPE
+
+  * LINE TYPE / TABLE KEY / ACCESS TYPE(STANDARD / SORTED / HASHED / INDEX) 을 지정해 준다.
 
 
 
@@ -691,6 +807,12 @@ Predefined data types with special semantic attributes.
   https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/cf/21f2e5446011d189700000e8322d00/content.htm?no_cache=true
 
   
+
+
+
+
+
+
 
 ## SEARCH HELP 
 
@@ -775,6 +897,12 @@ Predefined data types with special semantic attributes.
 
 
 
+## TECHNICAL SETTING 
+
+https://papago.naver.com/?sk=auto&tk=ko&st=Which%20screen%20in%20the%20ABAP%20Dictionary%20allows%20you%20to%20log%20data%20changes%20to%20the%20table%3F
+
+* enable change logging 체크박스를 통해 변경된 사항을 LOG 로 TABLE 에 남기도록 설정할 수 있다.
+
 
 
 
@@ -835,7 +963,7 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 
 
-
+변수의 메모리는 프로그램이 내부 세션에 LOAD 되는 즉시 예약된다. (확인 필요)
 
 ## introductory statements for programs :
 
@@ -902,7 +1030,9 @@ LOAD-OF-PAGE
 
 -> AT SELECTION-SCREEN OUTPUT 
 
--> ***<u>AT SELECTION-SCREEN</u>*** [ON] [VALUE-REQUEST FOR]  입력된 데이터 권한 체크(PAI 와 같은 역할)
+-> ***<u>AT SELECTION-SCREEN</u>*** [ON] [VALUE-REQUEST FOR]  
+
+* 입력된 데이터 권한 체크(PAI 와 같은 역할)
 
 -> ***<u>START-OF-SELECTION</u>*** 
 
@@ -952,7 +1082,25 @@ LOAD-OF-PAGE
 
 
 
-P
+****
+
+*****
+
+****
+
+# MESSAGE 
+
+
+
+| MESSAGE TYPE      | DESCRIPTION                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| MESSAGE S##       | 화면 하단 **STATUS BAR**에 성공 메시지가 띄워진다.           |
+| MESSAGE E##       | 화면 하단 **STATUS BAR**에 에러 메시지가 띄워지며 **프로그램이 중단**된다. |
+| MESSAGE W##       | 화면 하단 **STATUS BAR**에 경고 메시지가 띄워지며 **프로그램이 중단**된다. |
+| MESSAGE I##       | 메시지가 **POPUP**으로 띄워지며 확인 버튼 클릭 이후 다음 로직이 계속 수행된다. |
+| MESSAGE A##       | 메시지가 **POPUP**으로 띄워지며 확인 이후 **프로그램이 종료**된다. TRANSACTION ROLLBACK |
+| MESSAGE X##       | **덤프 화면**으로 넘어간다. TRANSACTION ROLLBACK             |
+| DISPLAY LIKE 구문 | MESSAGE S## DISPLAY LIKE ‘E’. 와 같이 사용하며 이경우 S 타입의 메시지같이 프로그램의 중단은 없지만 메시지는 E타입처럼 DISPLAY 된다. |
 
 
 
@@ -1037,6 +1185,19 @@ P
 
 
 
+## NON-EXCLUSIVE DEBUGGING
+
+찾아도 안나와서 보기 적어둠
+
+* SELECT ENDSELECT 문 사이는 디버깅 불가능 
+* DEBUGGER VIEW 이후에 APPLICATION 에 ROLL-OUT 이 강제된다.
+* CONVERSION 또는 FIELD EXIT 에 대해 DEBUGGING 불가능 
+* COMMIT 으로 인해 DB에서 일관성 없는 데이터 세트가 발생할 수 있다.
+
+
+
+
+
 ****
 
 ****
@@ -1044,6 +1205,8 @@ P
 ****
 
 # Modularization
+
+
 
 ## 모듈화의 장점
 
@@ -1120,20 +1283,27 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA에 저장하고, UPDATE PROCESS 를 거쳐서 수정할 내역을 GROUPING 하여 DB 프로세스에 저장하는 개념이다.
 
+**GROUPING 의 목적은 데이터의 일관성을 유지할 목적으로  DB LUW 내에서 SAP LUW 를 처리하기 위함이다.**
+
 즉 위 문제에서는 ROLLBACK 처리를 할 수 있는 방법에 대해 묻는 문제로
 
 해당 방법에는
 
+* **MESSAGE X TYPE (DB ROLLBACK / DUMP)**
 * **MESSAGE A TYPE (DB ROLLBACK / 프로그램 종료)**
 * **ROLLBACK WORK (DB ROLLBACK / 프로그램은 실행 유지)**
 
-두가지 방법이 있다.
+세가지 방법이 있다.
 
 
 
 ### SINGLE DB LUW  내에서만  DB 를  수정할 수 있다.
 
 
+
+
+
+### UPDATE WORK PROCESS 가 실행되는 시점에 DB 에 변경 사항이 반영된다.
 
 
 
@@ -1211,6 +1381,16 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 
 
+user controller > class handler > alv create > event > alv display
+
+double-clicking 이벤트에 필요한 것.
+
+* A handler method for the double_click event
+* A set handler statement to register the handler to the event
+* A handler class
+
+
+
 
 
 
@@ -1222,6 +1402,22 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 ****
 
 # OOP
+
+
+
+## OOP OBJECT 에서 사용할 수 없는 구문
+
+* **<u>*DATA ... TYPE ... OCCURS*</u>**
+* **<u>*TABLES*</u>**
+* **<u>*INFOTYPES*</u>**
+* **<u>*SEARCH*</u>**
+* **<u>*DATA ... BEGIN OF ... OCCURS*</u>**
+* **<u>*RANGES*</u>**
+* **<u>*LOOP AT dbtab*</u>**
+* **<u>*LEAVE*</u>**
+* **<u>*ON CHANGE OF*</u>**
+
+그냥 암기??? 
 
 https://abapta0903.tistory.com/5 CLASS 구성 요소 설명
 
@@ -1410,7 +1606,11 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 
 
+## EVENT가 반응하지 않는 경우
 
+* HANDLER METHOD 의 IMPLEMENTATION 이 올바른 로직을 포함하고 있는지 확인
+* EVENT 가 제대로 발생하는지 RAISE EVENT 구문에 BREAK POIN 를 잡고 확인
+* HANDLER METHOD 가 등록 되어이쓴ㄴ지 확인
 
 ## EVENT 와 HANDLER VISIBILITY 가능한 조합
 
@@ -1423,19 +1623,27 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 
 
+다형성 관련은 상속
+
+
+
 
 
 
 
 ## SINGLETON
 
+https://gocoding.org/ko/singleton-class-in-abap/
+
 * CREATE OBJECT 할 수 없다.
 
 * METHOD 를 통해서 OBJECT 를 생성할 수 있다.
 
-* FINAL 로 정의 하여 상속을 방지한다.
+* ***<u>FINAL</u>*** 로 정의 하여 상속을 방지한다.
 
-* STATIC PRIVATE CONSTRUCTOR 를 사용하여 인스턴스화 해야한다.
+* STATIC ATTRIBUTE 에 CLASS 의 INSTANCE를 저장한다.
+
+* ***<u>STATIC PRIVATE CONSTRUCTOR</u>*** 를 사용하여 인스턴스화 해야한다.
 
   * CLASS 인스턴스화를 PRIVATE 으로 설정
 
@@ -1457,7 +1665,10 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 
 
+## SUBCLASS METHOD REDEFINE
 
+* SUPERCLASS 의 METHOD 와 같은 VISIBILITY 를 가져야한다.
+* SUPERCLASS 의 METHOD 가 INSTANCE METHOD 여야 한다.
 
 
 
@@ -1545,6 +1756,10 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 * **<u>*CUSTOMER-FUNCTION*</u>**,
 
+  CALL CUSTOMER-FUNCTION 'NNN' 의 NNN이 **3자리 숫자인** 경우 **CUSTOMER EXITS** 이다.
+
+  https://www.guru99.com/what-is-user-and-customer-exits.html
+
   
 
 * **<u>*CL_EXITHANDLER*</u>** 문자열 검색
@@ -1571,6 +1786,11 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
   * CMOD 는 ENHANCEMENT 를 여러개 묶어서 하나의 프로젝트로 관리
 
   CUSTOMER-EXIT
+
+
+* ***<u>(+) 로 시작하는 FUNCTION 찾기</u>*** 
+  * MENU EXIT 에 해당하는 FUNCTION 명은 + 로 시작한다.
+
 
 
 
@@ -1888,7 +2108,9 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 * ### CONFIGURATION
 
-## CONTROLLER METHOD
+## CONTROLLER  HOOK METHOD
+
+SYSTEM 에서 자동으로 호출되는 METHOD
 
 모두 가지고 있는 hook method : wddoinit( ), wddoexit( )
 
@@ -1898,7 +2120,9 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 
 
+## EVENT HANDLER METHOD
 
+ACTION 을 할당할 시 WEB DYNPRO EXPLORER 에 의해 자동으로 생성되는 METHOD TYPE
 
 
 
@@ -2293,3 +2517,61 @@ UNICODE  CHECK 를 하는 방법은?
 ****
 
 <BR/>
+
+# Question 159: (skip)???????????????????????????
+
+## What does a non-exclusive debugging mode mean? 
+
+NON-EXCLUSIVE DEBUGGING 모드는 무엇을 의미하는가?
+
+#### 4 correct  
+
+## *<u>Debugging is not possible between the statements SELECT and ENDSELECT because the database cursor needs to be closed using a COMMIT.</u>*
+
+SELECT ENDSELECT 문 사이에는 디버깅이 불가능하다. 왜냐하면 COMMIT 을 사용하여 DB 커서를 닫아야하기 때문이다. 
+
+## *<u>A roll-out is forced in the application after each Debugger view.</u>*
+
+각 DEBUGGER VIEW 이후에 APPLICATION 에서 ROLL-OUT 이 강제된다.
+
+## *<u>Debugging is not possible for conversion or field exits.</u>*
+
+CONVERSION 또는 FIELD EXIT 에대해 DEBUGGING 할 수 없다.
+
+##### It may be used anywhere in the landscape.
+
+그것은 어디에서나 사용될 수 있다.
+
+## *<u>Owing to the commit, inconsistent datasets can occur in the database.</u>*
+
+커밋으로 인해 데이터베이스에서 일관성 없는 데이터 세트가 발생할 수 있습니다.
+
+##### Someone else is debugging the same source code.
+
+다른 사용자가 동일한 소스 코드를 디버깅하고 있다.
+
+<BR/>
+
+****
+
+In non-exclusive debug mode, ***<u>the system requests a roll-in/roll-out in the application after each debugger interaction.</u>*** Therefore, every debug step performs an implicit database commit. Due to the implicit database commit, you must consider the following effects when debugging in non-exclusive mode:
+
+Since implicit commits are changing operations caused by the debugger, only users with debug-change-authorization can use the non-exclusive debug mode.
+Datasets that are usually committed together might be committed in separate steps. This can cause data inconsistencies at database level. Rollbacks have no effect because intermediate results have already been committed by previous stepping.
+Note
+For this reason, the non-exclusive mode is not enabled in productive systems. If you experience non-exclusive debug mode in such systems, ABAP server you are using might be configured incorrectly.
+<u>***It is not possible to step through SELECT and ENDSELECT loops because the database cursor needs to be closed when using an implicit database COMMIT statement.***</u> In cases like this, program execution is terminated by a DBIF_RSQL_INVALID_CURSOR short dump.
+It is not possible to debug Open Cursor or Fetch commands, since the curser is closed after implicit database commit.
+
+https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa326a/d83846a8e91f46d5b0cc492d664e487c.html?version=7.52.0&locale=en-US
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
