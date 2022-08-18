@@ -47,7 +47,9 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
 * SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WP 에 대한 DB CONNECTION 을 사용한다.
 
-* DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다. 
+* DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다.
+
+* WORK PROCESS 들은 SHARED MEMORY 라고 불리는 공통된 MEMORY AREA 를 사용한다. 
 
 * #### D
 
@@ -121,7 +123,11 @@ APPLICATION SERVER 의 DATA BUFFER 는 사용자에 달렸다.
 
 
 
+PACKAGE 는 중첩 될 수 있다.
 
+CUSTOMER REPOSITORY 의 OBJECT 들은 PACKAGE 에 할당 되어야 한다.
+
+PACKAGE 는 INTERFACE 와 가시성을 사용해 해당 요소를 볼 수 있도록 한다.
 
 REPcustomizing => client 에 종속,
 workbench => coss-client 에 종속
@@ -542,6 +548,12 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
   * 오직 1개 라인만 조회
   * left-justified ***<u>fully</u>*** qualified of the key
 
+## ITAB 의 접근 시간을 개선할 수 있는 BOUNDARY CONDITION
+
+* SORTED TABLE 의 FULLY QUALIFIED KEY
+* SORTED TABLE 의 LEFT JUSTIFIED PART OF KEY
+* STANDARD TABLE 의 INDEX ACCESS
+
 
 
 
@@ -595,16 +607,20 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 * SEARCH HELP
 * LOCK OBJECT
 
+
+
+
+
 ## DATABASE  TABLE
 
 * ### TRANSPARENT TABLE
 
   * ABAP DICTIONARY 에 하나의 TABLE 이 실제 DB 에서도 1대 1로 대응 된다.
-
   * 1:1
   * GROUP BY 절 사용 가능
   * SECONDARY INDEX 허용 
   * BUFFERING 가능
+  * ACTIVATE 하는 시점에 실질적인 DB TABLE이 생성된다. 
 
 * ### CLUSTERED TABLE
 
@@ -625,42 +641,47 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
   * SECONDARY INDEX 사용 X
   * GROUP BY 절 사용 X
   * JOIN 사용 X
+  * **ORDER BY** 절은 **KEY FIELD** 에만 가능 (CLUSTER 도 동일할것으로 보임)
+  * **WHERE** 조건은 **KEY FIELD** 에만 가능 (CLUSTER 도 동일할것으로 보임)
+  * APPEND STRUCTURE 사용 불가??? (CLUSTER 도 동일할것으로 보임)
 
   https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=howwithus&logNo=221458527100
 
    
-  
+
 * ### TABLE BUFFER 
 
   * 데이터가 TABLE BUFFER 로 부터 READ 되는 경우 기존 인덱스는 사용되지 않는다.
 
     index 는 DB에 있는 상황이므로, buffer table 정보를 읽으면 index를 사용하지 않는다.
-  
+
   * ### BY-PASS buffer 버퍼 우회되는 경우
-  
+
     ABAP join
     select .. .by pass buffer.
     select … for update
     native SQL
-  
+
+    
+
   * 버퍼로 부터 읽은 데이터는 최신의 것이 아닐 수 있다.(데이터 불일치)
-  
+
   * ### BUFFER TYPE
-  
+
     * FULL
-  
+
       테이블의 레코드가 하나 액세스되면 테이블의 모든 레코드가 버퍼에 로드된다.
-  
+
     * GENERIC
-  
+
       테이블의 레코드에 액세스하면 일반 키 필드(테이블 키의 왼쪽 정렬 부분, 다수의 키 필드를 지정하여 식별)에 이 레코드가 있는 모든 레코드가 버퍼에 로드된다.
-  
+
     * SINGLE-RECORD
-  
+
       실제로 액세스하는 테이블의 레코드만 버퍼에 로드됩니다.
-  
+
       
-  
+
     
 
 
@@ -680,7 +701,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
   * 두개 이상의 테이블로 이루어진 경우 READ 만 가능
   * KEY FIELD 가 모두 앞쪽에 있어야한다.
-  * INNER JOIN 사용
+  * **INNER JOIN 사용**
 
 * ### PROJECTIONVIEW
 
@@ -694,9 +715,17 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
   FOREIGN KEY 관계에 있는 테이블 만 JOIN 가능
 
+  **OUTER JOIN 사용** 
+
+  **INNER JOIN 사용 X**
+
+  
+
 * ### HELP VIEW
 
   FOREIGN KEY 관계가 있어야한다.
+
+  **OUTER JOIN 사용**
 
 * ### CDS VIEW
 
@@ -714,13 +743,19 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
   
   * 필드 라벨들을 저장한다.
   
-  * F1 HELP 을 지원한다.
+  * F1 HELP (DOCUMENTATION) 을 지원한다.
   
   * SE11 > DATA ELEMENT > FUTHER CHARACTERISTICS TAB > CHANGE DOCUMENT 를 통해 **필드 내용의 변경에 대한 LOG**를 남기도록 설정 가능하다. 
 
 
 
 * ### STRUCTURE  TYPE
+
+  * NESTED STRUCTURE
+    * 가변 길이 STRUCTURE
+
+  * DEEP STRUCTURE
+
 
 
 
@@ -743,6 +778,16 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 ## DOMAIN
 
 고정값 과 같은 TECHNICAL 속성을 정의한다. 
+
+VALUE RANGE 를 정의할 수 있다.
+
+CONVERSION ROUTINE 을 정의할 수 있다.
+
+* ### CONVERSION ROUTINE 
+
+  필드의 데이터 타입에 따라 SAP 내부 형태와 화면에 조회되는 값을 변경할 수 있도록 하는 것으로 스크린 필드에 조회되는 데이터 포맷과 실제 테이블에 저장되는 포맷이 다를 수 있음을 의미
+
+  
 
 * **ACCP**: Posting period. The length is set to 6 places for this data type. The format is YYYYMM. In input and output, the system inserts a point between the year and month, so the template of this data type has the format '.__'.
 
@@ -1080,6 +1125,51 @@ LOAD-OF-PAGE
 
 
 
+## CHAIN
+
+CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 MESSAGE TYPE E 를 뿌려줄 경우 이후 실행이 멈춰 PBO FLOW LOGIC 이 처리되지 않고 화면이 다시 DISPLAY 되며 해당 CHAIN 의 FIELD 들 만이 INPUT 될 수 있게 된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+****
+
+****
+
+# CODE INSPECTOR
+
+##   (tcode : SCI)
+
+* STATIC CODE 검사 수행
+* 자체 검사, 개체 세트 및 변형 확인
+* 검사할 프로그램 및 개체를 나타내는 OBJECT 집합 생성
+* LOCAL 뿐 아니라 GLOBAL INSPECTION 을 생성할 수 있다.
+* 다국어 처리, 변수 선언 후 미사용. local, global 생성
+* setup : inspection name, object set name, check variant name
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ****
@@ -1126,7 +1216,18 @@ LOAD-OF-PAGE
 * 소스 코드 수정 불가
 * SQL TRACE 분석 불가 (SQL TRACE 에서 가능)
 
+
+
 디버깅을 시작할때 DEBUGGING_NOT_POSSIBLE 런타임 오류가 발생하는 상황은 productive system에서 NON-EXCLUSIVE 모드가 시작된 경우
+
+
+
+## BREAK POINT 설정하는 법
+
+* ABAP EDITOR 에서 설정
+* /H 명령 실행후 프로그램 실행하여 DEBUGGER 로 진입
+
+
 
 ## DEBUGGER TAB 
 
@@ -1174,12 +1275,23 @@ LOAD-OF-PAGE
 ## 값을 바꿀 수 있는 것
 
 * VARIABLE 
+* ITAB
+  * ROW 삭제
+  * CONTENT 전체 삭제
+  * ROW CONTENT 변경 / ENTER KEY 누르기
+
+
+
 
 ## 바꿀 수 없는 것
 
 * CONSTANTS
 * FIELD NAME
 * TABLE NAMES
+
+
+
+ABAP 시스템에 도착하는 HTTP 및 RFC 요청 디버깅 하는 경우 외부 요인에 따라 중지 되거나 중지 되지 않을 수도 있다.
 
 
 
@@ -1244,6 +1356,15 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
     * **UXX** - FUNCTION 프로그램
 
   이 생성된다.
+  
+* ### PARAMETERS
+
+  * INPUT
+  * OUTPUT
+  * INPUT / OUTPUT (CHANGING)
+  * TABLES
+  * EXCEPTIONS
+
 
 
 
@@ -1285,6 +1406,8 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 **GROUPING 의 목적은 데이터의 일관성을 유지할 목적으로  DB LUW 내에서 SAP LUW 를 처리하기 위함이다.**
 
+SAP LUW 는 DB LUW 내에 배치 되어야 한다.
+
 즉 위 문제에서는 ROLLBACK 처리를 할 수 있는 방법에 대해 묻는 문제로
 
 해당 방법에는
@@ -1317,7 +1440,9 @@ LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA
 
 # SCREEN
 
-DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해당 필드의 이름과 동일 DATA OBJECT 를 정의하면 자동 연동되어 이를 통해 접근 가능하다. 
+## INPUT FIELD
+
+DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해당 필드의 이름과 동일 DATA OBJECT 를 정의하면 자동 연동되어 자동 데이터 전송이 이루어 지며 이를 통해 접근 가능하다. 
 
 
 
@@ -1337,6 +1462,57 @@ DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해�
 
 
 
+### SCREEN 의 OK_CODE 필드에서 FUNCTION CODE 를 통해 버튼의 기능을 넣어 줄 수 있다. 
+
+EX)
+
+```ABAP
+CASE OK_CODE.
+  WHEN 'FC_CODE1'.
+    ...LOGIC...
+  WHEN 'FC_CODE2'.
+    ...LOGIC...
+ENDCASE.
+```
+
+
+
+## MAIN SCREEN 에 SUBSCREEN EMBED
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4a/44b362954c0453e10000000a421937/content.htm?no_cache=true
+
+* call subscreen 으로 호출 하며 main screen 의 logic 을 PAI, PBO 모두 넣어주어야 한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SCREEN 이 가질 수 있는 MENU ITEMS 의 최대 개수
+
+**15** 개라고 답이 나와있으나 확인이 필요하다 추후 비슷한 문제와 비교 분석 필요
+
+
+
+
+
+
+
 
 
 ****
@@ -1346,6 +1522,18 @@ DIALOG SCREEN 을 생성후 접근 가능한 INPUT FIELD 를 만든 경우 해�
 ****
 
 # ALV GRID
+
+
+
+CONTAINER 을 사용하는 경우 ADDITIONAL OBJECT 사용이 요구 되며
+
+FULL-SCREEN 과 CONTAINER 를 사용하는 경우 모두 EVENT HANDLING 기능을 사용할 수 있다.
+
+
+
+## ALV GRID CONTROL 생성하는 과정
+
+Screen painter 에서 custom control을 위치 시킨다 > container class 생성 > alv class 생성 > wa, tab 입력.
 
 
 
@@ -1453,7 +1641,15 @@ ABAP OOP 에서 자기자신으로 사용되는 변수는 ME 이다.
 
 https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-25-Field-Symbol
 
+LOOP 문 에서 사용시 
 
+```ABAP
+LOOP AT <ITAB> ASSIGNING <FIELD_SYMBOL>.
+....
+ENDLOOP.
+```
+
+와 같이 사용
 
 
 
@@ -1627,6 +1823,16 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 
 
+## FRIENDSHIP
+
+* 친구로 부터 상속 받은 CLASS 들은 같은 ACCESS 권한을 갖는다.
+* FRIEND 는 PROTECTED / PRIVATE 에도 접근할 수 있다.
+* FRIENDSHIP은 일방적이다.FRIEND 의 FRIEND = FRIEND 성립 X
+
+
+
+
+
 
 
 
@@ -1676,9 +1882,19 @@ https://gocoding.org/ko/singleton-class-in-abap/
 
 
 
+## REFACTORING ASSISTANT
+
+* CLASS 간 또는 INTERFACE 간 이동
+* ㅇUP, DOWN CASTING
+* SUPERCLASS / SUBCLASS 간 COMPONENT 이동
 
 
 
+
+
+## 객체간 데이터 이동 DIAGRAM
+
+* SEQUENCE DIAGRAM
 
 
 
@@ -1780,6 +1996,10 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
   CUSTOMER-EXIT
 
+* ***<u>CALL CUSTOMER-SUBSCREEN</u>*** 검색 (프로그램)
+
+  CUSTOMER-EXIT(SCREEN EXIT)
+
 * ***<u>CMOD SMOD</u>***
 
   * SMOD 는 ENHANCEMENT 관리
@@ -1812,24 +2032,34 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ## IMPLICIT ENHANCEMENT
 
-ABAP 프로그램의 약속된 특적 위치에서 정의 없이 ENHANCEMENT 를 적용
+* ABAP 프로그램의 약속된 특적 위치에서 정의 없이 ENHANCEMENT 를 적용
 
-ABAP EDITOR 메뉴에서 EDIT > ENHANCEMENT OPERATIONS > SHOW IMPLICIT ENHANCEMENT OPTIONS 에서 확인 가능
+* ABAP EDITOR 메뉴에서 EDIT > ENHANCEMENT OPERATIONS > SHOW IMPLICIT ENHANCEMENT OPTIONS 에서 확인 가능
 
-- include의 끝 위치
-- Class의 Private, Protected 그리고 Public section의 끝 위치
-- Class 구현의 끝 위치
-- END INTERFACE 구문 바로 앞 위치
-- structure 선언 (DATA: BEGIN OF ~ END OF ) 의 끝 위치 (END OF 바로 앞)
-- form, functions, methods의 시작과 끝 위치
-- method의 파라미터 CHANGING, IMPORTING 그리고 EXPORTING의 끝 위치
+  - include의 끝 위치
 
-실행전에 넣을 수 있는 method : pre-method
+  - Class의 Private, Protected 그리고 Public section의 끝 위치
 
-실행 후에 넣을 수 있는 method : post-method
+  - Class 구현의 끝 위치
 
-export parameter 가 post-method 가 change되었을 때, changing parameter 로 바뀜.
-(pre-method도 동일)
+  - END INTERFACE 구문 바로 앞 위치
+
+  - structure 선언 (DATA: BEGIN OF ~ END OF ) 의 끝 위치 (END OF 바로 앞)
+
+  - form, functions, methods의 시작과 끝 위치
+
+  - method의 파라미터 CHANGING, IMPORTING 그리고 EXPORTING의 끝 위치
+
+
+* 실행전에 넣을 수 있는 method : pre-method
+
+* 실행 후에 넣을 수 있는 method : post-method
+
+* export parameter 가 post-method 가 change되었을 때, changing parameter 로 바뀜.
+  (pre-method도 동일)
+* SAP NETWEAVER 7.0 이전 버전에서 개발한 SAP OBJECT 를 ENHANCE 할 수 있다.
+* IMPLICIT ENHANCEMENT POINT 에서는 **SAP 로 부터 어떤 준비도 필요 없이** SAP PROGRAM 에 CODE 를 삽입 할 수 있다. 
+* IMPLICIT ENHANCEMENT OPTION 은 REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
 
 
 
@@ -1843,24 +2073,33 @@ export parameter 가 post-method 가 change되었을 때, changing parameter 로
 
   BADI INTERFACE 구현하는 CLASS CL_EXITHANDLER 구현
 
-* ### 선행되어야 하는 것
-
-  * METHOD 에 대한 CODE 작성
-  * BAdI IMPLEMENTATION 생성
-
-* ### 찾는법
-
-  * ### CLASSICAL BAdIs 찾는 방법 :
   
+
+* ### CLASSICAL BAdIs 
+
+  * ### 찾는 방법 :
+
     CL_EXITHANDLER 에서 GET_INSTANCE METHODS 찾기
+
+  * ### 선행되어야 하는 것
+
+    * METHOD 에 대한 CODE 작성
+    * BAdI IMPLEMENTATION 생성
+
   
-    
+
   
-    
-  
-  * ### NEW BAdIs 찾는 방법
-  
-    : get BAdIs / CALL BAdI
+
+* ### NEW BAdIs 
+
+  * ### 찾는 방법
+
+    get BAdIs / CALL BAdI
+
+  * ### 선행되야 하는 것
+
+    * ENHANCEMENT SPOT IMLEMENTATION
+    * BADI IMPLEMENTATION
 
 
 
@@ -2082,13 +2321,19 @@ It is not possible, on the other hand, to embed service calls in view controller
 
 ## CONTROLLER
 
+https://wiki.scn.sap.com/wiki/display/WDABAP/Controllers+in++Web+Dynpro+for+ABAP
+
 * COMPONENT 에 사용자의 요청이 들어오는 경우 비지니스 로직 호출
 
 * ### COMPONENT CONTROLLER
 
-  서비스 호출이 가능하다.
+  * 서비스 호출이 가능하다.
 
-  무조건 하나
+  * 무조건 하나
+
+  * **LIFE TIME**
+
+    컨트롤러 내에서 데이터를 생성하여 구성 요소가 사용 중인 전체 기간을 커버할 때까지
 
 * ### INTERFACE CONTROLLER
 
@@ -2106,7 +2351,7 @@ It is not possible, on the other hand, to embed service calls in view controller
 
   서비스 호출이 가능하다.
 
-* ### CONFIGURATION
+* ### CONFIGURATION CONTROLLER
 
 ## CONTROLLER  HOOK METHOD
 
@@ -2389,21 +2634,25 @@ ENDLOOP.
 
 
 
+## JOIN  IN OPEN SQL
+
+* INNER JOIN
+* LEFT OUTER JOIN
+* FULL JOIN
+
+
+
+## SELECT 문
+
+* SELECT 문에서 데이터를 가져올 FIELD 명을 명시하는 경우 데이터가 들어갈 변수에 명시한 필드명 순(왼쪽에서 차례대로)으로 들어간다.
+
+
+
 
 
 ## 각종 기능
 
-## CODE INSPECTOR  (tcode : SCI)
-
-* 자체 검사, 개체 세트 및 변형 확인
-* 검사할 프로그램 및 개체를 나타내는 OBJECT 집합 생성
-* LOCAL 뿐 아니라 GLOBAL INSPECTION 을 생성할 수 있다.
-* 다국어 처리, 변수 선언 후 미사용. local, global 생성
-* setup : inspection name, object set name, check variant name
-
-
-
-
+## 
 
 
 

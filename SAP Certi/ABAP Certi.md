@@ -5750,7 +5750,7 @@ DB 서버는 테이블 BUFFERING 을 허용해야한다.
 
 <BR/>
 
-# Question 135: 여기부터
+# Question 135: 
 
 ## What is the best order to provide an event handler for an ALV?
 
@@ -7134,7 +7134,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 <BR/>
 
-# Question 172: 여기부터
+# Question 172: 
 
 ## Each button on a Dynpro (screen) requires the assignment of a function code. This function code…
 
@@ -7402,11 +7402,11 @@ Runtime check 아니다.!
 
 Response: 
 
-A maintenance view is implemented as an inner join.
+##### A maintenance view is implemented as an inner join.
 
 유지보수 뷰는 INNER JOIN 으로 구현된다.
 
-A database view is implemented as an outer join.
+##### A database view is implemented as an outer join.
 
 DB  뷰는 OUTER JOIN 으로 구현된다.
 
@@ -7756,19 +7756,19 @@ MAIN SCREEN 에 SUBSCREEN 을 EMBED 하려면 어떻게 해야하는가?
 
 Response: 
 
-Use SET SUBSCREEN in the flow logic of the main screen.
+##### Use SET SUBSCREEN in the flow logic of the main screen.
 
 MAIN SCREEN 의 FLOW LOGIC 에 SET SUBSCREEN 구문을 사용한다. 
 
-Use SET SUBSCREEN in a PBO module of the main screen.
+##### Use SET SUBSCREEN in a PBO module of the main screen.
 
 MAIN SCREEN 의 PBO MODULE 에 SET SUBSCREEN 구문을 사용한다.
 
-Use CALL SUBSCREEN in a PBO module of the main screen (pai, pbo 모두에서 call 해주어야 한다)
+##### Use CALL SUBSCREEN in a PBO module of the main screen (pai, pbo 모두에서 call 해주어야 한다)
 
 MAIN SCREEN 의 PBO MODULE 에 CALL SUBSCREEN 구문을 사용한다.
 
-Use CALL SUBSCREEN in the flow logic of the main screen.
+## *<u>Use CALL SUBSCREEN in the flow logic of the main screen.</u>*
 
 MAIN SCREEN 의 FLOW LOGIC 에 CALL SUBSCREEN 구문을 사용한다.
 
@@ -8156,7 +8156,7 @@ Response:
 
 # Question 200: 
 
-# ????????????MESSAGE TYPE 과 CHAIN 관련 공부
+## ????????????MESSAGE TYPE 과 CHAIN 관련 공부
 
 ## A screen has the following PAI flow logic:
 

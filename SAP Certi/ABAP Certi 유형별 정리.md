@@ -476,6 +476,76 @@ OPEN SQL 구문 번역
 
 <BR/>
 
+# Question 192:??????????????????????
+
+## Which of the following is a true statement?
+
+다음중 옳은 것은?
+
+#### 3 correct 
+
+## *<u>A package can be nested.</u>*
+
+패키지를 중첩할 수 있습니다.
+
+## *<u>All customer repository objects have to be assigned to a package.</u>*
+
+모든 CUSTOMER 리포지토리 OBJECT를 패키지에 할당해야 합니다.
+
+## <u>*Packages use interfaces and visibility to make their elements visible to other packages.*</u>
+
+패키지는 인터페이스와 가시성을 사용하여 다른 패키지에서 해당 요소를 볼 수 있도록 합니다.
+
+##### The transport layer is a mandatory input field for the package. (optional)
+
+TRANSPORT LAYER는 패키지의 필수 입력 필드입니다. (선택사항)
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 197: 
+
+## A work process…
+
+WORK PROCESS 는 ...
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Stays linked to a screen through the dispatcher.
+
+DISPATCHER 를 통해 화면에 연결된 상태를 유지한다.
+
+##### Becomes inactive while waiting for a user.
+
+USER 를 기다리는 동안 비활성화 된다.
+
+##### Becomes active while waiting for a user.
+
+USER 를 기다리는 동안 활성화 된다.
+
+## <u>*Uses a common memory area called shared memory.*</u>
+
+SHARED MEMORY 라고 불리는 공통된 MEMORY AREA를 사용한다. 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
 
 
 
@@ -1256,11 +1326,85 @@ Response:
 
 <BR/>
 
+# Question 194: 
 
+## Which of the following predefined data types are character types?
 
+다음중 CHARACTER TYPE 인 PREDEFINED DATA TYPE 은?
 
+#### 3 correct 
 
+Response: 
 
+##### P
+
+## *<u>N</u>*
+
+## *<u>T</u>*
+
+## *<u>D</u>*
+
+##### X
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 195: 
+
+## You define a generic variable that can hold the ABAP types C, D, N, STRING, and T. You want to restrict the use of other ABAP types. Which generic data type must you use in the definition?
+
+당신은 ABAP TYPE C, D, T,  N, STRING TYPE들을 담을 수 있는 GENERIC VARIABLE를 정의하려 한다. 당신은 다른 ABAP TYPE들은 거절 하고 싶다. 다음중 올바른 GENERIC DATA TYPE 정의는? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SIMPLE
+
+##### DATA
+
+## *<u>CLIKE</u>*
+
+##### CSEQUENCE
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 214: 
+
+## Which of the following predefined ABAP types is incomplete?
+
+다음 PREDEFINED ABAP TYPE 중 INCOMPLETE 인 것은? 
+
+#### Please choose the correct answer.
+
+Response:
+
+##### XSTRING
+
+##### STRING
+
+## *<u>P</u>*
+
+##### F
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -1578,6 +1722,108 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 ****
 
 <BR/>
+
+# Question 176: 
+
+## Which boundary conditions lead to improved access time to an internal table?
+
+ITAB 에 ACCESS 하는 시간을 개선할 수 있는 BOUNDARY CONDITION 은?
+
+## 3 correct 
+
+Response: 
+
+## *<u>Fully qualified key for sorted tables</u>*
+
+SORTED TABLE 에 정규화된 키
+
+## *<u>Left justified part of key for sorted tables</u>*
+
+SORTED TABLE 에 키의 LEFT JUSTIFIED PART 
+
+## *<u>Index access for standard tables</u>*
+
+STANDARD TABLE 에 INDEX ACCESS
+
+##### Index access for hashed tables
+
+HASHED TABLE 에 INDEX ACCESS
+
+##### Left justified part of key for hashed tables
+
+HASHED TABLE 에 키의 LEFT JUSTIFIED PART 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 205: 
+
+## How can you declare an internal table using the transparent table A as its line type?
+
+LINE TYPE 으로 TRANSPARENT TABLE A 를 사용하는 ITAB 을 어떻게 선언해 줄 수 있는가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### DATA gt_itab TYPE REF TO a.
+
+## <u>*DATA gt_itab TYPE TABLE OF a.*</u>
+
+##### DATA gt_itab TYPE a.
+
+##### DATA gt_itab TYPE LINE OF a.
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 220: 
+
+## What is variable-length structure called? 
+
+가변길이 STRUCTURE 를 뭐라 부르는가?
+
+#### Please choose the correct answer.
+
+Response:
+
+##### Nested link structure
+
+## *<u>Nested structure</u>*
+
+##### Flat structure
+
+##### Link structure
+
+<BR/>
+
+****
+
+크기가 변하는 structure.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
 
 
 
@@ -2525,6 +2771,168 @@ table type 을 만들 때 필요한 것 : Table key, Line type, access type (sta
 
 <BR/>
 
+# Question 178: 
+
+## Which of the following statements are true?
+
+다음중 사실인 것은?
+
+#### 2 correct 
+
+Response: 
+
+##### A maintenance view is implemented as an inner join.
+
+유지보수 뷰는 INNER JOIN 으로 구현된다.
+
+##### A database view is implemented as an outer join.
+
+DB  뷰는 OUTER JOIN 으로 구현된다.
+
+## *<u>A database view is implemented as an inner join.</u>*
+
+DB 뷰는 INNER JOIN 으로 구현된다.
+
+## *<u>A maintenance view is implemented as an outer join.</u>*
+
+유지보수 뷰는 OUTER JOIN 으로 구현된다.
+
+<BR/>
+
+*****
+
+Help view 도 outer join
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 179: 
+
+## You want to create a transparent table in the ABAP dictionary.
+
+## When the table is physically created in the database?
+
+당신은 ABAP DICTIONARY 에서 TRANSPARENT TABLE 을 생성하기를 원한다.
+
+TABLE 이 DB 에 실질적으로 생성되는 건 언제인가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### When you save the table
+
+##### When you run the database utility transaction (SE14)
+
+##### When you insert the table name and select create
+
+## <u>*When you activate the table*</u>
+
+#### <BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 185: 
+
+## Which SELECT statement will always bypass the SAP table buffers?
+
+SAP TABLE 버퍼를 항상 우회하는 SELECT 문은?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SELECT … INTO TABLE …
+
+##### SELECT … ENDSELECT.
+
+## *<u>SELECT … FOR UPDATE …</u>*
+
+##### SELECT … SINGLE …
+
+<br/>
+
+*****
+
+****
+
+<br/>
+
+# Question 207:
+
+## Which of the following statements are true? 
+
+#### 2 correct 
+
+Response: 
+
+## <u>*A conversion routine can be assigned to a domain.*</u>
+
+CONVERSION ROUTINE 은 DOMAIN 에 할당 될 수 있다.
+
+##### You define the value range in the data element. (domain)
+
+DATA ELEMENT 에서 VALUE RANGE 를 정의할 수 있다.
+
+## <u>*You can enter documentation for the data element in the ABAP Dictionary.*</u>
+
+ABAP DICTIONARY 에서 DATA ELEMENT 를 위한 DOCUMENTATION 를 입력할 수 있다. 
+
+##### A conversion routine can be assigned to a data element. (domain)
+
+CONVERSION ROUTINE 은 DATA ELEMENT 에 할당될 수 있다.
+
+<BR/>
+
+*****
+
+****
+
+<BR/>
+
+# Question 209: 
+
+## What data type you can create in the ABAP Dictionary?
+
+ABAP DICTIONARY 에서 생성할 수 있는 DATA TYPE 은?
+
+#### Please choose the correct answer
+
+Response: 
+
+##### Secondary index
+
+##### Lock object
+
+##### Type group
+
+## *<u>Structure</u>*
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
 
 
 
@@ -3104,7 +3512,219 @@ START-OF-SELECTION EVENT BLOCK 이 시작될 때
 
 <BR/>
 
+# Question 199: 
 
+## In which program types can you create dialog screens?
+
+어떤 프로그램 타입에서 DIALOG SCREEN 을 생성할 수 있는가?
+
+#### 3 correct 
+
+Response: 
+
+## Function group
+
+## Module pool
+
+##### Interface pool
+
+## Executable program
+
+##### Class pool
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 200: 
+
+## ????????????MESSAGE TYPE 과 CHAIN 관련 공부
+
+## A screen has the following PAI flow logic:
+
+PROCESS AFTER INPUT
+FIELD A MODULE check_A
+FIELD A MODULE check_B
+CHAIN.
+FIELD:C,D
+MODULE check_CD
+ENDCHAIN
+FIELD:C,B.
+MODULE check_CB
+ENDCHAIN
+
+## What happens if the application senda a type E message during the check_CB module processing?
+
+프로그램이 check_CB 모듈을 처리하는 동안 E 유형 메시지를 보내면 어떻게 됩니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### The screen is NOT displayed again. Processing terminates and the user must restart the ABAP program
+
+화면이 다시 표시 되지 않는다. 처리가 종료되고 사용자가 ABAP 프로그램을 다시 시작해야한다.
+
+##### The screen is displayed again and the PBO flow logic is processed. Only fields B and C are ready for input.
+
+화면이 다시 표시되고 PBO FLOW LOGIC 이 처리된다. 필드 B 와 C 가 INPUT 될수 있게 된다.
+
+##### The screen is displayed again without processing the PBO flow logic. All fields are ready for input.
+
+PBO FLOW LOGIC 처리 없이 다시 화면이 DISPLAY 된다. 모든 필드들이 INPUT 될 수 있게 된다.
+
+## *<u>The screen is displayed again without processing the PBO logic flow. Only fields B and C are ready for input</u>*
+
+PBO FLOW LOGIC 처리 없이 화면이 다시 DISPLAY 되며 오직 필드 B,C 만이 INPUT 될 수 있게 된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 219: 
+
+## An executable ABAP program contains a standard selection screen and uses the event blocks AT SELECTION SCREEN, AT SELECTION-SCREEN OUTPUT, INITIALIZATION, START-OFSELECTION.
+
+## In which sequence will ABAP runtime call these event blocks?
+
+EVENT BLOCK 순서
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### AT SELECTION-SCREEN OUTPUT => INITIALIZATION => AT SELECTION-SCREEN => START-OF-SELECTION
+
+## *<u>INITIALIZATION => AT SELECTION-SCREEN OUTPUT => AT SELECTION-SCREEN => START-OF-SELECTION</u>*
+
+LOAD-OF-PROGRAM
+INITIALIZATION
+AT SELECTION-SCREEN OUTPUT
+AT SELECTION-SCREEN
+START-OF-SELECTION
+END-OF-SELECTION
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+****
+
+*****
+
+****
+
+# CODE INSPECTOR
+
+# Q56.
+
+## What can you do with the code inspector?
+
+CODE INSPECTOR 로 할 수 있는 것은?
+
+#### 2 correct
+
+## *<u>Create your own inspections, object sets and check variants</u>*
+
+자체 검사, 개체 세트 및 변형 확인
+
+## *<u>Create an object set to represent the programs and objects to be inspected</u>*
+
+검사할 프로그램 및 개체를 나타내는 OBJECT 집합을 생성
+
+##### Create only local inspections, objects sets and check variants (global 가능)
+
+로컬 검사와 OBJECT 집합만을 생성하며 변수 검사 수행
+
+##### Choose from only the performance, security and user interface check categories
+
+성능, 보안, 사용자 인터페이스 검사 카테고리에서만 선택
+
+<BR/>
+
+****
+
+프로그램 coding check : (tcode : SCI)
+다국어 처리, 변수 선언 후 미사용. local, global 생성
+setup : inspection name, object set name, check variant name
+
+****
+
+<BR/>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 177: 
+
+## Which of the following can you do with the SAP code inspector?
+
+다음 중 CODE INSPECTOR 로 할 수 있는 것은? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Monitor background tasks
+
+BACKGROUND TASK 모니터링
+
+##### Monitor runtime behavior
+
+RUNTIME 동작 모니터링
+
+##### Analyze runtime data.
+
+RUNTIME DATA 분석
+
+## *<u>Perform static code checks</u>*
+
+STATIC CODE 검사 수행
+
+<BR/>
+
+****
+
+Runtime check 아니다.!
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3404,11 +4024,155 @@ OBJECT NAVIGATOR 의 설정에서 CLASSIC DEBUGGER 를 기본으로 설정한 �
 
 <BR/>
 
+# Question 182: 
 
+## Which desktops are part of the new ABAP debugger?
 
+다음중 ABAP DEBUGGER 의 일부인 것은?
 
+#### 3 correct 
 
+Response: 
 
+##### Session
+
+## *<u>Desktop 1</u>*
+
+## *<u>Objects</u>*
+
+## *<u>Break./Watchpoints</u>*
+
+##### List
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 191: 
+
+## You are using the new debugger and you want to change the content of an internal table.Which actions are allowed?
+
+당신은 NEW DEBUGGER 를 사용중이다. 또한 당신은 ITAB 의 CONTENT 를 바꾸길 원한다. 허용되는 행위는 무엇인가?
+
+## 3 correct 
+
+Response: 
+
+## *<u>Delete the selected rows.</u>*
+
+선택된 ROW 삭제
+
+##### Delete table from memory.
+
+메모리 부터 TABLE 삭제 
+
+## *<u>Delete the entire contents of a table.</u>*
+
+테이블의 CONTENT 전체 삭제
+
+## *<u>Change row content and press Enter (\<ENTER>).</u>*
+
+ROW CONTENT 변경, ENTER 키 누르기
+
+##### Change row content and press Save (\<CTRL> + S).
+
+ROW CONTENT 변경, SAVE 버튼(\<CTRL> + S) 누르기
+
+<BR/>
+
+*****
+
+행 추가, 행 삭제 등 가능.
+
+*****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 212: 
+
+## How can you add a session breakpoint to your program?
+
+프로그램에서 BREAKPOINT 을 어떻게 추가할 수 있는가?
+
+#### 2 correct 
+
+Response: 
+
+## <u>*Set a breakpoint in the ABAP editor*</u>
+
+ABAP EDITOR 에서 BREAKPOINT 설정한다.
+
+##### Set a breakpoint in the ABAP editor and select Save.
+
+ABAP 편집기에서 BREAKPOINT 을 설정하고 저장을 선택한다.
+
+##### Set a breakpoint in the ABAP debugger and press F8
+
+ABAP 디버거에서 BREAKPOINT 을 설정하고 F8 키를 누른다.
+
+## <u>*Execute command /h*</u>
+
+/h 명령 실행 한다.
+
+<BR/>
+
+*****
+
+debug 를 하기 위한 break point 문제
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 216: (그냥 한번 봐둬라.. )
+
+## If you are using external debugging (debugging of HTTP and RFC requests, which arrive in your ABAP system), what will the Debugger do?
+
+EXTERNAL DEBBUGING (ABAP 시스템에 도착하는 HTTP 및 RFC 요청 디버깅)을 사용하는 경우 DEBUGGER 는 무엇을 합니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>May or may not stop, depending on external factors.</u>*
+
+외부 요인에 따라 중지되거나 중지되지 않을 수 있다.
+
+##### Always stop when the external breakpoint is reached.
+
+외부 중단점에 도달하면 항상 중지한다.
+
+##### Never stop; external breakpoints operate on users other than your own.
+
+절대 중단되지 않는다. 외부 중단점은 사용자가 아닌 다른 사용자에서 작동한다.
+
+##### Do not stop when the external breakpoint is reached.
+
+외부 중단점에 도달했을 때 중지하지 않는다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3776,7 +4540,37 @@ All or Nothing 처리를 위해 (for data consistency)
 
 <BR/>
 
+# Question 215: ????????????????
 
+## Which statement is true?
+
+#### Please choose the correct answer.
+
+Response: 
+
+#### A database LUW cannot be placed within an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 내에 배치할 수 없다.
+
+#### A database LUW must be placed within an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 내에 있어야 한다.
+
+## <u>*An SAP LUW must be placed within a database LUW.*</u>
+
+SAP LUW는 데이터베이스 LUW 내에 배치되어야 한다.
+
+#### A database LUW must be placed without an SAP LUW.
+
+데이터베이스 LUW는 SAP LUW 없이 배치해야 한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -3890,7 +4684,173 @@ call screen 200 : 200으로 갔다가 다시 호출 위치로 돌아온다.
 
 <BR/>
 
+# Question 172: 
 
+## Each button on a Dynpro (screen) requires the assignment of a function code. This function code…
+
+DYNPRO(SCREEN) 의 각 버튼은 FUNCTION CODE 의 할당이 요구된다. 이 FUNCTION CODE 는 ...
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Prevents the function code from be assigned to a menu item.
+
+FUNCTION CODE가 MENU ITEM에 할당되지 않도록 합니다.
+
+## *<u>Can be used to identify when the button is clicked by looking for the function code in the screen’s OK_CODE field.</u>*
+
+화면의 OK_CODE 필드에서 FUNCTION CODE를 찾아 버튼을 클릭할 때 사용할 수 있습니다.
+
+##### Is used to define global variables that receive a value when the button is clicked.
+
+버튼을 클릭할 때 값을 받는 전역 변수를 정의하는 데 사용됩니다.
+
+##### Prevents the function code from be assigned to a category item.
+
+FUNCTION CODE가 CATEGORY ITEM 에 할당되지 않도록 합니다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 186: 
+
+## Your program performs a data base update by calling function modules in an update task.
+
+프로그램은 업데이트 작업에서 함수 모듈을 호출하여 데이터베이스 업데이트를 수행합니다. 
+
+## Which ABAP statements can be used in the program to discard all update requests for the current SAP logical unit of work(LUW)?
+
+프로그램에서 현재 SAP LUW(논리 작업 단위)에 대한 모든 업데이트 요청을 취소하는 데 사용할 수 있는 ABAP 문장은 무엇입니까?
+
+#### 3 correct 
+
+Response: 
+
+## <u>*MESSAGE TYPE A*</u>
+
+##### MESSAGE TYPE E
+
+## <u>*ROLLBACK WORK*</u>
+
+## <u>*MESSAGE TYPE X*</u>
+
+##### MESSAGE TYPE W
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 188: 
+
+## How do you embed a subscreen in a main screen?
+
+MAIN SCREEN 에 SUBSCREEN 을 EMBED 하려면 어떻게 해야하는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Use SET SUBSCREEN in the flow logic of the main screen.
+
+MAIN SCREEN 의 FLOW LOGIC 에 SET SUBSCREEN 구문을 사용한다. 
+
+##### Use SET SUBSCREEN in a PBO module of the main screen.
+
+MAIN SCREEN 의 PBO MODULE 에 SET SUBSCREEN 구문을 사용한다.
+
+##### Use CALL SUBSCREEN in a PBO module of the main screen (pai, pbo 모두에서 call 해주어야 한다)
+
+MAIN SCREEN 의 PBO MODULE 에 CALL SUBSCREEN 구문을 사용한다.
+
+## *<u>Use CALL SUBSCREEN in the flow logic of the main screen.</u>*
+
+MAIN SCREEN 의 FLOW LOGIC 에 CALL SUBSCREEN 구문을 사용한다.
+
+<BR/>
+
+****
+
+call subscreen 으로 호출 하며 main screen 의 logic 을 PAI, PBO 모두 넣어주어야 한다.
+
+****
+
+<BR/>
+
+*****
+
+*****
+
+<BR/>
+
+# Question 202: ????????????????????????????
+
+## At most, how many menu items (including functions, separators and sub- menus) can a menu have on the screen?
+
+최대 몇 개의 메뉴 항목(INCLUDING FUNCTION, SEPARATORS AND SUB- MENUS)을 화면에 표시할 수 있습니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### 10
+
+##### 20
+
+## *<u>15</u>*
+
+##### None of the above
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 206: 
+
+## What is mandatory for automatic data transport between a variable and an input field on a classical screen (dynpro)?
+
+CLASSICAL SCREEN(DYNPRO)에서 변수와 인풋 필드 사이의 자동 데이터 전송을 위해 필수적인 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### The property OUTPUT of the input field must be set.
+
+INPUT FIELD 의 OUTPUT PROPERTY 가 서정되어야 한다. 
+
+## <u>*The name of the variable and the name of the input field must be identical.  (same name)*</u>
+
+변소의 일므과 INPUT FIELD 의 이름은 동일해야한다.
+
+##### The variable must be declared using the DATA statement.
+
+DATA 구문을 사용하여 변수를 선언해주어야 한다.
+
+##### The variable must be declared using the TABLES statement.
+
+TABLES 구문을 사용하여 변수를 선언해 주어야한다.
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
 
 
 
@@ -4067,6 +5027,100 @@ double-clicking 이벤트에 필요한 것.
 ****
 
 <BR/>
+
+# Question 175: 
+
+## To reserve an area on the screen for an ALV Grid Control, you must do the following:
+
+ALV GRID CONTROL 을 위한 SCREEN 의 AREA를 예약하기 위해 무엇을 해야하는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Create an object (instantiate the object) of the class CL\_GUI\_ALV\_GRID 
+
+CL\_GUI\_ALV\_GRID CLASS 의 OBJECT 를 생성한다.
+
+## *<u>Use the Screen Painter</u>*
+
+SCREEN PAINTER 를 사용한다.
+
+##### Create an object (instantiate the object) of the class CL\_GUI\_CUSTOM\_CONTAINER
+
+CL\_GUI\_CUSTOM\_CONTAINER CLASS 의 OBJECT 를 생성한다.
+
+##### Create an object (instantiate the object) of the class CL\_SALV\_TABLE 
+
+CL\_SALV\_TABLE CLASS의 OBJECT 를 생성한다.
+
+<BR/>
+
+****
+
+Screen painter 에서 custom control을 위치 시킨다 > container class 생성 > alv class 생성 > wa, tab 입력.
+
+*****
+
+<BR/>
+
+*****
+
+*****
+
+<BR/>
+
+# Question 198: 
+
+## What are the differences between displaying in a full screen and in a container?
+
+FULL SCREEN 과 CONTAINER 에서 DISPLAY 하는 것의 차이는 무엇인가?
+
+#### 2 correct 
+
+Response: 
+
+##### Only a full-screen ALV allows the use of event handling.
+
+FULL-SCREEN ALV 만 EVENT HANDLING 을 사용할 수 있다.
+
+##### The full screen requires Dynpro programming.
+
+FULL SCREEN 은 DYNPRO PROGRAMMING 을 요구한다. 
+
+## *<u>The container requires the use of an additional object</u>*
+
+CONTAINER 는 ADDITIONAL OBJECT 의 사용이 요구된다.
+
+(CL_GUI_CUSTOM_CONTAINER CLASS 를 이용함.)
+
+#### Only an ALV in a container allows the use of event handling.
+
+오직 CONATINER 에서의 ALV  만이  EVENT HANDLING 이 허용된다. 
+
+#### The only difference is that the container name must be specified when creating the ALV object.
+
+단 하나의 차이점은 CONTAINER NAME 이 ALV OBJECT 를 생성할때 특정되어야 한다는 것이다.
+
+## *<u>Any type of ALV allows the use of event handling.</u>*
+
+어떤  ALV 의 타입이든  EVENT HANDLING 의 사용이 허용된다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
 
 
 
@@ -5030,7 +6084,188 @@ SUBCLASS METHOD는 SUPER CLASS METHOD보다 낮은 visibility 를 가진다.
 
 <BR/>
 
+# Question 181: 
 
+## What does the Refactoring Assistant allow you to do?
+
+REFACTORING ASSISTANT 는 어떤 작업을 할 수 있는가?
+
+#### 2 correct 
+
+Response: 
+
+Rename all subclasses of a method
+
+Rename all occurrences of a method
+
+## *<u>Move between classes and interfaces</u>*
+
+## *<u>Move components between superclasses and subclasses</u>*
+
+<BR/>
+
+****
+
+Refactoring : up, down casting, 클래스 간 또는 인터페이스 간 이동
+
+****
+
+<BR/>
+
+# Question 187: ??????????????????????
+
+## Which statements are true about a class that has granted friendship to another class?
+
+다음 중 다른 클래스에 FRIENDSHIP을 부여한 클래스에 대한 설명 중 옳은 것은?
+
+#### 4 correct
+
+Response: 
+
+## *<u>All classes that inherit from the friend (subclasses) also have the same access.</u>*
+
+친구로 부터 상속받은 모든 CLASS 들은 같은 ACCESS 권한을 갖는다.
+
+## *<u>The friend has access to protected attributes.</u>*
+
+FRIEND 는 PROTECTED 속성에 접근할 수 있다.
+
+##### All classes the friend has granted friendship access status to also have the same access.
+
+FRIEND 가 FRIENDSHIP 접근 STATUS를 부여한 모든 클래스도 동일한 접근 권한을 가진다.
+
+## *<u>The friend has access to private attributes.</u>*
+
+FRIEND 는 PRIVATE 속성에 액세스할 수 있다.
+
+## *<u>The friend has access to public attributes.</u>*
+
+FRIEND 는 PUBLIC 속성에 접근할 수 있다.
+
+<BR/>
+
+****
+
+Granting friendship is not inherited. A friend of a superclass is, therefore, not automatically a friend of its subclasses.
+
+FRIENDSHIP 을 부여하는 것은 상속되지 않는다. 그러므로 SUPERCLASS 의 FRIEND 는 자동적으로 SUBCLASS 의 FRIEND가 아니다.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 189: 
+
+## You use Unified Modelling language (UML) to design your classes. You want to describe the message exchange between objects. Which diagram can you use?
+
+당신은 CLASS 를 DESIGN 하기 위해 UML(UNIFIED MODELLING LANGUAGE) 을 사용한다. 
+
+당신은 OBJECT 간 MESSAGE 교환을 설명하려 한다. 
+
+어떤 DIAGRAM 을 사용할 수 있는가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Class diagram
+
+##### Object diagram
+
+##### Component diagram
+
+## *<u>Sequence diagram</u>*
+
+<BR/>
+
+****
+
+객체와 객체간의 데이터 이동 diagram.
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 210: 
+
+## You want to loop over an internal table without copying each table row to a work area.How can you achieve this using a field symbol?
+
+당신은 각 TABLE ROW를  WORK AREA 로 복사하지 않고 ITAB 위를 루프하려고 한다. FIELD SYMBOL을 사용하여 이 작업을 수행할 수 있는 방법은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### LOOP AT \<itab> REFERENCE INTO \<field_symbol>. ENDLOOP.
+
+##### LOOP AT \<itab> INTO \<field_symbol>. ENDLOOP.
+
+## <u>*LOOP AT \<itab> ASSIGNING \<field_symbol>. ENDLOOP.*</u>
+
+##### LOOP AT \<itab> TRANSPORTING INTO \<field_symbol>. ENDLOOP.
+
+<BR/>
+
+*****
+
+
+field symbol 사용 syntax 문제
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 213: ??????????????????????????????
+
+## For which of the following requirements can you implement a functional method?
+
+다음 요구 사항들 중 FUNCTIONAL METHOD 를 구현 할 수 있는 것은? 
+
+#### 2 correct answers 
+
+Response: 
+
+## <u>*A factory method that returns an object reference*</u>
+
+OBJECT REFERENCE 를 반환하는 FACTORY METHOD 
+
+##### A method to set an instance attribute with one importing parameter and no other parameters
+
+다른 PARAMETER 를 제외하고 하나의 IMPORTING PARAMETER 를 사용하여 INSTANCE ATTRIBUTE 를  설정하는 METHOD 
+
+##### A handler method for an event that has a returning parameter
+
+RETURNING PARAMETER 를 가지는 EVENT 를 위한 HANDLER METHOD 
+
+## <u>*A private static helper method that returns a single value as the result of an algorithm*</u>
+
+알고리즘의 결과로 SINGLE VALUE 를 반환하는 PRIVATE STATIC HELPER METHOD 
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -5993,6 +7228,234 @@ https://www.guru99.com/what-is-user-and-customer-exits.html
 
 <BR/>
 
+# Question 183: 
+
+## You have located a new (kernel) Business Add-in(BAdI) in an SAP standard application.
+
+## What must you create to implement the BAdI, and in which order?
+
+당신은 SAP APPLICATION 에서 새로운 BAdI를 찾았다.
+
+BAdI를 구현하기 위해 무엇을 생성하고 무엇을 지시해야하는가?
+
+#### Please choose the correct answer.
+
+#### Note: Answers of this question are not verified by our experts, please study yourself and select the appropriate answers.
+
+#### 이 질문에 대한 답변은 전문가에 의해 검증되지 않습니다. 직접 학습한 후 적절한 답변을 선택하십시오.
+
+Response: 
+
+## <u>*· Enhancement Spot Implementation*</u>
+
+## <u>*· BAdI Implementation*</u>
+
+<BR/>
+
+##### · Enhancement Project
+
+##### · BAdI Implementation
+
+<BR/>
+
+##### · BadI Implementation
+
+##### · Enhancement Project
+
+<BR/>
+
+##### · BAdI Implementation
+
+##### · Enhancement Spot Implementation
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 184: 
+
+## Which of the following statements are true?
+
+다음중 옳은 것은?
+
+#### 3 correct 
+
+Response: 
+
+## *<u>Implicit enhancement can be used to enhance SAP objects developed prior to SAP NetWeaver 7.0.</u>*
+
+IMPLICIT ENHANCEMENT SAP NETWEAVER 7.0 이전 버전에서 개발한 SAP OBJECT 를 ENHANCE할 수 있다.
+
+## *<u>An implicit enhancement point can be used to insert code in an SAP program and is always available to the customer.</u>*
+
+IMPLICIT ENHANCEMENT POINT 는 SAP PROGRAM 에 CODE 를 삽입될 수 있으며 고객은 항상 사용할 수 있다. 
+
+## *<u>Implicit enhancement options allow you to enhance interface parameters for function modules and methods without modifying the repository object.</u>*
+
+IMPLICIT ENHANCEMENT OPTION 은 REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
+
+##### None of the above.
+
+답이 없다.
+
+<BR/>
+
+****
+
+implicit 의 경우 function 또는 method에 parameter 등이 가능하다 (optional parameters 일 때)
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 190: 
+
+## Which of the following enhancement options does not require any preparation from SAP?
+
+다음 ENHANCEMENT OPTION 들 중 SAP 로 부터 어떠한 준비도 필요하지 않는 것은? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Explicit enhancement point
+
+## <u>*Implicit enhancement point*</u>
+
+##### Explicit enhancement sections
+
+##### New BAdIs
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 201: 
+
+## You created a transparent table and during activation got a warning message "Enhancement category for table missing".
+
+## What do you have to do to eliminate the warning message? 
+
+당신은 투명 테이블을 성하였다 그리고 활성화하는 동안  "Enhancement category for table missing" WARNING MESSAGE 가 표시되었다. WARNING MESSAGE 를 없애려면 어떻게 해야 하는가? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+#### Select the option Not Classified from the enhancement category.
+
+ENHANCEMENT CATEGORY 에서 NOT CLASSIFIED OPTION 을 선택한다. 
+
+#### Provide the correct reference field for the Currency or Quantity field.
+
+통화 또는 수량 필드에 올바른 REFERENCE FIELD 를 제공한다. 
+
+## *<u>Select any option other than Not Classified from the enhancement category</u>*
+
+ENHANCEMENT CATEGORY 에서 NOT CLASSIFIED 이외의 OPTION 을 선택한다.
+
+#### Change the Data Class and Size category in the technical settings.
+
+TECHNICAL SETTING 에서 DATA CLASS 와 SIZE CATEGORY 를 변경한다.
+
+<BR/>
+
+****
+
+https://sssinga.tistory.com/227
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 203: 
+
+## Your task is to enhance the screen of an SAP standard application.
+
+## How do you determine if there is a customer exit for this task?
+
+당신의 작업은 SAP STANDARD APPLICATION 의 화면을 ENHANCE 하는 것이다.
+
+이 작업에 대한 CUSTOMER EXIT 이 있는지 어떻게 확인합니까?
+
+#### Please choose the correct answer.
+
+Response: 
+
+## *<u>You search in the flow logic of the screen for CAL CUSTOMER-SUBSCREEN statement</u>*
+
+화면의 FLOW LOGIC에서 CALL CUSTER-SUBSCREEN 문을 검색합니다.
+
+##### You search in the source code of the application for GET BADI statement
+
+응용 프로그램의 소스 코드에서 GET BADI 문을 검색합니다.
+
+##### You use the BAdI Builder (transaction SE19) to check for a suitable Business Add-In(BAdI)
+
+BADI Builder(T-CODE SE19)를 사용하여 적합한 BADI 가 있는지 확인합니다.
+
+##### You search in the SAP reference Implementation Guide (IMG) for a suitable user exit
+
+적절한 USER EXIT 를 SAP 참조 IMPLEMENTATION GUIDE (IMG)에서 검색한다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 208: 
+
+## Which of the following can you use to enhance SAP standard tables and structures with fields?
+
+다음중 SAP STANDARD TABLE 과 STRUCTURE 에서 FIELD 에 대해 ENHANCE 할 때 사용할 수 있는것은?? 
+
+#### 2 correct 
+
+Response: 
+
+## <u>*Customizing includes (ci_include)*</u>
+
+##### Append search helps
+
+##### Field exits
+
+## *<u>Append structures</u>*
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+
+
+
+
 
 
 
@@ -6553,9 +8016,73 @@ Hook method는 system에서 자동으로 호출되는 method
 
 <BR/>
 
+# Question 180: (skip)
 
+## When does the lifetime of a component controller begin and end?
 
+COMPONENT CONTROLLER 의 LIFETIME 시작과 끝은 언제인가?
 
+#### Please choose the correct answer.
+
+Response: 
+
+##### It begins the first time the Web Dynpro application is called at runtime and ends when the Web Dynpro application that called and instantiated the component ends.
+
+WEB DYNPRO 응용 프로그램이 런타임에 처음 호출될 때 시작되며 구성 요소를 호출하고 인스턴스화한 WEB DYNPRO 응용 프로그램이 종료될 때 종료됩니다.
+
+##### It begins with the Web Dynpro component and ends with the Web Dynpro application that called it.
+
+WEB DYNPRO 구성 요소로 시작하여 WEB DYNPRO 응용 프로그램으로 끝납니다.
+
+## *<u>It lasts from creating data within the controller to cover the whole period during which the component is in use.</u>*
+
+컨트롤러 내에서 데이터를 생성하여 구성 요소가 사용 중인 전체 기간을 커버할 때까지 지속됩니다.
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 196: 
+
+## Identify the types of controller. 
+
+CONTROLLER 의 TYPE 을 식별하라
+
+## 5 correct 
+
+## Custom controller
+
+## Window controller
+
+Consumer controller
+
+## View controller
+
+## Configuration controller
+
+## Component controller
+
+<BR/>
+
+****
+
+Web dynpro 의 controller 
+
+https://wiki.scn.sap.com/wiki/display/WDABAP/Controllers+in++Web+Dynpro+for+ABAP
+
+****
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -7015,50 +8542,6 @@ select * appending it from abc. => 기존 데이터에 추가해서 입력
 
 <BR/>
 
-# Q56.
-
-## What can you do with the code inspector?
-
-CODE INSPECTOR 로 할 수 있는 것은?
-
-#### 2 correct
-
-## *<u>Create your own inspections, object sets and check variants</u>*
-
-자체 검사, 개체 세트 및 변형 확인
-
-## *<u>Create an object set to represent the programs and objects to be inspected</u>*
-
-검사할 프로그램 및 개체를 나타내는 OBJECT 집합을 생성
-
-##### Create only local inspections, objects sets and check variants (global 가능)
-
-로컬 검사와 OBJECT 집합만을 생성하며 변수 검사 수행
-
-##### Choose from only the performance, security and user interface check categories
-
-성능, 보안, 사용자 인터페이스 검사 카테고리에서만 선택
-
-<BR/>
-
-****
-
-프로그램 coding check : (tcode : SCI)
-다국어 처리, 변수 선언 후 미사용. local, global 생성
-setup : inspection name, object set name, check variant name
-
-****
-
-<BR/>
-
-<BR/>
-
-****
-
-****
-
-<BR/>
-
 # Q57.
 
 ## Which comparison operators can you use in a logical expression related to the WHERE clause of the SELECT statement?
@@ -7390,9 +8873,135 @@ int = 5 * ( 3 / 10 ).
 
 <BR/>
 
+# Question 173: 
 
+## For a given date(variable lv_date), you want to find all the connections from Frankfurt to Sydney with exactly one stopover. You want to fly from the stopover city to Sydney on the same day you arrive in the stopover city.Table ZFLIGHTS hold the following information about flights.
 
+## -flightid: primary key
 
+## -cityfrom:departure city
+
+## -datefrom: departure date
+
+## -timefrom:departure time
+
+## -cityto:destination city
+
+## -dateto:destination date
+
+## -timeto:destination time
+
+## Which of the following Open SQL Queries can you use to find all the possible stopover cities?
+
+당신은 주어진 날짜 (LV_DATE 변수) 를 통해 FRANKFURT 에서 SYDNEY 까지의 모든 연결편을 찾기를 원한다. 
+
+당신은 단기 체류할 도시에 도착한 동일한 날에 단기 체류할 도시에서 SYDNEY 까지 비행을 통해 이동하길 원한다.
+
+TABLE ZFLIGHTS 는 다음과 같은 비행 정보를 담고 있다.
+
+ 다음 OPEN SQL QUERY 들 중 모든 체류 가능한 도시들을 찾는데 용할 수 있는 것은 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### SELECT DISTINCT cityto INTO TABLE lt_cities FROM zflights AS destination
+
+#####  WHERE cityfrom IN (SELECT cityto FROM zflights
+
+#####  WHERE dateto = destination~datefrom AND
+
+#####  timeto < destination~timefrom AND
+
+#####  cityfrom = ‘FRANKFURT’ AND
+
+#####  datefrom = lv_date )
+
+#####  AND destination~cityto = ‘Sydney’
+
+<BR/>
+
+##### SELECT cityto INTO TABLE lt_cities FROM zflights AS destination
+
+#####  WHERE cityfrom IN (SELECT DISTINCT cityto FROM zflights
+
+#####  WHERE dateto = destination~datefrom AND
+
+#####  timeto < destination~timefrom AND
+
+#####  cityfrom = ‘FRANKFURT’ AND
+
+#####  datefrom = lv_date )
+
+#####  AND destination~cityto = ‘Sydney’
+
+<br/>
+
+##### SELECT cityfrom INTO TABLE lt_cities FROM zflights AS destination
+
+#####  WHERE cityto IN (SELECT DISTINCT cityfrom FROM zflights
+
+#####  WHERE dateto = destination~datefrom AND
+
+#####  timeto < destination~timefrom AND
+
+#####  cityfrom = ‘FRANKFURT’ AND
+
+#####  datefrom = lv_date )
+
+#####  AND destination~cityto = ‘Sydney’
+
+<BR/>
+
+## <u>*SELECT DISTINCT cityfrom INTO TABLE lt_cities FROM zflights AS destination*</u>
+
+##  <u>*WHERE cityfrom IN (SELECT cityto FROM zflights*</u>
+
+##  <u>*WHERE dateto = destination~datefrom AND*</u>
+
+##  <u>*timeto < destination~timefrom AND*</u>
+
+##  <u>*cityfrom = ‘FRANKFURT’ AND*</u>
+
+##  <u>*datefrom = lv_date )*</u>
+
+##  <u>*AND destination~cityto = ‘Sydney’*</u>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+# Question 204: 
+
+## Which options are available for a JOIN in ABAP Open SQL?
+
+다음중 ABAP OPEN SQL 에서 JOIN 에 가능한 OPTION 은?
+
+#### 3 correct 
+
+Response: 
+
+##### CROSS JOIN
+
+## <u>*INNER JOIN*</u>
+
+## <u>*LEFT OUTER JOIN*</u>
+
+## <u>*FULL JOIN*</u>
+
+##### RIGHT OUTER JOIN
+
+<BR/>
+
+****
+
+****
+
+<BR/>
 
 
 
@@ -7454,7 +9063,9 @@ int = 5 * ( 3 / 10 ).
 
 # 노답,,
 
-# 217번이랑 같은 문제인데 답이 다름
+# Q93.
+
+## 217번이랑 같은 문제인데 답이 다름
 
 ## What is the difference between a Unicode and non-Unicode program? 
 
