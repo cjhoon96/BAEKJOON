@@ -16,7 +16,7 @@
 
 ****
 
-# SAP ARCHITECTURE
+# SAP ARCHITECTURE.
 
 
 
@@ -197,7 +197,7 @@ SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플�
 
 ***
 
-# DATA TYPE
+# DATA TYPE.
 
 https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-18-Data-TypeBuilt-in-Data-Types
 
@@ -495,7 +495,7 @@ Predefined data types with special semantic attributes.
 
 ****
 
-# DATA OBJECTS
+# DATA OBJECTS.
 
 
 
@@ -595,7 +595,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 ****
 
-# ABAP DICTIONARY
+# ABAP DICTIONARY.
 
 ## 생성할 수 있는 것들
 
@@ -612,6 +612,10 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 
 ## DATABASE  TABLE
+
+DB 의 TRANSPARENT TABLE 의 FIELD 순서는 ABAP DICTIONARY 에서의 정의와 다르게 정의되는 것이 허용된다.
+
+https://answers.sap.com/questions/2218390/transparent-table.html
 
 * ### TRANSPARENT TABLE
 
@@ -781,6 +785,8 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 VALUE RANGE 를 정의할 수 있다.
 
+FIXED VALUE 를 할당할 수 있따.
+
 CONVERSION ROUTINE 을 정의할 수 있다.
 
 * ### CONVERSION ROUTINE 
@@ -903,11 +909,17 @@ CONVERSION ROUTINE 을 정의할 수 있다.
 
     즉시 리스트 조회
 
-  **LPos** : 컬럼 순서
+  **LPos** : 컬럼 순서 (SEARCH HIT LIST 의 SEARCH HELP PARAMTER 위치)
 
-  **SPos** : Dialog 컬럼 순서
+  **SPos** : Dialog 컬럼 순서 (DIALOG SCREEN 의 INPUT FIELD 위치)
+
+  **IMP** : SEARCH HELP 를 띄우기 전 SEARCH HELP 를 사용하는 OBJECT 로 부터 WHRJS RKQTDMF QKESMS VKFKALXJ
 
   **Exp** : 선택값 return 값 결정
+
+  IMP, EXP FLAG 에 의해 INTERFACE 정의됨
+
+  TEXT TABLE 이 SELECTIONMETHOD 에서 사용중인 DB TABLE 에 연결되어있다면 SELECTION METHOD 의 TEXT TABLE 이 자동으로 채워진다.
 
   데이터는 selection-method. 
 
@@ -932,6 +944,8 @@ CONVERSION ROUTINE 을 정의할 수 있다.
 
 
 ## LOCK OBJECT
+
+* ABAP DICTIONARY 를 사용하여 LOCK OBJECT 를 생성한다. LOCK MODULE 은 자동으로 생성된다.
 
 ### 락을 잡으려 하다가 못 잡을 때 발생하는 에러
 
@@ -960,7 +974,7 @@ https://papago.naver.com/?sk=auto&tk=ko&st=Which%20screen%20in%20the%20ABAP%20Di
 
 ****
 
-# OBJECT NAVIGATOR
+# OBJECT NAVIGATOR.
 
 
 
@@ -1004,11 +1018,13 @@ BAdIS 는 SE18, SE19 에서 관리.
 
 *****
 
-# PROGRAMS
+# PROGRAMS.
 
 
 
-변수의 메모리는 프로그램이 내부 세션에 LOAD 되는 즉시 예약된다. (확인 필요)
+**변수의 메모리는 프로그램이 내부 세션에 LOAD 되는 즉시 예약된다. (확인 필요)**
+
+#### **프로그램 수정 후 ACTIVATE 하여야 타 계정에서 수정된 버전의 PROGRAM 을 확인할 수 있다.** 
 
 ## introductory statements for programs :
 
@@ -1028,6 +1044,14 @@ https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_stat
 * 구문은 . 으로 끝나야한다. 
 * KEYWORD 로 시작되야할 필요 없으며 시작 될 수도 있다. 
 * 대소문자에대한 구분이 없다.
+
+
+
+## SELECTION SCREEN 정의에 사용되는 선언문
+
+* PARAMETERS
+* SELECT-OPTIONS
+* SELECTION-SCREEN
 
 
 
@@ -1071,9 +1095,15 @@ CLASS-POOL 대신 PROGRAM 이 답에 포함 되야 하는가????
 
 LOAD-OF-PAGE 
 
+* 모든 실행가능한 구문을 포함한 프로그램에 존재할 수 있는 EVENT BLOCK
+
 -> ***<u>INITIALIZATION</u>*** 
 
+* PROGRAM 실행시 단 한번만 수행한다.
+
 -> AT SELECTION-SCREEN OUTPUT 
+
+* 여러번 수행될 수 있다. PBO 같은 역할
 
 -> ***<u>AT SELECTION-SCREEN</u>*** [ON] [VALUE-REQUEST FOR]  
 
@@ -1147,7 +1177,7 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 
 ****
 
-# CODE INSPECTOR
+# CODE INSPECTOR.
 
 ##   (tcode : SCI)
 
@@ -1178,7 +1208,7 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 
 ****
 
-# MESSAGE 
+# MESSAGE .
 
 
 
@@ -1206,7 +1236,7 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 
 ****
 
-# DEBUGGER
+# DEBUGGER.
 
 ## 기능
 
@@ -1316,7 +1346,7 @@ ABAP 시스템에 도착하는 HTTP 및 RFC 요청 디버깅 하는 경우 외�
 
 ****
 
-# Modularization
+# Modularization.
 
 
 
@@ -1351,10 +1381,11 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
   FUNCTION GROUP 을 생성시 
 
   * **1개의 FUNCTION POOL** 과
+  * 접두사 : SAPL
   * **두개의 INCLUDE 파일** 
     * **TXX** - 전역변수
     * **UXX** - FUNCTION 프로그램
-
+  
   이 생성된다.
   
 * ### PARAMETERS
@@ -1400,7 +1431,7 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 
 ****
 
-# SAP LUW
+# SAP LUW.
 
 LUW는 DIALOG 에서 UPDATE INSERT DELETE 등의 수정을 한 내역을 LOGDATA에 저장하고, UPDATE PROCESS 를 거쳐서 수정할 내역을 GROUPING 하여 DB 프로세스에 저장하는 개념이다.
 
@@ -1432,13 +1463,25 @@ SAP LUW 는 DB LUW 내에 배치 되어야 한다.
 
 
 
-****
+## DB LOCK 이 해제되는 경우
+
+* The display of a dialog message type E
+* The display of an SAP screen
+* A CALL TRANSACTION
+* A SUBMIT
+* The display of a dialog message type A
+* An “/n” in the command field
+* COMMIT WORK
+
+
 
 ****
 
 ****
 
-# SCREEN
+****
+
+# SCREEN.
 
 ## INPUT FIELD
 
@@ -1521,7 +1564,7 @@ https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4a/44b362954c0453e10000000a42
 
 ****
 
-# ALV GRID
+# ALV GRID.
 
 
 
@@ -1583,13 +1626,34 @@ double-clicking 이벤트에 필요한 것.
 
 
 
-****
+이게 뭔지는 모르겠으나 문제로 나와서 정리한다.
+
+|                                                              | ALV GRID | ALV OBJECT MODEL |
+| ------------------------------------------------------------ | :------: | :--------------: |
+| DEFINE SORT CRITERIA FOR INITIAL DISPLAY                     |  **O**   |      **O**       |
+| USE A REFERENCE TO THE DATA TABLE FOR DISPLAY                |  **O**   |      **O**       |
+| REQUIRE A TABLE REFRESH AFTER PROGRAMMATICALLY CHANGING THE ALV |  **O**   |      **X**       |
+|                                                              |          |                  |
+
+이거 같다
+
+ https://www.stechies.com/oops--alv/
+
+
+
+
+
+
+
+
 
 ****
 
 ****
 
-# OOP
+****
+
+# OOP.
 
 
 
@@ -1611,7 +1675,9 @@ https://abapta0903.tistory.com/5 CLASS 구성 요소 설명
 
 
 
-ABAP OOP 에서 자기자신으로 사용되는 변수는 ME 이다.
+### PUBLIC SECTION => PROTECTED SECTION => PRIVATE SECTION 순으로 작성
+
+### ABAP OOP 에서 자기자신으로 사용되는 변수는 ME 이다.
 
 ## FIELD SYMBOL
 
@@ -1964,7 +2030,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ****
 
-# ENHANCEMENT
+# ENHANCEMENT.
 
 * **<u>*Repository Information System(SE84)*</u>** > Enhancement > customer exit or enhancement
 
@@ -2030,6 +2096,8 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 미리 지정된 (일반적으로 SAP 에서 정의한) ENHANCEMENT SECTION 
 
+
+
 ## IMPLICIT ENHANCEMENT
 
 * ABAP 프로그램의 약속된 특적 위치에서 정의 없이 ENHANCEMENT 를 적용
@@ -2057,9 +2125,23 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 * export parameter 가 post-method 가 change되었을 때, changing parameter 로 바뀜.
   (pre-method도 동일)
+  
 * SAP NETWEAVER 7.0 이전 버전에서 개발한 SAP OBJECT 를 ENHANCE 할 수 있다.
+
 * IMPLICIT ENHANCEMENT POINT 에서는 **SAP 로 부터 어떤 준비도 필요 없이** SAP PROGRAM 에 CODE 를 삽입 할 수 있다. 
-* IMPLICIT ENHANCEMENT OPTION 은 REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
+
+* ### IMPLICIT ENHANCEMENT OPTION
+
+
+  * REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
+
+  * #### 할 수 있는 것
+
+
+    * REPLACEMENT GLOBAL SAP METHOD 
+    * GLOBAL SAP CLASS 의 ATTRIBUTE  추가
+    * SAP FUNCTION MODULE 에 PARAMETER 추가
+
 
 
 
@@ -2288,7 +2370,7 @@ STD를 변경할 때 제공되는 것 :
 
 ****
 
-# WEB DYNPRO
+# WEB DYNPRO.
 
 
 
@@ -2447,7 +2529,16 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 
 
+## SERVICE CALL WIZARD
 
+* ### SERVICE TYPES
+
+  ![SERVICE_CALL_WIZARD](IMG/SERVICE_CALL_WIZARD.jpg)
+
+  * **FUNCTION MODULE**
+  * **CLASS METHOD**
+  * **WEB SERVICE PROXY**
+  * **ASSISTANCE CLASS METHOD**
 
 
 
@@ -2463,7 +2554,7 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 ****
 
-# SHARED MEMORY
+# SHARED MEMORY.
 
 
 
@@ -2515,7 +2606,7 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 ****
 
-# RFC
+# RFC.
 
 
 
@@ -2544,7 +2635,7 @@ RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때
 
 ****
 
-# 기타
+# 기타.
 
 
 
@@ -2610,6 +2701,20 @@ ENDLOOP.
 
 
 
+## WHERE 조건문 %
+
+* **'%XX%'**
+
+  'XX' 를 포함
+
+* **'XX%'**
+
+  'XX' 로 시작
+
+* **'%XX'**
+
+  'XX' 로 끝
+
 
 
 ## 비교 연산자 CO CP
@@ -2652,7 +2757,31 @@ ENDLOOP.
 
 ## 각종 기능
 
-## 
+## RTTS
+
+* Run Time Type Services 의 약어
+
+* 두가지 부분 RTTI RTTC 로 구분 할 수 있다.
+
+* 동적 타입 처리 로직에 활용된다.
+
+* ### 구조
+
+   **CL_ABAP_TYPEDESCR**
+   |
+   |--CL_ABAP_DATADESCR
+   |  |
+   |  |--CL_ABAP_ELEMDESCR
+   |  |--CL_ABAP_REFDESCR
+   |  |--CL_ABAP_COMPLEXDESCR
+   |    |
+   |    |--CL_ABAP_STRUCTDESCR
+   |    |--CL_ABAP_TABLEDESCR
+   |
+   |--CL_ABAP_OBJECTDESCR
+     |
+     |--CL_ABAP_CLASSDESCR
+     |--CL_ABAP_INTFDESCR
 
 
 

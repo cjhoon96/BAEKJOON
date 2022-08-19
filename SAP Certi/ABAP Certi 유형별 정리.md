@@ -16,7 +16,7 @@
 
 ****
 
-# SAP ARCHITECTURE
+# SAP ARCHITECTURE.
 
 # Q21.
 
@@ -566,7 +566,7 @@ SHARED MEMORY 라고 불리는 공통된 MEMORY AREA를 사용한다.
 
 ****
 
-# DATA TYPE
+# DATA TYPE.
 
 # Q8.
 
@@ -1434,7 +1434,7 @@ Response:
 
 ****
 
-# DATA OBJECTS
+# DATA OBJECTS.
 
 
 
@@ -1843,7 +1843,7 @@ Response:
 
 ****
 
-# ABAP DICTIONARY
+# ABAP DICTIONARY.
 
 # Q6. ?????????????????????????????????
 
@@ -2927,6 +2927,32 @@ Response:
 
 <BR/>
 
+# Question 222: 
+
+## To which ABAP Dictionary definition can you assign fixed values?
+
+ABAP DICTIONARY 정의에서  FIXED VALUE 를 할당할 수 있는 것은? 
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### Field of a transparent table
+
+##### Data element
+
+## *<u>Domain</u>*
+
+##### Component of a structure
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
 
 
 
@@ -2947,7 +2973,7 @@ Response:
 
 ****
 
-# OBJECT NAVIGATOR
+# OBJECT NAVIGATOR.
 
 # Q16.
 
@@ -3025,7 +3051,7 @@ structure 관리, 메뉴관리, screen 관리 등,  BAdIS 는 SE18, SE19 에서 
 
 *****
 
-# PROGRAMS
+# PROGRAMS.
 
 
 
@@ -3620,11 +3646,111 @@ END-OF-SELECTION
 
 <BR/>
 
+# Question 221: 
 
+## Which events can exist in all types of programs that actually contain executable statements?
 
+실행 가능한 구문들을 포함하고 있는 프로그램들의 모든 타입들에서 존재할 수 있는 EVENT 는?
 
+#### Please choose the correct answer.
 
+Response: 
 
+##### INITIALIZATION
+
+## <u>*LOAD-OF-PROGRAM*</u>
+
+##### AT PF##
+
+##### AT LINE-SELECTION
+
+##### AT USER-COMMAND
+
+##### START-OF-SELECTION
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 226:???????????????? 
+
+## What is the root class in the RTTS inheritance tree?
+
+RTTS  상속 트리 에서 ROOT CLASS 는 무엇인가?
+
+#### Please choose the correct answer.
+
+Response: 
+
+##### CL_ABAP_DATADESCR
+
+## *<u>CL_ABAP_TYPEDESCR</u>*
+
+##### CL_ABAP_ELEMDESCR
+
+##### CL_ABAP_COMPLEXDESCR
+
+<BR/>
+
+*****
+
+RTTS : runtime type system : runtime 중 변수 type 확인하는 기능
+
+*****
+
+<BR/>
+
+****
+
+*****
+
+<BR/>
+
+# Question 227:??????????????? 
+
+## You want to select data from two tables and store the result in as structure.
+
+ Table PARTNER contains the fields PART_ID and KIND.
+ Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+ The structure is defined as follows
+ DATA: BEGIN OF wa_result,
+ Part_id type partner-part_id, cont_id type contract-cont_id,
+ Cont_type TYPE contract-cont_type,
+ END of wa_result,
+ Lt_result type table of wa_result.
+ How can you replace the following SELECT statement with an outer join?
+ SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
+ SELECT cont_id from CONTRACT into wa_result-cont_id WHERE part EQ   
+ wa_partner-part_id And DIVISION eq ‘Water’. 
+ Append wa_result to lt_result. 
+ ENDSELECT.
+ If sy-subrc<>0. CLEAR wa_result-cont_id
+ APPEND wa_result TO lt_result. ENDIF.
+  ENDSELECT.
+
+##  Please choose the correct answer.
+
+Response:
+
+##### SELECT part_idcont_id from partner LEFT JOIN contract on partner-part_id = contract-part_id AND partner-kind EQ ‘Residential’ INTO CORRESPONDING FIELDS OF TABLE lt_result WHERE division eq ‘Water’.
+
+## <u>*SELECT part_idcont_id from partner AS A LEFT JOIN contract AS b ON a~part_id = b~part_id INTO CORRESPONDING FIELDS OF TABLE lt_result WHERE kind = ‘Residential’ and AND division EQ ‘Water’.*</u>
+
+##### SELECT part_idcont_id from partner AS A LEFT JOIN contract AS b ON a~part_id = b~part_id AND b~division EQ ‘Water’ INTO TABLElt_result WHERE kind = ‘Residential’
+
+##### SELECT part_idcont_id from partner LEFT JOIN contract on partner-part_id = contract-part_id AND contract-division EQ ‘Water’ INTO TABLE lt_result WHERE kind EQ ‘Residential’.
+
+<BR/>
+
+****
+
+****
+
+<br/>
 
 
 
@@ -3638,7 +3764,7 @@ END-OF-SELECTION
 
 ****
 
-# CODE INSPECTOR
+# CODE INSPECTOR.
 
 # Q56.
 
@@ -3756,7 +3882,7 @@ Runtime check 아니다.!
 
 ****
 
-# MESSAGE
+# MESSAGE.
 
 # Question 154: 
 
@@ -3826,7 +3952,7 @@ TYPE X 또한 ROLLBACK 하는 기능을 포함하고 있다.
 
 ****
 
-# DEBUGGER
+# DEBUGGER.
 
 # Q22.(skip)
 
@@ -4198,7 +4324,7 @@ Response:
 
 ****
 
-# Modularization
+# Modularization.
 
 # Q18.
 
@@ -4588,7 +4714,7 @@ SAP LUW는 데이터베이스 LUW 내에 배치되어야 한다.
 
 ****
 
-# SCREEN
+# SCREEN.
 
 # Q13.
 
@@ -4876,7 +5002,7 @@ TABLES 구문을 사용하여 변수를 선언해 주어야한다.
 
 ***
 
-# ALV GRID
+# ALV GRID.
 
 # Q11.
 
@@ -5150,7 +5276,7 @@ CONTAINER 는 ADDITIONAL OBJECT 의 사용이 요구된다.
 
 *****
 
-# OOP
+# OOP.
 
 # Q26.
 
@@ -6285,7 +6411,7 @@ RETURNING PARAMETER 를 가지는 EVENT 를 위한 HANDLER METHOD
 
 ****
 
-# 권한
+# 권한. 
 
 # Q28.
 
@@ -6409,7 +6535,7 @@ CX_AUTH_FAILED 유형의 예외가 발생한다.
 
 ****
 
-# ENHANCEMENT
+# ENHANCEMENT.
 
 # Q3.
 
@@ -7488,7 +7614,7 @@ Response:
 
 ****
 
-# WEB DYNPRO
+# WEB DYNPRO.
 
 # Q1.
 
@@ -8084,6 +8210,42 @@ https://wiki.scn.sap.com/wiki/display/WDABAP/Controllers+in++Web+Dynpro+for+ABAP
 
 <BR/>
 
+# Question 223: ????????????????
+
+## You are establishing the business logic layer for a Web Dynpro Component. Which service types are available in the Service Call wizard?
+
+WEB DYNPRO 구성요소의 BUSINESS LOGIC LAYER 를 설정하고 있다. 어떤 SERVICE TYPE 이 SERVICE CALL WIZARD 에서 사용할 수 있는가?
+
+#### 3 correct 
+
+Response: 
+
+##### Transaction code
+
+## <u>*Class method*</u>
+
+## <u>*Function module*</u>
+
+##### Function group
+
+## <u>*Web service proxy*</u>
+
+<BR/>
+
+****
+
+****
+
+<BR/>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8106,7 +8268,7 @@ https://wiki.scn.sap.com/wiki/display/WDABAP/Controllers+in++Web+Dynpro+for+ABAP
 
 ****
 
-# SHARED MEMORY
+# SHARED MEMORY.
 
 # Q4.
 
@@ -8346,7 +8508,7 @@ Q-RFC 무조건 동기방식.
 
 ****
 
-# 기타
+# 기타.
 
 
 

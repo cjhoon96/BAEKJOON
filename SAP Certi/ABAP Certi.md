@@ -9047,23 +9047,33 @@ RTTS : runtime type system : runtime 중 변수 type 확인하는 기능
 
 ## You want to select data from two tables and store the result in as structure.
 
- Table PARTNER contains the fields PART_ID and KIND.
- Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
- The structure is defined as follows
+##  Table PARTNER contains the fields PART_ID and KIND.
+
+##  Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+
+##  The structure is defined as follows
+
+```ABAP
  DATA: BEGIN OF wa_result,
- Part_id type partner-part_id, cont_id type contract-cont_id,
- Cont_type TYPE contract-cont_type,
+   Part_id type partner-part_id, 
+   cont_id type contract-cont_id,
+   Cont_type TYPE contract-cont_type,
  END of wa_result,
  Lt_result type table of wa_result.
- How can you replace the following SELECT statement with an outer join?
+```
+
+## How can you replace the following SELECT statement with an outer join?
+
+ ```ABAP
  SELECT part_id from partner INTO wa_result WHERE kind = ‘Residential’. 
- SELECT cont_id from CONTRACT into wa_result-cont_id WHERE part EQ   
- wa_partner-part_id And DIVISION eq ‘Water’. 
- Append wa_result to lt_result. 
- ENDSELECT.
- If sy-subrc<>0. CLEAR wa_result-cont_id
- APPEND wa_result TO lt_result. ENDIF.
+  SELECT cont_id from CONTRACT into wa_result-cont_id WHERE part EQ   
+    wa_partner-part_id And DIVISION eq ‘Water’. 
+    Append wa_result to lt_result. 
   ENDSELECT.
+  If sy-subrc<>0. CLEAR wa_result-cont_id
+  APPEND wa_result TO lt_result. ENDIF.
+ ENDSELECT.
+ ```
 
 ##  Please choose the correct answer.
 
@@ -9093,13 +9103,15 @@ Response:
 
 Response:
 
+
+
 ## <u>*The ALV Object Model can define a sort criteria for initial display.*</u>
 
-ALV 개체 모델은 초기 표시를 위한 정렬 기준을 정의할 수 있습니다.
+ALV Object Model 은 초기 표시를 위한 정렬 기준을 정의할 수 있습니다.
 
 ## <u>*The ALV Grid requires a table refresh after programmatically changing the ALV.*</u>
 
-프로그래밍 방식으로 ALV를 변경한 후 ALV 그리드를 새로 고쳐야 합니다.
+프로그래밍 방식으로 ALV를 변경한 후 TABLE 을 새로 고침 하여야 한다.
 
 ## <u>*The ALV Grid uses a reference to the data table for display.*</u>
 
@@ -9115,7 +9127,7 @@ ALV 그리드는 초기 표시를 위한 정렬 기준을 정의할 수 있습�
 
 ##### The ALV Object Model requires a table refresh after programmatically changing the ALV. (classic ALV 설명)
 
-ALV 개체 모델은 ALV를 프로그래밍 방식으로 변경한 후 테이블을 새로 고쳐야 합니다(기존 ALV 명)).
+ALV 개체 모델은 ALV를 프로그래밍 방식으로 변경한 후 테이블을 새로 고쳐야 합니다(CLASSIC ALV 설명)).
 
 <BR/>
 
@@ -9387,7 +9399,7 @@ Response:
 
 ## When you define local classes in ABAP, which syntactical sequence must you follow?
 
-ABAP 의 LOCAL CLASS 를 정의 할때 어떤 따ㅏ야할 SYNTACTICAL SEQUENCE 는?(구문 순서?)  
+ABAP 의 LOCAL CLASS 를 정의 할때 따라야할 SYNTACTICAL SEQUENCE 는?(구문 순서?)  
 
 #### Please choose the correct answer.
 
@@ -9431,7 +9443,7 @@ Response:
 
 프로그램의 구문 검사를 수행할때
 
-## When you activate the program
+## *<u>When you activate the program</u>*
 
 프로그램을 ACTIVATE 할때
 
@@ -9586,3 +9598,4 @@ Response:
 ****
 
 <BR/>
+
