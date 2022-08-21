@@ -30,6 +30,10 @@
 
 ## APPLICATION PROCESS
 
+## 구성 요소에 관한 부분이 내용이 틀림
+
+## EAZY ABAP P.1158 참조
+
 ### (DISPATCHER + WORK PROCESS + LOCAL BUFFER 로 구성) 
 
 ### DB INTERFACE 포함???
@@ -102,6 +106,9 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 * ### DB INRTERFACE
 
   * OPEN SQL 번역
+    * **OPEN SQL 장점**
+      * 어떤 DBMS 와 함께 사용될 수 있다.(**Portability 이식성**)
+      * 모든 표준 SQL 명령을 사용할 수 있다.
   * SAP TABLE BUFFER 에 접속
 
 
@@ -185,6 +192,16 @@ SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플�
 |                         |                                                              |
 | **Screen Painter**      | Transaction SE51; use to design and manage screens and their elements used as Programming interfaces. |
 | **Menu Painter**        | Transaction SE41; for developing the Custom User Accessible menus on your screen interfaces |
+
+
+
+
+
+## SYSTEM UPGRADE 후 수정 작업을 수행하는데 사용할 수 있는 트랜잭션
+
+* ### SPDD
+
+* ### SPAU
 
 
 
@@ -1223,6 +1240,16 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 
 
 
+## SETTING 가능한 것들
+
+* LOCAL CHECK VARIANT 생성
+* OBJECT SET NAME
+* INSPECTION NAME
+
+* 오답으로 BACKGROUND JOB / WORK PROCESS NAME 이 나왔다.
+
+
+
 
 
 
@@ -1626,6 +1653,14 @@ filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
 
 
 
+## CONTAINER
+
+```ABAP
+DATA: go_container TYPE REF TO CL_GUI_CUSTOM_CONTAINER.
+
+CREATE OBJECT go_container.
+```
+
 
 
 
@@ -1805,20 +1840,16 @@ ENDLOOP.
   * CREATE OBJECT 구문을 통해 인스턴스가 생성될 때마다 호출됨
   * ***<u>IMPORTING / EXPECTIONS PARAMETER</u>*** 를 가질 수 있다.
 
+  
+
 * ## STATIC CONSTRUCTOR 특징
 
   * 모든 클래스는 CLASS_CONSTRUCTOR 라는 STATIC CONSTRUCTOR 를 가지고 있다.
-
-
   * PUBLIC SECTION에서만 정의 가능하다.
-
-
   * 파라미터 인터페이스를 가질 수 없다.
-
-
   * 클래스가 사용되기 이전에 자동으로 호출된다.
 
-    
+
 
 
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220760302480
@@ -1974,6 +2005,7 @@ https://gocoding.org/ko/singleton-class-in-abap/
 
 * SUPERCLASS 의 METHOD 와 같은 VISIBILITY 를 가져야한다.
 * SUPERCLASS 의 METHOD 가 INSTANCE METHOD 여야 한다.
+* SIGNATURE 변경 할 수 없다. 
 
 
 
@@ -2200,6 +2232,8 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
     CL_EXITHANDLER 에서 GET_INSTANCE METHODS 찾기
 
+    IMG 에서 찾기
+
   * ### 선행되어야 하는 것
 
     * METHOD 에 대한 CODE 작성
@@ -2215,7 +2249,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
     get BAdIs / CALL BAdI
 
-  * ### 선행되야 하는 것
+  * ### 선행되야 하는 것 (순서도 기억)
 
     * ENHANCEMENT SPOT IMLEMENTATION
     * BADI IMPLEMENTATION
@@ -2258,11 +2292,9 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ## ENHANCEMENT SPOT
 
-ENHANCEMENT SPOT 은 EXPLICIT ENHANCEMENT POINT, ENHANCEMENT SECTION, NEW BAdI 가 포함될 수 있다.
-
-ENHANCEMENT POINT 와 ENHANCEMENT SECTION 은 동시에 포함할 수 있지만 BAdI 는 동시에 포함될 수 없다.
-
-ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포함 할 수 있다.
+* ENHANCEMENT SPOT 은 **EXPLICIT ENHANCEMENT POINT / ENHANCEMENT SECTION / NEW BAdI** 가 포함될 수 있다.
+* ENHANCEMENT POINT 와 ENHANCEMENT SECTION 은 동시에 포함할 수 있지만 BAdI 는 동시에 포함될 수 없다.
+* ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포함 할 수 있다.
 
 
 
@@ -2798,6 +2830,14 @@ ENDLOOP.
 * SELECT 문에서 데이터를 가져올 FIELD 명을 명시하는 경우 데이터가 들어갈 변수에 명시한 필드명 순(왼쪽에서 차례대로)으로 들어간다.
 
 
+
+## SELECT  CAST
+
+* SELECT 도중 CAST(FIELD AS TYPE) 을 통해 TYPE을 변경할 수 있다.
+
+
+
+ 
 
 ## ITAB LINE 을 읽는 법
 
