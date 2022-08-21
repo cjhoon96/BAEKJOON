@@ -40,6 +40,7 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
 * CLIENT 요청을 QUEUE 에 저장 / WORK PROCESS 에 할당
 * FIFO 방식으로 SCHEDULING 처리
+* presentation layer 의 통합
 
 ### WORK PROCESS
 
@@ -1052,6 +1053,38 @@ https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_stat
 * PARAMETERS
 * SELECT-OPTIONS
 * SELECTION-SCREEN
+
+## Statement of PARAMETERS 
+
+* TYPE <TYPE> 
+
+* LIKE <F1>
+
+* DECIMALS <N> 
+
+* MEMORY ID <PID> 
+
+* OBLIGATORY
+
+* DEFAULT <VALUE> 
+
+* LOWER CASE
+
+* VALUE CHECK 
+
+  FOREIGN KEY 로 연결한 것과 동일하며 입력한 값을 CHECK 하는 기능
+
+* VALUE-REQUEST
+
+  F4 HELP 기능
+
+* AS CHECKBOX 
+
+* RADIOBUTTON GROUP <GRP>
+
+* MODIF ID <MOD>
+
+
 
 
 
@@ -2138,9 +2171,13 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
   * #### 할 수 있는 것
 
 
-    * REPLACEMENT GLOBAL SAP METHOD 
-    * GLOBAL SAP CLASS 의 ATTRIBUTE  추가
     * SAP FUNCTION MODULE 에 PARAMETER 추가
+    * GLOBAL SAP CLASS 의 ATTRIBUTE  추가
+    * GLOBAL SAP METHOD 교체
+
+    
+
+    * 오답으로 SAP FUNCTION MODULE 에 EXCEPTION 추가 / SAP FUNCTION MODULE 의 교체 가 나왔으나 해당 사항 없다.
 
 
 
@@ -2316,9 +2353,15 @@ STD를 변경할 때 제공되는 것 :
 
 
 
+## SCREEN EXIT 을 지원하는 ENHANCEMENT
 
+* NEW BADI
+* CLASSIC BADI
+* CUSTOMER EXIT
 
+* 오답으로 EXPLICIT ENHANCEMENT POINT / EXPLICT ENHANCEMENT SECTION 은 지원하지 않는다.
 
+  
 
 
 
@@ -2481,7 +2524,9 @@ ACTION 을 할당할 시 WEB DYNPRO EXPLORER 에 의해 자동으로 생성되�
 
 * CONTEXT MAPPING : 
 
-  CONTEXT 간 DATA SHARING OR DATA TRANSFERING.
+  CONTEXT 간 CONTROLLER 를 통한 DATA SHARING OR DATA TRANSFERING.
+
+  CONTROLLER 간 데이터 교환은 VIEW CONTROLLER 에서 COMPONENT CONTROLLER 로의 CONTEXT MAPPING 을 사용한다.
 
 * ### NODE
 
@@ -2650,7 +2695,8 @@ LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초�
 * 코딩이 편하다
 * 중간단계 변수 등이 준다.
 * 긴 구문 대신 구문이 COMPACT 해진다. 
-* 속도 향상 X 가독성 X 
+
+* 오답으로 속도 향상 / 가독성 이 나왔으나 이는 해당 사항이 아니다
 
 
 
@@ -2752,6 +2798,62 @@ ENDLOOP.
 * SELECT 문에서 데이터를 가져올 FIELD 명을 명시하는 경우 데이터가 들어갈 변수에 명시한 필드명 순(왼쪽에서 차례대로)으로 들어간다.
 
 
+
+## ITAB LINE 을 읽는 법
+
+* LINE INDEX 로 특정
+* SECONDARY TABLE KEY 로 특정
+* WHERE CONDITION 으로 특정
+
+* 오답으로 정규표현식 / FREE TABLE KEY 가 나왔다.
+
+
+
+
+
+
+
+## SEARCH FUNCTION FIND
+
+find( val = text  { sub = substring} | { regex = regex} [case = case] [ off = off] [ len = len] [occ = occ] ) 
+
+find_end( val = text regex = regex [case = case] [ off = off] [ len = len] [occ = occ] ) 
+
+find_any_of( val = text  sub = substring [ off = off] [ len = len] [occ = occ] ) 
+
+find_any_not_of( val = text  sub = substring [off = off] [ len = len] [occ = occ] ) 
+
+substring 위치 반환해 주는 함수???
+
+* VAL
+
+  SEARCH 할 STRING
+
+* SUB
+
+  SUBSTRING
+
+* REGEX
+
+  정규표현식
+
+* CASE
+
+  대소문자 구분을 할 것인지 묻는 변수
+
+  true 면 구분 fasle 면 구분 안함
+
+  문제에서는 X 값을 주었을때 구분 한것으로 나왔다.
+
+* OCC
+
+  몇번째 것을 찾을 것인지를 묻는 변수 같다.
+
+* 
+
+* OFF
+
+* LEN
 
 
 
