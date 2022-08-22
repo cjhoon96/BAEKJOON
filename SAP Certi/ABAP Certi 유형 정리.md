@@ -694,6 +694,8 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
       테이블의 레코드가 하나 액세스되면 테이블의 모든 레코드가 버퍼에 로드된다.
 
+      크기가 작은 table 에 효과적
+
     * GENERIC
 
       테이블의 레코드에 액세스하면 일반 키 필드(테이블 키의 왼쪽 정렬 부분, 다수의 키 필드를 지정하여 식별)에 이 레코드가 있는 모든 레코드가 버퍼에 로드된다.
@@ -703,7 +705,7 @@ https://answers.sap.com/questions/2218390/transparent-table.html
       실제로 액세스하는 테이블의 레코드만 버퍼에 로드됩니다.
 
       
-
+    
     
 
 
@@ -1150,6 +1152,7 @@ LOAD-OF-PAGE
 -> ***<u>INITIALIZATION</u>*** 
 
 * PROGRAM 실행시 단 한번만 수행한다.
+* 초기 설정
 
 -> AT SELECTION-SCREEN OUTPUT 
 
@@ -1972,13 +1975,8 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 https://gocoding.org/ko/singleton-class-in-abap/
 
 * CREATE OBJECT 할 수 없다.
-
 * METHOD 를 통해서 OBJECT 를 생성할 수 있다.
-
-* ***<u>FINAL</u>*** 로 정의 하여 상속을 방지한다.
-
 * STATIC ATTRIBUTE 에 CLASS 의 INSTANCE를 저장한다.
-
 * ***<u>STATIC PRIVATE CONSTRUCTOR</u>*** 를 사용하여 인스턴스화 해야한다.
 
   * CLASS 인스턴스화를 PRIVATE 으로 설정
@@ -2207,7 +2205,8 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
     * GLOBAL SAP CLASS 의 ATTRIBUTE  추가
     * GLOBAL SAP METHOD 교체
 
-    
+
+​    
 
     * 오답으로 SAP FUNCTION MODULE 에 EXCEPTION 추가 / SAP FUNCTION MODULE 의 교체 가 나왔으나 해당 사항 없다.
 
@@ -2251,7 +2250,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
   * ### 선행되야 하는 것 (순서도 기억)
 
-    * ENHANCEMENT SPOT IMLEMENTATION
+    * ENHANCEMENT SPOT IMPLEMENTATION
     * BADI IMPLEMENTATION
 
 
@@ -2718,7 +2717,7 @@ RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때
 
 ## 각종 구문
 
-LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초기화 시키고 새로운 INSTANCE를 생성하여 프로그램을 실행 시킬 수 있다.( ABAP 메모리 초기화 )
+LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초기화 시키고 새로운 INSTANCE를 생성하여 프로그램을 실행 시킬 수 있다.( **ABAP 메모리 초기화** )
 
 
 
