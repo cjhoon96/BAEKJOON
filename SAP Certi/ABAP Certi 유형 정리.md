@@ -2003,7 +2003,6 @@ https://gocoding.org/ko/singleton-class-in-abap/
 
 * SUPERCLASS 의 METHOD 와 같은 VISIBILITY 를 가져야한다.
 * SUPERCLASS 의 METHOD 가 INSTANCE METHOD 여야 한다.
-* SIGNATURE 변경 할 수 없다. 
 
 
 
