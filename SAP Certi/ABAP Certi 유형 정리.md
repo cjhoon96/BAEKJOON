@@ -207,6 +207,13 @@ SAP NetWeaver는 SAP에서 제공하는 포괄적인 컴퓨팅 플랫폼(애플�
 
 
 
+## 장애 발생시에도 사용할 수 있는 SAP HANA HIGH AVAILABILITY PER DATACENTER 의 MAIN POINT
+
+* 고가용성 구성 (HIGH AVAILABILITY CONFIGURATION)
+* SERVICES-NAME AND INDEX SERVER ON ALL NODES
+
+
+
 
 
 ****
@@ -727,7 +734,7 @@ https://answers.sap.com/questions/2218390/transparent-table.html
   * KEY FIELD 가 모두 앞쪽에 있어야한다.
   * **INNER JOIN 사용**
 
-* ### PROJECTIONVIEW
+* ### PROJECTION VIEW
 
   프로그램 내에서 읽어올 수 없고 SE11 에서 단순 조회만 가능
 
@@ -1832,9 +1839,16 @@ ENDLOOP.
 
 
 
+* ## INSTANCE METHOD
 
+  * METHOD 구문을 이용해 선언
+  * CLASS 의 모든 이벤트에서 메서드를 호출 가능
 
+* ## STATIC METHOD 
 
+  * CLASS-METHOD 구문을 통해 선언
+  * STATIC METHOD 에서는 **<u>STATIC ATTRIBUTE / TYPES / CONSTANTS</u>** 만 접근 가능하다.
+  * STATIC 이벤트를 호출 가능
 
 
 
@@ -1848,39 +1862,64 @@ ENDLOOP.
 * ## STATIC CONSTRUCTOR 특징
 
   * 모든 클래스는 CLASS_CONSTRUCTOR 라는 STATIC CONSTRUCTOR 를 가지고 있다.
+  
   * PUBLIC SECTION에서만 정의 가능하다.
+  
   * 파라미터 인터페이스를 가질 수 없다.
+  
   * 클래스가 사용되기 이전에 자동으로 호출된다.
+  
+    
+  
+  https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220760302480
+  
+  
+  
+  
+  
+  
+  
+  
+
+* ## VISIBILITY
+
+  * ### PUBLIC SECTION
+
+    * 모든 CLASS 에서 접근 할 수 있다.
+    * CLASS 와 사용자 사이의 인터페이스를 구성
+
+  * ### PROTECTED SECTION 
+
+    * 자신과 상속 받은 클래스에서만 접근 가능
+    * 자식과의 인터페이스 역할
+
+  * ### PRIVATE SECTION
+
+    * 같은 CLASS  의 메서드에서만 보인다.
+    * 외부에서 접근 불가능
+    * CLASS 의 IMPLEMENTATION 파트의 모든 메서드는 CLASS 내에서 접근 제한 없이 사용할 수 있다.
 
 
 
+* ## DOWNCAST
 
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aaaa123krkr&logNo=220760302480
-
-
-
-* ## STATIC METHOD 
-
-  * STATIC METHOD 에서는 **<u>STATIC ATTRIBUTE / TYPES / CONSTANTS</u>** 만 접근 가능하다.
+  * 부모 Class의 Object를 자식 class의 Object에 할당 
 
 
+  * Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
+    * Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
+      따라서 Down-Cast를 사용하여 access 한다.
 
-## DOWNCAST
 
-* 부모 Class의 Object를 자식 class의 Object에 할당 
+  * Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
 
-* Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
+    따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 
 
-* Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
-  따라서 Down-Cast를 사용하여 access 한다.
+    CX_SY_MOVE_CAST_ERROR EXCEPTIONS을 처리해준다.
 
-* Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
 
-  따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 
+  * move를 사용 시 에러가 발생하면 CX_SY_MOVE_CAST_ERROR exception 이 발생함.
 
-  CX_SY_MOVE_CAST_ERROR EXCEPTIONS을 처리해준다.
-
-* move를 사용 시 에러가 발생하면 CX_SY_MOVE_CAST_ERROR exception 이 발생함.
 
 
 
@@ -1974,6 +2013,7 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 https://gocoding.org/ko/singleton-class-in-abap/
 
+* 상속을 방지하기 위해 FINAL 로 정의한다.
 * CREATE OBJECT 할 수 없다.
 * METHOD 를 통해서 OBJECT 를 생성할 수 있다.
 * STATIC ATTRIBUTE 에 CLASS 의 INSTANCE를 저장한다.
@@ -2528,6 +2568,21 @@ ACTION 을 할당할 시 WEB DYNPRO EXPLORER 에 의해 자동으로 생성되�
 
 
 
+
+
+## PLUG
+
+* **화면간 이동을 위해 필요한 연결점.**
+* 전선이 전기를 받기 위해 플러그를 꽂듯이, 화면간 연결을 위해서는 플러그 정의가 필수이다.
+* 매개변수를 정의해서 넘겨줄 수 있다.
+* IN/OUTBOUND Plug를 각 화면에 정의한 후, 두 플러그를 연결하여 **네비게이션** 링크를 만들어주면 끝.
+* Window에도 Plug가 있고, View에도 Plug가 있다.
+* 플러그는 하나의 여러 VIEW 에 할당 불가하다.??
+* EXIT 으로 정의 가능하다.
+* WEB DYNPRO 에서 탐색의 기초로 사용 될 수 있다.
+* START UP 으로 정의될 수 있다.
+* 
+
 ## 인바운드 플러그
 
 뷰에 들어갈 때 사용하는 플러그입니다. 모든 인바운드 플러그는 아웃바운드 플러그에 연결되어야 하며 그렇지 않으면 오류가 발생합니다.
@@ -2536,7 +2591,7 @@ ACTION 을 할당할 시 WEB DYNPRO EXPLORER 에 의해 자동으로 생성되�
 
 ## 아웃바운드 플러그
 
-보기를 종료하는 데 사용되는 플러그입니다. 모든 아웃바운드 플러그는 오류를 생성하는 인바운드 플러그에 연결되어야 합니다.
+VIEW 를 종료하는 데 사용되는 플러그입니다. 모든 아웃바운드 플러그는 오류를 생성하는 인바운드 플러그에 연결되어야 합니다.
 
 
 
@@ -2849,6 +2904,13 @@ ENDLOOP.
 
 
 
+## ENHANCED OPEN SQL 을 사용하는 경우
+
+* SYSTEM FIELD 에 접근 하는 경우
+* 하나의 코드로만 이루어진 쿼리에 접근할 경우???
+
+
+
 
 
 ## SEARCH FUNCTION FIND
@@ -3093,3 +3155,10 @@ https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa
 
 <BR/>
 
+NO.27 What can be exposed in the component interface of a Web Dynpro component? Please
+choose the correct answer.
+A. Custom methods of the component controller
+B. Standard hook methods of the component controller
+C. Custom methods of the component controller
+D. Public attributes of WINDOW controllers
+Answer: C

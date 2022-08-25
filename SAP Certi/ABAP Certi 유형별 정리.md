@@ -3904,27 +3904,7 @@ Runtime check 아니다.!
 
 ## *<u>A</u>* (without short dump)
 
-< BR/>
-
-****
-
-모두 프로그램 종료 만을 보면 E 까지 3개가 답이어야 한다. 
-
-ROLLBACK 여부 를 묻는 문제로 
-
-ROLLBACK 을 하는 경우 기본적으로 
-
-* MESSAGE TYPE A 
-
-* ROLLBACK WORK 구문
-
-을 사용하지만
-
-MESSAGE TYPE X 가 덤프를 띄우는 기능때문에 잘 사용하지 않을 뿐
-
-TYPE X 또한 ROLLBACK 하는 기능을 포함하고 있다.
-
-****
+<BR/>
 
 <BR/>
 
