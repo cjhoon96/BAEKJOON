@@ -94,17 +94,6 @@ const relationship2 = {
 };
 relationship2.logFriends();
 
-
-
-
-
-
-
-
-
-
-
-
 // 구조 분해 할당
 var candyMachine = {
   status: {
@@ -113,7 +102,7 @@ var candyMachine = {
   },
   getCandy() {
     // this.status.count--;
-    return this
+    return this;
     // return this.status.count;
   },
 };
@@ -122,20 +111,14 @@ var candyMachine = {
 // var count = candyMachine.status.count;
 // console.log(count);
 // =>
-const { getCandy, status: { count } } = candyMachine;
+const {
+  getCandy,
+  status: { count },
+} = candyMachine;
 
 console.log(candyMachine.status.count);
 console.log(getCandy());
 console.log(count);
-
-
-
-
-
-
-
-
-
 
 // 클래스
 // var Human = function (type) {
@@ -178,42 +161,155 @@ class Human {
   breathe() {
     alert("h-a-a-a-m");
   }
-};
+}
 
 class Zero extends Human {
-	constructor(type, firstName, lastName) {
-		super(type);
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+  constructor(type, firstName, lastName) {
+    super(type);
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-	sayName() {
-		super.breathe();
-		alert(`${this.firstName} ${this.lastName}`);
-	}
-};
+  sayName() {
+    super.breathe();
+    alert(`${this.firstName} ${this.lastName}`);
+  }
+}
 
-const newZero = new Zero('human', 'Zero', 'Cho');
+const newZero = new Zero("human", "Zero", "Cho");
 
 Human.ishuman(newZero);
 
 // Promise
 const condition = true;
 const promise = new Promise((resolve, reject) => {
-	if (condition) {
-		resolve('성공');
-	} else {
-		reject('실패');
-	}
+  if (condition) {
+    resolve("성공");
+  } else {
+    reject("실패");
+  }
 });
 
+// promise
+// 	.then((message) => {
+// 		console.log(message);
+// 	})
+// 	.catch((error) => {
+// 		console.log(error);
+// 	})
+// 	.finally(() => {
+// 		console.log('무조건');
+// 	});
+
 promise
-	.then((message) => {
-		console.log(message);
-	})
-	.catch((error) => {
-		console.log(error);
-	})
-	.finally(() => {
-		console.log('무조건');
-	});
+  .then((message) => {
+    return new Promise((resolve, reject) => {
+      resolve(message);
+    });
+  })
+  .then((message2) => {
+    console.log(message2);
+    return new Promise((resolve, reject) => {
+      resolve(message2);
+    });
+  })
+  .then((message3) => {
+    console.log(message3);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+function findAndSaveUser(Users) {
+  Users.findOne({}, (err, user) => {  // 첫번째 콜백
+    if (err) {
+      return console.error(err);
+    }
+    user.name = 'zero';
+    user.save((err) => { // 두번째 콜백
+      if(err) {
+        return console.error(err);
+      }
+      Users.findOne({ geender : 'm' }, (err, user) => {
+        // 생략
+      });
+    });
+  });
+}
+
+// =>
+
+function findAndSaveUser(Users) {
+  Users.findOne({}) 
+    .then((user) => {
+      user.name = 'zero';
+      return user.save();
+    })
+    .then((user) => {
+      return Users.findOne({ gender: 'm' });
+    })
+    .then((user) => {
+      // 생략
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+
+const promise1 = Promise.resolve('성공1');
+const promise2 = Promise.resolve('성공2');
+Promise.all([promise1, promise2])
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+
+
+
+// async/await
+
+async function findAndSaveUser(Users) {
+  let user = await Users.findOne({});
+  user.name = 'zero';
+  user = await user.save();
+  user = await Users.findOne({ gender: 'm' });
+  // 생략
+}
+
+
+async function findAndSaveUser(Users) {
+  try {
+    let user = await Users.findOne({});
+    user.name = 'zero';
+    user = await user.save();
+    user = await Users.findOne({ gender: 'm' });
+    // 생략
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+
+// const promise1 = Promise.resolve('성공1');
+// const promise2 = Promise.resolve('성공2');
+// (async () => {
+//   for await (promise of [promise1, promise2]) {
+//     console.log(promise);
+//   }
+// });
+
+
+async function findAndSaveUser(Users) {
+  // 생략
+}
+findAndSaveUser().then(() => { /* 생략 */ });
+// 또는
+async function ohter() {
+  const result = await findAndSaveUser();
+}
