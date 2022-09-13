@@ -32,17 +32,29 @@
 
     보통 DIALOG 단계들은 별도의 DIALOG WORK PROCESS 들을 할당 받는다.
 
+
+
 ##### The program is always executed in just one dialog work process with roll out.
 
 프로그램은 항상 ROLL OUT 을 통해 단 하나의 DIALOG WORK PROCESS 에서 실행된다.
+
+`각 dialog 단계들은 별도의 D WP 에서 실행된다.`
+
+
 
 ##### The ABAP dispatcher takes over the entire execution without assigning any work process.
 
 ABAP 디스패처는 어떤 WORK PROCESS 도 할당하지 않고 전체 실행을 인계한다.
 
+`work process load balancing 역할을 수행하여 wq 와 user request 를 연결하는 역할을 한다.`
+
+
+
 ##### The program is always executed in just one dialog work process without roll out
 
 프로그램은 항상 ROLL OUT 없이 단 하나의 DIALOG WORK PROCESS 에서 실행된다.
+
+`ROLL IN ROLL OUT 을 반복하며 각각 별도의 D WP 에서 실행된다.`
 
 <BR/>
 
