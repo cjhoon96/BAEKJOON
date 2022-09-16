@@ -48,33 +48,30 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
 ### WORK PROCESS
 
-* 각 WORK PROCESS 들은 독립되어있다.
+* 각 WORK PROCESS 들은 **독립**되어있다.
 
 * SAP NETWEAVER APPLICATION SERVER ABAP 이 시작될때 설정된 WP 에 대한 DB CONNECTION 을 사용한다.
 
-* DB connection은 각 work process 가 한 개씩 맺고, work process는 서로 독립적이다.
+* **DB connection은 각 work process 가 한 개씩** 맺고, work process는 서로 독립적이다.
 
-* WORK PROCESS 들은 SHARED MEMORY 라고 불리는 공통된 MEMORY AREA 를 사용한다. 
+* WORK PROCESS 들은 **SHARED MEMORY** 라고 불리는 **공통된 MEMORY AREA** 를 사용한다. 
 
 * #### D
 
   보통 1개의 DIALOG PROCESS 가 처리할 수 있는 것은 10 명의 ACTIVE USER
 
-  rdisp/wp_no_dia 조절
+  **rdisp/wp_no_dia** 조절
 
-  rdisp/max_wprun_time 파라미터에서 PROCESS 가 실행되는 MAX TIME 정의
+  **rdisp/max_wprun_time** 파라미터에서 PROCESS 가 실행되는 MAX TIME 정의 (초과시 종료)
 
-  초과시 종료
-
-  * 디스패처가 WORK PROCESS 와 USER REQUEST 를 연결
-  * REQUEST 는 DIALOG REQUEST QUEUE 에 저장
-  * 가용한 DIALOG WP 에 FIFO 방식으로 분배 / 연결
+  * 디스패처가 **WORK PROCESS 와 USER REQUEST 를 연결**
+  * REQUEST 는 **DIALOG REQUEST QUEUE** 에 저장
+  * 가용한 DIALOG WP 에 **FIFO 방식**으로 분배 / 연결
   * DIALOG WP 는 USER CONTEXT 를 ROLL IN 
     * **ROLL IN** : SHARED MEMORY 에 저장되어 있던 USER CONTEXT 를 DIALOG WP 의 ROLL AREA 로 가져옴
   * DIALOG WP 는 DISPATCHER 에 결과 RETURN
   * USER CONTEXT 를 SHARED MEMORY 에 ROLL OUT
     * **ROLL OUT** : DIALOG WP 의 ROLL AREA => SHARED MEMORY 의 USER CONTEXT 저장
-
   * **여러개의 SCREEN 으로 구성 되어 있는 경우 <u>각각 다른 DIALOG WP</u>** 에 의해 수행
   * **DIALOG STEP 은 하나의 PROCESS** 만 처리
   * **각각의 DIALOG STEPS 는 다른 WORK PROCESS 에 의해 진행**된다.
@@ -103,12 +100,12 @@ BUSINESS PROCESS 관리 , MULTI-CHANNEL 연결 , MASTER DATA 관리
 
   시스템당 1개
   
-* ### DB INRTERFACE
+* ### DB INTERFACE
 
   * OPEN SQL 번역
     * **OPEN SQL 장점**
       * 어떤 DBMS 와 함께 사용될 수 있다.(**Portability 이식성**)
-      * 모든 표준 SQL 명령을 사용할 수 있다.
+      * SYNTAX IS CHECKED AT DESIGN TIME
   * SAP TABLE BUFFER 에 접속
 
 
@@ -131,16 +128,18 @@ APPLICATION SERVER 의 DATA BUFFER 는 사용자에 달렸다.
 
 
 
-PACKAGE 는 중첩 될 수 있다.
 
-CUSTOMER REPOSITORY 의 OBJECT 들은 PACKAGE 에 할당 되어야 한다.
 
-PACKAGE 는 INTERFACE 와 가시성을 사용해 해당 요소를 볼 수 있도록 한다.
+**PACKAGE 는 중첩** 될 수 있다.
 
-REPcustomizing => client 에 종속,
-workbench => coss-client 에 종속
+**CUSTOMER REPOSITORY** 의 OBJECT 들은 **PACKAGE 에 할당** 되어야 한다.
 
-OSITORY OBJECT 와 CROSS-CLIENT CUSTOMIZATION OBJECT 는 WORKBENCH REQUEST 에 할당된다.
+PACKAGE 는 **INTERFACE 와 가시성**을 사용해 해당 요소를 볼 수 있도록 한다.
+
+**REP customizing => client 에 종속**
+**workbench => cross-client 에 종속**
+
+REPOSITORY OBJECT 와 CROSS-CLIENT CUSTOMIZATION OBJECT 는 WORKBENCH REQUEST 에 할당된다.
 
 CLIENT-SPECIFIC CUSTOMIZATION OBJECT 들은 CUSTOMIZING REQUEST 에 할당된다.
 
@@ -243,6 +242,8 @@ https://stepwith.tistory.com/entry/SAP-ABAP-%EA%B0%95%EC%A2%8C-18-Data-TypeBuilt
   | STRING              | ?                 |
   | XSTRING             | ?                 |
 
+
+
 * ## Incomplete standard types
 
   길이를 정의해 줄 수 있는 Data Type
@@ -283,7 +284,7 @@ c, string    When the FROM is a view
 [ABAP Data Types](https://www.abaptutorial.com/abap-programming/abap-data-types/)***<u>(꼭 보기)</u>***
 
 generic : 어떤 데이터 type도 가리킬 수 있는 형태 
-data z1 type ref of data
+data z1 type ref to data
 any 와 data는 동일한 기능을 갖고 있지만, any는 ref to 에 대하여 지원하지 않음.
 table key 가 지정되지 않은 table-type 도 generic type 임.
 
@@ -328,7 +329,7 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 * STRING 
 * XSTRING
 
-##### 이거도 모르겠다 자료가 안나와 ㅅㅂ,, 그래도 ENHANCEMENT CATALOG 문제에서도 비슷한 언급이 있었던 것으로 보아 STRING 관련된 타입이 DEEP TYPE 이 맞는듯,,,
+##### 이거도 모르겠다 자료가 안나와 ,, 그래도 ENHANCEMENT CATALOG 문제에서도 비슷한 언급이 있었던 것으로 보아 STRING 관련된 타입이 DEEP TYPE 이 맞는듯,,,
 
 
 
@@ -380,22 +381,6 @@ DOCUMENTATION 은 DATA ELEMENT 에
 FIELD LABEL 은 DATA ELEMENT 
 
 TECHNICAL INFORMATION 은 GLOBAL LOCAL 모두 가지고 있다.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -549,9 +534,9 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 * ### STANDARD TABLE
 
-  * unique, non-unique and one or a multiple key
+  * non-unique and one or a multiple key
   * 순차적 INDEX를 가진다.
-  * READ / MODIFY / DELETE 구문을 사용할때 INDEX 사용
+  * READ / MODIFY / DELETE 구문을 사용할때 INDEX 사용가능
   * NON-UNIQUE 로 선언해야한다. WITH UNIQUE 구문 사용 X
 
 * ### SORTED TABLE
@@ -559,19 +544,18 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
   * unique, non-unique
   * KEY 값으로 항상 정렬된 ITAB
   * INDEX / KEY 로 ROW 탐색
-  * NON-UNIQUE , UNIQUE 사용 가능
   * SORT 시 오류 
   * APPEND 구문 오류
-
+  
 * ### HASHED TABLE
 
-  * unique
+  * UNIQUE 하게 선언
   * 순차적 INDEX를 갖지 않는다.
   * HASH 값으로 계산된 KEY 값을 통해 탐색
-  * UNIQUE 하게 선언
   * primary key로만 구성
   * 오직 1개 라인만 조회
   * left-justified ***<u>fully</u>*** qualified of the key
+  
 
 ## ITAB 의 접근 시간을 개선할 수 있는 BOUNDARY CONDITION
 
@@ -594,7 +578,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 
 
 
-## DATAW
+## DATA
 
 * DATA gc_XXX TYPE XXX 
 * VALUE 를 통해 초깃값을 설정해 줄 수 있다.
@@ -627,7 +611,7 @@ LIKE 는 Data Object인 경우에만 사용하라고 권고 하고 있다.
 * DB TABLE (TRANSPARENT TABLE) 
 * VIEW
 * DATA TYPE
-* TYPE GROUP(TYPE POOL
+* TYPE GROUP(TYPE POOL)
 * DOMAIN
 * SEARCH HELP
 * LOCK OBJECT
@@ -645,7 +629,7 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 * ### TRANSPARENT TABLE
 
   * ABAP DICTIONARY 에 하나의 TABLE 이 실제 DB 에서도 1대 1로 대응 된다.
-  * 1:1
+  * **1:1**
   * GROUP BY 절 사용 가능
   * SECONDARY INDEX 허용 
   * BUFFERING 가능
@@ -654,10 +638,10 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 * ### CLUSTERED TABLE
 
   * ABAP DICTIONARY 에 있는 N개의 CLUSTERED TABLE 은 DB 에 한개의 TABLE CLUSTER 과 N : 1 의 관계를 갖고 있다.
-  * N : 1
+  * **N : 1**
   * 여러개의 ABAP DICTIONARY 에 있는 CLUSTERED TABLE 로 부터 유지 관리 되어진다.
   * SECONDARY INDEX 사용 X
-  * PRIMARY KEY 통해 접근 
+  * **PRIMARY KEY 통해 접근** 
   * 접근 속도 느림
   * GROUP BY 절 사용 불가
   * JOIN 불가
@@ -686,10 +670,10 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
   * ### BY-PASS buffer 버퍼 우회되는 경우
 
-    ABAP join
-    select .. .by pass buffer.
-    select … for update
-    native SQL
+    **ABAP join**
+    **select .. .by pass buffer.**
+    **select … for update**
+    **native SQL**
 
     
 
@@ -709,12 +693,11 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
     * SINGLE-RECORD
 
-      실제로 액세스하는 테이블의 레코드만 버퍼에 로드됩니다.
+      실제로 액세스하는 테이블의 레코드만 버퍼에 로드된다.
 
       
     
     
-
 
 
 
@@ -726,13 +709,14 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
   VIEW 에서 사용할 TABLE 의 필드를 선택
 
-   테이블간 JOIN CONDITION 정의
+  테이블간 JOIN CONDITION 정의
 
   * TRANSPARENT TABLE 만 사용 가능 (POOLED / CLUSTER 사용 불가)
-
   * 두개 이상의 테이블로 이루어진 경우 READ 만 가능
   * KEY FIELD 가 모두 앞쪽에 있어야한다.
   * **INNER JOIN 사용**
+
+
 
 * ### PROJECTION VIEW
 
@@ -740,17 +724,20 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
   ***<u>단 1개의 테이블</u>***에 대해서 보고싶은 field 만 추려서 볼때 사용
 
+
+
 * ### MAINTENANCE VIEW
 
   TABLE 의 유지보수에 사용
 
-  FOREIGN KEY 관계에 있는 테이블 만 JOIN 가능
+  **FOREIGN KEY 관계**에 있는 테이블 만 **JOIN** 가능
 
   **OUTER JOIN 사용** 
 
   **INNER JOIN 사용 X**
 
-  
+
+
 
 * ### HELP VIEW
 
@@ -758,17 +745,23 @@ https://answers.sap.com/questions/2218390/transparent-table.html
 
   **OUTER JOIN 사용**
 
+
+
 * ### CDS VIEW
+
+
+
+
 
 ## DATA TYPE
 
 * ### DATA ELEMENT
 
-  * 
+  * 기술적인 정보는 기본적으로 DOMAIN이 가지고 있다.
   
-  * 기술적인 정보는 기본적으로 DOMAIN이 가지고 있다. (DATA TYPE, FIELD LENGTH, DECIMAL PLACES LENGTH 등등)
+    (DATA TYPE, FIELD LENGTH, DECIMAL PLACES LENGTH 등등)
   
-  * 하지만 PREDEFINED DATA TYPE 이나 REFERENCE DATA TYPE 을 통해 DATA TYPE 을 정의해 줄 수 도 있다.
+  * PREDEFINED DATA TYPE 이나 REFERENCE DATA TYPE 을 통해 DATA TYPE 을 정의해 줄 수 도 있다.
   
     ![data_element.png](.\IMG\data_element.png)
   
@@ -906,7 +899,7 @@ CONVERSION ROUTINE 을 정의할 수 있다.
 
 * ### 구성 : 
 
-  * import/ export parameters
+  * **import/ export parameters**
 
   * selection method
 
@@ -946,7 +939,7 @@ CONVERSION ROUTINE 을 정의할 수 있다.
 
   IMP, EXP FLAG 에 의해 INTERFACE 정의됨
 
-  TEXT TABLE 이 SELECTIONMETHOD 에서 사용중인 DB TABLE 에 연결되어있다면 SELECTION METHOD 의 TEXT TABLE 이 자동으로 채워진다.
+  TEXT TABLE 이 SELECTION METHOD 에서 사용중인 DB TABLE 에 연결되어있다면 SELECTION METHOD 의 TEXT TABLE 이 자동으로 채워진다.
 
   데이터는 selection-method. 
 
@@ -983,11 +976,16 @@ CONVERSION ROUTINE 을 정의할 수 있다.
 
 
 
-## TECHNICAL SETTING 
+## Structure 과 Transparent table 정의시 둘 모두에서 설정할 수 있는것?
 
-https://papago.naver.com/?sk=auto&tk=ko&st=Which%20screen%20in%20the%20ABAP%20Dictionary%20allows%20you%20to%20log%20data%20changes%20to%20the%20table%3F
+* Enhancement category
+* Foreign key relationships (신뢰도 떨어짐)
 
-* enable change logging 체크박스를 통해 변경된 사항을 LOG 로 TABLE 에 남기도록 설정할 수 있다.
+
+
+
+
+
 
 
 
@@ -1061,7 +1059,7 @@ BAdIS 는 SE18, SE19 에서 관리.
 - CLASS-POOL
 - INTERFACE-POOL
 - TYPE-POOL
-- 정가능
+- 
 - 구문들 중에 제일 먼저 (첫줄에 작성할 필요는 없다. 주석이 앞에 올 수 있다.)
 
 https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_program_statement.htm
@@ -1171,11 +1169,11 @@ LOAD-OF-PAGE
 
 -> ***<u>START-OF-SELECTION</u>*** 
 
+* 명시하지 않아도 무조건 발동 되며 어떤 EVENT BLOCK 도 명시 되어있지 않은 경우 모든 코드를 포함하는 이벤트 블록
+
 -> TOP-OF-PAGE 
 
 -> END-OF-SELECTION
-
-명시하지 않아도 무조건 발동 되며 어떤 EVENT BLOCK 도 명시 되어있지 않은 경우 모든 코드는 **<u>START-OF-SELECTION</u>** EVENT BLOCK 에 속한다.
 
 
 
@@ -1253,12 +1251,36 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 ## SETTING 가능한 것들
 
 * LOCAL CHECK VARIANT 생성
+
 * OBJECT SET NAME
+
 * INSPECTION NAME
 
-* 오답으로 BACKGROUND JOB / WORK PROCESS NAME 이 나왔다.
+* CHECK VARIANT NAME
+
+* 오답으로 
+
+  * BACKGROUND JOB  NAME
+  * WORK PROCESS NAME 
+
+  이 나왔다.
 
 
+
+## INSPECTION 대상으로 선택할 수 있는 ENTITIES
+
+* CONTENTS OF AN OBJECT SET
+
+* CONTENTS OF A SINGLE OBJECT
+
+* CONTENTS OF TRANSPORT REQUEST
+
+* 오답으로 
+
+  * Contentes of named user's objects
+  * Contents of a package
+
+  가 나왔다.
 
 
 
@@ -1313,6 +1335,7 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 * MEMORY 사용량 분석
 * ITAB 분석
 * DATA OBJECT 비교
+* 
 * 소스 코드 수정 불가
 * SQL TRACE 분석 불가 (SQL TRACE 에서 가능)
 
@@ -1362,7 +1385,7 @@ CHAIN은 FIELD 들을 묶어서 처리할때 사용되며 해당 LOGIC 에서 ME
 ## CLASSIC DEBUGGER 로 실행되는 경우
 
 * OBJECT NAVIGATOR 의 설정에서 DEBUGGING 모드를 CLASSIC 으로 세팅하면 가능하다.
-* logon *session이* 초과되는 경우 6번째부터 CLASSIC 으로 실행된다.
+* logon *session*이 초과되는 경우 6번째부터 CLASSIC 으로 실행된다.
 
 
 
@@ -1438,6 +1461,8 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
 * FUNCTION 과 CLASS 의 METHOD 에서만 사용 가능
 * SUBROUTINE 에서 사용 불가 !!
 
+
+
 ## FUNCTION
 
 * ### FUNCTION MODULE 을 생성하기 위해 생성되어야 하는것
@@ -1451,7 +1476,8 @@ profitability across DBMS : DB에 접속 독립성 => 모듈화와 무관
   FUNCTION GROUP 을 생성시 
 
   * **1개의 FUNCTION POOL** 과
-  * 접두사 : SAPL
+    * 접두사 : SAPL
+  
   * **두개의 INCLUDE 파일** 
     * **TXX** - 전역변수
     * **UXX** - FUNCTION 프로그램
@@ -1535,13 +1561,17 @@ SAP LUW 는 DB LUW 내에 배치 되어야 한다.
 
 ## DB LOCK 이 해제되는 경우
 
-* The display of a dialog message type E
-* The display of an SAP screen
-* A CALL TRANSACTION
-* A SUBMIT
-* The display of a dialog message type A
-* An “/n” in the command field
-* COMMIT WORK
+* The display of a **dialog message type E**
+* The **display of an SAP screen**
+* A **CALL TRANSACTION**
+* A **SUBMIT**
+* The display of a **dialog message type A**
+* An **“/n” in the command field**
+* **COMMIT WORK**
+
+
+
+
 
 
 
@@ -1604,18 +1634,6 @@ https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4a/44b362954c0453e10000000a42
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## SCREEN 이 가질 수 있는 MENU ITEMS 의 최대 개수
 
 **15** 개라고 답이 나와있으나 확인이 필요하다 추후 비슷한 문제와 비교 분석 필요
@@ -1638,9 +1656,9 @@ https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4a/44b362954c0453e10000000a42
 
 
 
-CONTAINER 을 사용하는 경우 ADDITIONAL OBJECT 사용이 요구 되며
+CONTAINER 을 사용하는 경우 **ADDITIONAL OBJECT** 사용이 요구 되며
 
-FULL-SCREEN 과 CONTAINER 를 사용하는 경우 모두 EVENT HANDLING 기능을 사용할 수 있다.
+FULL-SCREEN 과 CONTAINER 를 사용하는 경우 **모두** **EVENT HANDLING 기능을 사용할 수 있다**.
 
 
 
@@ -1660,6 +1678,8 @@ Screen painter 에서 custom control을 위치 시킨다 > container class 생�
 column 사이즈는 필드의 경계를 드래그 해 변경 할 수 있으며 순서 또한 field 를 드래그해 변경이 가능하다.
 
 filter 기능과 sort 기능은 ALV tool bar 를 통해 조작 가능하다.
+
+
 
 
 
@@ -1749,13 +1769,23 @@ double-clicking 이벤트에 필요한 것.
 
 그냥 암기??? 
 
+
+
+
+
 https://abapta0903.tistory.com/5 CLASS 구성 요소 설명
+
+
 
 
 
 ### PUBLIC SECTION => PROTECTED SECTION => PRIVATE SECTION 순으로 작성
 
 ### ABAP OOP 에서 자기자신으로 사용되는 변수는 ME 이다.
+
+
+
+
 
 ## FIELD SYMBOL
 
@@ -1780,6 +1810,10 @@ https://abapta0903.tistory.com/5 CLASS 구성 요소 설명
   ```
 
   TYPE 을 명시 해 주지 않을 경우 ANY 로 자동 설정
+
+
+
+
 
 ### 할당
 
@@ -1833,7 +1867,7 @@ ENDLOOP.
 
 * ## GLOBAL CLASS
 
-  GLOBAL CLASS 에서 정의한 DATA TYPE 은 SAP 프로그램 전체에서 CLASS 를 통하여 활용할 수 있따.
+  GLOBAL CLASS 에서 정의한 DATA TYPE 은 SAP 프로그램 전체에서 CLASS 를 통하여 활용할 수 있따. global interface 로 나온 것도 있따.
 
   
 
@@ -1844,6 +1878,8 @@ ENDLOOP.
   * METHOD 구문을 이용해 선언
   * CLASS 의 모든 이벤트에서 메서드를 호출 가능
 
+
+
 * ## STATIC METHOD 
 
   * CLASS-METHOD 구문을 통해 선언
@@ -1852,10 +1888,10 @@ ENDLOOP.
 
 
 
-* ## INSTANTCE CONTRUCTROT 특징
+* ## INSTANCE CONTRUCTROT 특징
 
   * CREATE OBJECT 구문을 통해 인스턴스가 생성될 때마다 호출됨
-  * ***<u>IMPORTING / EXPECTIONS PARAMETER</u>*** 를 가질 수 있다.
+  * ***<u>IMPORTING PARAMETER / EXPCEPTIONS</u>*** 를 가질 수 있다.
 
   
 
@@ -1904,21 +1940,22 @@ ENDLOOP.
 * ## DOWNCAST
 
   * 부모 Class의 Object를 자식 class의 Object에 할당 
-
-
-  * Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
-    * Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
-      따라서 Down-Cast를 사용하여 access 한다.
-
-
-  * Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
-
-    따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 
-
-    CX_SY_MOVE_CAST_ERROR EXCEPTIONS을 처리해준다.
-
-
-  * move를 사용 시 에러가 발생하면 CX_SY_MOVE_CAST_ERROR exception 이 발생함.
+  
+  
+    * Down-Cast를 사용할 때는 ?= 를 사용하여 할당한다. 
+      * Up-Cast를 한 상태에서는 자식 class의 component는 자체적으로 access할 수 없다. 
+        따라서 Down-Cast를 사용하여 access 한다.
+  
+  
+    * Down-Cast를 할 경우 TYPE 이 맞지 않는 경우 ERROR가 날 수 있다
+  
+      따라서 TRY \_\_\_ CATCH \_\_\_ ENDTRY 구문을 이용해 
+  
+      CX_SY_MOVE_CAST_ERROR EXCEPTIONS을 처리해준다.
+  
+  
+    * move를 사용 시 에러가 발생하면 CX_SY_MOVE_CAST_ERROR exception 이 발생함.
+  
 
 
 
@@ -1978,7 +2015,7 @@ The only generic types that can be used after [**TYPE REF TO**](javascript:call_
 
 * HANDLER METHOD 의 IMPLEMENTATION 이 올바른 로직을 포함하고 있는지 확인
 * EVENT 가 제대로 발생하는지 RAISE EVENT 구문에 BREAK POIN 를 잡고 확인
-* HANDLER METHOD 가 등록 되어이쓴ㄴ지 확인
+* HANDLER METHOD 가 등록 되어있는지 확인
 
 ## EVENT 와 HANDLER VISIBILITY 가능한 조합
 
@@ -2144,21 +2181,6 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
   https://www.guru99.com/what-is-user-and-customer-exits.html
 
-  
-
-* **<u>*CL_EXITHANDLER*</u>** 문자열 검색
-
-  BADIS
-
-* **<u>*SAP reference IMG*</u>** 에서 검색
-
-  CUSTOMER EXIT
-
-  CLASSIC BADIS
-
-* **<u>*TADIR / MODSAPT*</u>** 테이블 조회
-
-  
 
 * ***<u>CALL CUSTOMER</u>***  검색 (프로그램)
 
@@ -2168,6 +2190,18 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
   CUSTOMER-EXIT(SCREEN EXIT)
 
+
+
+* **<u>*SAP reference IMG*</u>** 에서 검색
+
+  CUSTOMER EXIT
+
+  CLASSIC BADIS
+
+* **<u>*CL_EXITHANDLER*</u>** 문자열 검색
+
+  CLASSIC BADIS
+
 * ***<u>CMOD SMOD</u>***
 
   * SMOD 는 ENHANCEMENT 관리
@@ -2176,8 +2210,14 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
   CUSTOMER-EXIT
 
 
+
+
 * ***<u>(+) 로 시작하는 FUNCTION 찾기</u>*** 
   * MENU EXIT 에 해당하는 FUNCTION 명은 + 로 시작한다.
+
+
+
+* **<u>*TADIR / MODSAPT*</u>** 테이블 조회
 
 
 
@@ -2235,19 +2275,24 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 * ### IMPLICIT ENHANCEMENT OPTION
 
 
-  * REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
-
-  * #### 할 수 있는 것
+    * REPOSITORY OBJECT MODIFY 없이  FUNCTION MODULE 과 METHOD 의 INTERFACE PARAMETER 를 ENHANCE 할 수 있게 해준다.
 
 
-    * SAP FUNCTION MODULE 에 PARAMETER 추가
-    * GLOBAL SAP CLASS 의 ATTRIBUTE  추가
-    * GLOBAL SAP METHOD 교체
+    * #### 할 수 있는 것
 
+      * SAP FUNCTION MODULE 에 **PARAMETER 추가**
 
-​    
+      * GLOBAL SAP CLASS 의 **ATTRIBUTE  추가**
 
-    * 오답으로 SAP FUNCTION MODULE 에 EXCEPTION 추가 / SAP FUNCTION MODULE 의 교체 가 나왔으나 해당 사항 없다.
+      * GLOBAL SAP **METHOD 교체**
+
+      * 오답으로 
+
+        * SAP FUNCTION MODULE 에 EXCEPTION 추가 
+        * SAP FUNCTION MODULE 의 교체 
+
+        가 나왔으나 해당 사항 없다.
+
 
 
 
@@ -2298,6 +2343,8 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 
 
+
+
 ## USER EXIT
 
 * SUBROUTINE 사용
@@ -2330,6 +2377,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
 ## ENHANCEMENT SPOT
 
+* implicit / Explicit enhancement points, New BADI 를 관리한다는 문제가 나왔다. explicit enhancment sections 는 오답으로 나옴 ???
 * ENHANCEMENT SPOT 은 **EXPLICIT ENHANCEMENT POINT / ENHANCEMENT SECTION / NEW BAdI** 가 포함될 수 있다.
 * ENHANCEMENT POINT 와 ENHANCEMENT SECTION 은 동시에 포함할 수 있지만 BAdI 는 동시에 포함될 수 없다.
 * ENHANCEMENT SPOT 은 하나 이상의 SIMPLE 또는 COMPOSITE ENHANCMENT 를 포함 할 수 있다.
@@ -2359,7 +2407,6 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
   #### 용도
 
   * STANDARD / CBO 테이블에 신규 필드 추가
-
   * FOREIGN KEY 추가 및 정의
   * 도움말 추가
 
@@ -2388,7 +2435,7 @@ Authorization object를 생성 후 *<u>**T-CODE PFCG**</u>* (Role Maintenance) �
 
   *<u>**Enhancement category for --- missing**</u>*
 
-  [[SAP/ABAP] 테이블, 구조 생성 시 warning (Enhancement category for table missing)](
+  
 
 
 
@@ -2426,11 +2473,18 @@ STD를 변경할 때 제공되는 것 :
 ## SCREEN EXIT 을 지원하는 ENHANCEMENT
 
 * NEW BADI
+
 * CLASSIC BADI
+
 * CUSTOMER EXIT
 
-* 오답으로 EXPLICIT ENHANCEMENT POINT / EXPLICT ENHANCEMENT SECTION 은 지원하지 않는다.
+* 오답으로 
 
+  * EXPLICIT ENHANCEMENT POINT 
+  * EXPLICIT ENHANCEMENT SECTION 
+  
+  이 나왔다.
+  
   
 
 
@@ -2607,11 +2661,11 @@ VIEW 를 종료하는 데 사용되는 플러그입니다. 모든 아웃바운�
 
 * CONTEXT 는 각 CONTROLLER 별로 한개씩 갖는다.
 
-* CONTEXT MAPPING : 
+* ### CONTEXT MAPPING : 
 
   CONTEXT 간 CONTROLLER 를 통한 DATA SHARING OR DATA TRANSFERING.
 
-  CONTROLLER 간 데이터 교환은 VIEW CONTROLLER 에서 COMPONENT CONTROLLER 로의 CONTEXT MAPPING 을 사용한다.
+  CONTROLLER 간 데이터 교환은 VIEW CONTROLLER 에서 COMPONENT CONTROLLER 또는 CUSTOM CONTROLLER 로의 CONTEXT MAPPING 을 사용한다.
 
 * ### NODE
 
@@ -2704,13 +2758,13 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 ## SHARED MEMORY AREA 를 설정에 필요한 단계
 
-* AREA ROOT CLASS 생성
+* **AREA ROOT CLASS** 생성
 
-* AREA ROOT CLASS 의 ATTACH\_FOR\_WRITE 메소드 호출
+* AREA ROOT CLASS 의 **ATTACH\_FOR\_WRITE** **메소드** 호출
 
   (LOCK 을 거는 구문)
 
-* ROOT OBJECT 설정
+* **ROOT OBJECT** 설정
 
 [SHARED MEMORY - ABAP : 네이버 블로그](https://m.blog.naver.com/aaaa123krkr/220767969301)
 
@@ -2740,14 +2794,14 @@ USER INTERFACE ELEMENT 의 값을 해당 CONTROLLER 의 CONTEXT ATTRIBUTE에 연
 
 
 
-RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때 오류내역은 CHANGING PARAMETER 에 TABLE 형태로 전달된다.
+RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때 **오류내역은 CHANGING PARAMETER** 에 TABLE 형태로 전달된다.
 
 
 
 ## RFC 가 SYNC 방식으로 작동 하는 경우
 
-* Q-RFC 인 경우 (무조건 동기 방식)[QUEUE]
-* TWO-WAY COMMUNICATION 을 하는 동안
+* **Q-RFC** 인 경우 (무조건 동기 방식)[QUEUE]
+* **TWO-WAY COMMUNICATION** 을 하는 동안
 
 
 
@@ -2771,17 +2825,26 @@ RFC 를 통해 외부 시스템에서 호출되는 함수 모듈을 작성할때
 
 ## 각종 구문
 
-LEAVE TO TRANSACTION 을 통해 이전에 존재하는 INSTANCE 를 모두 초기화 시키고 새로운 INSTANCE를 생성하여 프로그램을 실행 시킬 수 있다.( **ABAP 메모리 초기화** )
+**LEAVE TO TRANSACTION** 을 통해 이전에 존재하는 **INSTANCE 를 모두 초기화** 시키고 새로운 INSTANCE를 생성하여 프로그램을 실행 시킬 수 있다.( **ABAP 메모리 초기화** )
 
 
 
 ## STRING EXPRESSIONS / STRING FUNCTION 을 사용하는 이점
 
-* 코딩이 편하다
-* 중간단계 변수 등이 준다.
-* 긴 구문 대신 구문이 COMPACT 해진다. 
+* 코딩 **편의성**
 
-* 오답으로 속도 향상 / 가독성 이 나왔으나 이는 해당 사항이 아니다
+* **중간단계 변수** 감소
+
+* 긴 구문 대신 구문이 **COMPACT** 해진다. 
+
+* 오답으로 
+
+  * 속도 향상 
+  * 가독성 
+
+  이 나왔으나 이는 해당 사항이 아니다
+
+
 
 
 
@@ -2895,10 +2958,17 @@ ENDLOOP.
 ## ITAB LINE 을 읽는 법
 
 * LINE INDEX 로 특정
+
 * SECONDARY TABLE KEY 로 특정
+
 * WHERE CONDITION 으로 특정
 
-* 오답으로 정규표현식 / FREE TABLE KEY 가 나왔다.
+* 오답으로 
+
+  * 정규표현식
+  * FREE TABLE KEY 
+
+  가 나왔다.
 
 
 
@@ -2957,13 +3027,17 @@ substring 위치 반환해 주는 함수???
 
 
 
+## LOOP 문에서 WHERE 문을 사용할 경우
+
+* SORTED 되어있어야 하며 WHERE 문에는 KEY 들만 들어갈 수 있다.
+
 ## 각종 기능
 
 ## RTTS
 
 * Run Time Type Services 의 약어
 
-* 두가지 부분 RTTI RTTC 로 구분 할 수 있다.
+* 두가지 부분 RTTI / RTTC 로 구분 할 수 있다.
 
 * 동적 타입 처리 로직에 활용된다.
 
@@ -3004,7 +3078,18 @@ substring 위치 반환해 주는 함수???
 
 
 
+## open SQL in SAP Netweaver7.5 에서 새로 생긴 기능?
 
+* CASE expressions
+
+* string expressions
+
+* 오답으로
+
+  * Full join
+  * Intersection 
+
+  이 나왔다.
 
 
 
@@ -3120,7 +3205,7 @@ CONVERSION 또는 FIELD EXIT 에대해 DEBUGGING 할 수 없다.
 
 ##### It may be used anywhere in the landscape.
 
-그것은 어디에서나 사용될 수 있다.
+어디에서나 사용될 수 있다.
 
 ## *<u>Owing to the commit, inconsistent datasets can occur in the database.</u>*
 
