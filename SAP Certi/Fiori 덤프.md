@@ -615,9 +615,599 @@ Fiori Catalog
 
 :book: UX100 - Unit 1 
 
+검증 필요
+
 ****
 
 
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer).
+
+A `<p>` tag has high semantic expressiveness. 
+
+### The `<a>` tag is used to specify HTML Links. 
+
+The `<li>` element can only be used inside of an <ol> element.
+
+****
+
+ :book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which personalization elements can be assigned to user roles? 
+
+## (Choose the correct answers). 
+
+### Fiori Group 
+
+Fiori Group Tile 
+
+### Fiori Catalog 
+
+Fiori Catalog Tile.
+
+****
+
+:book: UX100 - Unit 1 
+
+****
+
+
+
+
+
+## What is the preferred way, when you have the requirement, to hide certain UI controls on a specific form factor? 
+
+## (Choose the correct answer). 
+
+Get the form factor using the device and call the setVisible() function of the UI control. 
+
+### Assign a standard CSS class, such as sapUiVisibleOnlyOnDesktop of SAPUI5, to the UI control. 
+
+Bind the formFactor property of the device model to the visible property of the UI control.
+
+****
+
+:book: UX400 - Unit 7 
+
+https://stackoverflow.com/questions/66930485/device-adaptation-how-to-hide-an-ui-element-for-a-specific-device-type-on-ui5
+
+****
+
+
+
+
+
+## What is true of the SAP Cloud Platform Web IDE for full-stack development?
+
+## (Choose the correct answers). 
+
+### It requires zero Installation. 
+
+It is released with SAP HANA SPS’s. 
+
+### There are twice weekly updates. 
+
+It is included with SAP HANA express edition.
+
+****
+
+:book: UX410 - Unit 6 
+
+검증필요
+
+****
+
+
+
+
+
+## What are the current UI Technologies of SAP? 
+
+## (Choose the correct answers). 
+
+Business Server Pages 
+
+### SAPUI5 
+
+Java Server Pages 
+
+### Web Dynpro ABAP / Floorplan Manager 
+
+### Dynpro.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1 
+
+검증필요
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4f/47faaced4b49e985dd31298bd3775f/frameset.htm
+
+****
+
+
+
+
+
+## What configuration steps are necessary to define a navigation route? 
+
+## (Choose the correct answers). 
+
+### Configure a route in the manifest.json file. 
+
+### Configure a target. 
+
+### Assign at least one target to the route.
+
+Activate routing in the sap.app.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What class in the SAPUI5 API supports back-end mock up and is recommended by SAP? 
+
+## (Choose the correct answer). 
+
+sap.ui.app.MockServer 
+
+### sap.ui.core.util.MockServer 
+
+sap.m.MockServer 
+
+sap.ui.core.MockServer.
+
+****
+
+:book: UX402 - Unit 3 
+
+****
+
+
+
+
+
+## Since when is the Split-Screen-layout deprecated? 
+
+## (Choose the correct answer). 
+
+1.42 
+
+1.44 
+
+1.46 
+
+### 1.48 
+
+1.50
+
+****
+
+:book: UX410 - Unit 11 
+
+****
+
+
+
+
+
+## What is a GIT branch? 
+
+## (Choose the correct answer). 
+
+A GIT branch represents a local working copy of the main development line. 
+
+A GIT branch always represents the main development line. 
+
+### A GIT branch represents an independent line of development. 
+
+A GIT branch is the SAP implementation of GIT.
+
+****
+
+:book: UX402 - Unit 5 
+
+****
+
+
+
+
+
+## What is the name of the attribute to access the custom attributes in your JavaScript code? 
+
+## (Choose the correct answer). 
+
+### dataset 
+
+attributeset 
+
+customDatas.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following components are part of the SAP Fiori launchpad? 
+
+## (Choose the correct answers). 
+
+### Shell services 
+
+UI2 services 
+
+### Shell container 
+
+Runtime container 
+
+### Runtime configuration.
+
+****
+
+:book: UX410 - Unit 9 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the prefix of the HTML custom attributes of SAPUI5? 
+
+## (Choose the correct answer). 
+
+data-sap-ui5 
+
+### data-sap-ui 
+
+data-sap-uiconfig 
+
+data-sap-config-ui.
+
+****
+
+:book: UX400 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What is used in SAP S/4HANA to read data from the database? 
+
+## (Choose the correct answer).
+
+### ABAP Core Data Services (CDS) 
+
+???.
+
+****
+
+:book: UX100 - Unit 3  
+
+****
+
+
+
+
+
+## What parameter is needed when instantiating a MockServer object? 
+
+## (Choose the correct answer). 
+
+uri 
+
+rootUri 
+
+url 
+
+rootUrl.
+
+****
+
+:book: UX402 - Unit 3 
+
+**Questions :** SAPUI5 Problem with rootUri in Mock Sever
+
+SAPUI5 Problem with rootUri in Mock Sever
+
+**Questions :** SAPUI5 Problem with rootUri in Mock Sever
+
+Thanks a lot to all of you, my friends for anycodings_manifest.json your help and advices. Guys, I think I anycodings_manifest.json solved the problem, almost. Just need your anycodings_manifest.json help with this moment: My Table get data anycodings_manifest.json from mock server, but doesn't show it to anycodings_manifest.json user. Instead of the rows it shows an empty anycodings_manifest.json table where the rows count is equal to the anycodings_manifest.json data in my mockserver file. I mean: At the anycodings_manifest.json moment, in "ZMA_BPSet" there'se 8 rows. anycodings_manifest.json Because of this you can see 8 rows in anycodings_manifest.json table. Can anybody help me?
+
+
+
+[SAPUI5](https://www.anycodings.com/search?q=sapui5)[MANIFEST.JSON](https://www.anycodings.com/search?q=manifest.json)[MOCKSERVER](https://www.anycodings.com/search?q=mockserver)
+
+Total Answers **1**
+
+## **Answers 1 :** of SAPUI5 Problem with rootUri in Mock Sever
+
+rootUri is used to determine the path of anycodings_mockserver the OData service that should by anycodings_mockserver intercepted by the mock server. It anycodings_mockserver should always correspond to the service anycodings_mockserver uri of your OData service specified in anycodings_mockserver manifest.json.
+
+So, if you have this in your manifest
+
+```json
+"dataSources": {
+    "mainService": {
+        "uri": "/sap/opu/odata/your-service/",
+        "type": "OData",
+        "settings": {
+            "localUri": "localService/metadata.xml"
+        }
+    }
+},
+```
+
+your mock server constructor should look anycodings_mockserver like this:
+
+```csharp
+var oMockServer = new MockServer({
+    rootUri: "/sap/opu/odata/your-service/"
+});
+```
+
+Note that the rootUri must always have a anycodings_mockserver trailing slash. If your service url in anycodings_mockserver manifest.json does not have one, make anycodings_mockserver sure that rootUri does.
+
+You don't have to change anything in anycodings_mockserver your manifest.json. All test setups are anycodings_mockserver done in mockServer.html and its anycodings_mockserver referenced files.
+
+https://velog.io/@opensapkr/Step-27-Mock-Server-Configuration-apjxptcpgp
+
+****
+
+
+
+
+
+## What is used as a container for SAP Fiori in an Enterprise Portal? 
+
+## (Choose the correct answer). 
+
+### Fiori iView 
+
+???.
+
+****
+
+:book: UX100 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## Is it true to say that the sap.m.App control does not provide responsive behavior? 
+
+## (Choose the correct answer). 
+
+That is true, the sap.m.App control does not provide responsive behavior It depends on the SAPUI5 version. 
+
+From version 1.30 and later, the sap.m.App control provides responsive behavior. 
+
+### No, that is not true. The sap.m.App control provides responsive behavior.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## When is the use of a master-detail pattern not recommended? 
+
+## (Choose the correct answers). 
+
+### You need to offer complex filters for the master list of items. 
+
+You want to display a single object. 
+
+### When you want to display different facets of the same object, data, or both.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What does the createAttribute method return? 
+
+## (Choose the correct answer). 
+
+An object of the type Attr 
+
+An object of the type Attribute 
+
+The method returns void.
+
+****
+
+:book: UX399 - Unit 3 
+
+http://www.w3big.com/ko/jsref/met-document-createattribute.html
+
+****
+
+
+
+
+
+## What features are contained in jQuery? 
+
+## (Choose the correct answers). 
+
+### HTML, DOM, CSS manipulation 
+
+UI5 event 
+
+### Effects and animations 
+
+### AJAX.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://micropyramid.com/blog/jquery-features-overview-and-its-future/
+
+검증필요
+
+UI5 event 를 포함하지 않는지 확인 필요
+
+****
+
+
+
+
+
+## If your backend system is based on ABAP 7.50, which are available ways of using facets? 
+
+## (Choose the correct answers). 
+
+Declare both: field groups and facets in CDS view. 
+
+### Declare both: field group and facet as local annotation using WebIDE. 
+
+### Declare field group in CDS view, declare facets as local annotation using WebIDE. 
+
+It is not possible to use facets in ABAP 7.50.
+
+****
+
+:book: UX403 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## How many heading elements are specified in the HTML specification? 
+
+## (Choose the correct answer). 
+
+4 
+
+3 
+
+### 6 
+
+1.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is true for the prototype? 
+
+## (Choose the correct answers). 
+
+### Every function has a prototype 
+
+### Each object can act as a prototype 
+
+### Any change on the prototype object is immediately visible to all referencing objects.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What does the method document.createElement(“article”) do? 
+
+## (Choose the correct answer). 
+
+### It creates an element of the type HTMLUnknownElement. 
+
+It creates an element of the type article 
+
+It throws an error.
+
+****
+
+:book: UX399 - Unit 3 
+
+테스트 결과 article 생성되는데 왜 답이 저거인지 모르겠다.
+
+검증필요
+
+****
+
+
+
+
+
+## Where are the services for SAPUI5 apps organized? 
+
+## (Choose the correct answer). 
+
+### Internet Communication Framework (ICF) 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+검증필요
+
+****
 
 
 
