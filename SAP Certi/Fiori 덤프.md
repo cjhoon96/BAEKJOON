@@ -1205,6 +1205,32 @@ It throws an error.
 
 :book: UX100 - Unit 2 
 
+![icf](IMG/icf.png)
+
+![icf](IMG/icf.jpg)
+
+****
+
+
+
+
+
+## What can you do by editing manifest.json? 
+
+## (Choose the correct answers). 
+
+### Disable object page. 
+
+### Add object pages as sub page under an object page. 
+
+Define facets on Object Page. 
+
+Disable List Report.
+
+****
+
+:book: UX403 - Unit 5 
+
 검증필요
 
 ****
@@ -1213,9 +1239,534 @@ It throws an error.
 
 
 
+## Which layers of settings are available for SAP Fiori? 
+
+## (Choose the correct answers). 
+
+### Configuration 
+
+### Personalization 
+
+### Customizing 
+
+Internationalization.
+
+****
+
+:book: UX100 - Unit 4 
+
+****
 
 
 
+
+
+## Which model types are supported by SAPUI5? 
+
+## (Choose the correct answers). 
+
+### JSON model 
+
+### Resource model 
+
+Translation model 
+
+### XML Model 
+
+### OData model.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://velog.io/@opensapkr/Step-6-Resource-Models-cfjxl5770h
+
+****
+
+
+
+
+
+## Which native capabilities of a mobile device can only be leveraged when using SAP Fiori for iOS? 
+
+## (Choose the correct answers). 
+
+### Touch ID 
+
+Camera 
+
+### Facetime 
+
+### iBeacon 
+
+Geolocation.
+
+****
+
+:book: UX100 - Unit 6 
+
+검증필요
+
+facetime / touch id / iBeacon 는 확인 된바 있다.
+
+****
+
+
+
+
+
+## What is the best approach to showing a UI control on a desktop only, and not on a mobile device? 
+
+## (Choose the correct answer). 
+
+Use the Device API to check the environment and call setVisible on the UI control. 
+
+Use the UI control from sap.ui.commons.  These UI controls can handle this automatically. 
+
+### Use the standard CSS class sapUiVisibleOnlyOnDesktop.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## What possible values can be used for the annotation @UI.LineItem.importance? 
+
+## (Choose the correct answers). 
+
+### LOW 
+
+VERY_HIGH 
+
+### HIGH 
+
+### MEDIUM.
+
+****
+
+:book: UX410 - Unit 14 
+
+https://help.sap.com/docs/SAP_BW4HANA/107a6e8a38b74ede94c833ca3b7b6f51/f8af07bb0770414bb38a25cae29a12e9.html?version=2.0.0&locale=en-US
+
+!!! Original answer is not correct. See the explanation section. 
+
+****
+
+
+
+
+
+## When do you use deep insert? 
+
+## (Choose the correct answer). 
+
+When working with aggregation binding to update / insert an entity in the bound complex structure. 
+
+When adding a new entity to an entity set. 
+
+### When working with hierarchical data where the data can only be stored in the full hierarchy.
+
+****
+
+:book: UX402 - Unit 3 
+
+hierarchical data = 계층형 데이터 (트리 구조) 
+
+****
+
+
+
+
+
+## Is it possible to read CSS properties with the CSS method? 
+
+## (Choose the correct answer). 
+
+### True 
+
+False.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## What are the limitations of publishing CDS as OData service by adding a @OData.publish:true? 
+
+## (Choose the correct answers). 
+
+Can not expose associations. 
+
+### Can not change names of entity sets. 
+
+### Only 1 level is taken into consideration when exposing associations. 
+
+### No customized ABAP code in SAP Gateway.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요 
+
+일전 신행준 멘토님이 알려주셨던 cds view 를 통해 read 가능한 odata service 를 생성했던 내용과 관련 있는듯 하다.
+
+****
+
+
+
+
+
+## Which fragment type is not available in SAPUI5? 
+
+## (Choose the correct answer). 
+
+XML fragment 
+
+### JSON fragment 
+
+HTML fragment 
+
+JavaScript fragment.
+
+****
+
+UX400 - Unit 8 
+
+****
+
+
+
+
+
+## How is the extension type called to hide UI controls? 
+
+## (Choose the correct answer). 
+
+Control replacement 
+
+Control modification 
+
+### View modification 
+
+Element modification.
+
+****
+
+:book: UX402 - Unit 4 
+
+https://help.sap.com/docs/FIORI_IMPLEMENTATION_740/9231fb54517b4759a855c716887b842e/f0f0df5215eb5c3fe10000000a423f68.html?version=7.40.3.0
+
+****
+
+
+
+
+
+## Which UI annotation is used to declare a field for the smart filter template? 
+
+## (Choose the correct answer). 
+
+UI.searchField 
+
+### UI.selectionField 
+
+UI.filterField 
+
+UI.finderField
+
+****
+
+:book: UX402 - Unit 3 
+
+https://help.sap.com/doc/saphelp_nw75/7.5.5/en-US/f8/af07bb0770414bb38a25cae29a12e9/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## What is the goal of every developer? 
+
+## (Choose the correct answers). 
+
+### Increase efficiency 
+
+### Develop faster 
+
+Increase development effort 
+
+### Less maintenance.
+
+****
+
+UX410 - Unit 14 
+
+****
+
+
+
+
+
+## Which of the following properties can be used to define a resource bundle and an alias inside an XML view? 
+
+## (Choose the correct answers). 
+
+resourceBundle 
+
+### resourceBundleName 
+
+resourceAlias 
+
+### resourceBundleAlias.
+
+****
+
+:book: UX400 - Unit 10 
+
+<mvc:View
+    **resourceBundleName**="sap.ui.core.messagebundle"
+    **resourceBundleAlias**="i18n"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+
+****
+
+
+
+
+
+## Which OData option grants access to the service definition? 
+
+## (Choose the correct answer). 
+
+### $metadata 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+****
+
+
+
+
+
+## What impact does SAP Fiori have on business? 
+
+## (Choose the correct answers). 
+
+### Digitalization 
+
+### Simplification 
+
+Support the web and open standards 
+
+Provides a user-centered approach 
+
+### Leads to re-imagination of processes.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What attribute can you use to inform the end-user of what kind of data he should enter in a form field? 
+
+textsuggestion 
+
+### placeholder 
+
+textphrase
+
+****
+
+:book: 확실
+
+****
+
+
+
+
+
+## What is the data source definition for the SAP Fiori search? 
+
+## (Choose the correct answer). 
+
+### Search connectors 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+https://help.sap.com/docs/SAP_FIORI_OVERVIEW/17ca92fbe8f54d9d8dfbe830cbb0c8d2/12af5252b10d5a64e10000000a423f68.html?version=4_S4H1909.01&locale=en-US
+
+****
+
+
+
+
+
+## What does the childNode property return? 
+
+## (Choose the correct answer). 
+
+### The childNode property returns a live collection of child nodes of the given element. 
+
+Returns the node immediately following the specified one in the parent childNode list 
+
+Returns the list of childNodes of the document.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What establishes a secure connection between on-premise systems and SAP CP? 
+
+## (Choose the correct answer). 
+
+### Cloud Connector 
+
+???.
+
+****
+
+:book: UX100 - Unit 7 
+
+****
+
+
+
+
+
+## What are the different content densities provided by SAPUI5? 
+
+## (Choose the correct answers). 
+
+### cozy 
+
+large 
+
+### condensed 
+
+strict 
+
+### compact.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/e54f729da8e3405fae5e4fe8ae7784c1.html
+
+****
+
+
+
+
+
+## What impact does UX have on monetary values? 
+
+## (Choose the correct answers). 
+
+Increases user satisfaction. 
+
+### Provides productivity gains and increases data quality. 
+
+Strengthens relationships with customers. 
+
+### Provides training cost savings 
+
+### Reduces the number of change requests and user errors.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which function invocation is necessary to set up the routing inside a full-screen app? 
+
+## (Choose the correct answer). 
+
+### this.getRouter().initialize(); 
+
+this.getRouter().setup(); 
+
+this.getRouter().init(); 
+
+this.getRouter().registerRoutes();.
+
+****
+
+:book: UX400 - Unit 14 
+
+검증필요
+
+****
+
+
+
+
+
+## When should you not use the dynamic page layout? 
+
+## (Choose the correct answers). 
+
+### You are planning to use SAP Fiori elements, such as the list report, analytical list page, overview page, or object page, which already incorporates the dynamic page layout. 
+
+You are building a freestyle application that uses the dynamic page header and footer toolbar features of SAP Fiori 2.0 (versions 1.40 and higher) 
+
+### You want to implement an initial page or object page floor plan. These floor plans already incorporate snapping header and footer toolbar features. The behavior is comparable to the dynamic page behavior, but the technical foundation is different. 
+
+You are building an analytical application that is using the sap.viz API. 
+
+### You only need to display a small amount of information. In this case, use a dialog instead. If you cannot avoid using the dynamic page layout, use letterboxing to mitigate the issue.
+
+
+
+****
+
+:book: UX410 - Unit 11 
+
+https://experience.sap.com/fiori-design-web/dynamic-page-layout/#do-not-use-the-dynamic-page-if
+
+****
 
 
 
