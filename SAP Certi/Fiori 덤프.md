@@ -134,44 +134,6 @@ SAP Business Intelligence.
 
 
 
-## Which element groups Fiori apps based on business area? 
-
-business area 에 따라 피오리 앱을 그룹화하는 요소는 무엇입니까?
-
-## (Choose the correct answer). 
-
-### Technical Catalog (TC) 
-
-???
-
-****
-
-:book: UX100 - Unit 4 
-
-검증필요
-
-https://help.sap.com/docs/SAP%20Fiori%20launchpad/d4650bf68a9f4f67a1fda673f09926a9/af35d42e7d4f49d7b8e46080cd01c299.html?version=753.04&locale=en-US
-
-**Technical Catalog** 
-
-* 모든 앱의 저장소 역할
-* application area 별 app 과 관련된 모든 대상 mapping 및 app launcher tile 이 포함된다. 
-* Technical Catalog 는 사용자에게 직접 할당되지 않는다. 
-
-**Business Catalog**
-
-* Business roll 과 관련된 대상 매핑 과 app launcher tile 의 sample collection 이 포함되어있다.
-* Business Catalog 의 content 들은 Technical Catalog content 의 하위 집합니다.
-* 이 하위 집합은 특정 Business 사용자의 요구사항을 반영한다.  
-
-Business catalogs contain a sample collection of target mappings and app launcher tiles relevant for a business role. The content of the business catalog is a subset of the content of the technical catalog. This subset reflects the requirements of a specific business user. 
-
-****
-
-
-
-
-
 ## Which of the following steps are part of the design phase in the DLD? 
 
 다음 중 DLD의 design 단계의 일부인 단계는?
@@ -1758,21 +1720,722 @@ You are building an analytical application that is using the sap.viz API.
 
 ### You only need to display a small amount of information. In this case, use a dialog instead. If you cannot avoid using the dynamic page layout, use letterboxing to mitigate the issue.
 
-
-
 ****
 
 :book: UX410 - Unit 11 
 
 https://experience.sap.com/fiori-design-web/dynamic-page-layout/#do-not-use-the-dynamic-page-if
 
+list report / analytical list page / overview page / object page 
+
+initial page or object page floor plan
+
+소량의 정보만 표시하면 되는 경우
+
 ****
 
 
 
 
 
+## Which element groups Fiori apps based on business topic? 
 
+## (Choose the correct answer). 
+
+### Business Catalog Group (BCG) 
+
+???.
+
+****
+
+:book: UX100 - Unit 4 
+
+https://help.sap.com/docs/SAP%20Fiori%20launchpad/d4650bf68a9f4f67a1fda673f09926a9/af35d42e7d4f49d7b8e46080cd01c299.html?version=753.04&locale=en-US
+
+**Technical Catalog** 
+
+* 모든 앱의 저장소 역할
+* application area 별 app 과 관련된 모든 대상 mapping 및 app launcher tile 이 포함된다. 
+* Technical Catalog 는 사용자에게 직접 할당되지 않는다. 
+
+**Business Catalog**
+
+* Business roll 과 관련된 대상 매핑 과 app launcher tile 의 sample collection 이 포함되어있다.
+* Business Catalog 의 content 들은 Technical Catalog content 의 하위 집합니다.
+* 이 하위 집합은 특정 Business 사용자의 요구사항을 반영한다.  
+
+Business catalogs contain a sample collection of target mappings and app launcher tiles relevant for a business role. The content of the business catalog is a subset of the content of the technical catalog. This subset reflects the requirements of a specific business user. 
+
+****
+
+
+
+
+
+## Which element groups Fiori apps based on business area? 
+
+business area 에 따라 피오리 앱을 그룹화하는 요소는 무엇입니까?
+
+## (Choose the correct answer). 
+
+### Technical Catalog (TC) 
+
+???
+
+****
+
+:book: UX100 - Unit 4 
+
+검증필요
+
+https://help.sap.com/docs/SAP%20Fiori%20launchpad/d4650bf68a9f4f67a1fda673f09926a9/af35d42e7d4f49d7b8e46080cd01c299.html?version=753.04&locale=en-US
+
+**Technical Catalog** 
+
+* 모든 앱의 저장소 역할
+* application area 별 app 과 관련된 모든 대상 mapping 및 app launcher tile 이 포함된다. 
+* Technical Catalog 는 사용자에게 직접 할당되지 않는다. 
+
+**Business Catalog**
+
+* Business roll 과 관련된 대상 매핑 과 app launcher tile 의 sample collection 이 포함되어있다.
+* Business Catalog 의 content 들은 Technical Catalog content 의 하위 집합니다.
+* 이 하위 집합은 특정 Business 사용자의 요구사항을 반영한다.  
+
+Business catalogs contain a sample collection of target mappings and app launcher tiles relevant for a business role. The content of the business catalog is a subset of the content of the technical catalog. This subset reflects the requirements of a specific business user. 
+
+****
+
+
+
+
+
+## What is used as container for SAPUI5 apps in the ABAP repository? 
+
+## (Choose the correct answer). 
+
+### Business Server Pages (BSP) 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+****
+
+
+
+
+
+## In which state are the files in GIT when a remote repository is cloned? 
+
+## (Choose the correct answers). 
+
+Staged and modified 
+
+### Tracked and unmodified 
+
+Tracked and staged 
+
+Modified and tracked.
+
+****
+
+:book: UX402 - Unit 5 !!! Falsche Antwort absichtlich im original. 
+
+https://88240.tistory.com/313
+
+https://m.blog.naver.com/sw4r/221258249271
+
+****
+
+
+
+
+
+## What is SAP Screen Personas? 
+
+## (Choose the correct answer). 
+
+### A web-based layer for personalization of SAP GUI Dynpro and Web Dynpro ABAP 
+
+???.
+
+****
+
+UX100 - Unit 5 
+
+SAP GUI 환경의 불편함(처음 사용자가 적응하기 힘들다. 사용하지 않는 항목이 노출되어 업무에 집중하기 힘들다 등등)을 해소하기 위해서 각 업무 환경에 맞게 화면을 단순화하거나 재배치할 수 있는 기능을 제공하는 것이 SAP Screen Personas 입니다.
+
+https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
+
+****
+
+
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer). 
+
+You can use the focus attribute on multiple form fields. 
+
+### The focus attribute can only used at one form field. 
+
+Only the first form field with the focus attribute will get the focus.
+
+****
+
+:book: UX399 - Unit 1 
+
+커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
+
+****
+
+
+
+
+
+## What is the purpose of a build server? 
+
+## (Choose the correct answer). 
+
+Used for code review 
+
+### Provides software that allows continuous integration. 
+
+Used for version control 
+
+Manages components, builds artifacts, and releases candidates in one central location.
+
+****
+
+:book: UX410 - Unit 15 
+
+https://www.techtarget.com/searchapparchitecture/tip/Why-should-I-use-a-build-server
+
+****
+
+
+
+
+
+## What is the preferred technology to implement SAP Fiori applications? 
+
+## (Choose the correct answer). 
+
+Web Dynpro ABAP 
+
+### SAPUI5 
+
+Web Dynpro Java 
+
+Dynpro.
+
+****
+
+:book: UX410 - Unit 3 
+
+****
+
+
+
+
+
+## Which control is used in the index.html file to support letterboxing if required? 
+
+## (Choose the correct answer). 
+
+sap.ui.core.ComponentContainer 
+
+sap.ui.core.Component 
+
+### sap.m.Shell 
+
+sap.ui.core.View.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://experience.sap.com/fiori-design-web/letter-boxing/#guidelines
+
+****
+
+
+
+
+
+## What concept is provided by SAP to make it possible to extend standard SAPUI5 function in the basic application? 
+
+## (Choose the correct answer). 
+
+Base methods 
+
+### Hook methods 
+
+View controllers 
+
+Extension controller.
+
+****
+
+:book: UX410 - Unit 13 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/8fbf4e728bd146fcb2053aeb6ca741f9
+
+****
+
+
+
+
+
+## Which design template is used for SAP Fiori 2.0? 
+
+## (Choose the correct answer). 
+
+### SAP Belize 
+
+???.
+
+****
+
+:book: UX100 - Unit 5 
+
+https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8ec2dae34eb44cbbb560be3f9f1592fe/977672c6940f48578d08d770bee236f2.html?version=1709%20000&locale=en-US
+
+****
+
+
+
+
+
+## Which clients can be used for SAP Fiori? 
+
+## (Choose the correct answers). 
+
+### Web Browser 
+
+SAP Logon 
+
+### SAP Fiori Client 
+
+SAP Easy Access 
+
+### SAP Business Client.
+
+****
+
+:book: UX100 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following are known as BOM Objects? 
+
+## (Choose the correct answers). 
+
+Document 
+
+### Window 
+
+### History 
+
+### Location.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://www.javascripttutorial.net/javascript-bom/
+
+https://pridiot.tistory.com/170
+
+**BOM** (**B**rowser **O**bject **M**odel)
+
+웹 브라우저 전체를 객체로 관리하는 것으로 자바스크립트 프로그램을 통해 브라우저 창을 관리할 수 있도록 브라우저 요소를 객체화 해 놓은 것이다.
+
+* **내장 객체**
+
+  * ***Window :*** 
+
+    브라우저 창이 열릴 때마다 하나 씩 만들어지는 객체
+
+    브라우저 창 안에 존재하는 모든 요소의 최상위 객체
+
+  * ***Document :*** 
+
+    웹 문서에서 \<body> 태그를 만나면 만들어지는 객체
+
+    HTML 문서 정보를 가지고 있다.
+
+  * ***History :*** 
+
+    현재 창에서 사용자 방문 기록을 저장하고 있는 객체
+
+  * ***Location :***
+
+    현재 페이지에 대한 URL 정보를 가지고 있는 객체
+
+  * ***Navigator :***
+
+    현재 사용 중인 웹브라우저 정보를 가지고 있는 객체
+
+  * ***Screen :***
+
+    현재 사용중인 화면 정보를 다루는 객체
+
+****
+
+
+
+
+
+## Does QUnit support SAPUI5 view tests? 
+
+## (Choose the correct answer). 
+
+Yes, you can implement a test class to test UI aspects of SAPUI5. 
+
+### No, for UI tests you must use OPA5. 
+
+You can use the QUnit-extensions, called Selenium, to test SAPUI5 controls.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://help.sap.com/saphelp_uiaddon10/helpdata/en/a6/b0657d226343da81ad96632cd1bd83/content.htm?no_cache=true
+
+https://help.sap.com/saphelp_uiaddon10/helpdata/en/26/96ab50faad458f9b4027ec2f9b884d/content.htm?no_cache=true
+
+검증필요
+
+****
+
+
+
+
+
+## How do you enter the UI adaptation mode of SAP Fiori apps? 
+
+## (Choose the correct answer). 
+
+Start app→ Me Area→ Adapt UI 
+
+???.
+
+****
+
+:book: UX100 - Unit 5 
+
+https://blogs.sap.com/2018/05/12/fiori-for-s4hana-adapting-terminology-in-sap-fiori-apps-via-key-user-tools/
+
+****
+
+
+
+
+
+## What is the order of processing CSS instructions?
+
+## (Choose the correct answer). 
+
+### Importance, Specificity, Source order 
+
+Specificity, Source order, Importance 
+
+Source-order, Importance, Specificity.
+
+****
+
+:book: UX399 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## In which file is the Component controller implemented? 
+
+## (Choose the correct answer). 
+
+Component.json 
+
+### Component.js 
+
+UIComponent.js 
+
+BaseComponent.js.
+
+*****
+
+:book: UX400 - Unit 13 
+
+****
+
+
+
+
+
+## What areas are mandatory in the tile layout? 
+
+## (Choose the correct answers). 
+
+Subtitle 
+
+### Header Area 
+
+Content Area 
+
+Status Area 
+
+KPI Area.
+
+****
+
+:book: UX410 - Unit 9 
+
+https://experience.sap.com/fiori-design-web/tile/#header-area
+
+정답에는 header area 와 content area 가 필수라고 되어있으나 
+
+위 링크에 보면 content area 는 optional 이라고 되어있다.
+
+검증필요
+
+****
+
+
+
+
+
+## Which JavaScript function is called to define a module?
+
+## (Choose the correct answer). 
+
+jQuery.sap.require 
+
+jQuery.sap.define 
+
+### sap.ui.define 
+
+sap.ui.declare.
+
+****
+
+:book: UX400 - Unit 5 
+
+We define a module, by calling sap.ui.define,
+
+****
+
+
+
+
+
+## What is true for the functions after and insertAfter? 
+
+## (Choose the correct answers).
+
+### The way the elements are selected is different 
+
+There is no difference in the result. 
+
+The insertAfter function performs better than the after function.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+답에는 둘 의 결과가 차이가 없다고 나와있다 
+
+A.after(B) – A 뒤에 B를 추가 
+A.insertAfter(B) – B 뒤에 A를 추가
+
+****
+
+
+
+
+
+## How does the OData Model handle XSRF tokens? 
+
+## (Choose the correct answer). 
+
+The OData Model does not handle XSRF-tokens. The developer must implement token handling. 
+
+### The OData Model fetches the token when reading the metadata and sends the token automatically in each write request header. 
+
+The OData Model fetches the token for each request and sends the token automatically with each request.
+
+*****
+
+:book: UX402 - Unit 3 
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/6c/47b2b39db9404582994070ec3d57a2/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## What of the following is true? 
+
+## (Choose the correct answers). 
+
+### The :last-child selector matches every element that is the last child of its parent. 
+
+### The :nth-last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child 
+
+The :last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child.
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+## What is the visibility of a variable that is defined inside a function? 
+
+## (Choose the correct answer). 
+
+It is only visible inside the function. 
+
+It is only visible inside the statement where the variable is defined 
+
+As a variable in JavaScript it is always globally visible.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Which root element can be used when developing a full-screen app? 
+
+## (Choose the correct answer). 
+
+### sap.m.App 
+
+sap.m.FullScreenApp 
+
+sap.m.BaseApp 
+
+sap.m.SplitApp
+
+****
+
+:book: UX400 - Unit 14 
+
+****
+
+
+
+
+
+## In an Analytic List Page, the user can filter data by clicking some points in the chart. 
+
+## (Choose the correct answer). 
+
+### True 
+
+False
+
+****
+
+:book: UX403 - Unit 7 
+
+****
+
+
+
+
+
+## Which of following templates display only one business entity? 
+
+## (Choose the correct answer). 
+
+List Report 
+
+### Object Page 
+
+Overview Page 
+
+Analytic List Page.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## When running a list report, users can only filter data using fields provided as selection fields by developer. 
+
+## (Choose the correct answer). 
+
+True
+
+### False.
+
+****
+
+:book: UX403 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What are the two aggregations provided by sap.m.SplitApp control to add page implementations? 
+
+## (Choose the correct answers). 
+
+mainPages 
+
+### masterPages 
+
+infoPages 
+
+### detailPages 
+
+detail.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
 
 
 
