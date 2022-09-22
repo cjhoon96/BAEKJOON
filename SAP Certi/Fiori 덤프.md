@@ -2441,6 +2441,963 @@ detail.
 
 
 
+## What is the purpose of SAP Build? 
+
+## (Choose the correct answer). 
+
+### Provides tooling to support the designer during various phases of design thinking. 
+
+Provides tooling to support the developer during the development of back-end services. 
+
+Provides tooling to support the developer during the development of SAPUI5 applications.
+
+****
+
+:book: UX410 - Unit 4 
+
+****
+
+
+
+
+
+## What is the central app to display Workflow items in SAP Fiori? 
+
+## (Choose the correct answer). 
+
+### My Inbox
+
+???.
+
+****
+
+:book: UX100 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## From which control does the sap.m.App control inherit navigation capabilities? 
+
+## (Choose the correct answer). 
+
+sap.m.NavigationContainer 
+
+### sap.m.NavContainer 
+
+sap.ui.core.NavContainer.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/#/api/sap.m.NavContainer%23overview
+
+****
+
+
+
+
+
+## Which of the following statements are true with respect to fragments? 
+
+## (Choose the correct answers). 
+
+### Fragments are defined in a manner similar to views. 
+
+A fragment itself has a HTML representation. 
+
+### Fragments are light-weight UI parts. 
+
+Fragments need a controller, similar to views.
+
+****
+
+:book: UX400 - Unit 8 
+
+****
+
+
+
+
+
+## Which enumeration defines the various binding modes provided by SAP? 
+
+## (Choose the correct answer). 
+
+### sap.ui.model.BindingMode 
+
+sap.ui.binding.BindingMode 
+
+sap.ui.bindingmode.Mode 
+
+sap.ui.model.binding.Mode.
+
+****
+
+:book: UX400 - Unit 9 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.model.BindingMode%23properties
+
+****
+
+
+
+
+
+## What is the name of the aggregation of the sap.m.App control, or more precisely the name of the sap.m.NavContainer control, in which UI controls are aggregated? 
+
+## (Choose the correct answer). 
+
+fullPages 
+
+### pages 
+
+masterPages 
+
+detailPages.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.NavContainer%23aggregations
+
+****
+
+
+
+
+
+## Which of the following are the binding types supported in SAPUI5? 
+
+## (Choose the correct answers). 
+
+### Property binding 
+
+Default binding 
+
+### Aggregation binding 
+
+Elementary binding 
+
+### Element binding.
+
+****
+
+:book: UX400 - Unit 9
+
+******
+
+
+
+
+
+## In what configuration area of the manifest.json file can you activate automatic message creation? 
+
+## (Choose the correct answer). 
+
+sap.app 
+
+sap.ui 
+
+### sap.ui5
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What is SAP Kapsel? 
+
+## (Choose the correct answers). 
+
+### SAP specific plug-in for Cordova 
+
+SAP specific plug-in for Apple iOS 
+
+SAP specific plug-in for Android 
+
+### SAP Kapsel provides the API to interact from Cordova based web applications to SMP3 and software cloud platforms.
+
+****
+
+:book: UX410 - Unit 16 
+
+검증필요
+
+****
+
+
+
+
+
+## Which tool is used in a Suite on HANA environment to model KPI? 
+
+## (Choose the correct answer). 
+
+### KPI Modeler 
+
+???.
+
+****
+
+:book: UX100 - Unit 4 
+
+https://help.sap.com/saphelp_ssb/helpdata/en/0d/7532521603f009e10000000a44166d/frameset.htm
+
+****
+
+
+
+
+
+## Which system part provides the analytical data in SAP S/4HANA? 
+
+## (Choose the correct answer). 
+
+### SAP S/4HANA Embedded Analytics 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
+
+****
+
+
+
+
+
+## Which modes are provided by the sap.m.SplitAppMode enumeration? 
+
+## (Choose the correct answers). 
+
+### ShowHideMode 
+
+HideShowMode 
+
+### StretchCompressMode 
+
+### PopoverMode 
+
+ShrinkCozyMode.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.SplitAppMode
+
+* sap.m.SplitAppMode.HideMode
+* sap.m.SplitAppMode.PopoverMode
+* sap.m.SplitAppMode.ShowHideMode
+* sap.m.SplitAppMode.StretchCompressMode
+
+****
+
+
+
+
+
+## What approach gives you the most flexibility for your SAPUI5 app? 
+
+## (Choose the correct answer). 
+
+Using a controller-based approach 
+
+Using a view-only based approach 
+
+Implement complex UIs in the index.html file 
+
+### Using a component-based approach.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the difference between scope and execution context? 
+
+## (Choose the correct answer). 
+
+### Scope is function based while execution context is object based. 
+
+Scope context is object based while context is function based. 
+
+It depends on the invocation target whether a function has a scope or a context.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://velog.io/@jhy979/Execution-Context-Scope
+
+****
+
+
+
+
+
+## What steps are used to display a field as a rating indicator? 
+
+## (Choose the correct answers). 
+
+### Set type of line item to #AS_DATAPOINT . 
+
+### Add a @UI.datapoint to the field and set visualization to #RATING. 
+
+Add a @UI.chart annotation to the field and set visualization to #RATING. 
+
+Set the visualization of line item to #RATING.
+
+****
+
+:book: UX403 - Unit 5
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/a797173b84724ef1bc54d59dc575e52f.html
+
+****
+
+
+
+
+
+## Since when is the full-screen layout deprecated? 
+
+## (Choose the correct answer). 
+
+1.42 
+
+### 1.44 
+
+1.56 
+
+1.58 
+
+1.60.
+
+****
+
+:book: UX410 - Unit 11 
+
+https://experience.sap.com/fiori-design-web/full-screen/
+
+검증필요
+
+****
+
+
+
+
+
+## What is the result of the following 2+3+"3"+23+3+"seven"+12? 
+
+## (Choose the correct answer). 
+
+### 53233seven12 
+
+53326seven12 
+
+23326seven12
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the corresponding CSS selector of $('#some-id')? 
+
+## (Choose the correct answer). 
+
+### #some-id { } 
+
+some-id{ } 
+
+*some-id{ }.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What application in the SAP Fiori launchpad helps the user to find applications that are available to the user? 
+
+## (Choose the correct answer). 
+
+Tile Finder 
+
+### Application Finder 
+
+Fiori Designer 
+
+Fiori Appsearch.
+
+****
+
+:book: UX410 - Unit 10
+
+https://experience.sap.com/fiori-design-web/app-finder/
+
+****
+
+
+
+
+
+## What do you focus on when it comes to decomposition and re-composition? 
+
+## (Choose the correct answer). 
+
+The building of mega transactions to support all needs of all people 
+
+### The person’s tasks that should be supported by the application 
+
+The expensive of the implementation 
+
+The data and functions that are already in the system.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+******
+
+
+
+
+
+## What application type is implemented to analyze a huge amount of data with diagrams? 
+
+## (Choose the correct answer). 
+
+Transactional 
+
+### Analytical 
+
+Fact sheet.
+
+****
+
+:book: UX410 - Unit 3 
+
+https://help.sap.com/saphelp_ssb/helpdata/en/ec/a941524a6b6760e10000000a423f68/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## What are the main principles of SAP Fiori? 
+
+## (Choose the correct answers).
+
+### Role-based 
+
+### Adaptive 
+
+### Simple 
+
+### Coherent 
+
+### Delightful
+
+****
+
+:book: UX100 - Unit 1 
+
+https://experience.sap.com/fiori-design-web/design-principles/
+
+****
+
+
+
+
+
+## SAPUI5 provides two different router implementations. What router class is used in SAP Fiori apps as a router or as a router base class, when you want to implement your own router? 
+
+## (Choose the correct answer). 
+
+### sap.m.routing.Router 
+
+sap.ui.core.routing.Router 
+
+sap.m.Router 
+
+sap.routing.Router.
+
+****
+
+:book: UX410 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following statements are true for OpenUI5? 
+
+## (Choose the correct answers). 
+
+### OpenUI5 includes all of the main features of SAPUI5. 
+
+OpenUI5 contains sap.viz and sap.ui.com. 
+
+### OpenUI5 is free for use. 
+
+OpenUI5 implements its own Core-Component 
+
+### OpenUI5 encompasses the complete SAPUI5 Core, plus many front-end controls that are also included in SAPUI5.
+
+****
+
+:book: UX400 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following SAP Key UI technologies are currently recommended by SAP? 
+
+## (Choose the correct answers).
+
+Web Dynpro Java 
+
+### Web Dynpro ABAP with Screen Personas 
+
+### Dynpro with Screen Personas 
+
+Java Dynpro 
+
+### SAPUI5.
+
+****
+
+:book: UX400 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What view type does SAP recommend? 
+
+## (Choose the correct answer). 
+
+ JSON
+
+### XML 
+
+HTML 
+
+JavaScript.
+
+****
+
+:book: UX400 - Unit 6 
+
+****
+
+
+
+
+
+## What is AJAX? 
+
+## (Choose the correct answer). 
+
+### Asynchronous JavaScript and XML 
+
+Another JavaScript XML Library 
+
+Asynchronous Java XML.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is a SAP Fiori floorplan? 
+
+## (Choose the correct answer). 
+
+A floorplan is a layout control of SAPUI5. 
+
+### A floorplan is a UI pattern that provides consistent UX. 
+
+A floorplan defines the overall layout of an application. 
+
+A floorplan is a layout of the SAP Web-Dynpro layouts for SAP Fiori apps.
+
+****
+
+:book: UX410 - Unit 12 
+
+******
+
+
+
+
+
+## What names have the view ports of the SAP Fiori launchpad? 
+
+## (Choose the correct answers). 
+
+### Me area 
+
+Desktop 
+
+### Workspace 
+
+### Notification area.
+
+****
+
+:book: UX410 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## Which shell configurations are available to adapt the header of the app? 
+
+## (Choose the correct answers). 
+
+encapsulated 
+
+### embedded 
+
+### standalone 
+
+### headerless 
+
+footless.
+
+****
+
+:book: UX100 - Unit 7 
+
+https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7/537758e0deb0477386ea400c915073b3.html
+
+****
+
+
+
+
+
+## Using S/4 HANA 1610 with ABAP 7.51, which of following templates can you use for Fiori Element? 
+
+## (Choose the correct answers). 
+
+### List Report 
+
+### Object Page 
+
+### Overview Page 
+
+Analytic List Page.
+
+****
+
+:book: UX403 - Unit 2 
+
+맞는거 같다
+
+******
+
+
+
+
+
+## What UI control can be used to define a hook to extend an application? 
+
+## (Choose the correct answer).
+
+sap.m.Extend 
+
+sap.ui.core.Extend 
+
+### sap.ui.core.ExtensionPoint 
+
+sap.comp.ExtendControl. 
+
+****
+
+:book: UX410 - Unit 13 
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/40/3c050da4ae4566b6aafec2bc590389/content.htm?no_cache=true
+
+맞는거 같다
+
+****
+
+
+
+
+
+## What query option is needed to access the data of an entity in the JSON format? 
+
+## (Choose the correct answer). 
+
+$json 
+
+### $format=json 
+
+format=json
+
+****
+
+:book: UX402 - Unit 3 
+
+https://stackoverflow.com/questions/42249587/why-can-i-get-to-use-format-json-with-entities-but-not-with-metadata-using-odat
+
+*****
+
+
+
+
+
+## Which of the following statements are correct with respect to the SAP Web IDE? 
+
+## (Choose the correct answers). 
+
+SAP web IDE is a development environment for SAP ABAP. 
+
+### SAP web IDE is a browser-based development environment. 
+
+### SAP web IDE provides application templates as a foundation of highly efficient app development.
+
+****
+
+:book: UX410 - Unit 6 
+
+https://dhan-description.tistory.com/152
+
+******
+
+
+
+
+
+## Which of the following return types are supported by service operations? 
+
+## (Choose the correct answers). 
+
+### Complex Types 
+
+### Primitive Types 
+
+Aggregation Type 
+
+Infinitive Types.
+
+****
+
+:book: UX400 - Unit 11 
+
+검증필요
+
+****
+
+
+
+
+
+## What problem is solved by the worklist Report floorplan? 
+
+## (Choose the correct answer). 
+
+You want to display all the information of a simple or complex object with different facets in a responsive way. 
+
+### You want to display a collection of items and process them or delegate them to someone else. 
+
+The user must process a long and unfamiliar task. 
+
+You want to display a large collection of items and the user can take some action.
+
+****
+
+:book: UX410 - Unit 12 
+
+https://experience.sap.com/fiori-design-web/work-list/
+
+****
+
+
+
+
+
+## What version of jQuery first provided the AJAX method? 
+
+## (Choose the correct answer). 
+
+Version 1.4 
+
+### Version 1.5 
+
+Version 1.0.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## When you implement a dialog using a fragment, you should bind the fragment to the lifecyle management of the consuming view. Which function do you need to call on the consuming view to connect the dialog to the lifecyle management of the view? 
+
+## (Choose the correct answer). 
+
+### addDependent() 
+
+connectToView() 
+
+addFragment() 
+
+assignDependent().
+
+****
+
+:book: UX400 - Unit 8 
+
+https://answers.sap.com/questions/707789/use-of-adddependent-in-fragment.html
+
+****
+
+
+
+
+
+## The CDS annotation @UI.facet is used to: 
+
+## (Choose the correct answers). 
+
+### Create a Header Facet 
+
+### Create a collection facet, which is displayed as section. 
+
+### Create a reference under collection facet. 
+
+Create content, like field groups, or charts for a Facet.
+
+****
+
+:book: UX403 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What is Apache Cordova? (Choose the correct answer). 
+
+### Apache Cordova is an open-source mobile development framework. 
+
+Apache Cordova is the SAP product to run SAP Fiori applications on mobile devices. 
+
+Apache Cordova is a cloud service to access data from mobile devices. 
+
+Apache Cordova is the API provided by SAP to access mobile device features.
+
+****
+
+:book: UX410 - Unit 16 
+
+https://ko.wikipedia.org/wiki/%EC%95%84%ED%8C%8C%EC%B9%98_%EC%BD%94%EB%8F%84%EB%B0%94
+
+****
+
+
+
+
+
+## Which ABAP transactions can be used to analyze the intents used in target mappings? 
+
+## (Choose the correct answers). 
+
+/UI2/FSAC 
+
+### /UI2/FLIA 
+
+### /UI2/FLC 
+
+/UI2/FLP
+
+****
+
+:book: UX100 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
 
 
 
