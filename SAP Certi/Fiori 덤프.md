@@ -417,7 +417,7 @@ https://blogs.sap.com/2021/10/12/what-is-sap-fiori-elements-new-video/
 
 ****
 
-UX100 - Unit 4 
+:book: UX100 - Unit 4 
 
 검증필요
 
@@ -1403,7 +1403,7 @@ JavaScript fragment.
 
 ****
 
-UX400 - Unit 8 
+:book: UX400 - Unit 8 
 
 ****
 
@@ -1473,7 +1473,7 @@ Increase development effort
 
 ****
 
-UX410 - Unit 14 
+:book: UX410 - Unit 14 
 
 ****
 
@@ -1864,7 +1864,7 @@ https://m.blog.naver.com/sw4r/221258249271
 
 ****
 
-UX100 - Unit 5 
+:book: UX100 - Unit 5 
 
 SAP GUI 환경의 불편함(처음 사용자가 적응하기 힘들다. 사용하지 않는 항목이 노출되어 업무에 집중하기 힘들다 등등)을 해소하기 위해서 각 업무 환경에 맞게 화면을 단순화하거나 재배치할 수 있는 기능을 제공하는 것이 SAP Screen Personas 입니다.
 
@@ -3395,6 +3395,887 @@ https://ko.wikipedia.org/wiki/%EC%95%84%ED%8C%8C%EC%B9%98_%EC%BD%94%EB%8F%84%EB%
 ****
 
 
+
+
+
+## In which cases, is a local annotation better than a CDS annotation? 
+
+## (Choose the correct answers). 
+
+UI with data intensive. 
+
+Annotations is for 1 field. 
+
+### Complex UI relevant annotations. 
+
+### You want to use annotations which are not support by your current ABAP version.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which platforms support the integration of SAP Fiori? 
+
+## (Choose the correct answers). 
+
+### SAP Enterprise Portal 
+
+SAP Process Integration 
+
+SAP HANA Enterprise Cloud 
+
+### SAP Cloud Platform Portal 
+
+### SAP Cloud Platform Mobile Services.
+
+****
+:book: UX100 - Unit 1 
+
+****
+
+
+
+
+
+## What are the differences between analytical entity set and normal entity set from an OData consumer perspective? 
+
+## (Choose the correct answers). 
+
+### The Analytical entity set, generates a new field for primary key. 
+
+### The Analytical entity set, returns all data, needed to analyze the client. 
+
+The Analytical entity set, returns summarized results according to the $select parameter. 
+
+### Analyzes the use of the database and runs faster when SAP HANA is used as database compared to a normal entity set.
+
+****
+
+:book: UX403 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## For a list report, which annotation is used to describe the name of business entity displayed on the report? 
+
+## (Choose the correct answer). 
+
+@UI.lineItem.title 
+
+@UI.headerInfo.type 
+
+@UI.headerInfo.typeName 
+
+### @UI.headerInfo.typeNamePlural.
+
+****
+
+:book: UX403 - Unit 3 
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/f8/af07bb0770414bb38a25cae29a12e9/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## Which factors are key to the user experience with user assistance? 
+
+## (Choose the correct answers). 
+
+### Instant 
+
+### Context-sensitive 
+
+confusing 
+
+### Seamless 
+
+Error prone.
+
+****
+
+:book: UX410 - Unit 9 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of following description about search field is NOT true? 
+
+## (Choose the correct answer). 
+
+The Search field is searching on more than one data field. 
+
+There is only 1 search field per list report. 
+
+### Search field searches for only 1 data field. 
+
+Search field support fuzzy search.
+
+****
+
+:book: UX403 - Unit 3 
+
+****
+
+
+
+
+
+## What method do you use since ECMA 5 to define a read only property? 
+
+## (Choose the correct answer). 
+
+### defineProperty 
+
+setReadOnly 
+
+defineReadOnly.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://opentutorials.org/course/787/5111
+
+****
+
+
+
+
+
+## What parameter must you provide when calling the simulate function of the mock server? 
+
+## (Choose the correct answer). 
+
+The full qualified path to the model and the URI for the service document. 
+
+### The full qualified path to the local metadata file and the folder where the model data are stored locally. 
+
+The autoRespondAfter parameter and the full qualified path to the local metadata file.
+
+****
+
+:book: UX402 - Unit 3 
+
+**Mock data** (json files)
+
+You can let the mock server generate random mock data automatically based on services metadata. For this, provide only the path to the metadata file and omit the second parameter of the simulate function as follows:
+
+// url to the service metadata document
+
+​    var sMetadataUrl = "testdata/rmtsampleflight/metadata.xml";
+
+​    oMockServer.simulate(sMetadataUrl);
+
+You can provide your own mock data in .json files, which can either be created manually or saved from an OData service response. Mock data in JSON format can be generated from an OData service by adding the $format=json parameter to the URL. Save the browser response which is called <entity type name>.json, for example Mock.json and put it into the mock data folder. Add the path to the simulate function
+
+http://www.sapui5tutors.com/2016/06/mockserver-in-sapui5.html
+
+****
+
+
+
+
+
+## What is the initial starting phase of SAPUI5 called? 
+
+## (Choose the correct answer). 
+
+### Bootstrapping 
+
+AutoStart 
+
+ConfigurationLoad 
+
+Startup-phase.
+
+****
+
+:book: UX400 - Unit 4 
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/en/a0/4b0d10fb494d1cb722b9e341b584ba/frameset.htm
+
+You can use the SAPUI5 bootstrap script in your page to initialize SAPUI5 runtime automatically as soon as the script is loaded and executed by the browser. For simple use cases as well as the default SAPUI5 installation, this is sufficient to build and run UIs. In addition to this, you can specify the set of SAPUI5 libraries and the theme used for your application in the configuration settings.
+
+***<u>index.html</u>***
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SAPUI5 Walkthrough</title>
+		<script
+			id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-compatVersion="edge"
+               data-sap-ui-async="true"
+               data-sap-ui-onInit="module:my/app/main"
+               data-sap-ui-resourceRoots='{"my.app": "./"}'
+ 			></script>
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>
+```
+
+****
+
+
+
+
+
+## What mode do you have to use when you want to use the new ECMA6 language features? 
+
+## (Choose the correct answer). 
+
+### strict mode 
+
+base mode 
+
+standard mode.
+
+****
+
+:book: UX399 - Unit 3
+
+검증필요
+
+****
+
+
+
+
+
+## What is the principle of SAP UX strategy? 
+
+## (Choose the correct answer). 
+
+Design Strategy 
+
+New, Renew, Enablement 
+
+### New, Renew, Empower 
+
+Architecture and Technology 
+
+SAP Screen Personas.
+
+****
+
+:book: UX402 - Unit 1 
+
+https://www.eventservice.kr/2017/sap/00/file/2017_2pm_0405_Session.pdf
+
+****
+
+
+
+
+
+## What URL do you enter when you want to see the source code of a web page? 
+
+## (Choose the correct answer). 
+
+### A view-source:https://www.google.com 
+
+view-code:https://www.google.com 
+
+show-source: https://www.google.com.
+
+****
+
+:book: UX399 - Unit 1
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
+
+****
+
+
+
+
+
+## Where is the best place to store local data when using the SAP Web IDE? 
+
+## (Choose the correct answers). 
+
+In the models folder. 
+
+### In the localService folder. 
+
+### In the mockdata folder.
+
+****
+
+:book: UX402 - Unit 3 
+
+검증필요
+
+맞는거 같다
+
+****
+
+
+
+
+
+## What are the app types of SAP Fiori? 
+
+## (Choose the correct answers). 
+
+### Transactional 
+
+### Analytical 
+
+Smart 
+
+Principal 
+
+### Fact Sheet.
+
+****
+
+:book: UX100 - Unit 2 
+
+http://blog.sap-press.com/sap-fiori-apps-for-sap-s4hana-sd
+
+****
+
+
+
+
+
+## What is the main benefit to using predefined CSS margin/padding classes of SAPUI5? 
+
+## (Choose the correct answer). 
+
+### Consistent spacing 
+
+Consistent borders 
+
+Consistent width 
+
+Consistent height.
+
+****
+
+:book: UX410 - Unit 7 
+
+****
+
+
+
+
+
+## The field indicate criticality should be hidden because it means nothing to end user. (Choose the correct answer). 
+
+### True 
+
+False.
+
+****
+
+:book: UX403 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## What is jQuery? (Choose the correct answer). 
+
+CSS Framework 
+
+### A free, lightweight and extendable JavaScript library 
+
+A set of HTML controls.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## Why is it advisable to not use a custom CSS file in your SAP UI5 applications? (Choose the correct answer). 
+
+SAPUI5 has problems with custom CSS. 
+
+### Having one central design created with the theme designer is very efficient.
+
+ When something needs to be changed at the client interface, it is easier to handle. 
+
+Time spent designing modified CSS is expensive.
+
+****
+
+:book: UX410 - Unit 8 
+
+****
+
+
+
+
+
+## What is a pseudo-class or pseudo-element? (Choose the correct answer). 
+
+### A A CSS technique to permit formatting based on information that lies outside the DOM tree 
+
+A CSS technique to prohibit formatting based on information that lies outside the DOM tree 
+
+A CSS technique to introduce pseudo-style-attributes.
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+## Which of the following statements are talking about the SAP Fiori app architecture? (Choose the correct answers). 
+
+### SAP Fiori apps are implemented using the component-based approach. 
+
+### SAP Fiori apps have a index.html file that is used for SAP Fiori launchpad integration. 
+
+SAP Fiori apps need to have an app descriptor that describes the applications metadata. 
+
+SAP Fiori apps should use the SAPUI5 core as a place to hold app data models.
+
+****
+
+:book: UX410 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the name of the consortium that standardised the DOM? (Choose the correct answer). 
+
+WWF 
+
+### W3C 
+
+WC3.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://ko.wikipedia.org/wiki/W3C
+
+****
+
+
+
+
+
+## Which of the following layouts, are described in version 1.48 of the Guidelines? (Choose the correct answers). 
+
+### Dynamic Page 
+
+Full-Screen 
+
+Split-Screen 
+
+### Flexible Column Layout 
+
+MobileDeviceLayout.
+
+****
+
+:book: UX410 - Unit 11 
+
+****
+
+
+
+
+
+## JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
+
+### A function is an instance of the object type. 
+
+### A function can have properties and has a link back to its constructor method. 
+
+### A function can be stored in a variable. 
+
+### A function can pass as a parameter to another function. 
+
+### A function can return from a function.
+
+****
+
+:book: UX399 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What is true for a variable that holds the value undefined? (Choose the correct answer). 
+
+It represents the intentional absence of an object value. 
+
+it is a keyword. 
+
+### It expresses that a variable is not yet initialized. 
+
+It functions without a return value, and returns undefined.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What are common design thinking brainstorming rules? (Choose the correct answers). 
+
+### Be visual 
+
+Discuss and judge every idea 
+
+Go for quality 
+
+### Fail early and often.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What is SAP Cloud Platform (CP)? (Choose the correct answer). 
+
+###  SAP's platform-as-a-service (PaaS) providing in-memory database and application services 
+
+???.
+
+****
+
+:book: UX100 - Unit 7
+
+****
+
+
+
+
+
+## Which benefits are offered by the SAP Fiori Client alone over a Web browser? (Choose the correct answers). 
+
+### Full screen 
+
+Offline data 
+
+### Delta caching 
+
+Push notifications 
+
+### Attachment viewer.
+
+****
+
+:book: UX100 - Unit 6 
+
+검증필요
+
+****
+
+
+
+
+
+## What operator do you use to inform the runtime that an error occurred? (Choose the correct answer). 
+
+### throw 
+
+throws 
+
+toss.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What tool is used to connect the SAP Cloud Platform to an on-premise system? (Choose the correct answer). 
+
+SAP Destination Connector 
+
+### SAP Cloud Connector
+
+SAP Connector App 
+
+SAP Cloud Manager.
+
+****
+
+:book: UX400 - Unit 3
+
+****
+
+
+
+
+
+## Which of the following steps are part of the discover phase in the DLD? (Choose the correct answers). 
+
+### Scope 
+
+Test 
+
+Implement 
+
+### Research 
+
+### Synthesize.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1 
+
+https://blogs.sap.com/2017/03/01/good-things-come-in-3s-intro-to-the-dld-process/
+
+****
+
+
+
+
+
+## A GIT branch is the SAP implementation of GIT. (Choose the correct answer). 
+
+A merge deletes the content of a branch. 
+
+Allows the merging of two local branches into one local branch. 
+
+### Allows integration of a branch into another branch.
+
+****
+
+:book: UX402 - Unit 5 
+
+문제 이상
+
+******
+
+
+
+
+
+## What are the three keyword when it comes to error handling? (Choose the correct answer). 
+
+### try, catch, finally 
+
+throws, catch, attheend 
+
+try, finally, handle.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=220238284097&beginTime=0&jumpingVid=&from=section&redirect=Log&widgetTypeCall=true
+
+****
+
+
+
+
+
+## How do you catch invalid hashes in your routing configuration? (Choose the correct answer). 
+
+Handle the invalid hashes during component initialization and forward them to a central routing target. 
+
+### Use the bypassed attribute inside the routing configuration. 
+
+Register an event handler to handle invalid hashes and navigation to the correct target when the invalidHashOccurs event is raised.
+
+****
+
+:book: UX400 - Unit 14 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/a7932a791adc4a58ae4693400801ea5f
+
+****
+
+
+
+
+
+## What are the main configuration objects of the routing configuration? (Choose the correct answers). 
+
+### config 
+
+routing 
+
+### routes 
+
+### targets.
+
+****
+
+:book: UX410 - Unit 7 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/902313063d6f45aeaa3388cc4c13c34e.html
+
+****
+
+
+
+
+
+## What is SAP S/4HANA? (Choose the correct answer). 
+
+### The fourth generation of the SAP Business Suite based on SAP HANA renewing enterprise business 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## What is the name of the SAP Development tool? (Choose the correct answer). 
+
+### SAP Web IDE 
+
+SAP Cloud IDE 
+
+SAP Web Cloud IDE.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following statements are true with regard to OPA5? (Choose the correct answers). 
+
+### Can be used for user interaction tests
+
+### Can be used for SAPUI5 integration tests. 
+
+Is a view controller test framework 
+
+### Provides the possibility to test navigation.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following types are types of cards in an Overview Page? (Choose the correct answers). 
+
+### List Cards
+
+### Link List Cards 
+
+### Analytic Cards 
+
+### Table Cards 
+
+### Stack Cards.
+
+****
+
+:book: UX403 - Unit 6 
+
+https://experience.sap.com/fiori-design-web/cards/
+
+답 검증필요
+
+****
+
+
+
+
+
+## Which of the following aspects are true for a SAPUI5 UI element? (Choose the correct answers). 
+
+### A UI element has an API. 
+
+### A UI element does not have a renderer. 
+
+A UI element has a renderer. 
+
+### A UI element can have events.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
 
 
 
