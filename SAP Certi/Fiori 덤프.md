@@ -4281,6 +4281,440 @@ A UI element has a renderer.
 
 
 
+## What content density is used for touch-enabled devices? (Choose the correct answer). 
+
+Compact form factor 
+
+Mobile form factor 
+
+### Cozy form factor 
+
+Desktop form factor 
+
+Small form factor.
+
+****
+
+:book: UX410 - Unit 5 
+
+https://experience.sap.com/fiori-design-web/cozy-compact/
+
+****
+
+
+
+
+
+## How can you enable adaptation at runtime for SAP Fiori apps? (Choose the correct answers). 
+
+### Target mapping to runtime authoring plugin 
+
+Fiori catalog SAP_CA_BC_SSB 
+
+### User role SAP_UI_FLEX_KEY_USER 
+
+### Fiori catalog /UIF/SAP_RTA_PLUGIN 
+
+User role SAP_S_RFCACL.
+
+****
+
+:book: UX100 - Unit 5 
+
+https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f350c0ba6bd/402b392585834dd38dd381d8f04b2616.html
+
+검증필요
+
+****
+
+
+
+
+
+## Which system holds the SAP Fiori launchpad? (Choose the correct answer). 
+
+### Front-End Server (FES) 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## When do you not use the overview page floorplan? (Choose the correct answers). 
+
+### A high-level or birds-eye view of an application content is sufficient. 
+
+You want to display a collection of items and process them or delegate them to someone else. 
+
+### You want to show information about one object only. In this case, use the object page instead. 
+
+### You just represent one application and less than three cards.
+
+****
+
+:book: UX410 - Unit 12 
+
+https://experience.sap.com/fiori-design-web/overview-page/#do-not-use-the-overview-page-if
+
+****
+
+
+
+
+
+## What aggregations are defined by the sap.suite.ui.commons.ChartContainer? (Choose the correct answers). 
+
+### content 
+
+container 
+
+### dimensionSelector 
+
+### customicons 
+
+legend.
+
+****
+
+:book: UX410 - Unit 7 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.suite.ui.commons.ChartContainer%23aggregations
+
+******
+
+
+
+
+
+## Which of the following statements are true when talking about SAP Fiori? (Choose the correct answers). 
+
+### SAP Fiori is SAP’s user experience that applies modern user-centric design principals 
+
+SAP Fiori is SAP’s product for implementing SAP Enterprise Portal components 
+
+SAP Fiori is SAP’s UI technology for implementing application for mobile devices 
+
+### SAP Fiori is SAP Fiori can be personalized, is simple, and runs on any device 
+
+### SAP Fiori is SAP Fiori provides a consistent and role-specific experience across all tasks, for all lines of business.
+
+****
+
+:book: UX400 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## For intent-based navigation, what does an intent consist of? (Choose the correct answers). 
+
+Target mapping 
+
+### Semantic object 
+
+### Action 
+
+ICF path.
+
+****
+
+:book: UX100 - Unit 4 
+
+https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/5ff538515a2a455696f9c203939d9360.html?version=2.0.01&locale=en-US
+
+****
+
+
+
+
+
+## What is the result of a GIT Clean? (Choose the correct answer). 
+
+Undoes a committed snapshot. 
+
+### Removes all untracked files from the working directory 
+
+Reverts back to the previous state of the project.
+
+****
+
+:book: UX402 - Unit 5 
+
+****
+
+
+
+
+
+## What is meant by the phrase “SAPUI5 supports modification free enhancements”? (Choose the correct answer). 
+
+The developer must create a copy of the application that should be enhanced and the enhancement is done in the copy. 
+
+### The delivered standard application remains unchanged and hence the extension is considered to be modification free. 
+
+SAP provides a service in the cloud to generate an enhanced application using aspect-oriented programming.
+
+****
+
+:book: UX402 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What function can be used to check whether the OData model contains changes? (Choose the correct answer). 
+
+hasUpdatedValues() 
+
+### hasPendingChanges() 
+
+hasPendingValues() 
+
+hasUpdatedChanges().
+
+****
+
+:book: UX400 - Unit 12 
+
+****
+
+
+
+
+
+## Which of the following statements are true with respect to the SAP Web IDE? (Choose the correct answers). 
+
+### A browser-based integrated development environment 
+
+Available only in the SAP Cloud Platform 
+
+Integrated in the SAP GUI
+
+### Supports the End-to-End (E2E) application lifecycle 
+
+### Provides WYSIWYG tooling.
+
+****
+
+:book: UX400 - Unit 3 
+
+https://blogs.sap.com/2015/06/22/sap-web-ide-layout-editor-wysiwyg-or-dragdrop-available-for-productive-use/
+
+****
+
+
+
+
+
+## Which info will be used for creating a destination in SAP Cloud Platform for Fiori Elements development? (Choose the correct answer). 
+
+### Virtual name in SAP Cloud Connector. 
+
+Internal name in SAP Could Connector. 
+
+External name in SAP Cloud Connector. 
+
+Internal address of SAP Backend Server.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## The combination of  Term/Target is unique, that means for an Entity or a field, every term can be used only once. (Choose the correct answer). 
+
+True 
+
+### False.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What annotation is used to declare that a field of the projection list contains currency? (Choose the correct answer). 
+
+### @Semantics.currencyCode 
+
+@UI.LineItem.currencyCode 
+
+@UI.currencyCode 
+
+@Semantics.currency.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What are the ideas behind the SAP UX strategy? (Choose the correct answers). 
+
+### Design Strategy 
+
+New / Renew / Enablement 
+
+### New / Renew /Empower 
+
+### Architecture and Technology 
+
+SAP Screen Personas.
+
+****
+
+:book: UX403 - Unit 1, UX410 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Describe what is meant by event bubbling. (Choose the correct answer). 
+
+### The concept of event bubbling was introduced to deal with situations where a single event, such as a mouse click, may be handled by two or more event handlers defined at different levels of the Document Object Model (DOM) hierarchy. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://ko.javascript.info/bubbling-and-capturing
+
+****
+
+
+
+
+
+## Which OData versions are currently supported by SAPUI5? (Choose the correct answers). 
+
+### OData V2 
+
+OData V5 
+
+### OData V4 
+
+OData V7.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which of the following components make up the SAP Web IDE Hybrid App Toolkit? (Choose the correct answers). 
+
+### SAP Web IDE plugin 
+
+### Hybrid App Toolkit connector 
+
+SAP Cloud Platform service 
+
+### SAP Hybrid App Toolkit companion.
+
+****
+
+:book: UX410 - Unit 16 
+
+****
+
+
+
+
+
+## What are the main characteristics of a search field in SAP Fiori element-based applications? (Choose the correct answers). 
+
+### No value help dialog 
+
+### Supports fuzzy search 
+
+Provides multiple search fields 
+
+### Finds a keyword in multiply fields.
+
+****
+
+:book: UX410 - Unit 14 
+
+https://experience.sap.com/fiori-design-web/search/
+
+검증필요
+
+****
+
+
+
+
+
+## Which technical application types are defined for SAP HANA? (Choose the correct answers). 
+
+### Transactional 
+
+Secure 
+
+### Fact Sheets 
+
+### Analytical 
+
+Drill-down.
+
+****
+
+:book: UX410 - Unit 5 
+
+검증필요 맞는거 같다
+
+****
+
+
+
+
+
+
+
 
 
 
