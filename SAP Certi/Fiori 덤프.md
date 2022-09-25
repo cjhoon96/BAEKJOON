@@ -889,7 +889,7 @@ data-sap-config-ui.
 
 uri 
 
-rootUri 
+### rootUri 
 
 url 
 
@@ -4706,6 +4706,935 @@ Drill-down.
 :book: UX410 - Unit 5 
 
 검증필요 맞는거 같다
+
+****
+
+
+
+
+
+## What does CRUD stand for? (Choose the correct answer). 
+
+### Create, Read, Update, Delete 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+******
+
+
+
+
+
+## Which type of UI control is used to embed a component into a component consumer? (Choose the correct answer). 
+
+sap.ui.core.ComponentGroup 
+
+### sap.ui.core.ComponentContainer 
+
+sap.ui.core.ComponentPane 
+
+sap.ui.core.ComponentArea.
+
+****
+
+:book: UX400 - Unit 13 
+
+****
+
+
+
+
+
+## What annotation is used to show fields of the projection list in the general information section? (Choose the correct answer). 
+
+@UI.headerInfo.field 
+
+@UI.lineItem.ident 
+
+### @UI.identification 
+
+@UI.ident.
+
+****
+
+:book: UX410 - Unit 14 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following statements are true with respect to QUnit? (Choose the correct answers). 
+
+### Supports only synchronous testing out of the box. 
+
+### QUnit is a JavaScript unit and integration test framework. 
+
+Supports asynchronous tests out-of-the-box
+
+###  Is capable of testing any generic JavaScript code.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which tool provides the definition of Fiori tiles? (Choose the correct answer). 
+
+### SAP Fiori launchpad designer 
+
+???.
+
+
+****
+
+:book: UX100 - Unit 4 
+
+****
+
+
+
+
+
+## Which different app types can be found in SAP Fiori? (Choose the correct answers). 
+
+### Conceptual 
+
+Industrial 
+
+### Technical 
+
+Infrastructural 
+
+Mobile.
+
+****
+
+:book: UX410 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## For what purpose should you use the header element? (Choose the correct answer). 
+
+### For introductory content 
+
+For headings 
+
+As a container for the article element.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following artefacts are contained in the OData URL structure? (Choose the correct answers). 
+
+### Service Root URI 
+
+Header data 
+
+### Resource Path 
+
+### Query Options.
+
+****
+
+:book: UX410 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## What aspects should be considered in deciding which layout template to use? (Choose the correct answers). 
+
+### When deciding which template to use for your app, you need to consider what the user wants to achieve when working in the app. 
+
+When deciding which template to use for your app, you need to analyse what end device the app is executed on. 
+
+### It is helpful to answer questions on the nature of the tasks. 
+
+When deciding which template to use for your app, you need to consider what browser type is used. 
+
+You need to analyze the capabilities of the users.
+
+****
+
+:book: UX410 - Unit 11 
+
+******
+
+
+
+
+
+## What does “closed-over” mean in the context of closures? (Choose the correct answer). 
+
+### When an inner function makes reference to a variable in the outer function’s lexical scope, the inner function is said to have “closed over” that variable. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the name of the event that is fired after a successful SAPUI5 initialization? (Choose the correct answer). 
+
+### init 
+
+startUpDone 
+
+loadDone 
+
+bootDone.
+
+****
+
+:book: UX400 - Unit 4 
+
+****
+
+
+
+
+
+## What does $("p.intro") select? (Choose the correct answer). 
+
+### Selects all \<p>-elements with class="intro 
+
+Selects a \<p>-element with the innerHTML intro 
+
+Selects a \<p.intro>-elementl.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://secr.tistory.com/61
+
+****
+
+
+
+
+
+## What is SAP Cloud Platform SDK Assistant? (Choose the correct answer). 
+
+### Plugin for Apple Xcode to create ready-to-run Xcode projects for SAP Fiori 
+
+???.
+
+****
+
+:book: UX100 - Unit 6 
+
+검증필요
+
+****
+
+
+
+
+
+## Which function is provided to register a URL prefix for a module name prefix? (Choose the correct answer). 
+
+jQuery.sap.mapModulePath() 
+
+### jQuery.sap.registerModulePath() 
+
+sap.ui.registerModulePath() 
+
+jQuery.sap.declareModulePath().
+
+****
+
+:book: UX400 - Unit 6 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/jQuery.sap%23methods/jQuery.sap.registerModulePath
+
+****
+
+
+
+
+
+## What are the features of Fiori Elements? (Choose the correct answers). 
+
+### No JavaScript UI Coding. 
+
+### Metadata-driven approach of Fiori development. 
+
+A replacement for traditional free style SAPUI5 programming, can satisfy all customer needs in a brand new approach. 
+
+### Centrally Provided Templates covering Reporting, Analytic, Transaction scenarios.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following are the main states of a file in GIT? (Choose the correct answers). 
+
+### Committed 
+
+### Changed 
+
+Released 
+
+### Modified.
+
+****
+
+:book: UX402 - Unit 5 
+
+https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+
+committed staged modified 세개로 나와있다.
+
+검증필요
+
+****
+
+
+
+
+
+## What aspects of the runtime environment can be accessed by the Device API of SAPUI5? (Choose the correct answers). 
+
+### Operating system 
+
+### Screen size 
+
+### Orientation change 
+
+Language 
+
+### Touch-specific features.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What are the main artefacts of an SAPUI5 application? (Choose the correct answers). 
+
+CSS 
+
+### Views 
+
+### Controllers 
+
+### Models 
+
+controls.
+
+****
+
+:book: UX410 - Unit 6, UX410 - Unit 7 
+
+****
+
+
+
+
+
+## Which UI annotation is used in the object page to display the object header? (Choose the correct answer). 
+
+UI.headerObject 
+
+UI.objectheader 
+
+### UI.headerInfo 
+
+UI.header
+
+****
+
+:book: UX402 - Unit 3 
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/f8/af07bb0770414bb38a25cae29a12e9/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## Which function must be called inside a control renderer to add the control ID to the DOM tree and support eventing? (Choose the correct answer). 
+
+writeClasses 
+
+writeIcon 
+
+### writeControlData 
+
+write.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://velog.io/@rumblekat/Tutorial-10.-Custom-controls
+
+****
+
+
+
+
+
+## What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
+
+### It checks if the property is defined on the current object 
+
+It checks whether the object has properties. 
+
+It checks if the objects have their own and inherited properties.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Fiori Elements support write operations, if the backend service is written by CDS working with BOPF. (Choose the correct answer). 
+
+### True 
+
+False.
+
+****
+
+:book: UX403 - Unit 5 
+
+****
+
+
+
+
+
+## What does OData use for resource identification? (Choose the correct answer). 
+
+Email address 
+
+### URI 
+
+Harmonized WSDL paths.
+
+****
+
+:book: UX400 - Unit 11 
+
+****
+
+
+
+
+
+## When do you use the flexible-column layout? (Choose the correct answer). 
+
+You want to open multiple instances of the same object type. 
+
+### You want to create a master-detail or master-detail-detail scenario in which the user can drill down or navigate. 
+
+You want to split a single object into multiple columns, or display only a small amount of information. 
+
+You want to embed the SAP Fiori launchpad, or overview page into one of the columns.
+
+****
+
+:book: UX410 - Unit 11 
+
+****
+
+
+
+
+
+## What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
+
+### XMLHttpRequest 
+
+XMLHttp 
+
+XMLHttpPoll
+
+****
+
+:book: UX399 - Unit 3 
+
+https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+
+****
+
+
+
+
+
+## Which measurement unit is used for the property hSpacing? (Choose the correct answer). 
+
+em 
+
+### rem 
+
+px 
+
+percentage.
+
+****
+
+:book: UX400 - Unit 7 
+
+****
+
+
+
+
+
+## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
+
+### off 
+
+false 
+
+no.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://www.w3schools.com/tags/att_autocomplete.asp
+
+****
+
+
+
+
+
+## What are the main spaces in the design thinking process? (Choose the correct answers). 
+
+### Problem Space 
+
+Ideation Space 
+
+### Solution Space 
+
+Test Space.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What goals are achieved by a Lean Development Infrastructure? (Choose the correct answers). 
+
+### Allows for faster innovation through independently released and serial versions of components 
+
+### Either automates or provides self-service response 
+
+Used to increase the development effort 
+
+Used for ABAP development with Eclipse Oxygen.
+
+****
+
+:book: UX410 - Unit 15 
+
+검증필요
+
+****
+
+
+
+
+
+## How can you hide some columns when the list report is accessed by a mobile phone? (Choose the correct answer). 
+
+Put all fields, which are not important at the end of the report, when screen gets smaller, the fields will hide automatically. 
+
+Add @UI.hidden for fields. not import. 
+
+Prepare a different version of @UI.lineItem and assign them as adifferent qualifier. 
+
+### Set UI.lineItem.importance for those fields as #LOW or @Medium.
+
+****
+
+:book: UX403 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## Which design pattern is used for resolving relationships between resources? (Choose the correct answer). 
+
+Resource design pattern 
+
+### Hypermedia design pattern 
+
+Metadata design pattern.
+
+****
+
+:book: UX400 - Unit 11 
+
+검증필요
+
+****
+
+
+
+
+
+## Which ABAP repository element contains the service logic? (Choose the correct answer). 
+
+### Data Provider Class (DPC) 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+https://boy0.tistory.com/159
+
+검증필요
+
+****
+
+
+
+
+
+## What is meant by the term data-driven navigation? (Choose the correct answer). 
+
+### Data objects offer navigation links to dependent data objects and functions. 
+
+???.
+
+****
+
+:book: UX100 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## Which layout control can help you group UI controls? (Choose the correct answer). 
+
+### sap.ui.layout.Panel 
+
+sap.m.Panel 
+
+sap.ui.layout.Group 
+
+sap.m.GridGroup.
+
+****
+
+:book: UX400 - Unit 7 
+
+https://experience.sap.com/fiori-design-web/panel/
+
+****
+
+
+
+
+
+## Which binding modes are supported by SAPUI5? (Choose the correct answers). 
+
+### One-time 
+
+### One-way 
+
+Single-time-only 
+
+### Two-way 
+
+Once.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which areas are part of an Analytic List Page? (Choose the correct answers). 
+
+### Title Area 
+
+### Visual Filters 
+
+Selection Fields 
+
+### Content Area.
+
+****
+
+:book: UX403 - Unit 7 
+
+https://experience.sap.com/fiori-design-web/analytical-list-page/#components
+
+****
+
+
+
+
+
+## Which tool is used in an S/4HANA environment to model KPIs? (Choose the correct answer). 
+
+### KPI Design 
+
+???.
+
+****
+
+:book: UX100 - Unit 4 
+
+https://www.sapbwconsulting.com/blog/5-kpi-design-best-practice-guidelines
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following make up the configuration of a tile for launching an SAP Fiori app of type SAPUI5 in the SAP Fiori launchpad designer? (Choose the correct answers). 
+
+### Semantic object 
+
+Launchpad creation via LPD_CUST 
+
+### Target Mapping 
+
+### Tile configuration 
+
+Tile implementation.
+
+****
+
+:book: UX410 - Unit 10 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following user authentication and Single Sign-On mechanisms are supported by the SAP Fiori Client? (Choose the correct answers). 
+
+### One-Time Password 
+
+### SAML 
+
+Iris scan 
+
+### X.509 client certificates.
+
+****
+
+:book: UX410 - Unit 16 
+
+https://help.sap.com/doc/38ec5403bfbf4d7a8fdd3fee5f9605e0/3.0.14/en-US/c7ee0275986543a9a9ddd1f1061f43e3.html
+
+****
+
+
+
+
+
+## When do you need to work with local data? (Choose the correct answers). 
+
+### When working with static data. 
+
+When performance is poor in the productive system. 
+
+### To perform a quick test without creating live entities on the back-end server. 
+
+When you want to reduce the complexity of your application.
+
+****
+
+:book: UX402 - Unit 3 
+
+****
+
+
+
+
+
+## What are the goals of the SAPUI5 framework? (Choose the correct answers). 
+
+### Provide a user interface technology for building and adapting client applications. 
+
+Provide a user interface technology for building and adapting server-based applications. 
+
+Provide a lightweight programming model for desktop only applications 
+
+### Provide an extensible framework for building desktop and mobile applications.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What main aspects does the developer have to configure for a sap.viz.ui5.controls.VizFrame control? (Choose the correct answers). 
+
+### Dataset 
+
+Datacontainer 
+
+### DimensionDefinition 
+
+### MeasureDefinition 
+
+### Feed.
+
+****
+
+:book: UX410 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following best describes a commit? (Choose the correct answer). 
+
+With every commit, GIT create a new branch. 
+
+### With every commit, GIT takes a snapshot of the current state of the underlying files. 
+
+With every commit, a new local repository is created. 
+
+A commit in GIT is a local operation.
+
+****
+
+:book: UX402 - Unit 5 
+
+****
+
+
+
+
+
+## Which of the following information about an OData service should be provided as an annotation? (Choose the correct answer). 
+
+The entities of an OData service. 
+
+Properties of an Entity Set/Collection. 
+
+### The position for each field in a list report. 
+
+Data type for each property in an Entity Set/ Connection.
+
+****
+
+:book: UX403 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What are the SAP Fiori for iOS design guidelines based on? (Choose the correct answer). 
+
+### Apple Human Interface Guidelines (HIG) 
+
+???.
+
+****
+
+:book: UX100 - Unit 6
+
+검증필요
 
 ****
 
