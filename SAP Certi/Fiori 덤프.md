@@ -4659,6 +4659,8 @@ SAP Cloud Platform service
 
 :book: UX410 - Unit 16 
 
+검증필요
+
 ****
 
 
@@ -5635,6 +5637,950 @@ Data type for each property in an Entity Set/ Connection.
 :book: UX100 - Unit 6
 
 검증필요
+
+****
+
+
+
+
+
+## What does a KPI consist of? (Choose the correct answers). 
+
+### Evaluation 
+
+Authentication 
+
+### Drill-down 
+
+### Tile 
+
+Indicator.
+
+****
+
+:book: UX100 - Unit 4
+
+검증필요 
+
+****
+
+
+
+
+
+## When you implement a controller extension and you implement the onInit and onAfterRendering functions in the extension, when are they called? (Choose the correct answer). 
+
+### After the corresponding functions form the standard controller. 
+
+Only the functions of the controller extensions are called. 
+
+Before the corresponding functions from the standard controller.
+
+****
+
+:book: UX402 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the DOCTYPE? (Choose the correct answer). 
+
+### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
+
+The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
+
+The <!DOCTYPE> Is used to define the mime-type.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the relation between the model and the controller in the standard MVC implementation? (Choose the correct answers). 
+
+### The controller modifies the model. 
+
+### The model notifies the controller about changes. 
+
+The model updates the controller. 
+
+The controller sets the model visibility.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## You want to define a property with the name width to enhance a standard UI5 control. The property should hold the current width of the UI control. What is the best approach to defining the type of such a property? (Choose the correct answer). 
+
+Define the property width of the type string. 
+
+Define the property width of the type sap.ui.core.Integer 
+
+### Define the property width of the type sap.ui.core.CSSSize.
+
+Define the property width of the type sap.ui.core.type.CSSSize.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## When using the on-function of jQuery, how many event handlers can be attached ? (Choose the correct answer). 
+
+### multiple 
+
+one 
+
+None.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://api.jquery.com/on/
+
+****
+
+
+
+
+
+## How do you access the MessageManager? (Choose the correct answer). 
+
+### A It is a singleton and can be accessed by the getMessageManager function on the core object. 
+
+You have to instantiate the MessageManager using the constructor function. 
+
+Each UI control provides a function to access the MessageManager.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## What is the recommended DOM level you should use? (Choose the correct answer). 
+
+### 2 
+
+1 
+
+3.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is described as the person's perceptions and response that result from the use or anticipated use of a product, system, or service? (Choose the correct answer). 
+
+User interface 
+
+### User experience 
+
+Usability 
+
+User acceptance.
+
+****
+
+:book: UX410 - Unit 1 
+
+****
+
+
+
+
+
+## In an overview page, all entity sets for cards have an association with the entity set for global filter, otherwise the filter will not work on the card. (Choose the correct answer). 
+
+True 
+
+### False.
+
+****
+
+:book: UX403 - Unit 6 
+
+검증필요
+
+****
+
+
+
+
+
+## What jQuery method can be used to wrap every element of the current collection to provide an HTML structure? (Choose the correct answer). 
+
+### wrap 
+
+wrapAll 
+
+envelope.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://www.codingfactory.net/10214
+
+****
+
+
+
+
+
+## Which of the following can be used for usability assessment? (Choose the correct answers). 
+
+### Heuristic evaluation 
+
+### User testing 
+
+User observation 
+
+### Questionnaires.
+
+****
+
+:book: UX410 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the purpose of the neo-app.json file located in the project root folder of your SAP Web IDE project? (Choose the correct answer). 
+
+It contains the OData service configuration parameters used at runtime. 
+
+### It contains the mapping between an application URL and a destination configured in the SAP Cloud Platform. 
+
+It contains the configuration for the mock server. 
+
+It contains the mapping configuration of the front-end and back-end server URLs.
+
+****
+
+:book: UX410 - Unit 7 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/28fa7538c67e4280a0b7708de2951278
+
+****
+
+
+
+
+
+## What method is called inside the library.js file? (Choose the correct answer). 
+
+sap.ui.getCore().registerLibrary 
+
+### sap.ui.getCore().initLibrary 
+
+sap.ui.getCore().loadLibrary 
+
+sap.ui.getCore().runLibrary.
+
+****
+
+:book: UX402 - Unit 2 - !!! Originale Antwort falsch, bitte überprüfen. 
+
+****
+
+
+
+
+
+## What is a code validator? (Choose the correct answer). 
+
+### A code validator is a software program that checks the code against coding rules and standards. 
+
+A code validator is a code generator tool that generates valid code. 
+
+A code validator is a type of extension to the browser.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the namespace in which the smart controls are bundled? (Choose the correct answer). 
+
+sap.ui.smart 
+
+### sap.ui.comp
+
+sap.m
+
+****
+
+:book: UX402 - Unit 3 
+
+https://sapui5.hana.ondemand.com/#/entity/sap.ui.comp.tutorial.smartControls
+
+****
+
+
+
+
+
+## Which parameter do you need to provide to the ResourceModel() function to specify the SAPUI5 module name of the .properties file? (Choose the correct answer). 
+
+### bundleName 
+
+resourceBundleName 
+
+resourceName 
+
+bundlePath.
+
+****
+
+:book: UX400 - Unit 10 
+
+https://stackoverflow.com/questions/63841814/sap-ui5-resource-bundle
+
+https://blogs.sap.com/2017/11/23/sap-fiori-consume-odata-service-css-i18n-properties-in-ui5-application/
+
+****
+
+
+
+
+
+## What can be used as target in a target mapping? (Choose the correct answers).
+
+### Web Dynpro application 
+
+### Generic URL 
+
+### ABAP Transaction 
+
+### SAPUI5 application.
+
+****
+
+:book: UX100 - Unit 4 
+
+****
+
+
+
+
+
+## Which dimensions define SAP Fiori? (Choose the correct answers). 
+
+### Concept 
+
+### Design 
+
+Performance 
+
+### Technology.
+
+****
+
+:book: UX100 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## In which system is the SAP Gateway workflow service implemented? (Choose the correct answer). 
+
+### Front-End Server (FES) 
+
+???.
+
+****
+
+:book: UX100 - Unit 7 
+
+https://help.sap.com/docs/SAP_FIORI_OVERVIEW/1f0c69c2f76b445c98b89cc1f41d7ae4/6cb9b4c90de345ca9a6182049ee6f8da.html?locale=en-US
+
+****
+
+
+
+
+
+## Which UI clients does SAP Screen Personas support? (Choose the correct answers). 
+
+### SAP Business Client 
+
+SAP Fiori Client 
+
+### SAP GUI for Windows 
+
+### SAP GUI for HTML 
+
+### SAP GUI for Java.
+
+****
+
+:book: UX100 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## How is the implementation of Fiori apps delivered by SAP? (Choose the correct answer). 
+
+### Updates of the back-end server 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What message types are known to SAPUI5? (Choose the correct answers). 
+
+Control message 
+
+### UI message 
+
+### Server message 
+
+Log message.
+
+****
+
+:book: UX402 - Unit 2 !!! Die originale Antwort scheint falsch zu sein. Zur Sicherheit anschauen. 
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/62/b1481d3e084cb49dd30956d183c6a0/frameset.htm
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following are the two options provided by SAPUI5 for working with i18n texts? (Choose the correct answers). 
+
+### jQuery.sap.resources 
+
+Aggregation Binding 
+
+### Data Binding 
+
+Resource Consumption.
+
+****
+
+:book: UX400 - Unit 10 
+
+검증필요
+
+****
+
+
+
+
+
+## The SAP Fiori Design Guidelines are available for various device types. For what device types are the design guidelines available? (Choose the correct answers). 
+
+SAP Fiori for Windows 
+
+### SAP Fiori for Android 
+
+### SAP Fiori for Web 
+
+### SAP Fiori for iOS 
+
+SAP Fiori for Blackberry.
+
+****
+
+:book: UX410 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
+
+custData 
+
+### data 
+
+sapdata.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
+
+****
+
+
+
+
+
+## What are the SAP Fiori principles? (Choose the correct answers). 
+
+### Role-based 
+
+### Adaptive 
+
+Creative 
+
+### Coherent 
+
+Complex.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 3 
+
+https://experience.sap.com/fiori-design-web/design-principles/
+
+****
+
+
+
+
+
+## Which of the following are best practices when developing a SAPUI5 app? (Choose the correct answers). 
+
+### Describe your app using a set of metadata. 
+
+Use the Synchronous Model Definition (SMD) syntax. 
+
+### Minimize the code in the index.html file. 
+
+### Make use of patterns. 
+
+### Use an asynchronous model definition in your JavaScript code.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What parts of the software development life-cycle are supported by the SAP development tool? (Choose the correct answer). 
+
+Only implementation functionality such as syntax highlighting and editing are supported. 
+
+Test, code and debug are supported 
+
+### The full life-cycle of software development is supported.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What problem is solved when using promises? (Choose the correct answer). 
+
+### A Pyramid of doom 
+
+Nested callbacks 
+
+Synchronous back-end request processing.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://5-ssssseung.tistory.com/96
+
+****
+
+
+
+
+
+## Which system part provides the OData services for analytical apps? (Choose the correct answer). 
+
+### SAP HANA extended application services (XS) 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/a6c0749255d84a81a154a7fc87dd33ce.html?version=2.0.03&locale=en-US
+
+****
+
+
+
+
+
+## What is the counterpart function of focus? (Choose the correct answer). 
+
+#### blur 
+
+lostFocus 
+
+noFocus.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## Which file contains the initialization code for the UI library? (Choose the correct answer). 
+
+library.load.js 
+
+library.js 
+
+loadlibrary.js 
+
+lib.dll.
+
+*****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## What problem is solved by the object page floorplan? (Choose the correct answer). 
+
+### You want to display all the information of a simple or complex object with different facets in a responsive way 
+
+You want to display a collection of items and process them or delegate them to someone else. 
+
+The user must process a long and unfamiliar task. 
+
+You want to display a large collection of items and the user can take some action.
+
+****
+
+:book: UX410 - Unit 12 
+
+검증필요
+
+****
+
+
+
+
+
+## What problem is solved by the wizard floorplan? (Choose the correct answer). 
+
+You want to display all the information of a simple or complex object, with different facets, in a responsive way. 
+
+You want to display a collection of items and process them or delegate them to someone else. 
+
+### The user must process a long and unfamiliar task 
+
+You want to display a large collection of items, and the user can take some action.
+
+****
+
+:book: UX410 - Unit 12 
+
+****
+
+
+
+
+
+## Which of the following lifecycle hook methods can be implemented by the developer in a view controller? (Choose the correct answers). 
+
+### onInit 
+
+onRender 
+
+### onAfterRendering 
+
+### onExit 
+
+### onBeforeRendering.
+
+****
+
+:book: UX400 - Unit 6 
+
+https://blogs.sap.com/2018/11/12/sapui5-controller-lifecycle-methods-explained/
+
+****
+
+
+
+
+
+## How can a renderer access the associated elements? (Choose the correct answer). 
+
+The developer must implement an appropriate function to access the elements. 
+
+### SAPUI5 provides functions to access all properties, associations, and aggregations. 
+
+The developer must define a property method in the control metadata and declare the access control.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What SAPUI5 control is used as a starting point to implement the initial page? (Choose the correct answer). 
+
+sap.m.Select 
+
+### sap.m.Input 
+
+sap.m.Table 
+
+sap.m.List.
+
+****
+
+:book: UX410 - Unit 12 
+
+https://experience.sap.com/fiori-design-web/initial-page-floorplan/
+
+****
+
+
+
+
+
+## What does the == operator check? (Choose the correct answer). 
+
+Equal value and equal type 
+
+### Equal value 
+
+Equals type.
+
+****
+
+UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Which terms are correct when talking about extensibility for SAP applications in a frontend server? (Choose the correct answers). 
+
+SAP Gateway Redefinition 
+
+CDS View Extension 
+
+### SAPUI5 Extension 
+
+ABAP Enhancement 
+
+### SAP Fiori Elements Adaptation.
+
+****
+
+:book: UX100 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the central frame application of SAP Fiori? (Choose the correct answer). 
+
+### SAP Fiori launchpad 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+****
+
+
+
+
+
+## What is the result of a GIT Reset? (Choose the correct answer). 
+
+Undo a committed snapshot. 
+
+Removes all untracked files from the working directory. 
+
+### Returns a project back to the previous state.
+
+****
+
+:book: UX402 - Unit 5 
+
+****
+
+
+
+
+
+## What is the vision of SAP when considering SAP’s UX direction? (Choose the correct answer). 
+
+Deliver attractive applications that make people successful at work 
+
+### Provide the leading user experience for business applications 
+
+Provide UX as service to gain productivity 
+
+Deliver SAP modules in an SaaS manner.
+
+****
+
+:book: UX400 - Unit 1 
+
+****
+
+
+
+
+
+## What are the options for external navigation? (Choose the correct answers). 
+
+### Navigation to URL (As a link). 
+
+Navigation to URL (As a button). 
+
+### Navigation to Intent (As a link). 
+
+### Navigation to Intent (As a button).
+
+****
+
+:book: UX403 - Unit 5 
+
+검증필요
+
+****
+
+
+
+
+
+Which OData versions are currently supported by SAPUI5? (Choose the correct answers). 
+
+OData Version 1.0 
+
+### OData Version 2.0 
+
+OData Version 3.0 
+
+### OData Version 4.0.
+
+****
+
+:book: UX400 - Unit 12 
+
+****
+
+
+
+
+
+## What is the purpose of the defer attribute? (Choose the correct answer). 
+
+### When present, it specifies that the script is executed when the page has finished parsing. 
+
+When present, it specifies that the script should be executed immediately. 
+
+When present, it specifies that the JavaScript engine should execute the script in a very strictly.
+
+****
+
+:book: UX399 - Unit 3 
+
+http://www.tcpschool.com/html-tag-attrs/script-defer
 
 ****
 
