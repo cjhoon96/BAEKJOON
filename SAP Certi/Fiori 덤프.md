@@ -593,7 +593,7 @@ A `<p>` tag has high semantic expressiveness.
 
 ### The `<a>` tag is used to specify HTML Links. 
 
-The `<li>` element can only be used inside of an <ol> element.
+The `<li>` element can only be used inside of an `<ol>` element.
 
 ****
 
@@ -764,6 +764,8 @@ sap.ui.core.MockServer.
 ****
 
 :book: UX410 - Unit 11 
+
+https://experience.sap.com/fiori-design-web/v1-40/master-list/
 
 ****
 
@@ -2357,7 +2359,7 @@ sap.m.SplitApp
 
 ## In an Analytic List Page, the user can filter data by clicking some points in the chart. 
 
-## (Choose the correct answer). 
+## which javascript function is called(Choose the correct answer). 
 
 ### True 
 
@@ -6587,6 +6589,486 @@ http://www.tcpschool.com/html-tag-attrs/script-defer
 
 
 
+
+## Which of the following should you avoid with regard to the golden rule “Every SAP Fiori app must run as a web app”? (Choose the correct answers). 
+
+### Absolute URLs generated in front or back-end. 
+
+Using SAPUI5 
+
+### Hard dependencies between apps 
+
+### Calling UI2 services directly instead of using APIs 
+
+### Use of platform-specific functionality without availability check.
+
+******
+
+:book: UX410 - Unit 8 
+
+검증필요
+
+****
+
+
+
+
+
+## What three key aspects are important when talking about innovation? (Choose the correct answers). 
+
+### Feasibility 
+
+### Scalability 
+
+### Viability 
+
+Desirability.
+
+****
+
+:book: UX410 - Unit 4 
+
+****
+
+
+
+
+
+## What types of extensions/replacements are supported by SAPUI5? (Choose the correct answers). 
+
+Component replacement 
+
+### View replacement 
+
+### View modification 
+
+### Replace service 
+
+### Implement UI Controller Hooks 
+
+Manifest.json replacement.
+
+****
+
+:book: UX402 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## Which aggregation is used to overwrite the standard behavior of a SmartField control. (Choose the correct answer). 
+
+overwrite 
+
+### configure 
+
+extension.
+
+****
+
+:book: UX402 - Unit 3 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/4864403f08c64ca08a2b0ee1fa9cb5e2.html
+
+검증필요
+
+****
+
+
+
+
+
+## What transaction is used to create an semantic object for customer configuration? (Choose the correct answer). 
+
+/UI5/LPD_CUST 
+
+### /UI2/SEMOBJ 
+
+/UI5/SEMOBJ 
+
+pfcg 
+
+su01.
+
+****
+
+:book: UX410 - Unit 10 
+
+****
+
+
+
+
+
+## When do you use the toggleClass method? (Choose the correct answer). 
+
+Use the method to react to on-click events 
+
+Use the method for handleMouse events. 
+
+Use the method when adding and removing a class where an specific event occurs or reoccurs.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## Why does it make sense to use the navigation API of SAPUI5 and concepts such as eventbus or the navcontainer functions of the base application? (Choose the correct answers). 
+
+### Using the navigation API, it is possible to use bookmarks. 
+
+The eventbus concept is deprecated and should no longer be used. 
+
+### Using the navigation API, the configuration of routes and targets are clearly separated from the application implementation. 
+
+The NavContainer of the App object is not accessible inside a component-based app.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of following steps are needed to create an association in CDS and expose it? (Choose the correct answers). 
+
+### Declare an association using “association to” statement. 
+
+Declare an association using “left outer join” statement. 
+
+### Expose the association by writing its name in projection list. 
+
+Expose fields in the association by writing each field in projection list.
+
+****
+
+:book: UX403 - Unit 2 
+
+https://help.sap.com/docs/SAP_HANA_PLATFORM/09b6623836854766b682356393c6c416/6fcd6e5883f04de5b618a6d91141afb4.html?version=2.0.02&locale=en-US
+
+****
+
+
+
+
+
+## Which data processing capabilities does SAP HANA combine? (Choose the correct answer). 
+
+### Analytical and transactional 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following is true? (Choose the correct answer). 
+
+The this reference in JavaScript is comparable to the this reference of other programming languages. 
+
+### A this in JavaScript points to the execution context of the function where the this keyword is used. 
+
+A this in JavaScript is like a property of the function.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Which of these is abbreviated to CSS? (Choose the correct answer). 
+
+Complex Style Syntax 
+
+### Cascading Style Sheet 
+
+Cascading Syntax System.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which service is responsible for OData services in the SAP CP? (Choose the correct answer). 
+
+### SAP CP OData provisioning 
+
+???.
+
+****
+
+:book: UX100 - Unit 7 
+
+https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integration/
+
+****
+
+
+
+
+
+## What features are available in the SAP Web IDE when using the SAP Web IDE plugin from the Hybrid App Toolkit? (Choose the correct answers). 
+
+### Code completion for Cordova and Kapsel plugin APIs 
+
+### Device Configuration 
+
+### Deploy and run an app on a target device 
+
+Access to iOS-only features.
+
+****
+
+:book: UX410 - Unit 16 
+
+검증필요
+
+****
+
+
+
+
+
+## Does the invocation of the getProperty() method on an OData model object trigger a request to the backend? (Choose the correct answer).
+
+Yes, for each getProperty() call, an synchronous request to the OData service is triggered to get the property value. 
+
+### No, a request is not triggered. The getProperty() method returns the current value from the OData model object at the client side. If the value is not available, undefined is returned. 
+
+It depends on how the getProperty() method is parametrized by the developer. There is a property called bFetchFromServer . If this parameter is true, a request to the server-side is sent.
+
+****
+
+:book: UX400 - Unit 12 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the base class for all UI controls in SAPUI5? (Choose the correct answer). 
+
+sap.ui.Control 
+
+### sap.ui.core.Control 
+
+sap.ui.base.Control 
+
+sap.ui.Element.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which types of services are known or supported by the SAP Fiori launchpad? (Choose the correct answers). 
+
+### Platform-specific services 
+
+UI5 services 
+
+### Platform-independent services 
+
+UI2 Services.
+
+****
+
+:book: UX410 - Unit 9 
+
+검증필요
+
+****
+
+
+
+
+
+## Which types of application can use the dynamic page layout? (Choose the correct answer). 
+
+The layout is deprecated, which means that you should not use the layout anymore. 
+
+### You can use the dynamic page layout for any kind of application. 
+
+The layout is only used for master-detail scenarios. 
+
+The dynamic page layout is only used for analytical applications.
+
+****
+
+:book: UX410 - Unit 11 
+
+****
+
+
+
+
+
+## When do you throw an error? (Choose the correct answer). 
+
+It is a good practice to throw errors in every function. 
+
+### Helpful when designing libraries to inform a higher layer that a problem occurred. 
+
+To make the debugging of the code easier.
+
+****
+
+:book: UX399 - Unit 3 
+
+*****
+
+
+
+
+
+## Which of the following steps are part of the design phase in the DLD? (Choose the correct answers). 
+
+Test 
+
+### Validate 
+
+### Prototype 
+
+Scope 
+
+### Ideate.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1 
+
+****
+
+
+
+
+
+## Which class is normally used as the base class when implementing a SAPUI5 view controller? (Choose the correct answer). 
+
+### sap.ui.core.mvc.Controller 
+
+sap.ui.view.Controller 
+
+sap.m.Controller 
+
+sap.ui.layout.Controller.
+
+****
+
+:book: UX400 - Unit 6 
+
+****
+
+
+
+
+
+## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
+
+F1 
+
+### F12 
+
+D+E+V.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the data binding used for? (Choose the correct answer). 
+
+### Data Binding is used to bind two data sources together and keeping them in sync. 
+
+???.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## What steps needs to be done in manifest.json if you need to hide variant function in a list report? (Choose the correct answers). 
+
+### Add setting to enable smart Variant Management. 
+
+Add setting to disable smart Variant Management. 
+
+### Set setting variantManagementHidden to true. 
+
+Set setting showVariantManagement to false.
+
+****
+
+:book: UX403 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## When creating a CDS view, the SQL view name and view name for CDS must be identical. (Choose the correct answer). 
+
+True 
+
+### False.
+
+****
+
+:book: UX403 - Unit 2 
+
+****
 
 
 
