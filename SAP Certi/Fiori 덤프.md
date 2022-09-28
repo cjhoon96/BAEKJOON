@@ -347,7 +347,7 @@ SAP Unwired Platform (SUP)
 
 SAP Mobile Platform (SMP)
 
-SAP Cloud Platform Mobile Services.
+### SAP Cloud Platform Mobile Services.
 
 ****
 
@@ -1219,6 +1219,8 @@ Internationalization.
 
 :book: UX100 - Unit 4 
 
+검증필요
+
 ****
 
 
@@ -1884,9 +1886,9 @@ https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
 
 You can use the focus attribute on multiple form fields. 
 
-### The focus attribute can only used at one form field. 
+The focus attribute can only used at one form field. 
 
-Only the first form field with the focus attribute will get the focus.
+### Only the first form field with the focus attribute will get the focus.
 
 ****
 
@@ -7074,6 +7076,794 @@ True
 
 
 
+## Which of the following are the current SAP UI Tools? (Choose the correct answers). 
+
+### SAPUI5 Application Development Tools 
+
+### SAP Screen Personas 
+
+SAP NetWeaver Portal 
+
+### Flexible UI Designer 
+
+SAP NetWeaver Gateway.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1 
+
+검증필요
+
+****
 
 
-:book: 
+
+
+
+## What is the use of the annotation @UI.hidden? (Choose the correct answer). 
+
+Prevent a column from display on the UI. 
+
+Not expose these fields as a property of OData service. 
+
+### Prevent a column selected by user when customizing table settings. 
+
+Create a invisible column to save the value in a hidden control of HTML.
+
+****
+
+:book: UX403 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
+
+### The action attribute contains the reference to the program that processes the submitted form. 
+
+The action attribute defines the allowed HTTP verbs. 
+
+The action attribute contains the JavaScript event handler that is invoked when the user submits the form.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which types of components are provided by SAPUI5? (Choose the correct answers). 
+
+### Faceless Components 
+
+### UI Components 
+
+Backend Components 
+
+Agile Components.
+
+****
+
+:book: UX400 - Unit 13 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/958ead51e2e94ab8bcdc90fb7e9d53d0.html
+
+****
+
+
+
+
+
+## Which of the following statements are true with regard to implementing your own renderer? (Choose the correct answers). 
+
+Implement the render function inside the control. 
+
+### Implement a renderer class, derived from sap.ui.core.Renderer, in a separate file. 
+
+### Implement the renderer using AMD syntax. 
+
+### Assign a reference to the renderer property of the UI control.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## How many columns are supported by the flexible-column layout? (Choose the correct answer). 
+
+1 
+
+2 
+
+### 3 
+
+4 
+
+5.
+
+****
+
+:book: UX410 - Unit 11 
+
+****
+
+
+
+
+
+## What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
+
+It is the name of a function. 
+
+It is where you change the visibility of a variable. 
+
+### It is a container to bundle functionality under a unique identifier.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the result of a GIT Revert? (Choose the correct answer). 
+
+### Undoes a committed snapshot. 
+
+Removes all untracked files from the working directory. 
+
+Reverts back to the previous state of the project.
+
+****
+
+:book: UX402 - Unit 5 
+
+****
+
+
+
+
+
+## What annotations are required to declare that an ABAP Core Data System supports search capabilities? (Choose the correct answer). 
+
+@Search.possible 
+
+### @Search.searchable 
+
+@Search.allowed
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## Which types are supported as header facets for an object page? (Choose the correct answers). 
+
+### Field Group Facet 
+
+### Plan Text Facet 
+
+Smart Chart Facet 
+
+### Rating Indicator Facet
+
+****
+
+:book: UX403 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## Choose available options for creating a value help for a selection field. (Choose the correct answers). 
+
+### By adding a foreign key annotation. 
+
+### By adding a value help annotation. 
+
+If the domain which associates to the field, has a fixed value, the value help will be generated automatically. 
+
+By adding annotations to list all possible in source code of CDS.
+
+****
+
+:book: UX403 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the idea behind the golden rule of having one common UX? (Choose the correct answer). 
+
+### Having a common UX reduces training costs and increases the quality of data. 
+
+Having a common UX reduces the overall total cost of ownership. 
+
+Having a common UX reduces development costs.
+
+****
+
+:book: UX410 - Unit 8 
+
+****
+
+
+
+
+
+## Which of the following properties are relevant to the type of facet? (Choose the correct answers). 
+
+### purpose 
+
+targetQualifier 
+
+parentId 
+
+### type.
+
+****
+
+:book: UX403 - Unit 4
+
+검증필요
+
+****
+
+
+
+
+
+## Which JavaScript function is used to load a module asynchronously? (Choose the correct answer). 
+
+jQuery.sap.require 
+
+### sap.ui.require 
+
+sap.ui.define 
+
+sap.ui.loadModule.
+
+****
+
+:book: UX400 - Unit 5 
+
+****
+
+
+
+
+
+## To what namespace is the ExtensionPoint class assigned? (Choose the correct answer). 
+
+sap.ui.extension 
+
+sap.m 
+
+### sap.ui.core 
+
+sap.ui.core.extension.
+
+****
+
+:book: UX402 - Unit 4 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.core.ExtensionPoint
+
+****
+
+
+
+
+
+## Which of the following describe benefits of SAP Fiori elements? (Choose the correct answers). 
+
+### Consistent UI design. 
+
+Full control of the of the generated code at design time. 
+
+### Less support effort. 
+
+Flexibility and freedom in UI design.
+
+****
+
+:book: UX402 - Unit 3 
+
+****
+
+
+
+
+
+## What problem is solved by the list report floorplan? (Choose the correct answer). 
+
+You want to display all the information of a simple or complex object with different facets in a responsive way. 
+
+You want to display a collection of items and process them or delegate them to someone else. 
+
+The user needs to process a long and unfamiliar task. 
+
+### You want to display a large collection of items and the user can take some action.
+
+****
+
+:book: UX410 - Unit 12 
+
+****
+
+
+
+
+
+## What ways are there, of extending or modifying a SAPUI5 view? (Choose the correct answers). 
+
+### View extension 
+
+View enhancement 
+
+### View replacement  
+
+### View modification.
+
+****
+
+:book: UX410 - Unit 13 !!! Falsche Antwort im original 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/c264d66d6e3c4104818bc52c174a000c
+
+****
+
+
+
+
+
+## What property is used in the manifest file, to configure how the selection and presentation variants display using a single variant management area? (Choose the correct answer). 
+
+variantManagement 
+
+### smartVariantManagement 
+
+allowSmartVariantManagement.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What attribute is assigned to the @UI.fieldGroup to add an identifier? (Choose the correct answer). 
+
+identify 
+
+quantify 
+
+### qualifier 
+
+identifier.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## Which of the following SAP Fiori element based UIs are currently available? (Choose the correct answers). 
+
+Wizard Form 
+
+### List Report 
+
+Master-Detail 
+
+### Overview Pages 
+
+### Object Page.
+
+****
+
+:book: UX402 - Unit 3 
+
+****
+
+
+
+
+
+## Which of the following are key features of SAPUI5? (Choose the correct answers). 
+
+### Full translation support 
+
+Web Dynpro extensibility 
+
+### Responsive across browsers and devices 
+
+Less open for custom developmen 
+
+### Based on open standards such as, JavaScript, CSS3, and HTML5.
+
+****
+
+:book: UX400 - Unit 2 
+
+****
+
+
+
+
+
+## What are the tasks of the controller in the Model-View-Controller implementation? (Choose the correct answers). 
+
+Updates using data binding 
+
+### Modifies the model 
+
+### Modifies the view via API 
+
+Holds the business data 
+
+Contains the UI implementation.
+
+****
+
+:book: UX410 - Unit 6, UX410 - Unit 7 
+
+검증필요
+
+****
+
+
+
+
+
+## What does effectiveness mean in the relation to the user interface? (Choose the correct answer). 
+
+The resources expended in relation to the accuracy and completeness of goals achieved 
+
+### The accuracy and completeness with which specified users can achieve specified goals in specific environments 
+
+The comfort and acceptability of the work system to its users and other people affected by its use.
+
+****
+
+:book: UX410 - Unit 1 
+
+****
+
+
+
+
+
+## How do you set a field as the title for a business entity? (Choose the correct answer). 
+
+Add @UI.title annotation for that field. 
+
+Add @UI.headerInfo.title annotation for that field. 
+
+### Add @UI.headerInfo.title.value for the CDS view and reference it to the field. 
+
+Add @UI.headerInfo.title for the CDS view and reference it to the field.
+
+****
+
+:book: UX403 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What is true for HTML and UI5? (Choose the correct answers). 
+
+### Dynamic web content 
+
+### Client side rendering 
+
+Code on demand 
+
+Static web pages.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the correct prefix for the ID selector? (Choose the correct answer). 
+
+### # 
+
+. 
+
+~
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+## Describe what design decision is normally made when you have to deal with errors? (Choose the correct answer). 
+
+### Lower, technical layers throw errors. Higher, application layers handle errors. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## When do you have to implement the SAP Fiori floorplan initial page? (Choose the correct answer). 
+
+The Initial page floorplan is used when the user needs to select an item from a list 
+
+### The Initial page floorplan is used when the user needs to navigate to a single object. 
+
+The Initial page floorplan is used to show a single object. 
+
+The Initial page floorplan is used when the user needs to process a complex task.
+
+****
+
+:book: UX410 - Unit 12 
+
+https://experience.sap.com/fiori-design-web/initial-page-floorplan/
+
+****
+
+
+
+
+
+## Is the following true? The if-condition can be either a boolean variable or can also check if objects are defined and have a correct value (Choose the correct answer). 
+
+No 
+
+### Yes 
+
+It depends on the JavaScript version.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What JavaScript function can be used to separate strings? (Choose the correct answer). 
+
+### split 
+
+slice 
+
+separate.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What annotation is used to define the heading of list report? (Choose the correct answer). 
+
+### @UI.headerInfo.typeNamePlural 
+
+@UI.LineItem.headerTitle 
+
+@UI.headerInfo.typeName 
+
+@UI.header.title.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## To add a header facet, you should use @UI.HeaderFacet annotation and put it before the define statement of your CDS view. (Choose the correct answer). 
+
+True 
+
+### False.
+
+****
+
+:book: UX403 - Unit 4 
+
+****
+
+
+
+
+
+## Which of the following parameters must you provide when you create an initial SAP Cloud Connector configuration? (Choose the correct answers). 
+
+### Region Host 
+
+Display Name 
+
+### Sub-account Name 
+
+### Password 
+
+Location ID 
+
+### Sub-account User.
+
+****
+
+:book: UX400 - Unit 3 
+
+https://blogs.sap.com/2021/09/05/installation-and-configuration-of-sap-cloud-connector/
+
+****
+
+
+
+
+
+## What is the key concept of SAPUI5 that enables the separation of information representation from user interaction? (Choose the correct answer). 
+
+### Model View Controller 
+
+Drag-and-drop 
+
+Slideshow 
+
+A forgiving format.
+
+****
+
+:book: UX400 - Unit 2 
+
+****
+
+
+
+
+
+## In which base class implementation is the setModel function implemented? (Choose the correct answer). 
+
+### sap.ui.base.ManagedObject 
+
+sap.ui.base.Object 
+
+sap.ui.base.Interface 
+
+sap.ui.model.base.BaseModel.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.base.ManagedObject%23methods/setModel
+
+****
+
+
+
+
+
+## What method must be implemented on the back end to support deep inserts? (Choose the correct answer). 
+
+INSERT_ENTITY_DEEP 
+
+CREATE_ENTITY_DEEP 
+
+### CREATE_DEEP_ENTITY 
+
+APPLY_DEEP_ENTITY.
+
+****
+
+:book: UX402 - Unit 3 
+
+****
+
+
+
+
+
+## What is an HTML-Tag? (Choose the correct answer). 
+
+### A HTML-Tag is a processing instruction for the web browser.
+
+ A HTML-Tag marks an aspect of the web page 
+
+A HTML-Tag Is a pre-processor instruction for the browser
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What happens if the text is not available in the customized bundle of your extension? (Choose the correct answer). 
+
+The key will display in the application in capital letters. 
+
+### SAPUI5 tries to find the text in the resource bundle of the standard application. 
+
+An exception is raised. 
+
+No text is displayed.
+
+****
+
+:book: UX410 - Unit 13 
+
+검증필요
+
+****
