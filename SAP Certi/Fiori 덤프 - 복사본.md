@@ -338,26 +338,6 @@ Splitter
 
 
 
-## What markup should be used to describe a long text in an html document? 
-
-## (Choose the correct answer). 
-
-### \<article>
-
-`<p>` 
-
-`<div>`
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## Which of the following features can be used to describe a module? 
 
 ## (Choose the correct answers). 
@@ -405,26 +385,6 @@ updateDeep.
 create_deep_entity 를 controller 에서 접근 하는 방법을 묻는 문제인데
 
 create_deep_entity 는 동일하게 create 메소드로 접근 가능하다.
-
-****
-
-
-
-
-
-## Which of the following is true? 
-
-## (Choose the correct answer).
-
-A `<p>` tag has high semantic expressiveness. 
-
-### The `<a>` tag is used to specify HTML Links. 
-
-The `<li>` element can only be used inside of an `<ol>` element.
-
-****
-
- :book: UX399 - Unit 1 
 
 ****
 
@@ -593,28 +553,6 @@ A GIT branch is the SAP implementation of GIT.
 ****
 
 :book: UX402 - Unit 5 
-
-****
-
-
-
-
-
-## What is the name of the attribute to access the custom attributes in your JavaScript code? 
-
-## (Choose the correct answer). 
-
-### dataset 
-
-attributeset 
-
-customDatas.
-
-****
-
-:book: UX399 - Unit 1 
-
-검증필요
 
 ****
 
@@ -851,28 +789,6 @@ It is not possible to use facets in ABAP 7.50.
 :book: UX403 - Unit 4 
 
 검증필요
-
-****
-
-
-
-
-
-## How many heading elements are specified in the HTML specification? 
-
-## (Choose the correct answer). 
-
-4 
-
-3 
-
-### 6 
-
-1.
-
-****
-
-:book: UX399 - Unit 1 
 
 ****
 
@@ -1406,28 +1322,6 @@ https://m.blog.naver.com/sw4r/221258249271
 
 
 
-## Which of the following is true? 
-
-## (Choose the correct answer). 
-
-You can use the focus attribute on multiple form fields. 
-
-The focus attribute can only used at one form field. 
-
-### Only the first form field with the focus attribute will get the focus.
-
-****
-
-:book: UX399 - Unit 1 
-
-커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
-
-****
-
-
-
-
-
 ## What is the purpose of a build server? 
 
 ## (Choose the correct answer). 
@@ -1515,66 +1409,6 @@ Extension controller.
 :book: UX410 - Unit 13 
 
 https://sapui5.hana.ondemand.com/sdk/#/topic/8fbf4e728bd146fcb2053aeb6ca741f9
-
-****
-
-
-
-
-
-## Which of the following are known as BOM Objects? 
-
-## (Choose the correct answers). 
-
-Document 
-
-### Window 
-
-### History 
-
-### Location.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://www.javascripttutorial.net/javascript-bom/
-
-https://pridiot.tistory.com/170
-
-**BOM** (**B**rowser **O**bject **M**odel)
-
-웹 브라우저 전체를 객체로 관리하는 것으로 자바스크립트 프로그램을 통해 브라우저 창을 관리할 수 있도록 브라우저 요소를 객체화 해 놓은 것이다.
-
-* **내장 객체**
-
-  * ***Window :*** 
-
-    브라우저 창이 열릴 때마다 하나 씩 만들어지는 객체
-
-    브라우저 창 안에 존재하는 모든 요소의 최상위 객체
-
-  * ***Document :*** 
-
-    웹 문서에서 \<body> 태그를 만나면 만들어지는 객체
-
-    HTML 문서 정보를 가지고 있다.
-
-  * ***History :*** 
-
-    현재 창에서 사용자 방문 기록을 저장하고 있는 객체
-
-  * ***Location :***
-
-    현재 페이지에 대한 URL 정보를 가지고 있는 객체
-
-  * ***Navigator :***
-
-    현재 사용 중인 웹브라우저 정보를 가지고 있는 객체
-
-  * ***Screen :***
-
-    현재 사용중인 화면 정보를 다루는 객체
 
 ****
 
@@ -3000,28 +2834,6 @@ https://www.eventservice.kr/2017/sap/00/file/2017_2pm_0405_Session.pdf
 
 
 
-## What URL do you enter when you want to see the source code of a web page? 
-
-## (Choose the correct answer). 
-
-### A view-source:https://www.google.com 
-
-view-code:https://www.google.com 
-
-show-source: https://www.google.com.
-
-****
-
-:book: UX399 - Unit 1
-
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
-
-****
-
-
-
-
-
 ## Where is the best place to store local data when using the SAP Web IDE? 
 
 ## (Choose the correct answers). 
@@ -3157,26 +2969,6 @@ SAP Fiori apps should use the SAPUI5 core as a place to hold app data models.
 :book: UX410 - Unit 7 
 
 검증필요
-
-****
-
-
-
-
-
-## What is the name of the consortium that standardised the DOM? (Choose the correct answer). 
-
-WWF 
-
-### W3C 
-
-WC3.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://ko.wikipedia.org/wiki/W3C
 
 ****
 
@@ -3410,24 +3202,6 @@ routing
 :book: UX410 - Unit 7 
 
 https://sapui5.hana.ondemand.com/sdk/#/topic/902313063d6f45aeaa3388cc4c13c34e.html
-
-****
-
-
-
-
-
-## What is the name of the SAP Development tool? (Choose the correct answer). 
-
-### SAP Web IDE 
-
-SAP Cloud IDE 
-
-SAP Web Cloud IDE.
-
-****
-
-:book: UX399 - Unit 1 
 
 ****
 
@@ -3959,24 +3733,6 @@ Mobile.
 
 
 
-## For what purpose should you use the header element? (Choose the correct answer). 
-
-### For introductory content 
-
-For headings 
-
-As a container for the article element.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## Which of the following artefacts are contained in the OData URL structure? (Choose the correct answers). 
 
 ### Service Root URI 
@@ -4350,26 +4106,6 @@ percentage.
 
 
 
-## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
-
-### off 
-
-false 
-
-no.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://www.w3schools.com/tags/att_autocomplete.asp
-
-****
-
-
-
-
-
 ## What are the main spaces in the design thinking process? (Choose the correct answers). 
 
 ### Problem Space 
@@ -4696,24 +4432,6 @@ Before the corresponding functions from the standard controller.
 
 
 
-## What is the DOCTYPE? (Choose the correct answer). 
-
-### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
-
-The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
-
-The <!DOCTYPE> Is used to define the mime-type.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## What is the relation between the model and the controller in the standard MVC implementation? (Choose the correct answers). 
 
 ### The controller modifies the model. 
@@ -4932,24 +4650,6 @@ sap.ui.getCore().runLibrary.
 
 
 
-## What is a code validator? (Choose the correct answer). 
-
-### A code validator is a software program that checks the code against coding rules and standards. 
-
-A code validator is a code generator tool that generates valid code. 
-
-A code validator is a type of extension to the browser.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## What is the namespace in which the smart controls are bundled? (Choose the correct answer). 
 
 sap.ui.smart 
@@ -5064,26 +4764,6 @@ SAP Fiori for Blackberry.
 
 
 
-## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
-
-custData 
-
-### data 
-
-sapdata.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
-
-****
-
-
-
-
-
 ## What are the SAP Fiori principles? (Choose the correct answers). 
 
 ### Role-based 
@@ -5123,26 +4803,6 @@ Use the Synchronous Model Definition (SMD) syntax.
 ****
 
 :book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
-## What parts of the software development life-cycle are supported by the SAP development tool? (Choose the correct answer). 
-
-Only implementation functionality such as syntax highlighting and editing are supported. 
-
-Test, code and debug are supported 
-
-### The full life-cycle of software development is supported.
-
-****
-
-:book: UX399 - Unit 1 
 
 검증필요
 
@@ -5630,24 +5290,6 @@ A this in JavaScript is like a property of the function.
 
 
 
-## Which of these is abbreviated to CSS? (Choose the correct answer). 
-
-Complex Style Syntax 
-
-### Cascading Style Sheet 
-
-Cascading Syntax System.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## What features are available in the SAP Web IDE when using the SAP Web IDE plugin from the Hybrid App Toolkit? (Choose the correct answers). 
 
 ### Code completion for Cordova and Kapsel plugin APIs 
@@ -5812,24 +5454,6 @@ sap.ui.layout.Controller.
 
 
 
-## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
-
-F1 
-
-### F12 
-
-D+E+V.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 ## What is the data binding used for? (Choose the correct answer). 
 
 ### Data Binding is used to bind two data sources together and keeping them in sync. 
@@ -5923,24 +5547,6 @@ Create a invisible column to save the value in a hidden control of HTML.
 :book: UX403 - Unit 3 
 
 검증필요
-
-****
-
-
-
-
-
-## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
-
-### The action attribute contains the reference to the program that processes the submitted form. 
-
-The action attribute defines the allowed HTTP verbs. 
-
-The action attribute contains the JavaScript event handler that is invoked when the user submits the form.
-
-****
-
-:book: UX399 - Unit 1 
 
 ****
 
@@ -6402,28 +6008,6 @@ Add @UI.headerInfo.title for the CDS view and reference it to the field.
 
 
 
-## What is true for HTML and UI5? (Choose the correct answers). 
-
-### Dynamic web content 
-
-### Client side rendering 
-
-Code on demand 
-
-Static web pages.
-
-****
-
-:book: UX399 - Unit 1 
-
-검증필요
-
-****
-
-
-
-
-
 ## What is the correct prefix for the ID selector? (Choose the correct answer). 
 
 ### # 
@@ -6636,24 +6220,6 @@ APPLY_DEEP_ENTITY.
 
 
 
-
-****
-
-
-
-
-
-## What is an HTML-Tag? (Choose the correct answer). 
-
-### A HTML-Tag is a processing instruction for the web browser.
-
- A HTML-Tag marks an aspect of the web page 
-
-A HTML-Tag Is a pre-processor instruction for the browser
-
-****
-
-:book: UX399 - Unit 1 
 
 ****
 

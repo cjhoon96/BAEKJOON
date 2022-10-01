@@ -8,7 +8,7 @@
 
 ****
 
-
+****
 
 # Unit 1.
 
@@ -54,8 +54,6 @@ Performance
 
 :book: UX100 - Unit 1 
 
-검증필요
-
 ****
 
 
@@ -68,13 +66,13 @@ Performance
 
 ### SAP Enterprise Portal 
 
-SAP Process Integration 
-
-SAP HANA Enterprise Cloud 
-
 ### SAP Cloud Platform Portal 
 
 ### SAP Cloud Platform Mobile Services.
+
+SAP Process Integration 
+
+SAP HANA Enterprise Cloud 
 
 ****
 
@@ -92,13 +90,13 @@ SAP HANA Enterprise Cloud
 
 ### Web Browser 
 
-SAP Logon 
-
 ### SAP Fiori Client 
 
-SAP Easy Access 
-
 ### SAP Business Client.
+
+SAP Logon 
+
+SAP Easy Access 
 
 ****
 
@@ -218,7 +216,7 @@ https://www.munich-enterprise.com/en/sap-fiori)
 
 
 
-## What is used as container for SAPUI5 apps in the ABAP repository? 
+## What is used as container for SAPUI5 apps in the <u>ABAP repository</u>? 
 
 ## (Choose the correct answer). 
 
@@ -402,8 +400,6 @@ https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
 
 :book: UX100 - Unit 3 
 
-검증필요
-
 ****
 
 
@@ -423,6 +419,8 @@ https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
 https://boy0.tistory.com/159
 
 model provider class(MPC) : service metadata 를 위환 코딩을 제공
+
+gateway
 
 ****
 
@@ -838,21 +836,21 @@ The UI theme repository on the ABAP frontend server contains SAP standard themes
 
 https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8ec2dae34eb44cbbb560be3f9f1592fe/977672c6940f48578d08d770bee236f2.html?version=1709%20000&locale=en-US
 
-* SAP Belize
+* **SAP Belize**
 
   SAP Fiori 2.0
 
-* SAP Blue Crystal
+* **SAP Blue Crystal**
 
   SAP Fiori 1.0
 
-* SAP High Contrsat Black
+* **SAP High Contrsat Black**
 
   접근성 목적으로 공개된 테마
 
   SAP Fiori 2.0 에서 적용되지 않는다.
 
-* SAP Gold Reflection
+* **SAP Gold Reflection**
 
   non-Fiori 독립 실행형 앱 용으로 공개된 테마
 
@@ -901,8 +899,6 @@ User role SAP_S_RFCACL.
 :book: UX100 - Unit 5 
 
 https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f350c0ba6bd/402b392585834dd38dd381d8f04b2616.html
-
-검증필요
 
 ****
 
@@ -967,8 +963,6 @@ SAP GUI for Java.
 ****
 
 :book: UX100 - Unit 5 
-
-검증필요
 
 ****
 
@@ -1104,7 +1098,7 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 ****
 
-## What is used as a container for SAP Fiori in an Enterprise Portal? 
+## What is used as a container for SAP Fiori in an <u>Enterprise Portal</u>? 
 
 ## (Choose the correct answer). 
 
@@ -1154,8 +1148,6 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 :book: UX100 - Unit 7 
 
-검증필요
-
 ****
 
 
@@ -1181,6 +1173,17 @@ footless.
 :book: UX100 - Unit 7 
 
 https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7/537758e0deb0477386ea400c915073b3.html
+
+
+
+| Parameter Value (State) | Description                                                  | Relevant to                    |
+| ----------------------- | ------------------------------------------------------------ | ------------------------------ |
+| standalone              | Displays only the  *(Me Area launcher)* button or the user photo/avatar,  *(Back)* button, company logo, and the application title.![img](https://help.sap.com/doc/a7b390faab1140c087b8926571e942b7/1709%20002/en-US/loio63cfb9cdf75b4a76853ca099896a60a8_LowRes.png)The  button or the user photo/avatar opens an options menu that contains only the following default application-specific menu items: **Contact Support**, **Give Feedback**, and **About**.It also shows custom application-specific menu items they have been developed for the app.**Note**This specific *standalone state* should not be confused with the broader concept of running apps in the *standalone mode*. This setting simply defines one of the possible states of the header bar for any standalone app. | Applications only              |
+| embedded                | Same as standalone, except it displays the  *(Home)* button instead of the company logo.![img](https://help.sap.com/doc/a7b390faab1140c087b8926571e942b7/1709%20002/en-US/loio6632480c37b24815a24eb047798a4ca7_LowRes.png) | Applications only              |
+| merged                  | Displays only the application's title, and the  *(Back)* and  *(Home)* buttons. The launchpad shell header items, such as the  *(Me Area launcher)* button or the user photo/avatar, company logo, search bar, and  *(Notifications)* button, are not shown.![img](https://help.sap.com/doc/a7b390faab1140c087b8926571e942b7/1709%20002/en-US/loio77bf7e46a7cf4ada8a76472fc82c3fdd_LowRes.png)When navigating to the launchpad, it is not possible to personalize the home page. This means that the user cannot move or remove tiles. | Applications and the launchpad |
+| headerless              | Does not display the launchpad shell header bar or the application title. When navigating to the launchpad, it is not possible to personalize the home page. This means that the user cannot move or remove tiles. | Applications and the launchpad |
+
+
 
 ****
 
@@ -1218,6 +1221,10 @@ https://help.sap.com/docs/SAP_FIORI_OVERVIEW/1f0c69c2f76b445c98b89cc1f41d7ae4/6c
 
 ****
 
+
+
+
+
 ## Which service is responsible for OData services in the SAP CP? (Choose the correct answer). 
 
 ### SAP CP OData provisioning 
@@ -1237,7 +1244,460 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 
 
-## 
+
+
+
+****
+
+
+
+
+
+
+
+
+
+# UX399 _ 67
+
+*****
+
+****
+
+
+
+# Unit 1.
+
+****
+
+## What markup should be used to describe a long text in an html document? 
+
+## (Choose the correct answer). 
+
+### \<article>
+
+`<p>` 
+
+`<div>`
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer).
+
+A `<p>` tag has high semantic expressiveness. 
+
+### The `<a>` tag is used to specify HTML Links. 
+
+The `<li>` element can only be used inside of an `<ol>` element.
+
+****
+
+ :book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## How many heading elements are specified in the HTML specification? 
+
+## (Choose the correct answer). 
+
+4 
+
+3 
+
+### 6 
+
+1.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer). 
+
+You can use the focus attribute on multiple form fields. 
+
+The focus attribute can only used at one form field. 
+
+### Only the first form field with the focus attribute will get the focus.
+
+****
+
+:book: UX399 - Unit 1 
+
+커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
+
+****
+
+
+
+
+
+## For what purpose should you use the header element? (Choose the correct answer). 
+
+### For introductory content 
+
+For headings 
+
+As a container for the article element.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the DOCTYPE? (Choose the correct answer). 
+
+### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
+
+The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
+
+The <!DOCTYPE> Is used to define the mime-type.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is an HTML-Tag? (Choose the correct answer). 
+
+### A HTML-Tag is a processing instruction for the web browser.
+
+ A HTML-Tag marks an aspect of the web page 
+
+A HTML-Tag Is a pre-processor instruction for the browser
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
+
+### The action attribute contains the reference to the program that processes the submitted form. 
+
+The action attribute defines the allowed HTTP verbs. 
+
+The action attribute contains the JavaScript event handler that is invoked when the user submits the form.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the name of the attribute to access the custom attributes in your JavaScript code? 
+
+## (Choose the correct answer). 
+
+### dataset 
+
+attributeset 
+
+customDatas.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
+
+custData 
+
+### data 
+
+sapdata.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
+
+****
+
+
+
+
+
+## What URL do you enter when you want to see the source code of a web page? 
+
+## (Choose the correct answer). 
+
+### view-source:https://www.google.com 
+
+view-code:https://www.google.com 
+
+show-source: https://www.google.com.
+
+****
+
+:book: UX399 - Unit 1
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
+
+****
+
+
+
+
+
+## Which of the following are known as BOM Objects? 
+
+## (Choose the correct answers). 
+
+Document 
+
+### Window 
+
+### History 
+
+### Location.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://www.javascripttutorial.net/javascript-bom/
+
+https://pridiot.tistory.com/170
+
+**BOM** (**B**rowser **O**bject **M**odel)
+
+웹 브라우저 전체를 객체로 관리하는 것으로 자바스크립트 프로그램을 통해 브라우저 창을 관리할 수 있도록 브라우저 요소를 객체화 해 놓은 것이다.
+
+* **내장 객체**
+
+  * ***Window :*** 
+
+    브라우저 창이 열릴 때마다 하나 씩 만들어지는 객체
+
+    브라우저 창 안에 존재하는 모든 요소의 최상위 객체
+
+  * ***Document :*** 
+
+    웹 문서에서 \<body> 태그를 만나면 만들어지는 객체
+
+    HTML 문서 정보를 가지고 있다.
+
+  * ***History :*** 
+
+    현재 창에서 사용자 방문 기록을 저장하고 있는 객체
+
+  * ***Location :***
+
+    현재 페이지에 대한 URL 정보를 가지고 있는 객체
+
+  * ***Navigator :***
+
+    현재 사용 중인 웹브라우저 정보를 가지고 있는 객체
+
+  * ***Screen :***
+
+    현재 사용중인 화면 정보를 다루는 객체
+
+****
+
+
+
+
+
+## What is the name of the consortium that standardised the DOM? (Choose the correct answer). 
+
+WWF 
+
+### W3C 
+
+WC3.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://ko.wikipedia.org/wiki/W3C
+
+****
+
+
+
+
+
+## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
+
+### off 
+
+false 
+
+no.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://www.w3schools.com/tags/att_autocomplete.asp
+
+****
+
+
+
+
+
+## What is a code validator? (Choose the correct answer). 
+
+### A code validator is a software program that checks the code against coding rules and standards. 
+
+A code validator is a code generator tool that generates valid code. 
+
+A code validator is a type of extension to the browser.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
+
+F1 
+
+### F12 
+
+D+E+V.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of these is abbreviated to CSS? (Choose the correct answer). 
+
+Complex Style Syntax 
+
+### Cascading Style Sheet 
+
+Cascading Syntax System.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What parts of the software development life-cycle are supported by the SAP development tool? (Choose the correct answer). 
+
+Only implementation functionality such as syntax highlighting and editing are supported. 
+
+Test, code and debug are supported 
+
+### The full life-cycle of software development is supported.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What is true for HTML and UI5? (Choose the correct answers). 
+
+### Dynamic web content 
+
+### Client side rendering 
+
+Code on demand 
+
+Static web pages.
+
+****
+
+:book: UX399 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the name of the SAP Development tool? (Choose the correct answer). 
+
+### SAP Web IDE 
+
+SAP Cloud IDE 
+
+SAP Web Cloud IDE.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
 
 
 
@@ -1254,14 +1714,6 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 
 
-
-
-
-
-
-
-
-UX399 67
 
 
 
