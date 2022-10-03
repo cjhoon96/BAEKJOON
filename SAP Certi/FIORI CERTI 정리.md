@@ -1703,6 +1703,1628 @@ SAP Web Cloud IDE.
 
 
 
+# Unit 2.
+
+****
+
+## What of the following is true? 
+
+## (Choose the correct answers). 
+
+### The :last-child selector matches every element that is the last child of its parent. 
+
+### The :nth-last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child 
+
+The :last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child.
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+## What is the correct prefix for the ID selector? (Choose the correct answer). 
+
+### # 
+
+. 
+
+~
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+## What is the order of processing CSS instructions?
+
+## (Choose the correct answer). 
+
+### Importance, Specificity, Source order 
+
+Specificity, Source order, Importance 
+
+Source-order, Importance, Specificity.
+
+****
+
+:book: UX399 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What is a pseudo-class or pseudo-element? (Choose the correct answer). 
+
+### A CSS technique to permit formatting based on information that lies outside the DOM tree 
+
+A CSS technique to prohibit formatting based on information that lies outside the DOM tree 
+
+A CSS technique to introduce pseudo-style-attributes.
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+# Unit 3.
+
+****
+
+## What method is introduced with HTML5 to have a more powerful selection mechanism? 
+
+## (Choose the correct answer). 
+
+processSelector
+
+getElement
+
+### querySelector
+
+****
+
+:book: UX399 - Unit 3
+
+****
+
+
+
+
+
+## What is the recommended DOM level you should use? (Choose the correct answer). 
+
+### 2 
+
+1 
+
+3.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Describe what is meant by event bubbling. (Choose the correct answer). 
+
+### The concept of event bubbling was introduced to deal with situations where a single event, such as a mouse click, may be handled by two or more event handlers defined at different levels of the Document Object Model (DOM) hierarchy. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://ko.javascript.info/bubbling-and-capturing
+
+****
+
+
+
+
+
+## What is the recent version of JavaScript? 
+
+## (Choose the correct answer). 
+
+ECMA Script 5 
+
+### ECMA Script 6 
+
+ECMA Script 3.
+
+****
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the purpose of the defer attribute? (Choose the correct answer). 
+
+### When present, it specifies that the script is executed when the page has finished parsing. 
+
+When present, it specifies that the script should be executed immediately. 
+
+When present, it specifies that the JavaScript engine should execute the script in a very strictly.
+
+****
+
+:book: UX399 - Unit 3 
+
+http://www.tcpschool.com/html-tag-attrs/script-defer
+
+****
+
+
+
+
+
+## What is true for the prototype? 
+
+## (Choose the correct answers). 
+
+### Every function has a prototype 
+
+### Each object can act as a prototype 
+
+### Any change on the prototype object is immediately visible to all referencing objects.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the difference between scope and execution context? 
+
+## (Choose the correct answer). 
+
+### Scope is function based while execution context is object based. 
+
+Scope context is object based while context is function based. 
+
+It depends on the invocation target whether a function has a scope or a context.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://velog.io/@jhy979/Execution-Context-Scope
+
+****
+
+
+
+
+
+## What does “closed-over” mean in the context of closures? (Choose the correct answer). 
+
+### When an inner function makes reference to a variable in the outer function’s lexical scope, the inner function is said to have “closed over” that variable. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Which of the following is true? (Choose the correct answer). 
+
+The this reference in JavaScript is comparable to the this reference of other programming languages. 
+
+### A this in JavaScript points to the execution context of the function where the this keyword is used. 
+
+A this in JavaScript is like a property of the function.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What mode do you have to use when you want to use the new ECMA6 language features? 
+
+## (Choose the correct answer). 
+
+### strict mode 
+
+base mode 
+
+standard mode.
+
+****
+
+:book: UX399 - Unit 3
+
+검증필요
+
+****
+
+
+
+
+
+## What is true for a variable that holds the value undefined? (Choose the correct answer). 
+
+It represents the intentional absence of an object value. 
+
+it is a keyword. 
+
+### It expresses that a variable is not yet initialized. 
+
+It functions without a return value, and returns undefined.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
+
+It is the name of a function. 
+
+It is where you change the visibility of a variable. 
+
+### It is a container to bundle functionality under a unique identifier.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What does the == operator check? (Choose the correct answer). 
+
+Equal value and equal type 
+
+### Equal value 
+
+Equals type.
+
+****
+
+UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the result of the following 2+3+"3"+23+3+"seven"+12? 
+
+## (Choose the correct answer). 
+
+### 53233seven12 
+
+53326seven12 
+
+23326seven12
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What JavaScript function can be used to separate strings? (Choose the correct answer). 
+
+### split 
+
+slice 
+
+separate.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## Is the following true? The if-condition can be either a boolean variable or can also check if objects are defined and have a correct value (Choose the correct answer). 
+
+No 
+
+### Yes 
+
+It depends on the JavaScript version.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What are the three keyword when it comes to error handling? (Choose the correct answer). 
+
+### try, catch, finally 
+
+throws, catch, attheend 
+
+try, finally, handle.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=220238284097&beginTime=0&jumpingVid=&from=section&redirect=Log&widgetTypeCall=true
+
+****
+
+
+
+
+
+## What operator do you use to inform the runtime that an error occurred? (Choose the correct answer). 
+
+### throw 
+
+throws 
+
+toss.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## When do you throw an error? (Choose the correct answer). 
+
+It is a good practice to throw errors in every function. 
+
+### Helpful when designing libraries to inform a higher layer that a problem occurred. 
+
+To make the debugging of the code easier.
+
+****
+
+:book: UX399 - Unit 3 
+
+*****
+
+
+
+
+
+## Describe what design decision is normally made when you have to deal with errors? (Choose the correct answer). 
+
+### Lower, technical layers throw errors. Higher, application layers handle errors. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
+
+### A function is an instance of the object type. 
+
+### A function can have properties and has a link back to its constructor method. 
+
+### A function can be stored in a variable. 
+
+### A function can pass as a parameter to another function. 
+
+### A function can return from a function.
+
+****
+
+:book: UX399 - Unit 3 
+
+검증필요
+
+****
+
+
+
+
+
+## What does the method document.createElement(“article”) do? 
+
+## (Choose the correct answer). 
+
+### It creates an element of the type HTMLUnknownElement. 
+
+It creates an element of the type article 
+
+It throws an error.
+
+****
+
+:book: UX399 - Unit 3 
+
+테스트 결과 article 생성되는데 왜 답이 저거인지 모르겠다.
+
+검증필요
+
+****
+
+
+
+
+
+## What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
+
+### It checks if the property is defined on the current object 
+
+It checks whether the object has properties. 
+
+It checks if the objects have their own and inherited properties.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What does the createAttribute method return? 
+
+## (Choose the correct answer). 
+
+An object of the type Attr 
+
+An object of the type Attribute 
+
+The method returns void.
+
+****
+
+:book: UX399 - Unit 3 
+
+http://www.w3big.com/ko/jsref/met-document-createattribute.html
+
+****
+
+
+
+
+
+## What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
+
+### XMLHttpRequest 
+
+XMLHttp 
+
+XMLHttpPoll
+
+****
+
+:book: UX399 - Unit 3 
+
+https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+
+****
+
+
+
+
+
+## What does the childNode property return? 
+
+## (Choose the correct answer). 
+
+### The childNode property returns a live collection of child nodes of the given element. 
+
+Returns the node immediately following the specified one in the parent childNode list 
+
+Returns the list of childNodes of the document.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the visibility of a variable that is defined inside a function? 
+
+## (Choose the correct answer). 
+
+It is only visible inside the function. 
+
+It is only visible inside the statement where the variable is defined 
+
+As a variable in JavaScript it is always globally visible.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What method do you use since ECMA 5 to define a read only property? 
+
+## (Choose the correct answer). 
+
+### defineProperty 
+
+setReadOnly 
+
+defineReadOnly.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://opentutorials.org/course/787/5111
+
+****
+
+
+
+
+
+## What are the three states of a promise? 
+
+## (Choose the correct answer). 
+
+### Pending, Fulfilled, Rejected 
+
+Waiting, Finished, Started 
+
+Pending, Finished, Aborted
+
+****
+
+:book: UX399 - Unit 3 
+
+**JavaScript - Three states of Promise** 
+
+* **pending**
+
+  초기 상태, 완료 또는 실행되지 않은 상태
+
+* **fulfilled**
+
+  작업이 성공적으로 완료 된 상태
+
+* **rejected**
+
+  작업이 실패한 상태
+
+
+
+* **settled**
+
+****
+
+
+
+
+
+## What problem is solved when using promises? (Choose the correct answer). 
+
+### A Pyramid of doom 
+
+Nested callbacks 
+
+Synchronous back-end request processing.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://5-ssssseung.tistory.com/96
+
+****
+
+
+
+
+
+## What is AJAX? 
+
+## (Choose the correct answer). 
+
+### Asynchronous JavaScript and XML 
+
+Another JavaScript XML Library 
+
+Asynchronous Java XML.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+# Unit 4.
+
+****
+
+## Is it possible to read CSS properties with the CSS method? 
+
+## (Choose the correct answer). 
+
+### True 
+
+False.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## What is the counterpart function of focus? (Choose the correct answer). 
+
+### blur 
+
+lostFocus 
+
+noFocus.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## When do you use the toggleClass method? (Choose the correct answer). 
+
+Use the method to react to on-click events 
+
+Use the method for handleMouse events. 
+
+Use the method when adding and removing a class where an specific event occurs or reoccurs.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## What is true for the functions after and insertAfter? 
+
+## (Choose the correct answers).
+
+### The way the elements are selected is different 
+
+There is no difference in the result. 
+
+The insertAfter function performs better than the after function.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+답에는 둘 의 결과가 차이가 없다고 나와있다 
+
+A.after(B) – A 뒤에 B를 추가 
+A.insertAfter(B) – B 뒤에 A를 추가
+
+****
+
+
+
+
+
+## What is jQuery? (Choose the correct answer). 
+
+CSS Framework 
+
+### A free, lightweight and extendable JavaScript library 
+
+A set of HTML controls.
+
+****
+
+:book: UX399 - Unit 4 
+
+****
+
+
+
+
+
+## What version of jQuery first provided the AJAX method? 
+
+## (Choose the correct answer). 
+
+Version 1.4 
+
+### Version 1.5 
+
+Version 1.0.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## When do you use the load method? 
+
+## (Choose the correct answer). 
+
+### You want to load the response of the given URL into an object 
+
+You want to load the jQuery library 
+
+You want to load an xml file asynchronously.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://offbyone.tistory.com/235
+
+****
+
+
+
+
+
+## What features are contained in jQuery? 
+
+## (Choose the correct answers). 
+
+### HTML, DOM, CSS manipulation 
+
+UI5 event 
+
+### Effects and animations 
+
+### AJAX.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://micropyramid.com/blog/jquery-features-overview-and-its-future/
+
+검증필요
+
+UI5 event 를 포함하지 않는지 확인 필요
+
+****
+
+
+
+
+
+## What jQuery method can be used to wrap every element of the current collection to provide an HTML structure? (Choose the correct answer). 
+
+### wrap 
+
+wrapAll 
+
+envelope.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://www.codingfactory.net/10214
+
+****
+
+
+
+
+
+## When using the on-function of jQuery, how many event handlers can be attached ? (Choose the correct answer). 
+
+### multiple 
+
+one 
+
+None.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://api.jquery.com/on/
+
+****
+
+
+
+
+
+## What does $("p.intro") select? (Choose the correct answer). 
+
+### Selects all \<p>-elements with class="intro 
+
+Selects a \<p>-element with the innerHTML intro 
+
+Selects a \<p.intro>-elementl.
+
+****
+
+:book: UX399 - Unit 4 
+
+https://secr.tistory.com/61
+
+****
+
+
+
+
+
+
+## What is the corresponding CSS selector of $('#some-id')? 
+
+## (Choose the correct answer). 
+
+### #some-id { } 
+
+some-id{ } 
+
+*some-id{ }.
+
+****
+
+:book: UX399 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+
+
+
+
+****
+
+
+
+
+
+
+
+
+
+# UX400 _ 43
+
+****
+
+****
+
+
+
+# Unit 1.
+
+****
+
+## Which of the following SAP Key UI technologies are currently recommended by SAP? 
+
+## (Choose the correct answers).
+
+Web Dynpro Java 
+
+### Web Dynpro ABAP with Screen Personas 
+
+### Dynpro with Screen Personas 
+
+Java Dynpro 
+
+### SAPUI5.
+
+****
+
+:book: UX400 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following statements are true when talking about SAP Fiori? (Choose the correct answers). 
+
+### SAP Fiori is SAP’s user experience that applies modern user-centric design principals 
+
+SAP Fiori is SAP’s product for implementing SAP Enterprise Portal components 
+
+SAP Fiori is SAP’s UI technology for implementing application for mobile devices 
+
+### SAP Fiori is SAP Fiori can be personalized, is simple, and runs on any device 
+
+### SAP Fiori is SAP Fiori provides a consistent and role-specific experience across all tasks, for all lines of business.
+
+****
+
+:book: UX400 - Unit 1 
+
+****
+
+
+
+
+
+## What is the vision of SAP when considering SAP’s UX direction? (Choose the correct answer). 
+
+Deliver attractive applications that make people successful at work 
+
+### Provide the leading user experience for business applications 
+
+Provide UX as service to gain productivity 
+
+Deliver SAP modules in an SaaS manner.
+
+****
+
+:book: UX400 - Unit 1 
+
+****
+
+
+
+
+
+# Unit 2.
+
+****
+
+## What is the key concept of SAPUI5 that enables the separation of information representation from user interaction? (Choose the correct answer). 
+
+### Model View Controller 
+
+Drag-and-drop 
+
+Slideshow 
+
+A forgiving format.
+
+****
+
+:book: UX400 - Unit 2 
+
+****
+
+
+
+
+
+## Which of the following statements are true for OpenUI5? 
+
+## (Choose the correct answers). 
+
+### OpenUI5 includes all of the main features of SAPUI5. 
+
+OpenUI5 contains sap.viz and sap.ui.com. 
+
+### OpenUI5 is free for use. 
+
+OpenUI5 implements its own Core-Component 
+
+### OpenUI5 encompasses the complete SAPUI5 Core, plus many front-end controls that are also included in SAPUI5.
+
+****
+
+:book: UX400 - Unit 2 
+
+****
+
+
+
+
+
+## Which of the following are key features of SAPUI5? (Choose the correct answers). 
+
+### Full translation support 
+
+Web Dynpro extensibility 
+
+### Responsive across browsers and devices 
+
+Less open for custom developmen 
+
+### Based on open standards such as, JavaScript, CSS3, and HTML5.
+
+****
+
+:book: UX400 - Unit 2 
+
+****
+
+
+
+
+
+# Unit 3.
+
+****
+
+## Which of the following parameters must you provide when you create an initial SAP Cloud Connector configuration? (Choose the correct answers). 
+
+### Region Host 
+
+Display Name 
+
+### Sub-account Name 
+
+### Password 
+
+Location ID 
+
+### Sub-account User.
+
+****
+
+:book: UX400 - Unit 3 
+
+https://blogs.sap.com/2021/09/05/installation-and-configuration-of-sap-cloud-connector/
+
+****
+
+
+
+
+
+## What tool is used to connect the SAP Cloud Platform to an on-premise system? (Choose the correct answer). 
+
+SAP Destination Connector 
+
+### SAP Cloud Connector
+
+SAP Connector App 
+
+SAP Cloud Manager.
+
+****
+
+:book: UX400 - Unit 3
+
+****
+
+
+
+
+
+## Which of the following statements are true with respect to the SAP Web IDE? (Choose the correct answers). 
+
+### A browser-based integrated development environment 
+
+Available only in the SAP Cloud Platform 
+
+Integrated in the SAP GUI
+
+### Supports the End-to-End (E2E) application lifecycle 
+
+### Provides WYSIWYG tooling.
+
+****
+
+:book: UX400 - Unit 3 
+
+https://blogs.sap.com/2015/06/22/sap-web-ide-layout-editor-wysiwyg-or-dragdrop-available-for-productive-use/
+
+****
+
+
+
+
+
+# Unit 4. 
+
+****
+
+## What is the initial starting phase of SAPUI5 called? 
+
+## (Choose the correct answer). 
+
+### Bootstrapping 
+
+AutoStart 
+
+ConfigurationLoad 
+
+Startup-phase.
+
+****
+
+:book: UX400 - Unit 4 
+
+SAP UI5 의 초기 시작 단계를 "부트스트랩" 이라고 한다. 부트 스트랩 단계에서는 SAP UI5 어플리케이션 실행에 필요한 모든 런타임 아티펙트가 인스턴스화 되고 구성된다.
+
+https://help.sap.com/saphelp_snc700_ehp04/helpdata/en/a0/4b0d10fb494d1cb722b9e341b584ba/frameset.htm
+
+You can use the SAPUI5 bootstrap script in your page to initialize SAPUI5 runtime automatically as soon as the script is loaded and executed by the browser. For simple use cases as well as the default SAPUI5 installation, this is sufficient to build and run UIs. In addition to this, you can specify the set of SAPUI5 libraries and the theme used for your application in the configuration settings.
+
+***<u>index.html</u>***
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SAPUI5 Walkthrough</title>
+		<script
+			id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-compatVersion="edge"
+               data-sap-ui-async="true"
+               data-sap-ui-onInit="module:my/app/main"
+               data-sap-ui-resourceRoots='{"my.app": "./"}'
+ 			></script>
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>
+```
+
+****
+
+
+
+
+
+## What is the name of the event that is fired after a successful SAPUI5 initialization? (Choose the correct answer). 
+
+### init 
+
+startUpDone 
+
+loadDone 
+
+bootDone.
+
+****
+
+:book: UX400 - Unit 4 
+
+****
+
+
+
+
+
+
+## What is the prefix of the HTML custom attributes of SAPUI5? 
+
+## (Choose the correct answer). 
+
+data-sap-ui5 
+
+### data-sap-ui 
+
+data-sap-uiconfig 
+
+data-sap-config-ui.
+
+****
+
+:book: UX400 - Unit 4 
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SAPUI5 Walkthrough</title>
+		<script
+			id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-compatVersion="edge"
+               data-sap-ui-async="true"
+               data-sap-ui-onInit="module:my/app/main"
+               data-sap-ui-resourceRoots='{"my.app": "./"}'
+ 			></script>
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>
+```
+
+****
+
+
+
+
+
+# Unit 5.
+
+****
+
+## Which of the following features can be used to describe a module? 
+
+## (Choose the correct answers). 
+
+### Name 
+
+Association 
+
+### Definition 
+
+Scope 
+
+### Dependencies.
+
+****
+
+:book: UX400 - Unit 5 
+
+https://stackoverflow.com/questions/48956829/how-to-load-dependencies-relative-to-defining-module
+
+****
+
+
+
+
+
+## Which JavaScript function is called to define a module?
+
+## (Choose the correct answer). 
+
+jQuery.sap.require 
+
+jQuery.sap.define 
+
+### sap.ui.define 
+
+sap.ui.declare.
+
+****
+
+:book: UX400 - Unit 5 
+
+```js
+sap.ui.define (sModuleName, aDependencies, vFactory, bExport) {
+    
+}
+```
+
+* **{ string } sModuleName**
+
+  약식 리소스 이름 구문에서 모듈의 이름이다.
+
+  생략할 경우 로더가 요청에서 이름을 결정한다.
+
+* **{ string[ ] } aDependencies**
+
+  모듈 종속성 리스트이다.
+
+  ```js
+  ["sap/m/MessageBox", "sap/ui/core/format/DateFormat"]
+  ```
+
+* **{ function | any } vFactory**
+
+  듈 값 또는 값을 계산하는 함수
+
+* **{ boolean } bExport**
+
+  전역 이름으로 엑스포트해야 하는지 여부
+
+****
+
+
+
+
+
+## Which JavaScript function is used to load a module asynchronously? (Choose the correct answer). 
+
+jQuery.sap.require 
+
+### sap.ui.require 
+
+sap.ui.define 
+
+sap.ui.loadModule.
+
+****
+
+:book: UX400 - Unit 5 
+
+****
+
+
+
+
+
+# Unit 6.
+
+****
+
+
+
+## What view type does SAP recommend? 
+
+## (Choose the correct answer). 
+
+ JSON
+
+### XML 
+
+HTML 
+
+JavaScript.
+
+****
+
+:book: UX400 - Unit 6 
+
+****
+
+
+
+
+
+## Which of the following lifecycle hook methods can be implemented by the developer in a view controller? (Choose the correct answers). 
+
+### onInit 
+
+onRender 
+
+### onAfterRendering 
+
+### onExit 
+
+### onBeforeRendering.
+
+****
+
+:book: UX400 - Unit 6 
+
+https://blogs.sap.com/2018/11/12/sapui5-controller-lifecycle-methods-explained/
+
+### onInit  
+
+### onExit 
+
+### onAfterRendering
+
+뷰가 렌더링 되면 호출
+
+### onBeforeRendering.
+
+onAfterRendering 과 비슷하지만 onInit() 이 사용되기 전이 아니라 컨트롤러의 뷰가 다시 렌더링 되기 전에 호출 된다.
+
+****
+
+
+
+
+
+## Which class is normally used as the base class when implementing a SAPUI5 view controller? (Choose the correct answer). 
+
+### sap.ui.core.mvc.Controller 
+
+sap.ui.view.Controller 
+
+sap.m.Controller 
+
+sap.ui.layout.Controller.
+
+****
+
+:book: UX400 - Unit 6 
+
+****
+
+
+
+
+
+## Which function is provided to register a URL prefix for a module name prefix? (Choose the correct answer). 
+
+jQuery.sap.mapModulePath() 
+
+### jQuery.sap.registerModulePath() 
+
+sap.ui.registerModulePath() 
+
+jQuery.sap.declareModulePath().
+
+****
+
+:book: UX400 - Unit 6 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/jQuery.sap%23methods/jQuery.sap.registerModulePath
+
+URL 접두부를 모듈 이름 접두부에 등록하는 목적으로 프레임 워크에서 제공된다.
+
+****
+
+
+
+
+
+# Unit 7.
+
+****
+
+## Which layout control can help you group UI controls? (Choose the correct answer). 
+
+### sap.ui.layout.Panel 
+
+sap.m.Panel 
+
+sap.ui.layout.Group 
+
+sap.m.GridGroup.
+
+****
+
+:book: UX400 - Unit 7 
+
+https://experience.sap.com/fiori-design-web/panel/
+
+****
+
+
+
+
+
+## What is the preferred way, when you have the requirement, to hide certain UI controls on a specific form factor? 
+
+## (Choose the correct answer). 
+
+Get the form factor using the device and call the setVisible() function of the UI control. 
+
+### Assign a standard CSS class, such as sapUiVisibleOnlyOnDesktop of SAPUI5, to the UI control. 
+
+Bind the formFactor property of the device model to the visible property of the UI control.
+
+****
+
+:book: UX400 - Unit 7 
+
+https://stackoverflow.com/questions/66930485/device-adaptation-how-to-hide-an-ui-element-for-a-specific-device-type-on-ui5
+
+****
+
+
+
+
+
+## Which measurement unit is used for the property hSpacing? (Choose the correct answer). 
+
+em 
+
+### rem 
+
+px 
+
+percentage.
+
+****
+
+:book: UX400 - Unit 7 
+
+****
+
+
+
+
+
+# Unit 8. 
+
+****
+
+
+
+
+
+## 
+
+
+
+## 
+
+
+
+## 
 
 
 
@@ -1717,7 +3339,6 @@ SAP Web Cloud IDE.
 
 
 
-UX400 43
 
 UX402 78
 
