@@ -3312,6 +3312,981 @@ percentage.
 
 ****
 
+## When you implement a dialog using a fragment, you should bind the fragment to the lifecyle management of the consuming view. Which function do you need to call on the consuming view to connect the dialog to the lifecyle management of the view? 
+
+## (Choose the correct answer). 
+
+### addDependent() 
+
+connectToView() 
+
+addFragment() 
+
+assignDependent().
+
+****
+
+:book: UX400 - Unit 8 
+
+https://answers.sap.com/questions/707789/use-of-adddependent-in-fragment.html
+
+****
+
+
+
+
+
+## Which of the following statements are true with respect to fragments? 
+
+## (Choose the correct answers). 
+
+### Fragments are defined in a manner similar to views. 
+
+A fragment itself has a HTML representation. 
+
+### Fragments are light-weight UI parts. 
+
+Fragments need a controller, similar to views.
+
+****
+
+:book: UX400 - Unit 8 
+
+****
+
+
+
+
+
+## Which fragment type is not available in SAPUI5? 
+
+## (Choose the correct answer). 
+
+XML fragment 
+
+### JSON fragment 
+
+HTML fragment 
+
+JavaScript fragment.
+
+****
+
+:book: UX400 - Unit 8 
+
+****
+
+
+
+
+
+# Unit 9.
+
+****
+
+## Which of the following model types are supported by SAPUI5? 
+
+## (Choose the correct answers). 
+
+## XML 
+
+## JSON 
+
+## OData 
+
+SOAP.
+
+****
+
+:book: UX400 - Unit 9 
+
+resource model 
+
+클라이언트 측 모델 
+
+주로 텍스트를 다른 언어로 제공하기 위해 리소스 번들의 데이터를 처리하도록 설계한다.
+
+****
+
+
+
+
+
+## Which of the following are the binding types supported in SAPUI5? 
+
+## (Choose the correct answers). 
+
+### Property binding 
+
+Default binding 
+
+### Aggregation binding 
+
+Elementary binding 
+
+### Element binding.
+
+****
+
+:book: UX400 - Unit 9
+
+**Property binding** 
+
+컨트롤의 속성이 자동으로 초기화되고 모델 데이터에 따라 업데이트 될 수 있다.
+
+**Aggregation binding**  
+
+모델 데이터에 따라 하위 컨트롤을 자동으로 생성할 수 있다.
+
+**Element binding**
+
+UI 요소를 모델 데이터의 특정 오브젝트에 바인딩 할 수 있다.
+
+마스터 / 세부사항 시나리오에 특히 유용하다.
+
+******
+
+
+
+
+
+## Which enumeration defines the various binding modes provided by SAP? 
+
+## (Choose the correct answer). 
+
+### sap.ui.model.BindingMode 
+
+sap.ui.binding.BindingMode 
+
+sap.ui.bindingmode.Mode 
+
+sap.ui.model.binding.Mode.
+
+****
+
+:book: UX400 - Unit 9 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.model.BindingMode%23properties
+
+* **일회성**
+* **단방향**
+* **양방향**
+
+****
+
+
+
+
+
+# Unit 10.
+
+****
+
+## Which parameter do you need to provide to the ResourceModel() function to specify the SAPUI5 module name of the .properties file? (Choose the correct answer). 
+
+### bundleName 
+
+resourceBundleName 
+
+resourceName 
+
+bundlePath.
+
+****
+
+:book: UX400 - Unit 10 
+
+https://stackoverflow.com/questions/63841814/sap-ui5-resource-bundle
+
+https://blogs.sap.com/2017/11/23/sap-fiori-consume-odata-service-css-i18n-properties-in-ui5-application/
+
+****
+
+
+
+
+
+## Which of the following properties can be used to define a resource bundle and an alias inside an XML view? 
+
+## (Choose the correct answers). 
+
+resourceBundle 
+
+### resourceBundleName 
+
+resourceAlias 
+
+### resourceBundleAlias.
+
+****
+
+:book: UX400 - Unit 10 
+
+<mvc:View
+    **resourceBundleName**="sap.ui.core.messagebundle"
+    **resourceBundleAlias**="i18n"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+
+****
+
+
+
+
+
+## Which of the following are the two options provided by SAPUI5 for working with i18n texts? (Choose the correct answers). 
+
+### jQuery.sap.resources (Deprecated) => sap/base/i18n/ResourceBundle
+
+Aggregation Binding 
+
+### Data Binding 
+
+Resource Consumption.
+
+****
+
+:book: UX400 - Unit 10 
+
+****
+
+
+
+
+
+## SAP UI5 APP 내 입력 언어를 de_CH 로 가정할 경우 적합한 리소스 번들 파일을 로드하기 위해 SAP UI5 에 사용되는 로컬 대체(fallback) 체인은 다음중 무엇인가?
+
+### "de_CH" => "de" => "en" => ""
+
+"de_CH" => "de" => "" => "en" 
+
+"de_CH" => "de" => ""
+
+****
+
+:book: UX400 - Unit 10 
+
+****
+
+
+
+
+
+# Unit 11.
+
+****
+
+## What does OData use for resource identification? (Choose the correct answer). 
+
+Email address 
+
+### URI 
+
+Harmonized WSDL paths.
+
+****
+
+:book: UX400 - Unit 11 
+
+****
+
+
+
+
+
+## Which design pattern is used for resolving relationships between resources? (Choose the correct answer). 
+
+Resource design pattern 
+
+### Hypermedia design pattern 
+
+Metadata design pattern.
+
+****
+
+:book: UX400 - Unit 11 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following return types are supported by service operations? 
+
+## (Choose the correct answers). 
+
+### Complex Types 
+
+### Primitive Types 
+
+Aggregation Type 
+
+Infinitive Types.
+
+****
+
+:book: UX400 - Unit 11 
+
+### Complex Types
+
+키 없이 속성 리스트로 구성된 구조 유형이다.
+
+엔티티 유형의 속성에 유형을 지정하는데 복합 유형이 사용된다.
+
+### Primitive Types
+
+****
+
+
+
+
+
+# Unit 12.
+
+****
+
+## Which OData versions are currently supported by SAPUI5? (Choose the correct answers). 
+
+OData Version 1.0 
+
+### OData Version 2.0 
+
+OData Version 3.0 
+
+### OData Version 4.0.
+
+****
+
+:book: UX400 - Unit 12 
+
+****
+
+
+
+
+
+## Does the invocation of the getProperty() method on an OData model object trigger a request to the backend? (Choose the correct answer).
+
+Yes, for each getProperty() call, an synchronous request to the OData service is triggered to get the property value. 
+
+### No, a request is not triggered. The getProperty() method returns the current value from the OData model object at the client side. If the value is not available, undefined is returned. 
+
+It depends on how the getProperty() method is parametrized by the developer. There is a property called bFetchFromServer . If this parameter is true, a request to the server-side is sent.
+
+****
+
+:book: UX400 - Unit 12 
+
+getProperty 메소드는 백엔드의 데이터를 요청하지 않는다.
+
+캐시에 저장된 엔티티에만 엑세스 할 수 있다.
+
+리턴하는 값은 JSON 모델에서 처럼 참조가 아닌 모델 데이터의 복사본이다.
+
+****
+
+
+
+
+
+## What function can be used to check whether the OData model contains changes? (Choose the correct answer). 
+
+hasUpdatedValues() 
+
+### hasPendingChanges() 
+
+hasPendingValues() 
+
+hasUpdatedChanges().
+
+****
+
+:book: UX400 - Unit 12 
+
+****
+
+
+
+
+
+# Unit 13.
+
+****
+
+## In which file is the Component controller implemented? 
+
+## (Choose the correct answer). 
+
+Component.json 
+
+### Component.js 
+
+UIComponent.js 
+
+BaseComponent.js.
+
+*****
+
+:book: UX400 - Unit 13 
+
+## Which type of UI control is used to embed a component into a component consumer? (Choose the correct answer). 
+
+sap.ui.core.ComponentGroup 
+
+### sap.ui.core.ComponentContainer 
+
+sap.ui.core.ComponentPane 
+
+sap.ui.core.ComponentArea.
+
+****
+
+:book: UX400 - Unit 13 
+
+****
+
+
+
+
+
+## Which types of components are provided by SAPUI5? (Choose the correct answers). 
+
+### Faceless Components 
+
+### UI Components 
+
+Backend Components 
+
+Agile Components.
+
+****
+
+:book: UX400 - Unit 13 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/958ead51e2e94ab8bcdc90fb7e9d53d0.html
+
+****
+
+
+
+
+
+# Unit 14.
+
+****
+
+## Which function invocation is necessary to set up the routing inside a full-screen app? 
+
+## (Choose the correct answer). 
+
+### this.getRouter().initialize(); 
+
+this.getRouter().setup(); 
+
+this.getRouter().init(); 
+
+this.getRouter().registerRoutes();.
+
+****
+
+:book: UX400 - Unit 14 
+
+****
+
+
+
+
+
+## Which root element can be used when developing a full-screen app? 
+
+## (Choose the correct answer). 
+
+### sap.m.App 
+
+sap.m.FullScreenApp 
+
+sap.m.BaseApp 
+
+sap.m.SplitApp
+
+****
+
+:book: UX400 - Unit 14 
+
+****
+
+
+
+
+
+## How do you catch invalid hashes in your routing configuration? (Choose the correct answer). 
+
+Handle the invalid hashes during component initialization and forward them to a central routing target. 
+
+### Use the bypassed attribute inside the routing configuration. 
+
+Register an event handler to handle invalid hashes and navigation to the correct target when the invalidHashOccurs event is raised.
+
+****
+
+:book: UX400 - Unit 14 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/a7932a791adc4a58ae4693400801ea5f
+
+****
+
+
+
+
+
+
+
+
+
+****
+
+
+
+
+
+
+
+
+
+# UX402 _ 78
+
+****
+
+****
+
+
+
+
+
+# Unit 1.
+
+
+
+
+
+
+
+
+
+
+
+# UX403 _ 43
+
+****
+
+****
+
+
+
+
+
+
+
+
+
+
+
+
+
+# UX410 _ 81
+
+****
+
+****
+
+
+
+# Unit 1.
+
+****
+
+## What is described as the person's perceptions and response that result from the use or anticipated use of a product, system, or service? (Choose the correct answer). 
+
+User interface 
+
+### User experience 
+
+Usability 
+
+User acceptance.
+
+****
+
+:book: UX410 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following can be used for usability assessment? (Choose the correct answers). 
+
+### Heuristic evaluation 
+
+### User testing 
+
+User observation 
+
+### Questionnaires (질의서).	
+
+****
+
+:book: UX410 - Unit 1 
+
+****
+
+ 
+
+
+
+## What does effectiveness mean in the relation to the user interface? (Choose the correct answer). 
+
+The resources expended in relation to the accuracy and completeness of goals achieved 
+
+### The accuracy and completeness with which specified users can achieve specified goals in specific environments 
+
+The comfort and acceptability of the work system to its users and other people affected by its use.
+
+****
+
+:book: UX410 - Unit 1 
+
+* **Effectiveness (유효성)**
+
+  특정 사용자가 특별한 환경에서 지정된 목표를 달성할 때 이룰 수 있는 정확성과 완성도
+
+* **Efficiency (효율성)**
+
+  다ㄹ성한 목표의 정확성과 완성도에 따라 증가하는 리소스의변화
+
+* **Satisfaction (만족도)**
+
+  시스템의 편안함과 수용 가능성
+
+****
+
+
+
+
+
+# Unit 2.
+
+****
+
+## What impact does SAP Fiori have on business? 
+
+## (Choose the correct answers). 
+
+### Digitalization 
+
+### Simplification 
+
+Support the web and open standards 
+
+Provides a user-centered approach 
+
+### Leads to re-imagination of processes.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+
+Business
+
+* digitalization
+* simplification
+* re-imagination of processes
+
+User
+
+* 사용자 중심
+* 디자인 중심 개발
+* 모든 SAP 솔루션에서 공통된 UX
+
+Technology
+
+* 웹 및 개방형 표준
+* 서비스 지향
+* 인메모리 및 클라우드 컴퓨팅
+
+****
+
+
+
+
+
+## What impact does UX have on monetary values? 
+
+## (Choose the correct answers). 
+
+Increases user satisfaction. 
+
+### Provides productivity gains and increases data quality. 
+
+Strengthens relationships with customers. 
+
+### Provides training cost savings 
+
+### Reduces the number of change requests and user errors.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+
+****
+
+
+
+
+
+## What are the ideas behind the SAP UX strategy? (Choose the correct answers). 
+
+### Design Strategy 
+
+New / Renew / Enablement 
+
+### New / Renew /Empower 
+
+### Architecture and Technology 
+
+SAP Screen Personas.
+
+****
+
+:book: UX403 - Unit 1, UX410 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+# Unit 3.
+
+****
+
+## What is the preferred technology to implement SAP Fiori applications? 
+
+## (Choose the correct answer). 
+
+Web Dynpro ABAP 
+
+### SAPUI5 
+
+Web Dynpro Java 
+
+Dynpro.
+
+****
+
+:book: UX410 - Unit 3 
+
+****
+
+
+
+
+
+## What application type is implemented to analyze a huge amount of data with diagrams? 
+
+## (Choose the correct answer). 
+
+Transactional 
+
+### Analytical 
+
+Fact sheet.
+
+****
+
+:book: UX410 - Unit 3 
+
+https://help.sap.com/saphelp_ssb/helpdata/en/ec/a941524a6b6760e10000000a423f68/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## What names have the view ports of the SAP Fiori launchpad? 
+
+## (Choose the correct answers). 
+
+### Me area 
+
+Desktop 
+
+### Workspace 
+
+### Notification area.
+
+****
+
+:book: UX410 - Unit 3 
+
+****
+
+
+
+
+
+## What are the SAP Fiori principles? (Choose the correct answers). 
+
+### Role-based 
+
+### Adaptive 
+
+Creative 
+
+### Coherent 
+
+Complex.
+
+****
+
+:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 3 
+
+https://experience.sap.com/fiori-design-web/design-principles/
+
+**Role-based** 
+
+**Adaptive (적응형)**
+
+**Coherent (일관성)**
+
+**Simple (단순성)**
+
+**Delightful**
+
+****
+
+
+
+
+
+# Unit 4.
+
+****
+
+## What is the purpose of SAP Build? 
+
+## (Choose the correct answer). 
+
+### Provides tooling to support the designer during various phases of design thinking. 
+
+Provides tooling to support the developer during the development of back-end services. 
+
+Provides tooling to support the developer during the development of SAPUI5 applications.
+
+****
+
+:book: UX410 - Unit 4 
+
+****
+
+
+
+
+
+## What do you focus on when it comes to decomposition and re-composition? 
+
+## (Choose the correct answer). 
+
+The building of mega transactions to support all needs of all people 
+
+### The person’s tasks that should be supported by the application 
+
+The expensive of the implementation 
+
+The data and functions that are already in the system.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+******
+
+
+
+
+
+## 
+
+## What are common design thinking brainstorming rules? (Choose the correct answers). 
+
+### Be visual 
+
+Discuss and judge every idea 
+
+Go for quality 
+
+### Fail early and often.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What are the main spaces in the design thinking process? (Choose the correct answers). 
+
+### Problem Space 
+
+Ideation Space 
+
+### Solution Space 
+
+Test Space.
+
+****
+
+:book: UX410 - Unit 4 
+
+검증필요
+
+****
+
+
+
+
+
+## What three key aspects are important when talking about innovation? (Choose the correct answers). 
+
+### Feasibility 
+
+### Scalability 
+
+### Viability 
+
+Desirability.
+
+****
+
+:book: UX410 - Unit 4 
+
+****
+
 
 
 
@@ -3322,27 +4297,4 @@ percentage.
 
 ## 
 
-
-
 ## 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-UX402 78
-
-UX403 43
-
-UX410 81
-

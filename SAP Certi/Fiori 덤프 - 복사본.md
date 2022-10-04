@@ -46,28 +46,6 @@ It depends on the type of component.
 
 
 
-## Which of the following model types are supported by SAPUI5? 
-
-## (Choose the correct answers). 
-
-## XML 
-
-## JSON 
-
-## OData 
-
-SOAP.
-
-****
-
-:book: UX400 - Unit 9 
-
-****
-
-
-
-
-
 ## Which of the following steps are part of the design phase in the DLD? 
 
 다음 중 DLD의 design 단계의 일부인 단계는?
@@ -714,28 +692,6 @@ Can not expose associations.
 
 
 
-## Which fragment type is not available in SAPUI5? 
-
-## (Choose the correct answer). 
-
-XML fragment 
-
-### JSON fragment 
-
-HTML fragment 
-
-JavaScript fragment.
-
-****
-
-:book: UX400 - Unit 8 
-
-****
-
-
-
-
-
 ## How is the extension type called to hide UI controls? 
 
 ## (Choose the correct answer). 
@@ -799,35 +755,6 @@ Increase development effort
 ****
 
 :book: UX410 - Unit 14 
-
-****
-
-
-
-
-
-## Which of the following properties can be used to define a resource bundle and an alias inside an XML view? 
-
-## (Choose the correct answers). 
-
-resourceBundle 
-
-### resourceBundleName 
-
-resourceAlias 
-
-### resourceBundleAlias.
-
-****
-
-:book: UX400 - Unit 10 
-
-<mvc:View
-    **resourceBundleName**="sap.ui.core.messagebundle"
-    **resourceBundleAlias**="i18n"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:l="sap.ui.layout"
-    xmlns="sap.m">
 
 ****
 
@@ -931,30 +858,6 @@ Strengthens relationships with customers.
 
 
 
-## Which function invocation is necessary to set up the routing inside a full-screen app? 
-
-## (Choose the correct answer). 
-
-### this.getRouter().initialize(); 
-
-this.getRouter().setup(); 
-
-this.getRouter().init(); 
-
-this.getRouter().registerRoutes();.
-
-****
-
-:book: UX400 - Unit 14 
-
-검증필요
-
-****
-
-
-
-
-
 ## When should you not use the dynamic page layout? 
 
 ## (Choose the correct answers). 
@@ -1037,28 +940,6 @@ https://www.techtarget.com/searchapparchitecture/tip/Why-should-I-use-a-build-se
 
 
 
-## What is the preferred technology to implement SAP Fiori applications? 
-
-## (Choose the correct answer). 
-
-Web Dynpro ABAP 
-
-### SAPUI5 
-
-Web Dynpro Java 
-
-Dynpro.
-
-****
-
-:book: UX410 - Unit 3 
-
-****
-
-
-
-
-
 ## Which control is used in the index.html file to support letterboxing if required? 
 
 ## (Choose the correct answer). 
@@ -1133,28 +1014,6 @@ https://help.sap.com/saphelp_uiaddon10/helpdata/en/26/96ab50faad458f9b4027ec2f9b
 
 
 
-## In which file is the Component controller implemented? 
-
-## (Choose the correct answer). 
-
-Component.json 
-
-### Component.js 
-
-UIComponent.js 
-
-BaseComponent.js.
-
-*****
-
-:book: UX400 - Unit 13 
-
-****
-
-
-
-
-
 ## What areas are mandatory in the tile layout? 
 
 ## (Choose the correct answers). 
@@ -1202,28 +1061,6 @@ The OData Model fetches the token for each request and sends the token automatic
 :book: UX402 - Unit 3 
 
 https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/6c/47b2b39db9404582994070ec3d57a2/content.htm?no_cache=true
-
-****
-
-
-
-
-
-## Which root element can be used when developing a full-screen app? 
-
-## (Choose the correct answer). 
-
-### sap.m.App 
-
-sap.m.FullScreenApp 
-
-sap.m.BaseApp 
-
-sap.m.SplitApp
-
-****
-
-:book: UX400 - Unit 14 
 
 ****
 
@@ -1317,26 +1154,6 @@ detail.
 
 
 
-## What is the purpose of SAP Build? 
-
-## (Choose the correct answer). 
-
-### Provides tooling to support the designer during various phases of design thinking. 
-
-Provides tooling to support the developer during the development of back-end services. 
-
-Provides tooling to support the developer during the development of SAPUI5 applications.
-
-****
-
-:book: UX410 - Unit 4 
-
-****
-
-
-
-
-
 ## From which control does the sap.m.App control inherit navigation capabilities? 
 
 ## (Choose the correct answer). 
@@ -1352,52 +1169,6 @@ sap.ui.core.NavContainer.
 :book: UX402 - Unit 2 
 
 https://sapui5.hana.ondemand.com/#/api/sap.m.NavContainer%23overview
-
-****
-
-
-
-
-
-## Which of the following statements are true with respect to fragments? 
-
-## (Choose the correct answers). 
-
-### Fragments are defined in a manner similar to views. 
-
-A fragment itself has a HTML representation. 
-
-### Fragments are light-weight UI parts. 
-
-Fragments need a controller, similar to views.
-
-****
-
-:book: UX400 - Unit 8 
-
-****
-
-
-
-
-
-## Which enumeration defines the various binding modes provided by SAP? 
-
-## (Choose the correct answer). 
-
-### sap.ui.model.BindingMode 
-
-sap.ui.binding.BindingMode 
-
-sap.ui.bindingmode.Mode 
-
-sap.ui.model.binding.Mode.
-
-****
-
-:book: UX400 - Unit 9 
-
-https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.model.BindingMode%23properties
 
 ****
 
@@ -1424,30 +1195,6 @@ detailPages.
 https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.NavContainer%23aggregations
 
 ****
-
-
-
-
-
-## Which of the following are the binding types supported in SAPUI5? 
-
-## (Choose the correct answers). 
-
-### Property binding 
-
-Default binding 
-
-### Aggregation binding 
-
-Elementary binding 
-
-### Element binding.
-
-****
-
-:book: UX400 - Unit 9
-
-******
 
 
 
@@ -1630,52 +1377,6 @@ https://experience.sap.com/fiori-design-web/app-finder/
 
 
 
-## What do you focus on when it comes to decomposition and re-composition? 
-
-## (Choose the correct answer). 
-
-The building of mega transactions to support all needs of all people 
-
-### The person’s tasks that should be supported by the application 
-
-The expensive of the implementation 
-
-The data and functions that are already in the system.
-
-****
-
-:book: UX410 - Unit 4 
-
-검증필요
-
-******
-
-
-
-
-
-## What application type is implemented to analyze a huge amount of data with diagrams? 
-
-## (Choose the correct answer). 
-
-Transactional 
-
-### Analytical 
-
-Fact sheet.
-
-****
-
-:book: UX410 - Unit 3 
-
-https://help.sap.com/saphelp_ssb/helpdata/en/ec/a941524a6b6760e10000000a423f68/content.htm?no_cache=true
-
-****
-
-
-
-
-
 ## SAPUI5 provides two different router implementations. What router class is used in SAP Fiori apps as a router or as a router base class, when you want to implement your own router? 
 
 ## (Choose the correct answer). 
@@ -1717,30 +1418,6 @@ A floorplan is a layout of the SAP Web-Dynpro layouts for SAP Fiori apps.
 :book: UX410 - Unit 12 
 
 ******
-
-
-
-
-
-## What names have the view ports of the SAP Fiori launchpad? 
-
-## (Choose the correct answers). 
-
-### Me area 
-
-Desktop 
-
-### Workspace 
-
-### Notification area.
-
-****
-
-:book: UX410 - Unit 3 
-
-검증필요
-
-****
 
 
 
@@ -1840,30 +1517,6 @@ https://dhan-description.tistory.com/152
 
 
 
-## Which of the following return types are supported by service operations? 
-
-## (Choose the correct answers). 
-
-### Complex Types 
-
-### Primitive Types 
-
-Aggregation Type 
-
-Infinitive Types.
-
-****
-
-:book: UX400 - Unit 11 
-
-검증필요
-
-****
-
-
-
-
-
 ## What problem is solved by the worklist Report floorplan? 
 
 ## (Choose the correct answer). 
@@ -1881,30 +1534,6 @@ You want to display a large collection of items and the user can take some actio
 :book: UX410 - Unit 12 
 
 https://experience.sap.com/fiori-design-web/work-list/
-
-****
-
-
-
-
-
-## When you implement a dialog using a fragment, you should bind the fragment to the lifecyle management of the consuming view. Which function do you need to call on the consuming view to connect the dialog to the lifecyle management of the view? 
-
-## (Choose the correct answer). 
-
-### addDependent() 
-
-connectToView() 
-
-addFragment() 
-
-assignDependent().
-
-****
-
-:book: UX400 - Unit 8 
-
-https://answers.sap.com/questions/707789/use-of-adddependent-in-fragment.html
 
 ****
 
@@ -2266,28 +1895,6 @@ MobileDeviceLayout.
 
 
 
-## What are common design thinking brainstorming rules? (Choose the correct answers). 
-
-### Be visual 
-
-Discuss and judge every idea 
-
-Go for quality 
-
-### Fail early and often.
-
-****
-
-:book: UX410 - Unit 4 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which of the following steps are part of the discover phase in the DLD? (Choose the correct answers). 
 
 ### Scope 
@@ -2327,26 +1934,6 @@ Allows the merging of two local branches into one local branch.
 문제 이상
 
 ******
-
-
-
-
-
-## How do you catch invalid hashes in your routing configuration? (Choose the correct answer). 
-
-Handle the invalid hashes during component initialization and forward them to a central routing target. 
-
-### Use the bypassed attribute inside the routing configuration. 
-
-Register an event handler to handle invalid hashes and navigation to the correct target when the invalidHashOccurs event is raised.
-
-****
-
-:book: UX400 - Unit 14 
-
-https://sapui5.hana.ondemand.com/sdk/#/topic/a7932a791adc4a58ae4693400801ea5f
-
-****
 
 
 
@@ -2552,26 +2139,6 @@ SAP provides a service in the cloud to generate an enhanced application using as
 
 
 
-## What function can be used to check whether the OData model contains changes? (Choose the correct answer). 
-
-hasUpdatedValues() 
-
-### hasPendingChanges() 
-
-hasPendingValues() 
-
-hasUpdatedChanges().
-
-****
-
-:book: UX400 - Unit 12 
-
-****
-
-
-
-
-
 ## Which info will be used for creating a destination in SAP Cloud Platform for Fiori Elements development? (Choose the correct answer). 
 
 ### Virtual name in SAP Cloud Connector. 
@@ -2739,26 +2306,6 @@ Drill-down.
 :book: UX410 - Unit 5 
 
 검증필요 맞는거 같다
-
-****
-
-
-
-
-
-## Which type of UI control is used to embed a component into a component consumer? (Choose the correct answer). 
-
-sap.ui.core.ComponentGroup 
-
-### sap.ui.core.ComponentContainer 
-
-sap.ui.core.ComponentPane 
-
-sap.ui.core.ComponentArea.
-
-****
-
-:book: UX400 - Unit 13 
 
 ****
 
@@ -3030,24 +2577,6 @@ False.
 
 
 
-## What does OData use for resource identification? (Choose the correct answer). 
-
-Email address 
-
-### URI 
-
-Harmonized WSDL paths.
-
-****
-
-:book: UX400 - Unit 11 
-
-****
-
-
-
-
-
 ## When do you use the flexible-column layout? (Choose the correct answer). 
 
 You want to open multiple instances of the same object type. 
@@ -3061,28 +2590,6 @@ You want to embed the SAP Fiori launchpad, or overview page into one of the colu
 ****
 
 :book: UX410 - Unit 11 
-
-****
-
-
-
-
-
-## What are the main spaces in the design thinking process? (Choose the correct answers). 
-
-### Problem Space 
-
-Ideation Space 
-
-### Solution Space 
-
-Test Space.
-
-****
-
-:book: UX410 - Unit 4 
-
-검증필요
 
 ****
 
@@ -3125,26 +2632,6 @@ Prepare a different version of @UI.lineItem and assign them as adifferent qualif
 ****
 
 :book: UX403 - Unit 3 
-
-검증필요
-
-****
-
-
-
-
-
-## Which design pattern is used for resolving relationships between resources? (Choose the correct answer). 
-
-Resource design pattern 
-
-### Hypermedia design pattern 
-
-Metadata design pattern.
-
-****
-
-:book: UX400 - Unit 11 
 
 검증필요
 
@@ -3430,26 +2917,6 @@ Each UI control provides a function to access the MessageManager.
 
 
 
-## What is described as the person's perceptions and response that result from the use or anticipated use of a product, system, or service? (Choose the correct answer). 
-
-User interface 
-
-### User experience 
-
-Usability 
-
-User acceptance.
-
-****
-
-:book: UX410 - Unit 1 
-
-****
-
-
-
-
-
 ## In an overview page, all entity sets for cards have an association with the entity set for global filter, otherwise the filter will not work on the card. (Choose the correct answer). 
 
 True 
@@ -3459,28 +2926,6 @@ True
 ****
 
 :book: UX403 - Unit 6 
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following can be used for usability assessment? (Choose the correct answers). 
-
-### Heuristic evaluation 
-
-### User testing 
-
-User observation 
-
-### Questionnaires.
-
-****
-
-:book: UX410 - Unit 1 
 
 검증필요
 
@@ -3552,30 +2997,6 @@ https://sapui5.hana.ondemand.com/#/entity/sap.ui.comp.tutorial.smartControls
 
 
 
-## Which parameter do you need to provide to the ResourceModel() function to specify the SAPUI5 module name of the .properties file? (Choose the correct answer). 
-
-### bundleName 
-
-resourceBundleName 
-
-resourceName 
-
-bundlePath.
-
-****
-
-:book: UX400 - Unit 10 
-
-https://stackoverflow.com/questions/63841814/sap-ui5-resource-bundle
-
-https://blogs.sap.com/2017/11/23/sap-fiori-consume-odata-service-css-i18n-properties-in-ui5-application/
-
-****
-
-
-
-
-
 ## What message types are known to SAPUI5? (Choose the correct answers). 
 
 Control message 
@@ -3591,28 +3012,6 @@ Log message.
 :book: UX402 - Unit 2 !!! Die originale Antwort scheint falsch zu sein. Zur Sicherheit anschauen. 
 
 https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/62/b1481d3e084cb49dd30956d183c6a0/frameset.htm
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following are the two options provided by SAPUI5 for working with i18n texts? (Choose the correct answers). 
-
-### jQuery.sap.resources 
-
-Aggregation Binding 
-
-### Data Binding 
-
-Resource Consumption.
-
-****
-
-:book: UX400 - Unit 10 
 
 검증필요
 
@@ -3838,26 +3237,6 @@ Navigation to URL (As a button).
 
 
 
-Which OData versions are currently supported by SAPUI5? (Choose the correct answers). 
-
-OData Version 1.0 
-
-### OData Version 2.0 
-
-OData Version 3.0 
-
-### OData Version 4.0.
-
-****
-
-:book: UX400 - Unit 12 
-
-****
-
-
-
-
-
 ## Which of the following should you avoid with regard to the golden rule “Every SAP Fiori app must run as a web app”? (Choose the correct answers). 
 
 ### Absolute URLs generated in front or back-end. 
@@ -3875,26 +3254,6 @@ Using SAPUI5
 :book: UX410 - Unit 8 
 
 검증필요
-
-****
-
-
-
-
-
-## What three key aspects are important when talking about innovation? (Choose the correct answers). 
-
-### Feasibility 
-
-### Scalability 
-
-### Viability 
-
-Desirability.
-
-****
-
-:book: UX410 - Unit 4 
 
 ****
 
@@ -4029,26 +3388,6 @@ Access to iOS-only features.
 ****
 
 :book: UX410 - Unit 16 
-
-검증필요
-
-****
-
-
-
-
-
-## Does the invocation of the getProperty() method on an OData model object trigger a request to the backend? (Choose the correct answer).
-
-Yes, for each getProperty() call, an synchronous request to the OData service is triggered to get the property value. 
-
-### No, a request is not triggered. The getProperty() method returns the current value from the OData model object at the client side. If the value is not available, undefined is returned. 
-
-It depends on how the getProperty() method is parametrized by the developer. There is a property called bFetchFromServer . If this parameter is true, a request to the server-side is sent.
-
-****
-
-:book: UX400 - Unit 12 
 
 검증필요
 
@@ -4235,28 +3574,6 @@ Create a invisible column to save the value in a hidden control of HTML.
 :book: UX403 - Unit 3 
 
 검증필요
-
-****
-
-
-
-
-
-## Which types of components are provided by SAPUI5? (Choose the correct answers). 
-
-### Faceless Components 
-
-### UI Components 
-
-Backend Components 
-
-Agile Components.
-
-****
-
-:book: UX400 - Unit 13 
-
-https://sapui5.hana.ondemand.com/sdk/#/topic/958ead51e2e94ab8bcdc90fb7e9d53d0.html
 
 ****
 
@@ -4589,24 +3906,6 @@ Contains the UI implementation.
 :book: UX410 - Unit 6, UX410 - Unit 7 
 
 검증필요
-
-****
-
-
-
-
-
-## What does effectiveness mean in the relation to the user interface? (Choose the correct answer). 
-
-The resources expended in relation to the accuracy and completeness of goals achieved 
-
-### The accuracy and completeness with which specified users can achieve specified goals in specific environments 
-
-The comfort and acceptability of the work system to its users and other people affected by its use.
-
-****
-
-:book: UX410 - Unit 1 
 
 ****
 
