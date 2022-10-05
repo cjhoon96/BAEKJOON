@@ -143,32 +143,6 @@ SAP Fiori GUI Client
 
 
 
-## What is the nature of the overview page floorplan? 
-
-## (Choose the correct answer). 
-
-You want to display all the information of a simple or complex object with different facets, in a responsive way. 
-
-You want to display a collection of items, and process them or delegate them to someone else. 
-
-### You want to show all information that is needed by the user on a single page, based on a user specific domain or role. 
-
-You want to display a large collection of items, and the user can take some action.
-
-
-
-****
-
-:book: UX410 - Unit 12 
-
-https://experience.sap.com/fiori-design-web/overview-page/#when-to-use
-
-****
-
-
-
-
-
 ## Which of the following statements are true for SAP Fiori elements? 
 
 ## (Choose the correct answers). 
@@ -232,30 +206,6 @@ updateDeep.
 create_deep_entity 를 controller 에서 접근 하는 방법을 묻는 문제인데
 
 create_deep_entity 는 동일하게 create 메소드로 접근 가능하다.
-
-****
-
-
-
-
-
-## What is true of the SAP Cloud Platform Web IDE for full-stack development?
-
-## (Choose the correct answers). 
-
-### It requires zero Installation. 
-
-It is released with SAP HANA SPS’s. 
-
-### There are twice weekly updates. 
-
-It is included with SAP HANA express edition.
-
-****
-
-:book: UX410 - Unit 6 
-
-검증필요
 
 ****
 
@@ -337,32 +287,6 @@ sap.ui.core.MockServer.
 
 
 
-## Since when is the Split-Screen-layout deprecated? 
-
-## (Choose the correct answer). 
-
-1.42 
-
-1.44 
-
-1.46 
-
-### 1.48 
-
-1.50
-
-****
-
-:book: UX410 - Unit 11 
-
-https://experience.sap.com/fiori-design-web/v1-40/master-list/
-
-****
-
-
-
-
-
 ## What is a GIT branch? 
 
 ## (Choose the correct answer). 
@@ -378,32 +302,6 @@ A GIT branch is the SAP implementation of GIT.
 ****
 
 :book: UX402 - Unit 5 
-
-****
-
-
-
-
-
-## Which of the following components are part of the SAP Fiori launchpad? 
-
-## (Choose the correct answers). 
-
-### Shell services 
-
-UI2 services 
-
-### Shell container 
-
-Runtime container 
-
-### Runtime configuration.
-
-****
-
-:book: UX410 - Unit 9 
-
-검증필요
 
 ****
 
@@ -858,38 +756,6 @@ Strengthens relationships with customers.
 
 
 
-## When should you not use the dynamic page layout? 
-
-## (Choose the correct answers). 
-
-### You are planning to use SAP Fiori elements, such as the list report, analytical list page, overview page, or object page, which already incorporates the dynamic page layout. 
-
-You are building a freestyle application that uses the dynamic page header and footer toolbar features of SAP Fiori 2.0 (versions 1.40 and higher) 
-
-### You want to implement an initial page or object page floor plan. These floor plans already incorporate snapping header and footer toolbar features. The behavior is comparable to the dynamic page behavior, but the technical foundation is different. 
-
-You are building an analytical application that is using the sap.viz API. 
-
-### You only need to display a small amount of information. In this case, use a dialog instead. If you cannot avoid using the dynamic page layout, use letterboxing to mitigate the issue.
-
-****
-
-:book: UX410 - Unit 11 
-
-https://experience.sap.com/fiori-design-web/dynamic-page-layout/#do-not-use-the-dynamic-page-if
-
-list report / analytical list page / overview page / object page 
-
-initial page or object page floor plan
-
-소량의 정보만 표시하면 되는 경우
-
-****
-
-
-
-
-
 ## In which state are the files in GIT when a remote repository is cloned? 
 
 ## (Choose the correct answers). 
@@ -1005,38 +871,6 @@ You can use the QUnit-extensions, called Selenium, to test SAPUI5 controls.
 https://help.sap.com/saphelp_uiaddon10/helpdata/en/a6/b0657d226343da81ad96632cd1bd83/content.htm?no_cache=true
 
 https://help.sap.com/saphelp_uiaddon10/helpdata/en/26/96ab50faad458f9b4027ec2f9b884d/content.htm?no_cache=true
-
-검증필요
-
-****
-
-
-
-
-
-## What areas are mandatory in the tile layout? 
-
-## (Choose the correct answers). 
-
-Subtitle 
-
-### Header Area 
-
-Content Area 
-
-Status Area 
-
-KPI Area.
-
-****
-
-:book: UX410 - Unit 9 
-
-https://experience.sap.com/fiori-design-web/tile/#header-area
-
-정답에는 header area 와 content area 가 필수라고 되어있으나 
-
-위 링크에 보면 content area 는 optional 이라고 되어있다.
 
 검증필요
 
@@ -1325,104 +1159,6 @@ https://sapui5.hana.ondemand.com/sdk/#/topic/a797173b84724ef1bc54d59dc575e52f.ht
 
 
 
-## Since when is the full-screen layout deprecated? 
-
-## (Choose the correct answer). 
-
-1.42 
-
-### 1.44 
-
-1.56 
-
-1.58 
-
-1.60.
-
-****
-
-:book: UX410 - Unit 11 
-
-https://experience.sap.com/fiori-design-web/full-screen/
-
-검증필요
-
-****
-
-
-
-
-
-## What application in the SAP Fiori launchpad helps the user to find applications that are available to the user? 
-
-## (Choose the correct answer). 
-
-Tile Finder 
-
-### Application Finder 
-
-Fiori Designer 
-
-Fiori Appsearch.
-
-****
-
-:book: UX410 - Unit 10
-
-https://experience.sap.com/fiori-design-web/app-finder/
-
-****
-
-
-
-
-
-## SAPUI5 provides two different router implementations. What router class is used in SAP Fiori apps as a router or as a router base class, when you want to implement your own router? 
-
-## (Choose the correct answer). 
-
-### sap.m.routing.Router 
-
-sap.ui.core.routing.Router 
-
-sap.m.Router 
-
-sap.routing.Router.
-
-****
-
-:book: UX410 - Unit 7 
-
-검증필요
-
-****
-
-
-
-
-
-## What is a SAP Fiori floorplan? 
-
-## (Choose the correct answer). 
-
-A floorplan is a layout control of SAPUI5. 
-
-### A floorplan is a UI pattern that provides consistent UX. 
-
-A floorplan defines the overall layout of an application. 
-
-A floorplan is a layout of the SAP Web-Dynpro layouts for SAP Fiori apps.
-
-****
-
-:book: UX410 - Unit 12 
-
-******
-
-
-
-
-
 ## Using S/4 HANA 1610 with ABAP 7.51, which of following templates can you use for Fiori Element? 
 
 ## (Choose the correct answers). 
@@ -1490,52 +1226,6 @@ format=json
 https://stackoverflow.com/questions/42249587/why-can-i-get-to-use-format-json-with-entities-but-not-with-metadata-using-odat
 
 *****
-
-
-
-
-
-## Which of the following statements are correct with respect to the SAP Web IDE? 
-
-## (Choose the correct answers). 
-
-SAP web IDE is a development environment for SAP ABAP. 
-
-### SAP web IDE is a browser-based development environment. 
-
-### SAP web IDE provides application templates as a foundation of highly efficient app development.
-
-****
-
-:book: UX410 - Unit 6 
-
-https://dhan-description.tistory.com/152
-
-******
-
-
-
-
-
-## What problem is solved by the worklist Report floorplan? 
-
-## (Choose the correct answer). 
-
-You want to display all the information of a simple or complex object with different facets in a responsive way. 
-
-### You want to display a collection of items and process them or delegate them to someone else. 
-
-The user must process a long and unfamiliar task. 
-
-You want to display a large collection of items and the user can take some action.
-
-****
-
-:book: UX410 - Unit 12 
-
-https://experience.sap.com/fiori-design-web/work-list/
-
-****
 
 
 
@@ -1659,32 +1349,6 @@ https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/f8/af07bb0770414bb38a25cae
 
 
 
-## Which factors are key to the user experience with user assistance? 
-
-## (Choose the correct answers). 
-
-### Instant 
-
-### Context-sensitive 
-
-confusing 
-
-### Seamless 
-
-Error prone.
-
-****
-
-:book: UX410 - Unit 9 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which of following description about search field is NOT true? 
 
 ## (Choose the correct answer). 
@@ -1791,28 +1455,6 @@ In the models folder.
 
 
 
-## What is the main benefit to using predefined CSS margin/padding classes of SAPUI5? 
-
-## (Choose the correct answer). 
-
-### Consistent spacing 
-
-Consistent borders 
-
-Consistent width 
-
-Consistent height.
-
-****
-
-:book: UX410 - Unit 7 
-
-****
-
-
-
-
-
 ## The field indicate criticality should be hidden because it means nothing to end user. (Choose the correct answer). 
 
 ### True 
@@ -1824,70 +1466,6 @@ False.
 :book: UX403 - Unit 5 
 
 검증필요
-
-****
-
-
-
-
-
-## Why is it advisable to not use a custom CSS file in your SAP UI5 applications? (Choose the correct answer). 
-
-SAPUI5 has problems with custom CSS. 
-
-### Having one central design created with the theme designer is very efficient.
-
- When something needs to be changed at the client interface, it is easier to handle. 
-
-Time spent designing modified CSS is expensive.
-
-****
-
-:book: UX410 - Unit 8 
-
-****
-
-
-
-
-
-## Which of the following statements are talking about the SAP Fiori app architecture? (Choose the correct answers). 
-
-### SAP Fiori apps are implemented using the component-based approach. 
-
-### SAP Fiori apps have a index.html file that is used for SAP Fiori launchpad integration. 
-
-SAP Fiori apps need to have an app descriptor that describes the applications metadata. 
-
-SAP Fiori apps should use the SAPUI5 core as a place to hold app data models.
-
-****
-
-:book: UX410 - Unit 7 
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following layouts, are described in version 1.48 of the Guidelines? (Choose the correct answers). 
-
-### Dynamic Page 
-
-Full-Screen 
-
-Split-Screen 
-
-### Flexible Column Layout 
-
-MobileDeviceLayout.
-
-****
-
-:book: UX410 - Unit 11 
 
 ****
 
@@ -1934,28 +1512,6 @@ Allows the merging of two local branches into one local branch.
 문제 이상
 
 ******
-
-
-
-
-
-## What are the main configuration objects of the routing configuration? (Choose the correct answers). 
-
-### config 
-
-routing 
-
-### routes 
-
-### targets.
-
-****
-
-:book: UX410 - Unit 7 
-
-https://sapui5.hana.ondemand.com/sdk/#/topic/902313063d6f45aeaa3388cc4c13c34e.html
-
-****
 
 
 
@@ -2026,76 +1582,6 @@ A UI element has a renderer.
 검증필요
 
 ****
-
-
-
-
-
-## What content density is used for touch-enabled devices? (Choose the correct answer). 
-
-Compact form factor 
-
-Mobile form factor 
-
-### Cozy form factor 
-
-Desktop form factor 
-
-Small form factor.
-
-****
-
-:book: UX410 - Unit 5 
-
-https://experience.sap.com/fiori-design-web/cozy-compact/
-
-****
-
-
-
-
-
-## When do you not use the overview page floorplan? (Choose the correct answers). 
-
-### A high-level or birds-eye view of an application content is sufficient. 
-
-You want to display a collection of items and process them or delegate them to someone else. 
-
-### You want to show information about one object only. In this case, use the object page instead. 
-
-### You just represent one application and less than three cards.
-
-****
-
-:book: UX410 - Unit 12 
-
-https://experience.sap.com/fiori-design-web/overview-page/#do-not-use-the-overview-page-if
-
-****
-
-
-
-
-
-## What aggregations are defined by the sap.suite.ui.commons.ChartContainer? (Choose the correct answers). 
-
-### content 
-
-container 
-
-### dimensionSelector 
-
-### customicons 
-
-legend.
-
-****
-
-:book: UX410 - Unit 7 
-
-https://sapui5.hana.ondemand.com/sdk/#/api/sap.suite.ui.commons.ChartContainer%23aggregations
-
-******
 
 
 
@@ -2289,30 +1775,6 @@ https://experience.sap.com/fiori-design-web/search/
 
 
 
-## Which technical application types are defined for SAP HANA? (Choose the correct answers). 
-
-### Transactional 
-
-Secure 
-
-### Fact Sheets 
-
-### Analytical 
-
-Drill-down.
-
-****
-
-:book: UX410 - Unit 5 
-
-검증필요 맞는거 같다
-
-****
-
-
-
-
-
 ## What annotation is used to show fields of the projection list in the general information section? (Choose the correct answer). 
 
 @UI.headerInfo.field 
@@ -2350,74 +1812,6 @@ Supports asynchronous tests out-of-the-box
 :book: UX402 - Unit 2 
 
 ****
-
-
-
-
-
-## Which different app types can be found in SAP Fiori? (Choose the correct answers). 
-
-### Conceptual 
-
-Industrial 
-
-### Technical 
-
-Infrastructural 
-
-Mobile.
-
-****
-
-:book: UX410 - Unit 5 
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following artefacts are contained in the OData URL structure? (Choose the correct answers). 
-
-### Service Root URI 
-
-Header data 
-
-### Resource Path 
-
-### Query Options.
-
-****
-
-:book: UX410 - Unit 7 
-
-검증필요
-
-****
-
-
-
-
-
-## What aspects should be considered in deciding which layout template to use? (Choose the correct answers). 
-
-### When deciding which template to use for your app, you need to consider what the user wants to achieve when working in the app. 
-
-When deciding which template to use for your app, you need to analyse what end device the app is executed on. 
-
-### It is helpful to answer questions on the nature of the tasks. 
-
-When deciding which template to use for your app, you need to consider what browser type is used. 
-
-You need to analyze the capabilities of the users.
-
-****
-
-:book: UX410 - Unit 11 
-
-******
 
 
 
@@ -2495,28 +1889,6 @@ Language
 
 
 
-## What are the main artefacts of an SAPUI5 application? (Choose the correct answers). 
-
-CSS 
-
-### Views 
-
-### Controllers 
-
-### Models 
-
-controls.
-
-****
-
-:book: UX410 - Unit 6, UX410 - Unit 7 
-
-****
-
-
-
-
-
 ## Which UI annotation is used in the object page to display the object header? (Choose the correct answer). 
 
 UI.headerObject 
@@ -2570,26 +1942,6 @@ False.
 ****
 
 :book: UX403 - Unit 5 
-
-****
-
-
-
-
-
-## When do you use the flexible-column layout? (Choose the correct answer). 
-
-You want to open multiple instances of the same object type. 
-
-### You want to create a master-detail or master-detail-detail scenario in which the user can drill down or navigate. 
-
-You want to split a single object into multiple columns, or display only a small amount of information. 
-
-You want to embed the SAP Fiori launchpad, or overview page into one of the columns.
-
-****
-
-:book: UX410 - Unit 11 
 
 ****
 
@@ -2685,30 +2037,6 @@ https://experience.sap.com/fiori-design-web/analytical-list-page/#components
 
 
 
-## Which of the following make up the configuration of a tile for launching an SAP Fiori app of type SAPUI5 in the SAP Fiori launchpad designer? (Choose the correct answers). 
-
-### Semantic object 
-
-Launchpad creation via LPD_CUST 
-
-### Target Mapping 
-
-### Tile configuration 
-
-Tile implementation.
-
-****
-
-:book: UX410 - Unit 10 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which of the following user authentication and Single Sign-On mechanisms are supported by the SAP Fiori Client? (Choose the correct answers). 
 
 ### One-Time Password 
@@ -2764,30 +2092,6 @@ Provide a lightweight programming model for desktop only applications
 ****
 
 :book: UX402 - Unit 1, UX403 - Unit 1 
-
-검증필요
-
-****
-
-
-
-
-
-## What main aspects does the developer have to configure for a sap.viz.ui5.controls.VizFrame control? (Choose the correct answers). 
-
-### Dataset 
-
-Datacontainer 
-
-### DimensionDefinition 
-
-### MeasureDefinition 
-
-### Feed.
-
-****
-
-:book: UX410 - Unit 7 
 
 검증필요
 
@@ -2935,29 +2239,7 @@ True
 
 
 
-## What is the purpose of the neo-app.json file located in the project root folder of your SAP Web IDE project? (Choose the correct answer). 
-
-It contains the OData service configuration parameters used at runtime. 
-
-### It contains the mapping between an application URL and a destination configured in the SAP Cloud Platform. 
-
-It contains the configuration for the mock server. 
-
-It contains the mapping configuration of the front-end and back-end server URLs.
-
-****
-
-:book: UX410 - Unit 7 
-
-https://sapui5.hana.ondemand.com/sdk/#/topic/28fa7538c67e4280a0b7708de2951278
-
-****
-
-
-
-
-
-## What method is called inside the library.js file? (Choose the correct answer). 
+## What method is called inside the library.js file? (Choose the correct answer).  
 
 sap.ui.getCore().registerLibrary 
 
@@ -3012,30 +2294,6 @@ Log message.
 :book: UX402 - Unit 2 !!! Die originale Antwort scheint falsch zu sein. Zur Sicherheit anschauen. 
 
 https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/62/b1481d3e084cb49dd30956d183c6a0/frameset.htm
-
-검증필요
-
-****
-
-
-
-
-
-## The SAP Fiori Design Guidelines are available for various device types. For what device types are the design guidelines available? (Choose the correct answers). 
-
-SAP Fiori for Windows 
-
-### SAP Fiori for Android 
-
-### SAP Fiori for Web 
-
-### SAP Fiori for iOS 
-
-SAP Fiori for Blackberry.
-
-****
-
-:book: UX410 - Unit 5 
 
 검증필요
 
@@ -3113,48 +2371,6 @@ lib.dll.
 
 
 
-## What problem is solved by the object page floorplan? (Choose the correct answer). 
-
-### You want to display all the information of a simple or complex object with different facets in a responsive way 
-
-You want to display a collection of items and process them or delegate them to someone else. 
-
-The user must process a long and unfamiliar task. 
-
-You want to display a large collection of items and the user can take some action.
-
-****
-
-:book: UX410 - Unit 12 
-
-검증필요
-
-****
-
-
-
-
-
-## What problem is solved by the wizard floorplan? (Choose the correct answer). 
-
-You want to display all the information of a simple or complex object, with different facets, in a responsive way. 
-
-You want to display a collection of items and process them or delegate them to someone else. 
-
-### The user must process a long and unfamiliar task 
-
-You want to display a large collection of items, and the user can take some action.
-
-****
-
-:book: UX410 - Unit 12 
-
-****
-
-
-
-
-
 ## How can a renderer access the associated elements? (Choose the correct answer). 
 
 The developer must implement an appropriate function to access the elements. 
@@ -3168,28 +2384,6 @@ The developer must define a property method in the control metadata and declare 
 :book: UX402 - Unit 2 
 
 검증필요
-
-****
-
-
-
-
-
-## What SAPUI5 control is used as a starting point to implement the initial page? (Choose the correct answer). 
-
-sap.m.Select 
-
-### sap.m.Input 
-
-sap.m.Table 
-
-sap.m.List.
-
-****
-
-:book: UX410 - Unit 12 
-
-https://experience.sap.com/fiori-design-web/initial-page-floorplan/
 
 ****
 
@@ -3228,30 +2422,6 @@ Navigation to URL (As a button).
 ****
 
 :book: UX403 - Unit 5 
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following should you avoid with regard to the golden rule “Every SAP Fiori app must run as a web app”? (Choose the correct answers). 
-
-### Absolute URLs generated in front or back-end. 
-
-Using SAPUI5 
-
-### Hard dependencies between apps 
-
-### Calling UI2 services directly instead of using APIs 
-
-### Use of platform-specific functionality without availability check.
-
-******
-
-:book: UX410 - Unit 8 
 
 검증필요
 
@@ -3302,28 +2472,6 @@ extension.
 https://sapui5.hana.ondemand.com/sdk/#/topic/4864403f08c64ca08a2b0ee1fa9cb5e2.html
 
 검증필요
-
-****
-
-
-
-
-
-## What transaction is used to create an semantic object for customer configuration? (Choose the correct answer). 
-
-/UI5/LPD_CUST 
-
-### /UI2/SEMOBJ 
-
-/UI5/SEMOBJ 
-
-pfcg 
-
-su01.
-
-****
-
-:book: UX410 - Unit 10 
 
 ****
 
@@ -3410,48 +2558,6 @@ sap.ui.Element.
 ****
 
 :book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## Which types of services are known or supported by the SAP Fiori launchpad? (Choose the correct answers). 
-
-### Platform-specific services 
-
-UI5 services 
-
-### Platform-independent services 
-
-UI2 Services.
-
-****
-
-:book: UX410 - Unit 9 
-
-검증필요
-
-****
-
-
-
-
-
-## Which types of application can use the dynamic page layout? (Choose the correct answer). 
-
-The layout is deprecated, which means that you should not use the layout anymore. 
-
-### You can use the dynamic page layout for any kind of application. 
-
-The layout is only used for master-detail scenarios. 
-
-The dynamic page layout is only used for analytical applications.
-
-****
-
-:book: UX410 - Unit 11 
 
 ****
 
@@ -3603,28 +2709,6 @@ Implement the render function inside the control.
 
 
 
-## How many columns are supported by the flexible-column layout? (Choose the correct answer). 
-
-1 
-
-2 
-
-### 3 
-
-4 
-
-5.
-
-****
-
-:book: UX410 - Unit 11 
-
-****
-
-
-
-
-
 ## What is the result of a GIT Revert? (Choose the correct answer). 
 
 ### Undoes a committed snapshot. 
@@ -3705,24 +2789,6 @@ By adding annotations to list all possible in source code of CDS.
 
 
 
-## What is the idea behind the golden rule of having one common UX? (Choose the correct answer). 
-
-### Having a common UX reduces training costs and increases the quality of data. 
-
-Having a common UX reduces the overall total cost of ownership. 
-
-Having a common UX reduces development costs.
-
-****
-
-:book: UX410 - Unit 8 
-
-****
-
-
-
-
-
 ## Which of the following properties are relevant to the type of facet? (Choose the correct answers). 
 
 ### purpose 
@@ -3780,26 +2846,6 @@ Flexibility and freedom in UI design.
 ****
 
 :book: UX402 - Unit 3 
-
-****
-
-
-
-
-
-## What problem is solved by the list report floorplan? (Choose the correct answer). 
-
-You want to display all the information of a simple or complex object with different facets in a responsive way. 
-
-You want to display a collection of items and process them or delegate them to someone else. 
-
-The user needs to process a long and unfamiliar task. 
-
-### You want to display a large collection of items and the user can take some action.
-
-****
-
-:book: UX410 - Unit 12 
 
 ****
 
@@ -3889,30 +2935,6 @@ Master-Detail
 
 
 
-## What are the tasks of the controller in the Model-View-Controller implementation? (Choose the correct answers). 
-
-Updates using data binding 
-
-### Modifies the model 
-
-### Modifies the view via API 
-
-Holds the business data 
-
-Contains the UI implementation.
-
-****
-
-:book: UX410 - Unit 6, UX410 - Unit 7 
-
-검증필요
-
-****
-
-
-
-
-
 ## How do you set a field as the title for a business entity? (Choose the correct answer). 
 
 Add @UI.title annotation for that field. 
@@ -3928,28 +2950,6 @@ Add @UI.headerInfo.title for the CDS view and reference it to the field.
 :book: UX403 - Unit 4 
 
 검증필요
-
-****
-
-
-
-
-
-## When do you have to implement the SAP Fiori floorplan initial page? (Choose the correct answer). 
-
-The Initial page floorplan is used when the user needs to select an item from a list 
-
-### The Initial page floorplan is used when the user needs to navigate to a single object. 
-
-The Initial page floorplan is used to show a single object. 
-
-The Initial page floorplan is used when the user needs to process a complex task.
-
-****
-
-:book: UX410 - Unit 12 
-
-https://experience.sap.com/fiori-design-web/initial-page-floorplan/
 
 ****
 
