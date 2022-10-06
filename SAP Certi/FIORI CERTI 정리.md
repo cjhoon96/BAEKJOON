@@ -3869,6 +3869,570 @@ https://sapui5.hana.ondemand.com/sdk/#/topic/a7932a791adc4a58ae4693400801ea5f
 
 # Unit 1.
 
+****
+
+## What are the SAP Fiori principles? (Choose the correct answers). 
+
+### Role-based 
+
+### Adaptive 
+
+Creative 
+
+### Coherent 
+
+Complex.
+
+****
+
+:book: UX402 - Unit 1
+
+https://experience.sap.com/fiori-design-web/design-principles/
+
+**Role-based** 
+
+**Adaptive (적응형)**
+
+**Coherent (일관성)**
+
+**Simple (단순성)**
+
+**Delightful**
+
+****
+
+
+
+
+
+## What impact does SAP Fiori have on business? 
+
+## (Choose the correct answers). 
+
+### Digitalization 
+
+### Simplification 
+
+Support the web and open standards 
+
+Provides a user-centered approach 
+
+### Leads to re-imagination of processes.
+
+****
+
+:book: UX402 - Unit 1
+
+Business
+
+* digitalization
+* simplification
+* re-imagination of processes
+
+User
+
+* 사용자 중심
+* 디자인 중심 개발
+* 모든 SAP 솔루션에서 공통된 UX
+
+Technology
+
+* 웹 및 개방형 표준
+* 서비스 지향
+* 인메모리 및 클라우드 컴퓨팅
+
+****
+
+
+
+
+
+## What impact does UX have on monetary values? 
+
+## (Choose the correct answers). 
+
+Increases user satisfaction. 
+
+### Provides productivity gains and increases data quality. 
+
+Strengthens relationships with customers. 
+
+### Provides training cost savings 
+
+### Reduces the number of change requests and user errors.
+
+****
+
+:book: UX402 - Unit 1
+
+****
+
+
+
+
+
+## What is the principle of SAP UX strategy? 
+
+## (Choose the correct answer). 
+
+Design Strategy ????
+
+New, Renew, Enablement 
+
+### New, Renew, Empower 
+
+Architecture and Technology ????
+
+SAP Screen Personas.
+
+****
+
+:book: UX402 - Unit 1 
+
+https://www.eventservice.kr/2017/sap/00/file/2017_2pm_0405_Session.pdf
+
+****
+
+
+
+
+
+## What are the goals of the SAPUI5 framework? (Choose the correct answers). 
+
+### Provide a user interface technology for building and adapting client applications. 
+
+Provide a user interface technology for building and adapting server-based applications. 
+
+Provide a lightweight programming model for desktop only applications 
+
+### Provide an extensible framework for building desktop and mobile applications.
+
+****
+
+:book: UX402 - Unit 1
+
+****
+
+
+
+
+
+## Which of the following steps are part of the design phase in the DLD? 
+
+다음 중 DLD의 design 단계의 일부인 단계는?
+
+## (Choose the correct answers). 
+
+Test 
+
+### Validate 
+
+### Prototype 
+
+Scope 
+
+### Ideate
+
+****
+
+:book: UX402 - Unit 1
+
+https://experience.sap.com/fiori-design-web/design-led-development-process-external/
+
+https://blogs.sap.com/2017/03/01/good-things-come-in-3s-intro-to-the-dld-process/
+
+**DLD 의 세가지 단계**
+
+* **Discover**
+  * Scope
+  * 360° Research
+  * Synthesize
+* **Design**
+  * ideate
+  * Prototype
+  * validate
+* **Deliver**
+  * implement
+  * Test
+  * Deploy
+
+DLD = **D**esign-**l**ed **d**evelopment
+
+개발 프로세스이다.
+
+****
+
+
+
+
+
+## Which of the following steps are part of the discover phase in the DLD? (Choose the correct answers). 
+
+### Scope 
+
+Test 
+
+Implement 
+
+### Research 
+
+### Synthesize.
+
+****
+
+:book: UX402 - Unit 1
+
+https://blogs.sap.com/2017/03/01/good-things-come-in-3s-intro-to-the-dld-process/
+
+****
+
+
+
+
+
+## Which of the following are the current SAP UI Tools? (Choose the correct answers). 
+
+### SAPUI5 Application Development Tools 
+
+### SAP Screen Personas 
+
+SAP NetWeaver Portal 
+
+### Flexible UI Designer 
+
+SAP NetWeaver Gateway.
+
+****
+
+:book: UX402 - Unit 1
+
+검증필요
+
+****
+
+
+
+
+
+## What are the current UI Technologies of SAP? 
+
+## (Choose the correct answers). 
+
+Business Server Pages 
+
+### SAPUI5 
+
+Java Server Pages 
+
+### Web Dynpro ABAP / Floorplan Manager 
+
+### Dynpro.
+
+****
+
+:book: UX402 - Unit 1
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4f/47faaced4b49e985dd31298bd3775f/frameset.htm
+
+****
+
+
+
+
+
+# Unit 2.
+
+****
+
+## Which model types are supported by SAPUI5? 
+
+## (Choose the correct answers). 
+
+### JSON model 
+
+### Resource model 
+
+Translation model 
+
+### XML Model 
+
+### OData model.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://velog.io/@opensapkr/Step-6-Resource-Models-cfjxl5770h
+
+****
+
+
+
+
+
+## What is the best approach to showing a UI control on a desktop only, and not on a mobile device? 
+
+## (Choose the correct answer). 
+
+Use the Device API to check the environment and call setVisible on the UI control. 
+
+Use the UI control from sap.ui.commons.  These UI controls can handle this automatically. 
+
+### Use the standard CSS class sapUiVisibleOnlyOnDesktop.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## What are the different content densities provided by SAPUI5? 
+
+## (Choose the correct answers). 
+
+### cozy 
+
+large 
+
+### condensed 
+
+strict 
+
+### compact.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/e54f729da8e3405fae5e4fe8ae7784c1.html
+
+****
+
+
+
+
+
+## What configuration steps are necessary to define a navigation route? 
+
+## (Choose the correct answers). 
+
+### Configure a route in the manifest.json file. 
+
+### Configure a target. 
+
+### Assign at least one target to the route.
+
+Activate routing in the sap.app.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What layout control is used to achieve flexible and responsive(반응형) layouts? 
+
+## (Choose the correct answers). 
+
+VerticalLayout 
+
+FlexBox 
+
+### Grid 
+
+Splitter
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which control is used in the index.html file to support letterboxing if required? 
+
+## (Choose the correct answer). 
+
+sap.ui.core.ComponentContainer 
+
+sap.ui.core.Component 
+
+### sap.m.Shell 
+
+sap.ui.core.View.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://experience.sap.com/fiori-design-web/letter-boxing/#guidelines
+
+****
+
+
+
+
+
+## What are the two aggregations provided by sap.m.SplitApp control to add page implementations? 
+
+## (Choose the correct answers). 
+
+mainPages 
+
+### masterPages 
+
+infoPages 
+
+### detailPages 
+
+detail.
+
+****
+
+:book: UX402 - Unit 2 
+
+****
+
+
+
+
+
+## Which modes are provided by the sap.m.SplitAppMode enumeration? 
+
+## (Choose the correct answers). 
+
+### ShowHideMode 
+
+HideShowMode 
+
+### StretchCompressMode 
+
+### PopoverMode 
+
+ShrinkCozyMode.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.SplitAppMode
+
+* sap.m.SplitAppMode.HideMode
+* sap.m.SplitAppMode.PopoverMode
+* sap.m.SplitAppMode.ShowHideMode
+* sap.m.SplitAppMode.StretchCompressMode
+
+****
+
+
+
+
+
+## From which control does the sap.m.App control inherit navigation capabilities? 
+
+## (Choose the correct answer). 
+
+sap.m.NavigationContainer 
+
+### sap.m.NavContainer 
+
+sap.ui.core.NavContainer.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/#/api/sap.m.NavContainer%23overview
+
+****
+
+
+
+
+
+## Is it true to say that the sap.m.App control does not provide responsive behavior? 
+
+## (Choose the correct answer). 
+
+That is true, the sap.m.App control does not provide responsive behavior It depends on the SAPUI5 version. 
+
+From version 1.30 and later, the sap.m.App control provides responsive behavior. 
+
+### No, that is not true. The sap.m.App control provides responsive behavior.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## What is the name of the aggregation of the sap.m.App control, or more precisely the name of the sap.m.NavContainer control, in which UI controls are aggregated? 
+
+## (Choose the correct answer). 
+
+fullPages 
+
+### pages 
+
+masterPages 
+
+detailPages.
+
+****
+
+:book: UX402 - Unit 2 
+
+https://sapui5.hana.ondemand.com/sdk/#/api/sap.m.NavContainer%23aggregations
+
+****
+
+
+
+
+
+## When is the use of a master-detail pattern not recommended? 
+
+## (Choose the correct answers). 
+
+### You need to offer complex filters for the master list of items. 
+
+You want to display a single object. 
+
+### When you want to display different facets of the same object, data, or both.
+
+****
+
+:book: UX402 - Unit 2 
+
+검증필요
+
+****
+
+
+
+
+
+## 
+
 
 
 
@@ -3887,7 +4451,258 @@ https://sapui5.hana.ondemand.com/sdk/#/topic/a7932a791adc4a58ae4693400801ea5f
 
 
 
+# Unit 1.
 
+****
+
+## What are the SAP Fiori principles? (Choose the correct answers). 
+
+### Role-based 
+
+### Adaptive 
+
+Creative 
+
+### Coherent 
+
+Complex.
+
+****
+
+:book: UX403 - Unit 1
+
+https://experience.sap.com/fiori-design-web/design-principles/
+
+**Role-based** 
+
+**Adaptive (적응형)**
+
+**Coherent (일관성)**
+
+**Simple (단순성)**
+
+**Delightful**
+
+****
+
+
+
+
+
+## What are the current UI Technologies of SAP? 
+
+## (Choose the correct answers). 
+
+Business Server Pages 
+
+### SAPUI5 
+
+Java Server Pages 
+
+### Web Dynpro ABAP / Floorplan Manager 
+
+### Dynpro.
+
+****
+
+:book: UX403 - Unit 1 
+
+검증필요
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/4f/47faaced4b49e985dd31298bd3775f/frameset.htm
+
+****
+
+
+
+
+
+## What impact does SAP Fiori have on business? 
+
+## (Choose the correct answers). 
+
+### Digitalization 
+
+### Simplification 
+
+Support the web and open standards 
+
+Provides a user-centered approach 
+
+### Leads to re-imagination of processes.
+
+****
+
+:book: UX403 - Unit 1 
+
+Business
+
+* digitalization
+* simplification
+* re-imagination of processes
+
+User
+
+* 사용자 중심
+* 디자인 중심 개발
+* 모든 SAP 솔루션에서 공통된 UX
+
+Technology
+
+* 웹 및 개방형 표준
+* 서비스 지향
+* 인메모리 및 클라우드 컴퓨팅
+
+****
+
+
+
+
+
+## What impact does UX have on monetary values? 
+
+## (Choose the correct answers). 
+
+Increases user satisfaction. 
+
+### Provides productivity gains and increases data quality. 
+
+Strengthens relationships with customers. 
+
+### Provides training cost savings 
+
+### Reduces the number of change requests and user errors.
+
+****
+
+:book: UX403 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## Which of the following steps are part of the design phase in the DLD? 
+
+다음 중 DLD의 design 단계의 일부인 단계는?
+
+## (Choose the correct answers). 
+
+Test 
+
+### Validate 
+
+### Prototype 
+
+Scope 
+
+### Ideate
+
+****
+
+:book: UX403 - Unit 1 
+
+https://experience.sap.com/fiori-design-web/design-led-development-process-external/
+
+https://blogs.sap.com/2017/03/01/good-things-come-in-3s-intro-to-the-dld-process/
+
+**DLD 의 세가지 단계**
+
+* **Discover**
+  * Scope
+  * 360° Research
+  * Synthesize
+* **Design**
+  * ideate
+  * Prototype
+  * validate
+* **Deliver**
+  * implement
+  * Test
+  * Deploy
+
+DLD = **D**esign-**l**ed **d**evelopment
+
+개발 프로세스이다.
+
+****
+
+
+
+
+
+## Which of the following steps are part of the discover phase in the DLD? (Choose the correct answers). 
+
+### Scope 
+
+Test 
+
+Implement 
+
+### Research 
+
+### Synthesize.
+
+****
+
+:book: UX403 - Unit 1 
+
+https://blogs.sap.com/2017/03/01/good-things-come-in-3s-intro-to-the-dld-process/
+
+****
+
+
+
+
+
+## What are the goals of the SAPUI5 framework? (Choose the correct answers). 
+
+### Provide a user interface technology for building and adapting client applications. 
+
+Provide a user interface technology for building and adapting server-based applications. 
+
+Provide a lightweight programming model for desktop only applications 
+
+### Provide an extensible framework for building desktop and mobile applications.
+
+****
+
+:book: UX403 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following are the current SAP UI Tools? (Choose the correct answers). 
+
+### SAPUI5 Application Development Tools 
+
+### SAP Screen Personas 
+
+SAP NetWeaver Portal 
+
+### Flexible UI Designer 
+
+SAP NetWeaver Gateway.
+
+****
+
+:book: UX403 - Unit 1 
+
+검증필요
+
+****
+
+
+
+
+
+## 
 
 
 
@@ -3999,7 +4814,7 @@ Provides a user-centered approach
 
 ****
 
-:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+:book: UX410 - Unit 2 
 
 Business
 
@@ -4041,7 +4856,7 @@ Strengthens relationships with customers.
 
 ****
 
-:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 2 
+:book: UX410 - Unit 2 
 
 ****
 
@@ -4157,7 +4972,7 @@ Complex.
 
 ****
 
-:book: UX402 - Unit 1, UX403 - Unit 1, UX410 - Unit 3 
+:book: UX410 - Unit 3 
 
 https://experience.sap.com/fiori-design-web/design-principles/
 
@@ -5326,13 +6141,15 @@ A floorplan is a layout of the SAP Web-Dynpro layouts for SAP Fiori apps.
 
 :book: UX410 - Unit 12 
 
+특정 태스크나 작업에서 일관된 UX 를 제공하는 UI 레이아웃이다.
+
 ******
 
 
 
 
 
-## When do you have to implement the SAP Fiori floorplan initial page? (Choose the correct answer). 
+## When do you have to implement the SAP Fiori floorplan <u>initial page</u>? (Choose the correct answer). 
 
 The Initial page floorplan is used when the user needs to select an item from a list 
 
@@ -5347,6 +6164,22 @@ The Initial page floorplan is used when the user needs to process a complex task
 :book: UX410 - Unit 12 
 
 https://experience.sap.com/fiori-design-web/initial-page-floorplan/
+
+사용자가 검색 수행 후 검색 결과에서 찾은 오브젝트를 탐색할 수 있도록 엔트리 포인트를 제공한다.
+
+초기 페이지는 상호작용의 시작점으로 사용되는 단일 페이지를 제공한다.
+
+오브젝트를 선택해 필요한 오브젝트로 이동할 수 있다.
+
+단일 오브젝트를 탐색해야 할 때 사용된다.
+
+상호작용 또는 시작점은 몇 단계만에 찾고 있는 오브젝트로 이동할 수 있는 단일 입력 필드이다.
+
+입력 필드는 값 도움말일 수도 있고 필드에 직접 입력하는 검색일 수 있다.
+
+### 사용하지 않는 경우
+
+둘 이상의 오브젝트를 표시하려는 경우에는 이 플로어 플랜을 사용하지 않는다. (List Report Floorplan 을 사용)
 
 ****
 
@@ -5376,7 +6209,7 @@ https://experience.sap.com/fiori-design-web/initial-page-floorplan/
 
 
 
-## What problem is solved by the list report floorplan? (Choose the correct answer). 
+## What problem is solved by the <u>list report</u> floorplan? (Choose the correct answer). 
 
 You want to display all the information of a simple or complex object with different facets in a responsive way. 
 
@@ -5390,13 +6223,67 @@ The user needs to process a long and unfamiliar task.
 
 :book: UX410 - Unit 12 
 
+크기가 큰 item 의 collection을 표시하고 사용자에게 특정 조치를 제공할 수 있다.
+
+대용량 리스트를 필터링하는 함수를 제공한다.
+
+항목을 표시하는 다양한 방법을 제공한다.
+
+전체화면 레이아웃을 사용할 때에만 적용 가능하다.
+
+### 사용하는 경우
+
+* 검색, 필터링, 정렬, 그룹화를 통해 크기가 큰 항목 세트 안에서 관련 항목을 찾아내고 그에 대한 조치를 취해야 한다.
+
+* 다양한 시각화를 사용하여 이들 시각화 간에 상호작용할 필요 없이 전체 데이터 세트를 조회해야한다.
+
+  사용 케이스 예로 리포팅을 들 수 있다.
+
+* 같은 컨텐트의 여러 뷰를 사용해야 한다.(미결 / 처리 중 / 완료됨)
+
+  탭, 세그멘테이션 버튼 또는 select 컨트롤을 사용하여 뷰를 전환할 수 있다.
+
+* 드릴 다운 기능은 거의 사용되지 않거나 다른 페이지로 탐색하는 경우에만 사용 가능하며 페이지 자체에서 원하는 대로 또는 유연하게 드릴 다운 할 수 없다.
+
+* 다양한 type 의 항목을 사용하여 작업하는 경우
+
+
+
+### 사용하지 않는 경우
+
+* 항목 및 그와 관련된 모든 세부사항을 조회하거나 편집해야 하는 경우 (Object Page 사용)
+
+* 하나의 특정 항목을 찾아야하며, 사용자가 해당 항목 또는 식별용 데이터 포인트 를 알고 있다.
+
+  (initial page 사용)
+
+* 비교적 작은 크기의 항목 세트 전체를 하나씩 작업해야하는 경우 
+
+  (Worklist Report 사용)
+
+* 재 상황을 더 정확히 이해하거나 특정 값의 근본 원인을 찾기 위해 데이터에서 지식이나 인사이트를 추출해야한다.
+
+  (Analytic List Page 사용)
+
+* 차트가 시각화에만 사용되지 않는다. 통합된 차트 뷰와 테이블 뷰(하이브리드 뷰) 간에 전환해야 한다.
+
+  (Analytic List Page 사용)
+
+* 사용자의 조치가 KPI 에 미치는 영향을 확인해야한다.
+
+  (Analytic List Page 사용)
+
+* 필터 설정의 결과뿐 아니라 해당 설정이 차트 표시에 미치는 직접적인 영향도 확인해야 한다.
+
+  (Analytic List Page 사용)
+
 ****
 
 
 
 
 
-## What problem is solved by the object page floorplan? (Choose the correct answer). 
+## What problem is solved by the <u>object page</u> floorplan? (Choose the correct answer). 
 
 ### You want to display all the information of a simple or complex object with different facets in a responsive way 
 
@@ -5410,7 +6297,42 @@ You want to display a large collection of items and the user can take some actio
 
 :book: UX410 - Unit 12 
 
-검증필요
+전체 화면과 master-detail 어플리케이션에 맞는 플로어플랜을 정의한다.
+
+다양한 패싯이 포함된 복합 오브젝트를 표시할 때는 안정적인 UX 를 정의한다.
+
+### 사용하지 않는 경우
+
+* 동시에 여러 항목을 편집하려는 경우 
+
+  (List Report 사용)
+
+* 정확한 항목 세부사항을 모르는 상태에서 관련 항목을 찾아야하는 경우
+
+  (List Report 사용)
+
+* 하나의 특정 항목을 찾아야 하며, 사용자가 해당 항목 또는 식별용 데이터 포인트를 알고 있는 경우
+
+  (Initial Page 사용)
+
+* 새로운 오브젝트를 생성하는 일련의 단계에 대한 안내가 필요한 경우
+
+  (Wizard 사용)
+
+
+
+### 구성
+
+* ### 헤더
+
+  * 동적 페이지 헤더
+  * 탐색바
+  * 컨텐트 영역
+  * 셀 바
+  * 탐색 경로
+  * 글로벌 액션
+  * 헤더 컨텐트
+  * 바닥글 툴바
 
 ****
 
@@ -5418,7 +6340,7 @@ You want to display a large collection of items and the user can take some actio
 
 
 
-## What problem is solved by the worklist Report floorplan? 
+## What problem is solved by the <u>worklist Report</u> floorplan? 
 
 ## (Choose the correct answer). 
 
@@ -5436,13 +6358,35 @@ You want to display a large collection of items and the user can take some actio
 
 https://experience.sap.com/fiori-design-web/work-list/
 
+항목 컬렉션을 표시하고 각 항목의 세부사항을 조회하고, 각 항목을 처리 또는 위임할 수 있는 형식을 정의한다.
+
+사용자가 작업 항목에 직접 조치를 취할 수 있게 하려는 경우
+
+사용자가 처음으로 처리할 작업 항목을 결정해야 하는 경우
+
+앱에 전체 화면 레이아웃이 사용되는 경우
+
+같은 컨텐트의 여러 뷰를 사용해야 하는 경우 (미결 / 처리중 / 완료됨)
+
+탭 바를 사용하여 여러 뷰 간 전환 가능
+
+### 사용하지 않는 경우
+
+* 표시하는 항목이 작업 항목이 아닌 경우
+
+* 앱에 분할 앱 레이아웃이 사용되는 경우
+
+* 다양한 데이터 시각화를 사용하여 크기가 큰 항목 리스트를 표시하려는 경우
+
+  (List Report 사용)
+
 ****
 
 
 
 
 
-## What problem is solved by the wizard floorplan? (Choose the correct answer). 
+## What problem is solved by the <u>wizard</u> floorplan? (Choose the correct answer). 
 
 You want to display all the information of a simple or complex object, with different facets, in a responsive way. 
 
@@ -5456,13 +6400,23 @@ You want to display a large collection of items, and the user can take some acti
 
 :book: UX410 - Unit 12 
 
+규모가 크거나 복잡한 태스크를 여러 세그먼트로 분할하여 사용자의 작업을 돕기 위해 사용
+
+사용자가 오래 걸리는 태스크 (긴 질의서 입력 같은) 또는 익숙하지 않은 태스크를 수행해야 하는 경우(최소 3단계에서 8단계로 구성)
+
+시나리오의 생성과 편집에 모두 사용할 수 있다.
+
+### 사용하지 않는 경우
+
+* 태스크가 2단계로 구성되어있거나 사용자가 익숙하지 않은 형식으로 되어있는 경우
+
 ****
 
 
 
 
 
-## What is the nature of the overview page floorplan? 
+## What is the nature of the <u>overview page</u> floorplan? 
 
 ## (Choose the correct answer). 
 
@@ -5501,6 +6455,519 @@ You want to display a collection of items and process them or delegate them to s
 :book: UX410 - Unit 12 
 
 https://experience.sap.com/fiori-design-web/overview-page/#do-not-use-the-overview-page-if
+
+****
+
+
+
+
+
+# Unit 13. SAP UI5 유연성
+
+****
+
+## What UI control can be used to define a hook to extend an application? 
+
+## (Choose the correct answer).
+
+sap.m.Extend 
+
+sap.ui.core.Extend 
+
+### sap.ui.core.ExtensionPoint 
+
+sap.comp.ExtendControl. 
+
+****
+
+:book: UX410 - Unit 13 
+
+https://help.sap.com/doc/saphelp_nw74/7.4.16/en-us/40/3c050da4ae4566b6aafec2bc590389/content.htm?no_cache=true
+
+****
+
+
+
+
+
+## What ways are there, of extending or modifying a SAPUI5 view? (Choose the correct answers). 
+
+### View extension 
+
+View enhancement 
+
+### View replacement  
+
+### View modification.
+
+****
+
+:book: UX410 - Unit 13 !!! Falsche Antwort im original 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/c264d66d6e3c4104818bc52c174a000c
+
+****
+
+
+
+
+
+## What happens if the text is not available in the customized bundle of your extension? (Choose the correct answer). 
+
+The key will display in the application in capital letters. 
+
+### SAPUI5 tries to find the text in the resource bundle of the standard application. 
+
+An exception is raised. 
+
+No text is displayed.
+
+****
+
+:book: UX410 - Unit 13 
+
+****
+
+
+
+
+
+## What concept is provided by SAP to make it possible to extend standard SAPUI5 function in the basic application? 
+
+## (Choose the correct answer). 
+
+Base methods 
+
+### Hook methods 
+
+View controllers 
+
+Extension controller.
+
+****
+
+:book: UX410 - Unit 13 
+
+https://sapui5.hana.ondemand.com/sdk/#/topic/8fbf4e728bd146fcb2053aeb6ca741f9
+
+****
+
+
+
+
+
+# Unit 14. SAP Fiori Element
+
+****
+
+## What is the goal of every developer? 
+
+## (Choose the correct answers). 
+
+### Increase efficiency 
+
+### Develop faster 
+
+Increase development effort 
+
+### Less maintenance.
+
+****
+
+:book: UX410 - Unit 14 
+
+효율성 향상
+
+개발 가속화
+
+유지 보수 작업 감소
+
+****
+
+
+
+
+
+****
+
+## Fiori Element 의 기능
+
+* 기능 재사용
+* 일관성 
+* 편집 모드 컨트롤
+* 메시지 처리
+* SAP UI5 유연성 서비스 지원
+* 드래프트 문서 처리 및 드래프트 저장
+* 중요도를 표시하는 상태 색상 및 아이콘
+
+****
+
+
+
+
+
+## What possible values can be used for the annotation @UI.LineItem.importance? 
+
+## (Choose the correct answers). 
+
+### LOW 
+
+VERY_HIGH 
+
+### HIGH 
+
+### MEDIUM.
+
+****
+
+:book: UX410 - Unit 14 
+
+https://help.sap.com/docs/SAP_BW4HANA/107a6e8a38b74ede94c833ca3b7b6f51/f8af07bb0770414bb38a25cae29a12e9.html?version=2.0.0&locale=en-US
+
+HIGH : 기본값 모든 클라이언트에 표시된다.
+
+MEDIUM : 데스크톱 브라우저나 태블릿에만 표시
+
+LOW : 데스크톱 브라우저에만 표시
+
+****
+
+
+
+
+
+## What annotation is used to define the heading of list report? (Choose the correct answer). 
+
+### @UI.headerInfo.typeNamePlural 
+
+@UI.LineItem.headerTitle 
+
+@UI.headerInfo.typeName 
+
+@UI.header.title.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What annotation is used to declare that a field of the projection list contains currency? (Choose the correct answer). 
+
+### @Semantics.currencyCode 
+
+@UI.LineItem.currencyCode 
+
+@UI.currencyCode 
+
+@Semantics.currency.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What are the main characteristics of a search field in SAP Fiori element-based applications? (Choose the correct answers). 
+
+### No value help dialog 
+
+### Supports fuzzy search 
+
+Provides multiple search fields 
+
+### Finds a keyword in multiply fields.
+
+****
+
+:book: UX410 - Unit 14 
+
+https://experience.sap.com/fiori-design-web/search/
+
+### Search Field
+
+* fuzzy search 지원
+* 여러 필드에서 키워드 찾기 
+* 값 도움말 다이얼로그 없음
+
+### Selection Field
+
+* 1: 선택 필드와 OData 속성 간 1개의 관계
+* 값 도움말 다이얼로그를 사용하여 데이터 검색 가능
+
+****
+
+
+
+
+
+## What annotations are required to declare that an ABAP Core Data System supports search capabilities? (Choose the correct answer). 
+
+@Search.possible 
+
+### @Search.searchable 
+
+@Search.allowed
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What property is used in the manifest file, to configure how the selection and presentation variants display using a single variant management area? (Choose the correct answer). 
+
+variantManagement 
+
+### smartVariantManagement 
+
+allowSmartVariantManagement.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+## What annotation is used to show fields of the projection list in the general information section? (Choose the correct answer). 
+
+@UI.headerInfo.field 
+
+@UI.lineItem.ident 
+
+### @UI.identification 
+
+@UI.ident.
+
+****
+
+:book: UX410 - Unit 14 
+
+검증필요
+
+****
+
+
+
+
+
+## What attribute is assigned to the @UI.fieldGroup to add an identifier? (Choose the correct answer). 
+
+identify 
+
+quantify 
+
+### qualifier 
+
+identifier.
+
+****
+
+:book: UX410 - Unit 14 
+
+****
+
+
+
+
+
+# Unit 15. 연속 통합 및 지속적인 업데이트
+
+****
+
+## What is the purpose of a build server? 
+
+## (Choose the correct answer). 
+
+Used for code review 
+
+### Provides software that allows continuous integration. 
+
+Used for version control 
+
+Manages components, builds artifacts, and releases candidates in one central location.
+
+****
+
+:book: UX410 - Unit 15 
+
+https://www.techtarget.com/searchapparchitecture/tip/Why-should-I-use-a-build-server
+
+****
+
+
+
+
+
+## What goals are achieved by a Lean Development Infrastructure? (Choose the correct answers). 
+
+### Allows for faster innovation through independently released and serial versions of components 
+
+### Either automates or provides self-service response 
+
+Used to increase the development effort 
+
+Used for ABAP development with Eclipse Oxygen.
+
+****
+
+:book: UX410 - Unit 15 
+
+검증필요
+
+****
+
+
+
+
+
+# Unit 16.
+
+****
+
+## What options are known to consume SAP Fiori apps on mobile clients without using the SDK for iOS or Android? 
+
+ios 나 Android 의 SDK 를 사용하지 않고 mobile client 에서 SAP Fiori app 을 사용하도록 알려진 option 들은 무엇인가
+
+## (Choose the correct answers). 
+
+### SAP Fiori in a browser 
+
+### SAP Fiori Client app or custom SAP Fiori Client 
+
+SAP Fiori GUI Client 
+
+### SAP Fiori Mobile with Kapsel SDK.
+
+****
+
+:book: UX410 - Unit 16 
+
+검증필요
+
+****
+
+
+
+
+
+## What is SAP Kapsel? 
+
+## (Choose the correct answers). 
+
+### SAP specific plug-in for Cordova 
+
+SAP specific plug-in for Apple iOS 
+
+SAP specific plug-in for Android 
+
+### SAP Kapsel provides the API to interact from Cordova based web applications to SMP3 and software cloud platforms.
+
+****
+
+:book: UX410 - Unit 16 
+
+****
+
+
+
+
+
+## What is Apache Cordova? (Choose the correct answer). 
+
+### Apache Cordova is an open-source mobile development framework. 
+
+Apache Cordova is the SAP product to run SAP Fiori applications on mobile devices. 
+
+Apache Cordova is a cloud service to access data from mobile devices. 
+
+Apache Cordova is the API provided by SAP to access mobile device features.
+
+****
+
+:book: UX410 - Unit 16 
+
+https://ko.wikipedia.org/wiki/%EC%95%84%ED%8C%8C%EC%B9%98_%EC%BD%94%EB%8F%84%EB%B0%94
+
+****
+
+
+
+
+
+## Which of the following components make up the SAP Web IDE Hybrid App Toolkit? (Choose the correct answers). 
+
+### SAP Web IDE plugin 
+
+### Hybrid App Toolkit connector 
+
+SAP Cloud Platform service 
+
+### SAP Hybrid App Toolkit companion.
+
+****
+
+:book: UX410 - Unit 16 
+
+****
+
+
+
+
+
+## Which of the following user authentication and Single Sign-On mechanisms are supported by the SAP Fiori Client? (Choose the correct answers). 
+
+### One-Time Password 
+
+### SAML 
+
+Iris scan 
+
+### X.509 client certificates.
+
+****
+
+:book: UX410 - Unit 16 
+
+https://help.sap.com/doc/38ec5403bfbf4d7a8fdd3fee5f9605e0/3.0.14/en-US/c7ee0275986543a9a9ddd1f1061f43e3.html
+
+****
+
+
+
+
+
+## What features are available in the SAP Web IDE when using the SAP Web IDE plugin from the Hybrid App Toolkit? (Choose the correct answers). 
+
+### Code completion for Cordova and Kapsel plugin APIs 
+
+### Device Configuration 
+
+### Deploy and run an app on a target device 
+
+Access to iOS-only features.
+
+****
+
+:book: UX410 - Unit 16 
+
+검증필요
 
 ****
 
