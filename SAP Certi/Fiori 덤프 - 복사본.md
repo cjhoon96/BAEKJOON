@@ -36,7 +36,7 @@ It depends on the type of component.
 
 ****
 
-:book: UX402 - Unit 4
+:book:  UX402 - Unit 4
 
 검증필요 
 
@@ -416,32 +416,6 @@ https://m.blog.naver.com/sw4r/221258249271
 
 
 
-## Does QUnit support SAPUI5 view tests? 
-
-## (Choose the correct answer). 
-
-Yes, you can implement a test class to test UI aspects of SAPUI5. 
-
-### No, for UI tests you must use OPA5. 
-
-You can use the QUnit-extensions, called Selenium, to test SAPUI5 controls.
-
-****
-
-:book: UX402 - Unit 2 
-
-https://help.sap.com/saphelp_uiaddon10/helpdata/en/a6/b0657d226343da81ad96632cd1bd83/content.htm?no_cache=true
-
-https://help.sap.com/saphelp_uiaddon10/helpdata/en/26/96ab50faad458f9b4027ec2f9b884d/content.htm?no_cache=true
-
-검증필요
-
-****
-
-
-
-
-
 ## How does the OData Model handle XSRF tokens? 
 
 ## (Choose the correct answer). 
@@ -517,52 +491,6 @@ True
 ****
 
 :book: UX403 - Unit 3 
-
-검증필요
-
-****
-
-
-
-
-
-## In what configuration area of the manifest.json file can you activate automatic message creation? 
-
-## (Choose the correct answer). 
-
-sap.app 
-
-sap.ui 
-
-### sap.ui5
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
-## What approach gives you the most flexibility for your SAPUI5 app? 
-
-## (Choose the correct answer). 
-
-Using a controller-based approach 
-
-Using a view-only based approach 
-
-Implement complex UIs in the index.html file 
-
-### Using a component-based approach.
-
-****
-
-:book: UX402 - Unit 2 
 
 검증필요
 
@@ -856,28 +784,6 @@ Allows the merging of two local branches into one local branch.
 
 
 
-## Which of the following statements are true with regard to OPA5? (Choose the correct answers). 
-
-### Can be used for user interaction tests
-
-### Can be used for SAPUI5 integration tests. 
-
-Is a view controller test framework 
-
-### Provides the possibility to test navigation.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which of the following types are types of cards in an Overview Page? (Choose the correct answers). 
 
 ### List Cards
@@ -897,28 +803,6 @@ Is a view controller test framework
 https://experience.sap.com/fiori-design-web/cards/
 
 답 검증필요
-
-****
-
-
-
-
-
-## Which of the following aspects are true for a SAPUI5 UI element? (Choose the correct answers). 
-
-### A UI element has an API. 
-
-### A UI element does not have a renderer. 
-
-A UI element has a renderer. 
-
-### A UI element can have events.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
 
 ****
 
@@ -1028,46 +912,6 @@ SAP Screen Personas.
 
 
 
-## Which OData versions are currently supported by SAPUI5? (Choose the correct answers). 
-
-### OData V2 
-
-OData V5 
-
-### OData V4 
-
-OData V7.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## Which of the following statements are true with respect to QUnit? (Choose the correct answers). 
-
-### Supports only synchronous testing out of the box. 
-
-### QUnit is a JavaScript unit and integration test framework. 
-
-Supports asynchronous tests out-of-the-box
-
-###  Is capable of testing any generic JavaScript code.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
 ## What are the features of Fiori Elements? (Choose the correct answers). 
 
 ### No JavaScript UI Coding. 
@@ -1116,30 +960,6 @@ committed staged modified 세개로 나와있다.
 
 
 
-## What aspects of the runtime environment can be accessed by the Device API of SAPUI5? (Choose the correct answers). 
-
-### Operating system 
-
-### Screen size 
-
-### Orientation change 
-
-Language 
-
-### Touch-specific features.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which UI annotation is used in the object page to display the object header? (Choose the correct answer). 
 
 UI.headerObject 
@@ -1155,28 +975,6 @@ UI.header
 :book: UX402 - Unit 3 
 
 https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/f8/af07bb0770414bb38a25cae29a12e9/content.htm?no_cache=true
-
-****
-
-
-
-
-
-## Which function must be called inside a control renderer to add the control ID to the DOM tree and support eventing? (Choose the correct answer). 
-
-writeClasses 
-
-writeIcon 
-
-### writeControlData 
-
-write.
-
-****
-
-:book: UX402 - Unit 2 
-
-https://velog.io/@rumblekat/Tutorial-10.-Custom-controls
 
 ****
 
@@ -1219,28 +1017,6 @@ HIGH : 기본값 모든 클라이언트에 표시된다.
 MEDIUM : 데스크톱 브라우저나 태블릿에만 표시
 
 LOW : 데스크톱 브라우저에만 표시
-
-****
-
-
-
-
-
-## Which binding modes are supported by SAPUI5? (Choose the correct answers). 
-
-### One-time 
-
-### One-way 
-
-Single-time-only 
-
-### Two-way 
-
-Once.
-
-****
-
-:book: UX402 - Unit 2 
 
 ****
 
@@ -1352,64 +1128,6 @@ Before the corresponding functions from the standard controller.
 
 
 
-## What is the relation between the model and the controller in the standard MVC implementation? (Choose the correct answers). 
-
-### The controller modifies the model. 
-
-### The model notifies the controller about changes. 
-
-The model updates the controller. 
-
-The controller sets the model visibility.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## You want to define a property with the name width to enhance a standard UI5 control. The property should hold the current width of the UI control. What is the best approach to defining the type of such a property? (Choose the correct answer). 
-
-Define the property width of the type string. 
-
-Define the property width of the type sap.ui.core.Integer 
-
-### Define the property width of the type sap.ui.core.CSSSize.
-
-Define the property width of the type sap.ui.core.type.CSSSize.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## How do you access the MessageManager? (Choose the correct answer). 
-
-### A It is a singleton and can be accessed by the getMessageManager function on the core object. 
-
-You have to instantiate the MessageManager using the constructor function. 
-
-Each UI control provides a function to access the MessageManager.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
 ## In an overview page, all entity sets for cards have an association with the entity set for global filter, otherwise the filter will not work on the card. (Choose the correct answer). 
 
 True 
@@ -1421,26 +1139,6 @@ True
 :book: UX403 - Unit 6 
 
 검증필요
-
-****
-
-
-
-
-
-## What method is called inside the library.js file? (Choose the correct answer).  
-
-sap.ui.getCore().registerLibrary 
-
-### sap.ui.getCore().initLibrary 
-
-sap.ui.getCore().loadLibrary 
-
-sap.ui.getCore().runLibrary.
-
-****
-
-:book: UX402 - Unit 2 - !!! Originale Antwort falsch, bitte überprüfen. 
 
 ****
 
@@ -1461,94 +1159,6 @@ sap.m
 :book: UX402 - Unit 3 
 
 https://sapui5.hana.ondemand.com/#/entity/sap.ui.comp.tutorial.smartControls
-
-****
-
-
-
-
-
-## What message types are known to SAPUI5? (Choose the correct answers). 
-
-Control message 
-
-### UI message 
-
-### Server message 
-
-Log message.
-
-****
-
-:book: UX402 - Unit 2 !!! Die originale Antwort scheint falsch zu sein. Zur Sicherheit anschauen. 
-
-https://help.sap.com/saphelp_snc700_ehp04/helpdata/de/62/b1481d3e084cb49dd30956d183c6a0/frameset.htm
-
-검증필요
-
-****
-
-
-
-
-
-## Which of the following are best practices when developing a SAPUI5 app? (Choose the correct answers). 
-
-### Describe your app using a set of metadata. 
-
-Use the Synchronous Model Definition (SMD) syntax. 
-
-### Minimize the code in the index.html file. 
-
-### Make use of patterns. 
-
-### Use an asynchronous model definition in your JavaScript code.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
-## Which file contains the initialization code for the UI library? (Choose the correct answer). 
-
-library.load.js 
-
-library.js 
-
-loadlibrary.js 
-
-lib.dll.
-
-*****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## How can a renderer access the associated elements? (Choose the correct answer). 
-
-The developer must implement an appropriate function to access the elements. 
-
-### SAPUI5 provides functions to access all properties, associations, and aggregations. 
-
-The developer must define a property method in the control metadata and declare the access control.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
 
 ****
 
@@ -1644,28 +1254,6 @@ https://sapui5.hana.ondemand.com/sdk/#/topic/4864403f08c64ca08a2b0ee1fa9cb5e2.ht
 
 
 
-## Why does it make sense to use the navigation API of SAPUI5 and concepts such as eventbus or the navcontainer functions of the base application? (Choose the correct answers). 
-
-### Using the navigation API, it is possible to use bookmarks. 
-
-The eventbus concept is deprecated and should no longer be used. 
-
-### Using the navigation API, the configuration of routes and targets are clearly separated from the application implementation. 
-
-The NavContainer of the App object is not accessible inside a component-based app.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
-
-****
-
-
-
-
-
 ## Which of following steps are needed to create an association in CDS and expose it? (Choose the correct answers). 
 
 ### Declare an association using “association to” statement. 
@@ -1681,42 +1269,6 @@ Expose fields in the association by writing each field in projection list.
 :book: UX403 - Unit 2 
 
 https://help.sap.com/docs/SAP_HANA_PLATFORM/09b6623836854766b682356393c6c416/6fcd6e5883f04de5b618a6d91141afb4.html?version=2.0.02&locale=en-US
-
-****
-
-
-
-
-
-## What is the base class for all UI controls in SAPUI5? (Choose the correct answer). 
-
-sap.ui.Control 
-
-### sap.ui.core.Control 
-
-sap.ui.base.Control 
-
-sap.ui.Element.
-
-****
-
-:book: UX402 - Unit 2 
-
-****
-
-
-
-
-
-## What is the data binding used for? (Choose the correct answer). 
-
-### Data Binding is used to bind two data sources together and keeping them in sync. 
-
-???.
-
-****
-
-:book: UX402 - Unit 2 
 
 ****
 
@@ -1779,28 +1331,6 @@ Create a invisible column to save the value in a hidden control of HTML.
 @UI.hidden 은 UI 렌더링 결과에서 필드를 숨긴다.
 
 @Consumption.hidden 이 포함된 필드 주석은 클라이언트에 표시 되지 않는다
-
-****
-
-
-
-
-
-## Which of the following statements are true with regard to implementing your own renderer? (Choose the correct answers). 
-
-Implement the render function inside the control. 
-
-### Implement a renderer class, derived from sap.ui.core.Renderer, in a separate file. 
-
-### Implement the renderer using AMD syntax. 
-
-### Assign a reference to the renderer property of the UI control.
-
-****
-
-:book: UX402 - Unit 2 
-
-검증필요
 
 ****
 
@@ -1987,28 +1517,6 @@ True
 ****
 
 :book: UX403 - Unit 4 
-
-****
-
-
-
-
-
-## In which base class implementation is the setModel function implemented? (Choose the correct answer). 
-
-### sap.ui.base.ManagedObject 
-
-sap.ui.base.Object 
-
-sap.ui.base.Interface 
-
-sap.ui.model.base.BaseModel.
-
-****
-
-:book: UX402 - Unit 2 
-
-https://sapui5.hana.ondemand.com/sdk/#/api/sap.ui.base.ManagedObject%23methods/setModel
 
 ****
 
