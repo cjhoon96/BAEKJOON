@@ -4310,8 +4310,6 @@ Activate routing in the sap.app.
 
 :book: UX402 - Unit 2 
 
-검증필요
-
 ****
 
 
@@ -4496,7 +4494,7 @@ A UI element has a renderer.
 
 ## How do you access the MessageManager? (Choose the correct answer). 
 
-### A It is a singleton and can be accessed by the getMessageManager function on the core object. 
+### It is a singleton and can be accessed by the getMessageManager function on the core object. 
 
 You have to instantiate the MessageManager using the constructor function. 
 
@@ -4649,8 +4647,6 @@ From version 1.30 and later, the sap.m.App control provides responsive behavior.
 
 :book: UX402 - Unit 2 
 
-검증필요
-
 ****
 
 
@@ -4760,6 +4756,28 @@ write.
 :book: UX402 - Unit 2 
 
 https://velog.io/@rumblekat/Tutorial-10.-Custom-controls
+
+****
+
+
+
+
+
+****
+
+QUnit
+
+* view test 지원 X
+* 즉시 사용할 수 있는 동기식 test 만 지원
+* QUnit 은 javascript unit test / integration test 프레임워크이다.
+* javascript 코드 테스트 가능
+
+OPA5
+
+* view test 지원
+* interaction test 가능
+* javascript unit test / integration test 가능
+* navigation test 가능
 
 ****
 
