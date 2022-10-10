@@ -1269,15 +1269,13 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 ****
 
-## What markup should be used to describe a long text in an html document? 
+## Which of these is abbreviated to CSS? (Choose the correct answer). 
 
-## (Choose the correct answer). 
+Complex Style Syntax 
 
-### \<article>
+### Cascading Style Sheet 
 
-`<p>` 
-
-`<div>`
+Cascading Syntax System.
 
 ****
 
@@ -1289,99 +1287,21 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 
 
-## Which of the following is true? 
+## What is true for HTML and UI5? (Choose the correct answers). 
 
-## (Choose the correct answer).
+### Dynamic web content 
 
-A `<p>` tag has high semantic expressiveness. 
+### Client side rendering 
 
-### The `<a>` tag is used to specify HTML Links. 
+Code on demand 
 
-The `<li>` element can only be used inside of an `<ol>` element.
-
-****
-
- :book: UX399 - Unit 1 
-
-****
-
-
-
-
-
-## How many heading elements are specified in the HTML specification? 
-
-## (Choose the correct answer). 
-
-4 
-
-3 
-
-### 6 
-
-1.
+Static web pages.
 
 ****
 
 :book: UX399 - Unit 1 
 
-****
-
-
-
-
-
-## Which of the following is true? 
-
-## (Choose the correct answer). 
-
-You can use the focus attribute on multiple form fields. 
-
-The focus attribute can only used at one form field. 
-
-### Only the first form field with the focus attribute will get the focus.
-
-****
-
-:book: UX399 - Unit 1 
-
-커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
-
-****
-
-
-
-
-
-## For what purpose should you use the header element? (Choose the correct answer). 
-
-### For introductory content 
-
-For headings 
-
-As a container for the article element.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
-## What is the DOCTYPE? (Choose the correct answer). 
-
-### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
-
-The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
-
-The <!DOCTYPE> Is used to define the mime-type.
-
-****
-
-:book: UX399 - Unit 1 
+검증필요
 
 ****
 
@@ -1407,81 +1327,17 @@ A HTML-Tag Is a pre-processor instruction for the browser
 
 
 
-## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
+## What is the DOCTYPE? (Choose the correct answer). 
 
-### The action attribute contains the reference to the program that processes the submitted form. 
+### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
 
-The action attribute defines the allowed HTTP verbs. 
+The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
 
-The action attribute contains the JavaScript event handler that is invoked when the user submits the form.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
-## What is the name of the attribute to access the custom attributes in your JavaScript code? 
-
-## (Choose the correct answer). 
-
-### dataset 
-
-attributeset 
-
-customDatas.
+The <!DOCTYPE> Is used to define the mime-type.
 
 ****
 
 :book: UX399 - Unit 1 
-
-검증필요
-
-****
-
-
-
-
-
-## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
-
-custData 
-
-### data 
-
-sapdata.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
-
-****
-
-
-
-
-
-## What URL do you enter when you want to see the source code of a web page? 
-
-## (Choose the correct answer). 
-
-### view-source:https://www.google.com 
-
-view-code:https://www.google.com 
-
-show-source: https://www.google.com.
-
-****
-
-:book: UX399 - Unit 1
-
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
 
 ****
 
@@ -1569,69 +1425,13 @@ https://ko.wikipedia.org/wiki/W3C
 
 
 
-## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
+## What is the name of the SAP Development tool? (Choose the correct answer). 
 
-### off 
+### SAP Web IDE  => BAS
 
-false 
+SAP Cloud IDE 
 
-no.
-
-****
-
-:book: UX399 - Unit 1 
-
-https://www.w3schools.com/tags/att_autocomplete.asp
-
-****
-
-
-
-
-
-## What is a code validator? (Choose the correct answer). 
-
-### A code validator is a software program that checks the code against coding rules and standards. 
-
-A code validator is a code generator tool that generates valid code. 
-
-A code validator is a type of extension to the browser.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
-## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
-
-F1 
-
-### F12 
-
-D+E+V.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
-## Which of these is abbreviated to CSS? (Choose the correct answer). 
-
-Complex Style Syntax 
-
-### Cascading Style Sheet 
-
-Cascading Syntax System.
+SAP Web Cloud IDE.
 
 ****
 
@@ -1663,15 +1463,251 @@ Test, code and debug are supported
 
 
 
-## What is true for HTML and UI5? (Choose the correct answers). 
+## What URL do you enter when you want to see the source code of a web page? 
 
-### Dynamic web content 
+## (Choose the correct answer). 
 
-### Client side rendering 
+### view-source:https://www.google.com 
 
-Code on demand 
+view-code:https://www.google.com 
 
-Static web pages.
+show-source: https://www.google.com.
+
+****
+
+:book: UX399 - Unit 1
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
+
+****
+
+
+
+
+
+## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
+
+F1 
+
+### F12 
+
+D+E+V.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is a code validator? (Choose the correct answer). 
+
+### A code validator is a software program that checks the code against coding rules and standards. 
+
+A code validator is a code generator tool that generates valid code. 
+
+A code validator is a type of extension to the browser.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## How many heading elements are specified in the HTML specification? 
+
+## (Choose the correct answer). 
+
+4 
+
+3 
+
+### 6 
+
+1.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer).
+
+A `<p>` tag has high semantic expressiveness. 
+
+### The `<a>` tag is used to specify HTML Links. 
+
+The `<li>` element can only be used inside of an `<ol>` element.
+
+****
+
+ :book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What markup should be used to describe a long text in an html document? 
+
+## (Choose the correct answer). 
+
+### \<article>
+
+`<p>` 
+
+`<div>`
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## For what purpose should you use the header element? (Choose the correct answer). 
+
+### For introductory content 
+
+For headings 
+
+As a container for the article element.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
+
+### The action attribute contains the reference to the program that processes the submitted form. 
+
+The action attribute defines the allowed HTTP verbs. 
+
+The action attribute contains the JavaScript event handler that is invoked when the user submits the form.
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## Which of the following is true? 
+
+## (Choose the correct answer). 
+
+You can use the focus attribute on multiple form fields. 
+
+The focus attribute can only used at one form field. 
+
+### Only the first form field with the focus attribute will get the focus.
+
+****
+
+:book: UX399 - Unit 1 
+
+커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
+
+****
+
+
+
+
+
+## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
+
+### off 
+
+false 
+
+no.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://www.w3schools.com/tags/att_autocomplete.asp
+
+****
+
+
+
+
+
+## What attribute can you use to inform the end-user of what kind of data he should enter in a form field? 
+
+textsuggestion 
+
+### placeholder 
+
+textphrase
+
+****
+
+:book: UX399 - Unit 1 
+
+****
+
+
+
+
+
+## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
+
+custData 
+
+### data 
+
+sapdata.
+
+****
+
+:book: UX399 - Unit 1 
+
+https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
+
+****
+
+
+
+
+
+## What is the name of the attribute to access the custom attributes in your JavaScript code? 
+
+## (Choose the correct answer). 
+
+### dataset 
+
+attributeset 
+
+customDatas.
 
 ****
 
@@ -1685,47 +1721,9 @@ Static web pages.
 
 
 
-## What is the name of the SAP Development tool? (Choose the correct answer). 
-
-### SAP Web IDE 
-
-SAP Cloud IDE 
-
-SAP Web Cloud IDE.
-
-****
-
-:book: UX399 - Unit 1 
-
-****
-
-
-
-
-
 # Unit 2.
 
 ****
-
-## What of the following is true? 
-
-## (Choose the correct answers). 
-
-### The :last-child selector matches every element that is the last child of its parent. 
-
-### The :nth-last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child 
-
-The :last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child.
-
-****
-
-:book: UX399 - Unit 2 
-
-****
-
-
-
-
 
 ## What is the correct prefix for the ID selector? (Choose the correct answer). 
 
@@ -1785,6 +1783,40 @@ A CSS technique to introduce pseudo-style-attributes.
 
 
 
+## What of the following is true? 
+
+## (Choose the correct answers). 
+
+### The :last-child selector matches every element that is the last child of its parent. 
+
+### The :nth-last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child 
+
+The :last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child.
+
+****
+
+:book: UX399 - Unit 2 
+
+****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
+
 # Unit 3.
 
 ****
@@ -1795,7 +1827,7 @@ A CSS technique to introduce pseudo-style-attributes.
 
 processSelector
 
-getElement
+getElements
 
 ### querySelector
 
@@ -8199,24 +8231,6 @@ sap.m.List.
 :book: UX410 - Unit 12 
 
 https://experience.sap.com/fiori-design-web/initial-page-floorplan/
-
-****
-
-
-
-
-
-## What attribute can you use to inform the end-user of what kind of data he should enter in a form field? 
-
-textsuggestion 
-
-### placeholder 
-
-textphrase
-
-****
-
-:book: 확실
 
 ****
 
