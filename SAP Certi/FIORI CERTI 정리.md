@@ -1803,79 +1803,9 @@ The :last-child(n) selector matches every element that is the nth child, regardl
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-s
-
 # Unit 3.
 
 ****
-
-## What method is introduced with HTML5 to have a more powerful selection mechanism? 
-
-## (Choose the correct answer). 
-
-processSelector
-
-getElements
-
-### querySelector
-
-****
-
-:book: UX399 - Unit 3
-
-****
-
-
-
-
-
-## What is the recommended DOM level you should use? (Choose the correct answer). 
-
-### 2 
-
-1 
-
-3.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
-## Describe what is meant by event bubbling. (Choose the correct answer). 
-
-### The concept of event bubbling was introduced to deal with situations where a single event, such as a mouse click, may be handled by two or more event handlers defined at different levels of the Document Object Model (DOM) hierarchy. 
-
-???.
-
-****
-
-:book: UX399 - Unit 3 
-
-https://ko.javascript.info/bubbling-and-capturing
-
-****
-
-
-
-
 
 ## What is the recent version of JavaScript? 
 
@@ -1919,104 +1849,6 @@ http://www.tcpschool.com/html-tag-attrs/script-defer
 
 
 
-## What is true for the prototype? 
-
-## (Choose the correct answers). 
-
-### Every function has a prototype 
-
-### Each object can act as a prototype 
-
-### Any change on the prototype object is immediately visible to all referencing objects.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
-## What is the difference between scope and execution context? 
-
-## (Choose the correct answer). 
-
-### Scope is function based while execution context is object based. 
-
-Scope context is object based while context is function based. 
-
-It depends on the invocation target whether a function has a scope or a context.
-
-****
-
-:book: UX399 - Unit 3 
-
-https://velog.io/@jhy979/Execution-Context-Scope
-
-****
-
-
-
-
-
-## What does “closed-over” mean in the context of closures? (Choose the correct answer). 
-
-### When an inner function makes reference to a variable in the outer function’s lexical scope, the inner function is said to have “closed over” that variable. 
-
-???.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
-## Which of the following is true? (Choose the correct answer). 
-
-The this reference in JavaScript is comparable to the this reference of other programming languages. 
-
-### A this in JavaScript points to the execution context of the function where the this keyword is used. 
-
-A this in JavaScript is like a property of the function.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
-## What mode do you have to use when you want to use the new ECMA6 language features? 
-
-## (Choose the correct answer). 
-
-### strict mode 
-
-base mode 
-
-standard mode.
-
-****
-
-:book: UX399 - Unit 3
-
-검증필요
-
-****
-
-
-
-
-
 ## What is true for a variable that holds the value undefined? (Choose the correct answer). 
 
 It represents the intentional absence of an object value. 
@@ -2037,17 +1869,63 @@ It functions without a return value, and returns undefined.
 
 
 
-## What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
+## What JavaScript function can be used to separate strings? (Choose the correct answer). 
 
-It is the name of a function. 
+### split 
 
-It is where you change the visibility of a variable. 
+slice 
 
-### It is a container to bundle functionality under a unique identifier.
+separate.
 
 ****
 
 :book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What method do you use since ECMA 5 to define a read only property? 
+
+## (Choose the correct answer). 
+
+### defineProperty 
+
+setReadOnly 
+
+defineReadOnly.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://opentutorials.org/course/787/5111
+
+****
+
+
+
+
+
+## JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
+
+### A function is an instance of the object type. 
+
+### A function can have properties and has a link back to its constructor method. 
+
+### A function can be stored in a variable. 
+
+### A function can pass as a parameter to another function. 
+
+### A function can return from a function.
+
+****
+
+:book: UX399 - Unit 3 
+
+검증필요
 
 ****
 
@@ -2093,24 +1971,6 @@ UX399 - Unit 3
 
 
 
-## What JavaScript function can be used to separate strings? (Choose the correct answer). 
-
-### split 
-
-slice 
-
-separate.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
 ## Is the following true? The if-condition can be either a boolean variable or can also check if objects are defined and have a correct value (Choose the correct answer). 
 
 No 
@@ -2129,19 +1989,93 @@ It depends on the JavaScript version.
 
 
 
-## What are the three keyword when it comes to error handling? (Choose the correct answer). 
+## What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
 
-### try, catch, finally 
+### It checks if the property is defined on the current object 
 
-throws, catch, attheend 
+It checks whether the object has properties. 
 
-try, finally, handle.
+It checks if the objects have their own and inherited properties.
 
 ****
 
 :book: UX399 - Unit 3 
 
-https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=220238284097&beginTime=0&jumpingVid=&from=section&redirect=Log&widgetTypeCall=true
+****
+
+
+
+
+
+## What is the difference between scope and execution context? 
+
+## (Choose the correct answer). 
+
+### Scope is function based while execution context is object based. 
+
+Scope context is object based while context is function based. 
+
+It depends on the invocation target whether a function has a scope or a context.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://velog.io/@jhy979/Execution-Context-Scope
+
+****
+
+
+
+
+
+## Which of the following is true? (Choose the correct answer). 
+
+The this reference in JavaScript is comparable to the this reference of other programming languages. 
+
+### A this in JavaScript points to the execution context of the function where the this keyword is used. 
+
+A this in JavaScript is like a property of the function.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is the visibility of a variable that is defined inside a function? 
+
+## (Choose the correct answer). 
+
+### It is only visible inside the function. 
+
+It is only visible inside the statement where the variable is defined 
+
+As a variable in JavaScript it is always globally visible.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What does “closed-over” mean in the context of closures? (Choose the correct answer). 
+
+### When an inner function makes reference to a variable in the outer function’s lexical scope, the inner function is said to have “closed over” that variable. 
+
+???.
+
+****
+
+:book: UX399 - Unit 3 
 
 ****
 
@@ -2185,6 +2119,26 @@ To make the debugging of the code easier.
 
 
 
+## What are the three keyword when it comes to error handling? (Choose the correct answer). 
+
+### try, catch, finally 
+
+throws, catch, attheend 
+
+try, finally, handle.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=220238284097&beginTime=0&jumpingVid=&from=section&redirect=Log&widgetTypeCall=true
+
+****
+
+
+
+
+
 ## Describe what design decision is normally made when you have to deal with errors? (Choose the correct answer). 
 
 ### Lower, technical layers throw errors. Higher, application layers handle errors. 
@@ -2201,107 +2155,19 @@ To make the debugging of the code easier.
 
 
 
-## JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
-
-### A function is an instance of the object type. 
-
-### A function can have properties and has a link back to its constructor method. 
-
-### A function can be stored in a variable. 
-
-### A function can pass as a parameter to another function. 
-
-### A function can return from a function.
-
-****
-
-:book: UX399 - Unit 3 
-
-검증필요
-
-****
-
-
-
-
-
-## What does the method document.createElement(“article”) do? 
+## What method is introduced with HTML5 to have a more powerful selection mechanism? 
 
 ## (Choose the correct answer). 
 
-### It creates an element of the type HTMLUnknownElement. 
+processSelector
 
-It creates an element of the type article 
+getElements
 
-It throws an error.
-
-****
-
-:book: UX399 - Unit 3 
-
-테스트 결과 article 생성되는데 왜 답이 저거인지 모르겠다.
-
-검증필요
+### querySelector
 
 ****
 
-
-
-
-
-## What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
-
-### It checks if the property is defined on the current object 
-
-It checks whether the object has properties. 
-
-It checks if the objects have their own and inherited properties.
-
-****
-
-:book: UX399 - Unit 3 
-
-****
-
-
-
-
-
-## What does the createAttribute method return? 
-
-## (Choose the correct answer). 
-
-An object of the type Attr 
-
-An object of the type Attribute 
-
-The method returns void.
-
-****
-
-:book: UX399 - Unit 3 
-
-http://www.w3big.com/ko/jsref/met-document-createattribute.html
-
-****
-
-
-
-
-
-## What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
-
-### XMLHttpRequest 
-
-XMLHttp 
-
-XMLHttpPoll
-
-****
-
-:book: UX399 - Unit 3 
-
-https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+:book: UX399 - Unit 3
 
 ****
 
@@ -2329,15 +2195,59 @@ Returns the list of childNodes of the document.
 
 
 
-## What is the visibility of a variable that is defined inside a function? 
+## What does the createAttribute method return? 
 
 ## (Choose the correct answer). 
 
-It is only visible inside the function. 
+### An object of the type Attr 
 
-It is only visible inside the statement where the variable is defined 
+An object of the type Attribute 
 
-As a variable in JavaScript it is always globally visible.
+The method returns void.
+
+****
+
+:book: UX399 - Unit 3 
+
+http://www.w3big.com/ko/jsref/met-document-createattribute.html
+
+****
+
+
+
+
+
+## What does the method document.createElement(“article”) do? 
+
+## (Choose the correct answer). 
+
+### It creates an element of the type HTMLUnknownElement. 
+
+It creates an element of the type article 
+
+It throws an error. 
+
+****
+
+:book: UX399 - Unit 3 
+
+테스트 결과 article 생성되는데 왜 답이 저거인지 모르겠다.
+
+검증필요
+
+****
+
+
+
+
+
+## What is the recommended DOM level you should use? (Choose the correct answer). 
+
+### 2 
+
+1 
+
+3.
 
 ****
 
@@ -2349,21 +2259,137 @@ As a variable in JavaScript it is always globally visible.
 
 
 
-## What method do you use since ECMA 5 to define a read only property? 
+## Describe what is meant by event bubbling. (Choose the correct answer). 
 
-## (Choose the correct answer). 
+### The concept of event bubbling was introduced to deal with situations where a single event, such as a mouse click, may be handled by two or more event handlers defined at different levels of the Document Object Model (DOM) hierarchy. 
 
-### defineProperty 
-
-setReadOnly 
-
-defineReadOnly.
+???.
 
 ****
 
 :book: UX399 - Unit 3 
 
-https://opentutorials.org/course/787/5111
+https://ko.javascript.info/bubbling-and-capturing
+
+****
+
+
+
+
+
+## What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
+
+It is the name of a function. 
+
+It is where you change the visibility of a variable. 
+
+### It is a container to bundle functionality under a unique identifier.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What mode do you have to use when you want to use the new ECMA6 language features? 
+
+## (Choose the correct answer). 
+
+### strict mode 
+
+base mode 
+
+standard mode.
+
+****
+
+:book: UX399 - Unit 3
+
+검증필요
+
+****
+
+
+
+
+
+## What is true for the prototype? 
+
+## (Choose the correct answers). 
+
+### Every function has a prototype 
+
+### Each object can act as a prototype 
+
+### Any change on the prototype object is immediately visible to all referencing objects.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What is AJAX? 
+
+## (Choose the correct answer). 
+
+### Asynchronous JavaScript and XML 
+
+Another JavaScript XML Library 
+
+Asynchronous Java XML.
+
+****
+
+:book: UX399 - Unit 3 
+
+****
+
+
+
+
+
+## What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
+
+### XMLHttpRequest 
+
+XMLHttp 
+
+XMLHttpPoll
+
+****
+
+:book: UX399 - Unit 3 
+
+https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
+
+****
+
+
+
+
+
+## What problem is solved when using promises? (Choose the correct answer). 
+
+### A Pyramid of doom 
+
+Nested callbacks 
+
+Synchronous back-end request processing.
+
+****
+
+:book: UX399 - Unit 3 
+
+https://5-ssssseung.tistory.com/96
 
 ****
 
@@ -2402,46 +2428,6 @@ Pending, Finished, Aborted
 
 
 * **settled**
-
-****
-
-
-
-
-
-## What problem is solved when using promises? (Choose the correct answer). 
-
-### A Pyramid of doom 
-
-Nested callbacks 
-
-Synchronous back-end request processing.
-
-****
-
-:book: UX399 - Unit 3 
-
-https://5-ssssseung.tistory.com/96
-
-****
-
-
-
-
-
-## What is AJAX? 
-
-## (Choose the correct answer). 
-
-### Asynchronous JavaScript and XML 
-
-Another JavaScript XML Library 
-
-Asynchronous Java XML.
-
-****
-
-:book: UX399 - Unit 3 
 
 ****
 
@@ -2495,7 +2481,7 @@ Use the method to react to on-click events
 
 Use the method for handleMouse events. 
 
-Use the method when adding and removing a class where an specific event occurs or reoccurs.
+### Use the method when adding and removing a class where an specific event occurs or reoccurs.
 
 ****
 
