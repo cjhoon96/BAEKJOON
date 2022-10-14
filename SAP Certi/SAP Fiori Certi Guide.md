@@ -964,6 +964,18 @@ View destroy => onExit
 
 * ### manifest.json
 
+  다양한 구성 및 속성을 가진 파일이다. W3C 사양인 웹 앱 manifest 에서 영감을 받았다.
+  
+  표준에 따르면 manifest 파일은 개발자가 app 의 속성을 제어하고 애플리케이션 관련 메타 데이터를 저장할 수 있는 중앙 장소를 제공하는 JSON 기반 파일이어야한다.
+  
+  manifest.json 파일은 Component.js 와 동일한 수준의 SAPUI5 app 루트에 생성해야한다. 
+  
+  OData 모델이 인스턴스화 될 때마다 먼저 모델의 메타데이터를 로드한다. manifest.json 의 속성을 사용하여 메타데이터를 미리 로드하여 앱 성능을 향상 시킬 수 있다. JSON 및 XML 모델의 경우, 데이터 소스가 외부 URL 에서 온 경우, 사전 로드 기능은 구성 요소 로드와 함께 전체 데이터를 로드하므로 성능이 향상된다.
+  
+  그러나 데이터가 앱 내에서 로컬에 있는 경우 component-preload.js 에서 데이터를 이미 사용할 수 있으므로 사전 로드 기능은 의미가 없다.
+  
+  동일한 이유로 리소스 모델에 사전 로드 기능을 사용하면 안된다. 
+  
   As the name suggests, an application descriptor is a file with various configurations and properties of an SAPUI5 application. This is inspired by the Web App Manifest, which is a W3C specification. Per the standard, the manifest file should be a JSON-based file, providing developers a central place to control attributes for an application and to store application-related metadata. The manifest.json file needs to be created at the root of the SAPUI5 app at the same level as Component.js.
   Whenever an OData model is instantiated, it first loads the metadata of the model.
   Using properties in the manifest.json, you can preload the metadata to improve the app performance. For JSON and XML models, if their data source is from an external URL, the preload feature will load the entire data in parallel with component loading, thus improving performance. But if the data is located locally within the app, then the data is already available in component-preload.js, thus the preload feature doesn’t make sense. For the same reason, the preload feature should not be used for resource models.
