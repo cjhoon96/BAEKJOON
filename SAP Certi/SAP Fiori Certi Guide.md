@@ -976,10 +976,26 @@ View destroy => onExit
   
   동일한 이유로 리소스 모델에 사전 로드 기능을 사용하면 안된다. 
   
-  As the name suggests, an application descriptor is a file with various configurations and properties of an SAPUI5 application. This is inspired by the Web App Manifest, which is a W3C specification. Per the standard, the manifest file should be a JSON-based file, providing developers a central place to control attributes for an application and to store application-related metadata. The manifest.json file needs to be created at the root of the SAPUI5 app at the same level as Component.js.
-  Whenever an OData model is instantiated, it first loads the metadata of the model.
-  Using properties in the manifest.json, you can preload the metadata to improve the app performance. For JSON and XML models, if their data source is from an external URL, the preload feature will load the entire data in parallel with component loading, thus improving performance. But if the data is located locally within the app, then the data is already available in component-preload.js, thus the preload feature doesn’t make sense. For the same reason, the preload feature should not be used for resource models.
-  Table 3.1 lists important (although not exhaustive) application-specific attributes and their uses.
+  
+  
+  | Attribute Name             | Attribute Description                                        |
+  | -------------------------- | ------------------------------------------------------------ |
+  | **sap.app**                | 응용 프로그램 별 특성을 포함                                 |
+  | sap.app.id (필수)          | SAP Fiori App 의 네임 스페이스                               |
+  | sap.app.type               | 구성하려는 앙목을 정의                                       |
+  | sap.app.i18n               | resource bundle 파일 경로                                    |
+  | sap.app.title              | 앱의 resource bundle 에서 참조하는 app 제목                  |
+  | sap.app.description        | 응용 프로그램이 수행하느 간단한 설명 텍스트                  |
+  | sap.app.applicationVersion | 응용 프로그램 버전                                           |
+  | **sap.ui**                 | UI 관련 속성 제공                                            |
+  | sap.ui.technology          | UI 기술을 지정 SAPUI5 사용                                   |
+  | sap.ui.deviceTypes         | 앱에서 지원하는 기기 기본값은 모두 true                      |
+  | **sap.ui5**                | sap.ui5 네입 스페이스는 SAPUI5 에 의해 자동으로 처리되는 SAPUI5 관련 구성 매개 변수를 추가 |
+  | rootView                   | component 가 자동으로 view 를 인스턴스화 하고 이것을 루트로 사용 |
+  | dependencies               | app에 사용 된 UI 라이브러리를 선언                           |
+  | models                     | 설명자의 이 섹션에서는 app 이 시작될 때 SAPUI5 에 의해 자동으로 인스턴스화 될 모델을 정의<br/>로컬 resource bundle 을 정의 할 수 있다. 모델 "i18n"의 이름을 키로 정의하고 namespace 로 번들 파일을 지정한다. <br/>이전 단계에서와 마찬가지로 번역된 텍스트가 있는 파일은 i18n 폴더에 지정되고 i18n.properties 로 이름이 지정된다. |
+  
+  
 
 143 참조
 
@@ -998,9 +1014,170 @@ View destroy => onExit
 
 
 
-Routing
+## Routing
+
+167 페이지 참고
 
 
+
+
+
+
+
+
+
+
+
+## Practice
+
+
+
+## 1. You need to set the binding context explicitly for a page and all its child controls. Which binding type would you use?
+
+ A. Aggregation binding 
+
+ B. Element binding 
+
+ C. Property binding
+
+ D. Resource binding
+
+
+
+## 2. Which is a widely used SAPUI5 view type while building an SAP Fiori app?
+
+ A. JSON view
+ B. JavaScript view
+ C. XML view
+ D. HTML view
+
+## 3. Which of the following is the file name for the descriptor for applications, components, and libraries?
+
+ A. app_descriptor.json
+
+ B. manifest.json
+
+ C. application.xml
+
+ D. i18n.properties
+
+## 4. Which lifecycle event would you use if you need a hook every time a view is rendered?
+
+ A. onAfterRendering
+
+ B. onAfterShow
+
+ C. onInit
+
+ D. onAfterViewRender
+
+## 5. Which model is used to fetch data from the server and update data into the server?
+
+ A. OData model
+
+ B. JSON model
+
+ C. XML model
+
+ D. Resource model
+
+## 6.Which form factor is suggested for nontouch scenarios?
+
+ A. Compact
+
+ B. Compress
+
+ C. Cozy
+
+ D. Bigger
+
+## 7. In a JavaScript view, this method returns a tree of SAPUI5 controls to be part of the view.
+
+ A. getContent
+
+ B. buildControlTree
+
+ C. getController
+
+ D. createContent
+
+## 8. Which OData version is supported by SAPUI5 OData sap.ui.model.odata.ODataModel?
+
+ A. V1
+
+ B. V2
+
+ C. V3
+
+ D. V4
+
+## 9. Which is the default file in the internationalization (i18n) folder?
+
+ A. i18n.properties
+
+ B. i18n_default.properties
+
+ C. i18n_en.properties
+
+ D. i18n_de.properties
+
+## 10. Which of the following is not an advantage of an MVC pattern?
+
+ A. Reusability
+
+ B. Code readability
+
+ C. Better performance
+
+ D. Increased speed of development
+
+## 11. True or False: It’s always better to use expression binding wherever possible.
+
+ A. True
+
+ B. False 
+
+## 12. As of SAPUI5 version 1.44, which of the following is an advantage of using AMD syntax.
+
+ A. Better performance
+
+ B. Better code readability
+
+ C. Future compatibility with asynchronous module loading
+
+ D. Reduced bandwidth usage 
+
+
+
+## 13. In this root tag of an XML view, which is the default namespace? 
+
+ A. sap.ui.core.mvc
+
+ B. sap.m
+
+ C. sap.ui.commons.layout
+
+ D. sap.ui.commons 
+
+
+
+## 14. Routing configuration can be specified in which two of the following places.  
+
+ A. Controller
+
+ B. Component
+
+ C. manifest.json
+
+ D. Index.htm 
+
+
+
+## 15. True or False: A fragment, when included as part of an existing view, inherits the model as well as the binding context. 
+
+ A. True
+
+ B. False
 
 
 
