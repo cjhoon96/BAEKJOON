@@ -1016,11 +1016,92 @@ View destroy => onExit
 
 ## Routing
 
-167 페이지 참고
+일반적인 SAPUI5 App 은 여러 view 들을 포함하고 있으며 use case 는 여러 view 들에 걸쳐 있는 것이 일반적이다.
+
+SAPUI5 의 routing API 들은 view 를 탐색하고 차후 App states 가 direct 하게 방문될 수 있게 하는 bookmarkable URL 을 생성하는 기능을 제공한다.
+
+
+
+## Routing in Classical Web Applications
+
+Classical web applications은 일반적으로 여러 page 들을 포함하며 routing 은 server side 에서 처리된다. 
+
+사용자는 다른 URL 을 명시적으로 호출하여 다른 web page 들을 요청한다.   
+
+여기서 큰 단점중 하나는 현재 페이지가 이전 페이지와 약간만 다르더라도 전체 웹 페이지를 다시 로드하고 서버에서 다시 렌더링해야 한다는 것이다.
+
+SAPUI5 와 같은 단일 페이지 App framework 들은 이름에서 알 수 있듯이 한 페이지만 포함한다. 
+
+화면 변경은 client side 에서 동일한 페이지 내에서 서로 다른 SAPUI5 control 을 동적으로 로드하여 처리한다.  즉, 사용자는 한 페이지 내에서만 탐색한다. 
+
+하지만 차후 다시 망문하기 위해 해당 URL 을 bookmark 할 수 있도록 응용프로그램의 다양한 탐색 상태에 대해 URL 을 갖는 것이 중요하다. 
+
+탐색은 server path 또는 URL parameter 대신 URL 의 hash 에 반영된다. 
+
+탐색이 발생할 때마다 hash 앞의 URL 내용은 변경되지 않고 대신 hash 이후의 내용만 변경된다는 점에 유의
+
+hash 후 URL 변경 시 브라우저는 서버에서 페이지를 다시 로드하지 않으므로 서버에서 페이지를 다시 로드하지 않고 다른 탐색 상태가 자체 URL 을 가질 수 있으며 더 나은 사용자 환경을 제공한다.
+
+이러한 해시 변경은 렌더링할 control / view 를 결정하기 위해 응용 프로그램에 의해 캡쳐된다. 
+
+SAPUI5 App 에서 Router class 는 해시에 대한 모든 변경 사항을 캡처하고 라우터 구성에 따라 다른 view 를 로드한다. 
+
+또한 라우터는 기록을 추적하여 이전 및 이후 탐색에 도움이 된다. 
+
+또한 라우터는 해시를 업데이트 하지 않고 기록을 업데이트 하지 않고 탐색을 수행할 수 있는 방법을 제공한다.
+
+
+
+## Routing Configuration
+
+Routing Configuration 은 SAPUI5 App 의 manifest.json 의 일부이다.
+
+여기서는 앱 내에서 사용 가능한 다양한 경로를 구성하고 다양한 route 및 관련 configuration에 대해 인스턴스화할 view 를 SAPUI5 framework 에 지시한다.
+
+Routing Configuration 은 App 의  component 에서도 지정될 수 있지만 더 이상 **권장하지 않는다.** 
+
+High level 에서 routing 을 구성하는 세가지 속성이 있다. 
+
+### Three properties to configure the routing
+
+| Property    | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| **config**  | 이 parameter 은 global routing configuration parameter 를 정의하며 여러 route 와 target 을 위한 기본 값을 정의한다.<br/>sap.ui.core.routing.Router 는 routerClass 속성의 기본 라우팅 클래스이다.<br/>sap.ui.core.routing.Router 의 subclass 인 custom routing class 를 사용할 수 있다. <br/>custom routing class 를 정의하면 custom parameter 를 정의하고 routing 내에서 이러한 parameter 를 처리하는 방법에 대한 동작을 정의할 수 있다. <br/>Property **viewType** 은 앱 전체에서 사용되는 default view type 을 정읳나다. <br/>**viewPath** 는 모든 view 가 위치한 기본 폴더를 정의한다. <br/>**controlId** 와 **controlAggregation** 은 각각의 view 가 rendering 되는 control 의 ID 와 Aggregation 을 정의한다. |
+| **routes**  | App 내에서 서로 다른 유효한 route 와 navigation 의 array 이다. <br/>pattern 은 현 경로가 유효한 URL 의 hash 부분에 대한 패턴을 정의한다. pattern 과 일치하는 첫 번째 경로가 선택된다. <br/>**route 들의 순서가 중요하다.** <br/>이름은 경로에 대한 고유한 ID 를 제공하므로 이 이름을 참조하여 프로그래밍 방식으로 주소를 지정할 수 있다. <br/>대상은 URL 해시가 패턴과 일치할 때 표시할 하나 이상의 대상을 정의할 수 있다. |
+| **targets** | 각 target 은 이름 을 가진 후 view 를 지정한다. <br/>대상을 선택하면 지정된 view 가 인스턴스화 되고 controlId의 controlAggregation 에 추가된다. <br/>여러 경로에서 단일 대상을 사용할 수 있다. <br/>viewLevel 은 view 가 표시될 때 애니메이션 효과를 결정하는 속성이다.<br/>target 은 route와 연관되지 않고 프로그램적으로 앱에 직접 표시될 수 있다. <br/>이름이 notFound 인 대상을 표시하기 위한 샘플 코딩은 다음과 같다. <br/>this.getRouter().getTargets().display("notFound"); |
 
 
 
 
+
+## Initialize Routing
+
+App 전체에서 사용할 수 있도록 component 에서는 routing 은 명시적으로 initialize 되어야 한다. 
+
+manifest.json 에 입력한 configuration 은 router 를 인스턴스화 하는 동안 로드된다. 
+
+인스턴스화는 App 당 한번만 수행되므로 다음과 같이 Component.js 의 init 메서드에 배치된다. 
+
+```js
+init: function () {
+    // call parent's init
+    UIComponent.prototype.init.apply(this, arguments);
+    // Initialize the router
+    this.getRouter().initialize();
+}
+```
+
+
+
+## Three different events that trigger navigation and subsequent steps
+
+* URL 에 대한 hash 가 바뀔 때 (bookmark 입력 또는 선택), SAPUI5 framework 는 routing configuration 을 고려하여 App 에 display 할 target 을 선택한다.
+
+* Router 의 navTo(`route_name`) method 가 호출되면 SAPUI5 framework 는 router configuration 을 고려하여 URL hash 를 업데이트 하고 구성된 target 으로 이동한다.
+
+* getTargets().display(`target_name`) 가 호출 되면 SAPUI5 framewokr 는 router configuration 을 고려하여 지정된 target 으로 이동한다.
+
+  이번에는 URL 해시가 변경되지 않는다. 
 
 
 
@@ -1036,7 +1117,7 @@ View destroy => onExit
 
  A. Aggregation binding 
 
- B. Element binding 
+###  B. Element binding 
 
  C. Property binding
 
@@ -1047,23 +1128,30 @@ View destroy => onExit
 ## 2. Which is a widely used SAPUI5 view type while building an SAP Fiori app?
 
  A. JSON view
+
  B. JavaScript view
- C. XML view
+
+###  C. XML view
+
  D. HTML view
+
+
 
 ## 3. Which of the following is the file name for the descriptor for applications, components, and libraries?
 
  A. app_descriptor.json
 
- B. manifest.json
+###  B. manifest.json
 
  C. application.xml
 
  D. i18n.properties
 
+
+
 ## 4. Which lifecycle event would you use if you need a hook every time a view is rendered?
 
- A. onAfterRendering
+###  A. onAfterRendering
 
  B. onAfterShow
 
@@ -1071,9 +1159,11 @@ View destroy => onExit
 
  D. onAfterViewRender
 
+
+
 ## 5. Which model is used to fetch data from the server and update data into the server?
 
- A. OData model
+###  A. OData model
 
  B. JSON model
 
@@ -1081,15 +1171,19 @@ View destroy => onExit
 
  D. Resource model
 
+
+
 ## 6.Which form factor is suggested for nontouch scenarios?
 
- A. Compact
+###  A. Compact
 
  B. Compress
 
  C. Cozy
 
  D. Bigger
+
+
 
 ## 7. In a JavaScript view, this method returns a tree of SAPUI5 controls to be part of the view.
 
@@ -1099,21 +1193,35 @@ View destroy => onExit
 
  C. getController
 
- D. createContent
+###  D. createContent
+
+
 
 ## 8. Which OData version is supported by SAPUI5 OData sap.ui.model.odata.ODataModel?
 
  A. V1
 
- B. V2
+###  B. V2
 
  C. V3
 
  D. V4
 
+****
+
+삭제되었다.
+
+sap.ui.model.odata.v2.ODataModel
+
+사용
+
+****
+
+
+
 ## 9. Which is the default file in the internationalization (i18n) folder?
 
- A. i18n.properties
+###  A. i18n.properties
 
  B. i18n_default.properties
 
@@ -1121,21 +1229,27 @@ View destroy => onExit
 
  D. i18n_de.properties
 
+
+
 ## 10. Which of the following is not an advantage of an MVC pattern?
 
  A. Reusability
 
  B. Code readability
 
- C. Better performance
+###  C. Better performance
 
  D. Increased speed of development
+
+
 
 ## 11. True or False: It’s always better to use expression binding wherever possible.
 
  A. True
 
- B. False 
+###  B. False 
+
+
 
 ## 12. As of SAPUI5 version 1.44, which of the following is an advantage of using AMD syntax.
 
@@ -1143,7 +1257,7 @@ View destroy => onExit
 
  B. Better code readability
 
- C. Future compatibility with asynchronous module loading
+###  C. Future compatibility with asynchronous module loading
 
  D. Reduced bandwidth usage 
 
@@ -1153,7 +1267,7 @@ View destroy => onExit
 
  A. sap.ui.core.mvc
 
- B. sap.m
+###  B. sap.m
 
  C. sap.ui.commons.layout
 
@@ -1165,21 +1279,25 @@ View destroy => onExit
 
  A. Controller
 
- B. Component
+###  B. Component
 
- C. manifest.json
+###  C. manifest.json
 
  D. Index.htm 
+
+****
+
+manifest 에서 하기를 권장한다.
+
+****
 
 
 
 ## 15. True or False: A fragment, when included as part of an existing view, inherits the model as well as the binding context. 
 
- A. True
+###  A. True
 
  B. False
-
-
 
 ****
 
@@ -1197,6 +1315,176 @@ View destroy => onExit
 
 
 
+
+
+
+
+## Practice
+
+## 1. Which is the recommended tool for developing and extending SAP Fiori apps?
+
+ A. Eclipse Mars
+
+###  B. SAP Web IDE => BAS
+
+ C. SAP Cloud Connector
+
+ D. Git
+
+
+
+## 2. Which of the following is not a benefit of cloud computing?
+
+ A. Scalability (확장성)
+
+ B. Cost benefit (비용적 이익)
+
+ C. Reliability (신뢰성)
+
+###  D. Application performance
+
+****
+
+* Cost benefit
+* Flexibility
+* Reliabilty
+* Security
+* Scalability
+
+****
+
+
+
+## 3. Which of the following is not offered as a of cloud service?
+
+ A. Platform
+
+ B. Software
+
+###  C. Training
+
+ D. Infrastructure
+
+
+
+## 4. Neo is an SAP Cloud Platform environment based on open source technology and standard. True or False?
+
+ A. True
+
+###  B. False
+
+****
+
+SAP 전용 환경 및 기술
+
+****
+
+
+
+## 5. Which of the following is not a feature provided by SAP Web IDE? 무시
+
+###  A. Multiple workspaces to manage and organize your code
+
+ B. Ability to perform Application Build
+
+ C. Provides a graphical editor to create an XML view
+
+ D. Provides a mock server to work with test data
+
+
+
+## 6. When you want to update the committed code in your local repository into the remote repository, which command would you run?
+
+ A. Commit
+
+ B. Pull
+
+###  C. Push
+
+ D. Update
+
+
+
+## 7. Which of the following is a valid way to import applications into SAP Web IDE? 무시
+
+ A. Import from Eclipse SAPUI5 plug-in
+
+ B. Import from a different SAP Web IDE’s workspace
+
+###  C. Import from a different SAP Cloud Platform’s Git repository
+
+ D. Import from subversion (SVN)
+
+
+
+## 8. What is the extension of an OData model metadata file?
+
+###  A. .edmx
+
+ B. .xml
+
+ C. .json
+
+ D. .exe
+
+
+
+## 9. Which file contains the minified version of application files?
+
+ A. application-preload.js
+
+ B. library-preload.js
+
+ C. project-preload.js
+
+###  D. component-preload.js
+
+****
+
+component-preload.js에는 파일의 최소 버전이 포함되어 있다. 이것은 응용 프로그램 빌드가 발생할 때 생성된다.
+
+****
+
+
+
+## 10. Which folder contains the file component preload.json?
+
+###  A. dist
+
+ B. webapp
+
+ C. project
+
+ D. app
+
+
+
+## 11. Which view type can be visualized from layout editor?
+
+ A. JSON
+
+ B. JavaScript
+
+###  C. XML
+
+****
+
+layout editor
+
+****
+
+
+
+## 12. Which of the following is not a feature of SAP Web IDE multi-cloud version on SAP Cloud Platform?
+
+ A. Grunt task runner available
+
+ B. A Multitarget application can be created
+
+###  C. Register the app to On-premise SAP Fiori launchpad
+
+ D. Import from SAP Build
+
 ****
 
 
@@ -1209,9 +1497,234 @@ View destroy => onExit
 
 # 5. OData and Advanced Data Handling
 
-9 
 
 
+## $Batch
+
+UI 는 여러 정보를 한 번에 Update 하기 위해 back-end 에 여러번 호출할 준비가 되어있다. 
+
+이러한 경우 Batch 요청을 사용할 수 있다.
+
+배치 요청은 여러 요청을 **하나의 HTTP POST** 요청에 결합한다.
+
+$Batch 는 여러 HTTP 요청을 제거함으로써 UX 의 속도를 높일 수 있다.
+
+Batch request body 에는 여러 Query / Change operation 이 포함될 수 있다.
+
+또한 데이터 일관성을 유지하려면 변경 요청 집합이 **모두 성공하거나 하나라도 실패시 Rollback** 해야 하는 시나리오가 있다. 
+
+이러한 단일 요청 그룹을 **changeset** 이라 한다.
+
+단일 changeset 은 다른 changeset 을 포함할 수 없다.
+
+Batch request 의 response body 에는 각 Retrieve / Change operation 에 대한 응답을 포함된다.
+
+back-end 가 Batch request 를 처리할 수 있는 한 response status code는 202-Accepted 이다. (개별 요청 상태는 중요하지 않음)
+
+changeset request 의 response body 는 성공 또는 실패를 나타내는 단일 응답이거나, 성공적인 처리의 경우 내부의 각 변경 집합 작업에 대해 하나의 응답을 가질 수 있다.
+
+change set request 의 어떤 하나라도 실패 한다면 error 를 포함한 한개의 response 만이 있다.    
+
+
+
+
+
+## Implementation: SAP Gateway
+
+Batch 호출에는 구현이 필요 없다. 
+
+SAP Gateway framework 는 각 Retrieve 또는 Update 작업에 해당하는 API 를 호출한다. 
+
+Batch 요청 내의 여러 Retrieve 작업은 서로 독립적이기 때문에 **성능을 최적화**하기 위해 **병렬로 실행**된다. 
+
+configuration 을 사용하여 서비스 또는 전 시스템 에서 병렬화를 비활성화 할 수 있다.
+
+changeset 내의 전체 작업 집합이 backend 의 단일 API를 사용하여 처리될 수 있는 경우 성능 관점에서 유용할 수 있다. 
+
+여러 작업을 한번에 처리할 수 있는 각 엔티티에 대해 SAP Gateway framework 에 정보를 제공하여 이러한 호출에 대한 일반 작업  performing method 들을 자동으로 호출하지 않도록 해야한다. 
+
+이는 CV_DEFER_MODE 라는 변수를 설정하여 메서드 CHANGESET_BEGIN 에서 수행되며, 변수 CV_DEFERED_MODE 를 true 로 설정한 후 framework 에서 method CHANGESET_PROCESS 를 호출하여 해당 구현 코드를 실행한다.
+
+마지막으로 CHANGESET_END 메서드에서 COMMIT WORK 를 호출하여 모든 변경사항을 커밋한다. 
+
+![batch](IMG/batch.png)
+
+
+
+## Implementation: SAPUI5 
+
+sap.ui.model.odata.v2.ODataModel 에서는 백엔드에 대한 모든 호출이 기본적으로 Batch 요청으로 전송된다.
+
+OData 모델을 인스턴스화 하는 동안 useBatch 매개 변수를 사용하여 이 기능을 비활성화할 수 있다. 
+
+SAP Fiori 앱의 manifest.json 파일에도 입력할 수 있다.  
+
+
+
+
+
+## Grouping Batch Calls
+
+CRUD OData V2 Model 의 API를 사용하여 작업이 트리거 될 때마다 각 API 에는 groupid 라는 parameter 가 있다. 
+
+OData 호출을 배치로 그룹화 하는 데 사용할 수 있다.
+
+groupId 가 동일한 작업은 backend 로 단일 Batch 요청으로 번들 된다. 
+
+groupid 는 다음과 같이 바인딩에도 할당될 수 있으므로 동일한 groupid 를 가지 바인딩에서 트리거 되는 모든 요청이 함께 전송된다. 
+
+{pa}
+
+
+
+Grouping Batch Calls
+Whenever an operation is triggered using any of the OData V2 model’s APIs such as create, update, remove, and read, each of these APIs have a parameter called groupId. This can be used to group OData calls as batches. Operations with the same groupId will be bundled as a single batch request to the backend.
+groupIds can be assigned to bindings as well, as shown here, so that all requests triggering from the bindings with the same groupIds are sent together:
+
+{path:"/SalesOrders", parameters: {groupId: "myFirstGroup"}}
+
+In these cases, all batch requests are formed and sent at the end of the current call stack. All operations that don’t have a groupId assigned are grouped together with a default groupId. However, you might require a better control on batch requests and might want to trigger a batch request only at a specific instance. SAP provides an API for this. All the batchIds that need to be triggered in a controlled manner must be specified in an API setDeferredGroups as follows:
+oModel.setDeferredGroups(["myFirstGroup", "myThirdGroup"]);
+Now, to trigger a batch request for a specific groupId, you need to call an API submitChanges and specify the groupId under which all the requests are grouped. Here is a sample submitChanges call:
+oModel.submitChanges({groupId:"myFirstGroup",success: mySuccessHandler, error: myErrorHandler});
+In the preceding case, only requests with batchId as myFirstGroup will be sent as a single batch request.
+
+
+
+Change Sets
+Consider a scenario where you need to send multiple Change operations (Create/ Delete/Update) as a single logical unit of an operation, which means that either all of them should succeed or none of them should succeed to keep the data consistent.
+For such scenarios, SAPUI5 offers the concept of changesets, which are similar to groupIds. With all the Change operations, you can specify a changeSetId in addition to groupId. All the Change operations with the same changeSetId will be sent as a single changeset within a batch request. If changeSetId isn’t specified, then each change will have its own changeSetId.
+
+
+
+Download/Get File
+It’s a common requirement to show or download an attachment from the server.
+An entity needs to model for media operations with properties describing the content of the download. This entity needs to be marked as Media as shown in Figure 5.18.
+
+
+
+
+
+
+
+
+
+## Practice
+
+## 1. In an OData service, this is usually cached in the browser as well as in the SAP Gateway layer.
+
+ A. Query
+
+ B. Service operation
+
+###  C. Metadata
+
+ D. Read
+
+
+
+## 2. Which of the following cannot be bookmarked in an SAP Fiori app?
+
+ A. Filters
+
+ B. Dialogs
+
+ C. Tabs
+
+###  D. None
+
+****
+
+* Views / Business Objects
+* Tabs
+* "Search" Results (Filters)
+* Dialogs
+
+****
+
+
+
+## 3. Which of the following concepts is used to group multiple OData change requests as a single logical operation?
+
+ A. Batch
+
+ B. Group
+
+###  C. Change set
+
+ D. Expand
+
+
+
+## 4. If an OData operation does not fit into any of Create/Read-Query/Update/Delete, then which of the following options can be used?
+
+ A. Function modules
+
+ B. Service operations
+
+ C. Metadata update
+
+ D. Deep Insert
+
+
+
+## 5. Within the MPC, which of the following methods is triggered upon metadata request.
+
+ A. DEFINE
+
+ B. GET_METADATA
+
+ C. DEFINE_META
+
+ D. GET_ENTITIES
+
+
+
+## 6. An $expand URL will contain which of the following to represent the child entities?
+
+ A. Child entity set name
+
+ B. Navigation property name
+
+ C. Association name
+
+ D. Child entity name
+
+
+
+## 7. How does the SAP Gateway framework determine if the create request is a single entity create or a Deep Insert?
+
+ A. URL contains navigation properties
+
+ B. HTTP headers
+
+ C. URL ends with key word “Deep”
+
+ D. Request body contains the parent as well as child Entity data
+
+
+
+## 8. Which is the right place to declare router configurations?
+
+ A. manifest.json
+
+ B. index.html
+
+ C. Component.js
+
+ D. router.js
+
+
+
+## 9. Which events get triggered in a facet filter upon the user completing the selection of facet filter values (or closing the facet filter dialog)? (2 possible answers)
+
+ A. Confirm
+
+ B. ListOpen
+
+ C. ListClose
+
+ D. Reset
 
 ****
 
