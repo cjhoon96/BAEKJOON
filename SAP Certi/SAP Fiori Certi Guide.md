@@ -37,39 +37,39 @@
 
   Task based 이며 business process 를 수행한다.
 
-  CRUD 작업중 하나 이상이 있으며 app 과 back-end 간에 양방향 데이터 이동을 수반한다.
+  <u>**CRUD 작업중 하나 이상이**</u> 있으며 app 과 back-end 간에 양방향 데이터 이동을 수반한다.
 
-  **SAP HANA DB 가 필수는 아니지만 최적의 성능을 위해 권장한다.**
+  <u>**SAP HANA DB 가 필수는 아니지만 최적의 성능을 위해 권장한다.**</u>
 
   
 
 * ### Analytical
 
-  **읽기 전용 앱**으로 일반적으로 SAP HANA 의 기능을 사용하여 숫자 크런칭, 데이터 시각화, 미래 예측 등의 사용 사례를 해결한다.
+  **읽기 전용 앱**으로 일반적으로 SAP HANA 의 기능을 사용하여 **숫자 <u>크런칭, 데이터 시각화, 미래 예측</u>** 등의 사용 사례를 해결한다.
 
-  SAP 에서 제공되는 KPI Modeler 를 사용하여 프로그래밍 없이 KPI 그래프/차트 를 생성할 수 있다.
+  SAP 에서 제공되는 <u>**KPI Modeler**</u> 를 사용하여 **<u>프로그래밍 없이 KPI 그래프/차트</u>** 를 생성할 수 있다.
 
-  기본 제공되는 KPI 도 존재한다.
+  **<u>기본 제공되는 KPI</u>** 도 존재한다.
 
-  **SAP HANA 가 데이터베이스로 필요하다.**
+  <u>**SAP HANA 가 데이터베이스로 필요하다.**</u>
 
   
 
 * ### Fact Sheet
 
-  Business object 또는 Business transaction 에 대한 상황별 정보를 표시한다.
+  Business object 또는 Business transaction 에 대한 **<u>상황별 정보를 표시</u>**한다.
 
-  이 앱들은 보통 실행 타일이 없다.
+  이 앱들은 보통 <u>**실행 타일이 없다.**</u>
 
-  대신 검색 결과를 클릭하거나 다른 Transactional / Analytical / Fact Sheet App 에서 사용할 수 있는 다양한 드릴다운 링크를 클릭하여 실행된다.
+  대신 <u>검색 결과를 클릭</u>하거나 다른 <u>**Transactional / Analytical / Fact Sheet App 에서**</u> 사용할 수 있는 다양한 **<u>드릴다운 링크를 클릭하여 실행</u>**된다.
 
   다른 Transactional app 에 대한 링크도 제공한다.
 
   (ex. 구매 주문 정보 시트 앱에서 구매 요청을 구매 주문으로 변환하는 트랜잭션 앱으로 이동할 수 있다.)
 
-  **읽기 전용 앱**으로 데이터를 CDS view 로 보며 UI rendering annotation 을 사용한다.
+  **<u>읽기 전용 앱</u>**으로 데이터를 ***<u>CDS view 로 보며 UI rendering annotation</u>*** 을 사용한다.
 
-  **SAP HANA 가 데이터베이스로 필요하다.**
+  **<u>SAP HANA 가 데이터베이스로 필요하다.</u>**
 
   
 
@@ -133,9 +133,9 @@
 
 ## De-composition and Re-composition
 
-SAP Fiori 애플리케이션은 하나의 크고 복잡한 SAP 트랜잭션의 기능을 여러 Fiori 애플리케이션으로 분해할 수 있다. 이를 **De-composition** 이라 한다. 
+SAP Fiori 애플리케이션은 하나의 크고 복잡한 SAP 트랜잭션의 기능을 여러 Fiori 애플리케이션으로 분해할 수 있다. 이를 **<u>De-composition</u>** 이라 한다. 
 
-여러 SAP 트랜잭션의 기능을 결합하여 전체 비즈니스 트랜잭션을 수행하는 SAP Fiori 애플리케이션을 만들 수도 있다. 이를 **Re-composition** 이라 한다.
+여러 SAP 트랜잭션의 기능을 결합하여 전체 비즈니스 트랜잭션을 수행하는 SAP Fiori 애플리케이션을 만들 수도 있다. 이를 **<u>Re-composition</u>** 이라 한다.
 
 SAP Fiori app 을 설계할 때는 system 이 고려 대상이 되는 경우는 거의 없다.오히려 사용자 중심적이다.
 
@@ -143,7 +143,7 @@ SAP Fiori app 을 설계할 때는 system 이 고려 대상이 되는 경우는 
 
   SAP Fiori app 을 사용하면 GUI 의 여러 Transaction 의 기능을 결합하여 기능을 구축할 수 있다.
 
-  **사용자 탐색의 감소 / 화면 상호 작용의 단순화**
+  **<u>사용자 탐색의 감소</u> / <u>화면 상호 작용의 단순화</u>**
 
   **=> 사용자 생산성 향상**
 
@@ -153,13 +153,19 @@ SAP Fiori app 을 설계할 때는 system 이 고려 대상이 되는 경우는 
 
   SAP Fiori 는 Role-based 이기 때문에 사용자가 업무와 필요에 따라 작업을 수행할 수 있도록 필요한 화면 요소만 제공
 
-  => 사용자 집중력 유지 / 효율적인 작업 
+  **=> <u>사용자 집중력 유지</u> / <u>효율적인 작업</u>** 
 
 
 
 ## SAP Build
 
+Build **<u>*interactive, responsive*</u>** prototypes
+
 맞춤형 SAP Fiori app 을 **설계**하고 **프로토타입**을 만들기 위해 구축된 **클라우드 기반 툴**이다.
+
+최종 프로토타입에 starter code 를 생성할 수 있다.
+
+
 
 * ### Inviting a Team
 
@@ -226,11 +232,15 @@ SAP provides stencils in two flavors:
 
     특정 위치에 띄운후 끌 수 있는 message strip 을 생성
 
+    페이지위에 오버레이 되는것이 아닌 페이지 내에서 공간을 보유할 수 있다.
+
   * message toast
 
     시간이 지나면 자동으로 지워지는 message
 
   * message page
+
+
 
 * ## Fiori Elements
 
@@ -272,7 +282,7 @@ SAP provides stencils in two flavors:
 
 ## Practice
 
-## 1. Which of the following attributes <u>can’t</u> be associated with SAP Build?
+## 1. Which of the following attributes <u>can’t</u> be associated with SAP Build?❌
 
  A. <u>***Cloud-based***</u> tool
 
@@ -320,7 +330,7 @@ C. Worklist
 
 
 
-## 5. Which of the following is not an objective of the draft feature within SAP Fiori.
+## 5. Which of the following is not an objective of the draft feature within SAP Fiori.❌
 
  A. Enable the lock feature.
 
@@ -332,7 +342,7 @@ C. Worklist
 
 
 
-## 6. Which application type provides information about a business object or a transaction?
+## 6. Which application type provides information about a business object or a transaction?❌
 
  A. Transaction apps
 
@@ -344,13 +354,13 @@ C. Worklist
 
 ## 7. The process of combining the functionality of multiple GUI transactions into one SAP Fiori app is called decomposition.
 
-###  A. True
+A. True
 
- B. False
+###  B. False
 
 
 
-## 8. An overview page is made up of
+## 8. An overview page is made up of ❌
 
  A. Tiles
 
@@ -362,7 +372,7 @@ C. Worklist
 
 
 
-## 9. SAP-provided SAP Fiori apps represent which part of SAP’s UX strategy?
+## 9. SAP-provided SAP Fiori apps represent which part of SAP’s UX strategy?❌
 
  A. New
 
@@ -374,7 +384,7 @@ C. Worklist
 
 
 
-## 10. Which of these services are not part of SAP UX Design Services?
+## 10. Which of these services are not part of SAP UX Design Services?❌
 
  A. Design Thinking workshops
 
@@ -656,24 +666,24 @@ Draft handling 도 단일 비즈니스 개체에 대한 동시 처리에도 사�
 
   * ### Disadvantage
 
-    * 임베디드 시스템을 다른 비즈니스 시스템의 허브 시스템으로 사용하면 안 되기 때문에 더 이상 모든 비즈니스 시스템에 단일 통합 SAP Fiori 출시 패드를 사용할 수 없다.
+    * 임베디드 시스템을 다른 비즈니스 시스템의 허브 시스템으로 사용하면 안 되기 때문에 더 이상 모든 비즈니스 시스템에 단일 통합 SAP Fiori launch pad 를 사용할 수 없다.
     * SAP 백엔드 비즈니스 시스템은 자주 업그레이드할 수 없기 때문에 SAP 게이트웨이 시스템에 대한 혁신을 자주 가져올 수 없다.
     * HTTP 연결이 비즈니스 시스템에서 끝나 외부 인터넷 공격에 노출되므로 네트워크에서 추가 보안 조치를 확인해야 한다.
 
   
 
-  * ### SAP Cloud Platform OData Provisioning
+* ### SAP Cloud Platform OData Provisioning
 
-    SAP Cloud Platform의 OData Provisioning 서비스는 허브 구축 옵션에서 SAP Gateway 시스템을 대체한다.
+  SAP Cloud Platform의 OData Provisioning 서비스는 허브 구축 옵션에서 SAP Gateway 시스템을 대체한다.
 
-    이 배포 옵션의 장점은 허브 배포 옵션과 유사하며, 이는 고객이 선호하는 배포 옵션 중 하나이다. 
+  이 배포 옵션의 장점은 허브 배포 옵션과 유사하며, 이는 고객이 선호하는 배포 옵션 중 하나이다. 
 
-    * ### Advantage
+  * ### Advantage
 
-      * SAP 게이트웨이에 비해 총 소유 비용(TCO) 절감
-      * 클라우드에서 빈번한 소프트웨어 업데이트
-      * 자동화된 시스템 모니터링 및 관리 태스크
-      * 필요할 때 클라우드의 일부가 되어 탄력성 확보
+    * SAP 게이트웨이에 비해 총 소유 비용(TCO) 절감
+    * 클라우드에서 빈번한 소프트웨어 업데이트
+    * 자동화된 시스템 모니터링 및 관리 태스크
+    * 필요할 때 클라우드의 일부가 되어 탄력성 확보
 
 
 
@@ -766,6 +776,10 @@ enter “Theme” in the Parameter Name field
 * ### Transporting Theme
 
   To transport the themes, you need to go to generic Transaction /UI5/ THEME_TOOL. This tool will list each of the custom themes created in the server. Against each theme name, it provides options such as **Info,** **Transport, Download, and Delete**, as shown in Figure 2.33.
+
+
+
+
 
 
 
