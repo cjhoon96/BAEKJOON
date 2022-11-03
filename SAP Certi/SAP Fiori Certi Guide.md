@@ -1513,6 +1513,26 @@ layout editor
 
 
 
+## Model provider class (MPC)
+
+**MPC**(<u>***M**odel **P**rovider **C**lass*</u>) 에는 Entities / Properties / Associations / Service operation 등을 포함한 모든 OData 아티팩트를 정의하는 코드가 포함된다. 
+
+이 클래스와 클래스 내의 코드는 일반적으로 SAP Gateway Service Builder 에서 수행된 데이터 모델링에 기반하여 SAP Gateway Service Builder 툴에 의해 생성된다.
+
+
+
+## Data provider class (DPC)
+
+**DPC**(<u>***D**ata **P**rovider **C**lass*</u>) 는 OData 서비스의 각 작업에 대한 OData 구현 코드를 포함한다. 
+
+MPC 와 마찬가지로 이 클래스도 SAP Gateway Service Builder 툴을 통해 생성할 수 있다. 
+
+구현 코드는 일반적으로 각 작업에 대해 수동으로 작성된다. 
+
+
+
+
+
 ## $Batch
 
 UI 는 여러 정보를 한 번에 Update 하기 위해 back-end 에 여러번 호출할 준비가 되어있다. 
@@ -1587,31 +1607,64 @@ groupId 가 동일한 작업은 backend 로 단일 Batch 요청으로 번들 된
 
 groupid 는 다음과 같이 바인딩에도 할당될 수 있으므로 동일한 groupid 를 가지 바인딩에서 트리거 되는 모든 요청이 함께 전송된다. 
 
-{pa}
-
-
-
-Grouping Batch Calls
-Whenever an operation is triggered using any of the OData V2 model’s APIs such as create, update, remove, and read, each of these APIs have a parameter called groupId. This can be used to group OData calls as batches. Operations with the same groupId will be bundled as a single batch request to the backend.
-groupIds can be assigned to bindings as well, as shown here, so that all requests triggering from the bindings with the same groupIds are sent together:
-
+```js
 {path:"/SalesOrders", parameters: {groupId: "myFirstGroup"}}
+```
 
-In these cases, all batch requests are formed and sent at the end of the current call stack. All operations that don’t have a groupId assigned are grouped together with a default groupId. However, you might require a better control on batch requests and might want to trigger a batch request only at a specific instance. SAP provides an API for this. All the batchIds that need to be triggered in a controlled manner must be specified in an API setDeferredGroups as follows:
+
+
+이 경우 모든 batch 요청은 현재 호출 스택의 끝에서 형성되고 전송된다.
+
+groupId 가 할당되지 않은 모든 작업은 기본 groupId 와 함께 그룹화 된다.
+
+그러나 batch 요청을 더 잘 제어해야 할 수도 있고 특정 인스턴스에서만 batch 요청을 트리거할 수도 있다. 
+
+SAP 는 이를 위한 API 제공한다. 제어된 방식으로 트리거 해야하는 모든 batchId 는 다음과 같이 API setDeferredGroups 에 지정해야한다.
+
+```js
 oModel.setDeferredGroups(["myFirstGroup", "myThirdGroup"]);
-Now, to trigger a batch request for a specific groupId, you need to call an API submitChanges and specify the groupId under which all the requests are grouped. Here is a sample submitChanges call:
-oModel.submitChanges({groupId:"myFirstGroup",success: mySuccessHandler, error: myErrorHandler});
-In the preceding case, only requests with batchId as myFirstGroup will be sent as a single batch request.
+```
+
+ 
+
+특정 groupId 에 대한 배치 요청을 트리거하려면 API submitChanges 를 호출 하고 모든 요청이 그룹화될 groupId 를 지정해야한다. 
+
+다음은 SubmitChanges 호출한 예이다.
+
+```js
+oModel.submitChanges({
+    groupId:"myFirstGroup",
+    success: mySuccessHandler, 
+    error: myErrorHandler
+});
+```
+
+위의 경우 batchId 가 myFirstGroup 인 요청만 단일 배치 요청으로 전송된다.
 
 
 
-Change Sets
-Consider a scenario where you need to send multiple Change operations (Create/ Delete/Update) as a single logical unit of an operation, which means that either all of them should succeed or none of them should succeed to keep the data consistent.
-For such scenarios, SAPUI5 offers the concept of changesets, which are similar to groupIds. With all the Change operations, you can specify a changeSetId in addition to groupId. All the Change operations with the same changeSetId will be sent as a single changeset within a batch request. If changeSetId isn’t specified, then each change will have its own changeSetId.
+## Change Sets
+
+여러 Change operation (Create / Delete / Update) 을 작업 의 단일 logical unit 으로 보내야하는 시나리오를 구상하여 보자.
+
+즉, 모든 Change operation 이 성공해야 하거나 데이터를 일관되게 유지하기 위해 성공해야한다. 
+
+이러한 시나리오에서 SAPUI5 는 groupId 와 유사한 Change Set 의 개념을 제공한다. 
+
+모든 Change 작업을 사용하여 groupId 외의 changeSetId 도 지정할 수 있다.
+
+동일한 changeSetId 를 가진 모든 Change 작업은 배치 요청 내에서 단일 Change Set 로 전송된다. 
+
+changeSetId 가 지정되지 않은 경우 각 변경사항마다 고유한 changeSetId 가 있다.
 
 
 
-Download/Get File
+## Download / Get File
+
+첨부 파일을 서버에 표시하거나 다운로드 하는 것은 일반적인 요구 사항이다.
+
+기업은 다운로드 내용을 설명하는 속성을 사용하여 미디어 작업을 모델링해야한다.
+
 It’s a common requirement to show or download an attachment from the server.
 An entity needs to model for media operations with properties describing the content of the download. This entity needs to be marked as Media as shown in Figure 5.18.
 
@@ -1619,7 +1672,137 @@ An entity needs to model for media operations with properties describing the con
 
 
 
+## Facet filter
 
+이는 list 또는 table 을 필터링 하는 데 사용할 수 있는 SAPUI5 control 이다.
+
+facet filter 는 multiple facet / dynamic facet / filter 를 가지도록 구성될 수 있다.
+
+러한 각 facet 에 대한 유효한 값은 동적이거나 Odata 서비스 소스 또는 정적일 수 있다. 
+
+* ### Type of Facet Filter
+
+  * **Simple Type**
+
+    스크톱 및 태블릿에서만 사용할 수 있다.
+
+    Active Facet 은 toolbar 의 클릭가능한 button 으로 사용할 수 있다. 
+
+    이러한 facet 중 하나를 클리하여 필터 값을 조정할 수 있다.
+
+    ![simple_facet](IMG/simple_facet.png)
+
+    
+
+  * **Light Type**
+
+    Light Type 은 모바일 크기의 장치에서 자동으로 사용되지만 데스크톱과 태블릿에서도 사용할 수 있다. 
+
+    facet filter 위에는 현재 facet 과 이러한 facet 의 값 목록을 보여주는 summary bar 가 있다.
+
+    summary bar 를 클릭하면 필터링에 사용할 수 있는 facet 의 list 가 display 된다. 
+
+    facet 중 하나를 선택하면 가능한 모든 값이 표기되며 filtering 할 수 있다. 
+
+    * `showReset="true"` 는 필터 재설정 버튼을 display 한다.
+    * `showPopoverOKButton="true"` 는 facet popover 를 닫는 OK 버튼을 display 한다. 
+    * `showPersonaliation="True"` 는 facet 수를 개인화할 수 있도록 facet list 제거 및 facet list 추가 버튼을 display 한다. 
+
+    ![light_facet](IMG/light_facet.png)
+
+  
+
+  simple type 과 light type 의 주 차이점은 facet 을 보여주는 방식이다.
+
+  simple type 은 facet 을 직접 선택할 수 있지만 light type 은 summary bar 를 클릭하면 항상 모든 facet 이 나열된 동일한 popup 이 열린다.
+
+* ### Content of Facet Filter 
+
+  Facet filter 의 facet 수는 aggregation list 에 의해 정의된다.
+
+  이 aggregation 의 각 item 들은 sap.m.FacetFilterList type 이다. 
+
+  허용된 facet 수는 일반적으로 정적이므로 facet filter list 의 instance 가 수동으로 생성되어 list aggregation 에 추가된다. 
+
+  또다른 일반적인 방법은 허용된 각 facet 에 대해 하나의 항목을 포함하고 집계 목록에 바인딩된 JSON 모델을 갖는 것이다.  
+
+  하지만 SAPUI5 control 의 다른 aggregation 과 마찬가지로 facet 수를 OData 컬렉션에 바인딩하여 facet 수를 동적이도록 할 수 있다. 
+
+  sap.m.FacetFilterList 는 sap.m.List 를 확장한다.
+
+   
+
+  * **Facet Filter Properties**
+
+    | Property | Description                                                  |
+    | -------- | ------------------------------------------------------------ |
+    | title    | 각 facet 에 display 되는 이름을 제공한다.                    |
+    | mode     | 한번에 단일(SingleSelectMaster) 또는 여러개(MultiSecect) facet 을 활성화할 수 있는지 결정 |
+    | sequence | toolbar 에서 활성화된 facet 의 상대 순서를 제어              |
+    | active   | Simple Type 의 toolbar 에 활성화된 facet 만 표시되도록 결정  |
+    | allCount | 모든 filter item 을 선택한 경우 일치하는 dataset 의 record 수를 display 한다. |
+
+    facet 의 유효 값 수는 facet filter list 내의 aggregation item 에 의해 정의된다. 
+
+    유효한 값은 클 수 있으므로 item aggregation 은 일반적으로 JSON model 또는 OData model collection 에 binding 된다. 
+
+    aggregation item 의 각 item 은 sap.m.FacetFilterItem type 이 된다. 
+
+    sap.m.FacetFilterItem 는 sap.m.ListItemBase 를 확장한다. 
+
+    이 클래스에는 두가지 중요한 property 가 있다.
+
+    * **key**
+
+      facet filter 의 각 item 에 대한 고유 식별자 이다.
+
+    * **text**
+
+      각 item 의 title / name
+
+* ### Events in a Facet Filter
+
+  * **Confirm**
+
+    이 이벤트는 사용자가 선택하고 OK를 클릭하거나 popup 외부를 클릭하여 facet filter list popup 을 닫을 때 발생한다. 
+
+    이 이벤트를 사용하여 선택한 모든 facet 을 찾고 main list 를 filtering 할 수 있다
+
+  * **Reset**
+
+    이 이벤트는 사용자가 Reset 아이콘을 클릭할 때 발생한다. (활성화된 경우)
+
+    이 버튼은 선택된 모든 facet filter 를 지우기 위한것이다. 
+
+    이 이벤트를 사용하여 main list 의 binding 을 filtering 하는 모든 filter 를 지울 수 있다. 
+
+    또한 이러한 이벤트는 sap.m.FacetFilterList 에서 사용할 수 있다.
+
+    * **Reset _ sap.m.FacetFilterList**
+
+      facet filter 의 이벤트와 마찬가지로 facet filter 의 toolbar 에 있는 Reset 아이콘에 의해 재설정 이벤트가 트리거 된다. 
+
+      이 이벤트 핸들러는 현재 적용된 모든 filter 를 제거해야한다. 
+
+      removeSelections(true) 메서드를 사용하여 모든 filter 를 제거할 수 있다.
+
+  * **List Close**
+
+    이 이벤트는 사용자가 선택을 완료하고 facet filter item 의 popup list 를 닫을 때 트리거 된다. 
+
+    이 이벤트는 facet filter의 Confirm 이벤트와 유사하지만, 다른 facet filter list 에 의해 다른 메서드를 트리거함으로 써 이 이벤트를 사용하여 facet 별 코딩을 작성할 수 있다.
+
+  * **List Open**
+
+    이 이벤트는 facet filter popup 이 열리기 직전에 트리거 된다.
+
+    이 이벤트는 facet 내의 유효한 filter item 에 영향을 미치는 데 사용할 수 있다. 
+
+    예를 들어 Category 와 Supplier 의 두 facet 을 고려해 보면
+
+    Category facet 에서 하나 이상의 item 을 선택하고 사용자가 Supplier facet 을 열 때마다 오직 해당 Category 내의 product 를 제공하는 Supplier 를 보여준다. 
+
+    List Open 이벤트는 facet filter list popup 에서 이러한 종류의 종속성을 처리하고 item 을 filtering 하는 데 사용할 수 있다.
 
 
 
@@ -1674,17 +1857,23 @@ An entity needs to model for media operations with properties describing the con
 
  A. Function modules
 
- B. Service operations
+###  B. Service operations
 
  C. Metadata update
 
  D. Deep Insert
 
+****
+
+Any operation not suiting the CRUD framework can be modeled using a Service operation (or function import). It can be both a read only (GET) and a change operation (POST).
+
+****
+
 
 
 ## 5. Within the MPC, which of the following methods is triggered upon metadata request.
 
- A. DEFINE
+###  A. DEFINE
 
  B. GET_METADATA
 
@@ -1696,7 +1885,7 @@ An entity needs to model for media operations with properties describing the con
 
 ## 6. An $expand URL will contain which of the following to represent the child entities?
 
- A. Child entity set name
+###  A. Child entity set name
 
  B. Navigation property name
 
@@ -1714,13 +1903,13 @@ An entity needs to model for media operations with properties describing the con
 
  C. URL ends with key word “Deep”
 
- D. Request body contains the parent as well as child Entity data
+###  D. Request body contains the parent as well as child Entity data
 
 
 
 ## 8. Which is the right place to declare router configurations?
 
- A. manifest.json
+###  A. manifest.json
 
  B. index.html
 
@@ -1732,11 +1921,11 @@ An entity needs to model for media operations with properties describing the con
 
 ## 9. Which events get triggered in a facet filter upon the user completing the selection of facet filter values (or closing the facet filter dialog)? (2 possible answers)
 
- A. Confirm
+###  A. Confirm
 
  B. ListOpen
 
- C. ListClose
+###  C. ListClose
 
  D. Reset
 
@@ -1750,9 +1939,57 @@ An entity needs to model for media operations with properties describing the con
 
 ****
 
-# 6. Extensibility in SAPUI5
+# 6. Extensibility in SAPUI5 중요
 
-11 
+
+
+## Concept of extension in SAPUI5
+
+
+
+## View Modification
+
+
+
+## View Extension
+
+
+
+## Implement an Extension Point
+
+
+
+## View Replacement
+
+
+
+## Controller Extension 
+
+
+
+## Controller Replacement
+
+
+
+## Typed Controllers and Extension
+
+
+
+## Translation Extension 
+
+
+
+## Service Replacement
+
+
+
+## Adding a Custom View
+
+
+
+## Deploying the Extension Application 
+
+
 
 
 
