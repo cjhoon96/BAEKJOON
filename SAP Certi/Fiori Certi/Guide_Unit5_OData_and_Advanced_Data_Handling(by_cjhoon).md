@@ -26,7 +26,7 @@ deep Linking. **=> X**:white_check_mark:
 
 
 
-
+## UX 402 Unit3 
 
 
 
@@ -331,7 +331,9 @@ Two-Way Binding 은 OData Model 에서 지원되지만 기본적으로 One-Way B
 
 기본적으로 Two-Way Binding 으로 인한 모든 Model 변경은 지연된다.
 
-그들은 change 라고 불리는 공통된 그룹을 사용한다.
+그들은 change 라고 불리는 공통된 그룹을 사용
+
+한다.
 
 submitChanges() 가 호출 될 때마다 change group 이 제출된다.
 
@@ -910,6 +912,574 @@ SAP Fiori 는 SPA framework 를 따르지만 SAPUI5 routing 개념과 함께 has
 
 
 
+
+
+
+
+
+
+
+## Remote vs Local OData Services
+
+* ### Use Case
+
+  #### Remote Data 
+
+  * 대부분의 App 은 Remote Data 를 사용하여 구축 된다.
+    * 즉 Model 은 SAP System 과 같은 서버에 상주하고 SAP Gateway OData Service 를 통해 access 한다.
+  * 사용자는 다음으로 구성된 OData Service 를 생성한다.
+    * Collections
+    * Properties
+    * Associations
+  * SAP UI5 App 에서 작성하는 code 는 이러한 Entity 를 사용한다.
+
+  #### Local Data
+
+  * 때때로 ***<u>오프라인으로 작업</u>***해야하는 경우 
+  * <u>*개발 서버 **성능이 좋지 않은 경우***</u>
+  * Back-end 서버 가 필요한 실시간 entity 없이 ***<u>빠른 test 를 수행</u>***하려는 경우 
+  * Production App 에서도 사용될 수 있다.
+  * Production App 은 remote requests으로 인한 overhead 를 견디는 대신 local 파일에서 일부 데이터를 가져올 수 있다. 
+    * 예를 들어 local data 를 lookup table/list 에 사용할 수 있다.
+
+
+
+* ### Accessing Metadata
+
+  ![advanceddatahandling1](img/advanceddatahandling1.png)
+
+  기존 서비스의 metadata 를 가져오려면 $metadata option 을 OData-service 의 URL 에 추가해야한다.
+
+
+
+* ### Adding metadata.xml to Project
+
+  <u>***SAP BAS 를 사용**하는 경우 **metadata.xml 파일을 SAP UI5 project 에 수동으로 추가할 필요가 없다.***</u>
+
+  ![advanceddatahandling2](img/advanceddatahandling2.png)
+
+  다른 개발 도구로 작업하는 경우 위와 같이 `metadata.xml` 파일을 요청해야한다.
+
+  (파일을 다운로드하여 프로젝트에 저장)
+
+  파일은 ***<u>standard SAP Fiori project template 또는 SAP BAS</u>*** 의 ***<u>`Consume SAP Services` command 를 통해 추가</u>***한다.
+
+  <u>***`command palette View → Find Command` / `CTRL+Shift+P`***</u> 를 통해 command를 찾을 수 있다.
+
+
+
+* ### OData Model Editor
+
+  ![advanceddatahandling3](img/advanceddatahandling3.png)
+
+  OData-Service 기반 App 을 구현할 때 서비스 구현이 완료 되지 않았거나 이미 시작된 경우도 있다.
+
+  기존 metadata file 을 조정하거나 새로 생성하기 위해 SAP BAS 는 text 기반 편집기인 ***<u>OData Model Editor 를 제공</u>***한다.
+
+
+
+* ### Getting Local Data
+
+  ![advanceddatahandling4](img/advanceddatahandling4.png)
+
+  JSON 형식의 backend 에서 데이터를 요청하기 위해 개발자는 서비스 URL 에 format=json 옵션을 추가할 수 있다.
+
+  ![advanceddatahandling5](img/advanceddatahandling5.png)
+
+  요청한 business 데이터는 SAP UI5 프로젝트의 `localService/mockdata` 폴더에 저장하는 것을 권장한다.
+
+  파일 이름은 entity set 의 이름을 반영해야하며 파일 형식은 json 이어야 한다.
+
+
+
+* ### Using the JSON Model 
+
+  ![advanceddatahandling8](img/advanceddatahandling8.png)
+
+  ***<u>local JSON-file 을 사용하는 가장 구조적인 방법</u>***은 ***<u>`model.js` 파일에 javascript 함수를 구현</u>***하는 것이다.
+
+  `model.js` 파일은 SAPUI5 project의 `model` 폴더에 있다.
+
+  `model.js` 파일의 함수는 `sap.ui.model.json.JSONModel` type 의 새 instance 를 생성한다.
+
+  constructor function 은 local JSON-file 의 경로를 가져오고, 새로 생성된  JSONModel-instance 는 caller에게 반환된다.
+
+  ![advanceddatahandling6](img/advanceddatahandling6.png)
+
+  models.js 파일의 function 구현은 ***<u>`Component` 의 init 함수에 의해 호출</u>***된다. 
+
+  반환된 ***<u>JSONModel-object는 component 의 model context에 저장</u>***된다.
+
+  ![advanceddatahandling7](img/advanceddatahandling7.png)
+
+
+
+
+
+## Working with the Mock Server
+
+* ### Using MockServer 
+
+  Backend System 을 시뮬레이션 하기 위해 SAP UI5 는 ***<u>`sap.ui.core.util.MockServer` class 를 제공</u>***한다. 
+
+  * `MockServer` class 참조
+
+  * xmlf 파일에 metadata 준비
+
+    기존 서비스를 사용하고,  `$metadata` command 를 사용하여 `<gw-server>/<gw-service>/$metadata` 와 같은 gateway client 에서 metadata 를 가져올 수도 있다.
+
+  * Entity 의 JSON 샘플 데이터를 준비 해야 한다. 
+
+    `<gw-server>/<gw-service>/<entitySet>?$format=json` 사용하고 metadata 를 삭제할 수 있다.
+
+  * 브라우저를 사용하여 backend 에서 필요한 데이터를 요청하고 결과를 project 에 local 로 저장한다.
+
+  적어도 ideal world 에서는 development phase 이전 에 모델링된 oData 서비스가 있을 것이다.
+
+  그런 다음 프런트엔드 UI5 개발자가 SAP GW에서 oData 서비스를 실행하는 대신 mock server 를 사용하도록 할 수 있다.
+
+  mock server 는 일부 샘플 데이터로 모든 oData 요청에 응답하므로 백엔드 개발자들은 ui5 개발자들이 작업을 중단하는 것을 두려워하지 않고 원하는 만큼 SAP GW를 실험할 수 있다.
+
+
+
+* ### How the Mock Server Works
+
+  #### Understanding the MockServer - Simple Example
+
+  ![advanceddatahandling9](img/advanceddatahandling9.png)
+
+  위의 코드는 MockServer의 사용법을 직접 구현하는 방법을 보여준다.
+
+  MockServer object 를 인스턴스화하는 동안 configuration parameter 로 URI를 ODataService에 전달해야 한다.
+
+  이 URI에 대한 모든 요청은 MockServer에 의해 intercept 된다.
+
+  MockServer 구현은 실행 중인 모든 MockServer 객체를 중앙에서 구성하는 정적 방법을 정의하며, 이 방법을 config라고 합니다.
+
+  MockServer의 시뮬레이션 method 는 두 가지 parameter 를 가진다. 
+
+  * 첫 번째 parameter : ODataService의 metadata 를 찾을 위치를 정의 
+  * 두 번째 parameter : mock 데이터를 찾을 위치를 정의
+
+  mock 데이터 파일은 JSON-files로 정의되며 파일의 이름은 반환되어야 할 EntitySet 의 이름이어야 한다.
+
+  MockServer를 시작하려면 start-function 을 호출해야 한다.
+
+  
+
+  #### Understanding the MockServer - Complex Example
+
+  ![advanceddatahandling10](img/advanceddatahandling10.png)
+
+  SAP BAS 에서 사용되는 SAP UI5 프로젝트 템플릿은 기본적으로 Mock Server 구현을 제공한다.
+
+  ![advanceddatahandling11](img/advanceddatahandling11.png)
+
+  MockServer를 사용하여 자체 request/response cycle 을 구현할 수도 있다.
+
+  위의 code snippet 에서 예를 들어 mock 실행 중 metadata-file 이 발견되지 않았을 때 오류를 구현하는 방법을 볼 수 있다.
+
+  
+
+  
+
+* ### Start the Application in Simulation Mode
+
+  ![advanceddatahandling12](img/advanceddatahandling12.png)
+
+  Simulation Mode 에서 App 을 시작하려면 프로젝트에 ***<u>특정 시작 HTML 파일을 추가</u>***하는 것이 좋다.
+
+  일반적으로 이러한 ***<u>starter file 은 test라는 폴더에 저장</u>***된다.
+
+  위 슬라이드는 이러한 starter file 의 구현을 보여준다.
+
+
+
+* ### The Mock Server in SAP BAS
+
+  SAP BAS 는 MockServer 에서의 build를 제공한다.
+
+  개발자는 다음을 구성해야한다.
+
+  * <u>***OData Service 에대한 URI***</u>
+  * <u>***local metadata.xml 파일의 경로***</u>
+
+  SAP BAS 는 기존 mock 데이터를 생성하거나 수정할 수 있는 editor 를 제공한다.
+
+  editor 에 액세스 하려면 local metadata.xml 파일을 선택하고 상황에 맞는 메뉴에서 `Edit Mock Data` 메뉴 항목을 선택한다.
+
+  editor 를 사용하면 Data 를 생성하여 SAP UI5 프로젝트 내의 JSON 파일에 저장할 수 있다.
+
+  Mock Data Editor 를 종료한 후에는 새로운 json 파일이 프로젝트 내에 저장된다.
+
+  ![advanceddatahandling13](img/advanceddatahandling13.png)
+
+  App 을 시작하려면 simulation 을 위한 local json-file 을 제공해야 한다.
+
+  Run Configuration view 로 전환하고 새 Run Configuration 을 만들고 `text/mockServer.html` 파일을 선택한다.
+
+  두번째 단계에서는 data source 를 backend system 에 바인딩 하고 녹색 화살표를 클릭하여 run configuration 을 시작한다.
+
+  The binding to a  datasource is necessary, this is not necessary because the data were loaded from the  backend, rather without the binding the application will not start. ?????
+
+  시작 후 MessageToast 는 개발자에게 simulation 이 시작되었음을 알린다.
+
+
+
+## Working with the ODataModel
+
+* ### The OData Model
+
+  Write Support = CRUD
+
+  * create
+  * read
+  * update
+  * delete
+
+  OData Model의 경우 기본 바인딩 모드는 One-way 이지만 쓰기 작업을 지원하기 위해 Two-way 로 설정할 수 있다.
+
+  OData는 ***<u>optimistic concurrency control 를 위해 HTTP ETag를 사용</u>***한다. 
+
+  서비스를 제공하도록 구성해야 한다.
+
+  ***<u>ETag는 모든 CRUD 요청에 대한 parameters map 내에서 전달</u>***될 수 있습니다.
+
+  ***<u>전달된 ETag가 없는 경우 캐시된 entity 의 ETag가 이미 로드된 경우 사용</u>***된다.
+
+  ***<u>cross-site request 위조를 해결</u>***하기 위해 OData 서비스는 클라이언트 App 의 ***<u>change request 에 XSRF token 요구할 수 있다.</u>***
+
+  이 경우 클라이언트는 ***<u>서버에서 token 을 가져와 각 change request 과 함께 서버로 전송</u>***해야 한다.
+
+  OData 모델은 ***<u>metadata 를 읽을 때 XSRF 토큰을 가져온 다음</u>*** 각 ***<u>write request header 와 함께 자동으로 전송</u>***한다.
+
+  ***<u>token 이 더 이상 유효하지 않으면 OData 모델에서  refreshSecurityToken() function 을 호출</u>***하여 새 토큰을 가져올 수 있다.
+
+  ***<u>token 은 service document 에 대한 request 과 함께 가져온다.</u>***
+
+  유효한 token 을 가져오려면 ***<u>service document 가 cache 되지 않았는지</u>*** 확인하여야한다..
+
+
+
+* ### XSRF Tokens
+
+  #### Properties of XSRF Tokens
+
+  * ***<u>사이트 간 request 위조 문제</u>***를 해결
+  * ***<u>write requests (create, update, delete) 에 필요</u>***
+  * 클라이언트는 서버에서 ***<u>XSRF token 을 가져온 다음 각 write requests 과 함께 전송</u>***해야 한다.
+  * OData Model은 ***<u>metadata 를 읽을 때 XSRF token 을 가져와 각 write request header 에 자동으로 전송</u>***
+  * ODataModel에는 이전 ***<u>token 이 유효하지 않을 경우 호출하여 새 XSRF 토큰을 가져올 수 있는 refresh method (refreshSecurityToken)</u>*** 가 있다.
+
+  ODataModel 이 XSRF 토큰 fetch 를 수행하기 위한 constructor 에서 boolean argument 를 가져오는데 문제가 발생했다.
+
+  연습의 예제는 custom request header 를 사용하여 XSRF 토큰을 가져왔다.
+
+  이후 버전에서 작동해야 한다.
+
+
+
+* ### Performing Create
+
+  * Create 는 OData 서비스에 대해 ***<u>HTTP POST 작업을 트리거</u>*** 
+  * App 은 사용할 ***<u>service collection 을 지정</u>***
+  * <u>***데이터 payload 도 지정***</u>
+  * <u>***Deep Create 는 지원되지 않는다.***</u>
+
+  * #### Syntax:
+
+    ```js
+    create (sPath, oData, mParameters?) : object.
+    ```
+
+    * **`sPath`**
+
+      항목을 생성해야 하는 OData collection
+
+    * **`oData`**
+
+      생성해야 하는 항목의 data
+
+    * **`mParameters`**
+
+      성공 및 오류 콜백 기능을 포함
+
+  
+
+  * #### The API Documentation
+
+    ![advanceddatahandling14](img/advanceddatahandling14.png)
+
+    * ***<u>`sPath`:</u>***  
+
+      항목을 만들 collection 의 경로를 포함하는 string
+
+    * ***<u>`oData`:</u>*** 
+
+      생성해야 하는 항목의 데이터
+
+    * ***<u>`mParameters`:</u>***
+
+      다음 property 들을 포함하는 Optional parameter map 
+
+      * ***<u>`context`:</u>*** 
+
+        지정된 경우 sPath 는 context 로 함께 제공된 경로에 대해 ***<u>상대적 경로로 작성</u>***되어야 한다. 
+
+      * ***<u>`success`:</u>*** 
+
+        요청이 성공 했을 때 호출 되는 callback 함수이다.
+
+        handler 는 ***<u>OData 및 response parameter 를 가질 수 있다.</u>***
+
+      * ***<u>`error`:</u>*** 
+
+        요청이 실패 했을 때 호출 되는 callback 함수이다.
+
+        handler 는 ***<u>additional error information 을 포함하는 parameter `oError`</u>*** 를 가질 수 있다.
+
+      * <u>***`urlParameters`:***</u> 
+
+        query string 으로 전달될 parameter 를 포함하는 map
+
+      * <u>***`headers`:***</u> 
+
+        이 request 에 대한 header map
+      
+      * <u>***`batchGroupId`:***</u>
+      
+        ***<u>사용되지 않음</u>*** - ***<u>groupId 를 사용</u>***
+      
+      * <u>***`groupId`:***</u> 
+      
+        request group 의 ID 
+      
+        ***<u>동일한 그룹에 속한 요청은 하나의 일괄 request 에 번들</u>***된다.
+      
+      * <u>***`changeSetId`:***</u>
+      
+        request 가 속해야 하는 ChangeSet의 ID
+      
+      * ***<u>`refreshAfterChange` :</u>***
+      
+        이 change operation 을 제출한 후 ***<u>모든 binding 을 업데이트 할지 여부</u>***를 정의한다.
+      
+        `setRefreshAfterChange` 를 참조, 이 옵션이 지정된 경우 이작업에 대해서만 model-wide refreshAfterChange flag 를 재정의한다.
+  
+    ![advanceddatahandling15](img/advanceddatahandling15.png)
+  
+    위 예시는 create function 의 사용 예시이다.
+  
+    새 entry 이 EntitySet Business Partner Set 에 추가되어있다.  
+  
+    JSONModel 에서 가져오는 새 Entry 에 대한 데이터
+  
+    OData-Service 에서 지정된 entity 의 create method 가 호출된다.
+  
+    보다시피 구현은 Promise 를 활용하고 있다.
+  
+    success handler 를 보면 생성된 entity 의 data 는 backend 시스템에서 반환되며 생성된 ID 에 액세스 할 수 있다.
+  
+  
+  
+  * #### Handle Server Response After Create
+  
+    ![advanceddatahandling16](img/advanceddatahandling16.png)
+  
+    백엔드의 response 를 처리하기 위해 두 개의 event handler 를 구현할 수 있다.
+  
+    success event handler 에서 볼 수 있듯이 새로 생성된 엔티티에 액세스할 수 있다.
+  
+    error event 에 대한 event handler 에서 지정된 object 를 통해 백엔드의 오류에 액세스할 수 있다.
+  
+  
+  
+  * #### Creating Entities
+  
+    ![advanceddatahandling17](img/advanceddatahandling17.png)
+  
+    App 은 생성된 object 에 포함될 속성을 선택하고 이러한 속성에 대한 자체 기본값을 전달할 수 있다.
+  
+    기본적으로 모든 속성 값은 정의되어 있지 않다.
+  
+    EntitySet 및 전달된 속성은 OData 서비스의 metadata 정의에 이썽야한다.
+
+
+
+* ### Performing Read
+
+  ![advanceddatahandling18](img/advanceddatahandling18.png)
+
+  * #### Arguments for read function 
+
+    * ***<u>`sPath` :</u>***
+
+      검색할 data 의 경로를 포함하는 string
+
+      경로가 model contructor 에 지정된 서비스 URL 에 연결되어있다. 
+
+    * ***<u>`mParameters` :</u>***
+
+      다음 속성을 포함하는 optional parameter 이다.
+
+      * ***<u>`context` :</u>***
+
+        지정된 경우 sPath 는 context 로 함께 제공된 경로에 대해 ***<u>상대적 경로로 작성</u>***되어야 한다. 
+
+      * ***<u>`urlParameters` :</u>***
+
+        query string 으로 전달될 parameter 를 포함하는 map
+
+      * ***<u>`filter` :</u>***
+
+        `sap.ui.model.Filter` type 의 filter array 이다.
+
+        request URL 에 포함될 filter
+
+      * ***<u>`sorter` :</u>***
+
+        `sap.ui.model.Sorter` type 의 sorter array 이다. 
+
+      * ***<u>`success` :</u>***
+
+        데이터가 성공적으로 검색되었을 때 호출되는 콜백 함수
+        핸들러는 oData 및 response 매개 변수를 가질 수 있다.
+
+      oData parameter 에는 검색된 데이터의 데이터가 포함된다.
+
+      response parameter 에는 request 의 response 에 대한 추가 정보가 포함되어 있다:
+
+      * ***<u>`error`:</u>*** 
+
+        요청이 실패했을 때 호출되는 콜백 함수
+
+        핸들러는 추가 오류 정보를 포함하는 parameter oError를 가질 수 있다.
+
+      * ***<u>`batchGroupId`:</u>*** 
+
+        ***<u>사용되지 않음 - 대신 groupId를 사용</u>***
+
+      * ***<u>`groupId`:</u>*** 
+
+        요청 그룹의 ID.
+
+        동일한 그룹에 속한 요청은 하나의 일괄 요청에 번들
+
+
+
+* ### Performing Update
+
+  ![advanceddatahandling19](img/advanceddatahandling19.png)
+
+  `update()` function 은 model contructor 에 지정된 OData 서비스에 대한 ***<u>`PUT/MERGE` request 가 트리거</u>***한다.
+
+  사용되는 update method 는 ***<u>기본값이 `sap.ui.model.odata.UpdateMethod.Merge` 인 global defaultUpdateMethod parameter 로 정의</u>***된다.
+
+  ***<u>`PUT` request 에서 update request 를 보내려면</u>*** OData model 을 ***<u>instance화 할 때 defaultUpdateMethod 를 `sap.ui.model.odata.UpdateMethod.Put` 로 설정</u>***해야 한다. 
+
+
+
+* ### Performing Delete
+
+  ![advanceddatahandling20](img/advanceddatahandling20.png)
+
+  backend 에서 entity 를 삭제하려면 ODataModel-object 에서 ***<u>`remove` function 을 호출</u>***할 수 있다.
+
+  이 호출은 ***<u>HTTP `DELETE` 를 트리거</u>*** 한다.
+
+
+
+* ### Refreshing the Model
+
+  * Model 은 변경된 Entity 에 종속된 binding 을 자동으로 refresh 하는 메터니즘을 제공한다.
+
+    `change`/`update`/`delete` function 을 수행하는 경우 model 은 binding 을 식별하고 이러한 binding 에 대한 refresh 를 trigger 한다.
+
+  * ***<u>`oModel.setRefreshAfterChange(false);`</u>*** 을 호출하여 자동 ***<u>refresh 를 사용하지 않도록 설정</u>*** 할 수 있다.
+
+    이렇게 하면 change 작업 후 모든 binding 이 자동으로 업데이트 되지 않는다.
+
+    자동 refresh 가 비활성화 된 경우 App 은 ***<u>각 binding 을 refresh</u>*** 해야한다.
+
+  * ***<u>`refresh()` function 은 OData 모델 내의 모든 data 를 refresh</u>*** 한다.
+
+    ***<u>각 binding 은 서버에서 data 를 reload</u>*** 한다. 
+
+    ***<u>수동 CRUD request</u>*** 를 통해 가져온 data 는 ***<u>자동으로 reload 되지 않는다</u>***.!!!
+
+
+
+* ### Consideration for SAP Gateway Services
+
+  ![advanceddatahandling21](img/advanceddatahandling21.png)
+
+  ***<u>ETag(Entity Tag)</u>*** 는 HTTP/1.1 호환 웹 서버에서 ***<u>반환되는 HTTP response header</u>*** 로, 지정된 ***<u>URL 에서 리소스 내용의 변경을 결정</u>***하는데 사용된다.
+
+  * ***<u>eTag 가 parameter 로 지정된 경우 If-Match header</u>*** 에 사용된다. 
+  * eTag 를 지정하지 않은 경우 ***<u>entry 의 metadata 에서 검색</u>***된다. 
+  
+  > * #### eTag header
+  >
+  >   eTag header 는 요청 헤더가 아닌 응답 헤더 이다.
+  >
+  >   웹서버가 제공하는 컨텐츠들에 각각 부여되는 일종의 식별자 정보이다.
+  >
+  >   웹서버는 client 에게 컨텐츠를 제공할 때 ETag 정보를 같이 전달한다.
+  >
+  >   클라이언트와 프록시 서버들은 이 정보를 다음 요청 에 활용할 수 있다.
+  >
+  >   예로 캐시 기능에 활요할 수 있다.
+  >
+  >   웹서버는 사용자가 요청한 컨텐츠가 이전에 제공했던 컨텐츠인지 새롭게 제공할 컨텐츠인지를 구별할 수 있다.
+  
+  > * #### If-Match
+  >
+  >   요청 헤더의 한 종류로 헤더 값 으로 서버에서 제공해준 ETag 정보를 표기한다.
+  >   
+  >   https://withbundo.blogspot.com/2017/07/http-13-http-iii-if-match-if-modified.html
+  
+
+
+
+* ### Two-way Binding
+
+  Two-way 변경사항이 있는 경우 UI 에서 데이터가 일관되지 않을 수 있으므로 filtering 및 sorting 할 수 없다.
+
+  따라서 sorting 또는 filtering 을 수행하기 전에 변경사항을 제출하거나 재설정 해야한다.
+
+  ![advanceddatahandling23](img/advanceddatahandling23.png)
+
+  Entity 경로 의 array 과 함께 `resetChange()` 를 호출하여 특정 entity 만 재설정할 수도 있다.
+
+  ![advanceddatahandling22](img/advanceddatahandling22.png)
+
+  Two-way Binding 은 manifest.json 파일내에서 구상할 수도 있다.
+
+
+
+* ### Using Function Imports
+
+  데이터 모델내에서 Function Import 를 생성하여 Service Builder 에서 이러한 additional service  operation 을 구현할 수 있다.
+
+  예를 들어 다음 custom operations( : Work Item 확인 ) 에 대한 Function Import 를 생성할 수 있다.
+
+  custom operation 을 호출하기 위해 새 Function Import 를 생성하는 것은 간단하지만 사용할 작업을 표준 ***<u>CRUD 작업을 사용하여 호출 할 수 있는 경우에는 Function Import 를 생성하지 말아야한다</u>***.
+
+  즉 ***<u>standard operation 을 사용하여 호출 할 수 없는 custom operation 에 대해서만</u>*** Function Import 를 생성해야한다.
+
+  ![advanceddatahandling24](img/advanceddatahandling24.png)
+
+  Function Import 를 호출하기 위해 OData Model 은 `callFunction` method 을 제공한다.
+
+  method 호출은 모델 constructor 에 지정된 Function Import OData 서비스 에 대한 request 를 트리거 한다.
+
+  ***<u>Function Import 의 return type 이 entity type 이거나 etity type 의 collection</u>*** 인 경우 ***<u>변경사항이 model 에 반영</u>***된다.
+
+  그렇지 않은 경우 무시되고 success 콜백 함수에서 response 가 처리될 수 있다.
+
+  
+
+  
 
 
 

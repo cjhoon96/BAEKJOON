@@ -16,8 +16,6 @@
 
 * Lesson: Loading and Initializing SAPUI5
 
-
-
 ### 개발
 
 #### Unit 5: Dependency Management
@@ -89,7 +87,7 @@
 * Lesson: Implementing App Navigation:white_check_mark:
 * Lesson: Implementing a Full-screen Application:warning:
 * Lesson: Implementing a Master-Detail Application:warning:
-* Lesson: Working with Messages 
+* # :checkered_flag:Lesson: Working with Messages 
 * Lesson: Describing Key Responsive Design Controls:white_check_mark:
 * Lesson: Extending Standard Controls:warning:
 * Lesson: Describing Custom Controls:warning:
@@ -97,23 +95,23 @@
 * Lesson: Implementing Unit Tests with Qunit :white_check_mark:
 * Lesson: Implementing One-Page Acceptance (OPA) Tests :white_check_mark:
 
-#### Unit 3: Advanced Data Handling
+#### Unit 3: Advanced Data Handling :white_check_mark:
 
-* Lesson: Describing Remote vs. Local OData Services
-* Lesson: Working with the MockServer
-* Lesson: Working with the ODataModel
-* Lesson: Describing OData Deep Inserts
-* Lesson: Introducing SAPUI5 Smart Controls
-* Lesson: Working with SAPUI5 Smart Controls
-* Lesson: Introducing SAP Fiori Elements
+* :white_check_mark:Lesson: Describing Remote vs. Local OData Services
+* :white_check_mark:Lesson: Working with the MockServer
+* :white_check_mark:Lesson: Working with the ODataModel
+* :white_check_mark:Lesson: Describing OData Deep Inserts
+* :white_check_mark:Lesson: Introducing SAPUI5 Smart Controls
+* :white_check_mark:Lesson: Working with SAPUI5 Smart Controls
+* :white_check_mark:Lesson: Introducing SAP Fiori Elements
 
-#### Unit 4: Application Extensibility, Introduction
+#### Unit 4: Application Extensibility, Introduction:white_check_mark:
 
-* Lesson: Introducing SAPUI5 Flexibility
-* Lesson: Explaining Extension Points
-* Lesson: Describing Other Types of Extensibility in SAPUI5
+* :white_check_mark:Lesson: Introducing SAPUI5 Flexibility
+* :white_check_mark:Lesson: Explaining Extension Points
+* :white_check_mark:Lesson: Describing Other Types of Extensibility in SAPUI5
 
-#### Unit 5: Version Control - Working in Teams
+# :checkered_flag:Unit 5: Version Control - Working in Teams
 
 * Lesson: Working with GIT
 * Lesson: Working with GIT Repositories
@@ -131,7 +129,7 @@
 * Lesson: Explaining SAP User Experience Tools and Technologies
 * Lesson: Describing SAP User Experience Use Case for Building Fiorilike Apps
 
-#### Unit 2: SAP Fiori Elements, Overview
+#### Unit 2: SAP Fiori Elements, Overview:white_check_mark: 
 
 * :white_check_mark: Lesson: Explaining the Architecture of Fiori Elements
 * :white_check_mark: Lesson: Explaining Templates for Fiori Elements
@@ -142,37 +140,37 @@
 * :white_check_mark: Lesson: Explaining Metadata Extension
 * :heavy_check_mark: Lesson: Learning Scenarios of Fiori Elements Implementation
 
-#### Unit 3: List Report
+#### Unit 3: List Report:white_check_mark: 
 
 * :white_check_mark: Lesson: Explaining Basic Annotations for List Report
 * :white_check_mark: Lesson: Using Searching and Filtering Data
 * :white_check_mark: Lesson: Providing the Value Help
 * :white_check_mark: Lesson: Explaining Variant Management
 
-#### Unit 4: Object Page
+#### Unit 4: Object Page:white_check_mark: 
 
 * :white_check_mark: Lesson: Using Basic Annotations for Object Pages
 * :white_check_mark: Lesson: Using Header Facets for Object Pages
 * :white_check_mark: Lesson: Using Sections and Facets in Object Pages
 
-#### Unit 5: Advanced Topics of List Report and Object Page
+#### Unit 5: Advanced Topics of List Report and Object Page:white_check_mark: 
 
-* Lesson: Explaining Navigation Concept and Annotations
-* Lesson: Using Data Visualization
-* Lesson: Creating Charts
-* Lesson: Performing CRUD operations with BOPF
+* :white_check_mark: Lesson: Explaining Navigation Concept and Annotations
+* :white_check_mark: Lesson: Using Data Visualization
+* :white_check_mark: Lesson: Creating Charts
+* :white_check_mark: Lesson: Performing CRUD operations with BOPF
 
-#### Unit 6: Overview Page
+#### Unit 6: Overview Page:white_check_mark: 
 
-* Lesson: Getting an Overview of the Overview Page (OVP)
+* :white_check_mark: Lesson: Getting an Overview of the Overview Page (OVP)
 
-#### Unit 7: Analytical List Page
+#### Unit 7: Analytical List Page:white_check_mark: 
 
-* Lesson: Getting an Overview of the Analytical List Page
+* :white_check_mark: Lesson: Getting an Overview of the Analytical List Page
 
-#### Unit 8: SAP Fiori Elements Applications
+#### Unit 8: SAP Fiori Elements Applications:white_check_mark: 
 
-* Lesson: Extending and Adapting SAP Fiori Elements Applications
+* :white_check_mark: Lesson: Extending and Adapting SAP Fiori Elements Applications
 
 
 
@@ -180,24 +178,24 @@
 
 # UX410
 
-#### Unit 1: Introduction to User Experience (UX)
+# :checkered_flag:Unit 1: Introduction to User Experience (UX)
 
 * Lesson: Explaining UX versus Usability versus UI
 
-#### Unit 2: SAP UX Strategy
+# :checkered_flag:Unit 2: SAP UX Strategy
 
 * Lesson: Introducing the SAP UX Strategy
 
-#### Unit 3: SAP Fiori UX
+# :checkered_flag:Unit 3: SAP Fiori UX
 
 * Lesson: Explaining the SAP Fiori UX
 
-#### Unit 4: User Experience Design:warning:
+# :checkered_flag:Unit 4: User Experience Design
 
 * Lesson: Explaining Design Thinking
 * Lesson: Explaining Decomposition and Re-composition
 
-#### Unit 5: SAP Fiori Design Guidelines:warning:
+# :checkered_flag:Unit 5: SAP Fiori Design Guidelines
 
 * Lesson: Understanding SAP Fiori Design Guidelines
 * Lesson: Understanding App Types
@@ -206,7 +204,7 @@
 
 * Lesson: Using the Development Tools of SAP Business Application Studio
 
-#### Unit 7: SAPUI5 Advanced Topics
+# :checkered_flag:Unit 7: SAPUI5 Advanced Topics
 
 * Lesson: SAPUI5 at a Glance
 * Lesson: Understanding SAPUI5: Bootstrapping and MVC
@@ -218,12 +216,12 @@
 
 * Lesson: Knowing the Golden Rules of SAPUI5 Development
 
-#### Unit 9: SAP Fiori Launchpad
+# :checkered_flag:Unit 9: SAP Fiori Launchpad
 
 * Lesson: Understanding the SAP Fiori Launchpad
 * Lesson: Understanding the Technical Perspective of SAP Fiori Launchpad
 
-#### Unit 10: SAP Fiori Launchpad Configuration
+# :checkered_flag:Unit 10: SAP Fiori Launchpad Configuration
 
 * Lesson: Understanding the SAP Fiori Launchpad Configuration
 
@@ -233,7 +231,7 @@
 * Lesson: Creating a Dynamic Page App
 * Lesson: Understanding the Flexible Column Layout
 
-#### Unit 12: SAP Fiori Design Guidelines
+# Unit 12: SAP Fiori Design Guidelines
 
 * Lesson: Understanding Floorplans as Defined in the SAP Fiori Guidelines
 * Lesson: Understanding List Report, as Defined in the SAP Fiori Guidelines
@@ -244,19 +242,19 @@
 * Lesson: Understanding Draft Handling
 * Lesson: Understanding SAP Fiori Locking
 
-#### Unit 13: SAPUI5 Flexibility
+#### :white_check_mark:Unit 13: SAPUI5 Flexibility
 
-* Lesson: Explaining Extension Points in SAPUI5
-* Lesson: Implementing View Extension, Modification, and Replacement
+* :white_check_mark:Lesson: Explaining Extension Points in SAPUI5
+* :white_check_mark:Lesson: Implementing View Extension, Modification, and Replacement
 
-#### Unit 14: SAP Fiori Elements
+#### :white_check_mark:Unit 14: SAP Fiori Elements
 
-* Lesson: Understanding SAP Fiori Elements
-* Lesson: Implementing SAP Fiori Elements
-* Lesson: Implementing List Report using SAP Fiori Elements
-* Lesson: Implementing Search and Filter Capabilities with SAP Fiori Elements
-* Lesson: Implementing Object Page with SAP Fiori Elements
-* Lesson: Displaying Dependent Entities as SAP Fiori Elements
+* :white_check_mark:Lesson: Understanding SAP Fiori Elements
+* :white_check_mark:Lesson: Implementing SAP Fiori Elements
+* :white_check_mark:Lesson: Implementing List Report using SAP Fiori Elements
+* :white_check_mark:Lesson: Implementing Search and Filter Capabilities with SAP Fiori Elements
+* :white_check_mark:Lesson: Implementing Object Page with SAP Fiori Elements
+* :white_check_mark:Lesson: Displaying Dependent Entities as SAP Fiori Elements
 
 #### Unit 15: Continuous Integration and Delivery
 

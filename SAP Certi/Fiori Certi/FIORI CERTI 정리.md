@@ -14,19 +14,41 @@
 
 ****
 
+## Which <u>dimensions</u> define SAP Fiori? (Choose the correct answers).  :no_entry:
+
+Concept 
+
+Design 
+
+Performance 
+
+Technology.
+
+****
+
+:book: UX100 - Unit 1 
+
+A/B/D
+
+****
+
+
+
+
+
 ## What are the main principles of SAP Fiori? 
 
 ## (Choose the correct answers).
 
-### Role-based 
+Role-based 
 
-### Adaptive 
+Adaptive 
 
-### Simple 
+Simple 
 
-### Coherent 
+Coherent 
 
-### Delightful
+Delightful
 
 ****
 
@@ -34,25 +56,7 @@
 
 https://experience.sap.com/fiori-design-web/design-principles/
 
-****
-
-
-
-
-
-## Which <u>dimensions</u> define SAP Fiori? (Choose the correct answers). 
-
-### Concept 
-
-### Design 
-
-Performance 
-
-### Technology.
-
-****
-
-:book: UX100 - Unit 1 
+A/B/C/D/E
 
 ****
 
@@ -60,39 +64,13 @@ Performance
 
 
 
-## Which <u>platforms</u> support the integration of SAP Fiori? 
+## Which <u>clients</u> can be used for SAP Fiori? :no_entry:
 
 ## (Choose the correct answers). 
 
-### SAP Enterprise Portal 
+Web Browser 
 
-### SAP Cloud Platform Portal 
-
-### SAP Cloud Platform Mobile Services.
-
-SAP Process Integration 
-
-SAP HANA Enterprise Cloud 
-
-****
-
-:book: UX100 - Unit 1 
-
-****
-
-
-
-
-
-## Which <u>clients</u> can be used for SAP Fiori? 
-
-## (Choose the correct answers). 
-
-### Web Browser 
-
-### SAP Fiori Client 
-
-### SAP Business Client.
+SAP Business Client
 
 SAP Logon 
 
@@ -102,27 +80,7 @@ SAP Easy Access
 
 :book: UX100 - Unit 1 
 
-****
-
-
-
-
-
-## Which personalization element <u>refers to the application</u>? 
-
-## (Choose the correct answer). 
-
-Fiori Group 
-
-Fiori Group Tile 
-
-Fiori Catalog 
-
-### Fiori Catalog Tile.
-
-****
-
-:book: UX100 - Unit 1 
+A/B
 
 ****
 
@@ -130,31 +88,83 @@ Fiori Catalog
 
 
 
-
-
-## Which personalization elements can be <u>assigned to user roles</u>? 
+## Which <u>platforms</u> support the integration of SAP Fiori? :no_entry:
 
 ## (Choose the correct answers). 
 
-### Fiori Group 
+SAP Enterprise Portal 
 
-Fiori Group Tile 
+SAP Cloud Platform Portal  (Launchpad service)
 
-### Fiori Catalog 
+SAP Mobile Services.
 
-Fiori Catalog Tile.
+SAP Process Integration 
+
+SAP HANA Enterprise Cloud 
 
 ****
 
 :book: UX100 - Unit 1 
 
+A/B/C
+
 ****
 
 
 
 
 
-## What is meant by the term data-driven navigation? (Choose the correct answer). 
+## Which personalization element can be <u>assigned to user roles</u>? :no_entry:
+
+## (Choose the correct answer). 
+
+SAP Fiori group 
+
+SAP Fiori tile 
+
+SAP Fiori catalog 
+
+SAP Fiori space 
+
+SAP Fiori page
+
+****
+
+:book: UX100 - Unit 1 
+
+A/C/D
+
+****
+
+
+
+
+
+## Which element has the application as target? :no_entry:
+
+## (Choose the correct answer. )
+
+SAP Fiori user role 
+
+SAP Fiori catalog 
+
+SAP Fiori tile 
+
+SAP Fiori app descriptor 
+
+****
+
+Correct. The personalization element SAP Fiori app descriptor has the application as  target.
+
+D
+
+****
+
+
+
+## What is meant by the term data-driven navigation? :no_entry:
+
+## (Choose the correct answer). 
 
 ### Data objects offer navigation links to dependent data objects and functions. 
 
@@ -176,39 +186,15 @@ Fiori Catalog Tile.
 
 ****
 
-## What is JavaScript Object Notation (JSON) 
+## What is the central frame application of SAP Fiori? (Choose the correct answer). 
 
-## (Choose the correct answer). 
-
-### JSON is a format definition to structure data transferred using web technologies 
+### SAP Fiori launchpad 
 
 ???.
 
 ****
 
 :book: UX100 - Unit 2 
-
-JSON 은 웹 기술을 사용하여 전송되는 데이터를 구조화 하기 위한 format 정의 이다.
-
-****
-
-
-
-
-
-## Which apps are meant by the term legacy apps? 
-
-## (Choose the correct answer). 
-
-###  ABAP Transactions  /  Web Dynpro ABAP applications 
-
-???.
-
-****
-
-:book: UX100 - Unit 2
-
-https://www.munich-enterprise.com/en/sap-fiori)
 
 ****
 
@@ -256,15 +242,43 @@ https://www.munich-enterprise.com/en/sap-fiori)
 
 
 
-## What is the central frame application of SAP Fiori? (Choose the correct answer). 
+## 
 
-### SAP Fiori launchpad 
+
+
+## What is JavaScript Object Notation (JSON) 
+
+## (Choose the correct answer). 
+
+### JSON is a format definition to structure data transferred using web technologies 
 
 ???.
 
 ****
 
 :book: UX100 - Unit 2 
+
+JSON 은 웹 기술을 사용하여 전송되는 데이터를 구조화 하기 위한 format 정의 이다.
+
+****
+
+
+
+
+
+## Which apps are meant by the term legacy apps? 
+
+## (Choose the correct answer). 
+
+###  ABAP Transactions  /  Web Dynpro ABAP applications 
+
+???.
+
+****
+
+:book: UX100 - Unit 2
+
+https://www.munich-enterprise.com/en/sap-fiori)
 
 ****
 
