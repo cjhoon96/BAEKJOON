@@ -1330,7 +1330,7 @@ Object Page 의 Header Facet 아래 area 는 ***<u>Section 별로 Group 화 되�
 
 * Internal navigation 은 Fiori Element App 을 통한 navigation 이다.
 * 기본 Internal navigation mode 는 ***<u>List Report => Object Page</u>*** 이다. 
-* Internal navigation 은 ***<u>manifest.json 에서 구성</u>***된다.
+* # Internal navigation 은 ***<u>manifest.json 에서 구성</u>***된다.
 
 manifest.json 파일에서 앱에서 사용할 수 있는 페이지를 정의할 수 있다.
 

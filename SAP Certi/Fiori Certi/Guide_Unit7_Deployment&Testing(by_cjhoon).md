@@ -17,6 +17,20 @@
 
 
 
+![deploy3](img/deploy3.png)
+
+![deploy1](img/deploy1.png)
+
+![deploy2](img/deploy2.png)
+
+
+
+
+
+
+
+
+
 ## Unit test with QUnit
 
 첫번째 test 를 구현하기 전에 app 의 다양한 측면을 테스트 하는 방법을 생각해야한다.
@@ -62,8 +76,8 @@ Sinon.JS 는 다음과 같은 기능을 가진 JS mock framework 이다.
 * ### Sinon.JS
 
   * ***<u>spy / stub / mock</u>*** 을 지원한다.
-  * 타이머 및 AJAX 요청에 대해 higher-level test double 을 지원한다. 
-  * SAP UI5 라이브러리에 포함돼있다.
+  * 타이머 및 ***<u>AJAX 요청에 대해 higher-level test double 을 지원</u>***한다. 
+  * ***<u>SAP UI5 라이브러리에 포함</u>***돼있다.
 
 
 
@@ -85,15 +99,33 @@ Sinon.JS 는 다음과 같은 기능을 가진 JS mock framework 이다.
 
     test 를 위한 설정, test 할 action , 결과의 평가를 명확하게 구별하기 위함이다.
 
-  * 주요 construct
+  * Arrange-Act-Assert pattern
 
+    - Arrange(준비) : 
+  
+      테스트를 실행하기 전에 필요한 것들을 준비한다. 
+  
+      예를 들어, 객체를 생성하거나, Mock 객체를 만들거나, 테스트 전에 호출되어야 할 API들을 호출하는 것들을 의미
+  
+    - Act(실행) : 
+  
+      테스트 코드를 실행
+  
+    - Assert(단언) : 
+  
+      실행한 코드가 예상한대로 동작했는지 확인한다. 
+  
+    
+  
+  * 주요 construct
+  
     * `module(string)` - 모듈을 정의
     * `test(string, function)`- test 정의
     * `ok(boolean, string)` - true/false 로 유효성 검사
     * `equal(value1, value2, message)` - double-equal comparator 를 사용하여 두 값을 비교
     * `deepEqual(value1, value2, message)` - ID 뿐 아니라 content 를 기준으로 두 값을 비교
     * `strictEqual(value1, value2, message)` - triple-equal comparator 를 사용하여 두값을 엄격하게 비교
-
+  
     ![qunitex](img/qunitex.png)
 
 
@@ -102,7 +134,9 @@ Sinon.JS 는 다음과 같은 기능을 가진 JS mock framework 이다.
 
   ![testdouble](img/testdouble.png)
 
-  stub 은 mock method 호출을 위한 값만을 제공한다. (indirect input)
+  # 중요!!!!
+
+  stub 은 ***<u>mock method 호출에 대한 return 값을 제공하기만</u>*** 한다. (indirect input)
 
   또한 올바른 parameter(indirect output) 로 예상 method 가 호출되는지 확인한다.
 
@@ -111,7 +145,7 @@ Sinon.JS 는 다음과 같은 기능을 가진 JS mock framework 이다.
   주의!! mock 이 너무 엄격(strict) 하면 test 가 깨질 수 있다.
 
   
-
+  
   Solution : mocking framework 를 사용하여 mock 을 동적으로 설계 
 
 

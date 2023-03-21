@@ -146,9 +146,92 @@
 
 
 
+
+
+## SPA Fiori Demension 
+
+* ### Concept
+
+  * Role-based
+  * Adaptive
+  * Coherent
+  * Simple
+  * Delightful
+
+* ### Design
+
+  * Visual Design
+  * Information Architecture
+  * Interaction Patterns
+
+* ### Technology
+
+
+
 ## SAP Fiori application types
 
-* ### 
+* ### Transactional
+
+  Task based 이며 business process 를 수행한다.
+
+  <u>**CRUD 작업중 하나 이상이**</u> 있으며 app 과 back-end 간에 양방향 데이터 이동을 수반한다.
+
+  <u>**SAP HANA DB 가 필수는 아니지만 최적의 성능을 위해 권장한다.**</u>
+
+  * SAP Fiori Element
+    * Overview Page
+    * List Report
+    * Worklist
+  * Classic Application
+    * ABAP Transaction
+    * WebClient UI
+    * Web Dynpro ABAP
+
+
+
+* ### Analytical
+
+  **읽기 전용 앱**으로 일반적으로 SAP HANA 의 기능을 사용하여 **숫자 <u>크런칭, 데이터 시각화, 미래 예측</u>** 등의 사용 사례를 해결한다.
+
+  SAP 에서 제공되는 <u>**KPI Modeler**</u> 를 사용하여 **<u>프로그래밍 없이 KPI 그래프/차트</u>** 를 생성할 수 있다.
+
+  **<u>기본 제공되는 KPI</u>** 도 존재한다.
+
+  <u>**SAP HANA 가 데이터베이스로 필요하다.**</u>
+
+  * SAP Fiori Element
+    * Overview Page
+    * Analytical List Page
+  * BW Query Used
+    * Analytics Cloud
+    * Design Studio
+    * Web Dynpro ABAP
+
+
+
+* ### Fact Sheet
+
+  Business object 또는 Business transaction 에 대한 **<u>상황별 정보를 표시</u>**한다.
+
+  이 앱들은 보통 <u>**실행 타일이 없다.**</u>
+
+  대신 <u>검색 결과를 클릭</u>하거나 다른 <u>**Transactional / Analytical / Fact Sheet App 에서**</u> 사용할 수 있는 다양한 **<u>드릴다운 링크를 클릭하여 실행</u>**된다.
+
+  다른 Transactional app 에 대한 링크도 제공한다.
+
+  (ex. 구매 주문 정보 시트 앱에서 구매 요청을 구매 주문으로 변환하는 트랜잭션 앱으로 이동할 수 있다.)
+
+  **<u>읽기 전용 앱</u>**으로 데이터를 ***<u>CDS view 로 보며 UI rendering annotation</u>*** 을 사용한다.
+
+  **<u>SAP HANA 가 데이터베이스로 필요하다.</u>**
+
+  * SAP Fiori Element
+    * Overview Page
+    * Object Page
+
+
+
+
 
 ## Elements of User Experience Design
 

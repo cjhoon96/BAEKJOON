@@ -34,7 +34,7 @@ deep Linking. **=> X**:white_check_mark:
 
 ***<u>DEFINE</u>*** 은 서비스의 metadata 를 query 할 때마다 호출 되는 entry method 이다.
 
-이 메서드에는 서비스 내의 다양한 artifact 를 정의하는 코드가 포함되어있다.
+이 메서드에는 서비스 내의 다양한 ***<u>artifact 를 정의하는 코드가 포함</u>***되어있다.
 
 DEFINE 메소드는 이후에 class 에 나열된 다양한 다른 method를 호출한다. 
 

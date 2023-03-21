@@ -486,6 +486,8 @@ Custom App이 start-up project 가 되고 추가 customizing configuration 으�
 
     
 
+    # 중요!!!
+
     1. 애플리케이션에서 고객이 ***<u>custom code 를 연결하고 실행하고자 하는 controller code 내의 strategic location 를 식별</u>***한다.
 
     2. 애플리케이션에서 ***<u>extension 을 위해 예약된 새로운 function 이름을 정의</u>***한다,
@@ -503,7 +505,7 @@ Custom App이 start-up project 가 되고 추가 customizing configuration 으�
        customizing이 활성화된 경우 새 function 을 실행할 수 있다.
 
     
-
+    
     
 
 * ### Deploy New Application Variant
@@ -538,7 +540,8 @@ Custom App이 start-up project 가 되고 추가 customizing configuration 으�
 
 
 
-
+A ***<u>wizard</u>*** to generate the files for each extension possibility
+The ***<u>Extensibility Pane</u>*** to choose extension points
 
 
 

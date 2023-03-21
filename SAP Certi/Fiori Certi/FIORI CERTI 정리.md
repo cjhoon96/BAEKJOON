@@ -4,7 +4,7 @@
 
 
 
-# UX 100
+# UX 100 90
 
 ****
 
@@ -14,7 +14,7 @@
 
 ****
 
-## Which <u>dimensions</u> define SAP Fiori? (Choose the correct answers).  :no_entry:
+## 1. Which <u>dimensions</u> define SAP Fiori? (Choose the correct answers).  :no_entry:
 
 Concept 
 
@@ -36,7 +36,7 @@ A/B/D
 
 
 
-## What are the main principles of SAP Fiori? 
+## 2. What are the main principles of SAP Fiori? 
 
 ## (Choose the correct answers).
 
@@ -64,7 +64,7 @@ A/B/C/D/E
 
 
 
-## Which <u>clients</u> can be used for SAP Fiori? :no_entry:
+## 3. Which <u>clients</u> can be used for SAP Fiori? :no_entry:
 
 ## (Choose the correct answers). 
 
@@ -88,7 +88,7 @@ A/B
 
 
 
-## Which <u>platforms</u> support the integration of SAP Fiori? :no_entry:
+## 4. Which <u>platforms</u> support the integration of SAP Fiori? :no_entry:
 
 ## (Choose the correct answers). 
 
@@ -114,7 +114,7 @@ A/B/C
 
 
 
-## Which personalization element can be <u>assigned to user roles</u>? :no_entry:
+## 5. Which personalization element can be <u>assigned to user roles</u>? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -140,7 +140,7 @@ A/C/D
 
 
 
-## Which element has the application as target? :no_entry:
+## 6. Which element has the application as target? :no_entry:
 
 ## (Choose the correct answer. )
 
@@ -162,7 +162,7 @@ D
 
 
 
-## What is meant by the term data-driven navigation? :no_entry:
+## 7. What is meant by the term data-driven navigation? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -186,7 +186,7 @@ D
 
 ****
 
-## What is the central frame application of SAP Fiori? (Choose the correct answer). 
+## 1. What is the central frame application of SAP Fiori? (Choose the correct answer). 
 
 ### SAP Fiori launchpad 
 
@@ -202,7 +202,7 @@ D
 
 
 
-## What is used as container for SAPUI5 apps in the <u>ABAP repository</u>? 
+## 2. What is used as container for SAPUI5 apps in the <u>ABAP repository</u>? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -220,7 +220,7 @@ D
 
 
 
-## Where are the <u>services for SAPUI5 apps organized</u>? 
+## 3. Where are the <u>services for SAPUI5 apps organized</u>? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -242,11 +242,23 @@ D
 
 
 
-## 
+## 4. What does CRUD stand for? (Choose the correct answer). 
+
+### Create, Read, Update, Delete 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+******
 
 
 
-## What is JavaScript Object Notation (JSON) 
+
+
+## 5. What is JavaScript Object Notation (JSON) :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -266,7 +278,53 @@ JSON 은 웹 기술을 사용하여 전송되는 데이터를 구조화 하기 �
 
 
 
-## Which apps are meant by the term legacy apps? 
+## 6. Which OData option grants access to the service definition? :no_entry:
+
+## (Choose the correct answer). 
+
+### $metadata 
+
+???.
+
+****
+
+:book: UX100 - Unit 2 
+
+****
+
+
+
+
+
+## 7. What are the app types of SAP Fiori? 
+
+## (Choose the correct answers). 
+
+Transactional 
+
+Analytical 
+
+Smart 
+
+Principal 
+
+Fact Sheet.
+
+****
+
+:book: UX100 - Unit 2 
+
+a/b/e
+
+http://blog.sap-press.com/sap-fiori-apps-for-sap-s4hana-sd
+
+****
+
+
+
+
+
+## 8. Which apps are meant by the term legacy apps? 
 
 ## (Choose the correct answer). 
 
@@ -286,127 +344,13 @@ https://www.munich-enterprise.com/en/sap-fiori)
 
 
 
-## Which OData option grants access to the service definition? 
-
-## (Choose the correct answer). 
-
-### $metadata 
-
-???.
-
-****
-
-:book: UX100 - Unit 2 
-
-****
-
-
-
-
-
-## What are the app types of SAP Fiori? 
-
-## (Choose the correct answers). 
-
-### Transactional 
-
-### Analytical 
-
-Smart 
-
-Principal 
-
-### Fact Sheet.
-
-****
-
-:book: UX100 - Unit 2 
-
-http://blog.sap-press.com/sap-fiori-apps-for-sap-s4hana-sd
-
-****
-
-
-
-
-
-## What does CRUD stand for? (Choose the correct answer). 
-
-### Create, Read, Update, Delete 
-
-???.
-
-****
-
-:book: UX100 - Unit 2 
-
-******
-
-
-
-
-
 # Unit 3.
 
 ****
 
-## What is SAP S/4HANA? (Choose the correct answer). 
+## 1. Which system holds the SAP Fiori launchpad in a hub deploy? (Choose the correct answer). :no_entry:
 
-### The fourth generation of the SAP Business Suite based on SAP HANA renewing enterprise business 
-
-???.
-
-****
-
-:book: UX100 - Unit 3 
-
-****
-
-
-
-
-
-## What is used in SAP S/4HANA to read data from the database? 
-
-## (Choose the correct answer).
-
-### ABAP Core Data Services (CDS) 
-
-???.
-
-****
-
-:book: UX100 - Unit 3  
-
-****
-
-
-
-
-
-## Which system part provides the analytical data in SAP S/4HANA? 
-
-## (Choose the correct answer). 
-
-### SAP S/4HANA Embedded Analytics 
-
-???.
-
-****
-
-:book: UX100 - Unit 3 
-
-https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
-
-****
-
-
-
-
-
-## Which data processing capabilities does SAP HANA combine? (Choose the correct answer). 
-
-### Analytical / transactional 
+### Front-End Server (FES) 
 
 ???.
 
@@ -420,7 +364,23 @@ https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
 
 
 
-## Which ABAP repository element contains the service logic? (Choose the correct answer). 
+## 2. Which system component is split between front-end server and back-end server?:no_entry:
+
+### SAP Gateway
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## 3. Which ABAP repository element contains the service logic? (Choose the correct answer). 
 
 ### Data Provider Class (DPC) 
 
@@ -442,23 +402,7 @@ gateway
 
 
 
-## Which system holds the SAP Fiori launchpad? (Choose the correct answer). 
-
-### Front-End Server (FES) 
-
-???.
-
-****
-
-:book: UX100 - Unit 3 
-
-****
-
-
-
-
-
-## How is the implementation of Fiori apps delivered by SAP? (Choose the correct answer). 
+## 4. How is the implementation of Fiori apps delivered by SAP? (Choose the correct answer). :no_entry:
 
 ### Updates of the back-end server 
 
@@ -474,7 +418,153 @@ gateway
 
 
 
-## What is the data source definition for the SAP Fiori search? 
+## 5. Which data processing capabilities does SAP HANA combine? (Choose the correct answer). :no_entry:
+
+### Analytical / transactional 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## 6. Which service areas are provided by the SAP HANA platform? Choose the correct answers. :no_entry:
+
+Application Services 
+
+Gateway Services 
+
+Integration Services 
+
+Connectivity Services 
+
+Processing Services 
+
+Database Services
+
+****
+
+:book: UX100 - Unit 3 
+
+A/C/E/F
+
+****
+
+
+
+
+
+## 7. What is SAP S/4HANA? (Choose the correct answer). :no_entry:
+
+### The fourth generation of the SAP Business Suite based on SAP HANA renewing enterprise business 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## 8. Which areas were re-imagined in SAP S/4HANA? Choose the correct answers. :no_entry:
+
+User experience 
+
+User management 
+
+Business processes 
+
+System configuration 
+
+Database models 
+
+****
+
+:book: UX100 - Unit 3 
+
+A/C/D/E
+
+Correct. User experience, business processes, system configuration, and databse models  were re-imagined in SAP S/4HANA
+
+****
+
+
+
+
+
+## 9. Which system part provides the analytical data in SAP S/4HANA? :no_entry:
+
+## (Choose the correct answer). 
+
+### SAP S/4HANA Embedded Analytics 
+
+???.
+
+****
+
+:book: UX100 - Unit 3 
+
+https://www.scirp.org/journal/paperinformation.aspx?paperid=77387
+
+****
+
+
+
+
+
+## 10. What is used in SAP S/4HANA to read data from the database? :no_entry:
+
+## (Choose the correct answer).
+
+### ABAP Core Data Services (CDS) 
+
+???.
+
+****
+
+:book: UX100 - Unit 3  
+
+****
+
+
+
+
+
+## 11. Which applications can be used as entry point to create evaluations? Choose the correct answers. :no_entry:
+
+Query Browser 
+
+My Queries 
+
+View Browser 
+
+Analyze Query Log 
+
+****
+
+:book: UX100 - Unit 3  
+
+A/C
+
+Correct. The entry points are Query and View Browse
+
+****
+
+
+
+
+
+## 12. What is the data source definition for the SAP Fiori search? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -494,17 +584,91 @@ https://help.sap.com/docs/SAP_FIORI_OVERVIEW/17ca92fbe8f54d9d8dfbe830cbb0c8d2/12
 
 
 
-## Which system part provides the OData services for analytical apps? (Choose the correct answer). 
+## 13. What is the data source definition for object pages? 
 
-### SAP HANA e**<u>X</u>**tended application <u>S</u>ervices (XS) 
-
-???.
+### ABAP Core Data Services (CDS) View
 
 ****
 
 :book: UX100 - Unit 3 
 
-https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/a6c0749255d84a81a154a7fc87dd33ce.html?version=2.0.03&locale=en-US
+****
+
+
+
+
+
+## 14. What is used in SAP S/4HANA to read data from the database? 
+
+### ABAP Core Data Services (CDS)
+
+****
+
+ :book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## 15. What is used in SAP S/4HANA to run native code on the database? :no_entry:
+
+### ABAP Managed Database Procedures (AMPD)
+
+****
+
+ :book: UX100 - Unit 3 
+
+****
+
+
+
+
+
+## 15. Which are floorplans in SAP Fiori elements? Choose the correct answers. 
+
+Object Page 
+
+Master Detail Page 
+
+List Report 
+
+Overview Page 
+
+Dynamic Page 
+
+****
+
+:book: UX100 - Unit 3 
+
+A/C/D
+
+Correct. Object page, list report, and overview are floorplans in SAP Fiori elements. 
+
+****
+
+
+
+
+
+## 16. In which layers is the metadata for SAP Fiori elements created? Choose the correct answers.:no_entry:
+
+User Interface 
+
+OData Service 
+
+Core Data Services 
+
+Database 
+
+****
+
+:book: UX100 - Unit 3
+
+A/C 
+
+Correct. In the user interface and in the Core Data Services is the metadata created.
 
 ****
 
@@ -516,86 +680,91 @@ https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/a6c
 
 ****
 
-## For intent-based navigation, what does an intent consist of? (Choose the correct answers). 
-
-Target mapping 
-
-### Semantic object 
-
-### Action 
-
-ICF path.
-
-****
-
-:book: UX100 - Unit 4 
-
-https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/5ff538515a2a455696f9c203939d9360.html?version=2.0.01&locale=en-US
-
-****
-
-
-
-
-
-## Which ABAP transactions can be used to analyze the intents used in target mappings? 
+## 1. Which layers of settings are available for SAP Fiori? :no_entry:
 
 ## (Choose the correct answers). 
 
-/UI2/FSAC 
+Configuration 
 
-### /UI2/FLIA 
+Personalization 
 
-### /UI2/FLC 
-
-/UI2/FLP
-
-****
-
-:book: UX100 - Unit 4 
-
-FLIA : Fiori launchpad Intent Analysis
-
-FLC : Fiori launchpad Check
-
-****
-
-
-
-
-
-## What is meant by the term legacy app descriptor? 
-
-## (Choose the correct answer). 
-
-### Assignment of tiles and target mappings     to transaction codes or Web Dynpro applications 
-
-???.
-
-****
-
-:book: UX100 - Unit 4 
-
-****
-
-
-
-
-
-## Which layers of settings are available for SAP Fiori? 
-
-## (Choose the correct answers). 
-
-### Configuration 
-
-### Personalization 
-
-### Customizing 
+Customizing 
 
 Internationalization.
 
 ****
 
+:book: UX100 - Unit 4
+
+A/B/C 
+
+****
+
+
+
+
+
+## 2. Which elements of SAP Fiori can be assigned to business roles? Choose the correct answers. :no_entry:
+
+Spaces 
+
+Pages 
+
+Business Catalog Groups 
+
+Technical Catalogs 
+
+Business Catalogs 
+
+****
+
+:book: UX100 - Unit 4
+
+A/C/E
+
+Correct. Business catalogs, business catalog groups, and spaces can be assigned to  business roles.
+
+****
+
+
+
+
+
+## 3. How are the tools for managing SAP Fiori spaces and pages provided? :no_entry:
+
+### They are provided as apps in the SAP Fiori launchpad.
+
+****
+
+:book: UX100 - Unit 4
+
+****
+
+
+
+
+
+## 4. How many spaces should be assigned to a business role according to the best practices? :no_entry:
+
+### One
+
+****
+
+:book: UX100 - Unit 4
+
+****
+
+
+
+
+
+## 5. Which tool provides the definition of Fiori tiles? (Choose the correct answer). :no_entry:
+
+### SAP Fiori launchpad designer 
+
+
+****
+
 :book: UX100 - Unit 4 
 
 ****
@@ -604,25 +773,21 @@ Internationalization.
 
 
 
-## Which element groups Fiori apps based on <u>business topic</u>? 
+## 6. What is the prerequisite for a user to see the tiles of a group? :no_entry:
 
-## (Choose the correct answer). 
-
-### Business Catalog Group (BCG) 
-
-???.
+### The catalogs containing the tile definitions are part of the user master record
 
 ****
 
 :book: UX100 - Unit 4 
 
-****
+*****
 
 
 
 
 
-## Which element groups Fiori apps based on <u>business area</u>? 
+## 7. Which element groups Fiori apps based on <u>business area</u>? :no_entry:
 
 business area 에 따라 피오리 앱을 그룹화하는 요소는 무엇입니까?
 
@@ -658,19 +823,31 @@ Business catalogs contain a sample collection of target mappings and app launche
 
 
 
-## Which tool is used in an <u>S/4HANA</u> environment to model KPIs? (Choose the correct answer). 
+## 8. Which element groups SAP Fiori apps based on business duty? :no_entry:
 
-### KPI Design 
+### Business Catalog (BC)
 
-???.
+
+
+
+
+## 9. For intent-based navigation, what does an intent consist of? (Choose the correct answers). :no_entry:
+
+Target mapping 
+
+Semantic object 
+
+Action 
+
+ICF path.
 
 ****
 
 :book: UX100 - Unit 4 
 
-https://www.sapbwconsulting.com/blog/5-kpi-design-best-practice-guidelines
+B/C
 
-검증필요
+https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/5ff538515a2a455696f9c203939d9360.html?version=2.0.01&locale=en-US
 
 ****
 
@@ -678,11 +855,99 @@ https://www.sapbwconsulting.com/blog/5-kpi-design-best-practice-guidelines
 
 
 
-## Which tool is used in a <u>Suite on HANA</u> environment to model KPI? 
+## 10. What can be used as target in a target mapping? (Choose the correct answers).:no_entry:
+
+Web Dynpro application 
+
+Generic URL 
+
+ABAP Transaction 
+
+SAPUI5 application.
+
+****
+
+:book: UX100 - Unit 4 
+
+A/B/C/D
+
+****
+
+
+
+
+
+## 11. What is needed to define a target mapping for an SAPUI5 application? Choose the correct answers. :no_entry:
+
+Component ID 
+
+Gateway service ICF path 
+
+BSP name 
+
+System alias 
+
+****
+
+:book: UX100 - Unit 4 
+
+A/C
+
+Correct. The component ID and ICF path of the SAPUI5 application is needed for a target  mapping
+
+****
+
+
+
+
+
+## 12. Which is used to maintain technical catalogs? :no_entry:
+
+### SAP Fiori launchpad application manager
+
+****
+
+:book: UX100 - Unit 4 
+
+****
+
+
+
+
+
+## 13. What are the catalog types in SAP Fiori? Choose the correct answers. :no_entry:
+
+Replicable 
+
+Custom 
+
+Standard 
+
+Front-end 
+
+Back-end 
+
+****
+
+:book: UX100 - Unit 4 
+
+A/C/E
+
+Correct. Catalog types are back-end, standard, and replicable
+
+****
+
+
+
+
+
+## 14. What is meant by the term legacy app descriptor? :no_entry:
 
 ## (Choose the correct answer). 
 
-### KPI Modeler 
+### Assignment of tiles and target mappings to transaction codes or Web Dynpro applications 
+
+### The combination of tiles and target mappings in standard, replicable, and back-end catalogs
 
 ???.
 
@@ -690,49 +955,15 @@ https://www.sapbwconsulting.com/blog/5-kpi-design-best-practice-guidelines
 
 :book: UX100 - Unit 4 
 
-https://help.sap.com/saphelp_ssb/helpdata/en/0d/7532521603f009e10000000a44166d/frameset.htm
-
 ****
 
 
 
 
 
-## What does a KPI consist of? (Choose the correct answers). 
+## 15. Which catalog type must be set to enable back-end catalog maintenance in the SAP Fiori  launchpad application manager? :no_entry:
 
-### Evaluation 
-
-Authentication 
-
-### Drill-down 
-
-### Tile 
-
-Indicator.
-
-****
-
-:book: UX100 - Unit 4
-
-1. Create KPI 
-
-2. Create **Evaluation** 
-3. Create **Tile** 
-4. Configure **Drill-Down** 
-5. Manage KPI Associations (optional)
-
-****
-
-
-
-
-
-## Which tool provides the definition of Fiori tiles? (Choose the correct answer). 
-
-### SAP Fiori launchpad designer 
-
-???.
-
+### None 
 
 ****
 
@@ -744,15 +975,9 @@ Indicator.
 
 
 
-## What can be used as target in a target mapping? (Choose the correct answers).
+## 16. What needs to be assigned to a back-end catalog for the replication to a front-end server? :no_entry:
 
-### Web Dynpro application 
-
-### Generic URL 
-
-### ABAP Transaction 
-
-### SAPUI5 application.
+### System alias for classic applications
 
 ****
 
@@ -768,19 +993,9 @@ Indicator.
 
 ****
 
-## Which system environments offer the UI theme designer? 
+## 1. What is the starting point for activating apps with rapid activation for SAP Fiori?:no_entry:
 
-## (Choose the correct answers). 
-
-### SAP Enterprise Portal 
-
-### SAP NetWeaver Application Server ABAP 
-
-### SAP Cloud Platform 
-
-SAP NetWeaver Application Server Java 
-
-SAP Business Intelligence.
+### Business roles
 
 ****
 
@@ -792,43 +1007,39 @@ SAP Business Intelligence.
 
 
 
-## Which terms are correct when talking about extensibility for SAP applications in a frontend server? (Choose the correct answers). 
+## 2. Which task lists for SAP Fiori are run only once per ABAP system release? :no_entry:
 
-SAP Gateway Redefinition 
+## Choose the correct answers. 
 
-CDS View Extension 
+SAP_FIORI_FOUNDATION_S4 
 
-### SAPUI5 Extension 
+SAP_FIORI_CONTENT_ACTIVATION 
 
-ABAP Enhancement 
+SAP_FIORI_FCM_CONTENT_ACTIVATION 
 
-### SAP Fiori Elements Adaptation.
-
-****
-
-:book: UX100 - Unit 5 
+SAP_GW_FIORI_ERP_ONE_CLNT_SETUP 
 
 ****
 
+:book: UX100 - Unit 5  
 
+A/D
 
+* ***<u>SAP_GW_FIORI_ERP_ONE_CLNT_SETUP</u>*** 
 
+  하나의 client 에서 SAP Gateway, SAP UI5, SAP Fiori Launchpad 에 대한 기술 설정  
 
-## Where are the themes saved for the Fiori launchpad? 
+  ABAP system release 당 한번만 실행
 
-## (Choose the correct answer).
+* ***<u>SAP_FIORI_FOUNDATION_S4</u>*** 
 
-### Theme repository in front-end server 
+  SAP S/4HANA의 SAP Fiori Launchpad 및 SAP Fiori 앱에 대한 초기 설정을 통해 SAP Fiori의 모든 기능을 사용할 수 있다.
 
-???.
+  ABAP system release 당 한번만 실행
 
-****
+* ***<u>SAP_FIORI_CONTENT_ACTIVATION</u>*** 
 
-:book: UX100 - Unit 5 
-
-https://blogs.sap.com/2017/01/24/customizing-sap-fiori-launchpad-using-the-ui-theme-designer/
-
-The UI theme repository on the ABAP frontend server contains SAP standard themes and custom themes. 
+  SAP에서 제공하는 비즈니스 역할에 대한 컨텐츠 활성화를 통해 비즈니스 역할에 정의된 모든 SAP Fiori 앱을 사용할 수 있다.
 
 ****
 
@@ -836,7 +1047,141 @@ The UI theme repository on the ABAP frontend server contains SAP standard themes
 
 
 
-## Which design template is used for SAP Fiori 2.0? 
+## 3. What is the foundation role shipped by SAP for SAP Fiori users? :no_entry:
+
+### SAP_FLP_USER
+
+****
+
+:book: UX100 - Unit 5  
+
+****
+
+
+
+
+
+## 4. What is missing in the foundation roles? :no_entry:
+
+### Authorizations
+
+****
+
+:book: UX100 - Unit 5  
+
+****
+
+
+
+
+
+## 5. Which configuration approach is available since SAP S/4HANA 1809? :no_entry:
+
+### Definition of customer settings using transaction /UI2/FLP_CUS_CONF 
+
+****
+
+:book: UX100 - Unit 5  
+
+****
+
+
+
+
+
+## 6. What needs to be created to enable SAP Fiori launchpad customizing per role? :no_entry:
+
+### A business catalog with a target mapping holding the customizing
+
+****
+
+:book: UX100 - Unit 5  
+
+****
+
+
+
+
+
+## 7. Which ABAP transactions can be used to analyze the intents used in target mappings? :no_entry:
+
+## (Choose the correct answers). 
+
+/UI2/FLT 
+
+/UI2/FLIA 
+
+/UI2/FLC 
+
+/UI2/FLP 
+
+/UI2/FLPCA
+
+****
+
+:book: UX100 - Unit 5
+
+B/C/E
+
+FLIA : Fiori launchpad Intent Analysis
+
+FLC : Fiori launchpad Check
+
+****
+
+
+
+
+
+## 8. What is the namespace for SAP Gateway front-end transactions? :no_entry:
+
+### /IWFND/
+
+****
+
+:book: UX100 - Unit 5
+
+****
+
+
+
+
+
+
+
+# Unit 6. 
+
+****
+
+## 1. Which system environments offer the UI theme designer?  :no_entry:
+
+## (Choose the correct answers). 
+
+SAP Enterprise Portal 
+
+SAP NetWeaver Application Server ABAP 
+
+SAP Business Technology Platform
+
+SAP Cloud Platform 
+
+SAP NetWeaver Application Server Java 
+
+SAP Business Intelligence.
+
+****
+
+:book: UX100 - Unit 6  
+
+A/B/C
+
+****
+
+
+
+
+
+## 2. Which design template is used for SAP Fiori 2.0?  :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -846,9 +1191,13 @@ The UI theme repository on the ABAP frontend server contains SAP standard themes
 
 ****
 
-:book: UX100 - Unit 5 
+:book: UX100 - Unit 6 
 
 https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8ec2dae34eb44cbbb560be3f9f1592fe/977672c6940f48578d08d770bee236f2.html?version=1709%20000&locale=en-US
+
+* **SAP Quartz**
+
+  SAP Fiori 3.0
 
 * **SAP Belize**
 
@@ -876,7 +1225,21 @@ https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8ec2dae34eb44cbbb560be3f9f1592fe
 
 
 
-## How do you enter the UI adaptation mode of SAP Fiori apps? 
+## 3. Where are the themes saved for the SAP Fiori launchpad? 
+
+### Theme repository in front-end server
+
+****
+
+:book: UX100 - Unit 6 
+
+****
+
+
+
+
+
+## 4. How do you enter the UI adaptation mode of SAP Fiori apps? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -886,7 +1249,7 @@ https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8ec2dae34eb44cbbb560be3f9f1592fe
 
 ****
 
-:book: UX100 - Unit 5 
+:book: UX100 - Unit 6
 
 https://blogs.sap.com/2018/05/12/fiori-for-s4hana-adapting-terminology-in-sap-fiori-apps-via-key-user-tools/
 
@@ -896,21 +1259,23 @@ https://blogs.sap.com/2018/05/12/fiori-for-s4hana-adapting-terminology-in-sap-fi
 
 
 
-## How can you enable adaptation at runtime for SAP Fiori apps? (Choose the correct answers). 
+## 5. How can you enable adaptation at runtime for SAP Fiori apps? (Choose the correct answers). :no_entry:
 
-### Target mapping to runtime authoring plugin 
+Target mapping to runtime authoring plugin 
 
 Fiori catalog SAP_CA_BC_SSB 
 
-### User role SAP_UI_FLEX_KEY_USER 
+User role SAP_UI_FLEX_KEY_USER 
 
-### Fiori catalog /UIF/SAP_RTA_PLUGIN 
+SAP Fiori catalog /UIF/SAP_RTA_PLUGIN 
 
 User role SAP_S_RFCACL.
 
 ****
 
-:book: UX100 - Unit 5 
+:book: UX100 - Unit 6
+
+A/C/D
 
 https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f350c0ba6bd/402b392585834dd38dd381d8f04b2616.html
 
@@ -920,41 +1285,23 @@ https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f3
 
 
 
-## What is SAP Screen Personas? 
+## 6. Which terms are correct when talking about extensibility for SAP applications in a frontend server? (Choose the correct answers). :no_entry:
 
-## (Choose the correct answer). 
+SAP Gateway Redefinition 
 
-### A web-based layer for personalization of SAP GUI Dynpro and Web Dynpro ABAP 
+CDS View Extension 
 
-???.
+SAPUI5 Adaptation/Extension 
 
-****
+ABAP Enhancement 
 
-:book: UX100 - Unit 5 
-
-SAP GUI 환경의 불편함(처음 사용자가 적응하기 힘들다. 사용하지 않는 항목이 노출되어 업무에 집중하기 힘들다 등등)을 해소하기 위해서 각 업무 환경에 맞게 화면을 단순화하거나 재배치할 수 있는 기능을 제공하는 것이 SAP Screen Personas 입니다.
-
-https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
+SAP Fiori Elements Adaptation.
 
 ****
 
+:book: UX100 - Unit 6
 
-
-
-
-## What is created with SAP Screen Personas to change the structure of classical screens? 
-
-## (Choose the correct answer). 
-
-### Flavors 
-
-???.
-
-****
-
-:book: UX100 - Unit 5 
-
-https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
+C/D 
 
 ****
 
@@ -962,87 +1309,11 @@ https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
 
 
 
-## Which UI clients does SAP Screen Personas support? (Choose the correct answers). 
+## 7. Which tool must be used to extend CDS Views? :no_entry:
 
-### SAP Business Client 
-
-SAP Fiori Client 
-
-### SAP GUI for Windows 
-
-### SAP GUI for HTML 
-
-SAP GUI for Java.
-
-****
-
-:book: UX100 - Unit 5 
-
-****
+### ABAP Development Tools (ADT)
 
 
-
-
-
-# Unit 6. 
-
-****
-
-## What can be used as <u>middleware</u> to improve SAP Fiori for mobile? 
-
-## (Choose the correct answer). 
-
-sap Afaria
-
-SAP Unwired Platform (SUP) 
-
-### SAP Mobile Platform (SMP)
-
-### SAP Cloud Platform Mobile Services.
-
-****
-
-:book: UX100 - Unit 6 
-
-https://blogs.sap.com/2019/02/01/migration-to-sap-cloud-platform-mobile-services/
-
-SAP Cloud Platform Mobile Services 가 SAP Mobile Platform 의 개선된 후속 모델 정도로 이해하면 될것 같다.
-
-책 ux100 에는 smp 도 답으로 나와있다.
-
-****
-
-
-
-
-
-## Which benefits are offered by the SAP Fiori Client alone over a Web browser? (Choose the correct answers). 
-
-### Full screen 
-
-Offline data 
-
-### Delta caching 
-
-Push notifications 
-
-### Attachment viewer.
-
-****
-
-:book: UX100 - Unit 6 
-
-****
-
-
-
-
-
-## What are the SAP Fiori for iOS design guidelines based on? (Choose the correct answer). 
-
-### Apple Human Interface Guidelines (HIG) 
-
-???.
 
 ****
 
@@ -1054,15 +1325,13 @@ Push notifications
 
 
 
-## What is SAP Cloud Platform SDK Assistant? (Choose the correct answer). 
+## 8. What is used to extend the SAP Fiori launchpad? :no_entry:
 
-### Plugin for Apple Xcode to create ready-to-run Xcode projects for SAP Fiori 
-
-???.
+### SAPUI5 plugins
 
 ****
 
-:book: UX100 - Unit 6 
+:book: UX100 - Unit 6
 
 ****
 
@@ -1070,39 +1339,25 @@ Push notifications
 
 
 
-## Which native capabilities of a mobile device can only be leveraged when using SAP Fiori for iOS? 
+## 9. How can you activate an extension for the SAP Fiori launchpad (FLP)? Choose the correct answers. :no_entry:
 
-## (Choose the correct answers). 
+FLP Content Manager (/UI2/FLPCM_CUST) 
 
-### Touch ID 
+Target Mapping (/UI2/FLPD_CUST) 
 
-Camera 
+Customer settings (/UI2/FLP_CUS_CONF) 
 
-### Facetime 
-
-### iBeacon 
-
-Geolocation.
+Definition of FLP settings (/UI2/FLP_CONF_DEF) 
 
 ****
 
-:book: UX100 - Unit 6 
+:book: UX100 - Unit 6
 
-검증필요
-
-facetime / touch id / iBeacon 는 확인 된바 있다.
-
-책에는
-
-* facetime
-* touch id 
-* iBeacon
-* Maps
-* Notification
-* Calendar
-* Contacts
+B/C
 
 ****
+
+
 
 
 
@@ -1112,19 +1367,45 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 ****
 
-## What is used as a container for SAP Fiori in an <u>Enterprise Portal</u>? 
+## 1. Which mobile application type can be created using the elements on the left?:no_entry:
 
-## (Choose the correct answer). 
+Swift - Native App
 
-### Fiori iView 
+Metadata - Cross Platform
 
-???.
+SAPUI5 - Mobile Web App
+
+****
+
+:book: UX100 - Unit 7
+
+****
+
+
+
+
+
+
+
+## 2. What can be used as middleware to improve SAP Fiori for mobile? Choose the correct answer. :no_entry:
+
+SAP Unwired Platform (SUP) 
+
+SAP Mobile Platform (SMP) 
+
+SAP Mobile Services 
 
 ****
 
 :book: UX100 - Unit 7 
 
-검증필요
+C
+
+https://blogs.sap.com/2019/02/01/migration-to-sap-cloud-platform-mobile-services/
+
+SAP Cloud Platform Mobile Services 가 SAP Mobile Platform 의 개선된 후속 모델 정도로 이해하면 될것 같다.
+
+책 ux100 에는 SAP Cloud Platform Mobile Services 이 빠져있다.
 
 ****
 
@@ -1132,7 +1413,121 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 
 
-## What establishes a secure connection between on-premise systems and SAP CP? 
+## 3. What are the SAP Fiori for iOS design guidelines based on? (Choose the correct answer). :no_entry:
+
+### Apple Human Interface Guidelines (HIG) 
+
+???.
+
+****
+
+:book: UX100 - Unit 7
+
+****
+
+
+
+
+
+## 4. Which native capabilities of a mobile device can only be leveraged when using SAP Fiori for iOS? :no_entry:
+
+## (Choose the correct answers). 
+
+Touch ID 
+
+Camera 
+
+Facetime 
+
+iBeacon 
+
+Geolocation.
+
+****
+
+:book: UX100 - Unit 7
+
+A/C/D
+
+facetime / touch id / iBeacon 는 확인 된바 있다.
+
+책에는
+
+* **facetime**
+* **touch id** 
+* **iBeacon**
+* **Maps**
+* **Notification**
+* **Calendar**
+* **Contacts**
+
+****
+
+
+
+
+
+## 5. What is SAP BTP SDK Assistant for iOS? :no_entry:
+
+### Plugin for Apple Xcode to create ready-to-run Xcode projects for SAP Fiori
+
+****
+
+:book: UX100 - Unit 7
+
+*****
+
+
+
+
+
+## 6. Which benefits are offered by the SAP Fiori Client alone over a Web browser? (Choose the correct answers). :no_entry:
+
+Full screen 
+
+Offline data 
+
+Delta caching 
+
+Push notifications 
+
+Attachment viewer.
+
+****
+
+:book: UX100 - Unit 7
+
+A/C/E
+
+****
+
+
+
+
+
+
+
+
+
+# Unit 8.
+
+****
+
+## 1. What is SAP Business Technology Platform?
+
+in-memory database / application  services 를 제공하는 SAP 의 PaaS(platform-as-a-service) 
+
+****
+
+:book: UX100 - Unit 8
+
+****
+
+
+
+
+
+## 2. What establishes a secure connection between on-premise systems and SAP BTP? 
 
 ## (Choose the correct answer). 
 
@@ -1142,7 +1537,7 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 ****
 
-:book: UX100 - Unit 7 
+:book: UX100 - Unit 8
 
 ****
 
@@ -1150,17 +1545,47 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 
 
-## What is the central app to display Workflow items in SAP Fiori? 
+## 3. How is the system landscape setup called when the SAP Business Technology Platform is  only providing the SAP Fiori launchpad, no business data?:no_entry:
 
-## (Choose the correct answer). 
+### Internal Access Point
 
-### My Inbox
+****
+
+:book: UX100 - Unit 8
+
+****
+
+
+
+
+
+## 4. What combines tile and target mapping in the SAP Launchpad service?
+
+### App
+
+
+
+
+
+
+
+
+
+# Unit 10.
+
+****
+
+## 1. Which system part provides the OData services for analytical apps? (Choose the correct answer). :no_entry:
+
+### SAP HANA e**<u>X</u>**tended application <u>S</u>ervices (XS) 
 
 ???.
 
 ****
 
-:book: UX100 - Unit 7 
+:book: UX100 - Unit 10
+
+https://help.sap.com/docs/SAP_HANA_PLATFORM/52715f71adba4aaeb480d946c742d1f6/a6c0749255d84a81a154a7fc87dd33ce.html?version=2.0.03&locale=en-US
 
 ****
 
@@ -1168,23 +1593,192 @@ facetime / touch id / iBeacon 는 확인 된바 있다.
 
 
 
-## Which shell configurations are available to adapt the header of the app? 
+## 2. What is the data source definition for the SAP Fiori search? :no_entry:
+
+## (Choose the correct answer). 
+
+### Search connectors 
+
+???.
+
+****
+
+:book: UX100 - Unit 10
+
+https://help.sap.com/docs/SAP_FIORI_OVERVIEW/17ca92fbe8f54d9d8dfbe830cbb0c8d2/12af5252b10d5a64e10000000a423f68.html?version=4_S4H1909.01&locale=en-US
+
+****
+
+
+
+
+
+## 3. What is needed to define a target mapping for a Web Dynpro ABAP application?:no_entry:
+
+## Choose the correct answers. 
+
+Web Dynpro window 
+
+Web Dynpro component 
+
+System alias 
+
+Web Dynpro application 
+
+Web Dynpro configuration 
+
+****
+
+:book: UX100 - Unit 10
+
+C/D/E
+
+****
+
+
+
+
+
+## 4. What is needed to define a target mapping for an ABAP transaction?:no_entry:
+
+## Choose the correct answers. 
+
+Ok-code 
+
+Transaction code 
+
+Dynpro number 
+
+System alias
+
+****
+
+:book: UX100 - Unit 10
+
+B/D
+
+****
+
+
+
+
+
+## 5. Which tool is used in an <u> SAP Business Suite</u> environment to model KPI? 
+
+## (Choose the correct answer). :no_entry:
+
+### KPI Modeler 
+
+???.
+
+****
+
+:book: UX100 - Unit 10
+
+****
+
+
+
+
+
+## 6. Which tool is used in an <u>S/4HANA</u> environment to model KPIs? (Choose the correct answer). :no_entry:
+
+### KPI Design 
+
+???.
+
+****
+
+:book: UX100 - Unit 10
+
+****
+
+
+
+
+
+## 7. What does a KPI consist of? (Choose the correct answers). :no_entry:
+
+Evaluation 
+
+Authentication 
+
+Drill-down 
+
+Tile 
+
+Indicator.
+
+****
+
+:book: UX100 - Unit 10
+
+A/C/D
+
+1. Create KPI 
+
+2. Create **Evaluation** 
+3. Create **Tile** 
+4. Configure **Drill-Down** 
+5. Manage KPI Associations (optional)
+
+****
+
+
+
+
+
+## 8. Which part of a KPI is responsible for the visualization?:no_entry:
+
+### Drill-down
+
+****
+
+:book: UX100 - Unit 10
+
+****
+
+
+
+
+
+## 9. What is used as a container for SAP Fiori in an <u>Enterprise Portal</u>? :no_entry:
+
+## (Choose the correct answer)
+
+### Fiori iView 
+
+???.
+
+****
+
+:book: UX100 - Uni 10
+
+****
+
+
+
+
+
+## 10. Which shell configurations are available to adapt the header of the app? 
 
 ## (Choose the correct answers). 
 
 encapsulated 
 
-### embedded 
+embedded 
 
-### standalone 
+standalone 
 
-### headerless 
+headerless 
 
 footless.
 
 ****
 
-:book: UX100 - Unit 7 
+:book: UX100 - Unit 10
+
+B/C/D
 
 https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7/537758e0deb0477386ea400c915073b3.html
 
@@ -1205,15 +1799,17 @@ https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7
 
 
 
-## What is SAP Cloud Platform (CP)? (Choose the correct answer). 
+## 11. What is the central app to display Workflow items in SAP Fiori? 
 
-###  SAP's platform-as-a-service (PaaS) providing in-memory database and application services 
+## (Choose the correct answer). 
+
+### My Inbox
 
 ???.
 
 ****
 
-:book: UX100 - Unit 7
+:book: UX100 - Unit 10
 
 ****
 
@@ -1221,7 +1817,7 @@ https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7
 
 
 
-## In which system is the SAP Gateway workflow service implemented? (Choose the correct answer). 
+## 12. In which system is the SAP Gateway workflow service implemented? (Choose the correct answer). 
 
 ### Front-End Server (FES) 
 
@@ -1229,7 +1825,7 @@ https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a7b390faab1140c087b8926571e942b7
 
 ****
 
-:book: UX100 - Unit 7 
+:book: UX100 - Unit 10
 
 https://help.sap.com/docs/SAP_FIORI_OVERVIEW/1f0c69c2f76b445c98b89cc1f41d7ae4/6cb9b4c90de345ca9a6182049ee6f8da.html?locale=en-US
 
@@ -1239,7 +1835,73 @@ https://help.sap.com/docs/SAP_FIORI_OVERVIEW/1f0c69c2f76b445c98b89cc1f41d7ae4/6c
 
 
 
-## Which service is responsible for OData services in the SAP CP? (Choose the correct answer). 
+## 13. What is SAP Screen Personas? 
+
+## (Choose the correct answer). 
+
+### A web-based layer for personalization of SAP GUI Dynpro and Web Dynpro ABAP 
+
+???.
+
+****
+
+:book: UX100 - Unit 10
+
+SAP GUI 환경의 불편함(처음 사용자가 적응하기 힘들다. 사용하지 않는 항목이 노출되어 업무에 집중하기 힘들다 등등)을 해소하기 위해서 각 업무 환경에 맞게 화면을 단순화하거나 재배치할 수 있는 기능을 제공하는 것이 SAP Screen Personas 입니다.
+
+https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
+
+****
+
+
+
+
+
+## 14. Which UI clients does SAP Screen Personas support? (Choose the correct answers). 
+
+SAP Business Client 
+
+SAP Fiori Client 
+
+SAP GUI for Windows 
+
+SAP GUI for HTML 
+
+SAP GUI for Java.
+
+****
+
+:book: UX100 - Unit 10
+
+A/C/D/E
+
+****
+
+
+
+
+
+## 15. What is created with SAP Screen Personas to change the structure of classical screens? 
+
+## (Choose the correct answer). 
+
+### Flavors 
+
+???.
+
+****
+
+:book: UX100 - Unit 10
+
+https://www.avelon.be/news-blog/sap-screen-personas-versus-fiori
+
+****
+
+
+
+
+
+## 16. Which service is responsible for OData services in the SAP CP? (Choose the correct answer). 
 
 ### SAP CP OData provisioning 
 
@@ -1247,7 +1909,7 @@ https://help.sap.com/docs/SAP_FIORI_OVERVIEW/1f0c69c2f76b445c98b89cc1f41d7ae4/6c
 
 ****
 
-:book: UX100 - Unit 7 
+:book: UX100 - Unit 10
 
 https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integration/
 
@@ -1257,11 +1919,31 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 
 
+## 17. Which element groups Fiori apps based on <u>business topic</u>? :no_entry:
 
+## (Choose the correct answer). 
 
+### Business Catalog Group (BCG) 
 
+???.
 
 ****
+
+:book: UX100 - Unit 10
+
+****
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1283,11 +1965,11 @@ https://www.acorel.nl/2017/09/odata-provisioning-in-sap-cloud-platform-integrati
 
 ****
 
-## Which of these is abbreviated to CSS? (Choose the correct answer). 
+## 1. Which of these is abbreviated to CSS? (Choose the correct answer). 
 
 Complex Style Syntax 
 
-### Cascading Style Sheet 
+Cascading Style Sheet 
 
 Cascading Syntax System.
 
@@ -1295,17 +1977,19 @@ Cascading Syntax System.
 
 :book: UX399 - Unit 1 
 
+B
+
 ****
 
 
 
 
 
-## What is true for HTML and UI5? (Choose the correct answers). 
+## 2. What is true for HTML and UI5? (Choose the correct answers). :no_entry:
 
-### Dynamic web content 
+Dynamic web content 
 
-### Client side rendering 
+Client side rendering 
 
 Code on demand 
 
@@ -1315,7 +1999,7 @@ Static web pages.
 
 :book: UX399 - Unit 1 
 
-검증필요
+A/B
 
 ****
 
@@ -1323,11 +2007,11 @@ Static web pages.
 
 
 
-## What is an HTML-Tag? (Choose the correct answer). 
+## 3. What is an HTML-Tag? (Choose the correct answer). :no_entry:
 
-### A HTML-Tag is a processing instruction for the web browser.
+A HTML-Tag is a processing instruction for the web browser.
 
- A HTML-Tag marks an aspect of the web page 
+A HTML-Tag marks an aspect of the web page 
 
 A HTML-Tag Is a pre-processor instruction for the browser
 
@@ -1335,15 +2019,17 @@ A HTML-Tag Is a pre-processor instruction for the browser
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## What is the DOCTYPE? (Choose the correct answer). 
+## 4. What is the DOCTYPE? (Choose the correct answer). :no_entry:
 
-### A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
+A The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser on what version of HTML to use. 
 
 The <!DOCTYPE> Is a pre-processing instruction for the JavaScript-Engine. 
 
@@ -1353,27 +2039,31 @@ The <!DOCTYPE> Is used to define the mime-type.
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## Which of the following are known as BOM Objects? 
+## 5. Which of the following are known as BOM Objects? :no_entry:
 
 ## (Choose the correct answers). 
 
 Document 
 
-### Window 
+Window 
 
-### History 
+History 
 
-### Location.
+Location.
 
 ****
 
 :book: UX399 - Unit 1 
+
+B/C/D
 
 https://www.javascripttutorial.net/javascript-bom/
 
@@ -1419,17 +2109,19 @@ https://pridiot.tistory.com/170
 
 
 
-## What is the name of the consortium that standardised the DOM? (Choose the correct answer). 
+## 6. What is the name of the consortium that standardised the DOM? (Choose the correct answer). :no_entry:
 
 WWF 
 
-### W3C 
+W3C 
 
 WC3.
 
 ****
 
 :book: UX399 - Unit 1 
+
+B
 
 https://ko.wikipedia.org/wiki/W3C
 
@@ -1439,9 +2131,9 @@ https://ko.wikipedia.org/wiki/W3C
 
 
 
-## What is the name of the SAP Development tool? (Choose the correct answer). 
+## 7. What is the name of the SAP Development tool? (Choose the correct answer). 
 
-### SAP Web IDE  => BAS
+SAP Web IDE  => BAS
 
 SAP Cloud IDE 
 
@@ -1451,23 +2143,27 @@ SAP Web Cloud IDE.
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## What parts of the software development life-cycle are supported by the SAP development tool? (Choose the correct answer). 
+## 8. What parts of the software development life-cycle are supported by the SAP development tool? (Choose the correct answer). :no_entry:
 
 Only implementation functionality such as syntax highlighting and editing are supported. 
 
 Test, code and debug are supported 
 
-### The full life-cycle of software development is supported.
+The full life-cycle of software development is supported.
 
 ****
 
 :book: UX399 - Unit 1 
+
+C
 
 검증필요
 
@@ -1477,11 +2173,11 @@ Test, code and debug are supported
 
 
 
-## What URL do you enter when you want to see the source code of a web page? 
+## 9. What URL do you enter when you want to see the source code of a web page? 
 
-## (Choose the correct answer). 
+## (Choose the correct answer). :no_entry:
 
-### view-source:https://www.google.com 
+view-source:https://www.google.com 
 
 view-code:https://www.google.com 
 
@@ -1491,6 +2187,8 @@ show-source: https://www.google.com.
 
 :book: UX399 - Unit 1
 
+A
+
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&logNo=120011242924
 
 ****
@@ -1499,11 +2197,11 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=leosaint&log
 
 
 
-## What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
+## 10. What is the keyboard shortcut in most browsers to open the browser development tools? (Choose the correct answer). 
 
 F1 
 
-### F12 
+F12 
 
 D+E+V.
 
@@ -1511,15 +2209,17 @@ D+E+V.
 
 :book: UX399 - Unit 1 
 
+B
+
 ****
 
 
 
 
 
-## What is a code validator? (Choose the correct answer). 
+## 11. What is a code validator? (Choose the correct answer). :no_entry:
 
-### A code validator is a software program that checks the code against coding rules and standards. 
+A code validator is a software program that checks the code against coding rules and standards. 
 
 A code validator is a code generator tool that generates valid code. 
 
@@ -1529,13 +2229,15 @@ A code validator is a type of extension to the browser.
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## How many heading elements are specified in the HTML specification? 
+## 12. How many heading elements are specified in the HTML specification? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -1543,7 +2245,7 @@ A code validator is a type of extension to the browser.
 
 3 
 
-### 6 
+6 
 
 1.
 
@@ -1551,19 +2253,21 @@ A code validator is a type of extension to the browser.
 
 :book: UX399 - Unit 1 
 
+C
+
 ****
 
 
 
 
 
-## Which of the following is true? 
+## 13. Which of the following is true? 
 
 ## (Choose the correct answer).
 
 A `<p>` tag has high semantic expressiveness. 
 
-### The `<a>` tag is used to specify HTML Links. 
+The `<a>` tag is used to specify HTML Links. 
 
 The `<li>` element can only be used inside of an `<ol>` element.
 
@@ -1571,17 +2275,19 @@ The `<li>` element can only be used inside of an `<ol>` element.
 
  :book: UX399 - Unit 1 
 
+B
+
 ****
 
 
 
 
 
-## What markup should be used to describe a long text in an html document? 
+## 14. What markup should be used to describe a long text in an html document? 
 
 ## (Choose the correct answer). 
 
-### \<article>
+`<article>`
 
 `<p>` 
 
@@ -1591,15 +2297,17 @@ The `<li>` element can only be used inside of an `<ol>` element.
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## For what purpose should you use the header element? (Choose the correct answer). 
+## 15. For what purpose should you use the header element? (Choose the correct answer). 
 
-### For introductory content 
+For introductory content 
 
 For headings 
 
@@ -1609,15 +2317,17 @@ As a container for the article element.
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## What is the purpose of the action attribute in the form element? (Choose the correct answer). 
+## 16. What is the purpose of the action attribute in the form element? (Choose the correct answer). :no_entry:
 
-### The action attribute contains the reference to the program that processes the submitted form. 
+The action attribute contains the reference to the program that processes the submitted form. 
 
 The action attribute defines the allowed HTTP verbs. 
 
@@ -1627,13 +2337,15 @@ The action attribute contains the JavaScript event handler that is invoked when 
 
 :book: UX399 - Unit 1 
 
+A
+
 ****
 
 
 
 
 
-## Which of the following is true? 
+## 17. Which of the following is true? You can use the focus attribute on multiple form fields. :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -1641,11 +2353,13 @@ You can use the focus attribute on multiple form fields.
 
 The focus attribute can only used at one form field. 
 
-### Only the first form field with the focus attribute will get the focus.
+Only the first form field with the focus attribute will get the focus.
 
 ****
 
 :book: UX399 - Unit 1 
+
+C
 
 커서가 올라가있는 필드 지정하는 focus 기능을 말하는듯 하다.
 
@@ -1655,9 +2369,9 @@ The focus attribute can only used at one form field.
 
 
 
-## What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). 
+## 18. What value do you assign to the auto-complete attribute so the browser knows not to attempt to fill the form fields? (Choose the correct answer). :no_entry:
 
-### off 
+off 
 
 false 
 
@@ -1667,6 +2381,8 @@ no.
 
 :book: UX399 - Unit 1 
 
+A
+
 https://www.w3schools.com/tags/att_autocomplete.asp
 
 ****
@@ -1675,11 +2391,11 @@ https://www.w3schools.com/tags/att_autocomplete.asp
 
 
 
-## What attribute can you use to inform the end-user of what kind of data he should enter in a form field? 
+## 19. What attribute can you use to inform the end-user of what kind of data he should enter in a form field? 
 
 textsuggestion 
 
-### placeholder 
+placeholder 
 
 textphrase
 
@@ -1687,23 +2403,27 @@ textphrase
 
 :book: UX399 - Unit 1 
 
+B
+
 ****
 
 
 
 
 
-## What is the prefix to introduce a custom attribute? (Choose the correct answer). 
+## 20. What is the prefix to introduce a custom attribute? (Choose the correct answer). :no_entry:
 
 custData 
 
-### data 
+data 
 
 sapdata.
 
 ****
 
 :book: UX399 - Unit 1 
+
+B
 
 https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
 
@@ -1713,11 +2433,11 @@ https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes
 
 
 
-## What is the name of the attribute to access the custom attributes in your JavaScript code? 
+## 21. What is the name of the attribute to access the custom attributes in your JavaScript code? :no_entry:
 
 ## (Choose the correct answer). 
 
-### dataset 
+dataset 
 
 attributeset 
 
@@ -1726,6 +2446,8 @@ customDatas.
 ****
 
 :book: UX399 - Unit 1 
+
+A
 
 검증필요
 
@@ -1739,9 +2461,9 @@ customDatas.
 
 ****
 
-## What is the correct prefix for the ID selector? (Choose the correct answer). 
+## 1. What is the correct prefix for the ID selector? (Choose the correct answer). 
 
-### # 
+# 
 
 . 
 
@@ -1751,17 +2473,19 @@ customDatas.
 
 :book: UX399 - Unit 2 
 
+A
+
 ****
 
 
 
 
 
-## What is the order of processing CSS instructions?
+## 2. What is the order of processing CSS instructions?:no_entry:
 
 ## (Choose the correct answer). 
 
-### Importance, Specificity, Source order 
+Importance, Specificity, Source order 
 
 Specificity, Source order, Importance 
 
@@ -1771,7 +2495,9 @@ Source-order, Importance, Specificity.
 
 :book: UX399 - Unit 2 
 
-검증필요
+A
+
+https://ofcourse.kr/css-course/%EC%A0%81%EC%9A%A9-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84
 
 ****
 
@@ -1779,9 +2505,9 @@ Source-order, Importance, Specificity.
 
 
 
-## What is a pseudo-class or pseudo-element? (Choose the correct answer). 
+## 3. What is a pseudo-class or pseudo-element? (Choose the correct answer). :no_entry:
 
-### A CSS technique to permit formatting based on information that lies outside the DOM tree 
+A CSS technique to permit formatting based on information that lies outside the DOM tree 
 
 A CSS technique to prohibit formatting based on information that lies outside the DOM tree 
 
@@ -1791,25 +2517,31 @@ A CSS technique to introduce pseudo-style-attributes.
 
 :book: UX399 - Unit 2 
 
+A
+
+https://blogpack.tistory.com/766
+
 ****
 
 
 
 
 
-## What of the following is true? 
+## 4. What of the following is true? 
 
 ## (Choose the correct answers). 
 
-### The :last-child selector matches every element that is the last child of its parent. 
+The `:last-child` selector matches every element that is the last child of its parent. 
 
-### The :nth-last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child 
+The `:nth-last-child(n)` selector matches every element that is the nth child, regardless of parent type, counting from the last child 
 
-The :last-child(n) selector matches every element that is the nth child, regardless of parent type, counting from the last child.
+The `:last-child(n)` selector matches every element that is the nth child, regardless of parent type, counting from the last child.
 
 ****
 
 :book: UX399 - Unit 2 
+
+A/B
 
 ****
 
@@ -1821,13 +2553,13 @@ The :last-child(n) selector matches every element that is the nth child, regardl
 
 ****
 
-## What is the recent version of JavaScript? 
+## 1. What is the recent version of JavaScript? :no_entry:
 
 ## (Choose the correct answer). 
 
 ECMA Script 5 
 
-### ECMA Script 6 
+ECMA Script 6 
 
 ECMA Script 3.
 
@@ -1837,15 +2569,17 @@ ECMA Script 3.
 
 :book: UX399 - Unit 3 
 
+B
+
 ****
 
 
 
 
 
-## What is the purpose of the defer attribute? (Choose the correct answer). 
+## 2. What is the purpose of the defer attribute? (Choose the correct answer). :no_entry:
 
-### When present, it specifies that the script is executed when the page has finished parsing. 
+When present, it specifies that the script is executed when the page has finished parsing. 
 
 When present, it specifies that the script should be executed immediately. 
 
@@ -1855,6 +2589,8 @@ When present, it specifies that the JavaScript engine should execute the script 
 
 :book: UX399 - Unit 3 
 
+A
+
 http://www.tcpschool.com/html-tag-attrs/script-defer
 
 ****
@@ -1863,13 +2599,13 @@ http://www.tcpschool.com/html-tag-attrs/script-defer
 
 
 
-## What is true for a variable that holds the value undefined? (Choose the correct answer). 
+## 3. What is true for a variable that holds the value undefined? (Choose the correct answer). 
 
 It represents the intentional absence of an object value. 
 
 it is a keyword. 
 
-### It expresses that a variable is not yet initialized. 
+It expresses that a variable is not yet initialized. 
 
 It functions without a return value, and returns undefined.
 
@@ -1877,15 +2613,17 @@ It functions without a return value, and returns undefined.
 
 :book: UX399 - Unit 3 
 
+C
+
 ****
 
 
 
 
 
-## What JavaScript function can be used to separate strings? (Choose the correct answer). 
+## 4. What JavaScript function can be used to separate strings? (Choose the correct answer). 
 
-### split 
+split 
 
 slice 
 
@@ -1895,17 +2633,19 @@ separate.
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## What method do you use since ECMA 5 to define a read only property? 
+## 5. What method do you use since ECMA 5 to define a read only property? 
 
 ## (Choose the correct answer). 
 
-### defineProperty 
+defineProperty 
 
 setReadOnly 
 
@@ -1915,6 +2655,8 @@ defineReadOnly.
 
 :book: UX399 - Unit 3 
 
+A
+
 https://opentutorials.org/course/787/5111
 
 ****
@@ -1923,17 +2665,17 @@ https://opentutorials.org/course/787/5111
 
 
 
-## JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
+## 6. JavaScript functions are so called first-class objects. What characteristics do functions have? (Choose the correct answers). 
 
-### A function is an instance of the object type. 
+A function is an instance of the object type. 
 
-### A function can have properties and has a link back to its constructor method. 
+A function can have properties and has a link back to its constructor method. 
 
-### A function can be stored in a variable. 
+A function can be stored in a variable. 
 
-### A function can pass as a parameter to another function. 
+A function can pass as a parameter to another function. 
 
-### A function can return from a function.
+A function can return from a function.
 
 ****
 
@@ -1941,17 +2683,19 @@ https://opentutorials.org/course/787/5111
 
 검증필요
 
+A/B/C/D/E
+
 ****
 
 
 
 
 
-## What does the == operator check? (Choose the correct answer). 
+## 7. What does the == operator check? (Choose the correct answer). 
 
 Equal value and equal type 
 
-### Equal value 
+Equal value 
 
 Equals type.
 
@@ -1959,17 +2703,19 @@ Equals type.
 
 UX399 - Unit 3 
 
+B
+
 ****
 
 
 
 
 
-## What is the result of the following 2+3+"3"+23+3+"seven"+12? 
+## 8. What is the result of the following 2+3+"3"+23+3+"seven"+12? 
 
 ## (Choose the correct answer). 
 
-### 53233seven12 
+53233seven12 
 
 53326seven12 
 
@@ -1979,17 +2725,21 @@ UX399 - Unit 3
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## Is the following true? The if-condition can be either a boolean variable or can also check if objects are defined and have a correct value (Choose the correct answer). 
+## 9. Is the following true? 
+
+## The if-condition can be either a boolean variable or can also check if objects are defined and have a correct value (Choose the correct answer). 
 
 No 
 
-### Yes 
+Yes 
 
 It depends on the JavaScript version.
 
@@ -1997,15 +2747,17 @@ It depends on the JavaScript version.
 
 :book: UX399 - Unit 3 
 
+B
+
 ****
 
 
 
 
 
-## What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
+## 10. What is the purpose of the method hasOwnProperty? (Choose the correct answer). 
 
-### It checks if the property is defined on the current object 
+It checks if the property is defined on the current object 
 
 It checks whether the object has properties. 
 
@@ -2015,17 +2767,19 @@ It checks if the objects have their own and inherited properties.
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## What is the difference between scope and execution context? 
+## 11. What is the difference between scope and execution context? 
 
 ## (Choose the correct answer). 
 
-### Scope is function based while execution context is object based. 
+Scope is function based while execution context is object based. 
 
 Scope context is object based while context is function based. 
 
@@ -2035,7 +2789,31 @@ It depends on the invocation target whether a function has a scope or a context.
 
 :book: UX399 - Unit 3 
 
+A
+
 https://velog.io/@jhy979/Execution-Context-Scope
+
+Execution context 
+
+* VariableEnvironment
+
+  최초의 스냅샷
+
+* LexicalEnvironment
+
+  실시간으로 변하는 정보들
+
+  * environment Record : 
+
+    매개변수, 변수 식별자, 선언한 함수명,..
+
+  * outerEnvironmentReference : 
+
+    선언될 당시의 LexicalEnvironment
+
+* thisBinding : 
+
+  this 로 지정된 객체
 
 ****
 
@@ -2043,11 +2821,11 @@ https://velog.io/@jhy979/Execution-Context-Scope
 
 
 
-## Which of the following is true? (Choose the correct answer). 
+## 12. Which of the following is true? (Choose the correct answer). :no_entry:
 
 The this reference in JavaScript is comparable to the this reference of other programming languages. 
 
-### A this in JavaScript points to the execution context of the function where the this keyword is used. 
+A this in JavaScript points to the execution context of the function where the this keyword is used. 
 
 A this in JavaScript is like a property of the function.
 
@@ -2055,17 +2833,19 @@ A this in JavaScript is like a property of the function.
 
 :book: UX399 - Unit 3 
 
+B
+
 ****
 
 
 
 
 
-## What is the visibility of a variable that is defined inside a function? 
+## 13. What is the visibility of a variable that is defined inside a function? 
 
 ## (Choose the correct answer). 
 
-### It is only visible inside the function. 
+It is only visible inside the function. 
 
 It is only visible inside the statement where the variable is defined 
 
@@ -2075,13 +2855,15 @@ As a variable in JavaScript it is always globally visible.
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## What does “closed-over” mean in the context of closures? (Choose the correct answer). 
+## 14. What does “closed-over” mean in the context of closures? (Choose the correct answer). :no_entry:
 
 ### When an inner function makes reference to a variable in the outer function’s lexical scope, the inner function is said to have “closed over” that variable. 
 
@@ -2097,9 +2879,9 @@ As a variable in JavaScript it is always globally visible.
 
 
 
-## What operator do you use to inform the runtime that an error occurred? (Choose the correct answer). 
+## 15. What operator do you use to inform the runtime that an error occurred? (Choose the correct answer). 
 
-### throw 
+throw 
 
 throws 
 
@@ -2109,17 +2891,19 @@ toss.
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## When do you throw an error? (Choose the correct answer). 
+## 16. When do you throw an error? (Choose the correct answer). 
 
 It is a good practice to throw errors in every function. 
 
-### Helpful when designing libraries to inform a higher layer that a problem occurred. 
+Helpful when designing libraries to inform a higher layer that a problem occurred. 
 
 To make the debugging of the code easier.
 
@@ -2127,15 +2911,17 @@ To make the debugging of the code easier.
 
 :book: UX399 - Unit 3 
 
+B
+
 *****
 
 
 
 
 
-## What are the three keyword when it comes to error handling? (Choose the correct answer). 
+## 17. What are the three keyword when it comes to error handling? (Choose the correct answer). :no_entry:
 
-### try, catch, finally 
+try, catch, finally 
 
 throws, catch, attheend 
 
@@ -2145,6 +2931,8 @@ try, finally, handle.
 
 :book: UX399 - Unit 3 
 
+A
+
 https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=220238284097&beginTime=0&jumpingVid=&from=section&redirect=Log&widgetTypeCall=true
 
 ****
@@ -2153,7 +2941,7 @@ https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=22
 
 
 
-## Describe what design decision is normally made when you have to deal with errors? (Choose the correct answer). 
+## 18. Describe what design decision is normally made when you have to deal with errors? (Choose the correct answer). 
 
 ### Lower, technical layers throw errors. Higher, application layers handle errors. 
 
@@ -2169,7 +2957,7 @@ https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=highkrs&logNo=22
 
 
 
-## What method is introduced with HTML5 to have a more powerful selection mechanism? 
+## 19. What method is introduced with HTML5 to have a more powerful selection mechanism? :no_entry:
 
 ## (Choose the correct answer). 
 
@@ -2177,23 +2965,25 @@ processSelector
 
 getElements
 
-### querySelector
+querySelector
 
 ****
 
 :book: UX399 - Unit 3
 
+C
+
 ****
 
 
 
 
 
-## What does the childNode property return? 
+## 20. What does the childNode property return? 
 
 ## (Choose the correct answer). 
 
-### The childNode property returns a live collection of child nodes of the given element. 
+The childNode property returns a live collection of child nodes of the given element. 
 
 Returns the node immediately following the specified one in the parent childNode list 
 
@@ -2203,17 +2993,21 @@ Returns the list of childNodes of the document.
 
 :book: UX399 - Unit 3 
 
+A
+
+https://developer.mozilla.org/ko/docs/Web/API/Node/childNodes
+
 ****
 
 
 
 
 
-## What does the createAttribute method return? 
+## 21. What does the createAttribute method return? :no_entry:
 
 ## (Choose the correct answer). 
 
-### An object of the type Attr 
+An object of the type Attr 
 
 An object of the type Attribute 
 
@@ -2223,6 +3017,8 @@ The method returns void.
 
 :book: UX399 - Unit 3 
 
+A
+
 http://www.w3big.com/ko/jsref/met-document-createattribute.html
 
 ****
@@ -2231,11 +3027,11 @@ http://www.w3big.com/ko/jsref/met-document-createattribute.html
 
 
 
-## What does the method document.createElement(“article”) do? 
+## 22. What does the method document.createElement(“article”) do? :no_entry:
 
 ## (Choose the correct answer). 
 
-### It creates an element of the type HTMLUnknownElement. 
+It creates an element of the type HTMLUnknownElement. 
 
 It creates an element of the type article 
 
@@ -2244,6 +3040,8 @@ It throws an error.
 ****
 
 :book: UX399 - Unit 3 
+
+A
 
 테스트 결과 article 생성되는데 왜 답이 저거인지 모르겠다.
 
@@ -2255,9 +3053,9 @@ It throws an error.
 
 
 
-## What is the recommended DOM level you should use? (Choose the correct answer). 
+## 23. What is the recommended DOM level you should use? (Choose the correct answer). :no_entry:
 
-### 2 
+2 
 
 1 
 
@@ -2267,13 +3065,15 @@ It throws an error.
 
 :book: UX399 - Unit 3 
 
+A
+
 ****
 
 
 
 
 
-## Describe what is meant by event bubbling. (Choose the correct answer). 
+## 24. Describe what is meant by event bubbling. (Choose the correct answer). :no_entry:
 
 ### The concept of event bubbling was introduced to deal with situations where a single event, such as a mouse click, may be handled by two or more event handlers defined at different levels of the Document Object Model (DOM) hierarchy. 
 
@@ -2291,29 +3091,31 @@ https://ko.javascript.info/bubbling-and-capturing
 
 
 
-## What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
+## 25. What is meant by the namespace in the context of JavaScript? (Choose the correct answer). 
 
 It is the name of a function. 
 
 It is where you change the visibility of a variable. 
 
-### It is a container to bundle functionality under a unique identifier.
+It is a container to bundle functionality under a unique identifier.
 
 ****
 
 :book: UX399 - Unit 3 
 
+C
+
 ****
 
 
 
 
 
-## What mode do you have to use when you want to use the new ECMA6 language features? 
+## 26. What mode do you have to use when you want to use the new ECMA6 language features? 
 
 ## (Choose the correct answer). 
 
-### strict mode 
+strict mode 
 
 base mode 
 
@@ -2325,37 +3127,41 @@ standard mode.
 
 검증필요
 
+a
+
 ****
 
 
 
 
 
-## What is true for the prototype? 
+## 27. What is true for the prototype? 
 
 ## (Choose the correct answers). 
 
-### Every function has a prototype 
+Every function has a prototype 
 
-### Each object can act as a prototype 
+Each object can act as a prototype 
 
-### Any change on the prototype object is immediately visible to all referencing objects.
+Any change on the prototype object is immediately visible to all referencing objects.
 
 ****
 
 :book: UX399 - Unit 3 
 
+a/b/c
+
 ****
 
 
 
 
 
-## What is AJAX? 
+## 28. What is AJAX? :no_entry:
 
 ## (Choose the correct answer). 
 
-### Asynchronous JavaScript and XML 
+Asynchronous JavaScript and XML 
 
 Another JavaScript XML Library 
 
@@ -2365,15 +3171,17 @@ Asynchronous Java XML.
 
 :book: UX399 - Unit 3 
 
+a
+
 ****
 
 
 
 
 
-## What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
+## 29. What JavaScript object do you use when you send a request to a back-end service? (Choose the correct answer). 
 
-### XMLHttpRequest 
+XMLHttpRequest 
 
 XMLHttp 
 
@@ -2383,6 +3191,8 @@ XMLHttpPoll
 
 :book: UX399 - Unit 3 
 
+a
+
 https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
 
 ****
@@ -2391,9 +3201,9 @@ https://developer.mozilla.org/ko/docs/Web/API/XMLHttpRequest
 
 
 
-## What problem is solved when using promises? (Choose the correct answer). 
+## 30. What problem is solved when using promises? (Choose the correct answer). :no_entry:
 
-### A Pyramid of doom 
+A Pyramid of doom 
 
 Nested callbacks 
 
@@ -2403,6 +3213,8 @@ Synchronous back-end request processing.
 
 :book: UX399 - Unit 3 
 
+a
+
 https://5-ssssseung.tistory.com/96
 
 ****
@@ -2411,11 +3223,11 @@ https://5-ssssseung.tistory.com/96
 
 
 
-## What are the three states of a promise? 
+## 31. What are the three states of a promise? 
 
 ## (Choose the correct answer). 
 
-### Pending, Fulfilled, Rejected 
+Pending, Fulfilled, Rejected 
 
 Waiting, Finished, Started 
 
@@ -2424,6 +3236,8 @@ Pending, Finished, Aborted
 ****
 
 :book: UX399 - Unit 3 
+
+a
 
 **JavaScript - Three states of Promise** 
 
@@ -2453,11 +3267,11 @@ Pending, Finished, Aborted
 
 ****
 
-## Is it possible to read CSS properties with the CSS method? 
+## 1. Is it possible to read CSS properties with the CSS method? 
 
 ## (Choose the correct answer). 
 
-### True 
+True 
 
 False.
 
@@ -2465,15 +3279,17 @@ False.
 
 :book: UX399 - Unit 4 
 
+a
+
 ****
 
 
 
 
 
-## What is the counterpart function of focus? (Choose the correct answer). 
+## 2. What is the counterpart function of focus? (Choose the correct answer). 
 
-### blur 
+blur 
 
 lostFocus 
 
@@ -2483,35 +3299,39 @@ noFocus.
 
 :book: UX399 - Unit 4 
 
+a
+
 ****
 
 
 
 
 
-## When do you use the toggleClass method? (Choose the correct answer). 
+## 3. When do you use the toggleClass method? (Choose the correct answer). :no_entry:
 
 Use the method to react to on-click events 
 
 Use the method for handleMouse events. 
 
-### Use the method when adding and removing a class where an specific event occurs or reoccurs.
+Use the method when adding and removing a class where an specific event occurs or reoccurs.
 
 ****
 
 :book: UX399 - Unit 4 
 
+c
+
 ****
 
 
 
 
 
-## What is true for the functions after and insertAfter? 
+## 4. What is true for the functions after and insertAfter? :no_entry:
 
 ## (Choose the correct answers).
 
-### The way the elements are selected is different 
+The way the elements are selected is different 
 
 There is no difference in the result. 
 
@@ -2520,6 +3340,8 @@ The insertAfter function performs better than the after function.
 ****
 
 :book: UX399 - Unit 4 
+
+a
 
 검증필요
 
@@ -2534,11 +3356,11 @@ A.insertAfter(B) – B 뒤에 A를 추가
 
 
 
-## What is jQuery? (Choose the correct answer). 
+## 5. What is jQuery? (Choose the correct answer). :no_entry:
 
 CSS Framework 
 
-### A free, lightweight and extendable JavaScript library 
+A free, lightweight and extendable JavaScript library 
 
 A set of HTML controls.
 
@@ -2546,19 +3368,21 @@ A set of HTML controls.
 
 :book: UX399 - Unit 4 
 
+b
+
 ****
 
 
 
 
 
-## What version of jQuery first provided the AJAX method? 
+## 6. What version of jQuery first provided the AJAX method? :no_entry:
 
 ## (Choose the correct answer). 
 
 Version 1.4 
 
-### Version 1.5 
+Version 1.5 
 
 Version 1.0.
 
@@ -2568,17 +3392,19 @@ Version 1.0.
 
 검증필요
 
+b
+
 ****
 
 
 
 
 
-## When do you use the load method? 
+## 7. When do you use the load method? :no_entry:
 
 ## (Choose the correct answer). 
 
-### You want to load the response of the given URL into an object 
+You want to load the response of the given URL into an object 
 
 You want to load the jQuery library 
 
@@ -2588,6 +3414,8 @@ You want to load an xml file asynchronously.
 
 :book: UX399 - Unit 4 
 
+a
+
 https://offbyone.tistory.com/235
 
 ****
@@ -2596,25 +3424,33 @@ https://offbyone.tistory.com/235
 
 
 
-## What features are contained in jQuery? 
+## 8. What features are contained in jQuery? :no_entry:
 
 ## (Choose the correct answers). 
 
-### HTML, DOM, CSS manipulation 
+HTML, DOM, CSS manipulation 
 
 UI5 event 
 
-### Effects and animations 
+Effects and animations 
 
-### AJAX.
+AJAX.
 
 ****
 
 :book: UX399 - Unit 4 
 
+a/c/d
+
 https://micropyramid.com/blog/jquery-features-overview-and-its-future/
 
 검증필요
+
+1. Event Handling
+2. DOM/HTML/CSS manipulation
+3. **Jquery AJAX** calls
+4. Animation and effects
+5. JSON Parsing
 
 UI5 event 를 포함하지 않는지 확인 필요
 
@@ -2624,9 +3460,9 @@ UI5 event 를 포함하지 않는지 확인 필요
 
 
 
-## What jQuery method can be used to wrap every element of the current collection to provide an HTML structure? (Choose the correct answer). 
+## 9. What jQuery method can be used to wrap every element of the current collection to provide an HTML structure? (Choose the correct answer). :no_entry:
 
-### wrap 
+wrap 
 
 wrapAll 
 
@@ -2636,6 +3472,8 @@ envelope.
 
 :book: UX399 - Unit 4 
 
+a
+
 https://www.codingfactory.net/10214
 
 ****
@@ -2644,9 +3482,9 @@ https://www.codingfactory.net/10214
 
 
 
-## When using the on-function of jQuery, how many event handlers can be attached ? (Choose the correct answer). 
+## 10. When using the on-function of jQuery, how many event handlers can be attached ? (Choose the correct answer). :no_entry:
 
-### multiple 
+multiple 
 
 one 
 
@@ -2656,6 +3494,8 @@ None.
 
 :book: UX399 - Unit 4 
 
+a
+
 https://api.jquery.com/on/
 
 ****
@@ -2664,9 +3504,9 @@ https://api.jquery.com/on/
 
 
 
-## What does $("p.intro") select? (Choose the correct answer). 
+## 11. What does $("p.intro") select? (Choose the correct answer). :no_entry:
 
-### Selects all \<p>-elements with class="intro 
+Selects all \<p>-elements with class="intro 
 
 Selects a \<p>-element with the innerHTML intro 
 
@@ -2675,6 +3515,8 @@ Selects a \<p.intro>-elementl.
 ****
 
 :book: UX399 - Unit 4 
+
+a
 
 https://secr.tistory.com/61
 
@@ -2685,11 +3527,11 @@ https://secr.tistory.com/61
 
 
 
-## What is the corresponding CSS selector of $('#some-id')? 
+## 12. What is the corresponding CSS selector of $('#some-id')? 
 
 ## (Choose the correct answer). 
 
-### #some-id { } 
+#some-id { } 
 
 some-id{ } 
 
@@ -2698,6 +3540,8 @@ some-id{ }
 ****
 
 :book: UX399 - Unit 4 
+
+a
 
 검증필요
 
@@ -2733,57 +3577,35 @@ some-id{ }
 
 ****
 
-## Which of the following SAP Key UI technologies are currently recommended by SAP? 
+## 1. Which of the following statements are true when talking about SAP Fiori? (Choose the correct answers). 
 
-## (Choose the correct answers).
-
-Web Dynpro Java 
-
-### Web Dynpro ABAP with Screen Personas 
-
-### Dynpro with Screen Personas 
-
-Java Dynpro 
-
-### SAPUI5.
-
-****
-
-:book: UX400 - Unit 1 
-
-****
-
-
-
-
-
-## Which of the following statements are true when talking about SAP Fiori? (Choose the correct answers). 
-
-### SAP Fiori is SAP’s user experience that applies modern user-centric design principals 
+SAP Fiori is SAP’s user experience that applies modern user-centric design principals 
 
 SAP Fiori is SAP’s product for implementing SAP Enterprise Portal components 
 
 SAP Fiori is SAP’s UI technology for implementing application for mobile devices 
 
-### SAP Fiori is SAP Fiori can be personalized, is simple, and runs on any device 
+SAP Fiori is SAP Fiori can be personalized, is simple, and runs on any device 
 
-### SAP Fiori is SAP Fiori provides a consistent and role-specific experience across all tasks, for all lines of business.
+SAP Fiori is SAP Fiori provides a consistent and role-specific experience across all tasks, for all lines of business.
 
 ****
 
 :book: UX400 - Unit 1 
 
+a/d/e
+
 ****
 
 
 
 
 
-## What is the vision of SAP when considering SAP’s UX direction? (Choose the correct answer). 
+## 2. What is the vision of SAP when considering SAP’s UX direction? (Choose the correct answer). :no_entry:
 
 Deliver attractive applications that make people successful at work 
 
-### Provide the leading user experience for business applications 
+Provide the leading user experience for business applications 
 
 Provide UX as service to gain productivity 
 
@@ -2792,6 +3614,34 @@ Deliver SAP modules in an SaaS manner.
 ****
 
 :book: UX400 - Unit 1 
+
+b
+
+****
+
+
+
+
+
+## 3. Which of the following SAP Key UI technologies are currently recommended by SAP? 
+
+## (Choose the correct answers).
+
+Web Dynpro Java 
+
+Web Dynpro ABAP with Screen Personas 
+
+Dynpro with Screen Personas 
+
+Java Dynpro 
+
+SAPUI5.
+
+****
+
+:book: UX400 - Unit 1 
+
+b/c/e
 
 ****
 
@@ -2803,9 +3653,33 @@ Deliver SAP modules in an SaaS manner.
 
 ****
 
-## What is the key concept of SAPUI5 that enables the separation of information representation from user interaction? (Choose the correct answer). 
+## 1. Which of the following are key features of SAPUI5? (Choose the correct answers). 
 
-### Model View Controller 
+Full translation support 
+
+Web Dynpro extensibility 
+
+Responsive across browsers and devices 
+
+Less open for custom developmen 
+
+Based on open standards such as, JavaScript, CSS3, and HTML5.
+
+****
+
+:book: UX400 - Unit 2 
+
+a/c/e
+
+****
+
+
+
+
+
+## 2. What is the key concept of SAPUI5 that enables the separation of information representation from user interaction? (Choose the correct answer). :no_entry:
+
+Model View Controller 
 
 Drag-and-drop 
 
@@ -2817,51 +3691,33 @@ A forgiving format.
 
 :book: UX400 - Unit 2 
 
+a
+
 ****
 
 
 
 
 
-## Which of the following statements are true for OpenUI5? 
+## 3. Which of the following statements are true for OpenUI5? :no_entry:
 
 ## (Choose the correct answers). 
 
-### OpenUI5 includes all of the main features of SAPUI5. 
+OpenUI5 includes all of the main features of SAPUI5. 
 
-OpenUI5 contains sap.viz and sap.ui.com. 
+OpenUI5 contains sap.viz and sap.ui.comp 
 
-### OpenUI5 is free for use. 
+OpenUI5 is free for use. 
 
 OpenUI5 implements its own Core-Component 
 
-### OpenUI5 encompasses the complete SAPUI5 Core, plus many front-end controls that are also included in SAPUI5.
+OpenUI5 encompasses the complete SAPUI5 Core, plus many front-end controls that are also included in SAPUI5.
 
 ****
 
 :book: UX400 - Unit 2 
 
-****
-
-
-
-
-
-## Which of the following are key features of SAPUI5? (Choose the correct answers). 
-
-### Full translation support 
-
-Web Dynpro extensibility 
-
-### Responsive across browsers and devices 
-
-Less open for custom developmen 
-
-### Based on open standards such as, JavaScript, CSS3, and HTML5.
-
-****
-
-:book: UX400 - Unit 2 
+a/c/e
 
 ****
 
