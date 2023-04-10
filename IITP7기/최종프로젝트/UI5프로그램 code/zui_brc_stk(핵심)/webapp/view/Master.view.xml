@@ -1,0 +1,99 @@
+<mvc:View
+	controllerName="kr.go.iitp.gr5.clb05.zuibrcstk.controller.Master"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:micro="sap.suite.ui.microchart"
+    xmlns:l="sap.ui.layout">	
+    <f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="true">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Stock Data"/>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<f:content>
+                <VBox fitContainer="true" >
+                    <OverflowToolbar class="sapFDynamicPageAlignContent">   
+                        <ToolbarSpacer/>
+                        <SearchField search="onSearch" width="17.5rem"/>
+                        <OverflowToolbarToggleButton 
+                            tooltip="Sort by Stock" icon="sap-icon://product" 
+                            text="Sort by Stock" type="Transparent" press="onSortBy"/>
+                        <OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press="onSortMode"/>
+                    </OverflowToolbar>
+
+                    <Table
+                        id="productsTable" inset="false"
+                        sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+                        class="sapUiSmallNegativeMarginBeginEnd" width="auto"
+                        items="{ 
+                            path: 'stockData>/ZVB05_CDS_STOCKAIO',
+                            sorter: {
+                                path: 'prodid'
+                            }
+                        }" >
+                        <columns>
+                            <Column>
+                                <Text text="Product"/>
+                            </Column>
+                            <Column>
+                                <Text text="Color"/>
+                            </Column>
+                            <Column>
+                                <Text text="Size"/>
+                            </Column>
+                            <Column>
+                                <Text text="Total"/>
+                            </Column>
+                            <Column>
+                                <Text text="Safety/Stock"/>
+                            </Column>
+                        </columns>
+                        
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListItemPress">
+                                <cells>
+                                    <ObjectIdentifier title="{stockData>prodnm}" text="{stockData>prodid}"/>
+                                    <Text text="{stockData>prodcol}"/>
+                                    <Text text="{stockData>prodsize}"/>
+                                    <ObjectNumber
+                                        number="{
+                                            parts:[
+                                                {path:'stockData>stock'},
+                                                {path:'stockData>unit'}
+                                            ],
+                                            type: 'sap.ui.model.type.Unit',
+                                            formatOptions: {showMeasure: false}
+                                        }"
+                                        unit="{stockData>unit}"/>
+                                    <FlexBox width="100px">
+                                        <micro:BulletMicroChart 
+                                            size="Auto" 
+                                            scale="{stockData>unit}" 
+                                            targetValue="{stockData>safeamt}" 
+                                            forecastValue="{= ${stockData>stock} + ${stockData>prestock}}" 
+                                            minValue="0" 
+                                            maxValue="10"
+                                            class="sapUiSmallMargin">
+                                            <micro:actual>
+                                                <micro:BulletMicroChartData 
+                                                    value="{stockData>stock}" 
+                                                    color="{= ${stockData>stock} > ${stockData>safeamt} 
+                                                                ?'Good' : ${stockData>stock} + ${stockData>prestock} >= ${stockData>safeamt} 
+                                                                    ? 'Critical' : 'Error' }"/>
+                                            </micro:actual> 
+                                        </micro:BulletMicroChart>
+                                    </FlexBox>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+		</f:content>
+        
+
+	</f:DynamicPage>
+</mvc:View>

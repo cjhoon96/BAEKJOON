@@ -1,0 +1,170 @@
+{
+	"_version": "1.32.0",
+	"sap.app": {
+		"id": "kr.go.iitp.gr5.clb05.zuibrcstk",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "0.0.1"
+		},
+        "dataSources": {
+            "stockData": {
+                "uri": "/sap/opu/odata/sap/ZVB05_CDS_STOCKAIO_CDS/",
+                "type": "OData",
+				"settings": {
+					"annotations": [],
+					"localUri": "localService/metadata.xml",
+					"odataVersion": "2.0"
+				}
+            },
+            "othersData": {
+                "uri": "/sap/opu/odata/sap/ZVB05_CDS_STOCKAIO_ALL_CDS/",
+                "type": "OData",
+				"settings": {
+					"annotations": [],
+					"localUri": "localService/metadata.xml",
+					"odataVersion": "2.0"
+				}
+            },
+            "stoProc": {
+                "uri": "/sap/opu/odata/sap/ZGWB05_STO_PROCESS_SRV/",
+                "type": "OData",
+				"settings": {
+					"annotations": [],
+					"localUri": "localService/metadata.xml",
+					"odataVersion": "2.0"
+				}
+            }
+        }
+	},
+
+
+	"sap.ui5": {
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "stockData": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Request",
+                    "json": true,
+                    "defaultUpdateMethod": "PUT",
+                    "useBatch": false
+                },
+                "dataSource": "stockData",
+                "preload": true
+            },
+            "othersData": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Request",
+                    "json": true,
+                    "defaultUpdateMethod": "PUT",
+                    "useBatch": false
+                },
+                "dataSource": "othersData",
+                "preload": true
+            },
+            "stoProc": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Request",
+                    "json": true,
+                    "defaultUpdateMethod": "PUT",
+                    "useBatch": false
+                },
+                "dataSource": "stoProc",
+                "preload": true
+            }
+        },
+		"rootView": {
+			"viewName": "kr.go.iitp.gr5.clb05.zuibrcstk.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+
+		"dependencies": {
+			"minUI5Version": "1.98.0",
+			"libs": {
+				"sap.ui.core": {},
+                "sap.m": {},
+                "sap.f": {},
+                "sap.uxap": {},
+                "sap.suite.ui.microchart": {}
+			}
+		},
+
+        "config": {
+            "fullWidth": true
+        },
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+                "type": "View",
+				"viewType": "XML",
+				"viewPath": "kr.go.iitp.gr5.clb05.zuibrcstk.view",
+				"controlId": "App",
+                "transition": "slide",
+                "bypassed": {
+
+                },
+
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": ":layout:",
+					"name": "master",
+					"target": [
+						"master",
+						"detail"
+					]
+				},
+				{
+					"pattern": "detail/{product}/{layout}",
+					"name": "detail",
+					"target": [
+						"master",
+						"detail"
+					]
+				},
+                {
+                    "pattern": "detail/{product}/createApvDoc/{apvData}/{layout}",
+                    "name": "detailDetail",
+                    "target": [
+                        "master",
+                        "detail",
+                        "detailDetail"
+                    ]
+                }
+			],
+			"targets": {
+                "master": {
+					"viewName": "Master",
+                    "viewId": "Master",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Detail",
+                    "viewId": "Detail",
+					"controlAggregation": "midColumnPages"
+				},
+				"detailDetail": {
+					"viewName": "DetailDetail",
+                    "viewId": "DetailDetail",
+					"controlAggregation": "endColumnPages"
+				}
+			}
+		}
+	}
+}
