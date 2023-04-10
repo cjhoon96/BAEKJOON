@@ -1,0 +1,260 @@
+<mvc:View
+    controllerName="kr.go.iitp.gr5.clb05.zuibrcstk.controller.Detail"
+    displayBlock="true"
+	xmlns="sap.uxap"
+    xmlns:t="sap.ui.table"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:core="sap.ui.core"
+    xmlns:chart="sap.suite.ui.commons"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:micro="sap.suite.ui.microchart"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="false"
+		preserveHeaderStateOnScroll="false"
+		headerContentPinnable="true"
+		isChildPage="true"
+		upperCaseAnchorBar="false">
+
+        <!-- header title -->
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="{stockData>prodnm}" wrapping="true" class="sapUiSmallMarginEnd"/>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
+						<m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
+                            <core:Icon
+                                src="sap-icon://detail-view"
+                                size="80px" 
+                                color="#4169e1"
+                                class="sapUiSmallMargin"/>
+							<m:Title text="{stockData>prodid}" wrapping="true"/>
+						</m:FlexBox>
+					</m:FlexBox>
+				</snappedHeading>
+
+                <navigationActions>
+                    <m:OverflowToolbarButton
+                        type="Transparent"
+                        icon="sap-icon://full-screen"
+                        press=".handleFullScreen"
+                        tooltip="Enter Full Screen Mode"
+                        visible="{= ${/actionButtonsInfo/midColumn/fullScreen} !== null }"/>
+                    <m:OverflowToolbarButton
+                        type="Transparent"
+                        icon="sap-icon://exit-full-screen"
+                        press=".handleExitFullScreen"
+                        tooltip="Exit Full Screen Mode"
+                        visible="{= ${/actionButtonsInfo/midColumn/exitFullScreen} !== null }"/>
+                    <m:OverflowToolbarButton
+                        type="Transparent"
+                        icon="sap-icon://decline"
+                        press=".handleClose"
+                        tooltip="Close column"
+                        visible="{= ${/actionButtonsInfo/midColumn/closeColumn} !== null }"/>
+                </navigationActions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+        <headerContent>
+            <m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
+                <m:items>
+                    <core:Icon
+                        src="sap-icon://detail-view"
+                        size="80px" 
+                        color="#4169e1"
+                        class="sapUiSmallMargin"/>
+                    <m:VBox id="idNowProd" justifyContent="Center" class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="Main Category" text="{stockData>prodcat}"/>    
+                    </m:VBox>
+                    <!-- 데이터 바인딩 예정 -->
+                    <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="Purchase Cost" text="{stockData>purcost} {stockData>currency}"/>
+                    </m:VBox>
+                    <!-- 데이터 바인딩 예정 -->
+                    <m:VBox justifyContent="Center" class="sapUiSmallMarginEnd"> 
+                        <m:ObjectIdentifier title="Selling Price" text="{stockData>sellprice} {stockData>currency}"/>
+                    </m:VBox>
+                    <!-- 데이터 바인딩 예정 -->
+                </m:items>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+
+            <!-- 제품 상세 설명 섹션 -->
+            <ObjectPageSection title="Product Description">
+                <subSections>
+                    <ObjectPageSubSection title="Product Description" titleUppercase="false">
+                        <blocks>
+                            <!-- 제품 정보 -->
+                            <form:SimpleForm layout="ResponsiveGridLayout" singleContainerFullSize="false">
+                                <form:content>
+                                    <m:Title text="Product"/>
+                                    <m:Label text="Product Name"/>
+                                    <m:Text text="{stockData>prodnm}"/>
+                                    <m:Label text="Product Code"/>
+                                    <m:Text text="{stockData>prodid}"/>
+                                    <m:Label text="Product Color"/>
+                                    <m:Text text="{stockData>prodcol}"/>
+                                    <m:Label text="Product Size"/>
+                                    <m:Text text="{stockData>prodsize}"/>
+                                    <m:Label text="Product Price"/>
+                                    <m:Text text="{stockData>sellprice}"/>
+                                    <m:Label text="Product Material"/>
+                                    <m:Text text="{stockData>material}"/>
+                                </form:content>
+                            </form:SimpleForm>
+                            <form:SimpleForm layout="ResponsiveGridLayout" singleContainerFullSize="false">
+                                <form:content>
+                                    <m:Title text="Vendor"/>
+                                    <m:Label text="Name"/>
+                                    <m:Text text="{stockData>vendornm}"/>
+                                    <m:Label text="Address"/>
+                                    <m:Text text="{stockData>vaddress}"/>
+                                    <m:Label text="Tel."/>
+                                    <m:Text text="{stockData>vctcnum}"/>
+                                </form:content>
+                            </form:SimpleForm>
+                            <m:VBox fitContainer="true" >
+                                    <micro:InteractiveDonutChart>
+                                        <micro:segments>
+                                            <micro:InteractiveDonutChartSegment color="Good" label="Stock" value="{stockData>stock}" displayedValue="{stockData>stock} EA"/>
+                                            <micro:InteractiveDonutChartSegment color="Critical" label="Pre-Stock" value="{stockData>prestock}" displayedValue="{stockData>prestock} EA"/>
+                                            <micro:InteractiveDonutChartSegment color="Error" label="Safety" value="{stockData>safeamt}" displayedValue="{stockData>safeamt} EA"/>
+                                        </micro:segments>
+                                    </micro:InteractiveDonutChart>
+                            </m:VBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="Sales Performance">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <l:VerticalLayout width="100%">
+                                <m:Toolbar style="Clear">
+                                    <m:ToolbarSpacer/>
+                                </m:Toolbar>
+                                <viz:VizFrame id="idVizFrame" width="100%" uiConfig="{applicationSet:'fiori'}" vizType='column' >
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="vizData" data="{stoProc>/salesDataSet}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition name="Execdate"
+                                                    value="{
+                                                        path: 'stoProc>Execdate',
+                                                        type: 'sap.ui.model.type.Date'}" />
+                                            </viz.data:dimensions>
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition name="Amt"
+                                                    value="{stoProc>Amt}" />
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                                            values="Amt" />
+                                        <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+                                            values="Execdate" />
+                                    </viz:feeds>
+                                </viz:VizFrame>
+                            </l:VerticalLayout>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            
+            <ObjectPageSection title="Other Branches">
+                <subSections>
+                    <ObjectPageSubSection title="Other Branches" titleUppercase="false">
+                        <blocks>
+                        
+                            <t:Table
+                                id="tblotherbrc"
+                                visibleRowCount="4"
+                                rows="{
+                                    path: 'othersData>/ZVB05_CDS_STOCKAIO_ALL',
+                                    sorter: {
+                                        path: 'storelv'
+                                    }
+                                }"
+                                selectionBehavior="Row"
+                                threshold="15"
+                                enableBusyIndicator="true"
+                                ariaLabelledBy="title"
+                                selectionMode="Single"
+                                rowSelectionChange="onSelectionChange">
+                                <t:extension>
+                                    <m:OverflowToolbar style="Clear">
+                                        <m:Title id="title" text="{stockData>prodid}: {stockData>prodnm}"/>
+                                        <m:ToolbarSpacer/>
+                                        <m:Button
+                                            icon="sap-icon://add-activity-2"
+                                            tooltip="Show header selector"
+                                            press="onCreateSTOApv"/>
+                                    </m:OverflowToolbar>
+                                </t:extension>
+                                <t:columns>
+                                    <t:Column>
+                                        <m:Label text="Plant Code"/>
+                                        <t:template>
+                                            <m:Text text="{othersData>plantid}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column>
+                                        <m:Label text="Plant Name"/>
+                                        <t:template>
+                                            <m:Text text="{othersData>plantnm}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column>
+                                        <m:Label text="Store Level"/>
+                                        <t:template>
+                                            <m:Text text="{= ${othersData>storelv} > 0 ? ${othersData>storelv} : 'Head Querter'}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column>
+                                        <m:Label text="Stock"/>
+                                        <t:template>
+                                            <m:ObjectNumber
+                                                number="{
+                                                    parts:[
+                                                        {path:'othersData>stock'},
+                                                        {path:'othersData>unit'}
+                                                    ],
+                                                    type: 'sap.ui.model.type.Unit',
+                                                    formatOptions: {showMeasure: false}
+                                                }"
+                                                unit="{stockData>unit}"
+                                                state="{= ${othersData>safeamt} > ${othersData>stock} ? 'Error' : 'Success'}"/>
+                                        </t:template>
+                                    </t:Column>
+                                    <t:Column>
+                                        <m:Label text="Safe Stock"/>
+                                        <t:template>
+                                            <m:Text text="{othersData>safeamt}"/>
+                                        </t:template>
+                                    </t:Column>
+                                </t:columns>
+                            </t:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+	</ObjectPageLayout>
+</mvc:View>

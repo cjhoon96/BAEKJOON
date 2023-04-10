@@ -1,0 +1,73 @@
+<mvc:View
+    controllerName="kr.go.iitp.gr5.clb05.zuibrcinf.controller.App"
+    displayBlock="true"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%">
+	<ObjectPageLayout id="App" enableLazyLoading="true" upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<heading>
+					<m:Title text="Sales Performance" />
+				</heading>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+        <headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true" >
+                <m:items>
+                    <core:Icon class="sapUiSmallMarginBeginEnd" src="sap-icon://vertical-bar-chart-2" size="80px" color="#4169e1"/>
+                    <m:VBox id="idNowProd" justifyContent="Center" class="sapUiSmallMarginEnd">
+                        <m:ObjectIdentifier title="Sales Performance" text="about All Items"/>
+                    </m:VBox>
+                </m:items>    
+			</m:FlexBox>
+		</headerContent>
+
+
+		<sections>
+            <ObjectPageSection title="Sales Performance">
+                <subSections>
+                    <ObjectPageSubSection>
+                        <blocks>
+                            <l:VerticalLayout width="100%">
+                                <viz:VizFrame 
+                                    id="idVizFrame" 
+                                    width="100%" 
+                                    uiConfig="{applicationSet:'fiori'}" 
+                                    vizType='column' 
+                                    selectData="onDataSelect">
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="vizData" data="{/totalSalesDataSet}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition name="Execdate"
+                                                    value="{
+                                                        path: 'Execdate',
+                                                        type: 'sap.ui.model.type.Date'}" />
+                                            </viz.data:dimensions>
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition name="Salestotal"
+                                                    value="{= parseInt(${Salestotal} * 100)}" />
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                                            values="Salestotal"/>
+                                        <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+                                            values="Execdate" />
+                                    </viz:feeds>
+                                </viz:VizFrame>
+                            </l:VerticalLayout>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>
