@@ -1,4 +1,5 @@
-console.log("Hello TypeScript");
-console.log("Hello TypeScript");
-console.log("Hello TypeScript");
-console.log("Hello TypeScript");
+import TodoConsole from "./view/TodoConsole";
+
+const todoConsole = new TodoConsole();
+
+todoConsole.promptUser();
