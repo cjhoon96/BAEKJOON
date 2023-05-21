@@ -40,7 +40,7 @@
 > //Type '"c"' is not assignable to type 'ab'.
 > ```
 >
-> "c" 는 "c" 단일 값으로 구성된 unit 타입이다. ab 의 부분집합이 아니므로 오류이다. 
+> `C` 는 "c" 단일 값으로 구성된 unit 타입이다. ab 의 부분집합이 아니므로 오류이다. 
 >
 > 타입체커의 역할 = 하나의 집합이 다른 집합의 부분 집합인지 검사하는 것
 
@@ -48,10 +48,10 @@
 >
 > ```ts
 > interface Person {
->     name: string;
+>  name: string;
 > }
 > let jihoon: Person = {
->     name: 'Jihoon'
+>  name: 'Jihoon'
 > }
 > ```
 >
@@ -61,27 +61,27 @@
 >
 > ```ts
 > interface Person {
->     firstName: string;
->     lastName: string;
+>  firstName: string;
+>  lastName: string;
 > }
 > interface Lifespan {
->     birth: Date;
->     death?: Date;
+>  birth: Date;
+>  death?: Date;
 > }
 > 
 > type PersonSpan1 = Person & Lifespan
 > 
 > let jihoon1: PersonSpan1 = {
->     firstName: 'Jihoon',
->     lastName: "Chae"
->     death: new Date()
+>  firstName: 'Jihoon',
+>  lastName: "Chae"
+>  death: new Date()
 > }// 오류
 > 
 > let jihoon1_1: PersonSpan1 = {
->     firstName: "Jihoon",
->     lastName: "Chae",
->     birth: new Date(),
->     death: new Date(),
+>  firstName: "Jihoon",
+>  lastName: "Chae",
+>  birth: new Date(),
+>  death: new Date(),
 > }
 > // 에러발생 birth 가 없다. 
 > ```
@@ -96,25 +96,25 @@
 >
 > ```ts
 > interface Person {
->     firstName: string;
->     lastName: string;
+>  firstName: string;
+>  lastName: string;
 > }
 > interface Lifespan {
->     birth: Date;
->     death?: Date;
+>  birth: Date;
+>  death?: Date;
 > }
 > 
 > type PersonSpan2 = Person | Lifespan
 > 
 > 
 > let jihoon2: PersonSpan2 = {
->     firstName: 'Jihoon',
->     death: new Date()
+>  firstName: 'Jihoon',
+>  death: new Date()
 > }//오류
 > let jihoon2_2: PersonSpan2 = {
->     firstName: 'Jihoon',
->     lastName: "Chae",
->     death: new Date()
+>  firstName: 'Jihoon',
+>  lastName: "Chae",
+>  death: new Date()
 > }
 > 
 > ```
@@ -130,3 +130,77 @@
 > ```
 >
 > 
+>
+> ### extends 키워드의 이해
+>
+> PersonSpan 을 선언하는 조금더 일반적인 방법은 extends 키워드를 사용하는 것이다. 
+>
+> ```ts
+> interface Perons {
+>     name: string;
+> }
+> interface PersonSpan extends Person {
+>     birth: Date;
+>     death?: Date;
+> }
+> ```
+>
+> 타입의 집합이라는 관점에서 `extends` 의 의미는  '~의 부분집합' 이라는 의미로 받아들일 수 있다.
+>
+> * PersonSpan 타입의 모든 값은 문자열 name 속성을 가져야한다.
+> * 또한 birth 속성을 가져야 제대로 된 부분 집합이다.
+>
+> ```ts
+> interface Vector1D {x: number;}
+> interface Vector2D extends Vector1D {y: number;}
+> interface Vector3D extends Vector2D {z: number;}
+> ```
+>
+> 이를 벤다이어그램으로 그리면 훨씬 직관적으로 이해 가능
+>
+> ```ts
+> interface Vector1D {x: number;}
+> interface Vector2D {x: number; y: number;}
+> interface Vector3D {x: number; y: number; z: number;}
+> ```
+>
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
