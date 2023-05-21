@@ -48,10 +48,10 @@
 >
 > ```ts
 > interface Person {
->  name: string;
+> name: string;
 > }
 > let jihoon: Person = {
->  name: 'Jihoon'
+> name: 'Jihoon'
 > }
 > ```
 >
@@ -61,27 +61,27 @@
 >
 > ```ts
 > interface Person {
->  firstName: string;
->  lastName: string;
+> firstName: string;
+> lastName: string;
 > }
 > interface Lifespan {
->  birth: Date;
->  death?: Date;
+> birth: Date;
+> death?: Date;
 > }
 > 
 > type PersonSpan1 = Person & Lifespan
 > 
 > let jihoon1: PersonSpan1 = {
->  firstName: 'Jihoon',
->  lastName: "Chae"
->  death: new Date()
+> firstName: 'Jihoon',
+> lastName: "Chae"
+> death: new Date()
 > }// 오류
 > 
 > let jihoon1_1: PersonSpan1 = {
->  firstName: "Jihoon",
->  lastName: "Chae",
->  birth: new Date(),
->  death: new Date(),
+> firstName: "Jihoon",
+> lastName: "Chae",
+> birth: new Date(),
+> death: new Date(),
 > }
 > // 에러발생 birth 가 없다. 
 > ```
@@ -96,25 +96,25 @@
 >
 > ```ts
 > interface Person {
->  firstName: string;
->  lastName: string;
+> firstName: string;
+> lastName: string;
 > }
 > interface Lifespan {
->  birth: Date;
->  death?: Date;
+> birth: Date;
+> death?: Date;
 > }
 > 
 > type PersonSpan2 = Person | Lifespan
 > 
 > 
 > let jihoon2: PersonSpan2 = {
->  firstName: 'Jihoon',
->  death: new Date()
+> firstName: 'Jihoon',
+> death: new Date()
 > }//오류
 > let jihoon2_2: PersonSpan2 = {
->  firstName: 'Jihoon',
->  lastName: "Chae",
->  death: new Date()
+> firstName: 'Jihoon',
+> lastName: "Chae",
+> death: new Date()
 > }
 > 
 > ```
@@ -137,11 +137,11 @@
 >
 > ```ts
 > interface Perons {
->     name: string;
+>  name: string;
 > }
 > interface PersonSpan extends Person {
->     birth: Date;
->     death?: Date;
+>  birth: Date;
+>  death?: Date;
 > }
 > ```
 >
@@ -162,6 +162,12 @@
 > interface Vector1D {x: number;}
 > interface Vector2D {x: number; y: number;}
 > interface Vector3D {x: number; y: number; z: number;}
+> ```
+>
+> ```ts
+> function getKey<K extends string>(val: any, key: K){
+>   //....
+> }
 > ```
 >
 > 
