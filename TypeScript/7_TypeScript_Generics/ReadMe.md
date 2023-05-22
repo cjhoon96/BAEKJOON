@@ -14,7 +14,7 @@
 >
 > ```ts
 > function identity(arg: number): number {
->  return arg;
+> return arg;
 > }
 > ```
 >
@@ -22,7 +22,7 @@
 >
 > ```ts
 > function identity(arg: any): any {
->  return arg;
+> return arg;
 > }
 > ```
 >
@@ -32,7 +32,7 @@
 >
 > ```ts
 > function identity<T>(arg: T): T {
->  return arg;
+> return arg;
 > }
 > ```
 >
