@@ -1,27 +1,47 @@
 ---
 marp: true
 theme: gaia
-_class: lead
 paginate: true
-backgroundColor: #fff
+class: invert
+
 ---
+<style>
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }  
+  h3 {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+  section {
+    font-size: 20px;
+  }  
+</style>
 
 # 타입이 값들의 집합이라고 생각하기
 
-
 ---
 
-## 타입 = 할당 가능한 값들의 집합
 
-* **never = ∅**
+## Type = 값들의 집합
+
+<br/>
+
+* ### never = ∅
+
   never 로 선언된 변수에는 어떤 값도 할당할 수 없다. 
+
   ```ts
   const x: never = 12;
   // 어떤 값을 넣어도 never 에 할당할 수 없다는 에러가 발생
   ```
 <br/>
 
-* **Unit Type**
+* ### Unit Type
+
   한가지 값만 포함하는 리터럴 타입
   ```ts
   type a = 'a';
@@ -31,66 +51,134 @@ backgroundColor: #fff
   // Type '13' is not assignable to type '12'.
   ```
 
-never = 0 < literal type
+---
+
+
+## Type = 값들의 집합
+
+<br/>
+
+* ### Union type
+
+
+  타입들의 합집합 
+  ```ts
+  type ab = 'a' | 'b';
+  type ab12 = 'a' | 'b' | 12;
+  const C: ab = 'c';
+  //Type '"c"' is not assignable to type 'ab'.
+  ```
+  `C` 는 "c" 단일 값으로 구성된 unit 타입 
+  ab 의 부분집합이 아니므로 오류 
+
+<br/>
+
+* ### 개념 확장
+  
+  **Type = 할당 가능한 값들의 집합** 
+  
+  **Type Check = 하나의 집합이 다른 집합의 부분 집합인지 검사**
+  
+  
+
+---
+
+<style>
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }  
+  section {
+    font-size: 20px;
+  }  
+  code {
+    align: "right"
+  }
+</style>
+
+## Type 의 관점으로 본 interface
+
+* ### 객체 Union
+
+  ```ts
+  interface Person {
+    firstName: string;
+    lastName: string;
+  }
+  interface Lifespan {
+    birth: Date;
+    death?: Date;
+  }
+  type PersonSpan2 = Person | Lifespan
+
+  let jihoon2: PersonSpan2 = {
+    firstName: 'Jihoon',
+    death: new Date()
+  }//오류
+
+  let jihoon2_2: PersonSpan2 = {
+    firstName: 'Jihoon',
+    lastName: "Chae",
+    death: new Date()
+  }
+  ``` 
+  keyof(a&b) = keyof(a) | keyof(b)
+  
+  keyof(a|b) = keyof(a) & keyof(b)
+
+  ```ts
+  interface Person {
+    name: string;
+  }
+  let jihoon: Person = {
+    name: 'Jihoon'
+  }
+  ```
+  <br/>
+  
+
+---
+
+<style>
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }  
+  section {
+    font-size: 20px;
+  }  
+</style>
+
+## Type Checker
+<br/>
+
+* ### Union type
+  <br/>
+  
+
+---
 
 
 
 
 
-타입들의 합집합 Union type
 
-```ts
-type ab = 'a' | 'b';
-type ab12 = 'a' | 'b' | 12;
-const C: ab = 'c';
-//Type '"c"' is not assignable to type 'ab'.
-```
 
-`C` 는 "c" 단일 값으로 구성된 unit 타입이다. ab 의 부분집합이 아니므로 오류이다. 
 
-타입체커의 역할 = 하나의 집합이 다른 집합의 부분 집합인지 검사하는 것
 
-Type 의 관점으로 본 interface
 
-```ts
-interface Person {
-name: string;
-}
-let jihoon: Person = {
-name: 'Jihoon'
-}
-```
+
+
 
 'string 으로 이루어진 name 이라는 속성을 가지고 있는 객체'는 Person 타입이라고 할 수 있다.
 
 
 
-```ts
-interface Person {
-firstName: string;
-lastName: string;
-}
-interface Lifespan {
-birth: Date;
-death?: Date;
-}
 
-type PersonSpan1 = Person & Lifespan
-
-let jihoon1: PersonSpan1 = {
-firstName: 'Jihoon',
-lastName: "Chae"
-death: new Date()
-}// 오류
-
-let jihoon1_1: PersonSpan1 = {
-firstName: "Jihoon",
-lastName: "Chae",
-birth: new Date(),
-death: new Date(),
-}
-// 에러발생 birth 가 없다. 
-```
 
 `&`는 두 타입의 교집합을 계산한다. 
 
