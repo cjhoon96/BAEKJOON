@@ -18,17 +18,17 @@ const people_1: Person[] = ['alice', 'bob', 'jan'].map(name => ({name} as Person
 const people: Person[] = ["alice", "bob", "jan"].map((name): Person => ({ name }));
 
 
-// const divEl = document.querySelector('#myButton');
-// if (divEl) {
-//     document.querySelector('#myButton').addEventListener('click', 2=> {
-//         e.currentTarget // 타입은 EventTarget
-//         const button = e.currentTarget as HTMLButtonElement;
-//     })
-// }
+const divEl = document.querySelector('#myButton');
+if (divEl) {
+    divEl.addEventListener('click', 2=> {
+        e.currentTarget // 타입은 EventTarget
+        const button = e.currentTarget as HTMLButtonElement;
+    })
+}
 
 
 // const elNull = document.getElementById('foo');
 // const el = document.getElementById('foo')!;
 
-const body = document.body;
-const el = body as Person;
+// const body = document.body;
+// const el = body as Person;

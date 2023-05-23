@@ -55,16 +55,20 @@ sortBy(pts, 'z')
 //Type 'number[]' is not assignable to type '[number, number]'.
 //Target requires 2 element(s) but source may have fewer.
 
-// const triple: [number, number, number] = [1, 2, 3];
-// const double: [number, number] = triple
-// // Type '[number, number, number]' is not assignable to type '[number, number]'.
-// // Source has 3 element(s) but target allows only 2.
-// const double_1: [number, number] = [1, 2]
-// const triple_1: [number, number, number] = double_1;
-// // Type '[number, number]' is not assignable to type '[number, number, number]'.
-// // Source has 2 element(s) but target requires 3.
+const triple: [number, number, number] = [1, 2, ];
+const double: [number, number] = triple
+// Type '[number, number, number]' is not assignable to type '[number, number]'.
+// Source has 3 element(s) but target allows only 2.
+const double_1: [number, number] = [1, 2]
+const triple_1: [number, number, number] = double_1;
+// Type '[number, number]' is not assignable to type '[number, number, number]'.
+// Source has 2 element(s) but target requires 3.
 
 
 type T = Exclude<string | Date, string | number>; // Date
 type Never = Exclude<string | Date, string | Date>; // never
 type NonZeroNums = Exclude<number, 0>; // number
+
+// function sortBy<K extends keyof T, T>(vals: T[], key: K): T[] {
+//   vals.sort((a, b) => (a[key] === b[key] ? 0 : a[key] < b[key] ? -1 : +1));
+// }
