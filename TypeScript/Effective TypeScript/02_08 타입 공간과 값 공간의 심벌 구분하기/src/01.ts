@@ -93,3 +93,24 @@ function calculateVolume(shape: unknown) {
 // }) {
     
 // }
+
+class T {
+  a = 1;
+  b = 1;
+}
+
+
+type a = T;
+
+type b = typeof T;
+
+const a = new T;
+
+const b = new T;
+a.a
+b.a
+
+declare let fn: typeof T;
+const x = new fn();
+x.a
+x.b
