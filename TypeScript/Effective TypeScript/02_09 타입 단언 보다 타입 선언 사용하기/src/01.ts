@@ -1,6 +1,6 @@
-// interface Person {
-//   name: string;
-// }
+interface Person {
+  name: string;
+}
 
 // const alice: Person = { name: "Alice" };
 // const bob_1 = { name: "Bob" } as Person;
@@ -27,11 +27,11 @@ if (divEl) {
 }
 
 
-// // const elNull = document.getElementById('foo');
-// // const el = document.getElementById('foo')!;
+const elNull = document.getElementById('foo');
+// const el = document.getElementById('foo')!;
 
-// // const body = document.body;
-// // const el = body as Person;
+const body = document.body;
+const el = body as never as Person;
 
 
 const people = ['alice', 'bob', 'jan'].map(name => ({name}));
