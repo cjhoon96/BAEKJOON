@@ -46,7 +46,8 @@ let Chae = new Score('Jihoon', 10, 20, 30);
 console.log(Chae.name, '\'s average score is', Chae.sum()/3);
 
 // 장점
-// 기존에는 객체를 생성할때마다 새롭게 정의를 해줘야 했으나 construct function을 실행 함으로서 빠르게 객체를 생성할 수 있으며 수정할 수 있다.
+// 기존에는 객체를 생성할때마다 새롭게 정의를 해줘야 했으나 construct function을 
+// 실행 함으로서 빠르게 객체를 생성할 수 있으며 수정할 수 있다.
 
 //Prototype
 //javascript = prototype based language
